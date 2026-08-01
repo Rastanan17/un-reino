@@ -1,0 +1,146 @@
+[
+    {
+        "id": "bibliotecaria",
+        "nombre": "Lady Rowena de los Tomos",
+        "categoria": "lectura",
+        "lugar": "biblioteca",
+        "sprite": "images/npc/lady_rowena.png",
+        "descripcion": "Guardián de todos los libros del Reino."
+    },
+    {
+        "id": "sabio",
+        "nombre": "Maestro Eldrin el Erudito",
+        "categoria": "conocimiento",
+        "lugar": "torre",
+        "sprite": "images/npc/eldrin.png",
+        "descripcion": "Conoce todos los secretos del Reino."
+    },
+    {
+        "id": "narrador",
+        "nombre": "Garrick el Narrador de Sombras",
+        "categoria": "historias",
+        "lugar": "taberna",
+        "sprite": "images/npc/garrick.png",
+        "descripcion": "Tejedor de mitos y relator de leyendas oscuras."
+    },
+    {
+        "id": "susurrador",
+        "nombre": "Silas el Susurrador de Árboles",
+        "categoria": "naturaleza",
+        "lugar": "bosque",
+        "sprite": "images/npc/silas.png",
+        "descripcion": "Comunica la sabiduría antigua del bosque ancestral."
+    },
+    {
+        "id": "comandante",
+        "nombre": "Valerius Di'rroka",
+        "categoria": "estrategia",
+        "lugar": "cuartel",
+        "sprite": "images/npc/valerius.png",
+        "descripcion": "Líder acróbata y maestra táctica de la vanguardia."
+    },
+    {
+        "id": "forjadora",
+        "nombre": "Eliana la Forjadora",
+        "categoria": "creatividad",
+        "lugar": "herreria",
+        "sprite": "images/npc/eliana.png",
+        "descripcion": "Moldea artefactos y da forma a grandes ideas."
+    },
+    {
+        "id": "nino_explorador",
+        "nombre": "Niño Explorador",
+        "categoria": "exploracion",
+        "lugar": "camino",
+        "sprite": "images/protagonistas/nino_explorador.png",
+        "descripcion": "Joven aventurero listo para descubrir el mundo."
+    },
+    {
+        "id": "nina_exploradora",
+        "nombre": "Niña Exploradora",
+        "categoria": "exploracion",
+        "lugar": "camino",
+        "sprite": "images/protagonistas/nina_exploradora.png",
+        "descripcion": "Audaz viajera equipada para enfrentar cualquier ruta."
+    },
+    {
+        "id": "arquero",
+        "nombre": "Arquero",
+        "categoria": "distancia",
+        "lugar": "campamento",
+        "sprite": "images/protagonistas/arquero.png",
+        "descripcion": "Tirador veloz y certero con vista de águila."
+    },
+    {
+        "id": "elfo",
+        "nombre": "Elfo",
+        "categoria": "agilidad",
+        "lugar": "arboleda",
+        "sprite": "images/protagonistas/elfo.png",
+        "descripcion": "Guardián esbelto de los secretos del bosque."
+    },
+    {
+        "id": "enano",
+        "nombre": "Enano",
+        "categoria": "resistencia",
+        "lugar": "mina",
+        "sprite": "images/protagonistas/enano.png",
+        "descripcion": "Fuerte combatiente de las montañas e hacedor de hierro."
+    },
+    {
+        "id": "orco",
+        "nombre": "Orco",
+        "categoria": "fuerza",
+        "lugar": "fortaleza",
+        "sprite": "images/protagonistas/orco.png",
+        "descripcion": "Poderoso guerrero de gran tenacidad en batalla."
+    },
+    {
+        "id": "hada",
+        "nombre": "Hada",
+        "categoria": "magia",
+        "lugar": "claro_místico",
+        "sprite": "images/protagonistas/hada.png",
+        "descripcion": "Ser místico canalizador de las artes espirituales."
+    },
+    {
+        "id": "historiadora",
+        "nombre": "Historiadora",
+        "categoria": "investigacion",
+        "lugar": "archivo",
+        "sprite": "images/protagonistas/historiadora.png",
+        "descripcion": "Buscadora de la verdad inscrita en el pasado."
+    },
+    {
+        "id": "cocinero",
+        "nombre": "Maestro Cocinero",
+        "categoria": "alimentacion",
+        "lugar": "cocina_real",
+        "sprite": "images/npc/cocinero.png",
+        "descripcion": "Especialista en banquetes revitalizantes y recetas del reino."
+    },
+    {
+        "id": "bardo",
+        "nombre": "Bardo Menestrel",
+        "categoria": "musica",
+        "lugar": "plaza",
+        "sprite": "images/npc/bardo.png",
+        "descripcion": "Inspirador de tropas con cantares y baladas legendarias."
+    },
+    {
+        "id": "reina",
+        "nombre": "Reina Soberana",
+        "categoria": "valores",
+        "lugar": "trono",
+        "sprite": "images/npc/reina.png",
+        "descripcion": "Gobernante sabia que guía el destino de la comarca."
+    },
+    {
+        "id": "acrobata",
+        "nombre": "Acróbata",
+        "categoria": "destreza",
+        "lugar": "gran_carpa",
+        "sprite": "images/npc/acrobata.png",
+        "descripcion": "Maestra de la agilidad y los movimientos evasivos."
+    }
+]

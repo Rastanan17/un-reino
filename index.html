@@ -2,27 +2,87 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-        <title>El Reino de Orión</title>
+        <title>Un reino en Mírrafen</title>
         <link rel="manifest" href="manifest.json">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/intro.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/map.css">
+        <link rel="stylesheet" href="css/kingdom.css">
+        <link rel="stylesheet" href="css/missions.css">
+        <link rel="stylesheet" href="css/store.css">
+        <link rel="stylesheet" href="css/pergamino.css">
+        <link rel="stylesheet" href="css/portal.css">
+        <link rel="stylesheet" href="css/logo.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+        <link rel="icon" href="images/castle.jpg" type="image/x-icon">
     </head>
     <body>
-        <div class="card">
-            <h1>👑 El Reino de Orión</h1>
-                <p>Nivel 1</p>
-                <p>⭐ <span id="stars">0</span> &nbsp; 🪙 <span id="coins">0</span></p>
-                    <h2>Misión</h2>
-                        <p id="missionText"></p>
-            <button id="startBtn">▶ Iniciar misión</button>
-            <button id="doneBtn" disabled>✔ Misión cumplida</button>
-            <hr>
-                <h2>Tienda</h2>
-                    <ul>
-                        <li>🎮 30 min Roblox - 100🪙</li>
-                        <li>🍕 Elegir la cena - 120🪙</li>
-                        <li>🌳 Ir a la plaza - 150🪙</li>
-                    </ul>
+        <section id="logoScreen">
+            <video id="logoVideo" src="videos/arca_pixeles_studio.mp4"></video>
+            <div id="introLogo">
+                <h1>ARCA PÍXELES</h1>
+                <h2>Presenta...</h2>
+                <p>🏰 UN REINO EN MÍRRAFEN ⚔️</p>
+                <p class="textoCristal">Rompe el cristal para comenzar tu aventura.</p>
+                <div id="cristal">✦</div>
+            </div>
+        </section>
+        <section id="introScreen">
+            <div id="background"></div>
+            <div id="overlay"></div>
+            <div class="crawl-container">
+                <div id="crawl" class="crawl"></div>
+            </div>
+            <div class="intro-controls">
+                <button id="btnComenzar">⚔️ Comenzar Aventura</button>
+                <button id="startButton">🏰 Ir al Reino</button>
+            </div>
+            <audio id="introMusic" src="sounds/intro.mp3"></audio>
+        </section>
+        <section id="reinoUI" style="display:none;">
+            <header class="profile">
+                <div class="avatar">
+                    <img id="playerAvatar" src="images/characters/explorer.jpg" alt="Avatar del jugador">
+                    <h2 id="playerName"></h2>
+                </div>
+                <div class="info">
+                    <h1>⚔️ Nivel <span id="playerLevel">1 </span> · <span id="playerRank"> Explorador</span></h1>
+                    <h3>💰 <span id="playerCoins">0 </span> Oquos</h3>
+                    <div class="xpBar"><div id="xpFill" class="xpFill"></div></div>
+                    <p class="xpText">⭐<span id="playerXP">0</span>/<span id="playerNextXP">100</span>XP</p>
+                </div>
+            </header>
+            <nav id="mainMenu">
+                <button id="btnMapa">🗺️<span>Mapa</span></button>
+                <button id="btnMisiones">📜<span>Misiones</span></button>
+                <button id="btnMercado">🛒<span>Mercado</span></button>
+                <button id="btnLogros">🏆<span>Logros</span></button>
+            </nav>
+            <main id="content"></main>
+        </section>
+        <div id="modal" class="modal oculto">
+            <div class="modalBox">
+                <h2 id="modalTitulo"></h2>
+                <p id="modalTexto"></p>
+                <button id="cerrarModal">Continuar</button>
+            </div>
         </div>
-        <script src="app.js"></script>
+        <script src="js/storage.js"></script>
+        <script src="js/ui.js"></script>
+        <script src="js/portal.js"></script>
+        <script src="js/pergaminos.js"></script>
+        <script src="js/calendar.js"></script>
+        <script src="js/parent.js"></script>
+        <script src="js/pages.js"></script>
+        <script src="js/missions.js"></script>
+        <script src="js/map.js"></script>
+        <script src="js/rewards.js"></script>
+        <script src="js/navigation.js"></script>
+        <script src="js/logo.js"></script>
+        <script src="js/intro.js"></script>
+        <script src="js/compensacion.js"></script>
+        <script src="js/app.js"></script>
     </body>
 </html>

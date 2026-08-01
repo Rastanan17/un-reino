@@ -1,0 +1,106 @@
+/* =======================================
+   PERGAMINO
+======================================= */
+
+.modalPergamino{
+    position:fixed;
+    inset:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(0,0,0,.70);
+
+    z-index:99999;
+
+    animation:fadeIn .35s;
+}
+
+.pergamino{
+
+    width:900px;
+    max-width:95%;
+
+    height:560px;
+
+    background:url("../images/items/pergamino_1.png");
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+
+    position:relative;
+
+    animation:abrirPergamino .45s ease-out;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+
+}
+
+@keyframes abrirPergamino{
+
+    0%{
+        transform:scale(.6);
+        opacity:0;
+    }
+
+    70%{
+        transform:scale(1.05);
+    }
+
+    100%{
+        transform:scale(1);
+        opacity:1;
+    }
+
+}
+
+.pergaminoNPC{
+
+    position:absolute;
+
+    left:40px;
+    bottom:0;
+
+    width:250px;
+    height:380px;
+
+}
+
+.pergaminoTexto{
+
+    position:absolute;
+
+    left:280px;
+    top:90px;
+
+    width:560px;
+
+    color:#3f2814;
+
+    font-size:1.35rem;
+
+    line-height:1.6;
+
+}
+
+.pergaminoBotones{
+
+    position:absolute;
+
+    right:60px;
+    bottom:50px;
+
+    display:flex;
+    gap:20px;
+
+}

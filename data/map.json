@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "nombre": "Castillo",
+    "sprite":"images/kingdom/castle.jpg",
+    "progreso": 0,
+    "objetivo": 100,
+    "x":52,
+    "y":40
+  },
+  {
+    "id": 2,
+    "nombre": "Granja",
+    "sprite":"images/kingdom/farm.jpg",
+    "progreso": 0,
+    "objetivo": 100,
+    "x":70,
+    "y":70
+  },
+  {
+    "id": 3,
+    "nombre": "Bosque",
+    "sprite":"images/kingdom/forest.jpg",
+    "progreso": 0,
+    "objetivo": 100,
+    "x":18,
+    "y":55
+  },
+  {
+    "id": 4,
+    "nombre": "Santuario",
+    "sprite":"images/kingdom/sanctuary.jpg",
+    "progreso": 0,
+    "objetivo": 100,
+    "x":18,
+    "y":18
+  },
+  {
+    "id": 5,
+    "nombre": "Observatorio",
+    "sprite":"images/kingdom/observatory.jpg",
+    "progreso": 0,
+    "objetivo": 100,
+
+    "x":82,
+    "y":12
+  },
+  {
+    "id": 6,
+    "nombre": "Aldea",
+    "sprite":"images/kingdom/village.jpg",
+    "progreso": 0,
+    "objetivo": 100,
+    "x":42,
+    "y":65
+  },
+  {
+    "id": 7,
+    "nombre": "Mercado",
+    "sprite":"images/kingdom/market.jpg",
+    "progreso": 0,
+    "objetivo": 100,
+    "x":33,
+    "y":33
+  },
+  {
+    "id": 8,
+    "nombre": "Biblioteca",
+    "sprite":"images/kingdom/library.jpg",
+    "progreso": 0,
+    "objetivo": 100,
+    "x":65,
+    "y":28
+  }
+]
