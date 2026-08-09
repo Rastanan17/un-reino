@@ -1,0 +1,102 @@
+[
+    {
+      "id": 1,
+      "tipo": "aldeano",
+      "texto": "Las cosechas vienen bien este año, aunque necesitamos un poco más de lluvia."
+    },
+    {
+      "id": 2,
+      "tipo": "aldeano",
+      "texto": "Asegúrate de estar dentro de casa antes de que caiga el sol. El bosque no es seguro de noche."
+    },
+    {
+      "id": 3,
+      "tipo": "aldeano",
+      "texto": "¡Buen día, viajero! Si buscas provisiones, deberías dar una vuelta por el mercado."
+    },
+    {
+      "id": 4,
+      "tipo": "aldeano",
+      "texto": "Dicen que los guardias del castillo están más estrictos que de costumbre... algo habrá pasado."
+    },
+    {
+      "id": 5,
+      "tipo": "aldeano",
+      "texto": "Trabajar en la tierra es duro, pero es una vida honesta."
+    },
+    {
+      "id": 6,
+      "tipo": "aldeano",
+      "texto": "¿Escuchaste los aullidos de anoche? Definitivamente no eran lobos comunes."
+    },
+    {
+      "id": 7,
+      "tipo": "aldeano",
+      "texto": "El pan de la panadería del centro sale calentito al mediodía, no te lo pierdas."
+    },
+    {
+      "id": 8,
+      "tipo": "aldeano",
+      "texto": "A veces sueño con dejar la aldea y recorrer el mundo... pero alguien tiene que cuidar a los animales."
+    },
+    {
+      "id": 9,
+      "tipo": "aldeana",
+      "texto": "El río viene crecido hoy. Tené cuidado si vas a cruzar por las piedras."
+    },
+    {
+      "id": 10,
+      "tipo": "aldeana",
+      "texto": "Si vas a la biblioteca, dile al monje que no olvide devolver el grimorio de hierbas."
+    },
+    {
+      "id": 11,
+      "tipo": "aldeana",
+      "texto": "Mis gallinas no han puesto un solo huevo en toda la semana, presiento que algo las asustó."
+    },
+    {
+      "id": 12,
+      "tipo": "aldeana",
+      "texto": "¡Qué lindo día para dar un paseo por la plaza!"
+    },
+    {
+      "id": 13,
+      "tipo": "aldeana",
+      "texto": "Dicen que el anciano del extremo del pueblo conoce remedios para cualquier mal."
+    },
+    {
+      "id": 14,
+      "tipo": "aldeana",
+      "texto": "Asegúrate de cerrar bien las puertas si vas a descansar en la posada."
+    },
+    {
+      "id": 15,
+      "tipo": "nino",
+      "texto": "¡Mire, señor! ¡Atrapé una rana gigante en el arroyo!"
+    },
+    {
+      "id": 16,
+      "tipo": "nino",
+      "texto": "Mi papá dice que cuando sea grande podré tener mi propia espada de verdad."
+    },
+    {
+      "id": 17,
+      "tipo": "nino",
+      "texto": "¡Jugamos a los caballeros y los monstruos! ¿Querés jugar con nosotros?"
+    },
+    {
+      "id": 18,
+      "tipo": "nino",
+      "texto": "Mamá me dijo que no me acerque al puente viejo, pero ahí es donde se esconden los mejores insectos."
+    },
+    {
+      "id": 19,
+      "tipo": "anciano",
+      "texto": "He visto pasar muchos reyes y guerras... pero este pueblo sigue en pie."
+    },
+    {
+      "id": 20,
+      "tipo": "anciano",
+      "texto": "En mis tiempos, el bosque no era tan profundo ni tan oscuro como ahora..."
+    }
+  ]

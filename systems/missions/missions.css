@@ -1,0 +1,506 @@
+#missions{
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+    margin-top:40px;
+}
+.mission-card h3{
+    margin:10px 0;
+    color:#ffd86b;
+}
+.categoria{
+    font-size:1.1rem;
+    margin-bottom:10px;
+}
+.icono{
+    font-size:3rem;
+}
+.recompensas{
+    margin-top:15px;
+    font-weight:bold;
+}
+.progress{
+    width:100%;
+    height:20px;
+    background:#333;
+    border-radius:20px;
+    overflow:hidden;
+    margin-top:15px;
+}
+.progressFill{
+    width:0%;
+    height:100%;
+    background:linear-gradient(90deg,#48d96b,#a8ff60);
+    transition:1s;
+}
+@keyframes subirNivel{
+    0%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.05);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+.levelUp{
+    animation:subirNivel .8s;
+}
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+.oculto{
+    display:none;
+}
+/* =======================================
+   MODAL / PERGAMINO DE MENSAJES
+   ======================================= */
+.modalBox{
+    width:min(900px,95vw);
+    aspect-ratio:900/560;
+    height:auto;
+    background:url("../../assets/images/items/pergamino_1.png");
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    box-sizing:border-box;
+    padding:70px 100px;
+    animation:abrirPergamino .45s ease-out;
+}
+/* =======================================
+   TÍTULO
+   ======================================= */
+.modalBox h2{
+    margin:0 0 20px 0;
+    color:rgb(115,58,121);
+    text-align:center;
+    font-family:'MedievalSharp',cursive;
+    font-size:clamp(22px,3vw,36px);
+    line-height:1.2;
+    position:relative;
+    z-index:2;
+}
+/* =======================================
+   TEXTO
+   ======================================= */
+#modalTexto{
+    position:relative;
+    inset:auto;
+    width:80%;
+    max-width:650px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#000;
+    font-size:clamp(15px,2vw,21px);
+    line-height:1.5;
+    z-index:2;
+}
+/* =======================================
+   BOTÓN CERRAR
+   ======================================= */
+#cerrarModal{
+    position:relative;
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:2;
+    color:#fdfdfd;
+}
+.mission-filter{
+    display:flex;
+    gap:10px;
+    overflow-x:auto;
+    margin-bottom:20px;
+    padding-bottom:8px;
+}
+.filter-btn{
+    border:none;
+    padding:10px 18px;
+    border-radius:25px;
+    background:#2f3f4f;
+    color:white;
+    cursor:pointer;
+    transition:.25s;
+    white-space:nowrap;
+}
+.filter-btn:hover{
+    background:#46627d;
+}
+.filter-btn.active{
+    background:#f4b400;
+    color:#222;
+    font-weight:bold;
+}
+/* =======================================
+   TABLÓN DE MISIONES
+======================================= */
+
+.tablon-misiones {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 600px;
+
+    overflow: hidden;
+
+    background-color: #111;
+}
+
+
+/* =======================================
+   FONDO DEL CASTILLO
+======================================= */
+
+.misiones-castillo {
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.65)
+        ),
+        url("../../assets/images/backgrounds/castle.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+}
+
+
+/* =======================================
+   FONDO DE LA ALDEA
+======================================= */
+
+.misiones-aldea {
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.65)
+        ),
+        url("../../assets/images/backgrounds/village.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+}
+.pergaminos{
+    width:100%;
+    height:100%;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows:repeat(2,1fr);
+    place-items:center;
+    padding:80px 120px;
+    box-sizing:border-box;
+}
+.pergamino2{
+    width:280px;
+    height:340px;
+    background-image:url("../../assets/images/items/roll_2.png");
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+    position:relative;
+    cursor:pointer;
+    transition:.25s;
+}
+.pergamino2:hover{
+    transform:scale(1.12);
+}
+.btn-anterior{
+    transform:scale(1.08) rotate(-10deg);
+    position:absolute;
+    left:25px;
+    top:50%;
+    transform:translateY(-50%),translateX(5px);
+    width:120px;
+    cursor:pointer;
+}
+.btn-siguiente{
+    transform:scale(1.08) rotate(-10deg);
+    position:absolute;
+    right:25px;
+    top:50%;
+    transform:translateY(-50%),translateX(5px);;
+    width:120px;
+    cursor:pointer;
+}
+.btn-volver{
+    transform:scale(1.08) rotate(-10deg);
+    position:absolute;
+    top:20px;
+    right:20px;
+    transform:translateY(-50%),translateX(5px);;
+    width:100px;
+    cursor:pointer;
+    transition:.25s;
+}
+.btn-volver:hover, .btn-anterior:hover, .btn-siguiente:hover{
+    transform:scale(1.08);
+}
+/* =======================================
+   CONTENIDO DEL PERGAMINO
+======================================= */
+.titulo-mision{
+    margin-top: 58px;
+    padding: 8px 38px 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #38164b;
+    font-family: 'MedievalSharp', cursive;
+    line-height: 1.2;
+}
+.categoria-mision{
+    margin-top: 9px;
+    text-align: center;
+    font-size: 13px;
+    color: #6d4d28;
+    font-weight: bold;
+}
+.dificultad-mision{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 14px;
+    color: #8a3d18;
+    text-transform: capitalize;
+}
+.xp-mision{
+    margin-top: 13px;
+    text-align: center;
+    font-size: 15px;
+    color: #8b5e12;
+    font-weight: bold;
+}
+.oquos-mision{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 15px;
+    color: #96711d;
+    font-weight: bold;
+}
+/* =======================================
+ESTADOS DE LAS MISIONES
+======================================= */
+/* =======================================
+DISPONIBLE
+Pergamino normal
+======================================= */
+.pergamino2.estado-disponible{
+    background-image:
+    url("../../assets/images/items/roll_2.png");
+}
+/* =======================================
+EN CURSO
+Pergamino mágico activo
+======================================= */
+.pergamino2.estado-enCurso{
+    animation:
+    pergaminoMagico 2s infinite alternate;
+}
+/* efecto mágico */
+@keyframes pergaminoMagico{
+    from{
+        filter:
+        brightness(1.25);
+    }
+    to{
+        filter:
+        brightness(1.25)
+        drop-shadow(
+        0 0 50px rgba(186, 100, 219, 0.9)
+        );
+    }
+}
+/* =======================================
+COMPLETADA
+Pergamino cerrado con sello
+======================================= */
+.pergamino2.estado-completada{
+    background-image:
+    url("../../assets/images/items/roll_3.png");
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+/* ocultar información en pergamino cerrado */
+.pergamino2.estado-completada .estado-mision,
+.pergamino2.estado-completada .titulo-mision,
+.pergamino2.estado-completada .categoria-mision,
+.pergamino2.estado-completada .dificultad-mision,
+.pergamino2.estado-completada .xp-mision,
+.pergamino2.estado-completada .oquos-mision {
+    display: none !important;
+}
+.estado-mision{
+    position:relative;
+    top:40px;
+    right:0px;
+    font-weight:bold;
+    text-transform:uppercase;
+    color: #38164b;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+/* =======================================
+   FLECHAS DE NAVEGACIÓN
+   ======================================= */
+.flecha-deshabilitada{
+    opacity:0.25;
+    filter:grayscale(1);
+}
+/* =======================================
+   AVISO AL LLEGAR AL LÍMITE
+   ======================================= */
+.flecha-limite{
+    animation:sacudirFlecha .35s ease-in-out;
+}
+@keyframes sacudirFlecha{
+    0%{transform:translateY(-50%) translateX(0);
+    }
+    25%{transform:translateY(-50%) translateX(-8px);
+    }
+    50%{transform:translateY(-50%) translateX(8px);
+    }
+    75%{transform:translateY(-50%) translateX(-5px);
+    }
+    100%{transform:translateY(-50%) translateX(0);
+    }
+}
+/* =======================================
+   INDICADOR DE PÁGINA
+   ======================================= */
+.indicador-pagina{
+    position:absolute;
+    bottom:18px;
+    left:50%;
+    transform:translateX(-50%);
+    padding:6px 16px;
+    border-radius:20px;
+    background:rgba(0,0,0,.45);
+    color:#f5d98a;
+    font-family:'MedievalSharp',cursive;
+    font-size:15px;
+    font-weight:bold;
+    text-shadow:0 1px 3px #000;
+    pointer-events:none;
+}
+/* =======================================
+   RESPONSIVE MISIONES
+======================================= */
+@media(max-width:900px){
+    .pergaminos{
+        grid-template-columns:repeat(2,1fr);
+        grid-template-rows:auto;
+        padding:50px 40px;
+        gap:20px;
+    }
+    .pergamino2{
+        width:210px;
+        height:260px;
+    }
+    .titulo-mision{
+        margin-top:45px;
+        font-size:16px;
+        padding:15px;
+    }
+}
+/* =======================================
+   CELULAR
+======================================= */
+@media(max-width:600px){
+    #missions{
+        margin-top:20px;
+        gap:15px;
+    }
+    .mission-filter{
+        padding-bottom:5px;
+    }
+    .filter-btn{
+        padding:8px 14px;
+        font-size:.85rem;
+    }
+    .pergaminos{
+        grid-template-columns:1fr;
+        padding:40px 20px;
+        gap:15px;
+    }
+    .pergamino2{
+        width:160px;
+        height:200px;
+    }
+    .pergamino2:hover{
+        transform:none;
+    }
+    .btn-anterior, .btn-siguiente{
+        width:60px;
+    }
+    .btn-anterior{
+        left:5px;
+    }
+    .btn-siguiente{
+        right:5px;
+    }
+    .btn-volver{
+        width:70px;
+        top:10px;
+        right:10px;
+    }
+    .titulo-mision {
+        margin-top: 38px;
+        padding: 6px 20px 0;
+        font-size: 13px;
+        line-height: 1.2;
+    }
+    .categoria-mision {
+        margin-top: 5px;
+        font-size: 11px;
+    }
+    .dificultad-mision {
+        margin-top: 4px;
+        font-size: 12px;
+    }
+    .xp-mision, .oquos-mision {
+        margin-top: 5px;
+        font-size: 12px;
+    }
+    .modalBox{
+        width:92vw;
+        padding:45px 35px;
+    }
+    .modalBox h2{
+        font-size:22px;
+        margin-bottom:12px;
+    }
+    #modalTexto{
+        width:90%;
+        font-size:14px;
+        line-height:1.35;
+    }
+    #cerrarModal{
+        margin-top:15px;
+    }
+}

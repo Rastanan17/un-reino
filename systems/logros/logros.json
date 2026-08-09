@@ -1,0 +1,560 @@
+[
+  {
+    "id": 1,
+    "titulo": "Primer Paso",
+    "descripcion": "Completa tu primera misión.",
+    "icono": "../../images/items/missions.png",
+    "categoria": "Misiones",
+    "xp": 50
+  },
+  {
+    "id": 2,
+    "titulo": "Explorador",
+    "descripcion": "Alcanza el nivel 5.",
+    "icono": "../../images/items/level_up_1.png",
+    "categoria": "Aventuras",
+    "xp": 100
+  },
+  {
+    "id": 3,
+    "titulo": "Mercader",
+    "descripcion": "Compra tu primer objeto.",
+    "icono": "../../images/items/market.png",
+    "categoria": "Reino",
+    "xp": 50
+  },
+  {
+    "id": 4,
+    "titulo": "Coleccionista",
+    "descripcion": "Obtén tu primer pergamino.",
+    "icono": "../../images/items/roll_3.png",
+    "categoria": "Especiales",
+    "xp": 50
+  },
+  {
+    "id": 5,
+    "titulo": "Sabio",
+    "descripcion": "Completa 25 misiones de conocimiento.",
+    "icono": "../../images/items/book.jpg",
+    "categoria": "Conocimiento",
+    "xp": 250
+  },
+  {
+    "id": 6,
+    "titulo": "Guardián del Orden",
+    "descripcion": "Haz la cama 10 veces.",
+    "icono": "../../images/items/bed.png",
+    "categoria": "Castillo",
+    "xp": 150
+  },
+  {
+    "id": 7,
+    "titulo": "Cosecha Fresca",
+    "descripcion": "Come una fruta 10 veces.",
+    "icono": "../../images/items/fruit.png",
+    "categoria": "Granja",
+    "xp": 150
+  },
+  {
+    "id": 8,
+    "titulo": "Mayordomo Real",
+    "descripcion": "Ayuda a poner la mesa 10 veces.",
+    "icono": "../../images/items/table.png",
+    "categoria": "Castillo",
+    "xp": 150
+  },
+  {
+    "id": 9,
+    "titulo": "Sonrisa Brillante",
+    "descripcion": "Cepíllate los dientes constántemente completando la misión 15 veces.",
+    "icono": "../../images/items/teeth.png",
+    "categoria": "Hábitos",
+    "xp": 200
+  },
+  {
+    "id": 10,
+    "titulo": "Maestro del Orden",
+    "descripcion": "Ordena juguetes 10 veces.",
+    "icono": "../../images/items/toys.png",
+    "categoria": "Castillo",
+    "xp": 150
+  },
+  {
+    "id": 11,
+    "titulo": "Mente Matemática",
+    "descripcion": "Haz cuentas de sumar completando la misión 10 veces.",
+    "icono": "../../images/items/math.png",
+    "categoria": "Conocimiento",
+    "xp": 200
+  },
+  {
+    "id": 12,
+    "titulo": "Astrónomo Novato",
+    "descripcion": "Aprende curiosidades del universo 10 veces.",
+    "icono": "../../images/items/universe.png",
+    "categoria": "Conocimiento",
+    "xp": 200
+  },
+  {
+    "id": 13,
+    "titulo": "Rutina de Acero",
+    "descripcion": "Completa 5 misiones en un solo día.",
+    "icono": "../../images/items/streak.png",
+    "categoria": "Misiones",
+    "xp": 100
+  },
+  {
+    "id": 14,
+    "titulo": "Aventurero Constante",
+    "descripcion": "Mantén una racha de actividad de 3 días.",
+    "icono": "../../images/items/fire.png",
+    "categoria": "Aventuras",
+    "xp": 250
+  },
+  {
+    "id": 15,
+    "titulo": "Ahorrador Real",
+    "descripcion": "Acumula 100 oquos en tu inventario.",
+    "icono": "../../images/items/coins.png",
+    "categoria": "Reino",
+    "xp": 200
+  },
+  {
+    "id": 16,
+    "titulo": "Granjero Ejemplar",
+    "descripcion": "Completa todas las misiones de la categoría Granja en una semana.",
+    "icono": "../../images/items/farm.png",
+    "categoria": "Granja",
+    "xp": 300
+  },
+  {
+    "id": 17,
+    "titulo": "Príncipe Impecable",
+    "descripcion": "Completa todas las misiones de la categoría Castillo en una semana.",
+    "icono": "../../images/items/castle.png",
+    "categoria": "Castillo",
+    "xp": 300
+  },
+  {
+    "id": 18,
+    "titulo": "Estudiante Estrella",
+    "descripcion": "Completa 20 misiones de la categoría Conocimiento.",
+    "icono": "../../images/items/grad.png",
+    "categoria": "Conocimiento",
+    "xp": 400
+  },
+  {
+    "id": 19,
+    "titulo": "Coleccionista de Bronce",
+    "descripcion": "Desbloquea 10 logros en total.",
+    "icono": "../../images/items/medal.png",
+    "categoria": "Especiales",
+    "xp": 350
+  },
+  {
+    "id": 20,
+    "titulo": "Héroe de la Aldea",
+    "descripcion": "Alcanza el nivel 10 completando misiones diarias.",
+    "icono": "../../images/items/guild.png",
+    "categoria": "Aventuras",
+    "xp": 600
+  },
+  {
+    "id": 21,
+    "titulo": "Explorador de Sabores",
+    "descripcion": "Completa la misión de comer algo nuevo 5 veces.",
+    "icono": "../../images/items/food.png",
+    "categoria": "Granja",
+    "xp": 150
+  },
+  {
+    "id": 22,
+    "titulo": "Amigo de las Plantas",
+    "descripcion": "Planta una semilla en el jardín 3 veces.",
+    "icono": "../../images/items/seed.png",
+    "categoria": "Naturaleza",
+    "xp": 150
+  },
+  {
+    "id": 23,
+    "titulo": "Caminante del Reino",
+    "descripcion": "Sal de paseo completando la misión 5 veces.",
+    "icono": "../../images/items/walk.png",
+    "categoria": "Aventuras",
+    "xp": 200
+  },
+  {
+    "id": 24,
+    "titulo": "Noche de Cine",
+    "descripcion": "Mira una película en familia 3 veces.",
+    "icono": "../../images/items/movie.png",
+    "categoria": "Especiales",
+    "xp": 200
+  },
+  {
+    "id": 25,
+    "titulo": "Melómano Curioso",
+    "descripcion": "Escucha una canción nueva 5 veces.",
+    "icono": "../../images/items/music.png",
+    "categoria": "Conocimiento",
+    "xp": 150
+  },
+  {
+    "id": 26,
+    "titulo": "Corazón Alegre",
+    "descripcion": "Saluda a un familiar completando la misión 10 veces.",
+    "icono": "../../images/items/heart.png",
+    "categoria": "Castillo",
+    "xp": 150
+  },
+  {
+    "id": 27,
+    "titulo": "Pinche de Cocina",
+    "descripcion": "Ayuda a cocinar 5 veces.",
+    "icono": "../../images/items/chef.png",
+    "categoria": "Castillo",
+    "xp": 200
+  },
+  {
+    "id": 28,
+    "titulo": "Cosecha Saludable",
+    "descripcion": "Prueba y come una verdura nueva 5 veces.",
+    "icono": "veg.png",
+    "categoria": "Granja",
+    "xp": 200
+  },
+  {
+    "id": 29,
+    "titulo": "Gourmet del Reino",
+    "descripcion": "Compra tu primer helado en el mercado.",
+    "icono": "icecream.png",
+    "categoria": "Mercado",
+    "xp": 100
+  },
+  {
+    "id": 30,
+    "titulo": "Gamer Legendario",
+    "descripcion": "Canjea la recompensa de jugar en Roblox 5 veces.",
+    "icono": "roblox.png",
+    "categoria": "Mercado",
+    "xp": 150
+  },
+  {
+    "id": 31,
+    "titulo": "Espectador Estelar",
+    "descripcion": "Canjea tiempo para ver YouTube en el mercado 5 veces.",
+    "icono": "youtube.png",
+    "categoria": "Mercado",
+    "xp": 150
+  },
+  {
+    "id": 32,
+    "titulo": "Merienda Dulce",
+    "descripcion": "Compra galletitas en el mercado 5 veces.",
+    "icono": "cookie.png",
+    "categoria": "Mercado",
+    "xp": 150
+  },
+  {
+    "id": 33,
+    "titulo": "Gran Chef Decisor",
+    "descripcion": "Elige la cena para la familia 3 veces.",
+    "icono": "dinner.png",
+    "categoria": "Mercado",
+    "xp": 200
+  },
+  {
+    "id": 34,
+    "titulo": "Cliente Frecuente",
+    "descripcion": "Realiza 10 compras en total en el mercado.",
+    "icono": "market_bag.png",
+    "categoria": "Mercado",
+    "xp": 300
+  },
+  {
+    "id": 35,
+    "titulo": "Naturaleza Viva",
+    "descripcion": "Completa todas las misiones de plantar y pasear en una semana.",
+    "icono": "nature.png",
+    "categoria": "Naturaleza",
+    "xp": 350
+  },
+  {
+    "id": 36,
+    "titulo": "Unión Familiar",
+    "descripcion": "Completa misiones de película, saludo y cocina en un mismo día.",
+    "icono": "family.png",
+    "categoria": "Castillo",
+    "xp": 300
+  },
+  {
+    "id": 37,
+    "titulo": "Paladar Valiente",
+    "descripcion": "Completa 10 misiones relacionadas con probar comidas o verduras nuevas.",
+    "icono": "tasting.png",
+    "categoria": "Granja",
+    "xp": 400
+  },
+  {
+    "id": 38,
+    "titulo": "Ritmo y Armonía",
+    "descripcion": "Completa 10 misiones de escuchar canciones nuevas.",
+    "icono": "headphones.png",
+    "categoria": "Conocimiento",
+    "xp": 250
+  },
+  {
+    "id": 39,
+    "titulo": "Coleccionista de Recompensas",
+    "descripcion": "Canjea todos los tipos de premios disponibles en el mercado al menos una vez.",
+    "icono": "treasure.png",
+    "categoria": "Mercado",
+    "xp": 500
+  },
+  {
+    "id": 40,
+    "titulo": "Gran Maestro de Aventuras",
+    "descripcion": "Alcanza la cumbre completando 50 misiones de todas las categorías.",
+    "icono": "master_crown.png",
+    "categoria": "Especiales",
+    "xp": 1000
+  },
+  {
+    "id": 41,
+    "nombre": "Explorador de Sabores",
+    "descripcion": "Come algo nuevo para descubrir un sabor desconocido.",
+    "categoria": "Granja",
+    "xp": 25,
+    "oquos": 15,
+    "estado": "disponible"
+  },
+  {
+    "id": 42,
+    "nombre": "Cosecha Verde",
+    "descripcion": "Prueba y come una verdura nueva.",
+    "categoria": "Granja",
+    "xp": 25,
+    "oquos": 15,
+    "estado": "disponible"
+  },
+  {
+    "id": 43,
+    "nombre": "Jardinero Real",
+    "descripcion": "Planta una semilla en el jardín y cuídala.",
+    "categoria": "Naturaleza",
+    "xp": 30,
+    "oquos": 20,
+    "estado": "disponible"
+  },
+  {
+    "id": 44,
+    "nombre": "Expedición al Exterior",
+    "descripcion": "Sal de paseo a caminar o tomar aire fresco.",
+    "categoria": "Aventuras",
+    "xp": 30,
+    "oquos": 15,
+    "estado": "disponible"
+  },
+  {
+    "id": 45,
+    "nombre": "Noche de Cine en el Reino",
+    "descripcion": "Mira una película en familia compartiendo un momento juntos.",
+    "categoria": "Social",
+    "xp": 40,
+    "oquos": 25,
+    "estado": "disponible"
+  },
+  {
+    "id": 46,
+    "nombre": "Bardo Musical",
+    "descripcion": "Escucha una canción nueva que no conocías.",
+    "categoria": "Conocimiento",
+    "xp": 20,
+    "oquos": 10,
+    "estado": "disponible"
+  },
+  {
+    "id": 47,
+    "nombre": "Mensajero de la Corte",
+    "descripcion": "Saluda afectuosamente a un familiar.",
+    "categoria": "Social",
+    "xp": 20,
+    "oquos": 10,
+    "estado": "disponible"
+  },
+  {
+    "id": 48,
+    "nombre": "Pinche de Cocina",
+    "descripcion": "Ayuda a cocinar preparando los ingredientes con un adulto.",
+    "categoria": "Castillo",
+    "xp": 35,
+    "oquos": 20,
+    "estado": "disponible"
+  },
+  {
+    "id": 49,
+    "nombre": "Cazador de Estrellas",
+    "descripcion": "Observa el cielo nocturno e identifica la luna o una estrella.",
+    "categoria": "Naturaleza",
+    "xp": 20,
+    "oquos": 10,
+    "estado": "disponible"
+  },
+  {
+    "id": 50,
+    "nombre": "Escudero Limpio",
+    "descripcion": "Lava tus platos después de terminar de comer.",
+    "categoria": "Castillo",
+    "xp": 20,
+    "oquos": 10,
+    "estado": "disponible"
+  },
+  {
+    "id": 51,
+    "nombre": "Guardián de la Lectura",
+    "descripcion": "Lee un capítulo de un libro o cuentos durante 15 minutos.",
+    "categoria": "Conocimiento",
+    "xp": 30,
+    "oquos": 15,
+    "estado": "disponible"
+  },
+  {
+    "id": 52,
+    "nombre": "artista del Reino",
+    "descripcion": "Haz un dibujo libre o una manualidad creativa.",
+    "categoria": "Especiales",
+    "xp": 30,
+    "oquos": 15,
+    "estado": "disponible"
+  },
+  {
+    "id": 53,
+    "nombre": "Entrenamiento de Caballero",
+    "descripcion": "Realiza 10 minutos de estiramientos o ejercicios divertidos.",
+    "categoria": "Aventuras",
+    "xp": 25,
+    "oquos": 15,
+    "estado": "disponible"
+  },
+  {
+    "id": 54,
+    "nombre": "Hidratación del Viajero",
+    "descripcion": "Toma un vaso completo de agua fresca al despertar.",
+    "categoria": "Granja",
+    "xp": 15,
+    "oquos": 5,
+    "estado": "disponible"
+  },
+  {
+    "id": 55,
+    "nombre": "Organizador de Pergaminos",
+    "descripcion": "Ordena tu mochila o tu espacio de estudio.",
+    "categoria": "Castillo",
+    "xp": 25,
+    "oquos": 15,
+    "estado": "disponible"
+  },
+  {
+    "id": 56,
+    "nombre": "Cuidador de Mascotas",
+    "descripcion": "Alimenta o dale agua a una mascota si la tienes.",
+    "categoria": "Naturaleza",
+    "xp": 25,
+    "oquos": 15,
+    "estado": "disponible"
+  },
+  {
+    "id": 57,
+    "nombre": "Detective de Palabras",
+    "descripcion": "Aprende el significado de una palabra nueva en el diccionario.",
+    "categoria": "Conocimiento",
+    "xp": 25,
+    "oquos": 15,
+    "estado": "disponible"
+  },
+  {
+    "id": 58,
+    "nombre": "Gestor de Residuos",
+    "descripcion": "Separa la basura o saca los residuos a su lugar correspondiente.",
+    "categoria": "Castillo",
+    "xp": 20,
+    "oquos": 10,
+    "estado": "disponible"
+  },
+  {
+    "id": 59,
+    "nombre": "Práctica de Sabiduría",
+    "descripcion": "Escribe o practica tu caligrafía durante un rato.",
+    "categoria": "Conocimiento",
+    "xp": 25,
+    "oquos": 15,
+    "estado": "disponible"
+  },
+  {
+    "id": 60,
+    "nombre": "Guardián del Sueño",
+    "descripcion": "Apaga las luces y acuéstate a horario por la noche.",
+    "categoria": "Hábitos",
+    "xp": 30,
+    "oquos": 20,
+    "estado": "disponible"
+  },
+  {
+    "id": 61,
+    "nombre": "Haz la cama",
+    "descripcion": "Ordena tu cama antes de comenzar el día.",
+    "categoria": "Castillo",
+    "xp": 20,
+    "oquos": 10,
+    "estado": "disponible"
+  },
+  {
+    "id": 62,
+    "nombre": "Come una fruta",
+    "descripcion": "Come una fruta durante el día.",
+    "categoria": "Granja",
+    "xp": 20,
+    "oquos": 10,
+    "estado": "disponible"
+  },
+  {
+    "id": 63,
+    "titulo":"Primer Paso",
+    "descripcion":"Completa tu primera misión.",
+    "icono":"missions.png",
+    "categoria":"Misiones",
+    "xp":50
+  },
+  {
+    "id": 64,
+    "titulo":"Explorador",
+    "descripcion":"Alcanza el nivel 5.",
+    "icono":"level.png",
+    "categoria":"Aventuras",
+    "xp":100
+  },
+  {
+    "id": 65,
+    "titulo":"Mercader",
+    "descripcion":"Compra tu primer objeto.",
+    "icono":"market.png",
+    "categoria":"Reino",
+    "xp":50
+  },
+  {
+    "id": 66,
+    "titulo":"Coleccionista",
+    "descripcion":"Obtén tu primer pergamino.",
+    "icono":"scroll.png",
+    "categoria":"Especiales",
+    "xp":50
+  },
+  {
+    "id": 67,
+    "titulo":"Sabio",
+    "descripcion":"Completa 25 misiones de conocimiento.",
+    "icono":"book.png",
+    "categoria":"Conocimiento",
+    "xp":250
+  }
+]

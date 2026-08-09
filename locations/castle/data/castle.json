@@ -1,0 +1,77 @@
+[
+    {
+      "id": 1,
+      "guardia": "guardias1",
+      "texto": "Paso firme, ciudadano. El Rey no tolera alborotadores."
+    },
+    {
+      "id": 2,
+      "guardia": "guardias1",
+      "texto": "Si buscas audiencia con el Lord, tendrás que esperar como todos."
+    },
+    {
+      "id": 3,
+      "guardia": "guardias1",
+      "texto": "Llevo ocho horas parado con esta armadura... mis pies ya no existen."
+    },
+    {
+      "id": 4,
+      "guardia": "guardias1",
+      "texto": "Alto ahí. ¿Tienes permiso para rondar por los pasillos del castillo?"
+    },
+    {
+      "id": 5,
+      "guardia": "guardias1",
+      "texto": "Mantén las manos donde pueda verlas y no tendremos problemas."
+    },
+    {
+      "id": 6,
+      "guardia": "guardias1",
+      "texto": "¿Has visto al bufón? Si vuelve a esconder mi yelmo, lo lanzaré al foso."
+    },
+    {
+      "id": 7,
+      "guardia": "guardias1",
+      "texto": "Circule, ciudadano. No hay nada que ver aquí."
+    },
+    {
+      "id": 8,
+      "guardia": "guardias1",
+      "texto": "La guardia nocturna vio luces sospechosas en el bosque... no me gusta nada."
+    },
+    {
+      "id": 9,
+      "guardia": "guardias2",
+      "texto": "Dicen que el cocinero preparó jabalí asado hoy... ¡ojalá nos dejen las sobras!"
+    },
+    {
+      "id": 10,
+      "guardia": "guardias2",
+      "texto": "No me mires a mí, yo solo sigo las órdenes del capitán."
+    },
+    {
+      "id": 11,
+      "guardia": "guardias2",
+      "texto": "Un paso en falso y pasarás la noche en la mazmorra más fría del castillo."
+    },
+    {
+      "id": 12,
+      "guardia": "guardias2",
+      "texto": "¿Acaso parezco un guía? El salón del trono está al fondo a la derecha."
+    },
+    {
+      "id": 13,
+      "guardia": "guardias2",
+      "texto": "Solía ser un aventurero como tú, hasta que acepté este trabajo en la guardia."
+    },
+    {
+      "id": 14,
+      "guardia": "guardias2",
+      "texto": "Asegúrate de no hacer ruido cerca de los aposentos reales."
+    },
+    {
+      "id": 15,
+      "guardia": "guardias2",
+      "texto": "A veces me pregunto si estas armaduras son de adorno o realmente protegen."
+    }
+  ]

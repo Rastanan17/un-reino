@@ -1,0 +1,312 @@
+/* =======================================
+   REINO DE MÍRRAFEN
+   CASTILLO DE MÍRRAFEN
+   ======================================= */
+/* =======================================
+   CASTILLO — ELEMENTOS DEL ESCENARIO
+   ======================================= */
+.castillo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+    overflow: hidden;
+    background-image: url("../../assets/images/backgrounds/castle.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* =======================================
+   ELEMENTOS GENERALES
+   ======================================= */
+.castillo img {
+    user-select: none;
+    pointer-events: none;
+}
+.objeto,.guardias1,.guardias2 {
+    position: absolute;
+    cursor: pointer;
+    transition: transform .25s ease, filter .25s ease;
+}
+.objeto:hover,.guardias1:hover,.guardias2:hover {
+    filter: brightness(1.2);
+}
+/* =======================================
+   FOGATA — LIGHT 4
+   ======================================= */
+.light4 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 7%;
+    top: 52%;
+}
+.light4 img {
+    width: 100%;
+    height: 100%;
+}
+/* =======================================
+   SALIDA — ESTANDARTE IZQUIERDO
+   ======================================= */
+.salir {
+    position: absolute;
+    width: 14%;
+    height: 19%;
+    left: 12%;
+    top: 25%;
+}
+.salir img {
+    width: 100%;
+    height: 100%;
+}
+/* =======================================
+   ARMERÍA — ESTANDARTE AZUL
+   ======================================= */
+.armeria {
+    position: absolute;
+    width: 16%;
+    height: 19%;
+    left: 50%;
+    top: 25%;
+}
+.armeria img {
+    width: 100%;
+    height: 100%;
+}
+/* =======================================
+   TRONO
+   ======================================= */
+.trono {
+    position: absolute;
+    width: 24%;
+    height: 28%;
+    left: 45%;
+    top: 53%;
+}
+.trono img {
+    width: 100%;
+    height: 100%;
+}
+/* =======================================
+   MISIONES — ESTANDARTE DERECHO
+   ======================================= */
+.tablon {
+    position: absolute;
+    width: 25%;
+    height: 40%;
+    right: 3%;
+    top: 30%;
+}
+.tablon img {
+    width: 100%;
+    height: 100%;
+}
+/* =======================================
+   GUARDIAS IZQUIERDA
+   ======================================= */
+.guardias1 {
+    position: absolute;
+    width: 38%;
+    height: 30%;
+    left: 0;
+    bottom: 0;
+}
+.guardias1 img {
+    width: 100%;
+    height: 100%;
+}
+/* =======================================
+   GUARDIAS DERECHA
+   ======================================= */
+.guardias2 {
+    position: absolute;
+    width: 38%;
+    height: 30%;
+    right: 0;
+    bottom: 0;
+}
+.guardias2 img {
+    width: 100%;
+    height: 100%;
+}
+/* =======================================
+   VELA IZQUIERDA — LIGHT 2
+   ======================================= */
+.light2 {
+    position: absolute;
+    width: 7%;
+    height: 8%;
+    left: 7%;
+    top: 10%;
+}
+.light2 img {
+    width: 100%;
+    height: 100%;
+}
+/* =======================================
+   VELA DERECHA — LIGHT 1
+   ======================================= */
+.light1 {
+    position: absolute;
+    width: 7%;
+    height: 8%;
+    left: 65%;
+    top: 25%;
+}
+.light1 img {
+    width: 100%;
+    height: 100%;
+}
+/* =======================================
+   LUCES SOBRE LA CHIMENEA — LIGHT 3
+   ======================================= */
+.light3 {
+    position: absolute;
+    width: 25%;
+    height: 8%;
+    left: 4%;
+    top: 42%;
+}
+.light3 img {
+    width: 100%;
+    height: 100%;
+}
+/* =======================================
+   NOMBRES — OCULTOS
+   ======================================= */
+.name {
+    display: none;
+}
+/* =======================================
+   EFECTO DE INTERACCIÓN
+   ======================================= */
+.objeto::after,.guardias1::after,.guardias2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(0,0,0,.35);
+    opacity: 0;
+    transition: .25s;
+}
+.objeto:hover::after,.guardias1:hover::after,.guardias2:hover::after {
+    opacity: 1;
+}
+/* =======================================
+   EFECTO DE LUCES — PARPADEO
+======================================= */
+.light1,.light2,.light3,.light4 {
+    animation: parpadeoLuz 2.8s infinite ease-in-out;
+    transform-origin: center;
+}
+/* Vela derecha */
+.light1 {
+    animation-delay: .3s;
+}
+/* Vela izquierda */
+.light2 {
+    animation-delay: 1.1s;
+}
+/* Luces sobre la chimenea */
+.light3 {
+    animation-delay: .7s;
+}
+/* Fogata */
+.light4 {
+    animation-delay: 1.6s;
+}
+@keyframes parpadeoLuz {
+    0% {
+        opacity: 1;
+        filter: brightness(1);
+    }
+    20% {
+        opacity: .92;
+        filter: brightness(1.08);
+    }
+    40% {
+        opacity: 1;
+        filter: brightness(1.18);
+    }
+    55% {
+        opacity: .88;
+        filter: brightness(.95);
+    }
+    70% {
+        opacity: 1;
+        filter: brightness(1.12);
+    }
+    85% {
+        opacity: .94;
+        filter: brightness(1.03);
+    }
+    100% {
+        opacity: 1;
+        filter: brightness(1);
+    }
+}
+/* ================================
+   RESPONSIVE TABLET
+================================ */
+@media(max-width:900px){
+    .castillo {min-height:500px;}
+    .guardia {width:95px;}
+    .objeto {transform:scale(.85);}
+}
+#panelJugador{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:900px;
+    z-index:9999;
+}
+.profile{
+    max-width:500px;
+    font-family:'MedievalSharp', cursive;
+    margin:25px auto;
+    padding:20px;
+    display:flex;
+    align-items:center;
+    gap:25px;
+    background:#433321;
+    border:3px solid #c99a2e;
+    border-radius:22px;
+    box-shadow: 0 0 25px rgba(0,0,0,.45),inset 0 0 10px rgba(255,255,255,.05);
+}
+/* ================================
+   MOVILES
+================================ */
+/* =======================================
+   RESPONSIVE EXTRA
+======================================= */
+@media(max-width:900px){
+    #panelJugador{
+        width:90%;
+        max-width:500px;
+    }
+}
+@media(max-width:600px){
+    #panelJugador{width:95%;}
+    .guardia{left:15%;}
+    .trono{
+        height:auto;
+        aspect-ratio:210/300;
+    }
+    .tablon{
+        height:auto;
+        aspect-ratio:230/320;
+    }
+    .armeria{
+        height:auto;
+        aspect-ratio:200/300;
+    }
+    .salir{
+        height:auto;
+        aspect-ratio:100/150;
+    }
+}

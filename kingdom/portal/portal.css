@@ -1,0 +1,180 @@
+/* =======================================
+   PORTAL DEL REINO
+======================================= */
+.portal{
+    font-family:'MedievalSharp',cursive;
+    width:90%;
+    max-width:700px;
+    margin:auto;
+    text-align:center;
+    background:rgba(30,20,10,.85);
+    padding:30px;
+    border-radius:20px;
+    border:3px solid #c79b3b;
+    color:white;
+    box-sizing:border-box;
+}
+/* TITULO */
+.portal h1{
+    font-size:38px;
+    margin-bottom:25px;
+}
+/* INPUT NUEVO PERFIL */
+.portal input{
+    font-family:'MedievalSharp',cursive;
+    width:80%;
+    max-width:450px;
+    padding:12px;
+    font-size:18px;
+    border-radius:10px;
+    border:none;
+    text-align:center;
+}
+/* =======================================
+   AVATARES
+======================================= */
+.selectorAvatares{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    margin-top:20px;
+}
+.avatarCard{
+    width:100px;
+    min-height:120px;
+    padding:10px;
+    box-sizing:border-box;
+    overflow:hidden;
+    cursor:pointer;
+    border:3px solid transparent;
+    border-radius:15px;
+    background:#2b2115;
+    transition:.25s;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+.avatarCard img{
+    width:75px;
+    height:75px;
+    max-width:100%;
+    object-fit:cover;
+    border-radius:50%;
+}
+.avatarCard span{
+    margin-top:8px;
+    font-size:12px;
+    width:100%;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+.avatarCard:hover{
+    transform:scale(1.08);
+}
+.avatarCard.seleccionado{
+    border-color:#ffd34e;
+    box-shadow:0 0 15px #ffd34e;
+    transform:scale(1.08);
+}
+/* =======================================
+   BOTONES
+======================================= */
+.portal button{
+    font-family:'MedievalSharp',cursiva;
+    margin:10px;
+    padding:14px 28px;
+    border-radius:12px;
+    border:none;
+    cursor:pointer;
+    font-size:18px;
+    min-height:45px;
+}
+.btnNuevoPerfil{
+    background:#8b5a2b;
+    color:white;
+}
+/* =======================================
+   PERFILES EXISTENTES
+======================================= */
+#listaPerfiles{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:18px;
+    margin-top:20px;
+}
+.cardPerfil{
+    width:100px;
+    min-height:120px;
+    padding:10px;
+    box-sizing:border-box;
+    overflow:hidden;
+    cursor:pointer;
+    border:3px solid transparent;
+    border-radius:15px;
+    background:#2b2115;
+    transition:.25s;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+.cardPerfil img {
+    width:75px;
+    height:75px;
+    max-width:100%;
+    object-fit:cover;
+    border-radius:50%;
+}
+.cardPerfil:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 20px rgba(255,215,0,.4);
+}
+/* =======================================
+   TABLET
+======================================= */
+@media(max-width:900px){
+    .portal{
+        max-width:600px;
+        padding:25px;
+    }.portal h1{
+        font-size:32px;
+    }.selectorAvatares{
+        gap:15px;
+    }
+}
+/* =======================================
+   CELULAR
+======================================= */
+@media(max-width:600px){
+    .portal{
+        width:95%;
+        padding:18px;
+        border-width:2px;
+    }.portal h1{
+        font-size:26px;
+    }.portal input{
+        width:95%;
+        font-size:16px;
+    }.selectorAvatares{
+        gap:10px;
+    }.avatarCard{
+        width:80px;
+        min-height:105px;
+    }.avatarCard img{
+        width:55px;
+        height:55px;
+    }.avatarCard span{
+        font-size:12px;
+    }.portal button{
+        width:90%;
+        margin:8px auto;
+        display:block;
+        font-size:16px;
+    }.cardPerfil{
+        width:110px;
+    }
+}

@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "categoria": "🍽️ Aldea",
+    "titulo": "Ayuda a poner la mesa.",
+    "descripcion": "Los habitantes del Reino necesitan preparar el gran banquete.",
+    "icono": "🍽️",
+    "xp": 15,
+    "oquos": 10,
+    "duracion": 300,
+    "estado": "disponible",
+    "dificultad": "media",
+    "restauracion": 5
+  },
+  {
+    "id": 2,
+    "categoria": "🍽️ Aldea",
+    "titulo": "Levanta la mesa.",
+    "descripcion": "Después del banquete, todo debe volver a quedar limpio.",
+    "icono": "🧽",
+    "xp": 15,
+    "oquos": 10,
+    "duracion": 300,
+    "estado": "disponible",
+    "dificultad": "media",
+    "restauracion": 5
+  },
+  {
+    "id": 3,
+    "categoria": "🍽️ Aldea",
+    "titulo": "Ayuda a poner la mesa para la cena.",
+    "descripcion": "Los habitantes del Reino necesitan preparar el gran banquete.",
+    "icono": "🍽️",
+    "xp": 10,
+    "oquos": 5,
+    "duracion": 180,
+    "estado": "disponible",
+    "dificultad": "facil",
+    "restauracion": 5
+  },
+  {
+    "id": 4,
+    "categoria": "🍽️ Aldea",
+    "titulo": "Comparte un capítulo de una serie que le guste a alguien de la aldea.",
+    "descripcion": "Los habitantes quieren compartir un pedacito de sus gustos y aventuras.",
+    "icono": "🎞️",
+    "xp": 10,
+    "oquos": 5,
+    "duracion": 180,
+    "estado": "disponible",
+    "dificultad": "facil",
+    "restauracion": 5
+  },
+  {
+    "id": 5,
+    "categoria": "🍽️ Aldea",
+    "titulo": "Lava los platos después de comer.",
+    "descripcion": "Las cocinas de la aldea brillan cuando todos colaboran.",
+    "icono": "🫧",
+    "xp": 20,
+    "oquos": 15,
+    "duracion": 600,
+    "estado": "disponible",
+    "dificultad": "media",
+    "restauracion": 5
+  },
+  {
+    "id": 6,
+    "categoria": "🍽️ Aldea",
+    "titulo": "Saca la basura de la casa.",
+    "descripcion": "Mantener limpia la aldea previene la llegada de pestes oscuras.",
+    "icono": "🗑️",
+    "xp": 15,
+    "oquos": 10,
+    "duracion": 180,
+    "estado": "disponible",
+    "dificultad": "facil",
+    "restauracion": 5
+  }
+]

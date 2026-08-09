@@ -1,0 +1,178 @@
+[
+  {
+    "id": 1,
+    "nivel":1,
+    "nombre": "Castillo",
+    "sprite":"castle.jpg",
+    "progreso": 0,
+    "objetivo": 100,
+    "tipo":"misiones",
+    "x":55,
+    "y":40
+  },
+  {
+    "id": 2,
+    "nivel":9,
+    "nombre": "Granja",
+    "sprite":"farm.jpg",
+    "progreso": 0,
+    "objetivo": 100,
+    "tipo":"misiones",
+    "x":28,
+    "y":60
+  },
+  {
+    "id": 3,
+    "nivel":12,
+    "nombre": "Bosque",
+    "sprite":"forest.jpg",
+    "progreso": 0,
+    "objetivo": 100,
+    "tipo":"misiones",
+    "x":68,
+    "y":25
+  },
+  {
+    "id": 4,
+    "nivel":15,
+    "nombre": "Santuario",
+    "sprite":"sanctuary.jpg",
+    "progreso": 0,
+    "objetivo": 100,
+    "tipo":"misiones",
+    "x":59,
+    "y":61
+  },
+  {
+    "id": 5,
+    "nivel":18,
+    "nombre": "Observatorio",
+    "sprite":"observatory.jpg",
+    "progreso": 0,
+    "objetivo": 100,
+    "tipo":"misiones",
+    "x":61,
+    "y":56
+  },
+  {
+    "id": 6,
+    "nivel":3,
+    "nombre": "Aldea",
+    "sprite":"village.jpg",
+    "progreso": 0,
+    "objetivo": 100,
+    "tipo":"misiones",
+    "x":35,
+    "y":50
+  },
+  {
+    "id": 7,
+    "nivel":6,
+    "nombre": "Mercado",
+    "sprite":"market.jpg",
+    "progreso": 0,
+    "objetivo": 100,
+    "tipo":"mercado",
+    "x":38,
+    "y":43
+  },
+  {
+    "id": 8,
+    "nivel":21,
+    "nombre": "Biblioteca",
+    "sprite":"library.jpg",
+    "progreso": 0,
+    "objetivo": 100,
+    "tipo":"misiones",
+    "x":23,
+    "y":29
+  },
+  {
+    "id": 9,
+    "nivel":24,
+    "nombre": "Puerto",
+    "sprite":"port.png",
+    "progreso": 0,
+    "objetivo": 100,
+    "tipo":"misiones",
+    "x":42,
+    "y":16
+  },
+  {
+    "id": 10,
+    "nivel":27,
+    "nombre": "Nieve",
+    "sprite":"snow.png",
+    "progreso": 0,
+    "objetivo": 100,
+    "tipo":"misiones",
+    "x":74,
+    "y":28
+  },
+  {
+    "id": 11,
+    "nivel":30,
+    "nombre": "Bar",
+    "sprite":"bar.png",
+    "progreso": 0,
+    "objetivo": 100,
+    "tipo":"misiones",
+    "x":46,
+    "y":30
+  },
+  {
+    "id": 12,
+    "nivel":33,
+    "nombre": "Academia",
+    "sprite":"academy.jpg",
+    "progreso": 0,
+    "objetivo": 100,
+    "tipo":"misiones",
+    "x":71,
+    "y":43
+  },
+  {
+    "id": 13,
+    "nivel":36,
+    "nombre": "Museo",
+    "sprite":"musseum.png",
+    "progreso": 0,
+    "objetivo": 100,
+    "tipo":"logros",
+    "x":49,
+    "y":53
+  },
+  {
+    "id": 14,
+    "nivel":39,
+    "nombre": "Mascotas",
+    "sprite":"pets.png",
+    "progreso": 0,
+    "objetivo": 100,
+    "tipo":"misiones",
+    "x":41,
+    "y":61
+  },
+  {
+    "id": 15,
+    "nivel":10,
+    "nombre": "Cavernas",
+    "sprite":"cave.png",
+    "progreso": 0,
+    "objetivo": 100,
+    "tipo":"minijuegos",
+    "x":43,
+    "y":83
+  },
+  {
+    "id": 16,
+    "nivel":42,
+    "nombre": "Hielo",
+    "sprite":"frost.png",
+    "progreso": 0,
+    "objetivo": 100,
+    "tipo":"minijuegos",
+    "x":74,
+    "y":75
+  }
+]

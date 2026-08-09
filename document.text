@@ -628,3 +628,264 @@ map.js
     controla el mapa
 
 ----------
+
+🏰 BLOQUE 1 (Prioridad máxima)
+Interior del Castillo
+
+Es el primer edificio que conoce cualquier jugador.
+
+✅ 1. Crear la pantalla del Castillo
+✅ 2. Fondo del salón
+
+Usar:
+
+✅ 3. Agregar NPC
+
+Por ahora:
+
+👑 Rey
+🛡 Guardia
+
+Después iremos agregando:
+
+🧙 Mago
+⚔ Capitán
+👸 Reina
+📜 Consejero
+✅ 4. Agregar zonas clickeables
+
+Por ejemplo:
+
+✅ 5. Primer diálogo del Rey
+
+Algo sencillo.
+
+✅ 6. Tablón
+
+Desde aquí abrir:
+
+Pero filtradas al Castillo.
+
+✅ 7. Salir
+
+Volver al mapa.
+
+🛒 BLOQUE 2
+Mejorar el Mercado
+
+Ya funciona.
+
+Ahora hacerlo divertido.
+
+Agregar:
+
+Comerciante
+Diálogo
+Fondo interior
+Música
+Sonido de monedas
+🔔 BLOQUE 3
+Sistema de notificaciones
+
+Ya creaste la carpeta.
+
+Hacer una función:
+
+Y usarla para:
+
+⭐ XP
+
+💰 Oquos
+
+🏆 Logros
+
+🗺 Nuevas zonas
+
+✨ Nivel
+
+👤 BLOQUE 4
+Perfil del jugador
+
+Cuando toca su avatar.
+
+Abrir:
+
+Con:
+
+nombre
+avatar
+rango
+XP
+estadísticas
+cambiar avatar
+cambiar nombre
+🌍 BLOQUE 5
+Primer edificio RPG terminado
+
+Cuando el jugador toca:
+
+No debe abrir misiones.
+
+Debe abrir:
+
+Y desde allí:
+
+📚 BLOQUE 6
+Empezar la historia del Reino
+
+Crear el primer diálogo.
+
+Más adelante todos los NPC usarán:
+
+y cada NPC recordará:
+
+nivel
+logros
+zonas
+eventos
+🎵 BLOQUE 7
+Sonidos
+
+Cuando Orión entra:
+
+🏰 Castillo
+
+🔊 Ambiente
+
+👣 Pasos
+
+🔥 Chimenea
+
+------------
+
+🏰 Etapa 1 - Pulido Visual (v0.00.031 → v0.00.040)
+
+Yo la dividiría así:
+
+✅ v0.00.031
+
+Identidad del proyecto
+
+✅ Cambiar favicon.
+✅ Nuevo video de Arca Pixeles Studio.
+✅ Video a pantalla completa.
+✅ Mostrar versión.
+
+Estado: Casi terminado.
+
+🔨 v0.00.032
+
+Responsive
+
+Arreglar el mapa.
+Revisar todas las pantallas en celular.
+Ajustar tamaños de botones.
+Corregir textos cortados.
+🎨 v0.00.033
+
+Carteles y ventanas
+
+Unificar todos los pergaminos.
+
+mismo borde
+misma fuente
+mismo padding
+mismo botón cerrar
+misma animación
+
+Que cualquier ventana del juego se identifique enseguida.
+
+🖼️ v0.00.034
+
+Recursos
+
+Corregir
+
+imágenes faltantes
+rutas incorrectas
+sprites
+iconos
+
+Sin ningún error 404.
+
+📱 v0.00.035
+
+Experiencia móvil
+
+Revisar:
+
+márgenes
+scroll
+botones
+altura
+orientación
+✨ v0.00.036
+
+Animaciones
+
+Pequeños detalles.
+
+fade
+hover
+abrir ventanas
+cerrar ventanas
+pasar de una pantalla a otra
+🎵 v0.00.037
+
+Audio
+
+Agregar
+
+click
+aceptar misión
+completar misión
+
+Todavía sin música.
+
+📐 v0.00.038
+
+Consistencia
+
+Revisar todo el Reino.
+
+Que todas las pantallas tengan:
+
+misma tipografía
+mismos colores
+mismos botones
+mismas sombras
+🐞 v0.00.039
+
+Corrección de bugs
+
+Eliminar errores de consola.
+
+Revisar:
+
+imágenes
+fetch
+JSON
+localStorage
+👑 v0.00.040
+
+Versión estable
+
+Prueba completa.
+
+Todo debe verse correctamente.
+
+Nada nuevo.
+
+Solo probar.
+
+
+------------
+
+PALETA DE colores
+#875DFF
+#9D3FBB
+#3D0745
+#F98828
+#F9FB90
+#F3B36C
+#4FB5F7

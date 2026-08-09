@@ -1,0 +1,123 @@
+/* =======================================
+   PERGAMINO DEL REINO
+======================================= */
+.pergamino-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+    backdrop-filter:blur(3px);
+}
+/* =======================================
+   PERGAMINO
+======================================= */
+.pergamino{
+    position:relative;
+    width:min(700px,90vw);
+    min-height:650px;
+    padding:90px 80px;
+    box-sizing:border-box;
+    background-image:url("assets/images/items/pergamino_1.png");
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:100% 100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+/* =======================================
+   TITULO
+======================================= */
+.pergamino h2{
+    margin:0 0 30px;
+    font-family:'MedievalSharp',cursive;
+    font-size:2rem;
+    color:#4b2d16;
+    text-align:center;
+}
+/* =======================================
+   CONTENIDO
+======================================= */
+.contenidoPergamino{
+    width:100%;
+    color:#5a3419;
+    font-family:'MedievalSharp',cursive;
+    font-size:1.15rem;
+    line-height:1.7;
+    text-align:center;
+}
+/* =======================================
+   BOTONES
+======================================= */
+.botonesPergamino{
+    margin-top:auto;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+.btnPergamino{
+    font-family:'MedievalSharp',cursive;
+    padding:12px 24px;
+    border:none;
+    border-radius:12px;
+    background:#8b5a2b;
+    color:white;
+    cursor:pointer;
+    transition:.25s;
+}
+.btnPergamino:hover{
+    background:#b27a3c;
+    transform:translateY(-2px);
+}
+/* =======================================
+   BOTON CERRAR
+======================================= */
+.cerrarPergamino{
+    position:absolute;
+    top:35px;
+    right:35px;
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:50%;
+    background:#7d3b26;
+    color:white;
+    cursor:pointer;
+    font-size:18px;
+}
+/* =======================================
+   TABLET
+======================================= */
+@media(max-width:900px){
+    .pergamino{
+        width:90vw;
+        min-height:560px;
+        padding:70px 60px;
+    }
+}
+/* =======================================
+   CELULAR
+======================================= */
+@media(max-width:600px){
+    .pergamino{
+        width:95vw;
+        min-height:auto;
+        padding:60px 35px;
+    }.pergamino h2{
+        font-size:1.4rem;
+    }.contenidoPergamino{
+        font-size:1rem;
+    }.botonesPergamino{
+        flex-direction:column;
+        width:100%;
+    }.btnPergamino{
+        width:100%;
+    }.cerrarPergamino{
+        top:15px;
+        right:15px;
+    }
+}
