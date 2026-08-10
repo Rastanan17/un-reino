@@ -1,0 +1,252 @@
+{
+  "dialogs_borin": {
+    "bienvenida": [
+      "¡Bienvenido a mi tienda!",
+      "Tengo muchas cosas interesantes para ofrecerte.",
+      "Échale un vistazo a mis mercancías.",
+      "¡Ah, un visitante! Pasa, pasa, que no muerdo... al menos hoy.",
+      "Justo a tiempo. Acabo de acomodar los estantes con cosas memorables.",
+      "Si buscas algo ordinario, te equivocaste de lugar. Si buscas algo especial, ponte cómodo.",
+      "¡Miren quién decidió pasar! Limpiese los pies antes de tocar las mercancías, por favor.",
+      "Ah, olor a nuevo cliente. Mi momento preferido del día... después del almuerzo.",
+      "Pasa, pasa. Prometo no cobrarte por mirar, aunque no sería una mala idea...",
+      "¡Bienvenido! Espero que traigas los bolsillos llenos de ganas... y de Oquos.",
+      "¡Por fin alguien que se ve inteligente! Pasa, que hoy tengo cosas de primera.",
+      "No hagas mucho ruido con los mostradores, pero tómate la libertad de explorar.",
+      "¡Salud, caminante! Si no ves lo que buscas, es porque no estás mirando bien."
+    ],
+
+    "seleccionar_item": [
+      "¿Te interesa este producto?",
+      "Buena elección. ¿Quieres intentar conseguirlo?",
+      "Este puede ser justo lo que estás buscando.",
+      "Oho, veo que tienes buen ojo para lo valioso.",
+      "Ese objeto tiene su propia historia... ¿serás tú quien escriba el siguiente capítulo?",
+      "Ese en particular guardaba un poco de polvo, ¡pero su valor sigue intacto!",
+      "Ese... ¡ah, mi favorito! Bueno, en realidad todos son mis favoritos si se venden.",
+      "Veo que apuntamos a lo alto. Esa pieza es calidad pura, amigo.",
+      "Toca con cuidado. Ese objeto costó mucho traerlo hasta este estante.",
+      "Mmm, interesante elección. No pensé que tuvieras tan buen paladar.",
+      "¡No lo dejes enfriar! Objetos así no se quedan mucho tiempo en mi tienda.",
+      "¿Eso te llamó la atención? Admito que tienes un gusto impecable.",
+      "Buena vista. Ese objeto vale cada centavo... y cada gota de sudor que cueste."
+    ],
+
+    "confirmar_item": [
+      "Entonces, ¿quieres intentar conseguir este objeto?",
+      "¿Estás seguro de que quieres este?",
+      "Muy bien. Si lo quieres, tendrás que superar una prueba.",
+      "Tu elección está hecha. Ahora veamos si te lo has ganado.",
+      "¿Última palabra? Mira que si me arrepiento le subo el precio...",
+      "¿Decidido entonces? ¡No me hagas cambiar las cosas de lugar en vano!",
+      "¡Trato casi hecho! Solo falta ese pequeño detalle llamado 'demostrar tu valor'.",
+      "Me gusta la firmeza. ¿Aceptas el reto o te vas a lo seguro?",
+      "Perfecto. No hay devoluciones después de esto, ¿eh?",
+      "¿Seguro, seguro? Mira que una vez que empezamos no me gusta parar a mitad de camino.",
+      "Excelente. Prepárate, que los mejores tesoros se ganan a sudor y mente."
+    ],
+
+    "elegir_tipo_desafio": [
+      "Muy bien. Para conseguir este objeto tendrás que superar una prueba.",
+      "¿Qué prefieres: responder una pregunta o realizar un desafío?",
+      "Nada en la vida es gratis, amigo mío, pero una buena prueba lo hace más sabroso. ¿Qué camino eliges?",
+      "La mente o la agilidad... ¿En cuál de tus talentos confías más hoy?",
+      "A ver, genio... ¿usamos la cabeza o nos ponemos en movimiento?",
+      "En mis tiempos hacíamos ambas a la vez, pero te dejaré elegir una. ¿Mente o acción?",
+      "Para ganar algo bueno hay que sudar o pensar. ¿Qué prefieres poner a prueba hoy?",
+      "Dilema clásico del aventurero: ¿sabiduría de libro o reflejos de gato?",
+      "¡Escoge rápido! El tiempo es Oquos y los Oquos son mi pasión.",
+      "Cerebro o músculos... Bueno, o al menos un poco de coordinación. Tú decides.",
+      "¿Qué se te da mejor? ¿Pensar bajo presión o actuar sin dudar?"
+    ],
+
+    "opcion_responder": [
+      "Perfecto. A ver qué tan buena es tu memoria.",
+      "Muy bien. Aquí tienes tu pregunta.",
+      "Me gusta la gente que confía en el intelecto. Veamos qué guarda tu memoria.",
+      "Ponte el gorro de pensar. ¡Aquí va la pregunta!",
+      "Ah, un erudito. Veamos si tus libros no tenían polilla.",
+      "Hora de exprimir el cerebro. ¡Escucha con atención!",
+      "Pregunta al canto. Si la aciertas, te ganas mi respeto... y el objeto.",
+      "Veamos si esa cabeza sirve para algo más que llevar sombrero.",
+      "Atento, que no repito las preguntas de gratis. ¡Allá va!",
+      "Me encantan los retos de memoria. A ver si estás tan despierto como dices.",
+      "Abre bien las orejas, que esto requiere astucia."
+    ],
+
+    "opcion_desafio": [
+      "¡Excelente! Veamos si puedes superar este desafío.",
+      "Muy bien. Demuéstrame lo que puedes hacer.",
+      "¡A la acción se ha dicho! Demuéstrame de qué estás hecho.",
+      "Me alegra ver ese entusiasmo. ¡Muestra tus mejores reflejos!",
+      "¡Así me gusta! Menos palabrería y más acción. ¡A ver de qué eres capaz!",
+      "¡Cuidado no me rompas nada en la tienda mientras lo intentas!",
+      "Muestra esas habilidades, pero con gracia, que te estoy observando.",
+      "Amo la determinación. ¡Demuéstrame que no eres pura boca!",
+      "Arriba esos ánimos. Ve a por ello y no te rindas a la primera.",
+      "¡Eso es valentía! Vamos a ver si los movimientos acompañan a la actitud.",
+      "Ajusta los cordones y prepárate. ¡Tu prueba empieza ya!"
+    ],
+
+    "respuesta_correcta": [
+      "¡Correcto!",
+      "¡Muy bien! Has superado la pregunta.",
+      "Perfecto. El objeto es tuyo.",
+      "¡Brillante! Veo que esa memoria no te falla.",
+      "¡Exacto! Me da gusto ver a alguien tan bien preparado.",
+      "¡Ajá! Sabía que tenías algo de luz en esa cabeza.",
+      "¡Limpio y preciso! Da gusto tratar con gente despierta.",
+      "¡Punto para ti! Empiezo a pensar que no eres un cliente cualquiera.",
+      "¡Respuesta de diez! Ni yo lo hubiera dicho mejor... bueno, sí, pero igual cuenta.",
+      "¡Eso es! La memoria afilada como navaja de mercader.",
+      "¡Correctísimo! Ya me estabas haciendo sudar del nervio.",
+      "¡Por las barbas de Borin, la clavaste! Muy bien hecho."
+    ],
+
+    "respuesta_incorrecta": [
+      "No es correcto.",
+      "Esta vez no. Puedes intentarlo nuevamente.",
+      "Parece que tendrás que probar otra vez.",
+      "Mmm... cerca, pero no del todo. Refresca la memoria e inténtalo de nuevo.",
+      "¡Un pequeño tropezón! No pasa nada, la memoria a veces nos juega bromas.",
+      "Uy... rozó el poste. Pero no te me achiques, ¡inténtalo otra vez!",
+      "¿Seguro? Mmm, me parece que esa neurona se fue de vacaciones.",
+      "¡Cerca, pero no! Dale una vuelta más en la cabeza, yo te espero.",
+      "Ay, ay... casi. Respira hondo y volvamos a intentarlo.",
+      "Error de cálculo. No pasa nada, hasta al mejor cazador se le escapa la liebre.",
+      "Nop. Pero oye, de los errores se aprende... y mi tienda es una gran escuela.",
+      "Mmm, negativo. Sacude un poco las ideas y dale de nuevo."
+    ],
+
+    "desafio_completado": [
+      "¡Desafío superado!",
+      "¡Excelente! Lo has conseguido.",
+      "Muy bien hecho. Puedes llevarte el objeto.",
+      "¡Sencillamente impecable! Has superado la prueba sin despeinarte.",
+      "¡Eso es tener talento! El objeto te lo has ganado a pulso.",
+      "¡Caramba! Me dejaste con la boca abierta... y no es fácil de lograr.",
+      "¡Prueba superada! Veo que no solo eres pura cháchara.",
+      "¡Brillante ejecución! Casi me das envidia de lo bien que te salió.",
+      "¡Así se hace! Con energía, precisión y estilo.",
+      "¡Toma ya! Ganado con todas las de la ley.",
+      "¡Excelente! Hasta los dioses del mercado estarían orgullosos.",
+      "¡Limpio, rápido y elegante! Te ganaste esa recompensa."
+    ],
+
+    "desafio_no_completado": [
+      "Todavía no has superado el desafío.",
+      "Parece que necesitas intentarlo otra vez.",
+      "Por poco, pero falta un último esfuerzo. ¡No te rindas tan fácil!",
+      "Respira profundo, coge impulso e inténtalo una vez más.",
+      "¿Eso fue todo? Vamos, sé que tienes más energía guardada.",
+      "Un pequeño tropiezo en la recta final. ¡Levántate y dale otra vez!",
+      "Mmm, faltó un gramo de fuerza o medio segundo de concentración. ¡Repetimos!",
+      "Casi, casi... Pero en mi tienda 'casi' no paga las cuentas. ¡De nuevo!",
+      "No te me desanimes. Los grandes campeones nunca lo logran a la primera.",
+      "¡Ey! Ni se te ocurra aflojar ahora que estabas tan cerca.",
+      "Respira, sacude los brazos y demuestra que puedes lograrlo."
+    ],
+
+    "compra_exitosa": [
+      "¡Excelente compra!",
+      "Aquí tienes tu objeto. ¡Que te sea útil!",
+      "Gracias por comprar en mi tienda.",
+      "¡Trato hecho! Cuida bien de ese objeto, tiene un gran potencial.",
+      "Una transacción impecable. Vuelve cuando quieras por más retos y recompensas.",
+      "¡Oquos bien invertidos! Que ese objeto te traiga mucha fortuna.",
+      "¡Gracias por tu compra! Un placer hacer negocios con alguien de tu categoría.",
+      "Aquí tienes. Trátalo bien, que nos costó trabajo a los dos.",
+      "¡Negocio redondo! A mí me quedan los Oquos y a ti el tesoro.",
+      "Guardado en tu inventario. ¡Espero verte pronto gastando más por aquí!",
+      "¡Una joya de transacción! Siempre es un gusto cerrar trato contigo.",
+      "¡Hecho! Que le des un buen uso en tus aventuras."
+    ],
+
+    "rechazar_oferta": [
+      "¿No te convence? No hay problema.",
+      "Entonces déjame mostrarte otra cosa.",
+      "Quizás este otro objeto sea más de tu gusto.",
+      "Sin presiones. El cliente sabio no elige con prisa.",
+      "Entendido. Hay objetos que simplemente tienen que hacer 'clic' contigo.",
+      "Bah, te lo pierdes. Aunque bueno, la decisión final es tuya.",
+      "Está bien, está bien, no te me pongas exigente. Busquemos otra cosa.",
+      "Comprensible. Un verdadero comprador sabe exactamente lo que quiere.",
+      "¿Tanto lo pensaste para decirme que no? Ay, mi corazón de mercader...",
+      "Sin problema. Si no hay flechazo con el objeto, no hay negocio.",
+      "Está bien. Tampoco es plan de venderte algo que va a acumular polvo en tu mochila.",
+      "¡Exigente el cliente! Me gusta eso, me obliga a sacar el mejor inventario."
+    ],
+
+    "ofrecer_otro_item": [
+      "Mira, tengo algo más para ofrecerte.",
+      "¿Qué te parece este?",
+      "También puedes echarle un vistazo a este objeto.",
+      "Si ese no te convenció, déjame enseñarte este tesoro oculto.",
+      "A ver qué opina tu criterio sobre esta pequeña maravilla...",
+      "A ver qué tal este de aquí... ¡Este sí que tiene tu nombre escrito!",
+      "Déjame revolver un poco el estante... ¡Ajá! Mira esta belleza.",
+      "Si buscas algo con un toque distinto, esto te va a encantar.",
+      "No digas nada todavía, solo mira esta joyita que tenía guardada.",
+      "¿Y este qué tal? Prometo que no muerde y es bastante útil.",
+      "A ver si con este sí damos en el blanco. Échale un ojo.",
+      "Espera, no te vayas sin ver esto primero. Te va a sorprender."
+    ],
+
+    "indeciso_pensando": [
+      "Tómate tu tiempo, las mejores decisiones no se toman con prisa.",
+      "¿Sopesando las opciones? Me gusta un cliente analítico.",
+      "Si necesitas un momento para pensarlo, aquí me quedo.",
+      "No hay apuro. Los buenos negocios requieren buenas decisiones.",
+      "Piensa, piensa... Pero no te me duermas, que la tienda no cierra sola.",
+      "Veo el humo saliendo de tu cabeza. Tómate tu tiempo, amigo.",
+      "La indecisión es el dolor de cabeza del comprador. Analízalo bien.",
+      "No hay prisa, pero recuerda que las oportunidades vuelan.",
+      "Tranquilo, yo no cobro por minuto de espera... por ahora.",
+      "Mira que si lo piensas mucho, capaz termine subiéndole el precio...",
+      "Tómate el tiempo que necesites, las decisiones sabias no se apuran."
+    ],
+
+    "sin_oquos": [
+      "Parece que no tienes suficientes Oquos.",
+      "Necesitas más Oquos para conseguir este objeto.",
+      "Vuelve cuando tengas suficientes Oquos.",
+      "Tus bolsillos de Oquos se ven algo livianos. ¡Trae unos cuantos más y cerramos el trato!",
+      "Sin los Oquos necesarios no puedo entregártelo... ¡las reglas de la tienda son sagradas!",
+      "Mmm... escucho un eco sospechoso en tu bolsa de Oquos. ¡Ve a juntar más!",
+      "Me caes muy bien, de verdad... pero ni el afecto paga mi alquiler. ¡Consigue más Oquos!",
+      "Uy, faltan monedas ahí. Vuelve cuando tus bolsillos pesen un poco más.",
+      "Amistad es amistad, pero el comercio es comercio. ¡Trae esos Oquos!",
+      "Por un momento pensé que te alcanzaba... ¡Sal a explorar y vuelve con la bolsa llena!",
+      "Lo siento, colega. Sin Oquos no hay trato, las leyes del mercado son duras.",
+      "¡Ay! Te quedaste corto por poquito. Junta unos Oquos más y te lo guardo."
+    ],
+
+    "salir_mercado": [
+      "¡Hasta la próxima! Recuerda mantener la mente despierta.",
+      "Nos vemos pronto. ¡Que tengas un viaje lleno de descubrimientos!",
+      "Cuídate por ahí fuera. Mi tienda siempre tendrá la puerta abierta para ti.",
+      "¿Ya te vas? Bueno, vuelve cuando quieras. Siempre puedo tener algo nuevo para mostrarte.",
+      "¡Nos vemos! Y recuerda: si encuentras algo brillante por ahí, ¡tráemelo a mí primero!",
+      "¡Que tengas buen viaje! Y no te olvides de contarle a tus amigos sobre mi tienda.",
+      "¡Chau, caminante! Cuida bien esa cabeza y no gastes todos tus Oquos en un solo lugar.",
+      "¡Hasta pronto! Espero que la próxima traigas los bolsillos más llenos aún.",
+      "Vuelve cuando quieras un buen reto... o cuando te sobre un poco de cambio.",
+      "¡Cuidado con el camino! Mi tienda estará esperándote justo aquí.",
+      "¡Adiós! Fue un gusto hacer negocios con alguien con tan buen gusto."
+    ],
+
+    "volver_a_elegir": [
+      "Muy bien, echemos otro vistazo a los estantes.",
+      "Adelante, elige otra cosa.",
+      "Veamos qué más puede llamar tu atención.",
+      "Quizás entre estos objetos encuentres exactamente lo que buscas.",
+      "De vuelta al catálogo. A ver qué otra maravilla atrapa tus ojos.",
+      "Perfecto, reiniciemos la mirada. Mira con atención, hay tesoros escondidos.",
+      "¡Vuelta a empezar! Tómate tu tiempo para explorar los estantes.",
+      "Sin problemas, cambiamos de rumbo. Elige lo que más te llame.",
+      "De acuerdo, borrón y cuenta nueva. ¿A qué objeto le echamos el ojo ahora?",
+      "Me gusta que explores todas las opciones antes de decidirte.",
+      "¡Pase de nuevo la mirada! Un buen cliente nunca elige sin comparar."
+    ]
+  }
+}

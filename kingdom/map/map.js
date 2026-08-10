@@ -357,11 +357,13 @@ function abrirZona(zona){
 
     if(zona.tipo === "mercado"){
 
-        console.log(
-            "Entrando al mercado"
-        );
+        console.log("Entrando al mercado");
 
-        mostrarMercado();
+        irA(
+            "map",
+            "market",
+            mostrarMercado
+        );
 
         return;
     }

@@ -26,18 +26,14 @@ const perfilBase = {
     compensacionPendiente:false
 };
 function crearPerfil(id,nombre,avatar){
-    let perfiles = JSON.parse(
-        localStorage.getItem("perfiles")
-    ) || {};
-    perfiles[id] = {
-        ...perfilBase,
-        id,
-        nombre,
-        avatar
-    };
-    localStorage.setItem(
-        "perfiles", JSON.stringify(perfiles)
-    );
+    let perfiles = JSON.parse(localStorage.getItem("perfiles")) || {};
+        perfiles[id] = {
+            ...perfilBase,
+            id,
+            nombre,
+            avatar
+        };
+    localStorage.setItem("perfiles", JSON.stringify(perfiles));
 }
 // =======================================
 // PERFIL ACTIVO
@@ -53,9 +49,7 @@ function cargarJugador(){
     if(!id){
         return null;
     }
-    const perfiles = JSON.parse(
-        localStorage.getItem("perfiles")
-    ) || {};
+    const perfiles = JSON.parse(localStorage.getItem("perfiles")) || {};
     return perfiles[id] || null;
 }
 // ---------------------------------------
@@ -64,13 +58,9 @@ function cargarJugador(){
 function guardarJugador(datos){
     const id = obtenerPerfilActivo();
     if(!id) return;
-    const perfiles = JSON.parse(
-        localStorage.getItem("perfiles")
-    ) || {};
+    const perfiles = JSON.parse(localStorage.getItem("perfiles")) || {};
     perfiles[id] = datos;
-    localStorage.setItem(
-        "perfiles", JSON.stringify(perfiles)
-    );
+    localStorage.setItem("perfiles", JSON.stringify(perfiles));
 }
 // ---------------------------------------
 // Obtener rango

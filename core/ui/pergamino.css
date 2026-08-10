@@ -93,31 +93,16 @@
    TABLET
 ======================================= */
 @media(max-width:900px){
-    .pergamino{
-        width:90vw;
-        min-height:560px;
-        padding:70px 60px;
-    }
+    .pergamino{ width:90vw; min-height:560px; padding:70px 60px; }
 }
 /* =======================================
    CELULAR
 ======================================= */
 @media(max-width:600px){
-    .pergamino{
-        width:95vw;
-        min-height:auto;
-        padding:60px 35px;
-    }.pergamino h2{
-        font-size:1.4rem;
-    }.contenidoPergamino{
-        font-size:1rem;
-    }.botonesPergamino{
-        flex-direction:column;
-        width:100%;
-    }.btnPergamino{
-        width:100%;
-    }.cerrarPergamino{
-        top:15px;
-        right:15px;
-    }
+    .pergamino{ width:95vw; min-height:auto; padding:60px 35px; }
+    .pergamino h2{ font-size:1.4rem; }
+    .contenidoPergamino{ font-size:1rem; }
+    .botonesPergamino{ flex-direction:column; width:100%; }
+    .btnPergamino{ width:100%; }
+    .cerrarPergamino{ top:15px; right:15px; }
 }

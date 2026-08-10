@@ -12,32 +12,17 @@ function mostrarPergamino(config){
     if(config.botones){
         config.botones.forEach(btn=>{
             botones += `
-                <button
-                    class="btnPergamino"
-                    onclick="${btn.accion}">
-                    ${btn.texto}
-                </button>
+                <button class="btnPergamino" onclick="${btn.accion}">${btn.texto}</button>
             `;
         });
     }
     const html = `
         <div id="modalPergamino" class="pergamino-overlay">
             <div class="pergamino">
-                <button
-                    class="cerrarPergamino"
-                    onclick="cerrarPergamino()">
-                    ✖
-                </button>
-                <h2>
-                    ${config.icono || "📜"}
-                    ${config.titulo}
-                </h2>
-                <div class="contenidoPergamino">
-                    ${config.descripcion}
-                </div>
-                <div class="botonesPergamino">
-                    ${botones}
-                </div>
+                <button class="cerrarPergamino" onclick="cerrarPergamino()">✖</button>
+                <h2>${config.icono || "📜"} ${config.titulo}</h2>
+                <div class="contenidoPergamino">${config.descripcion}</div>
+                <div class="botonesPergamino">${botones}</div>
             </div>
         </div>
     `;

@@ -174,9 +174,7 @@
 /* =======================================
    NOMBRES — OCULTOS
    ======================================= */
-.name {
-    display: none;
-}
+.name { display: none; }
 /* =======================================
    EFECTO DE INTERACCIÓN
    ======================================= */
@@ -219,44 +217,6 @@
 .light4 {
     animation-delay: 1.6s;
 }
-@keyframes parpadeoLuz {
-    0% {
-        opacity: 1;
-        filter: brightness(1);
-    }
-    20% {
-        opacity: .92;
-        filter: brightness(1.08);
-    }
-    40% {
-        opacity: 1;
-        filter: brightness(1.18);
-    }
-    55% {
-        opacity: .88;
-        filter: brightness(.95);
-    }
-    70% {
-        opacity: 1;
-        filter: brightness(1.12);
-    }
-    85% {
-        opacity: .94;
-        filter: brightness(1.03);
-    }
-    100% {
-        opacity: 1;
-        filter: brightness(1);
-    }
-}
-/* ================================
-   RESPONSIVE TABLET
-================================ */
-@media(max-width:900px){
-    .castillo {min-height:500px;}
-    .guardia {width:95px;}
-    .objeto {transform:scale(.85);}
-}
 #panelJugador{
     position:fixed;
     top:50%;
@@ -278,35 +238,32 @@
     border-radius:22px;
     box-shadow: 0 0 25px rgba(0,0,0,.45),inset 0 0 10px rgba(255,255,255,.05);
 }
+@keyframes parpadeoLuz {
+    0% { opacity: 1; filter: brightness(1); }
+    20% { opacity: .92; filter: brightness(1.08); }
+    40% { opacity: 1; filter: brightness(1.18); }
+    55% { opacity: .88; filter: brightness(.95); }
+    70% { opacity: 1; filter: brightness(1.12); }
+    85% { opacity: .94; filter: brightness(1.03); }
+    100% { opacity: 1; filter: brightness(1); }
+}
+/* ================================
+   RESPONSIVE TABLET
+================================ */
+@media(max-width:900px){
+    #panelJugador{ width:90%; max-width:500px; }
+    .castillo { min-height:500px; }
+    .guardia { width:95px; }
+    .objeto { transform:scale(.85); }
+}
 /* ================================
    MOVILES
 ================================ */
-/* =======================================
-   RESPONSIVE EXTRA
-======================================= */
-@media(max-width:900px){
-    #panelJugador{
-        width:90%;
-        max-width:500px;
-    }
-}
 @media(max-width:600px){
-    #panelJugador{width:95%;}
-    .guardia{left:15%;}
-    .trono{
-        height:auto;
-        aspect-ratio:210/300;
-    }
-    .tablon{
-        height:auto;
-        aspect-ratio:230/320;
-    }
-    .armeria{
-        height:auto;
-        aspect-ratio:200/300;
-    }
-    .salir{
-        height:auto;
-        aspect-ratio:100/150;
-    }
+    #panelJugador{ width:95%; }
+    .guardia{ left:15%; }
+    .trono{ height:auto; aspect-ratio:210/300; }
+    .tablon{ height:auto; aspect-ratio:230/320; }
+    .armeria{ height:auto; aspect-ratio:200/300; }
+    .salir{ height:auto; aspect-ratio:100/150; }
 }

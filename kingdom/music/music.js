@@ -10,7 +10,7 @@ let musicaActual = null;
 // REPRODUCIR MÚSICA
 // =======================================
 
-function reproducirMusica(ruta, volumen = 0.35) {
+function reproducirMusica(ruta, volumen = 0.5) {
 
     // Si ya está sonando exactamente esta música,
     // no hacemos nada.

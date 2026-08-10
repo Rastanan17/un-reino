@@ -1,22 +1,196 @@
 /* =======================================
    MERCADO DE MÍRRAFEN
 ======================================= */
-
-.market{
+.mercado{
     position: relative;
     width: 100%;
     height: 100%;
     min-height: 600px;
     overflow: hidden;
-
-    background-image:
-        linear-gradient(
-            rgba(0, 0, 0, 0.35),
-            rgba(0, 0, 0, 0.35)
-        ),
-        url("../../assets/images/backgrounds/market.jpg");
-
+    background-image:url("../../assets/images/backgrounds/market.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+/* =======================================
+   MERCADER
+====================================== */
+.mercader{
+    position: absolute;
+    /*BORIN EN EL CENTRO*/
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    pointer-events: auto;
+}
+/* =======================================
+   BORIN — VENTANA DEL SPRITE
+======================================= */
+.borin-sprite{
+    /*Estos valores serán reemplazados automáticamente por JS.*/
+    width: 95px;
+    height: 125px;
+    background-image:url("../../kingdom/npc/images/borin.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    /*MUY IMPORTANTE: La hoja conserva sus dimensiones originales. No se deforma.*/
+    background-size: 667px 374px;
+    flex-shrink: 0;
+    transform: scale(1);
+    transform-origin: center bottom;
+}
+/* =======================================
+   MOSTRADOR
+======================================= */
+.mercado-mostrador{
+    position: absolute;
+    left: 50%;
+    bottom: 24%;
+    transform: translateX(-50%);
+    z-index: 20;
+    pointer-events: none;
+}
+/* =======================================
+   SALIDA
+======================================= */
+.mercado-salida{
+    position: absolute;
+    right: 3%;
+    bottom: 3%;
+    z-index: 30;
+    cursor: pointer;
+    transition:transform 0.2s ease, filter 0.2s ease;
+}
+.mercado-salida img{
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+.mercado-salida:hover{
+    transform: scale(1.1);
+    filter: brightness(1.25);
+}
+/* =======================================
+   RESPONSIVE
+======================================= */
+@media (max-width: 700px){
+    .mercader{
+        top: 48%;
+    }
+    .mercado-salida img{
+        width: 55px;
+        height: 55px;
+    }
+}
+/* =======================================
+   ITEMS DEL MERCADO
+======================================= */
+#itemsMercado{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+}
+/* =======================================
+   IMAGEN BASE DE LOS ITEMS
+======================================= */
+.item-mercado{
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    pointer-events: auto;
+    user-select: none;
+    transition:transform 0.2s ease, filter 0.2s ease;
+}
+/* =======================================
+   EFECTO AL TOCAR / PASAR
+======================================= */
+.item-mercado:hover{
+    transform: scale(1.1);
+    filter: brightness(1.5);
+}
+/* =======================================
+   DISTRIBUCIÓN DE ITEMS
+======================================= */
+/* -------- LADO IZQUIERDO -------- */
+.item-libro2{
+    left: 5%;    top: 30%;
+}
+.item-pan{
+    left: 5%;    top: 40%;
+}
+.item-tela{
+    left: 5%;    top: 50%;
+}
+.item-pollo{
+    left: 5%;    top: 60%;
+}
+.item-sopa{
+    left: 5%;    top:  70%;
+}
+.item-cofre1{
+    left: 5%;    top: 80%;
+}
+/* -------- LADO DERECHO -------- */
+.item-libro1{
+    right: 5%;    top: 30%;
+}
+.item-queso{
+    right: 5%;    top: 40%;
+}
+.item-pluma{
+    right: 5%;    top: 50%;
+}
+.item-chancho{
+    right: 5%;    top: 60%;
+}
+.item-arroz{
+    right: 5%;    top: 70%;
+}
+.item-barril{
+    right: 5%;    top: 80%;
+}
+/* -------- MOSTRADOR / CENTRO -------- */
+.item-balanza{
+    right: 25%;    bottom: 20%;
+}
+.item-monedas{
+    left: 45%;    bottom: 18%;
+}
+.item-cofre2{
+    left: 25%;    bottom: 20%;
+}
+/* -------- FLORES -------- */
+.item-flor1{
+    left: 10%;    top: 20%;
+}
+.item-flor2{
+    left: 30%;    top: 20%;
+}
+.item-flor3{
+    right: 10%;    top: 20%;
+}
+.item-flor4{
+    right: 30%;    top: 20%;
+}
+/* -------- LUCES -------- */
+.item-luces1{
+    left: 30%;    top: 10%;
+}
+.item-luces2{
+    right: 30%;    top: 10%;
+}
+/* -------- MAPAS -------- */
+.item-mapaBosque{
+    left: 30%;    bottom: 10%;
+}
+.item-mapaLeon{
+    right: 30%;    bottom: 10%;
 }

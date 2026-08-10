@@ -4,8 +4,6 @@
 // =======================================
 // Interfaz de Usuario
 // =======================================
-// Interfaz de Usuario
-// =======================================
 function actualizarPerfil() {
     const jugador = cargarJugador();
     if(!jugador){
@@ -34,7 +32,6 @@ function actualizarPerfil() {
     void barra.offsetWidth;
     barra.classList.add("levelUp");
 }
-
 // =======================================
 // Mensaje del Reino
 // (lo usaremos para reemplazar los alert())

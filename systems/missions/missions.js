@@ -48,72 +48,32 @@ async function cargarMisionesCastillo(){
         }
     }
 }
-
 // =======================================
 // CARGAR MISIONES DE LA ALDEA
 // =======================================
-
 async function cargarMisionesAldea(){
-
     try{
-
-        const respuesta =
-            await fetch(ARCHIVO_MISIONES_ALDEA);
-
+        const respuesta = await fetch(ARCHIVO_MISIONES_ALDEA);
         if(!respuesta.ok){
-
-            throw new Error(
-                `No se pudo cargar ${ARCHIVO_MISIONES_ALDEA}`
-            );
-
+            throw new Error(`No se pudo cargar ${ARCHIVO_MISIONES_ALDEA}`);
         }
-
         misiones = await respuesta.json();
-
-        console.log(
-            "MISIONES ALDEA CARGADAS:",
-            misiones
-        );
-
+        console.log("MISIONES ALDEA CARGADAS:", misiones);
         paginaActual = 0;
-
         mostrarTablonMisiones();
-
     }catch(error){
-
-        console.error(
-            "Error cargando misiones de la Aldea:",
-            error
-        );
-
-        const content =
-            document.getElementById("content");
-
+        console.error("Error cargando misiones de la Aldea:", error);
+        const content = document.getElementById("content");
         if(content){
-
             content.innerHTML = `
-
                 <section class="tablon-misiones">
-
                     <h2>⚠️ Error</h2>
-
-                    <p>
-                        No se pudieron cargar
-                        las misiones de la Aldea.
-                    </p>
-
-                    <button onclick="mostrarAldea()">
-                        ← Volver
-                    </button>
-
+                    <p>No se pudieron cargar las misiones de la Aldea.</p>
+                    <button onclick="mostrarAldea()">← Volver</button>
                 </section>
-
             `;
-
         }
-
     }
-
 }
 // =======================================
 // TABLÓN DE MISIONES
@@ -127,57 +87,21 @@ function mostrarTablonMisiones(){
     content.innerHTML = `
         <section class="tablon-misiones ${filtroZona === "Aldea" ? "misiones-aldea" : "misiones-castillo"}">
             <!-- VOLVER -->
-            <img
-                class="btn-volver"
-                src="assets/images/items/exit.png"
-                alt="Volver"
-                onclick="volverDeMisiones()">
+            <img class="btn-volver" src="assets/images/items/exit.png" alt="Volver" onclick="volverDeMisiones()">
             <!-- ANTERIOR -->
-            <img
-                class="btn-anterior ${
-                    paginaActual === 0
-                        ? "flecha-deshabilitada"
-                        : ""
-                }"
-                src="assets/images/items/arrow_left.png"
-                alt="Anterior"
-                onclick="paginaAnteriorMisiones()">
+            <img class="btn-anterior ${paginaActual === 0 ? "flecha-deshabilitada" : ""}"
+                src="assets/images/items/arrow_left.png" alt="Anterior" onclick="paginaAnteriorMisiones()">
             <!-- INDICADOR DE PÁGINA -->
             <div class="indicador-pagina">
-                Página ${paginaActual + 1}
-                de
-                ${Math.ceil(
-                    misiones.length /
-                    MISIONES_POR_PAGINA
-                )}
+                Página ${paginaActual + 1} de ${Math.ceil(misiones.length / MISIONES_POR_PAGINA)}
             </div>
             <!-- SIGUIENTE -->
-            <img
-                class="btn-siguiente ${
-                    paginaActual >=
-                    Math.ceil(
-                        misiones.length /
-                        MISIONES_POR_PAGINA
-                    ) - 1
-                        ? "flecha-deshabilitada"
-                        : ""
-                }"
-                src="assets/images/items/arrow_right.png"
-                alt="Siguiente"
-                onclick="paginaSiguienteMisiones()">
+            <img class="btn-siguiente ${paginaActual >= Math.ceil(misiones.length / MISIONES_POR_PAGINA) - 1 ? "flecha-deshabilitada" : ""}"
+                src="assets/images/items/arrow_right.png" alt="Siguiente" onclick="paginaSiguienteMisiones()">
             <!-- PERGAMINOS -->
             <div class="pergaminos">
-                ${
-                    pagina.length > 0
-                    ? pagina
-                        .map(crearPergamino)
-                        .join("")
-
-                    : `
-                        <p class="sin-misiones">
-                            No hay misiones disponibles.
-                        </p>
-                    `
+                ${pagina.length > 0 ? pagina .map(crearPergamino) .join("")
+                    : `<p class="sin-misiones">No hay misiones disponibles.</p>`
                 }
             </div>
         </section>
@@ -186,32 +110,24 @@ function mostrarTablonMisiones(){
 // =======================================
 // VOLVER DESDE LAS MISIONES
 // =======================================
-
 function volverDeMisiones(){
-
     if(filtroZona === "Aldea"){
         mostrarAldea();
         return;
     }
-
     if(filtroZona === "Bosque"){
         mostrarBosque();
         return;
     }
-
     if(filtroZona === "Granja"){
         mostrarGranja();
         return;
     }
-
     mostrarCastillo();
 }
 function mostrarMisionesCastillo(){
-
     filtroZona = "Castillo";
-
     mostrarMisiones();
-
 }
 // =======================================
 // CREAR PERGAMINO DEL TABLÓN
@@ -221,28 +137,13 @@ function crearPergamino(mision){
         <div
             class="pergamino2 estado-${mision.estado}"
             onclick="abrirPergaminoMision(${mision.id})">
-            <div class="estado-mision">
-                ${textoEstadoMision(mision.estado)}
-            </div>
-            <div class="titulo-mision">
-                ${mision.icono}
-                ${mision.titulo}
-            </div>
-            <div class="dificultad-mision">
-                ⚔️ ${mision.dificultad}
-            </div>
-            <div class="xp-mision">
-                ⭐ ${mision.xp} XP
-            </div>
-            <div class="oquos-mision">
-                💰 ${mision.oquos} Oquos
-            </div>
+            <div class="estado-mision">${textoEstadoMision(mision.estado)}</div>
+            <div class="titulo-mision">${mision.icono} ${mision.titulo}</div>
+            <div class="dificultad-mision">⚔️ ${mision.dificultad}</div>
+            <div class="xp-mision">⭐ ${mision.xp} XP</div>
+            <div class="oquos-mision">💰 ${mision.oquos} Oquos</div>
             <div class="tiempo-mision">
-                ${
-                    mision.estado === "enCurso"
-                        ? obtenerTiempoRestante(mision)
-                        : ""
-                }
+                ${mision.estado === "enCurso" ? obtenerTiempoRestante(mision) : ""}
             </div>
         </div>
     `;
@@ -266,13 +167,9 @@ function paginaAnteriorMisiones(){
     if(paginaActual <= 0){
         const flecha = document.querySelector(".btn-anterior");
         if(flecha){
-            flecha.classList.remove(
-                "flecha-limite"
-            );
+            flecha.classList.remove("flecha-limite");
             void flecha.offsetWidth;
-            flecha.classList.add(
-                "flecha-limite"
-            );
+            flecha.classList.add("flecha-limite");
         }
         return;
     }
@@ -284,19 +181,14 @@ function paginaAnteriorMisiones(){
 // =======================================
 function paginaSiguienteMisiones(){
     const totalPaginas = Math.ceil(
-            misiones.length /
-            MISIONES_POR_PAGINA
+            misiones.length / MISIONES_POR_PAGINA
         );
     if(paginaActual >= totalPaginas - 1){
         const flecha = document.querySelector(".btn-siguiente");
         if(flecha){
-            flecha.classList.remove(
-                "flecha-limite"
-            );
+            flecha.classList.remove("flecha-limite");
             void flecha.offsetWidth;
-            flecha.classList.add(
-                "flecha-limite"
-            );
+            flecha.classList.add("flecha-limite");
         }
         return;
     }
@@ -354,12 +246,8 @@ function abrirPergaminoMision(id){
     let informacionTiempo = "";
     if(mision.estado === "enCurso"){
         const inicio = mision.inicio || Date.now();
-        const transcurrido = Math.floor(
-                (Date.now() - inicio) / 1000
-            );
-        const restante = Math.max(
-                0, mision.duracion - transcurrido
-            );
+        const transcurrido = Math.floor((Date.now() - inicio) / 1000);
+        const restante = Math.max(0, mision.duracion - transcurrido);
         if(restante > 0){
             informacionTiempo = `
                 <br>
@@ -383,20 +271,15 @@ function abrirPergaminoMision(id){
         titulo: mision.titulo,
         descripcion: `
             <p>${mision.descripcion}</p>
-            <br>
-            <strong>📍 Lugar:</strong>
+            <br><strong>📍 Lugar:</strong>
             Castillo
-            <br>
-            <strong>⚔️ Dificultad:</strong>
+            <br><strong>⚔️ Dificultad:</strong>
             ${mision.dificultad}
-            <br>
-            <strong>⭐ XP:</strong>
+            <br><strong>⭐ XP:</strong>
             ${mision.xp}
-            <br>
-            <strong>💰 Oquos:</strong>
+            <br><strong>💰 Oquos:</strong>
             ${mision.oquos}
-            <br>
-            <strong>⏱️ Duración:</strong>
+            <br><strong>⏱️ Duración:</strong>
             ${formatearDuracion(mision.duracion)}
             ${informacionTiempo}
         `,
@@ -478,8 +361,7 @@ function iniciarMision(id){
     guardarEstadoMisiones();
     console.log("MISIÓN INICIADA:", mision);
     cerrarPergamino();
-    mostrarMensaje(
-        "⚔️ Misión iniciada",
+    mostrarMensaje("⚔️ Misión iniciada",
         `Has comenzado: "${mision.titulo}"`
     );
     mostrarTablonMisiones();
@@ -508,8 +390,7 @@ function posponerMision(id){
     delete mision.inicio;
     guardarEstadoMisiones();
     mostrarTablonMisiones();
-    mostrarMensaje(
-        "📜 Misión pospuesta",
+    mostrarMensaje("📜 Misión pospuesta",
         "Podrás retomarla cuando quieras."
     );
 }
@@ -540,19 +421,14 @@ function completarMision(id){
     const jugador = cargarJugador();
     if(jugador){
         if(
-            !jugador.misionesCompletadas.includes(
-                mision.id
-            )
+            !jugador.misionesCompletadas.includes(mision.id)
         ){
-            jugador.misionesCompletadas.push(
-                mision.id
-            );
+            jugador.misionesCompletadas.push(mision.id);
         }
         guardarJugador(jugador);
     }
     console.log("MISIÓN COMPLETADA:", mision);
-    mostrarMensaje(
-        "🏆 Misión completada",
+    mostrarMensaje("🏆 Misión completada",
         `Ganaste ⭐ ${mision.xp} XP y 💰 ${mision.oquos} Oquos`
     );
     mostrarTablonMisiones();
@@ -564,16 +440,10 @@ function guardarEstadoMisiones(){
     const estados = {};
     misiones.forEach(
         mision => {
-            estados[mision.id] = {
-                estado: mision.estado,
-                inicio: mision.inicio || null
-            };
+            estados[mision.id] = {estado: mision.estado, inicio: mision.inicio || null};
         }
     );
-    localStorage.setItem(
-        "estadoMisionesCastillo",
-        JSON.stringify(estados)
-    );
+    localStorage.setItem("estadoMisionesCastillo", JSON.stringify(estados));
 }
 // =======================================
 // RECUPERAR ESTADOS
@@ -600,8 +470,7 @@ function cargarEstadoMisiones(){
 // =======================================
 function obtenerTiempoRestante(mision){
     if(
-        !mision.inicio ||
-        !mision.duracion
+        !mision.inicio || !mision.duracion
     ){
         return "";
     }
@@ -614,9 +483,7 @@ function obtenerTiempoRestante(mision){
     const segundos = Math.floor(restante / 1000);
     const minutos = Math.floor(segundos / 60);
     const seg = segundos % 60;
-    return `⏳ ${minutos}:${seg
-        .toString()
-        .padStart(2,"0")
+        return `⏳ ${minutos}:${seg.toString().padStart(2,"0")
     }`;
 }
 // =======================================
@@ -643,15 +510,9 @@ iniciarSistemaMisiones();
 // COMPATIBILIDAD CON MAPA
 // =======================================
 function mostrarMisiones(){
-
     if(filtroZona === "Aldea"){
-
         cargarMisionesAldea();
-
         return;
     }
-
     cargarMisionesCastillo();
-
 }
-

@@ -15,6 +15,9 @@ const videosTransicion = {
     "map-castle": "assets/videos/map-castle.mp4",
     "castle-map": "assets/videos/castle-map.mp4",
 
+    "map-market": "assets/videos/map-market.mp4",
+    "market-map": "assets/videos/market-map.mp4",
+
     "map-village": "assets/videos/map-village.mp4",
     "village-map": "assets/videos/village-map.mp4"
 

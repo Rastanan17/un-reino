@@ -1,7 +1,6 @@
 /* =======================================
    ALDEA DE MÍRRAFEN
 ======================================= */
-
 .aldea{
     position:relative;
     width:100%;
@@ -13,373 +12,193 @@
     background-position:center;
     background-repeat:no-repeat;
 }
-
-
 /* =======================================
    ELEMENTOS GENERALES
 ======================================= */
-
 .aldea img{
     user-select:none;
     pointer-events:none;
 }
-
-
-.aldea-item,
-.aldea-personaje,
-.aldea-animal,
-.aldea-objeto{
-
+.aldea-item, .aldea-personaje, .aldea-animal, .aldea-objeto{
     position:absolute;
-
     cursor:pointer;
-
-    transition:
-        transform .2s ease,
-        filter .2s ease;
-
+    transition: transform .2s ease, filter .2s ease;
 }
-
-
 /* =======================================
    INTERACCIÓN
 ======================================= */
-
-.aldea-item:hover,
-.aldea-personaje:hover{
-
+.aldea-item:hover, .aldea-personaje:hover{
     filter:brightness(1.2);
-
     transform:scale(1.08);
-
 }
-
-
 /* =======================================
    NAVEGACIÓN
 ======================================= */
-
 /* GUARDIA → CASTILLO */
-
 .aldea .guardia{
-
     width:60px;
     height:90px;
-
     left:4%;
     top:55%;
-
 }
-
-
 /* ANCIANO → MAPA */
-
 .aldea .mapa{
-
     width:44px;
     height:72px;
-
     left:42%;
     top:72%;
-
 }
-
-
 /* MERCADO */
-
 .aldea .mercado{
-
     width:104px;
     height:110px;
-
     right:8%;
     top:45%;
-
 }
-
-
 /* MISIONES */
-
 .aldea .misiones{
-
     width:75px;
     height:85px;
-
     left:51%;
     top:43%;
-
 }
-
-
 /* =======================================
    PERSONAJES
 ======================================= */
-
 /* SEÑOR */
-
 .aldea .persona1{
-
     width:34px;
     height:59px;
-
     left:28%;
     top:48%;
-
 }
-
-
 /* JOVEN */
-
 .aldea .persona2{
-
     width:33px;
     height:59px;
-
     left:63%;
     top:57%;
-
 }
-
-
 /* NIÑO CAMINANDO */
-
 .aldea .persona3{
-
     width:36px;
     height:58px;
-
     left:45%;
     top:57%;
-
 }
-
-
 /* NIÑO JUGANDO */
-
 .aldea .persona4{
-
     width:40px;
     height:48px;
-
     left:70%;
     top:70%;
-
 }
-
-
 /* SEÑORA */
-
 .aldea .people4{
-
     width:30px;
     height:79px;
-
     left:18%;
     top:61%;
-
 }
-
-
 /* SEÑORA */
-
 .aldea .people7{
-
     width:22px;
     height:57px;
-
     right:25%;
     top:63%;
-
 }
-
-
 /* NIÑA */
-
 .aldea .people9{
-
     width:36px;
     height:46px;
-
     left:76%;
     top:77%;
-
 }
-
-
 /* =======================================
    PERROS
 ======================================= */
-
 .aldea .dog1{
-
     width:30px;
     height:26px;
-
     left:10%;
     top:73%;
-
 }
-
-
 .aldea .dog2{
-
     width:47px;
     height:45px;
-
     left:33%;
     top:67%;
-
 }
-
-
 .aldea .dog3{
-
     width:57px;
     height:33px;
-
     right:15%;
     top:72%;
-
 }
-
-
 .aldea .dog4{
-
     width:25px;
     height:32px;
-
     left:58%;
     top:77%;
-
 }
-
-
 /* =======================================
    VASIJAS
 ======================================= */
-
 .aldea .vasija1{
-
     width:46px;
     height:48px;
-
     left:5%;
     top:69%;
-
 }
-
-
 .aldea .vasija2{
-
     width:43px;
     height:47px;
-
     right:5%;
     top:67%;
-
 }
-
-
 /* =======================================
    IMÁGENES
 ======================================= */
-
-.aldea-item img,
-.aldea-personaje img,
-.aldea-animal img,
-.aldea-objeto img{
-
+.aldea-item img, .aldea-personaje img, .aldea-animal img, .aldea-objeto img{
     width:100%;
     height:100%;
-
     object-fit:contain;
-
 }
-
-
 /* =======================================
    NOMBRES OCULTOS
 ======================================= */
-
 .aldea .name{
-
     display:none;
-
 }
-
-
 /* =======================================
    SOMBRA AL PASAR EL MOUSE
 ======================================= */
-
-.aldea-item::after,
-.aldea-personaje::after{
-
+.aldea-item::after, .aldea-personaje::after{
     content:"";
-
     position:absolute;
-
     left:50%;
     bottom:-7px;
-
     transform:translateX(-50%);
-
     width:80%;
     height:7px;
-
     border-radius:50%;
-
     background:rgba(0,0,0,.35);
-
     opacity:0;
-
     transition:.2s;
-
 }
-
-
-.aldea-item:hover::after,
-.aldea-personaje:hover::after{
-
+.aldea-item:hover::after, .aldea-personaje:hover::after{
     opacity:1;
-
 }
-
-
 /* =======================================
    TABLET
 ======================================= */
-
 @media(max-width:900px){
-
-    .aldea{
-
-        min-height:500px;
-
-    }
-
+    .aldea{ min-height:500px; }
 }
-
-
 /* =======================================
    CELULAR
 ======================================= */
-
 @media(max-width:600px){
-
-    .aldea{
-
-        min-height:500px;
-
-    }
-
-    .aldea-item:hover,
-    .aldea-personaje:hover{
-
-        transform:none;
-
-        filter:none;
-
-    }
-
+    .aldea{ min-height:500px; }
+    .aldea-item:hover, .aldea-personaje:hover{ transform:none; filter:none; }
 }

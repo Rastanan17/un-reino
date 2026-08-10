@@ -1,17 +1,16 @@
 /* =======================================
-   ARCA PIXELES STUDIO
+    ARCA PIXELES STUDIO
 ======================================= */
 #logoScreen{
     font-family: 'MedievalSharp', cursive;
     position:fixed;
     inset:0;
-    background:radial-gradient(circle at center,#152447 0%,#0b1020 55%,#000 100%);
+    background:radial-gradient(circle at center,#9D3FBB 0%,#3D0745 55%,#1f0224 100%);
     display:flex;
     justify-content:center;
     align-items:center;
     z-index:999999;
 }
-
 #logoVideo{
     display: none;
     position: fixed;
@@ -22,7 +21,6 @@
     object-position: center center;
     z-index: 9999;
 }
-
 #introLogo{
     font-family: 'MedievalSharp', cursive;
     position:absolute;
@@ -31,45 +29,40 @@
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    color:#fff;
+    color:#F9FB90;
     text-align:center;
 }
-
 #introLogo h1{
     font-size:4.5rem;
     letter-spacing:3px;
     margin:0;
     background: linear-gradient(
         90deg,
-        #9596D6 15%,
-        #39A9CF 35%,
-        #93BD67 50%,
-        #F2E483 80%,
-        #F7A83F 100%
+        #875DFF 15%,
+        #9D3FBB 35%,
+        #4FB5F7 50%,
+        #F9FB90 80%,
+        #F98828 100%
     );
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
 #introLogo h2{
     font-size:1.2rem;
-    color:#ffd76a;
+    color:#F9FB90;
     margin-bottom:30px;
 }
-
 #introLogo p{
     font-size:1.5rem;
-    color:#14e60c;
+    color:#4FB5F7;
     margin-bottom:20px;
 }
-
 .textoCristal{
     margin-top:30px;
     font-size:1.2rem;
     opacity:.9;
 }
-
 #cristal{
     width:120px;
     height:120px;
@@ -77,33 +70,21 @@
     justify-content:center;
     align-items:center;
     border-radius:50%;
-    background:radial-gradient(circle,#8de8ff 0%,#3ca9ff 60%,#1f3f8f 100%);
-    border:3px solid rgba(255,255,255,.6);
+    background:radial-gradient( circle,#4FB5F7 0%,#875DFF 60%,#3D0745 100% );
+    border:3px solid #F9FB90;
     font-size:80px;
-    color:white;
+    color:#F9FB90;
     cursor:pointer;
-    box-shadow:
-        0 0 20px #69d9ff,
-        0 0 60px rgba(0,180,255,.5);
+    box-shadow: 0 0 20px #875DFF, 0 0 60px rgba(157,63,187,.5);
     animation:latido 2s infinite;
     transition:.3s;
     user-select:none;
 }
-
 #cristal:hover{
     transform:scale(3.5);
 }
 @keyframes latido{
-    0%{
-        transform:scale(1);
-        filter:drop-shadow(0 0 5px #6fd8ff);
-    }
-    50%{
-        transform:scale(1.12);
-        filter:drop-shadow(0 0 30px #6fd8ff);
-    }
-    100%{
-        transform:scale(1);
-        filter:drop-shadow(0 0 5px #6fd8ff);
-    }
+    0%{ transform:scale(1); filter:drop-shadow(0 0 5px #875DFF); }
+    50%{ transform:scale(1.12); filter:drop-shadow(0 0 30px #4FB5F7); }
+    100%{ transform:scale(1); filter:drop-shadow(0 0 5px #875DFF); }
 }

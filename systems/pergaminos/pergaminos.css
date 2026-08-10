@@ -12,7 +12,6 @@
     animation:fadeIn .35s;
     backdrop-filter:blur(3px);
 }
-
 .pergamino{
     width:min(900px,95vw);
     aspect-ratio:900/560;
@@ -23,30 +22,15 @@
     position:relative;
     animation:abrirPergamino .45s ease-out;
 }
-
 @keyframes fadeIn{
-    from{
-        opacity:0;
-    }
-    to{
-        opacity:1;
-    }
+    from{ opacity:0; }
+    to{ opacity:1; }
 }
-
 @keyframes abrirPergamino{
-    0%{
-        transform:scale(.6);
-        opacity:0;
-    }
-    70%{
-        transform:scale(1.05);
-    }
-    100%{
-        transform:scale(1);
-        opacity:1;
-    }
+    0%{ transform:scale(.6); opacity:0; }
+    70%{ transform:scale(1.05); }
+    100%{ transform:scale(1); opacity:1; }
 }
-
 .pergaminoNPC{
     position:absolute;
     left:5%;
@@ -54,7 +38,6 @@
     width:24%;
     height:70%;
 }
-
 .pergaminoTexto{
     position:absolute;
     left:31%;
@@ -66,7 +49,6 @@
     overflow:auto;
     max-height:65%;
 }
-
 .pergaminoBotones{
     position:absolute;
     right:7%;
@@ -75,23 +57,11 @@
     gap:15px;
     flex-wrap:wrap;
 }
-
 .pergaminoBotones button{
     font-family:"MedievalSharp",cursive;
 }
-
 @media(max-width:700px){
-    .pergaminoTexto{
-        left:12%;
-        width:76%;
-        top:18%;
-    }
-    .pergaminoNPC{
-        display:none;
-    }
-    .pergaminoBotones{
-        left:0;
-        right:0;
-        justify-content:center;
-    }
+    .pergaminoTexto{ left:12%; width:76%; top:18%; }
+    .pergaminoNPC{ display:none; }
+    .pergaminoBotones{ left:0; right:0; justify-content:center; }
 }

@@ -1,0 +1,205 @@
+[
+  {
+    "id": 1,
+    "nombre": "+30min en Roblox.",
+    "icono": "🎮",
+    "precio": 80,
+    "estado": "disponible"
+  },
+  {
+    "id": 2,
+    "nombre": "Elegir un capitulo de YouTube.",
+    "icono": "📺",
+    "precio": 40,
+    "estado": "disponible"
+  },
+  {
+    "id": 3,
+    "nombre": "Noche de Pelicula.",
+    "icono": "🍿",
+    "precio": 120,
+    "estado": "disponible"
+  },
+  {
+    "id": 4,
+    "nombre": "Helado.",
+    "icono": "🍦",
+    "precio": 200,
+    "estado": "disponible"
+  },
+  {
+    "id": 5,
+    "nombre": "Elegir la cena.",
+    "icono": "🍕",
+    "precio": 180,
+    "estado": "disponible"
+  },
+  {
+    "id": 6,
+    "nombre": "Galletitas Especiales.",
+    "icono": "🍪",
+    "precio": 100,
+    "estado": "disponible"
+  },
+  {
+    "id": 7,
+    "nombre": "Paseo por la Playa.",
+    "icono": "🏖️",
+    "precio": 250,
+    "estado": "disponible"
+  },
+  {
+    "id": 8,
+    "nombre": "Paseo por la Plaza.",
+    "icono": "⚽",
+    "precio": 250,
+    "estado": "disponible"
+  },
+  {
+    "id": 9,
+    "nombre": "Paseo con la bici.",
+    "icono": "🚲",
+    "precio": 250,
+    "estado": "disponible"
+  },
+  {
+    "id": 10,
+    "nombre": "+1 hora en la compu o tablet",
+    "icono": "💻",
+    "precio": 140,
+    "estado": "disponible"
+  },
+  {
+    "id": 11,
+    "nombre": "Elegir juego para todos en familia",
+    "icono": "🕹️",
+    "precio": 100,
+    "estado": "disponible"
+  },
+  {
+    "id": 12,
+    "nombre": "Elegir la música del viaje en auto",
+    "icono": "🎵",
+    "precio": 60,
+    "estado": "disponible"
+  },
+  {
+    "id": 13,
+    "nombre": "Jugar un videojuego con papá o mamá",
+    "icono": "🤝",
+    "precio": 120,
+    "estado": "disponible"
+  },
+  {
+    "id": 14,
+    "nombre": "Ver un dibujo animado extra",
+    "icono": "📺",
+    "precio": 50,
+    "estado": "disponible"
+  },
+  {
+    "id": 15,
+    "nombre": "Chocolate o golosina favorita",
+    "icono": "🍫",
+    "precio": 70,
+    "estado": "disponible"
+  },
+  {
+    "id": 16,
+    "nombre": "Elegir la bebida especial para la cena",
+    "icono": "🥤",
+    "precio": 60,
+    "estado": "disponible"
+  },
+  {
+    "id": 17,
+    "nombre": "Desayuno especial en la cama",
+    "icono": "🥞",
+    "precio": 150,
+    "estado": "disponible"
+  },
+  {
+    "id": 18,
+    "nombre": "Pedir comida rápida favorita",
+    "icono": "🍔",
+    "precio": 220,
+    "estado": "disponible"
+  },
+  {
+    "id": 19,
+    "nombre": "Pochoclos caseros para la tarde",
+    "icono": "🍿",
+    "precio": 90,
+    "estado": "disponible"
+  },
+  {
+    "id": 20,
+    "nombre": "Tarde de fútbol o juegos en la plaza",
+    "icono": "⚽",
+    "precio": 200,
+    "estado": "disponible"
+  },
+  {
+    "id": 21,
+    "nombre": "Construir y remontar un barrilete",
+    "icono": "🪁",
+    "precio": 150,
+    "estado": "disponible"
+  },
+  {
+    "id": 22,
+    "nombre": "Tarde de pileta o jugar con agua",
+    "icono": "🏊",
+    "precio": 250,
+    "estado": "disponible"
+  },
+  {
+    "id": 23,
+    "nombre": "Acampar en el patio o armar una carpa en el living",
+    "icono": "🌳",
+    "precio": 200,
+    "estado": "disponible"
+  },
+  {
+    "id": 24,
+    "nombre": "Ir a comprar un juguete o libro nuevo",
+    "icono": "🎨",
+    "precio": 300,
+    "estado": "disponible"
+  },
+  {
+    "id": 25,
+    "nombre": "Tarde de construir fuerte de almohadones",
+    "icono": "🏰",
+    "precio": 100,
+    "estado": "disponible"
+  },
+  {
+    "id": 26,
+    "nombre": "Kit de pintura o manualidades libres",
+    "icono": "🎨",
+    "precio": 120,
+    "estado": "disponible"
+  },
+  {
+    "id": 27,
+    "nombre": "Leer un cuento extra antes de dormir elegido por vos",
+    "icono": "📖",
+    "precio": 50,
+    "estado": "disponible"
+  },
+  {
+    "id": 28,
+    "nombre": "Noche de juegos de mesa en familia",
+    "icono": "🃏",
+    "precio": 90,
+    "estado": "disponible"
+  },
+  {
+    "id": 29,
+    "nombre": "Hacer un show de magia o acrobacias",
+    "icono": "🪄",
+    "precio": 80,
+    "estado": "disponible"
+  }
+]

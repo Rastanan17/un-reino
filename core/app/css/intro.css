@@ -4,7 +4,6 @@ body{
     background:black;
     font-family: 'MedievalSharp', cursive;
 }
-
 #background{
     position:fixed;
     left:0;
@@ -17,19 +16,13 @@ body{
     filter:brightness(.35);
     font-family: 'MedievalSharp', cursive;
 }
-
 #overlay{
     font-family: 'MedievalSharp', cursive;
     position:fixed;
     width:100%;
     height:100%;
-    background:linear-gradient(
-        to top,
-        rgba(0,0,0,.85),
-        rgba(0,0,0,.2)
-    );
+    background:linear-gradient(to top,rgba(0,0,0,.85),rgba(0,0,0,.2));
 }
-
 .crawl-container{
     font-family: 'MedievalSharp', cursive;
     position:absolute;
@@ -38,7 +31,6 @@ body{
     perspective:400px;
     overflow:hidden;
 }
-
 .crawl{
     position:absolute;
     bottom:100%;
@@ -55,16 +47,10 @@ body{
     text-shadow:0 0 10px black;
     display:block;
 }
-
 @keyframes crawl{
-    0%{
-        bottom:-100%;
-    }
-    100%{
-        bottom:140%;
-    }
+    0%{ bottom:-100%; }
+    100%{ bottom:140%; }
 }
-
 #startButton {
     font-family: 'MedievalSharp', cursive;
     padding: 15px 30px;
@@ -78,11 +64,9 @@ body{
     box-shadow: 0 4px 10px rgba(0,0,0,0.5);
     display: none;
 }
-
 #startButton:hover {
     transform:scale(1.1);
 }
-
 /* Posicionamiento del contenedor de botones en el centro inferior de la pantalla */
 .intro-controls {
     font-family: 'MedievalSharp', cursive;
@@ -94,7 +78,6 @@ body{
     gap:15px;
     display:flex;
 }
-
 /* Estilo básico para que se vean bien claros */
 #btnComenzar {
     font-family: 'MedievalSharp', cursive;
@@ -108,11 +91,9 @@ body{
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
-
 #btnComenzar:hover {
     background-color: #e67e22;
 }
-
 #btnSaltar{
     font-family:'MedievalSharp', cursive;
     padding:12px 22px;
@@ -127,27 +108,16 @@ body{
     display:none;
     z-index:9999;
 }
-
 /* La animación solo corre cuando JavaScript le pone la clase */
 .crawl.start-crawl {
   animation: crawlAnimation 100s linear forwards; 
 }
-
 /* Ejemplo de la animación si no la tenías definida */
 @keyframes crawlAnimation {
-    0% {
-        top: 80%;
-        opacity: 1;
-    }
-    90% {
-        opacity: 1;
-    }
-    100% {
-        top: -100%;
-        opacity: 0;
-    }
+    0% { top: 80%; opacity: 1; }
+    90% { opacity: 1; }
+    100% { top: -100%; opacity: 0; }
 }
-
 @media(max-width:600px){
     .intro-controls{
         bottom:25px;

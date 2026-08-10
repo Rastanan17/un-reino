@@ -17,7 +17,6 @@ function iniciarLogo(){
         continuarHistoria();
     });
 }
-
 // ---------------------------------------
 // Ir a la historia
 // ---------------------------------------
