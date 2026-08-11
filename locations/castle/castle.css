@@ -32,20 +32,6 @@
     filter: brightness(1.2);
 }
 /* =======================================
-   FOGATA — LIGHT 4
-   ======================================= */
-.light4 {
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    left: 7%;
-    top: 52%;
-}
-.light4 img {
-    width: 100%;
-    height: 100%;
-}
-/* =======================================
    SALIDA — ESTANDARTE IZQUIERDO
    ======================================= */
 .salir {
@@ -66,7 +52,7 @@
     position: absolute;
     width: 16%;
     height: 19%;
-    left: 50%;
+    left: 47%;
     top: 25%;
 }
 .armeria img {
@@ -80,8 +66,8 @@
     position: absolute;
     width: 24%;
     height: 28%;
-    left: 45%;
-    top: 53%;
+    left: 42%;
+    top: 50%;
 }
 .trono img {
     width: 100%;
@@ -93,9 +79,9 @@
 .tablon {
     position: absolute;
     width: 25%;
-    height: 40%;
-    right: 3%;
-    top: 30%;
+    height: 50%;
+    right: 1%;
+    top: 40%;
 }
 .tablon img {
     width: 100%;
@@ -130,30 +116,30 @@
     height: 100%;
 }
 /* =======================================
-   VELA IZQUIERDA — LIGHT 2
-   ======================================= */
-.light2 {
-    position: absolute;
-    width: 7%;
-    height: 8%;
-    left: 7%;
-    top: 10%;
-}
-.light2 img {
-    width: 100%;
-    height: 100%;
-}
-/* =======================================
    VELA DERECHA — LIGHT 1
    ======================================= */
 .light1 {
     position: absolute;
     width: 7%;
     height: 8%;
-    left: 65%;
+    right: 27%;
     top: 25%;
 }
 .light1 img {
+    width: 100%;
+    height: 100%;
+}
+/* =======================================
+   VELA IZQUIERDA — LIGHT 2
+   ======================================= */
+.light2 {
+    position: absolute;
+    width: 7%;
+    height: 8%;
+    left: 10%;
+    top: 10%;
+}
+.light2 img {
     width: 100%;
     height: 100%;
 }
@@ -164,10 +150,24 @@
     position: absolute;
     width: 25%;
     height: 8%;
-    left: 4%;
+    left: 3%;
     top: 42%;
 }
 .light3 img {
+    width: 100%;
+    height: 100%;
+}
+/* =======================================
+   FOGATA — LIGHT 4
+   ======================================= */
+.light4 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 5%;
+    top: 52%;
+}
+.light4 img {
     width: 100%;
     height: 100%;
 }
