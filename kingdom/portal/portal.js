@@ -186,27 +186,22 @@ function seleccionarAvatar(avatar,card){
 // CREAR PERFIL
 // =======================================
 async function crearNuevoPerfil(){
-    const nombre=document.getElementById("nuevoNombre").value.trim();
-    if(nombre===""){
-        mostrarMensaje(
-            "⚠️ Falta un nombre",
-            "Escribe el nombre del aventurero."
-        );
+    const nombre = document.getElementById("nuevoNombre").value.trim();
+    if(nombre === ""){
+        mostrarMensaje( "⚠️ Falta un nombre", "Escribe el nombre del aventurero.");
         return;
     }
-    const id=nombre.toLowerCase().replace(/\s+/g,"_");
+    const id = nombre.toLowerCase().replace(/\s+/g, "_");
     crearPerfil(
         id,
         nombre,
         avatarSeleccionado
     );
-    localStorage.setItem(
-        "perfilActivo",
-        id
-    );
-    await entrarAlReino();
+    localStorage.setItem("perfilActivo", id);
+    irA("portal", "map", async () => {
+        await entrarAlReino();
+    });
 }
-
 function cambiarPerfil(){
     localStorage.removeItem("perfilActivo");
     const perfil = document.querySelector(".profile");

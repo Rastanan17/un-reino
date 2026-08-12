@@ -56,19 +56,19 @@ function mostrarCastillo(){
             <!-- ===========================
                  OBJETOS
             ============================ -->
-            <div class="objeto trono" onclick="mostrarPerfilJugador()">
+            <div class="objeto trono" onclick="reproducirSFX('open_place.wav'); mostrarPerfilJugador()">
                 <h2 class="name">Trono</h2>
                 <img src="locations/castle/images/throne.png" alt="Trono">
             </div>
-            <div class="objeto tablon" onclick="mostrarMisionesCastillo()">
+            <div class="objeto tablon" onclick="reproducirSFX('open_place.wav'); mostrarMisionesCastillo()">
                 <h2 class="name">Misiones</h2>
                 <img src="locations/castle/images/missions.png" alt="Tablón">
             </div>
-            <div class="objeto armeria" onclick="mostrarArmeria()">
+            <div class="objeto armeria" onclick="reproducirSFX('open_place.wav'); mostrarArmeria()">
                 <h2 class="name">Editar</h2>
                 <img src="locations/castle/images/armery.png" alt="Armería">
             </div>
-            <div class="objeto salir" onclick="irA('castle', 'map', mostrarMapaReino)">
+            <div class="objeto salir" onclick="reproducirSFX('exit.mp3'); irA('castle', 'map', mostrarMapaReino)">
                 <h2 class="name">Salir</h2>
                 <img src="locations/castle/images/exit.png" alt="Salir">
             </div>

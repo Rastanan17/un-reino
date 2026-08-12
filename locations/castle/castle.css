@@ -41,10 +41,7 @@
     left: 12%;
     top: 25%;
 }
-.salir img {
-    width: 100%;
-    height: 100%;
-}
+.salir img {    width: 100%;    height: 100%;   }
 /* =======================================
    ARMERÍA — ESTANDARTE AZUL
    ======================================= */
@@ -55,10 +52,7 @@
     left: 47%;
     top: 25%;
 }
-.armeria img {
-    width: 100%;
-    height: 100%;
-}
+.armeria img {    width: 100%;    height: 100%; }
 /* =======================================
    TRONO
    ======================================= */
@@ -69,10 +63,7 @@
     left: 42%;
     top: 50%;
 }
-.trono img {
-    width: 100%;
-    height: 100%;
-}
+.trono img {    width: 100%;    height: 100%;   }
 /* =======================================
    MISIONES — ESTANDARTE DERECHO
    ======================================= */
@@ -83,10 +74,7 @@
     right: 1%;
     top: 40%;
 }
-.tablon img {
-    width: 100%;
-    height: 100%;
-}
+.tablon img {    width: 100%;    height: 100%;  }
 /* =======================================
    GUARDIAS IZQUIERDA
    ======================================= */
@@ -97,10 +85,7 @@
     left: 0;
     bottom: 0;
 }
-.guardias1 img {
-    width: 100%;
-    height: 100%;
-}
+.guardias1 img {    width: 100%;    height: 100%;   }
 /* =======================================
    GUARDIAS DERECHA
    ======================================= */
@@ -111,10 +96,7 @@
     right: 0;
     bottom: 0;
 }
-.guardias2 img {
-    width: 100%;
-    height: 100%;
-}
+.guardias2 img {    width: 100%;    height: 100%;   }
 /* =======================================
    VELA DERECHA — LIGHT 1
    ======================================= */
@@ -125,10 +107,7 @@
     right: 27%;
     top: 25%;
 }
-.light1 img {
-    width: 100%;
-    height: 100%;
-}
+.light1 img {    width: 100%;    height: 100%;  }
 /* =======================================
    VELA IZQUIERDA — LIGHT 2
    ======================================= */
@@ -139,10 +118,7 @@
     left: 10%;
     top: 10%;
 }
-.light2 img {
-    width: 100%;
-    height: 100%;
-}
+.light2 img {    width: 100%;    height: 100%;  }
 /* =======================================
    LUCES SOBRE LA CHIMENEA — LIGHT 3
    ======================================= */
@@ -153,10 +129,7 @@
     left: 3%;
     top: 42%;
 }
-.light3 img {
-    width: 100%;
-    height: 100%;
-}
+.light3 img {    width: 100%;    height: 100%;  }
 /* =======================================
    FOGATA — LIGHT 4
    ======================================= */
@@ -167,10 +140,7 @@
     left: 5%;
     top: 52%;
 }
-.light4 img {
-    width: 100%;
-    height: 100%;
-}
+.light4 img {    width: 100%;    height: 100%;  }
 /* =======================================
    NOMBRES — OCULTOS
    ======================================= */

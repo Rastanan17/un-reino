@@ -45,7 +45,7 @@ function mostrarMapaReino() {
 
         <button
             class="btnPerfil"
-            onclick="mostrarPortal()">
+            onclick="irA('map', 'portal', mostrarPortal)">
             🔄 Cambiar perfil
         </button>
 
@@ -288,7 +288,6 @@ function abrirZona(zona){
         return;
     }
 
-
     // ===================================
     // 🏰 CASTILLO
     // ===================================
@@ -303,7 +302,6 @@ function abrirZona(zona){
 
         return;
     }
-
 
     // ===================================
     // 🏡 ALDEA
@@ -320,7 +318,6 @@ function abrirZona(zona){
         return;
     }
 
-
     // ===================================
     // 🌾 GRANJA
     // ===================================
@@ -336,7 +333,6 @@ function abrirZona(zona){
         return;
     }
 
-
     // ===================================
     // 📜 ZONAS CON MISIONES
     // ===================================
@@ -349,7 +345,6 @@ function abrirZona(zona){
 
         return;
     }
-
 
     // ===================================
     // 🛒 MERCADO
@@ -368,7 +363,6 @@ function abrirZona(zona){
         return;
     }
 
-
     // ===================================
     // 🏆 LOGROS
     // ===================================
@@ -380,7 +374,6 @@ function abrirZona(zona){
         return;
     }
 
-
     // ===================================
     // 🎮 MINIJUEGOS
     // ===================================
@@ -391,7 +384,6 @@ function abrirZona(zona){
 
         return;
     }
-
 
     // ===================================
     // ZONA EN CONSTRUCCIÓN

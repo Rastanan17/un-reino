@@ -5,7 +5,6 @@
 
 let transicionActiva = false;
 
-
 // =======================================
 // VIDEOS DE TRANSICIÓN
 // =======================================
@@ -19,10 +18,12 @@ const videosTransicion = {
     "market-map": "assets/videos/market-map.mp4",
 
     "map-village": "assets/videos/map-village.mp4",
-    "village-map": "assets/videos/village-map.mp4"
+    "village-map": "assets/videos/village-map.mp4",
+    
+    "portal-map": "assets/videos/portal-map.mp4",
+    "map-portal": "assets/videos/portal-map.mp4"
 
 };
-
 
 // =======================================
 // OBTENER VIDEO DE TRANSICIÓN
@@ -35,7 +36,6 @@ function obtenerVideoTransicion(origen, destino) {
 
     return videosTransicion[clave] || null;
 }
-
 
 // =======================================
 // EJECUTAR TRANSICIÓN
@@ -76,14 +76,12 @@ function ejecutarTransicion(origen, destino, accionDestino) {
         return;
     }
 
-
     // ===================================
     // CREAR PANTALLA
     // ===================================
 
     let pantalla =
         document.getElementById("transitionScreen");
-
 
     if (!pantalla) {
 
@@ -107,14 +105,12 @@ function ejecutarTransicion(origen, destino, accionDestino) {
 
     }
 
-
     // ===================================
     // OBTENER VIDEO
     // ===================================
 
     const video =
         document.getElementById("transitionVideo");
-
 
     if (!video) {
 
@@ -131,7 +127,6 @@ function ejecutarTransicion(origen, destino, accionDestino) {
         return;
     }
 
-
     // ===================================
     // CONFIGURAR VIDEO
     // ===================================
@@ -145,7 +140,7 @@ function ejecutarTransicion(origen, destino, accionDestino) {
     // 🔊 Activar sonido del video
     video.muted = false;
 
-    video.volume = 1.0;
+    video.volume = 1;
 
     video.loop = false;
 
@@ -154,7 +149,6 @@ function ejecutarTransicion(origen, destino, accionDestino) {
     // ===================================
 
     pantalla.classList.add("active");
-
 
     // ===================================
     // CUANDO TERMINA EL VIDEO
@@ -172,10 +166,8 @@ function ejecutarTransicion(origen, destino, accionDestino) {
             manejarError
         );
 
-
         // Ocultar transición
         pantalla.classList.remove("active");
-
 
         // Limpiar video
         video.pause();
@@ -184,9 +176,7 @@ function ejecutarTransicion(origen, destino, accionDestino) {
 
         video.load();
 
-
         transicionActiva = false;
-
 
         // Ejecutar destino
         if (typeof accionDestino === "function") {
@@ -196,7 +186,6 @@ function ejecutarTransicion(origen, destino, accionDestino) {
         }
 
     };
-
 
     // ===================================
     // ERROR DEL VIDEO
@@ -212,7 +201,6 @@ function ejecutarTransicion(origen, destino, accionDestino) {
 
     };
 
-
     video.addEventListener(
         "ended",
         finalizar
@@ -222,7 +210,6 @@ function ejecutarTransicion(origen, destino, accionDestino) {
         "error",
         manejarError
     );
-
 
     // ===================================
     // REPRODUCIR
@@ -240,7 +227,6 @@ function ejecutarTransicion(origen, destino, accionDestino) {
     });
 
 }
-
 
 // =======================================
 // IR DE UN LUGAR A OTRO

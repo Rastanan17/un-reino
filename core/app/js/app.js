@@ -35,8 +35,10 @@ async function entrarAlReino(){
 // Entrar con un aventurero
 // ---------------------------------------
 async function entrarPerfil(id){
-    localStorage.setItem("perfilActivo",id);
-    await entrarAlReino();
+    localStorage.setItem("perfilActivo", id);
+    irA("portal", "map", async () => {
+        await entrarAlReino();
+    });
 }
 // ---------------------------------------
 // Inicio de la aplicación

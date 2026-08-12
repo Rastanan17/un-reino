@@ -111,6 +111,7 @@ function mostrarTablonMisiones(){
 // VOLVER DESDE LAS MISIONES
 // =======================================
 function volverDeMisiones(){
+    reproducirSFX("exit.mp3");
     if(filtroZona === "Aldea"){
         mostrarAldea();
         return;
@@ -124,10 +125,6 @@ function volverDeMisiones(){
         return;
     }
     mostrarCastillo();
-}
-function mostrarMisionesCastillo(){
-    filtroZona = "Castillo";
-    mostrarMisiones();
 }
 // =======================================
 // CREAR PERGAMINO DEL TABLÓN
@@ -165,6 +162,7 @@ function textoEstadoMision(estado){
 // =======================================
 function paginaAnteriorMisiones(){
     if(paginaActual <= 0){
+        reproducirSFX("non.mp3");
         const flecha = document.querySelector(".btn-anterior");
         if(flecha){
             flecha.classList.remove("flecha-limite");
@@ -173,6 +171,7 @@ function paginaAnteriorMisiones(){
         }
         return;
     }
+    reproducirSFX("swords.mp3");
     paginaActual--;
     mostrarTablonMisiones();
 }
@@ -181,9 +180,10 @@ function paginaAnteriorMisiones(){
 // =======================================
 function paginaSiguienteMisiones(){
     const totalPaginas = Math.ceil(
-            misiones.length / MISIONES_POR_PAGINA
-        );
+        misiones.length / MISIONES_POR_PAGINA
+    );
     if(paginaActual >= totalPaginas - 1){
+        reproducirSFX("non.mp3");
         const flecha = document.querySelector(".btn-siguiente");
         if(flecha){
             flecha.classList.remove("flecha-limite");
@@ -192,6 +192,7 @@ function paginaSiguienteMisiones(){
         }
         return;
     }
+    reproducirSFX("swords.mp3");
     paginaActual++;
     mostrarTablonMisiones();
 }

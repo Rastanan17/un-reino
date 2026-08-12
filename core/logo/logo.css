@@ -88,3 +88,110 @@
     50%{ transform:scale(1.12); filter:drop-shadow(0 0 30px #4FB5F7); }
     100%{ transform:scale(1); filter:drop-shadow(0 0 5px #875DFF); }
 }
+/* =======================================
+   RUPTURA DEL CRISTAL
+======================================= */
+
+#cristal.rompiendo {
+    animation: romperCristal 0.7s forwards;
+    pointer-events: none;
+}
+
+#cristal.rompiendo::before,
+#cristal.rompiendo::after {
+    content: "";
+    position: absolute;
+    inset: 8px;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+#cristal.rompiendo::before {
+    background:
+        linear-gradient(55deg,
+            transparent 45%,
+            #F9FB90 46%,
+            #F9FB90 48%,
+            transparent 49%
+        ),
+        linear-gradient(125deg,
+            transparent 48%,
+            #F9FB90 49%,
+            #F9FB90 51%,
+            transparent 52%
+        ),
+        linear-gradient(175deg,
+            transparent 47%,
+            #F9FB90 48%,
+            #F9FB90 50%,
+            transparent 51%
+        );
+    opacity: 0;
+    animation: grietasCristal 0.35s forwards;
+}
+
+#cristal.rompiendo::after {
+    box-shadow:
+        20px -15px 0 -8px #4FB5F7,
+        -25px 10px 0 -10px #875DFF,
+        30px 25px 0 -9px #F9FB90,
+        -20px -30px 0 -11px #4FB5F7;
+    opacity: 0;
+    animation: fragmentosCristal 0.7s 0.25s forwards;
+}
+
+@keyframes grietasCristal {
+    0% {
+        opacity: 0;
+        transform: scale(.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes romperCristal {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+        filter: brightness(1);
+    }
+
+    25% {
+        transform: scale(1.2);
+        opacity: 1;
+        filter: brightness(2);
+    }
+
+    45% {
+        transform: scale(1.8);
+        opacity: 1;
+        filter: brightness(3);
+    }
+
+    70% {
+        transform: scale(3.2);
+        opacity: .8;
+        filter: brightness(4);
+    }
+
+    100% {
+        transform: scale(6);
+        opacity: 0;
+        filter: brightness(5);
+    }
+}
+
+@keyframes fragmentosCristal {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(5) rotate(45deg);
+    }
+}

@@ -120,77 +120,86 @@
    DISTRIBUCIÓN DE ITEMS
 ======================================= */
 /* -------- LADO IZQUIERDO -------- */
-.item-libro2{
+.item-libro{
     left: 5%;    top: 30%;
 }
-.item-pan{
+.item-cometa{
     left: 5%;    top: 40%;
 }
-.item-tela{
+.item-castillo{
     left: 5%;    top: 50%;
 }
-.item-pollo{
+.item-carta{
     left: 5%;    top: 60%;
 }
-.item-sopa{
+.item-bici{
     left: 5%;    top:  70%;
 }
-.item-cofre1{
+.item-arbol{
     left: 5%;    top: 80%;
 }
 /* -------- LADO DERECHO -------- */
-.item-libro1{
+.item-chocolate{
     right: 5%;    top: 30%;
 }
-.item-queso{
+.item-burguer{
     right: 5%;    top: 40%;
 }
-.item-pluma{
+.item-mcBurguer{
     right: 5%;    top: 50%;
 }
-.item-chancho{
+.item-galleta{
     right: 5%;    top: 60%;
 }
-.item-arroz{
+.item-helado{
     right: 5%;    top: 70%;
 }
-.item-barril{
+.item-pochoclo{
     right: 5%;    top: 80%;
 }
 /* -------- MOSTRADOR / CENTRO -------- */
-.item-balanza{
+.item-joystick{
     right: 25%;    bottom: 20%;
 }
-.item-monedas{
+.item-compu{
     left: 45%;    bottom: 18%;
 }
-.item-cofre2{
+.item-mando{
     left: 25%;    bottom: 20%;
 }
-/* -------- FLORES -------- */
-.item-flor1{
+/* -------- ARRIBA 1 -------- */
+.item-natacion{
     left: 10%;    top: 20%;
 }
-.item-flor2{
+.item-musica{
     left: 30%;    top: 20%;
 }
-.item-flor3{
+.item-pintura{
     right: 10%;    top: 20%;
 }
-.item-flor4{
+.item-sombrilla{
     right: 30%;    top: 20%;
 }
-/* -------- LUCES -------- */
-.item-luces1{
+/* -------- ARRIBA 2 -------- */
+.item-coca{
+    left: 10%;    top: 10%;
+}
+.item-pizza{
     left: 30%;    top: 10%;
 }
-.item-luces2{
+.item-waffle{
     right: 30%;    top: 10%;
 }
-/* -------- MAPAS -------- */
-.item-mapaBosque{
-    left: 30%;    bottom: 10%;
+.item-vaso{
+    right: 10%;    top: 10%;
 }
-.item-mapaLeon{
-    right: 30%;    bottom: 10%;
+/* -------- ABAJO -------- */
+.item-varita{
+    left: 45%;    bottom: 10%;
+}
+.item-tele{
+    left: 25%;    bottom: 10%;
+}
+.item-pelota{
+    right: 25%;    bottom: 10%;
 }

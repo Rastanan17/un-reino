@@ -68,3 +68,15 @@ function detenerMusica() {
     musicaActual = null;
 
 }
+function reproducirSFX(nombre, volumen = 1) {
+
+    const sonido = new Audio(
+        `assets/sounds/${nombre}`
+    );
+
+    sonido.volume = volumen;
+
+    sonido.play().catch(error => {
+        console.warn("No se pudo reproducir SFX:", nombre, error);
+    });
+}
