@@ -38,29 +38,29 @@
 .aldea .guardia{
     width:60px;
     height:90px;
-    left:4%;
-    top:55%;
+    left:40%;
+    top:65%;
 }
 /* ANCIANO → MAPA */
 .aldea .mapa{
     width:44px;
     height:72px;
-    left:42%;
-    top:72%;
+    right:10%;
+    bottom:15%;
 }
 /* MERCADO */
-.aldea .mercado{
+.aldea .tienda{
     width:104px;
     height:110px;
-    right:8%;
+    right:35%;
     top:45%;
 }
 /* MISIONES */
 .aldea .misiones{
     width:75px;
     height:85px;
-    left:51%;
-    top:43%;
+    right:15%;
+    top:55%;
 }
 /* =======================================
    PERSONAJES
@@ -69,8 +69,8 @@
 .aldea .persona1{
     width:34px;
     height:59px;
-    left:28%;
-    top:48%;
+    left:35%;
+    top:55%;
 }
 /* JOVEN */
 .aldea .persona2{
@@ -83,36 +83,36 @@
 .aldea .persona3{
     width:36px;
     height:58px;
-    left:45%;
-    top:57%;
+    left:30%;
+    top:70%;
 }
 /* NIÑO JUGANDO */
 .aldea .persona4{
     width:40px;
     height:48px;
-    left:70%;
-    top:70%;
+    left:60%;
+    top:71%;
 }
 /* SEÑORA */
 .aldea .people4{
     width:30px;
     height:79px;
-    left:18%;
+    left:20%;
     top:61%;
 }
 /* SEÑORA */
 .aldea .people7{
     width:22px;
     height:57px;
-    right:25%;
-    top:63%;
+    right:35%;
+    top:51%;
 }
 /* NIÑA */
 .aldea .people9{
     width:36px;
     height:46px;
-    left:76%;
-    top:77%;
+    left:80%;
+    top:65%;
 }
 /* =======================================
    PERROS
@@ -120,26 +120,26 @@
 .aldea .dog1{
     width:30px;
     height:26px;
-    left:10%;
-    top:73%;
+    left:16%;
+    top:65%;
 }
 .aldea .dog2{
     width:47px;
     height:45px;
-    left:33%;
-    top:67%;
+    left:40%;
+    top:60%;
 }
 .aldea .dog3{
     width:57px;
     height:33px;
-    right:15%;
-    top:72%;
+    right:23%;
+    top:75%;
 }
 .aldea .dog4{
     width:25px;
     height:32px;
-    left:58%;
-    top:77%;
+    left:70%;
+    top:67%;
 }
 /* =======================================
    VASIJAS
@@ -147,14 +147,14 @@
 .aldea .vasija1{
     width:46px;
     height:48px;
-    left:5%;
-    top:69%;
+    left:22%;
+    top:57%;
 }
 .aldea .vasija2{
     width:43px;
     height:47px;
-    right:5%;
-    top:67%;
+    right:1%;
+    top:60%;
 }
 /* =======================================
    IMÁGENES

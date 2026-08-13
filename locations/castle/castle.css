@@ -38,7 +38,7 @@
     position: absolute;
     width: 14%;
     height: 19%;
-    left: 12%;
+    left: 8%;
     top: 25%;
 }
 .salir img {    width: 100%;    height: 100%;   }
@@ -104,7 +104,7 @@
     position: absolute;
     width: 7%;
     height: 8%;
-    right: 27%;
+    right: 24%;
     top: 25%;
 }
 .light1 img {    width: 100%;    height: 100%;  }
@@ -115,7 +115,7 @@
     position: absolute;
     width: 7%;
     height: 8%;
-    left: 10%;
+    left: 13%;
     top: 10%;
 }
 .light2 img {    width: 100%;    height: 100%;  }
@@ -168,7 +168,7 @@
    EFECTO DE LUCES — PARPADEO
 ======================================= */
 .light1,.light2,.light3,.light4 {
-    animation: parpadeoLuz 2.8s infinite ease-in-out;
+    animation: parpadeoLuz 4s infinite ease-in-out;
     transform-origin: center;
 }
 /* Vela derecha */

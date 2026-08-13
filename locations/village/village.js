@@ -37,13 +37,12 @@ function mostrarAldea(){
                 <img src="locations/village/images/mapa.png" alt="Mapa">
             </div>
             <!-- MERCADO -->
-            <div               class="aldea-item mercado"
-                onclick="hablarPersonaAldea()"            >
-                <img                    src="locations/village/images/mercado.png"                    alt="Mercado"                >
+            <div class="aldea-item tienda" onclick="hablarPersonaAldea()">
+                <img src="locations/village/images/mercado.png" alt="Mercado">
             </div>
             <!-- MISIONES -->
-            <div                class="aldea-item misiones"                onclick="mostrarMisionesAldea()"            >
-                <img                    src="locations/village/images/misiones.png"                    alt="Misiones"                >
+            <div class="aldea-item misiones" onclick="mostrarMisionesAldea()">
+                <img src="locations/village/images/misiones.png" alt="Misiones">
             </div>
             <!-- =================================
                  PERSONAJES

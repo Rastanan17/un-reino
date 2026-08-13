@@ -3,180 +3,180 @@
     {
       "id": "desafio_001",
       "categoria": "aldea",
-      "tipo": "pregunta",
+      "tipo": "responder",
       "texto": "¿Cuál de estos alimentos es una fruta?",
-      "opciones": ["Manzana", "Pan", "Queso"],
+      "opciones": ["Manzana", "Pan"],
       "respuesta_correcta": 0
     },
     {
       "id": "desafio_002",
       "categoria": "aldea",
-      "tipo": "accion",
+      "tipo": "desafio",
       "texto": "Come una fruta antes de continuar.",
       "boton_completar": "Hecho"
     },
     {
       "id": "desafio_003",
       "categoria": "castillo",
-      "tipo": "pregunta",
+      "tipo": "responder",
       "texto": "¿Quién suele proteger la entrada de un castillo?",
-      "opciones": ["El panadero", "El guardia", "El mercader"],
+      "opciones": ["El panadero", "El guardia"],
       "respuesta_correcta": 1
     },
     {
       "id": "desafio_004",
       "categoria": "aldea",
-      "tipo": "pregunta",
+      "tipo": "responder",
       "texto": "¿Qué animal suele despertar a la aldea al amanecer?",
-      "opciones": ["El búho", "El gallo", "El murciélago"],
+      "opciones": ["El búho", "El gallo"],
       "respuesta_correcta": 1
     },
     {
       "id": "desafio_005",
       "categoria": "aldea",
-      "tipo": "accion",
+      "tipo": "desafio",
       "texto": "Saluda en voz alta a tres personas o animales que tengas cerca.",
       "boton_completar": "¡Saludados!"
     },
     {
       "id": "desafio_006",
       "categoria": "aldea",
-      "tipo": "pregunta",
+      "tipo": "responder",
       "texto": "¿En qué lugar de la aldea se muele el trigo para hacer harina?",
-      "opciones": ["En la herreria", "En el molino", "En el pozo"],
+      "opciones": ["En la herreria", "En el molino"],
       "respuesta_correcta": 1
     },
     {
       "id": "desafio_007",
       "categoria": "aldea",
-      "tipo": "accion",
+      "tipo": "desafio",
       "texto": "Toma un vaso de agua antes de responder la siguiente pregunta.",
       "boton_completar": "Hidratado"
     },
     {
       "id": "desafio_008",
       "categoria": "bosque",
-      "tipo": "pregunta",
+      "tipo": "responder",
       "texto": "¿Qué tipo de planta cubre el suelo del bosque con una capa verde y suave?",
-      "opciones": ["Musgo", "Cactus", "Algas"],
+      "opciones": ["Musgo", "Cactus"],
       "respuesta_correcta": 0
     },
     {
       "id": "desafio_009",
       "categoria": "bosque",
-      "tipo": "accion",
+      "tipo": "desafio",
       "texto": "Haz el sonido de un animal salvaje del bosque.",
       "boton_completar": "¡Auuu!"
     },
     {
       "id": "desafio_010",
       "categoria": "bosque",
-      "tipo": "pregunta",
+      "tipo": "responder",
       "texto": "¿Cómo se llaman los anillos que se ven dentro del tronco de un árbol cortado?",
-      "opciones": ["Anillos de viento", "Anillos de crecimiento", "Anillos de raíces"],
+      "opciones": ["Anillos de viento", "Anillos de crecimiento"],
       "respuesta_correcta": 1
     },
     {
       "id": "desafio_011",
       "categoria": "bosque",
-      "tipo": "accion",
+      "tipo": "desafio",
       "texto": "Mantén el equilibrio sobre un solo pie durante 10 segundos.",
       "boton_completar": "Equilibrio logrado"
     },
     {
       "id": "desafio_012",
       "categoria": "castillo",
-      "tipo": "pregunta",
+      "tipo": "responder",
       "texto": "¿Cómo se llama el foso lleno de agua que rodea a algunos castillos?",
-      "opciones": ["Foso de protección", "Canal real", "Pozo profundo"],
+      "opciones": ["Foso de protección", "Canal real"],
       "respuesta_correcta": 0
     },
     {
       "id": "desafio_013",
       "categoria": "castillo",
-      "tipo": "accion",
+      "tipo": "desafio",
       "texto": "Adopta una postura firme como una estatua de armadura durante 5 segundos sin moverte.",
       "boton_completar": "Estatua completada"
     },
     {
       "id": "desafio_014",
       "categoria": "castillo",
-      "tipo": "pregunta",
+      "tipo": "responder",
       "texto": "¿Qué objeto de metal usaban los caballeros para proteger su cabeza?",
-      "opciones": ["Escudo", "Casco o Yelmo", "Pechera"],
+      "opciones": ["Escudo", "Casco o Yelmo"],
       "respuesta_correcta": 1
     },
     {
       "id": "desafio_015",
       "categoria": "castillo",
-      "tipo": "accion",
+      "tipo": "desafio",
       "texto": "Realiza una reverencia real digna de la corte del castillo.",
       "boton_completar": "Reverencia hecha"
     },
     {
       "id": "desafio_016",
       "categoria": "observatorio",
-      "tipo": "pregunta",
+      "tipo": "responder",
       "texto": "¿Qué instrumento óptico se utiliza en el observatorio para mirar las estrellas?",
-      "opciones": ["Microscopio", "Telescopio", "Lupa"],
-      "respuesta_correcta": 1
+      "opciones": ["Telescopio", "Lupa"],
+      "respuesta_correcta": 0
     },
     {
       "id": "desafio_017",
       "categoria": "observatorio",
-      "tipo": "accion",
+      "tipo": "desafio",
       "texto": "Cierra los ojos e imagina una constelación. Di su nombre inventado en voz alta.",
       "boton_completar": "Constelación creada"
     },
     {
       "id": "desafio_018",
       "categoria": "observatorio",
-      "tipo": "pregunta",
+      "tipo": "responder",
       "texto": "¿Cómo se llama el satélite natural que orbita alrededor de la Tierra?",
-      "opciones": ["El Sol", "La Luna", "Marte"],
+      "opciones": ["El Sol", "La Luna"],
       "respuesta_correcta": 1
     },
     {
       "id": "desafio_019",
       "categoria": "observatorio",
-      "tipo": "accion",
+      "tipo": "desafio",
       "texto": "Mira hacia arriba y gira en tu lugar una vuelta completa lentamente.",
       "boton_completar": "Giro orbital hecho"
     },
     {
       "id": "desafio_020",
-      "categoria": "cueva",
-      "tipo": "pregunta",
+      "categoria": "biblioteca",
+      "tipo": "responder",
       "texto": "¿Cómo se llaman las estructuras de piedra que cuelgan del techo de una cueva?",
-      "opciones": ["Estalactitas", "Estalagmitas", "Columnas"],
+      "opciones": ["Estalactitas", "Estalagmitas"],
       "respuesta_correcta": 0
     },
     {
       "id": "desafio_021",
-      "categoria": "cueva",
-      "tipo": "accion",
+      "categoria": "bosque",
+      "tipo": "desafio",
       "texto": "Susurra una frase al aire como si estuvieras en una cueva con eco.",
       "boton_completar": "Eco enviado"
     },
     {
       "id": "desafio_022",
-      "categoria": "cueva",
-      "tipo": "pregunta",
+      "categoria": "granja",
+      "tipo": "responder",
       "texto": "¿Qué animal nocturno suele colgar boca abajo dentro de las cuevas?",
-      "opciones": ["Búho", "Murciélago", "Gato"],
+      "opciones": ["Búho", "Murciélago"],
       "respuesta_correcta": 1
     },
     {
       "id": "desafio_023",
-      "categoria": "cueva",
-      "tipo": "accion",
+      "categoria": "castillo",
+      "tipo": "desafio",
       "texto": "Apaga las luces o tapa tus ojos con las manos durante 5 segundos para sentir la oscuridad.",
       "boton_completar": "Exploración a ciegas hecha"
     },
     {
       "id": "desafio_024",
-      "categoria": "mercado",
-      "tipo": "pregunta",
+      "categoria": "granja",
+      "tipo": "responder",
       "texto": "¿Qué objeto se utiliza tradicionalmente para pesar frutas y mercancías?",
       "opciones": ["Cinta métrica", "Balanza", "Reloj"],
       "respuesta_correcta": 1
@@ -184,67 +184,67 @@
     {
       "id": "desafio_025",
       "categoria": "mercado",
-      "tipo": "accion",
+      "tipo": "desafio",
       "texto": "Menciona tres objetos rojos que tengas a la vista en este momento.",
       "boton_completar": "Objetos encontrados"
     },
     {
       "id": "desafio_026",
-      "categoria": "pantano",
-      "tipo": "pregunta",
+      "categoria": "castillo",
+      "tipo": "responder",
       "texto": "¿Qué anfibio es conocido por dar saltos y croar en las zonas húmedas?",
-      "opciones": ["Rana", "Lagartija", "Nutria"],
+      "opciones": ["Rana", "Lagartija"],
       "respuesta_correcta": 0
     },
     {
       "id": "desafio_027",
-      "categoria": "pantano",
-      "tipo": "accion",
+      "categoria": "aldea",
+      "tipo": "desafio",
       "texto": "Da tres saltos pequeños en tu lugar como si esquivaras charcos de barro.",
       "boton_completar": "Charcos esquivados"
     },
     {
       "id": "desafio_028",
       "categoria": "biblioteca",
-      "tipo": "pregunta",
+      "tipo": "responder",
       "texto": "¿Cómo se llama la lista de capítulos o temas que aparece al inicio de un libro?",
-      "opciones": ["Portada", "Índice", "Contraportada"],
+      "opciones": ["Portada", "Índice"],
       "respuesta_correcta": 1
     },
     {
       "id": "desafio_029",
       "categoria": "biblioteca",
-      "tipo": "accion",
+      "tipo": "desafio",
       "texto": "Abre un libro cercano, lee una frase al azar y mantén la calma.",
       "boton_completar": "Lectura realizada"
     },
     {
       "id": "desafio_030",
-      "categoria": "puerto",
-      "tipo": "pregunta",
+      "categoria": "castillo",
+      "tipo": "responder",
       "texto": "¿Qué pesado objeto de metal se lanza al agua para sujetar un barco?",
-      "opciones": ["Ancla", "Cadena", "Timón"],
+      "opciones": ["Ancla", "Cadena"],
       "respuesta_correcta": 0
     },
     {
       "id": "desafio_031",
-      "categoria": "puerto",
-      "tipo": "accion",
+      "categoria": "aldea",
+      "tipo": "desafio",
       "texto": "Haz el movimiento de remar con los brazos tres veces.",
       "boton_completar": "Remado completado"
     },
     {
       "id": "desafio_032",
       "categoria": "observatorio",
-      "tipo": "pregunta",
+      "tipo": "responder",
       "texto": "¿Qué fenómeno ocurre cuando la Luna se interpone entre el Sol y la Tierra?",
-      "opciones": ["Lluvia de estrellas", "Eclipse solar", "Marea alta"],
-      "respuesta_correcta": 1
+      "opciones": ["Eclipse solar", "Marea alta"],
+      "respuesta_correcta": 0
     },
     {
       "id": "desafio_033",
-      "categoria": "pantano",
-      "tipo": "accion",
+      "categoria": "aldea",
+      "tipo": "desafio",
       "texto": "Haz una respiración profunda reteniendo el aire 3 segundos para cruzar la niebla.",
       "boton_completar": "Niebla cruzada"
     }
