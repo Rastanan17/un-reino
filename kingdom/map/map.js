@@ -257,12 +257,8 @@ function restaurarZona(nombreZona, cantidad = 10){
     guardarMapa(zonas);
 }
 // =======================================
-// Abrir zona
-// =======================================
-// =======================================
 // ABRIR ZONA
 // =======================================
-
 function abrirZona(zona){
 
     console.log("ZONA ABIERTA:", zona);

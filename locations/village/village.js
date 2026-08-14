@@ -29,19 +29,22 @@ function mostrarAldea(){
                  NAVEGACIÓN
             ================================== -->
             <!-- GUARDIA → CASTILLO -->
-            <div class="aldea-item guardia" onclick="hablarPersonaAldea()">
+            <div class="aldea-item guardia" onclick="entrarArmeriaDesdeAldea()">
                 <img src="locations/village/images/castillo.png" alt="guardia">
             </div>
             <!-- ANCIANO → MAPA -->
             <div class="aldea-item mapa" onclick="irA('village', 'map', mostrarMapaReino)">
                 <img src="locations/village/images/mapa.png" alt="Mapa">
+                <p class="name">Salir</p>
             </div>
             <!-- MERCADO -->
             <div class="aldea-item tienda" onclick="hablarPersonaAldea()">
+                <p class="name">Mercado</p>
                 <img src="locations/village/images/mercado.png" alt="Mercado">
             </div>
             <!-- MISIONES -->
             <div class="aldea-item misiones" onclick="mostrarMisionesAldea()">
+                <p class="name">Misiones</p>
                 <img src="locations/village/images/misiones.png" alt="Misiones">
             </div>
             <!-- =================================
@@ -97,6 +100,16 @@ function mostrarAldea(){
     if(dialogosAldea.length === 0){
         cargarDialogosAldea();
     }
+}
+// =======================================
+// ARMERÍA DE LA ALDEA
+// =======================================
+
+function entrarArmeriaDesdeAldea(){
+
+    origenArmeria = "aldea";
+
+    mostrarArmeria();
 }
 // =======================================
 // CASTILLO

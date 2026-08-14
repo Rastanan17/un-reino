@@ -4,35 +4,53 @@
 // =======================================
 // Sistema de almacenamiento
 // =======================================
+// =======================================
+// REINO DE MÍRRAFEN
+// SISTEMA DE ALMACENAMIENTO
+// =======================================
+
 const perfilBase = {
     id: "",
     nombre: "",
+    // Edad individual — se conserva por compatibilidad
     edad: 0,
-    foto: "../../images/characters/npc_1.png",
+    // Rango de edad que determina el contenido
+    rangoEdad: "6-8",
+    // Avatar
+    foto: "kingdom/portal/avatars/explorer.jpg",
+    avatar: "kingdom/portal/avatars/explorer.jpg",
+    // Progreso
     nivel: 1,
     xp: 0,
     xpNecesaria: 100,
     oquos: 0,
-    rango: "Explorador",
-    avatar: "../../images/characters/npc_1.png",
+    // Rango dentro del Reino
+    rango: "Aprendiz",
+    // Progreso de juego
     misionesCompletadas: [],
     logros: [],
     racha: 0,
     zonasRestauradas: [],
     ultimoReinicio: "",
     ultimoIngreso: "",
-    mapa:[],
-    pergaminos:[],
-    compensacionPendiente:false
+    mapa: [],
+    pergaminos: [],
+    // Compensación
+    compensacionPendiente: false
 };
-function crearPerfil(id,nombre,avatar){
+// =======================================
+// CREAR PERFIL
+// =======================================
+function crearPerfil(id, nombre, avatar, rangoEdad = "6-8") {
     let perfiles = JSON.parse(localStorage.getItem("perfiles")) || {};
-        perfiles[id] = {
-            ...perfilBase,
-            id,
-            nombre,
-            avatar
-        };
+    perfiles[id] = {
+        ...perfilBase,
+        id,
+        nombre,
+        avatar,
+        foto: avatar,
+        rangoEdad
+    };
     localStorage.setItem("perfiles", JSON.stringify(perfiles));
 }
 // =======================================
@@ -121,9 +139,33 @@ function obtenerFechaHoy() {
 // =======================================
 // REINICIO DE MISIONES DIARIAS
 // =======================================
+
 function reiniciarMisionesDiarias(){
-    localStorage.removeItem("estadoMisionesCastillo");
-    console.log("Misiones diarias reiniciadas");
+
+    const clavesMisiones = [
+
+        "estadoMisionesCastillo",
+        "estadoMisionesAldea",
+        "estadoMisionesGranja",
+        "estadoMisionesBosque",
+        "estadoMisionesHielo",
+        "estadoMisionesNieve",
+        "estadoMisionesBiblioteca",
+        "estadoMisionesMuseo",
+        "estadoMisionesObservatorio",
+        "estadoMisionesMascotas",
+        "estadoMisionesPuerto",
+        "estadoMisionesSantuario"
+
+    ];
+
+    clavesMisiones.forEach(clave => {
+        localStorage.removeItem(clave);
+    });
+
+    console.log(
+        "🌅 Misiones diarias reiniciadas"
+    );
 }
 // ---------------------------------------
 // Verificar cambio de día

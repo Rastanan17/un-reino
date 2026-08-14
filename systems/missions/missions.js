@@ -7,6 +7,8 @@
 const MISIONES_POR_PAGINA = 2;
 let misiones = [];
 let paginaActual = 0;
+let zonaMisionesActual = "Castillo";
+let filtroZona = "Castillo";
 // Archivo de datos del Castillo
 const ARCHIVO_MISIONES_CASTILLO = "systems/missions/data/missionsCastle.json";
 const ARCHIVO_MISIONES_ALDEA = "systems/missions/data/missionsVillage.json";
@@ -22,27 +24,122 @@ const ARCHIVO_MISIONES_MASCOTAS = "systems/missions/data/missionsPets.json";
 const ARCHIVO_MISIONES_PUERTO = "systems/missions/data/missionsPort.json";
 const ARCHIVO_MISIONES_SANTUARIO = "systems/missions/data/missionsSanctuary.json";
 // =======================================
-// CARGAR MISIONES
+// OBTENER CLAVE DE MISIONES POR EDAD
+// =======================================
+function obtenerClaveMisionesPorEdad(){
+
+    const jugador = cargarJugador();
+
+    if(!jugador){
+        return "misiones_6_8";
+    }
+
+    switch(jugador.rangoEdad){
+
+        case "6-8":
+            return "misiones_6_8";
+
+        case "9-11":
+            return "misiones_9_11";
+
+        case "12-14":
+            return "misiones_12_14";
+
+        case "15-17":
+            return "misiones_15_17";
+
+        default:
+            return "misiones_6_8";
+    }
+}
+// =======================================
+// CLAVE DE ESTADOS SEGÚN LA ZONA
+// =======================================
+
+function obtenerClaveEstadoMisiones(){
+
+    const claves = {
+        "Castillo": "estadoMisionesCastillo",
+        "Aldea": "estadoMisionesAldea",
+        "Granja": "estadoMisionesGranja",
+        "Bosque": "estadoMisionesBosque",
+        "Hielo": "estadoMisionesHielo",
+        "Nieve": "estadoMisionesNieve",
+        "Biblioteca": "estadoMisionesBiblioteca",
+        "Museo": "estadoMisionesMuseo",
+        "Observatorio": "estadoMisionesObservatorio",
+        "Mascotas": "estadoMisionesMascotas",
+        "Puerto": "estadoMisionesPuerto",
+        "Santuario": "estadoMisionesSantuario"
+    };
+
+    return claves[zonaMisionesActual] || "estadoMisionesCastillo";
+}
+// =======================================
+// CARGAR MISIONES DEL CASTILLO
 // =======================================
 async function cargarMisionesCastillo(){
+
+    zonaMisionesActual = "Castillo";
+
     try{
-        const respuesta = await fetch(ARCHIVO_MISIONES_CASTILLO);
+
+        const respuesta = await fetch(
+            ARCHIVO_MISIONES_CASTILLO
+        );
+
         if(!respuesta.ok){
-            throw new Error(`No se pudo cargar ${ARCHIVO_MISIONES_CASTILLO}`);
+            throw new Error(
+                `No se pudo cargar ${ARCHIVO_MISIONES_CASTILLO}`
+            );
         }
-        misiones = await respuesta.json();
-        console.log("MISIÓNES CASTILLO CARGADAS:", misiones);
+
+        const datos = await respuesta.json();
+
+        const claveEdad =
+            obtenerClaveMisionesPorEdad();
+
+        misiones = datos[claveEdad] || [];
+
+        console.log(
+            "MISIONES CASTILLO CARGADAS:",
+            claveEdad,
+            misiones
+        );
+
+        // Recuperar estados guardados
+        cargarEstadoMisiones();
+
         paginaActual = 0;
+
         mostrarTablonMisiones();
+
     }catch(error){
-        console.error("Error cargando misiones del Castillo:", error);
-        const content = document.getElementById("content");
+
+        console.error(
+            "Error cargando misiones del Castillo:",
+            error
+        );
+
+        const content =
+            document.getElementById("content");
+
         if(content){
+
             content.innerHTML = `
                 <section class="tablon-misiones">
+
                     <h2>⚠️ Error</h2>
-                    <p>No se pudieron cargar las misiones del Castillo.</p>
-                    <button onclick="mostrarCastillo()">← Volver</button>
+
+                    <p>
+                        No se pudieron cargar
+                        las misiones del Castillo.
+                    </p>
+
+                    <button onclick="mostrarCastillo()">
+                        ← Volver
+                    </button>
+
                 </section>
             `;
         }
@@ -52,13 +149,21 @@ async function cargarMisionesCastillo(){
 // CARGAR MISIONES DE LA ALDEA
 // =======================================
 async function cargarMisionesAldea(){
+    zonaMisionesActual = "Aldea";
     try{
         const respuesta = await fetch(ARCHIVO_MISIONES_ALDEA);
         if(!respuesta.ok){
             throw new Error(`No se pudo cargar ${ARCHIVO_MISIONES_ALDEA}`);
         }
-        misiones = await respuesta.json();
+        const datos = await respuesta.json();
+
+        const claveEdad =
+            obtenerClaveMisionesPorEdad();
+
+        misiones = datos[claveEdad] || [];
         console.log("MISIONES ALDEA CARGADAS:", misiones);
+        // Recuperar estados guardados
+        cargarEstadoMisiones();
         paginaActual = 0;
         mostrarTablonMisiones();
     }catch(error){
@@ -70,6 +175,63 @@ async function cargarMisionesAldea(){
                     <h2>⚠️ Error</h2>
                     <p>No se pudieron cargar las misiones de la Aldea.</p>
                     <button onclick="mostrarAldea()">← Volver</button>
+                </section>
+            `;
+        }
+    }
+}
+async function cargarMisionesGranja(){
+    zonaMisionesActual = "Granja";
+
+    try{
+        const respuesta =
+            await fetch(ARCHIVO_MISIONES_GRANJA);
+
+        if(!respuesta.ok){
+            throw new Error(
+                `No se pudo cargar ${ARCHIVO_MISIONES_GRANJA}`
+            );
+        }
+
+        const datos = await respuesta.json();
+
+        const claveEdad =
+            obtenerClaveMisionesPorEdad();
+
+        misiones = datos[claveEdad] || [];
+
+        console.log(
+            "MISIONES GRANJA CARGADAS:",
+            misiones
+        );
+
+        cargarEstadoMisiones();
+
+        paginaActual = 0;
+
+        mostrarTablonMisiones();
+
+    }catch(error){
+
+        console.error(
+            "Error cargando misiones de la Granja:",
+            error
+        );
+
+        const content =
+            document.getElementById("content");
+
+        if(content){
+            content.innerHTML = `
+                <section class="tablon-misiones">
+                    <h2>⚠️ Error</h2>
+                    <p>
+                        No se pudieron cargar las misiones
+                        de la Granja.
+                    </p>
+                    <button onclick="mostrarGranja()">
+                        ← Volver
+                    </button>
                 </section>
             `;
         }
@@ -416,16 +578,29 @@ function completarMision(id){
     // DAR RECOMPENSA
     // ===================================
     sumarRecompensa(mision.xp, mision.oquos);
-    // ===================================
+    /// ===================================
     // REGISTRAR EN PERFIL
     // ===================================
+
     const jugador = cargarJugador();
+
     if(jugador){
+
+        const identificadorMision =
+            `${zonaMisionesActual}:${mision.id}`;
+
         if(
-            !jugador.misionesCompletadas.includes(mision.id)
+            !jugador.misionesCompletadas.includes(
+                identificadorMision
+            )
         ){
-            jugador.misionesCompletadas.push(mision.id);
+
+            jugador.misionesCompletadas.push(
+                identificadorMision
+            );
+
         }
+
         guardarJugador(jugador);
     }
     console.log("MISIÓN COMPLETADA:", mision);
@@ -435,35 +610,79 @@ function completarMision(id){
     mostrarTablonMisiones();
 }
 // =======================================
-// GUARDAR ESTADOS
+// GUARDAR ESTADOS DE MISIONES
 // =======================================
 function guardarEstadoMisiones(){
-    const estados = {};
-    misiones.forEach(
-        mision => {
-            estados[mision.id] = {estado: mision.estado, inicio: mision.inicio || null};
-        }
+
+    const estadosGuardados =
+        JSON.parse(
+            localStorage.getItem("estadoMisiones")
+        ) || {};
+
+    const rangoEdad =
+        cargarJugador()?.rangoEdad || "6-8";
+
+    misiones.forEach(mision => {
+
+        const identificador =
+            `${zonaMisionesActual}:${rangoEdad}:${mision.id}`;
+
+        estadosGuardados[identificador] = {
+
+            estado: mision.estado,
+
+            inicio:
+                mision.inicio || null
+        };
+    });
+
+    localStorage.setItem(
+        "estadoMisiones",
+        JSON.stringify(estadosGuardados)
     );
-    localStorage.setItem("estadoMisionesCastillo", JSON.stringify(estados));
 }
 // =======================================
-// RECUPERAR ESTADOS
+// RECUPERAR ESTADOS DE MISIONES
 // =======================================
 function cargarEstadoMisiones(){
-    const datos = localStorage.getItem("estadoMisionesCastillo");
-    if(!datos) return;
+
+    const datos =
+        localStorage.getItem("estadoMisiones");
+
+    if(!datos){
+        return;
+    }
+
     try{
-        const estados = JSON.parse(datos);
-        misiones.forEach(
-            mision => {
-                if(estados[mision.id]){
-                    mision.estado = estados[mision.id].estado;
-                    mision.inicio = estados[mision.id].inicio;
-                }
+
+        const estados =
+            JSON.parse(datos);
+
+        const rangoEdad =
+            cargarJugador()?.rangoEdad || "6-8";
+
+        misiones.forEach(mision => {
+
+            const identificador =
+                `${zonaMisionesActual}:${rangoEdad}:${mision.id}`;
+
+            if(estados[identificador]){
+
+                mision.estado =
+                    estados[identificador].estado;
+
+                mision.inicio =
+                    estados[identificador].inicio;
             }
-        );
+
+        });
+
     }catch(error){
-        console.error("Error recuperando estados:", error);
+
+        console.error(
+            "Error recuperando estados:",
+            error
+        );
     }
 }
 // =======================================
@@ -491,29 +710,48 @@ function obtenerTiempoRestante(mision){
 // INICIALIZAR SISTEMA
 // =======================================
 async function iniciarSistemaMisiones(){
+
     try{
-        const respuesta = await fetch(ARCHIVO_MISIONES_CASTILLO);
+
+        const respuesta =
+            await fetch(ARCHIVO_MISIONES_CASTILLO);
+
         if(!respuesta.ok){
-            throw new Error("No se pudo cargar el JSON de misiones.");
+            throw new Error(
+                "No se pudo cargar el JSON de misiones."
+            );
         }
-        misiones = await respuesta.json();
-        cargarEstadoMisiones();
-        console.log("Sistema de misiones iniciado:", misiones);
+
+        const datos = await respuesta.json();
+
+        console.log(
+            "Sistema de misiones iniciado:",
+            datos
+        );
+
     }catch(error){
-        console.error("Error iniciando sistema de misiones:", error);
+
+        console.error(
+            "Error iniciando sistema de misiones:",
+            error
+        );
     }
 }
-// =======================================
-// INICIO
-// =======================================
-iniciarSistemaMisiones();
+
 // =======================================
 // COMPATIBILIDAD CON MAPA
 // =======================================
 function mostrarMisiones(){
+
     if(filtroZona === "Aldea"){
         cargarMisionesAldea();
         return;
     }
+
+    if(filtroZona === "Granja"){
+        cargarMisionesGranja();
+        return;
+    }
+
     cargarMisionesCastillo();
 }

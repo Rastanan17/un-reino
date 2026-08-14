@@ -82,14 +82,26 @@
     height:auto;
     filter:drop-shadow(0 5px 8px rgba(0,0,0,.45));
 }
+/* =======================================
+   NOMBRES DE ZONAS
+   ======================================= */
+
 .zoneName{
     margin-top:6px;
-    color:white;
+
+    color:#d4af37;
     font-size:.85rem;
     font-weight:bold;
-    text-shadow:2px 2px 4px black;
-    opacity:0;
-    transition:.25s;
+    text-align:center;
+
+    text-shadow:
+        -2px -2px 0 #000,
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000,
+         0    2px 4px #000;
+
+    opacity:1;
 }
 .zone:hover .zoneName{
     opacity:1;
