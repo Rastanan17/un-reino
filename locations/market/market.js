@@ -94,42 +94,133 @@ let borinAnimacion = null;
 // =======================================
 // BORIN — ACCIONES
 // =======================================
+// =======================================
+// BORIN — ACCIONES
+// =======================================
+
 const BORIN_ACCIONES = {
-    quieto: {
-        fila: 1,
+
+     quieto: {
+        fila: 2,
         frames: [0],
         velocidad: 1000,
         repetir: false
     },
-    // Fila 0 — movimiento
-    caminar: {
+
+    // ===================================
+    // FILA 1
+    // ===================================
+
+    saludar: {
         fila: 0,
-        frames: [0, 1, 2, 3, 4, 5, 6],
-        velocidad: 400,
-        repetir: true
+        frames: [0, 1],
+        velocidad: 350,
+        repetir: false
     },
 
-    // Fila 1 — trabajando como mercader
-    mercader: {
-        fila: 1,
-        frames: [0, 1, 2, 3, 4, 5, 6],
-        velocidad: 400,
-        repetir: true
-    },
-
-    // Fila 2 — hablando
     hablar: {
-        fila: 2,
-        frames: [0, 1, 2, 3],
-        velocidad: 250,
+        fila: 0,
+        frames: [2, 3],
+        velocidad: 600,
         repetir: true
     },
 
-    // Fila 2 — celebración
     celebrar: {
+        fila: 0,
+        frames: [4, 5],
+        velocidad: 300,
+        repetir: true
+    },
+
+    sorprendido: {
+        fila: 0,
+        frames: [6],
+        velocidad: 500,
+        repetir: false
+    },
+
+    // ===================================
+    // FILA 2
+    // ===================================
+
+    señalarIzq: {
+        fila: 1,
+        frames: [0],
+        velocidad: 500,
+        repetir: false
+    },
+
+    señalarDer: {
+        fila: 1,
+        frames: [1],
+        velocidad: 500,
+        repetir: false
+    },
+
+    pensar: {
+        fila: 1,
+        frames: [2, 3],
+        velocidad: 500,
+        repetir: true
+    },
+
+    triste: {
+        fila: 1,
+        frames: [4],
+        velocidad: 500,
+        repetir: false
+    },
+
+    llorando: {
+        fila: 1,
+        frames: [5],
+        velocidad: 500,
+        repetir: false
+    },
+
+    enojado: {
+        fila: 1,
+        frames: [6],
+        velocidad: 500,
+        repetir: false
+    },
+
+    // ===================================
+    // FILA 3
+    // ===================================
+
+    trabajando: {
         fila: 2,
-        frames: [4, 5, 6],
-        velocidad: 200,
+        frames: [0, 1],
+        velocidad: 500,
+        repetir: true
+    },
+
+    caminarIzq: {
+        fila: 2,
+        frames: [2],
+        velocidad: 500,
+        repetir: false
+    },
+
+    caminarDer: {
+        fila: 2,
+        frames: [3],
+        velocidad: 500,
+        repetir: false
+    },
+
+    ofrecer: {
+        fila: 2,
+        frames: [4, 5],
+        velocidad: 400,
+        repetir: false
+    },
+
+    despedida: {
+        fila: 2,
+        frames: [6],
+        velocidad: 500,
         repetir: false
     }
 
@@ -189,7 +280,7 @@ function cargarBorin(){
         // MERCADER TRABAJANDO
         // ===================================
 
-        animarBorin("quieto");
+        animarBorin("saludar");
 
     };
 
@@ -322,6 +413,7 @@ function mostrarFrameBorin(
 // VOLVER AL MAPA
 // =======================================
 function irAlMapaDesdeMercado(){
+    animarBorin("despedir");
     console.log("Saliendo del Mercado → Mapa");
     irA( "market", "map", mostrarMapaReino );
 }
@@ -455,7 +547,7 @@ function seleccionarItemMercado(nombre){
 // CONSEGUIR PRODUCTO
 // =======================================
 function conseguirProductoMercado(id){
-    animarBorin("hablar");
+    animarBorin("señalar");
     console.log(
         "🛒 CONSEGUIR PRODUCTO:",
         id
@@ -533,7 +625,7 @@ function conseguirProductoMercado(id){
 // RECHAZAR OFERTA
 // =======================================
 function rechazarOfertaMercado(id){
-    animarBorin("hablar");
+    animarBorin("señalar");
     console.log(
         "❌ OFERTA RECHAZADA:",
         id
@@ -601,7 +693,7 @@ function borinHablar(){
 // OFRECER OTRO ITEM
 // =======================================
 function ofrecerOtroItemMercado(){
-    animarBorin("hablar");
+    animarBorin("trabajando");
     console.log(
         "🔄 BORIN OFRECE OTRO ITEM"
     );
@@ -652,7 +744,7 @@ function ofrecerOtroItemMercado(){
 // CONFIRMAR ITEM DEL MERCADO
 // =======================================
 function confirmarItemMercado(id){
-    animarBorin("hablar");
+    animarBorin("sorprendido");
     console.log(
         "✅ ITEM CONFIRMADO:",
         id
@@ -698,9 +790,10 @@ function confirmarItemMercado(id){
         );
 
         const dialogo = obtenerDialogoBorin(
-            "sin_oquos"
+            "sin_oquos" 
+            
         );
-
+animarBorin("enojado");
         console.log(
             "🧙‍♂️ BORIN:",
             dialogo
@@ -761,7 +854,7 @@ function confirmarItemMercado(id){
     const dialogo = obtenerDialogoBorin(
         "elegir_tipo_desafio"
     );
-
+animarBorin("hablar");
     console.log(
         "🧙‍♂️ BORIN:",
         dialogo
@@ -817,7 +910,7 @@ function confirmarItemMercado(id){
 // BORIN — INDECISO
 // =======================================
 function indecisoMercado(){
-    animarBorin("hablar");
+    animarBorin("pensar");
     console.log(
         "🤔 JUGADOR INDECISO"
     );
@@ -881,7 +974,7 @@ function indecisoMercado(){
 // ELEGIR DESAFÍO — PREGUNTA
 // =======================================
 function elegirDesafioPregunta(id){
-    animarBorin("hablar");
+    animarBorin("ofrecer");
     console.log(
         "🧠 TIPO DE DESAFÍO: PREGUNTA",
         id
@@ -940,7 +1033,7 @@ function elegirDesafioPregunta(id){
 // ELEGIR DESAFÍO — ACCIÓN
 // =======================================
 function elegirDesafioAccion(id){
-    animarBorin("hablar");
+    animarBorin("pensar");
     console.log(
         "🎯 TIPO DE DESAFÍO: ACCIÓN",
         id
@@ -1043,7 +1136,7 @@ function elegirDesafioAccion(id){
 // COMPLETAR DESAFÍO
 // =======================================
 function completarDesafioMercado(desafioId, productoId){
-
+animarBorin("celebrar");
     console.log(
         "🎯 DESAFÍO COMPLETADO:",
         desafioId
@@ -1122,7 +1215,7 @@ function completarDesafioMercado(desafioId, productoId){
 // EFECTUAR COMPRA
 // =======================================
 function efectuarCompraMercado(){
-    // SIN animarBorin() todavía
+    animarBorin("ofrecer");
     console.log(
         "🪙 EFECTUANDO COMPRA"
     );
@@ -1249,7 +1342,7 @@ function efectuarCompraMercado(){
 
 }
 function mostrarDesafioPregunta(desafio, dialogo){
-     animarBorin("hablar");
+     animarBorin("pensar");
     console.log(
         "❓ MOSTRANDO PREGUNTA:",
         desafio
@@ -1324,7 +1417,7 @@ function responderDesafio(indice){
     // RESPUESTA INCORRECTA
     // ===================================
     if(indice !== desafioActual.respuesta_correcta){
-
+        animarBorin("enojado");
         console.log(
             "❌ RESPUESTA INCORRECTA:",
             desafioActual.id
@@ -1383,7 +1476,7 @@ function responderDesafio(indice){
     // ===================================
     // BORIN — COMPRA EXITOSA
     // ===================================
-
+animarBorin("celebrar");
     const dialogo = obtenerDialogoBorin(
         "compra_exitosa"
     );
@@ -1445,7 +1538,7 @@ function responderDesafio(indice){
 // VOLVER A ELEGIR PRODUCTO
 // =======================================
 function volverAElegirProducto(){
-    animarBorin("quieto");
+    animarBorin("señalar");
     console.log(
         "🔄 VOLVER A ELEGIR PRODUCTO"
     );
@@ -1488,7 +1581,7 @@ function volverAElegirProducto(){
 // SALIR DEL MERCADO
 // =======================================
 function salirDelMercado(){
-
+    animarBorin("despedir");
     console.log(
         "🚪 SALIR DEL MERCADO"
     );
