@@ -45,7 +45,7 @@ function mostrarMapaReino() {
 
         <button
             class="btnPerfil"
-            onclick="irA('map', 'portal', mostrarPortal)">
+            onclick="reproducirSFX('open_place.wav'); irA('map', 'portal', mostrarPortal)">
             🔄 Cambiar perfil
         </button>
 
@@ -140,14 +140,13 @@ function mostrarMapaReino() {
         item.onclick = () => {
 
             if (!desbloqueada) {
-
                 mostrarMensaje(
                     "Zona bloqueada",
                     `Necesitás alcanzar el nivel ${zona.nivel} para desbloquear esta zona.`
                 );
-
                 return;
             }
+reproducirSFX("open_place.wav");
 
             abrirZona(zona);
 
@@ -216,9 +215,11 @@ function mostrarMapaReino() {
         // ===================================
 
         div.onclick = () => {
-
+            
+reproducirSFX("open_place.wav");
             if (!desbloqueada) {
 
+reproducirSFX("non.mp3");
                 mostrarMensaje(
                     "Zona bloqueada",
                     `Necesitás alcanzar el nivel ${zona.nivel} para desbloquear esta zona.`

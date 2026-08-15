@@ -3,7 +3,7 @@
     "id": 1,
     "nombre": "+30min en Roblox.",
     "icono": "🎮",
-    "precio": 80,
+    "precio": 800,
     "estado": "disponible",
     "item":"joystick"
   },
@@ -11,7 +11,7 @@
     "id": 2,
     "nombre": "Elegir un capitulo de YouTube.",
     "icono": "📺",
-    "precio": 40,
+    "precio": 400,
     "estado": "disponible",
     "item":"tele"
   },
@@ -27,7 +27,7 @@
     "id": 4,
     "nombre": "Comprar helado favorito.",
     "icono": "🍦",
-    "precio": 200,
+    "precio": 2000,
     "estado": "disponible",
     "item":"helado"
   },
@@ -35,7 +35,7 @@
     "id": 5,
     "nombre": "Elegir la cena.",
     "icono": "🍕",
-    "precio": 180,
+    "precio": 1800,
     "estado": "disponible",
     "item":"pizza"
   },
@@ -43,7 +43,7 @@
     "id": 6,
     "nombre": "Galletitas Especiales.",
     "icono": "🍪",
-    "precio": 100,
+    "precio": 1000,
     "estado": "disponible",
     "item":"galleta"
   },
@@ -51,7 +51,7 @@
     "id": 7,
     "nombre": "Paseo por la Playa.",
     "icono": "🏖️",
-    "precio": 250,
+    "precio": 2500,
     "estado": "disponible",
     "item":"sombrilla"
   },
@@ -59,7 +59,7 @@
     "id": 8,
     "nombre": "Paseo por la Plaza.",
     "icono": "⚽",
-    "precio": 250,
+    "precio": 2500,
     "estado": "disponible",
     "item":"pelota"
   },
@@ -67,7 +67,7 @@
     "id": 9,
     "nombre": "Paseo con la bici.",
     "icono": "🚲",
-    "precio": 250,
+    "precio": 2500,
     "estado": "disponible",
     "item":"bici"
   },
@@ -75,7 +75,7 @@
     "id": 10,
     "nombre": "+1 hora en la compu o tablet",
     "icono": "💻",
-    "precio": 140,
+    "precio": 1400,
     "estado": "disponible",
     "item":"compu"
   },
@@ -83,7 +83,7 @@
     "id": 11,
     "nombre": "Elegir juego para todos en familia",
     "icono": "🕹️",
-    "precio": 100,
+    "precio": 1000,
     "estado": "disponible",
     "item":"mando"
   },
@@ -91,7 +91,7 @@
     "id": 12,
     "nombre": "Elegir la música del viaje en auto",
     "icono": "🎵",
-    "precio": 60,
+    "precio": 600,
     "estado": "disponible",
     "item":"musica"
   },
@@ -99,7 +99,7 @@
     "id": 13,
     "nombre": "Jugar un videojuego con papá o mamá",
     "icono": "🤝",
-    "precio": 120,
+    "precio": 1200,
     "estado": "disponible",
     "item":"manos"
   },
@@ -107,7 +107,7 @@
     "id": 14,
     "nombre": "Peluche de león",
     "icono": "🦁",
-    "precio": 50,
+    "precio": 500,
     "estado": "disponible",
     "item":"mapaLeon"
   },
@@ -115,7 +115,7 @@
     "id": 15,
     "nombre": "Chocolate o golosina favorita",
     "icono": "🍫",
-    "precio": 70,
+    "precio": 700,
     "estado": "disponible",
     "item":"chocolate"
   },
@@ -123,7 +123,7 @@
     "id": 16,
     "nombre": "Elegir la bebida especial para la cena",
     "icono": "🥤",
-    "precio": 60,
+    "precio": 600,
     "estado": "disponible",
     "item":"coca"
   },
@@ -131,7 +131,7 @@
     "id": 17,
     "nombre": "Desayuno especial en la cama",
     "icono": "🥞",
-    "precio": 150,
+    "precio": 1500,
     "estado": "disponible",
     "item":"waffle"
   },
@@ -139,7 +139,7 @@
     "id": 18,
     "nombre": "Pedir comida rápida favorita",
     "icono": "🍔",
-    "precio": 220,
+    "precio": 2200,
     "estado": "disponible",
     "item":"burguer"
   },
@@ -147,7 +147,7 @@
     "id": 19,
     "nombre": "Picnic de golosinas en el Parque",
     "icono": "🌳",
-    "precio": 90,
+    "precio": 900,
     "estado": "disponible",
     "item":"mapaBosque"
   },
@@ -155,7 +155,7 @@
     "id": 20,
     "nombre": "Licuado helado con espuma",
     "icono": "🍺",
-    "precio": 200,
+    "precio": 2000,
     "estado": "disponible",
     "item":"vaso"
   },
@@ -163,7 +163,7 @@
     "id": 21,
     "nombre": "Construir y remontar un barrilete",
     "icono": "🪁",
-    "precio": 150,
+    "precio": 1500,
     "estado": "disponible",
     "item":"cometa"
   },
@@ -171,7 +171,7 @@
     "id": 22,
     "nombre": "Tarde de pileta o jugar con agua",
     "icono": "🏊",
-    "precio": 250,
+    "precio": 2500,
     "estado": "disponible",
     "item":"natacion"
   },
@@ -179,7 +179,7 @@
     "id": 23,
     "nombre": "Acampar en el patio o armar una carpa en el living",
     "icono": "🏕️",
-    "precio": 200,
+    "precio": 2000,
     "estado": "disponible",
     "item":"arbol"
   },
@@ -187,7 +187,7 @@
     "id": 24,
     "nombre": "Hamburguesa con papas",
     "icono": "🍔",
-    "precio": 300,
+    "precio": 3000,
     "estado": "disponible",
     "item":"mcBurguer"
   },
@@ -195,7 +195,7 @@
     "id": 25,
     "nombre": "Tarde de construir fuerte de almohadones",
     "icono": "🏰",
-    "precio": 100,
+    "precio": 1000,
     "estado": "disponible",
     "item":"castillo"
   },
@@ -203,7 +203,7 @@
     "id": 26,
     "nombre": "Kit de pintura o manualidades libres",
     "icono": "🎨",
-    "precio": 120,
+    "precio": 1200,
     "estado": "disponible",
     "item":"pintura"
   },
@@ -211,7 +211,7 @@
     "id": 27,
     "nombre": "Leer un cuento extra antes de dormir elegido por vos",
     "icono": "📖",
-    "precio": 50,
+    "precio": 500,
     "estado": "disponible",
     "item":"libro"
   },
@@ -219,7 +219,7 @@
     "id": 28,
     "nombre": "Noche de juegos de mesa en familia",
     "icono": "🃏",
-    "precio": 90000,
+    "precio": 900,
     "estado": "disponible",
     "item":"carta"
   },
@@ -227,7 +227,7 @@
     "id": 29,
     "nombre": "Hacer un show de magia o acrobacias",
     "icono": "🪄",
-    "precio": 80,
+    "precio": 800,
     "estado": "disponible",
     "item":"varita"
   },
@@ -235,7 +235,7 @@
     "id":30,
     "nombre":"Noche de Cuentos a la luz de las velas",
     "icono":"🕯️",
-    "precio":90,
+    "precio":900,
     "estado":"disponible",
     "item":"luces2"
   }

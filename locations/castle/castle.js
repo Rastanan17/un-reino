@@ -46,11 +46,11 @@ function mostrarCastillo(){
             <!-- ===========================
                  GUARDIAS
             ============================ -->
-            <div class="guardias1" onclick="hablarGuardias1()">
+            <div class="guardias1" onclick="reproducirSonidoCastillo('assets/sounds/man_talk.mp3'); hablarGuardias1()">
                 <h2 class="name">Guardias</h2>
                 <img src="locations/castle/images/guards_1.png" alt="Guardias">
             </div>
-            <div class="guardias2" onclick="hablarGuardias2()">
+            <div class="guardias2" onclick="reproducirSonidoCastillo('assets/sounds/man_talk.mp3'); hablarGuardias2()">
                 <h2 class="name">Guardias</h2>
                 <img src="locations/castle/images/guards_2.png" alt="Guardias">
             </div>
@@ -76,16 +76,16 @@ function mostrarCastillo(){
             <!-- ===========================
                  LUCES
             ============================ -->
-            <div class="objeto light1">
+            <div class="objeto light1" onclick="reproducirSonidoCastillo('assets/sounds/touch.mp3')">
                 <img src="locations/castle/images/light_1.png" alt="Luz">
             </div>
-            <div class="objeto light2">
+            <div class="objeto light2" onclick="reproducirSonidoCastillo('assets/sounds/touch.mp3')">
                 <img src="locations/castle/images/light_2.png" alt="Luz">
             </div>
-            <div class="objeto light3">
+            <div class="objeto light3" onclick="reproducirSonidoCastillo('assets/sounds/touch.mp3')">
                 <img src="locations/castle/images/light_3.png" alt="Luz">
             </div>
-            <div class="objeto light4">
+            <div class="objeto light4" onclick="reproducirSonidoCastillo('assets/sounds/touch.mp3')">
                 <img src="locations/castle/images/light_4.png" alt="Luz">
             </div>
         </section>
@@ -94,6 +94,21 @@ function mostrarCastillo(){
     if(dialogosGuardias.length === 0){
         cargarDialogosGuardias();
     }
+}
+// =======================================
+// REPRODUCIR SONIDO DEL CASTILLO
+// =======================================
+function reproducirSonidoCastillo(ruta){
+    const audio = new Audio(ruta);
+    audio.volume = 0.8;
+    audio.play().catch(error => {
+        console.warn("No se pudo reproducir el sonido:", error);
+    });
+    // Máximo 5 segundos
+    setTimeout(() => {
+        audio.pause();
+        audio.currentTime = 0;
+    }, 5000);
 }
 function entrarArmeriaDesdeCastillo(){
 
@@ -406,11 +421,29 @@ function volverDesdeArmeria(){
 
         mostrarAldea();
 
-    }else{
+        return;
+    }
+
+    if(origenArmeria === "granja"){
+
+        mostrarGranja();
+
+        return;
+    }
+
+    if(origenArmeria === "castillo"){
 
         mostrarCastillo();
 
+        return;
     }
+
+    // ===================================
+    // DESTINO POR DEFECTO
+    // ===================================
+
+    mostrarCastillo();
+
 }
 
 // =======================================

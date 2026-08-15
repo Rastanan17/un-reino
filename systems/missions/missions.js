@@ -362,98 +362,178 @@ function paginaSiguienteMisiones(){
 // ABRIR MISIÓN
 // =======================================
 function abrirPergaminoMision(id){
+
     const mision = misiones.find(m => m.id === id);
+
     if(!mision) return;
+
     let botones = [];
+
     // ===================================
     // MISIÓN DISPONIBLE
     // ===================================
+
     if(mision.estado === "disponible"){
+
         botones.push({
             texto: "⚔️ Comenzar misión",
-            accion:`iniciarMision(${mision.id}); cerrarPergamino();`
+            accion: `accionBotonMision(() => iniciarMision(${mision.id}))`
         });
+
     }
+
     // ===================================
     // MISIÓN EN CURSO
     // ===================================
-        else if(mision.estado === "enCurso"){
+
+    else if(mision.estado === "enCurso"){
+
         botones.push({
             texto: "✅ Ya terminé",
-            accion: `terminarMision(${mision.id}); cerrarPergamino();`
+            accion: `accionBotonMision(() => terminarMision(${mision.id}))`
         });
+
         botones.push({
             texto: "⏸️ Posponer",
-            accion: `posponerMision(${mision.id}); cerrarPergamino();`
+            accion: `accionBotonMision(() => posponerMision(${mision.id}))`
         });
+
     }
+
     // ===================================
     // MISIÓN COMPLETADA
     // ===================================
+
     else if(mision.estado === "completada"){
+
         botones.push({
             texto: "🏆 Completada",
-            accion: "cerrarPergamino();"
+            accion: `accionBotonMision(() => cerrarPergamino())`
         });
+
     }
+
     // ===================================
     // CERRAR
     // ===================================
+
     botones.push({
         texto: "❌ Cerrar",
-        accion: "cerrarPergamino();"
+        accion: `accionBotonMision(() => cerrarPergamino())`
     });
+
     // ===================================
     // INFORMACIÓN DEL TIEMPO
-    // =======================================
+    // ===================================
+
     let informacionTiempo = "";
+
     if(mision.estado === "enCurso"){
-        const inicio = mision.inicio || Date.now();
-        const transcurrido = Math.floor((Date.now() - inicio) / 1000);
-        const restante = Math.max(0, mision.duracion - transcurrido);
+
+        const inicio =
+            mision.inicio || Date.now();
+
+        const transcurrido =
+            Math.floor(
+                (Date.now() - inicio) / 1000
+            );
+
+        const restante =
+            Math.max(
+                0,
+                mision.duracion - transcurrido
+            );
+
         if(restante > 0){
+
             informacionTiempo = `
                 <br>
                 <strong>⏳ Tiempo restante:</strong>
-                <span id="temporizadorMision">${formatearTiempo(restante)}</span>
+                <span id="temporizadorMision">
+                    ${formatearTiempo(restante)}
+                </span>
             `;
+
         }else{
+
             informacionTiempo = `
                 <br>
-                <strong class="mision-lista">🏆 ¡Tiempo terminado!</strong>
+                <strong class="mision-lista">
+                    🏆 ¡Tiempo terminado!
+                </strong>
                 <br>
-                <span>Podés finalizar la misión cuando quieras.</span>
+                <span>
+                    Podés finalizar la misión cuando quieras.
+                </span>
             `;
         }
     }
+
     // ===================================
     // MOSTRAR PERGAMINO
     // ===================================
+
     mostrarPergamino({
+
         icono: mision.icono,
+
         titulo: mision.titulo,
+
         descripcion: `
             <p>${mision.descripcion}</p>
-            <br><strong>📍 Lugar:</strong>
+
+            <br>
+            <strong>📍 Lugar:</strong>
             Castillo
-            <br><strong>⚔️ Dificultad:</strong>
+
+            <br>
+            <strong>⚔️ Dificultad:</strong>
             ${mision.dificultad}
-            <br><strong>⭐ XP:</strong>
+
+            <br>
+            <strong>⭐ XP:</strong>
             ${mision.xp}
-            <br><strong>💰 Oquos:</strong>
+
+            <br>
+            <strong>💰 Oquos:</strong>
             ${mision.oquos}
-            <br><strong>⏱️ Duración:</strong>
+
+            <br>
+            <strong>⏱️ Duración:</strong>
             ${formatearDuracion(mision.duracion)}
+
             ${informacionTiempo}
         `,
+
         botones: botones
     });
+
     // ===================================
-    // INICIAR ACTUALIZACIÓN DEL TEMPORIZADOR
+    // TEMPORIZADOR
     // ===================================
+
     if(mision.estado === "enCurso"){
-        iniciarTemporizadorPergamino(mision.id);
+
+        iniciarTemporizadorPergamino(
+            mision.id
+        );
+
     }
+}
+// =======================================
+// ACCIÓN DE BOTÓN DE MISIÓN
+// =======================================
+
+function accionBotonMision(accion){
+
+    reproducirSFX("touch.mp3");
+
+    if(typeof accion === "function"){
+
+        accion();
+
+    }
+
 }
 // =======================================
 // FORMATEAR DURACIÓN
@@ -538,6 +618,7 @@ function terminarMision(id){
     if(mision.estado !== "enCurso"){
         return;
     }
+    cerrarPergamino();
     completarMision(id);
 }
 // =======================================
@@ -553,6 +634,7 @@ function posponerMision(id){
     delete mision.inicio;
     guardarEstadoMisiones();
     mostrarTablonMisiones();
+    cerrarPergamino();
     mostrarMensaje("📜 Misión pospuesta",
         "Podrás retomarla cuando quieras."
     );

@@ -29,12 +29,12 @@
     {
       "id": 3,
       "categoria": "🍽️ Aldea",
-      "titulo": "Ayuda a poner la mesa para la cena.",
-      "descripcion": "Los habitantes del Reino necesitan preparar el gran banquete.",
-      "icono": "🍽️",
+      "titulo": "Bebe un vaso de agua grande.",
+      "descripcion": "El manantial de la granja renueva las fuerzas de todo el Reino.",
+      "icono": "🥛",
       "xp": 10,
       "oquos": 5,
-      "duracion": 180,
+      "duracion": 120,
       "estado": "disponible",
       "dificultad": "facil",
       "restauracion": 5

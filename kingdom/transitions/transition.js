@@ -19,7 +19,10 @@ const videosTransicion = {
 
     "map-village": "assets/videos/map-village.mp4",
     "village-map": "assets/videos/village-map.mp4",
-    
+
+    "map-farm": "assets/videos/map-farm.mp4",
+    "farm-map": "assets/videos/farm-map.mp4",
+
     "portal-map": "assets/videos/portal-map.mp4",
     "map-portal": "assets/videos/portal-map.mp4"
 
@@ -49,6 +52,11 @@ function ejecutarTransicion(origen, destino, accionDestino) {
     }
 
     transicionActiva = true;
+    // ===================================
+    // DETENER MÚSICA DEL LUGAR DE ORIGEN
+    // ===================================
+
+    detenerMusica();
 
     // ===================================
     // BUSCAR VIDEO

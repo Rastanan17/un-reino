@@ -43,12 +43,12 @@ function mostrarPortal(){
     });
     const content=document.getElementById("content");
     content.innerHTML=`
-    <section class="portal">
-        <h1>🌀 Portal de Mírrafen</h1>
-        <p class="portalTexto">Todo héroe tiene una historia.<br>¿Quién cruzará el portal?</p>
-        <div id="listaPerfiles"></div>
-        <button class="btnNuevoPerfil" onclick="mostrarCrearPerfil()">✨ Nuevo Aventurero</button>
-    </section>
+        <section class="portal">
+            <h1>🌀 Portal de Mírrafen</h1>
+            <p class="portalTexto">Todo héroe tiene una historia.<br>¿Quién cruzará el portal?</p>
+            <div id="listaPerfiles"></div>
+            <button class="btnNuevoPerfil" onclick="reproducirSFX('open_place.wav'); mostrarCrearPerfil()">✨ Nuevo Aventurero</button>
+        </section>
     `;
     cargarTarjetasPerfiles();
 }
@@ -89,13 +89,13 @@ function cargarTarjetasPerfiles(){
                 <p>🎂 ${rangoEdad} años</p>
                 <p>Nivel ${jugador.nivel}</p>
                 <p>${jugador.rango || "Aprendiz"}</p>
-                <button onclick="entrarPerfil('${id}')">
+                <button onclick="reproducirSFX('open_place.wav'); entrarPerfil('${id}')">
                     ⚔️ Entrar
                 </button>
-                <button onclick="editarPerfil('${id}')">
+                <button onclick="reproducirSFX('touch.mp3'); editarPerfil('${id}')">
                     ✏️ Editar
                 </button>
-                <button onclick="eliminarPerfil('${id}')">
+                <button onclick="reproducirSFX('non.mp3'); eliminarPerfil('${id}')">
                     🗑️ Eliminar
                 </button>
             </div>
@@ -155,41 +155,41 @@ function editarPerfil(id){
             <h3>🧙 Elige tu personaje</h3>
             <div class="selectorAvatares">
                 <div class="avatarCard ${avatarActual.includes("explorer") ? "seleccionado" : ""}"
-                    onclick="seleccionarAvatar('kingdom/portal/avatars/explorer.jpg', this)">
+                    onclick="reproducirSFX('touch.mp3'); seleccionarAvatar('kingdom/portal/avatars/explorer.jpg', this)">
                         <img src="kingdom/portal/avatars/explorer.jpg">
                         <span>Explorador</span>
                 </div>
                 <div class="avatarCard ${avatarActual.includes("alien") ? "seleccionado" : ""}"
-                    onclick="seleccionarAvatar('kingdom/portal/avatars/alien.jpg', this)">
+                    onclick="reproducirSFX('touch.mp3'); seleccionarAvatar('kingdom/portal/avatars/alien.jpg', this)">
                         <img src="kingdom/portal/avatars/alien.jpg">
                         <span>Alien</span>
                 </div>
                 <div class="avatarCard ${avatarActual.includes("dwarf") ? "seleccionado" : ""}"
-                    onclick="seleccionarAvatar('kingdom/portal/avatars/dwarf.jpg', this)">
+                    onclick="reproducirSFX('touch.mp3'); seleccionarAvatar('kingdom/portal/avatars/dwarf.jpg', this)">
                         <img src="kingdom/portal/avatars/dwarf.jpg">
                         <span>Enano</span>
                 </div>
                 <div class="avatarCard ${avatarActual.includes("elf") ? "seleccionado" : ""}"
-                    onclick="seleccionarAvatar('kingdom/portal/avatars/elf.jpg', this)">
+                    onclick="reproducirSFX('touch.mp3'); seleccionarAvatar('kingdom/portal/avatars/elf.jpg', this)">
                         <img src="kingdom/portal/avatars/elf.jpg">
                         <span>Elfo</span>
                 </div>
                 <div class="avatarCard ${avatarActual.includes("witch") ? "seleccionado" : ""}"
-                    onclick="seleccionarAvatar('kingdom/portal/avatars/witch.jpg', this)">
+                    onclick="reproducirSFX('touch.mp3'); seleccionarAvatar('kingdom/portal/avatars/witch.jpg', this)">
                         <img src="kingdom/portal/avatars/witch.jpg">
                         <span>Bruja</span>
                 </div>
                 <div class="avatarCard ${avatarActual.includes("wolf") ? "seleccionado" : ""}"
-                    onclick="seleccionarAvatar('kingdom/portal/avatars/wolf.jpg', this)">
+                    onclick="reproducirSFX('touch.mp3'); seleccionarAvatar('kingdom/portal/avatars/wolf.jpg', this)">
                         <img src="kingdom/portal/avatars/wolf.jpg">
                         <span>Lobo</span>
                 </div>
             </div>
             <br>
-            <button onclick="guardarEdicionPerfil('${id}')">
+            <button onclick="reproducirSFX('open_place.wav'); guardarEdicionPerfil('${id}')">
                 💾 Guardar cambios
             </button>
-            <button onclick="mostrarPortal()">
+            <button onclick="reproducirSFX('exit.mp3'); mostrarPortal()">
                 ← Volver
             </button>
         </section>
@@ -306,39 +306,39 @@ function mostrarCrearPerfil(){
         <h3>Elige tu personaje</h3>
         <div class="selectorAvatares">
             <div class="avatarCard seleccionado"
-                onclick="seleccionarAvatar('kingdom/portal/avatars/explorer.jpg',this)">
+                onclick="reproducirSFX('touch.mp3'); seleccionarAvatar('kingdom/portal/avatars/explorer.jpg',this)">
                 <img src="kingdom/portal/avatars/explorer.jpg">
                 <span>Explorador</span>
             </div>
             <div class="avatarCard"
-                onclick="seleccionarAvatar('kingdom/portal/avatars/alien.jpg',this)">
+                onclick="reproducirSFX('touch.mp3'); seleccionarAvatar('kingdom/portal/avatars/alien.jpg',this)">
                 <img src="kingdom/portal/avatars/alien.jpg">
                 <span>Alien</span>
             </div>
             <div class="avatarCard"
-                onclick="seleccionarAvatar('kingdom/portal/avatars/dwarf.jpg',this)">
+                onclick="reproducirSFX('touch.mp3'); seleccionarAvatar('kingdom/portal/avatars/dwarf.jpg',this)">
                 <img src="kingdom/portal/avatars/dwarf.jpg">
                 <span>Enano</span>
             </div>
             <div class="avatarCard"
-                onclick="seleccionarAvatar('kingdom/portal/avatars/elf.jpg',this)">
+                onclick="reproducirSFX('touch.mp3'); seleccionarAvatar('kingdom/portal/avatars/elf.jpg',this)">
                 <img src="kingdom/portal/avatars/elf.jpg">
                 <span>Elfo</span>
             </div>
             <div class="avatarCard"
-                onclick="seleccionarAvatar('kingdom/portal/avatars/witch.jpg',this)">
+                onclick="reproducirSFX('touch.mp3'); seleccionarAvatar('kingdom/portal/avatars/witch.jpg',this)">
                 <img src="kingdom/portal/avatars/witch.jpg">
                 <span>Bruja</span>
             </div>
             <div class="avatarCard"
-                onclick="seleccionarAvatar('kingdom/portal/avatars/wolf.jpg',this)">
+                onclick="reproducirSFX('touch.mp3'); seleccionarAvatar('kingdom/portal/avatars/wolf.jpg',this)">
                 <img src="kingdom/portal/avatars/wolf.jpg">
                 <span>Lobo</span>
             </div>
         </div>
         <br>
-        <button onclick="crearNuevoPerfil()">⚔️ Comenzar aventura</button>
-        <button onclick="mostrarPortal()">← Volver</button>
+        <button onclick="reproducirSFX('open_place.wav'); crearNuevoPerfil()">⚔️ Comenzar aventura</button>
+        <button onclick="reproducirSFX('exit.mp3'); mostrarPortal()">← Volver</button>
     </section>
     `;
 }
