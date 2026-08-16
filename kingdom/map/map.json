@@ -18,7 +18,7 @@
     "progreso": 0,
     "objetivo": 100,
     "tipo":"misiones",
-    "x":35,
+    "x":25,
     "y":50
   },
   {
@@ -41,7 +41,7 @@
     "objetivo": 100,
     "tipo":"misiones",
     "x":28,
-    "y":60
+    "y":70
   },
   {
     "id": 5,

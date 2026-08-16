@@ -1,14 +1,20 @@
 /* ======================================
    MAPA DEL REINO 2.0
+   SISTEMA RESPONSIVE DEL VISOR
+====================================== */
+/* ======================================
+   ESTRUCTURA PRINCIPAL
 ====================================== */
 #kingdomLayout{
     display:flex;
     gap:20px;
     align-items:flex-start;
+    width:100%;
+    box-sizing:border-box;
 }
-/*======================================
-    LISTA DE ZONAS
-======================================*/
+/* ======================================
+   LISTA DE ZONAS
+====================================== */
 #zoneList{
     width:260px;
     min-width:220px;
@@ -20,6 +26,7 @@
     display:grid;
     grid-template-columns:repeat(4, 1fr);
     gap:8px;
+    box-sizing:border-box;
 }
 .zoneItem{
     padding:6px 4px;
@@ -31,20 +38,23 @@
     transition:.25s;
     background:rgba(255,255,255,.05);
     text-align:center;
+    box-sizing:border-box;
 }
 .zoneItem:hover{
     background:aquamarine;
     color:#222;
     transform:translateX(8px);
 }
-/*======================================
-    MAPA
-======================================*/
+/* ======================================
+   MAPA
+====================================== */
 #kingdomMap{
     position:relative;
     flex:1;
     width:100%;
     max-width:750px;
+    min-width:0;
+    box-sizing:border-box;
 }
 #mapImage{
     display:block;
@@ -55,57 +65,72 @@
     pointer-events:none;
     box-shadow:0 0 20px rgba(0,0,0,.45);
 }
-/*======================================
-    ZONAS
-======================================*/
+/* ======================================
+   ZONAS
+====================================== */
 .zone{
     position:absolute;
     transform:translate(-50%,-50%);
-    width:clamp(50px,7vw,80px);
-    height:clamp(50px,7vw,80px);
+    /*
+       IMPORTANTE:
+       El tamaño ya NO depende de vw.
+       El visor controla el tamaño.
+    */
+    width:80px;
+    height:80px;
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:center;
     transition:.25s;
     cursor:pointer;
+    box-sizing:border-box;
 }
 .zone:hover{
     transform:translate(-50%,-50%) scale(1.25);
     z-index:100;
 }
+/* ======================================
+   SPRITE DE ZONA
+====================================== */
 .zoneSprite{
     overflow:visible;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 .zoneSprite img{
-    width:clamp(50px,8vw,85px);
+    width:80px;
     height:auto;
+    display:block;
     filter:drop-shadow(0 5px 8px rgba(0,0,0,.45));
+    user-select:none;
+    pointer-events:none;
 }
-/* =======================================
+/* ======================================
    NOMBRES DE ZONAS
-   ======================================= */
-
+====================================== */
 .zoneName{
     margin-top:6px;
-
     color:#d4af37;
     font-size:.85rem;
     font-weight:bold;
     text-align:center;
-
+    white-space:nowrap;
     text-shadow:
         -2px -2px 0 #000,
          2px -2px 0 #000,
         -2px  2px 0 #000,
          2px  2px 0 #000,
          0    2px 4px #000;
-
     opacity:1;
 }
 .zone:hover .zoneName{
     opacity:1;
 }
+/* ======================================
+   NIVEL DE ZONA
+====================================== */
 .zoneLevel{
     color:#ffd54f;
     font-size:.75rem;
@@ -117,9 +142,9 @@
 .zone:hover .zoneLevel{
     opacity:1;
 }
-/*======================================
-    ZONAS BLOQUEADAS
-======================================*/
+/* ======================================
+   ZONAS BLOQUEADAS
+====================================== */
 .zone.bloqueada{
     filter:grayscale(1);
     opacity:.45;
@@ -129,30 +154,34 @@
     position:absolute;
     font-size:28px;
 }
-/*======================================
-    ANIMACIÓN
-======================================*/
+/* ======================================
+   ANIMACIÓN
+====================================== */
 .zone.desbloqueadaNueva{
     animation:aparecer .8s;
 }
 @keyframes aparecer{
     0%{
-        transform:translate(-50%,-50%) scale(.2);
+        transform:
+            translate(-50%,-50%)
+            scale(.2);
         opacity:0;
     }
     70%{
-
-        transform:translate(-50%,-50%) scale(1.2);
+        transform:
+            translate(-50%,-50%)
+            scale(1.2);
     }
     100%{
-
-        transform:translate(-50%,-50%) scale(1);
+        transform:
+            translate(-50%,-50%)
+            scale(1);
         opacity:1;
     }
 }
-/*======================================
-    MODAL
-======================================*/
+/* ======================================
+   MODAL
+====================================== */
 .zone-modal{
     position:fixed;
     inset:0;
@@ -183,6 +212,7 @@
     color:white;
     overflow:auto;
     height:430px;
+    box-sizing:border-box;
 }
 #closeZone{
     position:absolute;
@@ -197,37 +227,142 @@
     cursor:pointer;
     font-size:18px;
 }
-/*======================================
-    RESPONSIVE
-======================================*/
-@media (max-width:900px){
-    #kingdomLayout{
-        flex-direction:column;
-        align-items:center;
-    }
-    #zoneList{
-        width:100%;
-        max-width:700px;
-    }
-    .zoneItem{
-        text-align:center;
-    }
+/* ======================================
+   ======================================
+   💻 MODO PC
+   1280 × 1024
+   ======================================
+====================================== */
+#visorPantalla.modo-pc #kingdomLayout{
+    gap:20px;
+    flex-direction:column;
+    align-items:center;
 }
-@media (max-width:600px){
-    .zone{
-        width:55px;
-        height:55px;
-    }
-    .zoneSprite img{
-        width:55px;
-    }
-    .zoneName{
-        display:none;
-    }
-    .zoneLevel{
-        display:none;
-    }
-    .zone:hover{
-        transform:translate(-50%,-50%) scale(1.1);
-    }
+#visorPantalla.modo-pc #kingdomMap{
+    max-width:600px;
 }
+#visorPantalla.modo-pc #zoneList{
+    width:700px;
+    min-width:260px;
+}
+#visorPantalla.modo-pc .zone{
+    width:80px;
+    height:80px;
+}
+#visorPantalla.modo-pc .zoneSprite img{
+    width:80px;
+}
+#visorPantalla.modo-pc .zoneName{
+    font-size:.85rem;
+}
+#visorPantalla.modo-pc .zoneLevel{
+    font-size:.75rem;
+}
+/* ======================================
+   ======================================
+   📲 MODO TABLET
+   650 × 980
+   ======================================
+====================================== */
+#visorPantalla.modo-tablet #kingdomLayout{
+    flex-direction:column;
+    align-items:center;
+    gap:12px;
+    width:100%;
+}
+#visorPantalla.modo-tablet #kingdomMap{
+    width:100%;
+    max-width:600px;
+}
+#visorPantalla.modo-tablet #zoneList{
+    width:100%;
+    max-width:600px;
+    min-width:0;
+    grid-template-columns:repeat(4,1fr);
+    gap:6px;
+}
+#visorPantalla.modo-tablet .zone{
+    width:60px;
+    height:60px;
+}
+#visorPantalla.modo-tablet .zoneSprite img{
+    width:60px;
+}
+#visorPantalla.modo-tablet .zoneName{
+    font-size:.72rem;
+    margin-top:4px;
+}
+#visorPantalla.modo-tablet .zoneLevel{
+    font-size:.65rem;
+}
+/* ======================================
+   ======================================
+   📱 MODO CELULAR
+   340 × 720
+   ======================================
+====================================== */
+#visorPantalla.modo-celular #kingdomLayout{
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
+    width:100%;
+}
+#visorPantalla.modo-celular #kingdomMap{
+    width:100%;
+    max-width:340px;
+}
+#visorPantalla.modo-celular #zoneList{
+    width:100%;
+    max-width:340px;
+    min-width:0;
+    grid-template-columns:repeat(4,1fr);
+    gap:5px;
+    padding:5px;
+}
+#visorPantalla.modo-celular .zone{
+    width:45px;
+    height:45px;
+}
+#visorPantalla.modo-celular .zoneSprite img{
+    width:45px;
+}
+#visorPantalla.modo-celular .zoneName{
+    display:none;
+}
+#visorPantalla.modo-celular .zoneLevel{
+    display:none;
+}
+#visorPantalla.modo-celular .zone:hover{
+    transform:
+        translate(-50%,-50%)
+        scale(1.1);
+}
+#visorPantalla.modo-celular .zone.bloqueada::after{
+    font-size:20px;
+}
+/* ======================================
+   BOTÓN PERFIL DENTRO DEL VISOR
+====================================== */
+#visorPantalla.modo-tablet .btnPerfil{
+    top:10px;
+    right:10px;
+    padding:8px 11px;
+    font-size:13px;
+}
+#visorPantalla.modo-celular .btnPerfil{
+    top:8px;
+    right:8px;
+    padding:6px 8px;
+    font-size:11px;
+}
+/* ======================================
+   SEGURIDAD PARA EL CONTENIDO DEL MAPA
+====================================== */
+#visorPantalla.modo-tablet #content,
+#visorPantalla.modo-celular #content{
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+/* ======================================
+   FIN DEL MAPA
+====================================== */

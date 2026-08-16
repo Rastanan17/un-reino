@@ -78,150 +78,154 @@ function mostrarMercado(){
     });
 }
 // =======================================
-// BORIN — ESCALA DEL SPRITE
+// BORIN — NUEVO SISTEMA DE SPRITES
 // =======================================
-const BORIN_ESCALA = 4;
-// =======================================
-// BORIN — CONFIGURACIÓN DEL SPRITE
-// =======================================
-const BORIN_FILAS = 3;
-const BORIN_COLUMNAS = 7;
-// =======================================
-// BORIN — VARIABLES DE ANIMACIÓN
-// =======================================
-let borinHoja = null;
+
+// Cada sprite mide:
+// 640 × 250 px
+//
+// Contiene 5 frames horizontales:
+// 128 × 250 px cada uno.
+
+const BORIN_FRAME_ANCHO = 128;
+const BORIN_FRAME_ALTO = 250;
+
+const BORIN_SPRITE_RUTA =
+    "locations/market/images/borin/";
+
 let borinAnimacion = null;
+let borinFrameActual = 0;
+
 // =======================================
-// BORIN — ACCIONES
-// =======================================
-// =======================================
-// BORIN — ACCIONES
+// CONFIGURACIÓN DE ANIMACIONES
 // =======================================
 
 const BORIN_ACCIONES = {
 
-     quieto: {
-        fila: 2,
-        frames: [0],
-        velocidad: 1000,
-        repetir: false
+    quieto: {
+        sprite: "talk.png",
+        velocidad: 900,
+        repetir: true
     },
 
-    // ===================================
-    // FILA 1
-    // ===================================
-
     saludar: {
-        fila: 0,
-        frames: [0, 1],
+        sprite: "talk.png",
         velocidad: 350,
         repetir: false
     },
 
     hablar: {
-        fila: 0,
-        frames: [2, 3],
-        velocidad: 600,
-        repetir: true
-    },
-
-    celebrar: {
-        fila: 0,
-        frames: [4, 5],
+        sprite: "talk.png",
         velocidad: 300,
         repetir: true
     },
 
+    celebrar: {
+        sprite: "correct.png",
+        velocidad: 250,
+        repetir: false
+    },
+
     sorprendido: {
-        fila: 0,
-        frames: [6],
-        velocidad: 500,
+        sprite: "question.png",
+        velocidad: 350,
         repetir: false
     },
 
-    // ===================================
-    // FILA 2
-    // ===================================
-
-    señalarIzq: {
-        fila: 1,
-        frames: [0],
-        velocidad: 500,
-        repetir: false
-    },
-
-    señalarDer: {
-        fila: 1,
-        frames: [1],
-        velocidad: 500,
+    señalar: {
+        sprite: "offer.png",
+        velocidad: 400,
         repetir: false
     },
 
     pensar: {
-        fila: 1,
-        frames: [2, 3],
+        sprite: "thinking.png",
         velocidad: 500,
         repetir: true
     },
 
     triste: {
-        fila: 1,
-        frames: [4],
+        sprite: "incorrect.png",
         velocidad: 500,
         repetir: false
     },
 
     llorando: {
-        fila: 1,
-        frames: [5],
-        velocidad: 500,
+        sprite: "incorrect.png",
+        velocidad: 450,
         repetir: false
     },
 
     enojado: {
-        fila: 1,
-        frames: [6],
-        velocidad: 500,
+        sprite: "angry.png",
+        velocidad: 350,
         repetir: false
     },
 
-    // ===================================
-    // FILA 3
-    // ===================================
-
     trabajando: {
-        fila: 2,
-        frames: [0, 1],
-        velocidad: 500,
+        sprite: "search.png",
+        velocidad: 400,
         repetir: true
     },
 
-    caminarIzq: {
-        fila: 2,
-        frames: [2],
-        velocidad: 500,
-        repetir: false
-    },
-
-    caminarDer: {
-        fila: 2,
-        frames: [3],
-        velocidad: 500,
-        repetir: false
-    },
-
     ofrecer: {
-        fila: 2,
-        frames: [4, 5],
+        sprite: "offer.png",
         velocidad: 400,
         repetir: false
     },
 
-    despedida: {
-        fila: 2,
-        frames: [6],
-        velocidad: 500,
+    despedir: {
+        sprite: "goodbye.png",
+        velocidad: 400,
         repetir: false
+    },
+
+    compra: {
+        sprite: "purchase.png",
+        velocidad: 350,
+        repetir: false
+    },
+
+    desafio: {
+        sprite: "challenge.png",
+        velocidad: 400,
+        repetir: false
+    },
+
+    mision: {
+        sprite: "quest.png",
+        velocidad: 400,
+        repetir: false
+    },
+
+    correcto: {
+        sprite: "correct.png",
+        velocidad: 250,
+        repetir: false
+    },
+
+    incorrecto: {
+        sprite: "incorrect.png",
+        velocidad: 350,
+        repetir: false
+    },
+
+    buscar: {
+        sprite: "search.png",
+        velocidad: 400,
+        repetir: true
+    },
+
+    pensar2: {
+        sprite: "think.png",
+        velocidad: 500,
+        repetir: true
+    },
+
+    dormir: {
+        sprite: "sleeping.png",
+        velocidad: 700,
+        repetir: true
     }
 
 };
@@ -232,57 +236,42 @@ const BORIN_ACCIONES = {
 
 function cargarBorin(){
 
-    const borinSprite = document.getElementById("borinSprite");
+    const borinSprite =
+        document.getElementById("borinSprite");
 
     if(!borinSprite){
 
-        console.error("No se encontró #borinSprite.");
+        console.error(
+            "❌ No se encontró #borinSprite."
+        );
 
         return;
     }
 
-    borinHoja = new Image();
+    // ===================================
+    // CONFIGURAR VENTANA DEL FRAME
+    // ===================================
 
-    borinHoja.src = "kingdom/npc/images/borin.png";
+    borinSprite.style.width =
+        `${BORIN_FRAME_ANCHO}px`;
 
-    borinHoja.onload = function(){
+    borinSprite.style.height =
+        `${BORIN_FRAME_ALTO}px`;
 
-        const anchoHoja = borinHoja.naturalWidth;
-        const altoHoja = borinHoja.naturalHeight;
+    borinSprite.style.backgroundRepeat =
+        "no-repeat";
 
-        // ===================================
-        // CALCULAR FRAME AUTOMÁTICAMENTE
-        // ===================================
+    borinSprite.style.backgroundSize =
+        `${640}px ${250}px`;
 
-        const anchoFrame = anchoHoja / BORIN_COLUMNAS;
-        const altoFrame = altoHoja / BORIN_FILAS;
+    borinSprite.style.backgroundPosition =
+        "0 0";
 
-        // ===================================
-        // TAMAÑO VISUAL
-        // ===================================
+    // ===================================
+    // ANIMACIÓN INICIAL
+    // ===================================
 
-        borinSprite.style.width =
-            `${anchoFrame * BORIN_ESCALA}px`;
-
-        borinSprite.style.height =
-            `${altoFrame * BORIN_ESCALA}px`;
-
-        // ===================================
-        // ESCALAR SPRITESHEET
-        // ===================================
-
-        borinSprite.style.backgroundSize =
-            `${anchoHoja * BORIN_ESCALA}px ` +
-            `${altoHoja * BORIN_ESCALA}px`;
-
-        // ===================================
-        // BORIN INICIAL
-        // MERCADER TRABAJANDO
-        // ===================================
-
-        animarBorin("saludar");
-
-    };
+    animarBorin("saludar");
 
 }
 
@@ -295,7 +284,7 @@ function animarBorin(accion){
     const borinSprite =
         document.getElementById("borinSprite");
 
-    if(!borinSprite || !borinHoja){
+    if(!borinSprite){
 
         return;
     }
@@ -306,7 +295,7 @@ function animarBorin(accion){
     if(!configuracion){
 
         console.warn(
-            `La acción "${accion}" no existe para Borin.`
+            `⚠️ La acción "${accion}" no existe para Borin.`
         );
 
         return;
@@ -318,7 +307,17 @@ function animarBorin(accion){
 
     detenerAnimacionBorin();
 
-    let indiceFrame = 0;
+    borinFrameActual = 0;
+
+    // ===================================
+    // CARGAR SPRITE
+    // ===================================
+
+    const imagen =
+        `${BORIN_SPRITE_RUTA}${configuracion.sprite}`;
+
+    borinSprite.style.backgroundImage =
+        `url("${imagen}")`;
 
     // ===================================
     // MOSTRAR PRIMER FRAME
@@ -326,45 +325,51 @@ function animarBorin(accion){
 
     mostrarFrameBorin(
         borinSprite,
-        borinHoja,
-        configuracion.fila,
-        configuracion.frames[indiceFrame]
+        borinFrameActual
     );
 
     // ===================================
     // CREAR ANIMACIÓN
     // ===================================
 
-    borinAnimacion = setInterval(function(){
+    borinAnimacion = setInterval(() => {
 
-    indiceFrame++;
+        borinFrameActual++;
 
-    if(indiceFrame >= configuracion.frames.length){
+        // ===================================
+        // TERMINÓ LOS 5 FRAMES
+        // ===================================
 
-        if(configuracion.repetir){
+        if(borinFrameActual >= 5){
 
-            indiceFrame = 0;
+            if(configuracion.repetir){
 
-        }else{
+                borinFrameActual = 0;
 
-            detenerAnimacionBorin();
-            return;
+            }else{
+
+                detenerAnimacionBorin();
+
+                // Volver a hablar después
+                // de una animación puntual.
+
+                setTimeout(() => {
+
+                    animarBorin("hablar");
+
+                }, 150);
+
+                return;
+            }
         }
-    }
 
-    console.log(
-        "FRAME BORIN:",
-        configuracion.frames[indiceFrame]
-    );
+        mostrarFrameBorin(
+            borinSprite,
+            borinFrameActual
+        );
 
-    mostrarFrameBorin(
-        borinSprite,
-        borinHoja,
-        configuracion.fila,
-        configuracion.frames[indiceFrame]
-    );
+    }, configuracion.velocidad);
 
-}, configuracion.velocidad);
 }
 
 // =======================================
@@ -378,35 +383,25 @@ function detenerAnimacionBorin(){
         clearInterval(borinAnimacion);
 
         borinAnimacion = null;
+
     }
 
 }
 
 // =======================================
-// MOSTRAR UN FRAME DE BORIN
+// MOSTRAR FRAME
 // =======================================
 
 function mostrarFrameBorin(
     borinSprite,
-    borinHoja,
-    fila,
-    columna
+    frame
 ){
 
-    if(!borinHoja.naturalWidth){
-
-        return;
-    }
-
-    const anchoFrame =
-        borinHoja.naturalWidth / BORIN_COLUMNAS;
-
-    const altoFrame =
-        borinHoja.naturalHeight / BORIN_FILAS;
+    const posicionX =
+        -(frame * BORIN_FRAME_ANCHO);
 
     borinSprite.style.backgroundPosition =
-        `${-(columna * anchoFrame * BORIN_ESCALA)}px ` +
-        `${-(fila * altoFrame * BORIN_ESCALA)}px`;
+        `${posicionX}px 0`;
 
 }
 // =======================================
@@ -1773,9 +1768,6 @@ function cargarItemsMercado(){
         // ===================================
 
         itemContenedor.appendChild(img);
-
-        itemContenedor.appendChild(precio);
-
         contenedor.appendChild(itemContenedor);
 
     });

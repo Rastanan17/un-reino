@@ -1,84 +1,45 @@
 # 🌌 REINO DE ORIÓN
-
 ## Documento Maestro de Diseño (Versión 1.0)
-
 ---
-
 # Visión del proyecto
-
 **Reino de Orión** es un juego de rol (RPG) que transforma las responsabilidades, el aprendizaje y los buenos hábitos de la vida diaria en una gran aventura.
-
 El jugador no recibe órdenes.
-
 Recibe misiones.
-
 Cada misión completada devuelve vida a un antiguo reino que fue olvidado con el paso del tiempo.
-
 El objetivo final no es solamente ganar monedas, sino convertirse en el gran protector del Reino de Orión.
-
 ---
-
 # Historia
-
 Hace muchos siglos existía un reino extraordinario.
-
 Era un lugar lleno de vida.
-
 Las bibliotecas estaban repletas de conocimientos.
-
 Los jardines florecían.
-
 Las casas brillaban.
-
 Los habitantes vivían felices.
-
 Pero un día...
-
 La pereza, el desorden y el olvido comenzaron a invadir el reino.
-
 Las habitaciones quedaron abandonadas.
-
 Los caminos se rompieron.
-
 Los libros fueron olvidados.
-
 Los jardines dejaron de crecer.
-
 El reino fue desapareciendo lentamente.
-
 Hasta que un antiguo Guardián hizo una profecía:
-
 *"Un joven explorador llegará algún día para devolverle la vida al Reino."*
-
 Ese explorador eres tú.
-
 **Orión.**
-
 ---
-
 # El protagonista
-
 Nombre:
-**Orión**
-
+*Orión**
 Edad:
 8 años
-
 Título inicial:
 **Explorador del Reino**
-
 Su misión es recuperar cada rincón del reino mediante acciones reales realizadas en su vida cotidiana.
-
 Cada tarea completada tiene un efecto dentro del mundo.
-
 ---
-
 # Valores del Reino
-
 El Reino no premia únicamente el trabajo.
-
 Premia:
-
 * Responsabilidad
 * Curiosidad
 * Esfuerzo
@@ -88,37 +49,21 @@ Premia:
 * Bondad
 * Aprendizaje
 * Cuidado de los demás
-
 ---
-
 # La moneda
-
 ## 🪙 Oquo
-
 Los Oquos representan la energía del Reino.
-
 No son dinero.
-
 Son el fruto del esfuerzo.
-
 Cada misión otorga una cantidad determinada de Oquos.
-
 Los Oquos pueden gastarse únicamente en la Tienda Real.
-
 ---
-
 # Experiencia
-
 Cada misión también entrega Experiencia (XP).
-
 La experiencia sirve para subir de nivel.
-
 Al subir de nivel se desbloquean nuevas zonas, nuevos personajes y nuevas recompensas.
-
 ---
-
 # Rangos
-
 1. Explorador
 2. Explorador Mayor
 3. Constructor
@@ -129,30 +74,19 @@ Al subir de nivel se desbloquean nuevas zonas, nuevos personajes y nuevas recomp
 8. Protector Supremo
 9. Héroe del Reino
 10. Guardián Legendario
-
 ---
-
 # Las grandes zonas del Reino
-
 ## 🏰 Castillo
-
 Representa la habitación.
-
 Se reconstruye cuando Orión:
-
 * hace la cama
 * ordena
 * guarda juguetes
 * limpia
-
 ---
-
 ## 📚 Gran Biblioteca
-
 Representa el conocimiento.
-
 Crece cuando aprende:
-
 * Matemáticas
 * Lengua
 * Ciencias
@@ -163,75 +97,48 @@ Crece cuando aprende:
 * Biblia
 * Universo
 * Lectura
-
 ---
-
 ## 🌳 Bosque
-
 Crece mediante la actividad física.
-
 * caminar
 * correr
 * jugar
 * bicicleta
-
 ---
-
 ## 🌾 Granja
-
 Representa la alimentación.
-
 Crece cuando:
-
 * come frutas
 * verduras
 * toma agua
 * ayuda en la cocina
-
 ---
-
 ## 🏘 Pueblo
-
 Representa la ayuda a la familia.
-
 Se reconstruye cuando:
-
 * pone la mesa
 * levanta la mesa
 * ayuda en la casa
 * cuida sus cosas
-
 ---
-
 ## 🏪 Mercado
-
 Aquí se gastan los Oquos.
-
 ---
-
 # Tipos de misiones
-
 ## Orden
-
 * Hacer la cama
 * Ordenar habitación
 * Guardar juguetes
 * Limpiar escritorio
-
 ---
-
 ## Salud
-
 * Cepillarse los dientes
 * Bañarse
 * Comer frutas
 * Comer verduras
 * Tomar agua
-
 ---
-
 ## Sabiduría
-
 * Matemáticas
 * Lengua
 * Ciencias Naturales
@@ -242,84 +149,48 @@ Aquí se gastan los Oquos.
 * Biblia
 * Fábulas
 * Lectura
-
 ---
-
 ## Ayuda
-
 * Poner la mesa
 * Levantar la mesa
 * Ayudar a cocinar
 * Ayudar a limpiar
-
 ---
-
 ## Aventuras
-
 * Plaza
 * Playa
 * Bicicleta
 * Caminata
 * Juegos al aire libre
-
 ---
-
 # La Tienda del Reino
-
 Los Oquos pueden canjearse por recompensas reales.
-
 Ejemplos:
-
 🕹 Portal Roblox
-
 🎬 Gran Cine del Reino (proyector)
-
 🍦 Heladería del Reino
-
 🌊 Paseo por la playa
-
 🌳 Paseo por la plaza
-
 🎮 Patio de videojuegos
-
 💎 Robux
-
 Cada recompensa tiene un costo definido en Oquos.
-
 ---
-
 # Cómo se gana
-
 Completar una misión.
-
 ↓
-
 Ganar XP.
-
 ↓
-
 Ganar Oquos.
-
 ↓
-
 Reconstruir el Reino.
-
 ↓
-
 Subir de nivel.
-
 ↓
-
 Desbloquear nuevas zonas.
-
 ↓
-
 Comprar recompensas.
-
 ---
-
 # Personajes futuros
-
 * El Sabio de la Biblioteca
 * El Herrero
 * El Jardinero
@@ -328,15 +199,10 @@ Comprar recompensas.
 * El Guardián del Bosque
 * El Astrónomo
 * El Cronista del Reino
-
 Cada personaje enseñará algo diferente.
-
 ---
-
 # Tablet de Orión
-
 La aplicación del explorador mostrará únicamente:
-
 * Perfil
 * Nivel
 * XP
@@ -346,15 +212,10 @@ La aplicación del explorador mostrará únicamente:
 * Reino
 * Tienda
 * Logros
-
 Todo con botones grandes, pocos textos y muchas ilustraciones.
-
 ---
-
 # Panel del Rey (Papá)
-
 El panel permitirá:
-
 * Crear misiones
 * Editar recompensas
 * Aprobar compras
@@ -365,26 +226,15 @@ El panel permitirá:
 * Crear eventos especiales
 * Agregar nuevas zonas
 * Balancear la economía del Reino
-
 ---
-
 # Objetivo a largo plazo
-
 Que Orión no haga las cosas porque alguien se las ordena.
-
 Que las haga porque quiere ver crecer el Reino.
-
 Que, sin darse cuenta, aprenda que el esfuerzo construye cosas reales.
-
 Y que, cuando dentro de algunos años mire atrás, pueda decir con orgullo:
-
 **"Yo reconstruí todo este Reino."**
-
-
 🚀 Mi propuesta para el desarrollo
-
 Creo que podemos construir este proyecto como si fuera un videojuego profesional, en etapas claras:
-
 🏗️ Fase 1 — MVP (1-2 semanas)
 Pantalla principal.
 Perfil del explorador.
@@ -411,86 +261,56 @@ Guardado en localStorage.
 Comprar recompensas con Oquos.
 💾 Persistencia
 Mantener progreso al cerrar y abrir la app.
-
 🗺️ Fase 2
 Mapa del reino.
 Zonas que cambian visualmente.
 Rachas diarias.
 Logros.
-
 🎮 Fase 3
 Animaciones.
 Personajes.
 Sonidos.
 Cofres.
 Eventos especiales.
-
 👑 Fase 4
 Panel del Rey.
 Sincronización entre la tablet y tu PC.
 Administración completa.
-
 🌅 Día 2 – El Reino empieza a existir
 1️⃣ Revisar que todo lo de hoy funcione (10 min)
-
 Antes de agregar cosas nuevas:
-
 ✅ Intro.
 ✅ Historia.
 ✅ Música.
 ✅ Perfil.
 ✅ Misiones.
 ✅ Guardado en localStorage.
-
 Si algo falla, lo corregimos enseguida.
-
 2️⃣ Crear el HUB del Reino (40–60 min)
-
 La pantalla principal dejará de ser una lista y pasará a ser el centro del juego.
-
 Algo así:
-
 🏰 REINO DE ORIÓN
-
 👦 Orión
 ⭐ Nivel 1
 🪙 15 Oquos
-
 ━━━━━━━━━━━━━━━━━━━━
-
 📜 Misiones
-
 🗺️ Mapa del Reino
-
 🛒 Mercado
-
 🏆 Logros
-
 ⚙️ Ajustes
 3️⃣ Construir el Mapa del Reino (la parte más emocionante)
-
 Aunque al principio sean imágenes simples.
-
                  🏰 Castillo
-
         📚 Biblioteca
-
 🌳 Bosque              🌾 Granja
-
       🏘️ Pueblo
-
              🛒 Mercado
-
           ⛪ Santuario
-
       🌌 Observatorio
-
 Cada zona será un botón.
-
 Y cada zona crecerá gracias a las acciones de Orión.
-
 Por ejemplo:
-
 🏰 Castillo → hacer la cama, ordenar la habitación.
 📚 Biblioteca → leer, matemáticas, lengua, historia.
 🌾 Granja → comer fruta, verduras, tomar agua.
@@ -498,187 +318,111 @@ Por ejemplo:
 🏘️ Pueblo → ayudar en casa.
 🌌 Observatorio → aprender sobre el universo.
 4️⃣ Conectar las misiones con el mapa
-
 Cuando complete:
-
 🛏️ Hacer la cama
-
 el Castillo pasará de esto:
-
 🏚️
-
 a esto:
-
 🏰
-
 O aparecerá una ventana iluminada.
-
 Eso le dará una recompensa visual inmediata.
-
 5️⃣ Empezar el Panel del Rey
-
 No lo terminaremos mañana, pero sí dejaremos la base.
-
 Vos vas a tener una vista donde aparezca:
-
 Pendientes
-
 🍎 Comer una fruta
-
 🛏️ Hacer la cama
-
 🍽️ Ayudar a poner la mesa
-
 [✔ Aprobar]
-
 [✖ Rechazar]
-
 Cuando apruebes:
-
 suma XP,
 suma Oquos,
 mejora el Reino.
 ----------
-
 1. el filtro ese me gusta: Castillo, Aldea, Observatorio, Santuario, Granja, Bosque, Biblioteca, mercado.
-
 2. eso del mapa me gusta mas, un div verde grande donde esten solametne los iconos repartidos por el div. cuando pase el cursor resalte y diga el nombre en pequeueño debajo. al hacer click, se abre una ventana nueva.
-
 3. un div para cada zona con la imagen de fondo "images/kingdom/[zona_ruins].jpg" y una lista como dijiste: 🌾 GRANJA
-
 Completadas
-
 ✔ Comer una fruta
 ✔ Regar las plantas
 ✔ Ordenar juguetes
-
 Pendientes
-
 ○ Alimentar animales
 ○ Barrer patio
 ○ Limpiar herramientas
-
 Progreso
-
 ██████░░░░ 60%
-
 4. mostrar porcentaje por zona..
 para las misiones:
 🟢 completada
-
 🟡 a medias
-
 🔴 sin empezar
-
 para la zona:
 🌾Granja
 ██████░░░░ 75%
-
 5. la zona al 100%
 foto nueva de fondo "image/kingdom/[zona_restored].jpg"
 🏆 Zona completada
 +150 XP
 +80 Oquos
 Nuevo título:🌾 Guardián de la Granja
-
 6. contador de misiones por zona.
-
 ----------
-
 📖 Biblia de Mirrafén
-
 Un archivo que iremos escribiendo durante todo el desarrollo.
-
 Capítulos como:
-
 1. El continente de Mirrafén
-
 2. Los cuatro países
-
 3. Los reinos
-
 4. Los aventureros
-
 5. Las criaturas
-
 6. Las profesiones
-
 7. Los rangos
-
 8. Los Oquos
-
 9. La historia
-
 10. Cronología
-
 ----------
 app.js
     controla la aplicación
-
 portal.js
     controla el Portal
-
 storage.js
     controla los datos
-
 missions.js
     controla misiones
-
 map.js
     controla el mapa
-
 ----------
-
 🏰 BLOQUE 1 (Prioridad máxima)
 Interior del Castillo
-
 Es el primer edificio que conoce cualquier jugador.
-
 ✅ 1. Crear la pantalla del Castillo
 ✅ 2. Fondo del salón
-
 Usar:
-
 ✅ 3. Agregar NPC
-
 Por ahora:
-
 👑 Rey
 🛡 Guardia
-
 Después iremos agregando:
-
 🧙 Mago
 ⚔ Capitán
 👸 Reina
 📜 Consejero
 ✅ 4. Agregar zonas clickeables
-
 Por ejemplo:
-
 ✅ 5. Primer diálogo del Rey
-
 Algo sencillo.
-
 ✅ 6. Tablón
-
 Desde aquí abrir:
-
 Pero filtradas al Castillo.
-
 ✅ 7. Salir
-
 Volver al mapa.
-
 🛒 BLOQUE 2
 Mejorar el Mercado
-
 Ya funciona.
-
 Ahora hacerlo divertido.
-
 Agregar:
-
 Comerciante
 Diálogo
 Fondo interior
@@ -686,32 +430,19 @@ Música
 Sonido de monedas
 🔔 BLOQUE 3
 Sistema de notificaciones
-
 Ya creaste la carpeta.
-
 Hacer una función:
-
 Y usarla para:
-
 ⭐ XP
-
 💰 Oquos
-
 🏆 Logros
-
 🗺 Nuevas zonas
-
 ✨ Nivel
-
 👤 BLOQUE 4
 Perfil del jugador
-
 Cuando toca su avatar.
-
 Abrir:
-
 Con:
-
 nombre
 avatar
 rango
@@ -721,167 +452,106 @@ cambiar avatar
 cambiar nombre
 🌍 BLOQUE 5
 Primer edificio RPG terminado
-
 Cuando el jugador toca:
-
 No debe abrir misiones.
-
 Debe abrir:
-
 Y desde allí:
-
 📚 BLOQUE 6
 Empezar la historia del Reino
-
 Crear el primer diálogo.
-
 Más adelante todos los NPC usarán:
-
 y cada NPC recordará:
-
 nivel
 logros
 zonas
 eventos
 🎵 BLOQUE 7
 Sonidos
-
 Cuando Orión entra:
-
 🏰 Castillo
-
 🔊 Ambiente
-
 👣 Pasos
-
 🔥 Chimenea
-
 ------------
-
 🏰 Etapa 1 - Pulido Visual (v0.00.031 → v0.00.040)
-
 Yo la dividiría así:
-
 ✅ v0.00.031
-
 Identidad del proyecto
-
 ✅ Cambiar favicon.
 ✅ Nuevo video de Arca Pixeles Studio.
 ✅ Video a pantalla completa.
 ✅ Mostrar versión.
-
 Estado: Casi terminado.
-
 🔨 v0.00.032
-
 Responsive
-
 Arreglar el mapa.
 Revisar todas las pantallas en celular.
 Ajustar tamaños de botones.
 Corregir textos cortados.
 🎨 v0.00.033
-
 Carteles y ventanas
-
 Unificar todos los pergaminos.
-
 mismo borde
 misma fuente
 mismo padding
 mismo botón cerrar
 misma animación
-
 Que cualquier ventana del juego se identifique enseguida.
-
 🖼️ v0.00.034
-
 Recursos
-
 Corregir
-
 imágenes faltantes
 rutas incorrectas
 sprites
 iconos
-
 Sin ningún error 404.
-
 📱 v0.00.035
-
 Experiencia móvil
-
 Revisar:
-
 márgenes
 scroll
 botones
 altura
 orientación
 ✨ v0.00.036
-
 Animaciones
-
 Pequeños detalles.
-
 fade
 hover
 abrir ventanas
 cerrar ventanas
 pasar de una pantalla a otra
 🎵 v0.00.037
-
 Audio
-
 Agregar
-
 click
 aceptar misión
 completar misión
-
 Todavía sin música.
-
 📐 v0.00.038
-
 Consistencia
-
 Revisar todo el Reino.
-
 Que todas las pantallas tengan:
-
 misma tipografía
 mismos colores
 mismos botones
 mismas sombras
 🐞 v0.00.039
-
 Corrección de bugs
-
 Eliminar errores de consola.
-
 Revisar:
-
 imágenes
 fetch
 JSON
 localStorage
 👑 v0.00.040
-
 Versión estable
-
 Prueba completa.
-
 Todo debe verse correctamente.
-
 Nada nuevo.
-
 Solo probar.
-
-
-------------
-
-PALETA DE colores
+-----------
+nueva PALETA DE colores
 #875DFF
 #9D3FBB
 #3D0745

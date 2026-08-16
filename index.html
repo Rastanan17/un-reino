@@ -1,115 +1,135 @@
 <!DOCTYPE html>
-    <html lang="es">
-        <head>
-            <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-            <title>Un reino...</title>
-            <link rel="manifest" href="manifest.json">
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Un reino</title>
+        <link rel="manifest" href="manifest.json">
 
-            <link rel="stylesheet" href="core/app/css/intro.css">
-            <link rel="stylesheet" href="core/app/css/main.css">
-            <link rel="stylesheet" href="core/logo/logo.css">
-            <link rel="stylesheet" href="core/ui/pergamino.css">
-            <link rel="stylesheet" href="core/ui/notifications.css">
+        <link rel="stylesheet" href="core/app/css/intro.css">
+        <link rel="stylesheet" href="core/app/css/main.css">
+        <link rel="stylesheet" href="core/logo/logo.css">
+        <link rel="stylesheet" href="core/ui/pergamino.css">
+        <link rel="stylesheet" href="core/ui/notifications.css">
 
-            <link rel="stylesheet" href="kingdom/map/map.css">
-            <link rel="stylesheet" href="kingdom/portal/portal.css">
-            <link rel="stylesheet" href="kingdom/transitions/transition.css">
+        <link rel="stylesheet" href="kingdom/map/map.css">
+        <link rel="stylesheet" href="kingdom/portal/portal.css">
+        <link rel="stylesheet" href="kingdom/transitions/transition.css">
 
-            <link rel="stylesheet" href="systems/missions/missions.css">
-            <link rel="stylesheet" href="systems/pergaminos/pergaminos.css">
-            <link rel="stylesheet" href="systems/rewards/store.css">
+        <link rel="stylesheet" href="systems/missions/missions.css">
+        <link rel="stylesheet" href="systems/pergaminos/pergaminos.css">
+        <link rel="stylesheet" href="systems/rewards/store.css">
 
-            <link rel="stylesheet" href="locations/castle/castle.css">
-            <link rel="stylesheet" href="locations/farm/farm.css">
-            <link rel="stylesheet" href="locations/market/market.css">
-            <link rel="stylesheet" href="locations/village/village.css">
+        <link rel="stylesheet" href="locations/castle/castle.css">
+        <link rel="stylesheet" href="locations/farm/farm.css">
+        <link rel="stylesheet" href="locations/market/market.css">
+        <link rel="stylesheet" href="locations/village/village.css">
 
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap">
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-            <link rel="icon" href="assets/images/ui/favicom.ico" type="image/x-icon">
-        </head>
-        <body>
-            <section id="logoScreen">
-                <video id="logoVideo" src="core/app/videos/arca_pixeles_studio.mp4"></video>
-                <div id="introLogo">
-                    <h1>ARCA</h1>
-                    <h1>PÍXELES</h1>
-                    <h1>STUDIO</h1>
-                    <h2>Presenta...</h2>
-                    <p>🏰 UN REINO ⚔️</p>
-                    <p class="textoCristal">Rompe el cristal para comenzar tu aventura.</p>
-                    <div id="cristal">✦</div>
+        <link rel="icon" href="assets/images/ui/favicom.ico" type="image/x-icon">
+    </head>
+    <body>
+        <section id="logoScreen">
+            <video id="logoVideo" src="core/app/videos/arca_pixeles_studio.mp4"></video>
+            <div id="introLogo">
+                <h1>ARCA</h1>
+                <h1>PÍXELES</h1>
+                <h1>STUDIO</h1>
+                <h2>Presenta...</h2>
+                <p>🏰 UN REINO ⚔️</p>
+                <p class="textoCristal">Rompe el cristal para comenzar tu aventura.</p>
+                <div id="cristal">✦</div>
+            </div>
+        </section>
+        <section id="introScreen">
+            <div id="background"></div>
+            <div id="overlay"></div>
+            <div class="crawl-container">
+                <div id="crawl" class="crawl"></div>
+            </div>
+            <div class="intro-controls">
+                <button id="btnComenzar">⚔️ Comenzar Aventura</button>
+                <button id="startButton">🏰 Ir al Reino</button>
+                <button id="btnSaltar">⏭ Saltar</button>
+            </div>
+            <audio id="introMusic" src="core/app/sounds/intro.mp3"></audio>
+        </section>
+            <!-- === REINO === -->
+        <section id="reinoUI" style="display:none;">
+            <!-- === VISOR DE DESARROLLO === -->
+            <div id="visorDesarrollo">
+                <div id="visorControles">
+                    <span>🧪 MODO DESARROLLO</span>
+                    <button onclick="cambiarModoDesarrollo('pc')">💻 PC</button>
+                    <button onclick="cambiarModoDesarrollo('tablet')">📲 TABLET</button>
+                    <button onclick="cambiarModoDesarrollo('celular')">📱 CELULAR</button>
                 </div>
-            </section>
-            <section id="introScreen">
-                <div id="background"></div>
-                <div id="overlay"></div>
-                <div class="crawl-container">
-                    <div id="crawl" class="crawl"></div>
-                </div>
-                <div class="intro-controls">
-                    <button id="btnComenzar">⚔️ Comenzar Aventura</button>
-                    <button id="startButton">🏰 Ir al Reino</button>
-                    <button id="btnSaltar">⏭ Saltar</button>
-                </div>
-                <audio id="introMusic" src="core/app/sounds/intro.mp3"></audio>
-            </section>
-            <section id="reinoUI" style="display:none;">
-                <section id="panelJugador" class="profile">
-                    <div class="avatar">
-                        <img id="playerAvatar" src="" alt="Avatar del jugador">
-                        <h2 id="playerName"></h2>
+                <div id="visorMarco">
+                    <div id="visorPantalla">
+                        <!-- EL JUEGO VA ACÁ -->
+                        <section id="panelJugador" class="profile">
+                            <div class="avatar">
+                                <img id="playerAvatar" src="" alt="Avatar del jugador">
+                                <h2 id="playerName"></h2>
+                            </div>
+                            <div class="info">
+                                <h1>⚔️ Nivel <span id="playerLevel">1</span>·<span id="playerRank">Explorador</span></h1>
+                                <h3>💰 <span id="playerCoins">0</span> Oquos</h3>
+                                <div class="xpBar">
+                                    <div id="xpFill" class="xpFill"></div>
+                                </div>
+                                <p class="xpText">⭐
+                                    <span id="playerXP">0</span> /
+                                    <span id="playerNextXP">100</span> XP
+                                </p>
+                            </div>
+                            <button onclick="cerrarPanelJugador()">✖</button>
+                        </section>
+                        <main id="content"></main>
                     </div>
-                    <div class="info">
-                        <h1>⚔️ Nivel <span id="playerLevel">1 </span> · <span id="playerRank"> Explorador</span></h1>
-                        <h3>💰 <span id="playerCoins">0 </span> Oquos</h3>
-                        <div class="xpBar"><div id="xpFill" class="xpFill"></div></div>
-                        <p class="xpText">⭐<span id="playerXP">0</span>/<span id="playerNextXP">100</span>XP</p>
-                    </div>
-                    <button onclick="cerrarPanelJugador()">✖</button>
-                </section>
-                <main id="content"></main>
-            </section>
-            <div id="modal" class="modal oculto">
-                <div class="modalBox">
-                    <h2 id="modalTitulo"></h2>
-                    <p id="modalTexto"></p>
-                    <button id="cerrarModal">Continuar</button>
                 </div>
             </div>
-            <div id="version"></div>
+        </section>
+        <div id="modal" class="modal oculto">
+            <div class="modalBox">
+                <h2 id="modalTitulo"></h2>
+                <p id="modalTexto"></p>
+                <button id="cerrarModal">Continuar</button>
+            </div>
+        </div>
+        <div id="version"></div>
 
-            <script src="locations/village/village.js"></script>
-            <script src="locations/market/market.js"></script>
-            <script src="locations/castle/castle.js"></script>
-            <script src="locations/farm/farm.js"></script>
+        <script src="locations/village/village.js"></script>
+        <script src="locations/market/market.js"></script>
+        <script src="locations/castle/castle.js"></script>
+        <script src="locations/farm/farm.js"></script>
 
-            <script src="parents/parents.js"></script>
+        <script src="parents/parents.js"></script>
 
-            <script src="kingdom/music/music.js"></script>
-            <script src="kingdom/transitions/transition.js"></script>
-            <script src="kingdom/map/map.js"></script>
-            <script src="kingdom/portal/portal.js"></script>
+        <script src="kingdom/music/music.js"></script>
+        <script src="kingdom/transitions/transition.js"></script>
+        <script src="kingdom/map/map.js"></script>
+        <script src="kingdom/portal/portal.js"></script>
 
-            <script src="systems/pergaminos/pergaminos.js"></script>
-            <script src="systems/storage/storage.js"></script>
-            <script src="systems/rewards/rewards.js"></script>
-            <script src="systems/missions/missions.js"></script>
-            <script src="systems/calendar/calendar.js"></script>
-            <script src="systems/config/settings.js"></script>
-            <script src="systems/config/version.js"></script>
-            <script src="systems/compensacion/compensacion.js"></script>
+        <script src="systems/pergaminos/pergaminos.js"></script>
+        <script src="systems/storage/storage.js"></script>
+        <script src="systems/rewards/rewards.js"></script>
+        <script src="systems/missions/missions.js"></script>
+        <script src="systems/calendar/calendar.js"></script>
+        <script src="systems/config/settings.js"></script>
+        <script src="systems/config/version.js"></script>
+        <script src="systems/compensacion/compensacion.js"></script>
 
-            <script src="core/pages/pages.js"></script>
-            <script src="core/ui/ui.js"></script>
-            <script src="core/ui/notifications.js"></script>
-            <script src="core/ui/pergamino.js"></script>
+        <script src="core/pages/pages.js"></script>
+        <script src="core/ui/ui.js"></script>
+        <script src="core/ui/notifications.js"></script>
+        <script src="core/ui/pergamino.js"></script>
 
-            <script src="core/logo/logo.js"></script>
-            <script src="core/app/js/intro.js"></script>
+        <script src="core/logo/logo.js"></script>
+        <script src="core/app/js/intro.js"></script>
 
-            <script src="core/app/js/app.js"></script>
-        </body>
-    </html>
+        <script src="core/app/js/app.js"></script>
+    </body>
+</html>

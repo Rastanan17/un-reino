@@ -5,8 +5,9 @@
     position: relative;
     width: 100%;
     height: 100%;
-    min-height: 600px;
+    min-height: 0;
     overflow: hidden;
+
     background-image:url("../../assets/images/backgrounds/market.jpg");
     background-size: cover;
     background-position: center;
@@ -31,15 +32,12 @@
    BORIN — VENTANA DEL SPRITE
 ======================================= */
 .borin-sprite{
-    /*Estos valores serán reemplazados automáticamente por JS.*/
-    width: 95px;
-    height: 125px;
-    background-image:url("../../kingdom/npc/images/borin.png");
     background-repeat: no-repeat;
     background-position: 0 0;
-    /*MUY IMPORTANTE: La hoja conserva sus dimensiones originales. No se deforma.*/
+
     flex-shrink: 0;
-    transform: scale(1.2);
+
+    transform: scale(clamp(0.65, 1.8vw, 1.2));
     transform-origin: center bottom;
 }
 /* =======================================
@@ -47,67 +45,79 @@
    VIÑETA INTEGRADA EN EL FONDO
 ======================================= */
 
-#dialogoBorin {
-
+#dialogoBorin{
     position: absolute;
 
-    left: 30%;
-    top: 28%;
+    left: 2%;
+    top: 23%;
 
-    width: 42%;
-    height: 15%;
+    width: 96%;
+    min-height: clamp(130px, 15vh, 190px);
+    height: auto;
 
     z-index: 40;
 
     box-sizing: border-box;
-
     overflow: hidden;
 
     display: flex;
-
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 
     pointer-events: auto;
-    border: 8px solid #FFE474;
-    border-radius: 6px;
 
-    /* Borde oscuro por FUERA */
-    outline: 3px solid #975E05;
+    border: clamp(4px, 0.5vw, 8px) solid #FFE474;
+    outline: clamp(2px, 0.2vw, 3px) solid #975E05;
 
-    /* Fondo de la viñeta */
-    background: #FEFCA5;
     border-radius: 5%;
 
+    background: #FEFCA5;
 }
 /* =======================================
    CONTENIDO DEL DIÁLOGO
 ======================================= */
-.borin-dialogo {
+.borin-dialogo{
     width: 100%;
-    height: 100%;
+    height: auto;
+    min-height: 100%;
+
     box-sizing: border-box;
-    padding: 2px 2px;
+
+    padding: clamp(6px, 0.7vw, 12px);
+
     text-align: center;
     color: #4a2a16;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: clamp(3px, 0.4vw, 8px);
+    
 }
 .borin-nombre{
-    font-size: 12px;
+    font-size: clamp(11px, 1vw, 16px);
     font-weight: bold;
     margin-bottom: 2px;
-}.borin-texto {
-    font-size: 12px;
+}
+.borin-texto{
+    width: 100%;
+
+    font-size: clamp(11px, 1vw, 16px);
     font-weight: bold;
     line-height: 1.2;
+
     margin: 0;
+
     overflow-wrap: break-word;
 }
 .borin-dialogo button {
-    width: 110px;
+    width: clamp(90px, 9vw, 130px);
     height: 50px;
-    padding: 4px 10px;
-    font-size: 13px;
-    margin: 4px;
+    padding: 6px 8px;
+    font-size: clamp(12px, 1vw, 14px);
+    margin: 2px;
     display: flexbox;
     justify-content: center;
     align-items: center;
@@ -118,8 +128,8 @@
 ======================================= */
 .info-jugador-mercado{
     position: absolute;
-    top: 2%;
-    right: 2.5%;
+    top: 0%;
+    right: 2%;
     width: 30%;
     padding: 8px 10px;
     box-sizing: border-box;
@@ -127,7 +137,7 @@
     border: 2px solid #b8862c;
     border-radius: 7px;
     color: #f5d76e;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
     text-align: center;
     z-index: 50;
@@ -179,12 +189,57 @@
    RESPONSIVE
 ======================================= */
 @media (max-width: 700px){
+
     .mercader{
-        top: 48%;
+        top: 52%;
     }
+
+    #dialogoBorin{
+        left: 8%;
+        top: 18%;
+
+        width: 84%;
+
+        min-height: 145px;
+        max-height: 32vh;
+
+        overflow-y: auto;
+    }
+
+    .borin-dialogo{
+        padding: 7px;
+        gap: 4px;
+    }
+
+    .borin-nombre{
+        font-size: 12px;
+    }
+
+    .borin-texto{
+        font-size: 12px;
+    }
+
+    .borin-dialogo button{
+        width: clamp(90px, 30vw, 130px);
+        min-height: 42px;
+
+        font-size: 11px;
+        margin: 2px;
+    }
+
+    .info-jugador-mercado{
+        width: 42%;
+        right: 2%;
+        top: 2%;
+
+        font-size: 11px;
+
+        padding: 5px;
+    }
+
     .mercado-salida img{
-        width: 55px;
-        height: 55px;
+        width: 50px;
+        height: 50px;
     }
 }
 /* =======================================
@@ -203,8 +258,10 @@
 ======================================= */
 .item-mercado-contenedor{
     position: absolute;
-    width: 90px;
-    height: 120px;
+
+    width: clamp(40px, 6.5vw, 70px);
+    height: clamp(60px, 8.5vw, 100px);
+
     pointer-events: auto;
     user-select: none;
     cursor: pointer;
@@ -213,10 +270,12 @@
    IMAGEN BASE DE LOS ITEMS
 ======================================= */
 .item-mercado{
-    width: 90px;
-    height: 90px;
+    width: clamp(20px, 6vw, 50px);
+    height: clamp(20px, 6vw, 50px);
+
     object-fit: contain;
     display: block;
+
     transition:
         transform 0.2s ease,
         filter 0.2s ease;
@@ -228,126 +287,100 @@
     transform: scale(1.1);
     filter: brightness(1.5);
 }
-.item-mercado-contenedor:hover .item-precio{
-    filter: brightness(1.15);
-}
-/* =======================================
-   PRECIO
-======================================= */
-.item-precio{
-    margin-top: 2px;
-    min-width: 58px;
-    padding: 4px 8px;
-    box-sizing: border-box;
-    background: #5a351f;
-    border: 2px solid #b8862c;
-    border-radius: 6px;
-    color: #f5d76e;
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    line-height: 1.1;
-    white-space: nowrap;
-    box-shadow:
-        0 2px 4px rgba(0,0,0,0.5);
-}
 /* =======================================
    DISTRIBUCIÓN DE ITEMS
 ======================================= */
 /* -------- LADO IZQUIERDO -------- */
+.item-coca{
+    left: 5%;    top: 0%;
+}
+.item-natacion{
+    left: 5%;    top: 8%;
+}
 .item-libro{
-    left: 5%;    top: 25%;
-}
-.item-cometa{
-    left: 5%;    top: 35%;
-}
-.item-castillo{
-    left: 5%;    top: 45%;
-}
-.item-carta{
-    left: 5%;    top: 55%;
+    left: 5%;    top: 16%;
 }
 .item-bici{
-    left: 5%;    top:  65%;
+    left: 5%;    top: 48%;
 }
 .item-arbol{
-    left: 5%;    top: 75%;
-}
-/* -------- LADO DERECHO -------- */
-.item-chocolate{
-    right: 5%;    top: 25%;
-}
-.item-burguer{
-    right: 5%;    top: 35%;
-}
-.item-mcBurguer{
-    right: 5%;    top: 45%;
-}
-.item-galleta{
-    right: 5%;    top: 55%;
-}
-.item-helado{
-    right: 5%;    top: 65%;
-}
-.item-pochoclo{
-    right: 5%;    top: 75%;
-}
-/* -------- MOSTRADOR / CENTRO -------- */
-.item-joystick{
-    right: 25%;    bottom: 20%;
-}
-.item-compu{
-    left: 45%;    bottom: 20%;
-}
-.item-mando{
-    left: 25%;    bottom: 20%;
-}
-/* -------- ARRIBA 1 -------- */
-.item-natacion{
-    left: 5%;    top: 15%;
-}
-.item-musica{
-    left: 25%;    top: 15%;
-}
-.item-pintura{
-    left: 45%;    top: 15%;
-}
-.item-sombrilla{
-    left: 65%;    top: 15%;
-}
-/* -------- ARRIBA 2 -------- */
-.item-coca{
-    left: 5%;    top: 5%;
-}
-.item-pizza{
-    left: 25%;    top: 5%;
-}
-.item-waffle{
-    left: 45%;    top: 5%;
-}
-.item-vaso{
-    right: 5%;    top: 15%;
-}
-/* -------- ABAJO -------- */
-.item-varita{
-    left: 45%;    bottom: 10%;
-}
-.item-tele{
-    left: 25%;    bottom: 10%;
-}
-.item-pelota{
-    right: 25%;    bottom: 10%;
-}
-/* -------- PISO -------- */
-.item-manos{
-    left: 45%;    bottom: 1%;
-}
-.item-mapaLeon{
-    left: 25%;    bottom: 1%;
-}
-.item-mapaBosque{
-    right: 25%;    bottom: 1%;
+    left: 5%;    top: 56%;
 }
 .item-luces2{
-    left:5%;       bottom: 1%;
+    left:5%;     top: 64%;
+}
+.item-manos{
+    left: 5%;    top: 72%;
+}
+.item-tele{
+    left: 5%;    top: 81%;
+}
+.item-compu{
+    left: 5%;    top: 90%;
+}
+/* -------- ARRIBA 1 -------- */
+.item-pizza{
+    left: 25%;    top: 0%;
+}
+.item-waffle{
+    left: 45%;    top: 0%;
+}
+.item-musica{
+    left: 25%;    top: 8%;
+}
+.item-pintura{
+    left: 45%;    top: 8%;
+}
+.item-sombrilla{
+    left: 65%;    top: 8%;
+}
+.item-vaso{
+    left: 85%;    top: 8%;
+}
+.item-chocolate{
+    left: 25%;    top: 16%;
+}
+.item-burguer{
+    left: 45%;    top: 16%;
+}
+.item-mcBurguer{
+    left: 65%;    top: 16%;
+}
+.item-galleta{
+    left: 85%;    top: 16%;
+}
+/* -------- ABAJO -------- */
+.item-mando{
+    left: 25%;    top: 72%;
+}
+.item-mapaBosque{
+    left: 25%;    top: 81%;
+}
+.item-mapaLeon{
+    left: 25%;    top: 90%;
+}
+.item-joystick{
+    left: 45%;    top: 72%;
+}
+.item-pelota{
+    left: 45%;    top: 81%;
+}
+.item-varita{
+    left: 45%;    top: 90%;
+}
+.item-pochoclo{
+    left: 65%;    top: 72%;
+}
+.item-helado{
+    left: 65%;    top: 81%;
+}
+
+.item-cometa{
+    left: 82%;    top: 52%;
+}
+.item-castillo{
+    left: 82%;    top: 62%;
+}
+.item-carta{
+    left: 82%;    top: 72%;
 }

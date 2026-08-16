@@ -298,12 +298,6 @@ function crearPergamino(mision){
             onclick="abrirPergaminoMision(${mision.id})">
             <div class="estado-mision">${textoEstadoMision(mision.estado)}</div>
             <div class="titulo-mision">${mision.icono} ${mision.titulo}</div>
-            <div class="dificultad-mision">⚔️ ${mision.dificultad}</div>
-            <div class="xp-mision">⭐ ${mision.xp} XP</div>
-            <div class="oquos-mision">💰 ${mision.oquos} Oquos</div>
-            <div class="tiempo-mision">
-                ${mision.estado === "enCurso" ? obtenerTiempoRestante(mision) : ""}
-            </div>
         </div>
     `;
 }
@@ -312,11 +306,11 @@ function crearPergamino(mision){
 // =======================================
 function textoEstadoMision(estado){
     if(estado === "disponible")
-        return "📜 Nueva misión";
+        return "Nueva misión";
     if(estado === "enCurso")
-        return "⏳ En progreso";
+        return "En progreso";
     if(estado === "completada")
-        return "🏆 Completada";
+        return "Completada";
     return "";
 }
 // =======================================
