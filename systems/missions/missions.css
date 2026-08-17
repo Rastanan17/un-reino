@@ -275,7 +275,24 @@
 
     background-repeat:no-repeat;
 }
+/* =======================================
+   FONDO DE LA GRANJA
+======================================= */
 
+.misiones-granja{
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,.65),
+            rgba(0,0,0,.65)
+        ),
+        url("../../assets/images/backgrounds/farm.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+}
 /* =======================================
    CONTENEDOR DE PERGAMINOS
 ======================================= */

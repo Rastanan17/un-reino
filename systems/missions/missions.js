@@ -247,7 +247,7 @@ function mostrarTablonMisiones(){
     const fin = inicio + MISIONES_POR_PAGINA;
     const pagina = misiones.slice(inicio, fin);
     content.innerHTML = `
-        <section class="tablon-misiones ${filtroZona === "Aldea" ? "misiones-aldea" : "misiones-castillo"}">
+        <section class="tablon-misiones misiones-${zonaMisionesActual.toLowerCase()}">
             <!-- VOLVER -->
             <img class="btn-volver" src="assets/images/items/exit.png" alt="Volver" onclick="volverDeMisiones()">
             <!-- ANTERIOR -->
@@ -273,19 +273,24 @@ function mostrarTablonMisiones(){
 // VOLVER DESDE LAS MISIONES
 // =======================================
 function volverDeMisiones(){
+
     reproducirSFX("exit.mp3");
-    if(filtroZona === "Aldea"){
+
+    if(zonaMisionesActual === "Aldea"){
         mostrarAldea();
         return;
     }
-    if(filtroZona === "Bosque"){
+
+    if(zonaMisionesActual === "Bosque"){
         mostrarBosque();
         return;
     }
-    if(filtroZona === "Granja"){
+
+    if(zonaMisionesActual === "Granja"){
         mostrarGranja();
         return;
     }
+
     mostrarCastillo();
 }
 // =======================================
@@ -298,6 +303,7 @@ function crearPergamino(mision){
             onclick="abrirPergaminoMision(${mision.id})">
             <div class="estado-mision">${textoEstadoMision(mision.estado)}</div>
             <div class="titulo-mision">${mision.icono} ${mision.titulo}</div>
+            
         </div>
     `;
 }
@@ -478,7 +484,7 @@ function abrirPergaminoMision(id){
 
             <br>
             <strong>📍 Lugar:</strong>
-            Castillo
+            ${zonaMisionesActual}
 
             <br>
             <strong>⚔️ Dificultad:</strong>

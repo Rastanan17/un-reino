@@ -1,9 +1,6 @@
 // =======================================
 // UN REINO EN MÍRRAFEN - Introducción
 // =======================================
-
-const MODO_DESARROLLO = false;
-
 // ---------------------------------------
 // Cargar historia
 // ---------------------------------------
@@ -70,30 +67,6 @@ function iniciarIntro(){
 document.addEventListener(
     "DOMContentLoaded",
     async () => {
-
-        // ===================================
-        // MODO DESARROLLO
-        // ===================================
-
-        if(MODO_DESARROLLO){
-
-            document
-                .getElementById("introScreen")
-                .style.display = "none";
-
-            if(obtenerPerfilActivo()){
-
-                await entrarAlReino();
-
-            }else{
-
-                mostrarPortal();
-
-            }
-
-            return;
-        }
-
         // ===================================
         // MODO NORMAL
         // ===================================

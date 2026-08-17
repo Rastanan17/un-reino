@@ -7,7 +7,7 @@
     height:100%;
     min-height:600px;
     overflow:hidden;
-    background-image:url("../../assets/images/backgrounds/farm.png");
+    background-image:url("../../assets/images/backgrounds/farm_day.jpg");
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
@@ -34,204 +34,183 @@
 /* =======================================
    NAVEGACIÓN
 ======================================= */
-/* =======================================
-   ARMERÍA
-======================================= */
+
+/* ARMERÍA */
 .granja .armeria{
-    width:120px;
-    height:90px;
+    width:clamp(70px, 9vw, 120px);
+    height:auto;
+    aspect-ratio:120 / 90;
     left:65%;
     top:50%;
 }
-/* =======================================
-   SALIDA → MAPA
-======================================= */
+
+/* SALIDA → MAPA */
 .granja .salida{
-    width:120px;
-    height:90px;
+    width:clamp(70px, 9vw, 120px);
+    height:auto;
+    aspect-ratio:120 / 90;
     right:42%;
     bottom:28%;
 }
-/* =======================================
-   CASA → MISIONES
-======================================= */
+
+/* CASA → MISIONES */
 .granja .casa{
-    width:400px;
-    height:300px;
+    width:clamp(220px, 30vw, 400px);
+    height:auto;
+    aspect-ratio:400 / 300;
     left:20%;
     top:25%;
 }
+
 /* =======================================
    CABALLOS
 ======================================= */
+
+.granja .caballo1,
+.granja .caballo2,
+.granja .caballo3{
+    width:clamp(60px, 8vw, 100px);
+    height:auto;
+    aspect-ratio:1;
+}
+
 .granja .caballo1{
-    width:100px;
-    height:100px;
     left:35%;
     top:10%;
 }
+
 .granja .caballo2{
-    width:100px;
-    height:100px;
     right:5%;
     top:40%;
 }
+
 .granja .caballo3{
-    width:100px;
-    height:100px;
     left:15%;
     bottom:5%;
 }
+
 /* =======================================
    CABRAS
 ======================================= */
+
+.granja .cabra1,
+.granja .cabra2,
+.granja .cabra3{
+    width:clamp(45px, 6vw, 70px);
+    height:auto;
+    aspect-ratio:1;
+}
+
 .granja .cabra1{
-    width:70px;
-    height:70px;
     left:50%;
     top:50%;
 }
+
 .granja .cabra2{
-    width:70px;
-    height:70px;
     left:20%;
     top:55%;
 }
+
 .granja .cabra3{
-    width:70px;
-    height:70px;
     left:10%;
     top:30%;
 }
+
 /* =======================================
    VACAS
 ======================================= */
+
+.granja .vaca1,
+.granja .vaca2,
+.granja .vaca3{
+    width:clamp(65px, 9vw, 110px);
+    height:auto;
+    aspect-ratio:110 / 100;
+}
+
 .granja .vaca1{
-    width:110px;
-    height:100px;
     left:10%;
     top:70%;
 }
+
 .granja .vaca2{
-    width:110px;
-    height:100px;
     right:27%;
     top:30%;
 }
+
 .granja .vaca3{
-    width:110px;
-    height:100px;
     right:20%;
     top:70%;
 }
+
 /* =======================================
    OVEJAS
 ======================================= */
+
 .granja .oveja1{
-    width:70px;
-    height:70px;
+    width:clamp(45px, 6vw, 70px);
+    height:auto;
+    aspect-ratio:1;
     left:30%;
     top:72%;
 }
+
 /* =======================================
    GALLINAS
-====================================== */
+======================================= */
+
+.granja .gallina1,
+.granja .gallina2,
+.granja .gallina3{
+    width:clamp(32px, 4vw, 50px);
+    height:auto;
+    aspect-ratio:1;
+}
+
 .granja .gallina1{
-    width:50px;
-    height:50px;
     left:20%;
     top:45%;
 }
+
 .granja .gallina2{
-    width:50px;
-    height:50px;
     left:78%;
     top:20%;
 }
+
 .granja .gallina3{
-    width:50px;
-    height:50px;
     right:10%;
     top:65%;
 }
+
 /* =======================================
    POLLITOS
 ======================================= */
+
+.granja .pollito1,
+.granja .pollito2{
+    width:clamp(25px, 3vw, 35px);
+    height:auto;
+    aspect-ratio:1;
+}
+
 .granja .pollito1{
-    width:35px;
-    height:35px;
     right:20%;
     top:65%;
 }
+
 .granja .pollito2{
-    width:35px;
-    height:35px;
     left:20%;
     top:40%;
 }
+
 /* =======================================
    CERDO
 ======================================= */
+
 .granja .cerdo{
-    width:130px;
-    height:130px;
-    right:10%;
-    bottom:5%;
-}
-/* =======================================
-   IMÁGENES
-======================================= */
-.granja-item img, .granja-animal img{
-    width:100%;
-    height:100%;
-    object-fit:contain;
-}
-/* =======================================
-   NOMBRES
-======================================= */
-.granja .name{
-    display:block;
-    margin:8px 0 0 0;
-    color:#d4af37;
-    font-size:1rem;
-    font-weight:bold;
-    text-align:center;
-    text-shadow:
-        -2px -2px 0 #000,
-         2px -2px 0 #000,
-        -2px  2px 0 #000,
-         2px  2px 0 #000,
-         0    2px 4px #000;
-}
-/* =======================================
-   SOMBRA
-======================================= */
-.granja-item::after, .granja-animal::after{
-    content:"";
-    position:absolute;
-    left:50%;
-    bottom:-7px;
-    transform:translateX(-50%);
-    width:80%;
-    height:7px;
-    border-radius:50%;
-    background:rgba(0,0,0,.35);
-    opacity:0;
-    transition:.2s;
-}
-.granja-item:hover::after, .granja-animal:hover::after{
-    opacity:1;
-}
-/* =======================================
-   TABLET
-======================================= */
-@media(max-width:900px){
-    .granja{ min-height:500px; }
-}
-/* =======================================
-   CELULAR
-======================================= */
-@media(max-width:600px){
-    .granja{ min-height:500px; }
-    .granja-item:hover, .granja-animal:hover{ transform:none; filter:none; }
+    width:clamp(80px, 10vw, 130px);
+    height:auto;
+    aspect-ratio:1;
+    right:25%;
+    bottom:26%;
 }

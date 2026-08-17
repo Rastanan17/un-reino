@@ -103,7 +103,7 @@
       "categoria": "castillo",
       "tipo": "responder",
       "texto": "¿Qué objeto de metal usaban los caballeros para proteger su cabeza?",
-      "opciones": ["Escudo", "Casco o Yelmo"],
+      "opciones": ["Escudo", "Casco"],
       "respuesta_correcta": 1
     },
     {
@@ -178,8 +178,8 @@
       "categoria": "granja",
       "tipo": "responder",
       "texto": "¿Qué objeto se utiliza tradicionalmente para pesar frutas y mercancías?",
-      "opciones": ["Cinta métrica", "Balanza", "Reloj"],
-      "respuesta_correcta": 1
+      "opciones": ["Balanza", "Reloj"],
+      "respuesta_correcta": 0
     },
     {
       "id": "desafio_025",

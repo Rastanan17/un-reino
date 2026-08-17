@@ -17,7 +17,7 @@
 
     overflow:hidden;
 
-    background-image:url("../../assets/images/backgrounds/castle.jpg");
+    background-image:url("../../assets/images/backgrounds/castle_after.jpg");
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
@@ -68,11 +68,11 @@
 .salir{
     position:absolute;
 
-    width:14%;
+    width:10%;
     aspect-ratio:100 / 135;
 
-    left:8%;
-    top:25%;
+    left:20%;
+    top:20%;
 }
 
 .salir img{
@@ -87,11 +87,11 @@
 .armeria{
     position:absolute;
 
-    width:16%;
+    width:10%;
     aspect-ratio:200 / 300;
 
-    left:47%;
-    top:25%;
+    left:60%;
+    top:20%;
 }
 
 .armeria img{
@@ -106,10 +106,10 @@
 .trono{
     position:absolute;
 
-    width:24%;
+    width:15%;
     aspect-ratio:210 / 300;
 
-    left:42%;
+    left:45%;
     top:50%;
 }
 
@@ -128,8 +128,8 @@
     width:25%;
     aspect-ratio:230 / 320;
 
-    right:1%;
-    top:40%;
+    right:0%;
+    top:20%;
 }
 
 .tablon img{
@@ -144,11 +144,11 @@
 .guardias1{
     position:absolute;
 
-    width:38%;
+    width:30%;
     height:30%;
 
-    left:0;
-    bottom:0;
+    left:1%;
+    bottom:20%;
 }
 
 .guardias1 img{
@@ -165,11 +165,11 @@
 .guardias2{
     position:absolute;
 
-    width:38%;
+    width:25%;
     height:30%;
 
-    right:0;
-    bottom:0;
+    right:1%;
+    bottom:20%;
 }
 
 .guardias2 img{
@@ -208,8 +208,8 @@
     width:7%;
     aspect-ratio:1 / 1;
 
-    left:13%;
-    top:15%;
+    left:22%;
+    top:35%;
 }
 
 .light2 img{
@@ -224,11 +224,11 @@
 .light3{
     position:absolute;
 
-    width:25%;
+    width:20%;
     aspect-ratio:300 / 100;
 
-    left:3%;
-    top:42%;
+    left:25%;
+    top:46%;
 }
 
 .light3 img{
@@ -243,11 +243,11 @@
 .light4{
     position:absolute;
 
-    width:16%;
-    aspect-ratio:1 / 1;
+    width:5%;
+    aspect-ratio:3 / 1;
 
-    left:5%;
-    top:52%;
+    left:23%;
+    top:53%;
 }
 
 .light4 img{

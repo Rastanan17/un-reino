@@ -49,7 +49,7 @@
     position: absolute;
 
     left: 2%;
-    top: 23%;
+    top: 35%;
 
     width: 96%;
     min-height: clamp(130px, 15vh, 190px);
@@ -80,14 +80,10 @@
     width: 100%;
     height: auto;
     min-height: 100%;
-
     box-sizing: border-box;
-
     padding: clamp(6px, 0.7vw, 12px);
-
     text-align: center;
     color: #4a2a16;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -158,6 +154,7 @@
    MOSTRADOR
 ======================================= */
 .mercado-mostrador{
+    background-image:url("images/mostrador.png");
     position: absolute;
     left: 50%;
     bottom: 24%;
@@ -241,6 +238,18 @@
         width: 50px;
         height: 50px;
     }
+    .item-mercado-contenedor{
+    width: clamp(40px, 11vw, 58px);
+    height: clamp(40px, 11vw, 58px);
+
+    border-width: 1.5px;
+    border-radius: 11px;
+}
+
+.item-mercado{
+    width: clamp(26px, 8vw, 42px);
+    height: clamp(26px, 8vw, 42px);
+}
 }
 /* =======================================
    ITEMS DEL MERCADO
@@ -254,24 +263,46 @@
     z-index: 10;
 }
 /* =======================================
-   CONTENEDOR DEL ITEM
+   CONTENEDOR DE CADA ITEM
 ======================================= */
+
 .item-mercado-contenedor{
     position: absolute;
 
-    width: clamp(40px, 6.5vw, 70px);
-    height: clamp(60px, 8.5vw, 100px);
+    width: clamp(44px, 8vw, 70px);
+    height: clamp(44px, 8vw, 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     pointer-events: auto;
     user-select: none;
     cursor: pointer;
+
+    /* Fondo individual */
+    background: rgba(255, 245, 190, 0.82);
+
+    border: 2px solid rgba(151, 94, 5, 0.75);
+
+    border-radius: 14px;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.45);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
 }
 /* =======================================
-   IMAGEN BASE DE LOS ITEMS
+   IMAGEN DEL ITEM
 ======================================= */
+
 .item-mercado{
-    width: clamp(20px, 6vw, 50px);
-    height: clamp(20px, 6vw, 50px);
+    width: clamp(28px, 10vw, 50px);
+    height: clamp(28px, 10vw, 50px);
 
     object-fit: contain;
     display: block;
@@ -280,12 +311,23 @@
         transform 0.2s ease,
         filter 0.2s ease;
 }
+
 /* =======================================
-   EFECTO AL PASAR
+   EFECTO AL PASAR / TOCAR
 ======================================= */
+
+.item-mercado-contenedor:hover{
+    transform: scale(1.08);
+
+    background: rgba(255, 248, 210, 0.95);
+
+    box-shadow:
+        0 5px 12px rgba(0, 0, 0, 0.55);
+}
+
 .item-mercado-contenedor:hover .item-mercado{
-    transform: scale(1.1);
-    filter: brightness(1.5);
+    transform: scale(1.08);
+    filter: brightness(1.15);
 }
 /* =======================================
    DISTRIBUCIÓN DE ITEMS
@@ -301,13 +343,19 @@
     left: 5%;    top: 16%;
 }
 .item-bici{
-    left: 5%;    top: 48%;
+    left: 5%;    top: 24%;
 }
 .item-arbol{
-    left: 5%;    top: 56%;
+    left: 25%;    top: 24%;
 }
 .item-luces2{
-    left:5%;     top: 64%;
+    left:45%;     top: 24%;
+}
+.item-waffle{
+    left: 65%;    top: 24%;
+}
+.item-pizza{
+    left: 85%;    top: 24%;
 }
 .item-manos{
     left: 5%;    top: 72%;
@@ -319,12 +367,6 @@
     left: 5%;    top: 90%;
 }
 /* -------- ARRIBA 1 -------- */
-.item-pizza{
-    left: 25%;    top: 0%;
-}
-.item-waffle{
-    left: 45%;    top: 0%;
-}
 .item-musica{
     left: 25%;    top: 8%;
 }
@@ -374,13 +416,12 @@
 .item-helado{
     left: 65%;    top: 81%;
 }
-
+.item-carta{
+    left: 65%;    top: 90%;
+}
 .item-cometa{
-    left: 82%;    top: 52%;
+    left: 85%;    top: 81%;
 }
 .item-castillo{
-    left: 82%;    top: 62%;
-}
-.item-carta{
-    left: 82%;    top: 72%;
+    left: 85%;    top: 72%;
 }

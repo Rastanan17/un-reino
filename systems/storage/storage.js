@@ -142,26 +142,9 @@ function obtenerFechaHoy() {
 
 function reiniciarMisionesDiarias(){
 
-    const clavesMisiones = [
-
-        "estadoMisionesCastillo",
-        "estadoMisionesAldea",
-        "estadoMisionesGranja",
-        "estadoMisionesBosque",
-        "estadoMisionesHielo",
-        "estadoMisionesNieve",
-        "estadoMisionesBiblioteca",
-        "estadoMisionesMuseo",
-        "estadoMisionesObservatorio",
-        "estadoMisionesMascotas",
-        "estadoMisionesPuerto",
-        "estadoMisionesSantuario"
-
-    ];
-
-    clavesMisiones.forEach(clave => {
-        localStorage.removeItem(clave);
-    });
+    // Todas las misiones de todas las zonas
+    // se guardan actualmente en esta única clave.
+    localStorage.removeItem("estadoMisiones");
 
     console.log(
         "🌅 Misiones diarias reiniciadas"

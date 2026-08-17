@@ -10,7 +10,7 @@ let habitantes = [];
 // Cargar pergaminos
 // ---------------------------------------
 async function cargarPergaminos() {
-    const respuesta = await fetch("systems/pergaminos/pergaminos.json");
+    const respuesta = await fetch("systems/desafios/desafios.json");
     pergaminos = await respuesta.json();
 }
 // ---------------------------------------
