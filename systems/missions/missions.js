@@ -296,15 +296,68 @@ function volverDeMisiones(){
 // =======================================
 // CREAR PERGAMINO DEL TABLÓN
 // =======================================
+
 function crearPergamino(mision){
+
+    let tiempo = "";
+
+    // ===================================
+    // TIEMPO SOLO SI ESTÁ EN CURSO
+    // ===================================
+
+    if(mision.estado === "enCurso"){
+
+        const inicio =
+            mision.inicio || Date.now();
+
+        const transcurrido =
+            Math.floor(
+                (Date.now() - inicio) / 1000
+            );
+
+        const restante =
+            Math.max(
+                0,
+                mision.duracion - transcurrido
+            );
+
+        tiempo = `
+            <div class="tiempo-mision"
+                 data-inicio="${inicio}"
+                 data-duracion="${mision.duracion}">
+                 
+                ⏳
+                <span class="temporizador-mision">
+                    ${formatearTiempo(restante)}
+                </span>
+
+            </div>
+        `;
+    }
+
     return `
+
         <div
             class="pergamino2 estado-${mision.estado}"
             onclick="abrirPergaminoMision(${mision.id})">
-            <div class="estado-mision">${textoEstadoMision(mision.estado)}</div>
-            <div class="titulo-mision">${mision.icono} ${mision.titulo}</div>
-            
+
+            <div class="contenido-pergamino-mision">
+
+                <div class="estado-mision">
+                    ${textoEstadoMision(mision.estado)}
+                </div>
+
+                <div class="titulo-mision">
+                    ${mision.icono}
+                    ${mision.titulo}
+                </div>
+
+                ${tiempo}
+
+            </div>
+
         </div>
+
     `;
 }
 // =======================================
@@ -832,6 +885,11 @@ function mostrarMisiones(){
 
     if(filtroZona === "Granja"){
         cargarMisionesGranja();
+        return;
+    }
+ 
+    if(filtroZona === "Bosque"){
+        cargarMisionesBosque();
         return;
     }
 

@@ -294,6 +294,24 @@
     background-repeat:no-repeat;
 }
 /* =======================================
+   FONDO DE LA BOSQUE
+======================================= */
+
+.misiones-bosque{
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,.65),
+            rgba(0,0,0,.65)
+        ),
+        url("../../assets/images/backgrounds/forest.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+}
+/* =======================================
    CONTENEDOR DE PERGAMINOS
 ======================================= */
 
@@ -342,25 +360,61 @@
     transform:scale(1.08);
 }
 /* =======================================
-   CONTENIDO DEL PERGAMINO
+   CONTENIDO DEL PERGAMINO DE MISIÓN
 ======================================= */
 
-.titulo-mision{
-    margin-top:58px;
+.contenido-pergamino-mision{
 
-    padding:8px 38px 0;
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%, -50%);
+
+    width:70%;
+    max-width:260px;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+    justify-content:center;
 
     text-align:center;
 
+    box-sizing:border-box;
+
+}
+.titulo-mision{
+    padding:8px 38px 0;
+    width:100%;
+    margin:6px 0;
+    overflow-wrap:break-word;
+    text-align:center;
     font-size:18px;
+    font-weight:bold;
+    color:#38164b;
+    font-family:'MedievalSharp',cursive;
+    line-height:1.2;
+}
+.tiempo-mision{
+
+    margin-top:8px;
 
     font-weight:bold;
+     color:#38164b;
+        text-align:center;
 
-    color:#38164b;
+}
+.contenido-pergamino-mision{
 
-    font-family:'MedievalSharp',cursive;
+    font-size:clamp(
+        0.65rem,
+        1.2vw,
+        0.95rem
+    );
 
-    line-height:1.2;
 }
 
 /* =======================================

@@ -45,7 +45,7 @@ function mostrarPortal(){
     content.innerHTML=`
         <section class="portal">
             <h1>🌀 Portal de Mírrafen</h1>
-            <p class="portalTexto">Todo héroe tiene una historia.<br>¿Quién cruzará el portal?</p>
+            <p class="portalTexto">Todo héroe tiene una historia.<br>¿Quién cruzará el portal?<br>Elije tu perfil<br>o crea un nuevo perfil.</p>
             <div id="listaPerfiles"></div>
             <button class="btnNuevoPerfil" onclick="reproducirSFX('open_place.wav'); mostrarCrearPerfil()">✨ Nuevo Aventurero</button>
         </section>
@@ -57,50 +57,119 @@ function mostrarPortal(){
 // =======================================
 
 function cargarTarjetasPerfiles(){
-    const lista = document.getElementById("listaPerfiles");
-    const perfiles = JSON.parse(localStorage.getItem("perfiles")) || {};
+
+    const lista =
+        document.getElementById("listaPerfiles");
+
+    const perfiles =
+        JSON.parse(localStorage.getItem("perfiles")) || {};
+
     lista.innerHTML = "";
+
     for(const id in perfiles){
+
         const jugador = perfiles[id];
+
         // ===================================
         // AVATAR
         // ===================================
-        let avatar = jugador.avatar || jugador.foto;
-        if( !avatar ||
+
+        let avatar =
+            jugador.avatar || jugador.foto;
+
+        if(
+            !avatar ||
             avatar.includes("images/characters") ||
             avatar.includes("assets/images")
         ){
-            avatar = "kingdom/portal/avatars/explorer.jpg";
+
+            avatar =
+                "kingdom/portal/avatars/explorer.jpg";
         }
+
         if(!avatar.includes("/")){
-            avatar = `kingdom/portal/avatars/${avatar}`;
+
+            avatar =
+                `kingdom/portal/avatars/${avatar}`;
         }
-        // ===================================
-        // RANGO DE EDAD
-        // ===================================
-        const rangoEdad = jugador.rangoEdad || "6-8";
+
         // ===================================
         // TARJETA
         // ===================================
+
         lista.innerHTML += `
-            <div class="cardPerfil">
-                <img src="${avatar}" class="avatarPerfil" alt="Avatar de ${jugador.nombre}">
-                <h2>${jugador.nombre}</h2>
-                <p>🎂 ${rangoEdad} años</p>
-                <p>Nivel ${jugador.nivel}</p>
-                <p>${jugador.rango || "Aprendiz"}</p>
-                <button onclick="reproducirSFX('open_place.wav'); entrarPerfil('${id}')">
-                    ⚔️ Entrar
-                </button>
-                <button onclick="reproducirSFX('touch.mp3'); editarPerfil('${id}')">
-                    ✏️ Editar
-                </button>
-                <button onclick="reproducirSFX('non.mp3'); eliminarPerfil('${id}')">
-                    🗑️ Eliminar
-                </button>
+
+            <div
+                class="cardPerfil"
+                id="perfil-${id}"
+                onclick="seleccionarPerfil('${id}')">
+
+                <img
+                    src="${avatar}"
+                    class="avatarPerfil"
+                    alt="Avatar de ${jugador.nombre}"
+                >
+
+                <h2>
+                    ${jugador.nombre}
+                </h2>
+
+                <div class="accionesPerfil">
+
+                    <button
+                        onclick="
+                            event.stopPropagation();
+                            reproducirSFX('open_place.wav');
+                            entrarPerfil('${id}')
+                        ">
+                        ⚔️ Entrar
+                    </button>
+
+                    <button
+                        onclick="
+                            event.stopPropagation();
+                            reproducirSFX('non.mp3');
+                            eliminarPerfil('${id}')
+                        ">
+                        🗑️ Eliminar
+                    </button>
+
+                </div>
+
             </div>
+
         `;
     }
+}
+// =======================================
+// SELECCIONAR PERFIL
+// =======================================
+
+function seleccionarPerfil(id){
+
+    const tarjeta =
+        document.getElementById(`perfil-${id}`);
+
+    if(!tarjeta) return;
+
+    // Cerrar las demás tarjetas
+
+    document
+        .querySelectorAll(".cardPerfil")
+        .forEach(card => {
+
+            if(card !== tarjeta){
+
+                card.classList.remove("activo");
+
+            }
+
+        });
+
+    // Abrir / cerrar la seleccionada
+
+    tarjeta.classList.toggle("activo");
+
 }
 // =======================================
 // EDITAR PERFIL

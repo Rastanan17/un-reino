@@ -56,20 +56,6 @@
     "restauracion":5
   },
   {
-    "id": 9,
-    "zona": "Bosque",
-    "categoria": "🌳 Bosque",
-    "titulo": "Ordena tus juguetes.",
-    "descripcion": "El Bosque vuelve a respirar cuando todo está en su lugar.",
-    "icono": "🧸",
-    "xp": 20,
-    "oquos": 15,
-    "duracion": 600,
-    "estado": "disponible",
-    "dificultad": "media",
-    "restauracion":5
-  },
-  {
     "id": 10,
     "zona": "Santuario",
     "categoria": "⛪ Santuario",
@@ -112,20 +98,6 @@
     "restauracion": 5
   },
   {
-    "id": 17,
-    "zona": "Bosque",
-    "categoria": "🌳 Bosque",
-    "titulo": "Recoge la ropa limpia y guárdala.",
-    "descripcion": "Los tesoros recién lavados del bosque deben volver a sus cofres.",
-    "icono": "🧺",
-    "xp": 15,
-    "oquos": 10,
-    "duracion": 300,
-    "estado": "disponible",
-    "dificultad": "media",
-    "restauracion": 5
-  },
-  {
     "id": 18,
     "zona": "Biblioteca",
     "categoria": "📚 Biblioteca",
@@ -165,20 +137,6 @@
     "duracion": 300,
     "estado": "disponible",
     "dificultad": "media",
-    "restauracion": 5
-  },
-  {
-    "id": 23,
-    "zona": "Bosque",
-    "categoria": "🌳 Bosque",
-    "titulo": "Sal a caminar al aire libre durante 15 minutos.",
-    "descripcion": "Explorar los senderos salvajes fortalece el espíritu del aventurero.",
-    "icono": "🌲",
-    "xp": 25,
-    "oquos": 20,
-    "duracion": 900,
-    "estado": "disponible",
-    "dificultad": "dificil",
     "restauracion": 5
   },
   {
@@ -236,19 +194,5 @@
     "estado": "disponible",
     "dificultad": "dificil",
     "restauracion": 5
-  },
-  {
-    "id":30,
-    "zona":"Bosque",
-    "categoria":"🌳 Bosque",
-    "titulo":"Cansados de caminar nos dormimos una siesta entre los árboles.",
-    "descripcion":"Encontramos una linda cabaña en medio del bosque, tenemos que aprovechar y descansar.",
-    "icono":"🛏️",
-    "xp":30,
-    "oquos":15,
-    "duracion":1200,
-    "estado":"disponible",
-    "dificultad":"media",
-    "restauracion":10
   }
 ]

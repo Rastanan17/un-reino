@@ -4,51 +4,53 @@ Un Reino<
             (vacío)
 		images<
 			backgrounds<
-				castle_after.jpg
-				castle_dawn.jpg
-				castle_night.jpg
+				castle<
+					castle_after.jpg
+					castle_dawn.jpg
+					castle_day.jpg
+					castle_night.jpg
+				farm<
+					farm_after.jpg
+					farm_dawn.jpg
+					farm_day.jpg
+					farm_night.jpg
+				forest<
+					forest_after.jpg
+					forest_dawn.jpg
+					forest_day.jpg
+					forest_night.jpg
+				library<
+					library_after.jpg
+					library_dawn.jpg
+					library_day.jpg
+					library_night.jpg
+				market<
+					market_after.jpg
+					market_dawn.jpg
+					market_day.jpg
+					market_night.jpg
+				observatory<
+					observatory_after.jpg
+					observatory_dawn.jpg
+					observatory_day.jpg
+					observatory_night.jpg
+				vilalge<
+					village_after.jpg
+					village_dawn.jpg
+					village_day.jpg
+					village_night.jpg
 				castle-ruins.jpg
 				castle.jpg
-				castle2.jpg
                 cave_fire.png
                 cave_frost.png
                 cave_mineral.png
                 caves_all.png
-                farm_after.jpg
-                farm_dawn.jpg
-                farm_day.jpg
-                farm_night.jpg
+				caves_alll.png
                 farm.png
-                farm2.jpg
-                forest_after.jpg
-                forest_dawn.jpg
-                forest_day.jpg
-                forest_night.jpg
-				forest.jpg
-				forest2.jpg
-				library_after.jpg
-				library_dawn.jpg
-				library_day.jpg
-				library_night.jpg
-				library.jpg
-				market_after.jpg
-				market_dawn.jpg
-				market_night.jpg
-				market.jpg
-				market2.jpg
-				observatory_after.jpg
-				observatory_dawn.jpg
-				observatory_day.jpg
-				observatory_night.jpg
 				theatre_after.jpg
 				theatre_day.jpg
 				theatre_night.jpg
-				village_after.jpg
-				village_dawn.jpg
-				village_day.jpg
-				village_night.jpg
 				village.jpg
-				village2.jpg
 			characters<
 				alien.jpg
 				dwarf.jpg
@@ -99,6 +101,7 @@ Un Reino<
 				skull.png
 			ui<
 				favicom.ico
+				next_soon.png
 		sounds<
 			_portal.mp3
 			20 sfx.mp3
@@ -284,7 +287,8 @@ Un Reino<
 			castle.css
 			castle.js
 		caves<
-			(vacio)
+			caves.css
+			caves.js
 		farm<
 			data<
 				farm.json – (vacio)
@@ -313,7 +317,8 @@ Un Reino<
 			farm.css
 			farm.js	
 		forest<
-			(vacio)
+			forest.css
+			forest.js
 		frost<
 			(vacio)
 		library<

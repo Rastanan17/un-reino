@@ -23,6 +23,12 @@ const videosTransicion = {
     "map-farm": "assets/videos/map-farm.mp4",
     "farm-map": "assets/videos/farm-map.mp4",
 
+    "map-caves": "assets/videos/map-caves.mp4",
+    "caves-map": "assets/videos/caves-map.mp4",
+
+    "map-forest": "assets/videos/map-forest.mp4",
+    "forest-map": "assets/videos/forest-map.mp4",
+
     "portal-map": "assets/videos/portal-map.mp4",
     "map-portal": "assets/videos/portal-map.mp4"
 

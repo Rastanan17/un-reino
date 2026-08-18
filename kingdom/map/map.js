@@ -123,8 +123,7 @@ function mostrarMapaReino() {
     zonas.forEach(zona => {
 
         const desbloqueada =
-            jugador.nivel >= zona.nivel;
-
+    MODO_DESARROLLO || jugador.nivel >= zona.nivel;
         // ===================================
         // LISTA LATERAL
         // ===================================
@@ -134,7 +133,7 @@ function mostrarMapaReino() {
         item.className = "zoneItem";
 
         item.textContent = desbloqueada
-            ? `${iconos[zona.nombre] || "📍"} ${zona.nombre}`
+            ? `${iconos[zona.nombre] || "🌀"} ${zona.nombre}`
             : `🔒 Nivel ${zona.nivel}`;
 
         item.onclick = () => {
@@ -268,11 +267,15 @@ function abrirZona(zona){
 
     if(!zona) return;
 
+    console.log("🧪 MODO DESARROLLO:", MODO_DESARROLLO);
+    console.log("🧪 NIVEL JUGADOR:", jugador?.nivel);
+    console.log("🧪 NIVEL ZONA:", zona?.nivel);
+
     // ===================================
     // BLOQUEO POR NIVEL
     // ===================================
 
-    if(jugador.nivel < zona.nivel){
+    if(!MODO_DESARROLLO && jugador.nivel < zona.nivel){
 
         mostrarMensaje(
 
@@ -331,6 +334,21 @@ function abrirZona(zona){
     }
 
     // ===================================
+    // 🌲 BOSQUE
+    // ===================================
+
+    if(zona.nombre === "Bosque"){
+
+        irA(
+            "map",
+            "forest",
+            mostrarBosque
+        );
+
+        return;
+    }
+
+    // ===================================
     // 📜 ZONAS CON MISIONES
     // ===================================
 
@@ -367,6 +385,21 @@ function abrirZona(zona){
     if(zona.tipo === "logros"){
 
         mostrarLogros();
+
+        return;
+    }
+
+    // ===================================
+    // 🌀 CAVERNAS
+    // ===================================
+
+    if(zona.nombre === "Cavernas"){
+
+        irA(
+            "map",
+            "caves",
+            mostrarCavernas
+        );
 
         return;
     }
