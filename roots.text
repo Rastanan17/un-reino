@@ -47,6 +47,8 @@ Un Reino<
                 caves_all.png
 				caves_alll.png
                 farm.png
+				forest.jpg
+				observatory.jpg
 				theatre_after.jpg
 				theatre_day.jpg
 				theatre_night.jpg
@@ -109,11 +111,14 @@ Un Reino<
 			ambient_.mp3
 			ambient_castle.mp3
 			ambient_city.mp3
+			ambient_forest.mp3
 			ambient_logo.mp3
 			ambient_map.mp3
+			ambient_observatory.mp3
 			ambient_portal.mp3
 			ambient_village.mp3
 			ambiental_farm.mp3
+			birds.mp3
 			bookFlip.wav
 			caballo1.mp3
 			caballo2.mp3
@@ -151,6 +156,7 @@ Un Reino<
             vaca2.mp3
             vaca3.mp3
             voces.mp3
+			wolf.mp3
             woman_talk.mp3
 		videos<
 			bar-map.mp4
@@ -403,7 +409,19 @@ Un Reino<
 		museum<
 			(vacio)
 		observatory<
-			(vacio)
+			images<
+				can_mayor.jpg
+				centauro.jpg
+				cruz_del_sur.jpg
+				escorpio.jpg
+				jupiter.jpg
+				la_quilla.jpg
+				marte.jpg
+				orion.jpg
+				saturno.jpg
+				sol.jpg
+				tierra.jpg
+				venus.jpg
 		pets<
 			(vacio)
 		port<

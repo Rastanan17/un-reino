@@ -1,18 +1,5 @@
 [
-  {
-    "id": 2,
-    "zona": "Granja",
-    "categoria": "🌾 Granja",
-    "titulo": "Come una fruta.",
-    "descripcion": "Los árboles del Reino necesitan volver a dar frutos.",
-    "icono": "🍎",
-    "xp": 15,
-    "oquos": 5,
-    "duracion": 300,
-    "estado": "disponible",
-    "dificultad": "facil",
-    "restauracion": 5
-  },
+  
   {
     "id": 6,
     "zona": "Biblioteca",
@@ -23,20 +10,6 @@
     "xp": 20,
     "oquos": 15,
     "duracion": 600,
-    "estado": "disponible",
-    "dificultad": "media",
-    "restauracion": 5
-  },
-  {
-    "id": 7,
-    "zona": "Observatorio",
-    "categoria": "🔭 Observatorio",
-    "titulo": "Aprende una curiosidad del Universo y cuéntale a alguien lo que aprendiste.",
-    "descripcion": "Cada nuevo descubrimiento ilumina las estrellas del Reino.",
-    "icono": "🌌",
-    "xp": 20,
-    "oquos": 15,
-    "duracion": 300,
     "estado": "disponible",
     "dificultad": "media",
     "restauracion": 5
@@ -70,34 +43,6 @@
     "restauracion":5
   },
   {
-    "id": 11,
-    "zona": "Granja",
-    "categoria": "🌾 Granja",
-    "titulo": "Come una verdura.",
-    "descripcion": "Los cultivos de la granja necesitan héroes que ayuden a mantenerlos saludables.",
-    "icono": "🥗",
-    "xp": 15,
-    "oquos": 5,
-    "duracion": 300,
-    "estado": "disponible",
-    "dificultad": "dificil",
-    "restauracion": 5
-  },
-  {
-    "id": 15,
-    "zona": "Granja",
-    "categoria": "🌾 Granja",
-    "titulo": "Bebe un vaso de agua grande.",
-    "descripcion": "El manantial de la granja renueva las fuerzas de todo el Reino.",
-    "icono": "🥛",
-    "xp": 10,
-    "oquos": 5,
-    "duracion": 120,
-    "estado": "disponible",
-    "dificultad": "facil",
-    "restauracion": 5
-  },
-  {
     "id": 18,
     "zona": "Biblioteca",
     "categoria": "📚 Biblioteca",
@@ -107,20 +52,6 @@
     "xp": 15,
     "oquos": 10,
     "duracion": 300,
-    "estado": "disponible",
-    "dificultad": "media",
-    "restauracion": 5
-  },
-  {
-    "id": 20,
-    "zona": "Observatorio",
-    "categoria": "🔭 Observatorio",
-    "titulo": "Realiza 10 minutos de estiramientos o ejercicios.",
-    "descripcion": "Los exploradores del cosmos mantienen sus cuerpos ágiles para el viaje.",
-    "icono": "🧘‍♂️",
-    "xp": 20,
-    "oquos": 15,
-    "duracion": 600,
     "estado": "disponible",
     "dificultad": "media",
     "restauracion": 5
@@ -151,34 +82,6 @@
     "duracion": 300,
     "estado": "disponible",
     "dificultad": "media",
-    "restauracion": 5
-  },
-  {
-    "id": 25,
-    "zona": "Granja",
-    "categoria": "🌾 Granja",
-    "titulo": "Alimenta a una mascota o animal del hogar.",
-    "descripcion": "La generosidad con las criaturas del reino trae abundancia a las cosechas.",
-    "icono": "🥣",
-    "xp": 15,
-    "oquos": 10,
-    "duracion": 180,
-    "estado": "disponible",
-    "dificultad": "facil",
-    "restauracion": 5
-  },
-  {
-    "id": 28,
-    "zona": "Observatorio",
-    "categoria": "🔭 Observatorio",
-    "titulo": "Escribe un pequeño cuento o dibujo de una aventura.",
-    "descripcion": "Las crónicas estelares se escriben con la imaginación de los héroes.",
-    "icono": "🎨",
-    "xp": 25,
-    "oquos": 20,
-    "duracion": 600,
-    "estado": "disponible",
-    "dificultad": "dificil",
     "restauracion": 5
   },
   {

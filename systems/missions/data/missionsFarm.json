@@ -29,11 +29,11 @@
     {
       "id": 3,
       "categoria": "🌾 Granja",
-      "titulo": "Sirve el plato de comida de la mascota.",
-      "descripcion": "Alimenta a tus compañeros animales para mantener su energía alta.",
+      "titulo": "Alimenta a una mascota o animal del hogar.",
+      "descripcion": "La generosidad con las criaturas del reino trae abundancia a las cosechas.",
       "icono": "🥣",
-      "xp": 10,
-      "oquos": 5,
+      "xp": 15,
+      "oquos": 10,
       "duracion": 180,
       "estado": "disponible",
       "dificultad": "facil",
@@ -68,15 +68,15 @@
     {
       "id": 6,
       "categoria": "🌾 Granja",
-      "titulo": "Cepilla el pelaje de tu mascota.",
-      "descripcion": "Acicala a tu leal criatura para mantener su manto suave y brillante.",
-      "icono": "🪮",
-      "xp": 15,
-      "oquos": 10,
+      "titulo": "Come una verdura.",
+      "descripcion": "Los cultivos de la granja necesitan héroes que ayuden a mantenerlos saludables.",
+      "icono": "🥗",
+      "xp": 30,
+      "oquos": 25,
       "duracion": 300,
       "estado": "disponible",
-      "dificultad": "facil",
-      "restauracion": 5
+      "dificultad": "dificil",
+      "restauracion": 15
     }
   ],
   "misiones_9_11": [

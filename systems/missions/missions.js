@@ -238,6 +238,190 @@ async function cargarMisionesGranja(){
     }
 }
 // =======================================
+// CARGAR MISIONES DEL BOSQUE
+// =======================================
+
+async function cargarMisionesBosque(){
+
+    // ===================================
+    // ZONA ACTUAL
+    // ===================================
+
+    zonaMisionesActual = "Bosque";
+
+    try{
+
+        // ===================================
+        // CARGAR JSON
+        // ===================================
+
+        const respuesta =
+            await fetch(ARCHIVO_MISIONES_BOSQUE);
+
+        if(!respuesta.ok){
+
+            throw new Error(
+                `No se pudo cargar ${ARCHIVO_MISIONES_BOSQUE}`
+            );
+
+        }
+
+        const datos =
+            await respuesta.json();
+
+        // ===================================
+        // OBTENER MISIONES SEGÚN EDAD
+        // ===================================
+
+        const claveEdad =
+            obtenerClaveMisionesPorEdad();
+
+        misiones =
+            datos[claveEdad] || [];
+
+        console.log(
+            "🌲 MISIONES BOSQUE CARGADAS:",
+            claveEdad,
+            misiones
+        );
+
+        // ===================================
+        // RECUPERAR ESTADOS GUARDADOS
+        // ===================================
+
+        cargarEstadoMisiones();
+
+        // ===================================
+        // COMENZAR DESDE LA PRIMERA PÁGINA
+        // ===================================
+
+        paginaActual = 0;
+
+        // ===================================
+        // MOSTRAR TABLÓN
+        // ===================================
+
+        mostrarTablonMisiones();
+
+    }catch(error){
+
+        console.error(
+            "Error cargando misiones del Bosque:",
+            error
+        );
+
+        // ===================================
+        // MOSTRAR ERROR
+        // ===================================
+
+        const content =
+            document.getElementById("content");
+
+        if(content){
+
+            content.innerHTML = `
+
+                <section class="tablon-misiones">
+
+                    <h2>⚠️ Error</h2>
+
+                    <p>
+                        No se pudieron cargar
+                        las misiones del Bosque.
+                    </p>
+
+                    <button onclick="mostrarBosque()">
+                        ← Volver al Bosque
+                    </button>
+
+                </section>
+
+            `;
+
+        }
+
+    }
+
+}
+// =======================================
+// CARGAR MISIONES DEL OBSERVATORIO
+// =======================================
+
+async function cargarMisionesObservatorio(){
+
+    zonaMisionesActual = "Observatorio";
+
+    try{
+
+        const respuesta =
+            await fetch(ARCHIVO_MISIONES_OBSERVATORIO);
+
+        if(!respuesta.ok){
+
+            throw new Error(
+                `No se pudo cargar ${ARCHIVO_MISIONES_OBSERVATORIO}`
+            );
+
+        }
+
+        const datos =
+            await respuesta.json();
+
+        const claveEdad =
+            obtenerClaveMisionesPorEdad();
+
+        misiones =
+            datos[claveEdad] || [];
+
+        console.log(
+            "🔭 MISIONES OBSERVATORIO CARGADAS:",
+            claveEdad,
+            misiones
+        );
+
+        cargarEstadoMisiones();
+
+        paginaActual = 0;
+
+        mostrarTablonMisiones();
+
+    }catch(error){
+
+        console.error(
+            "Error cargando misiones del Observatorio:",
+            error
+        );
+
+        const content =
+            document.getElementById("content");
+
+        if(content){
+
+            content.innerHTML = `
+
+                <section class="tablon-misiones">
+
+                    <h2>⚠️ Error</h2>
+
+                    <p>
+                        No se pudieron cargar
+                        las misiones del Observatorio.
+                    </p>
+
+                    <button onclick="mostrarObservatorio()">
+                        ← Volver al Observatorio
+                    </button>
+
+                </section>
+
+            `;
+
+        }
+
+    }
+
+}
+// =======================================
 // TABLÓN DE MISIONES
 // =======================================
 function mostrarTablonMisiones(){
@@ -290,7 +474,11 @@ function volverDeMisiones(){
         mostrarGranja();
         return;
     }
-
+    if(zonaMisionesActual === "Observatorio"){
+        mostrarObservatorio();
+        return;
+    }
+        
     mostrarCastillo();
 }
 // =======================================
@@ -890,6 +1078,10 @@ function mostrarMisiones(){
  
     if(filtroZona === "Bosque"){
         cargarMisionesBosque();
+        return;
+    }
+    if(filtroZona === "Observatorio"){
+        cargarMisionesObservatorio();
         return;
     }
 

@@ -122,8 +122,7 @@ function mostrarMapaReino() {
 
     zonas.forEach(zona => {
 
-        const desbloqueada =
-    MODO_DESARROLLO || jugador.nivel >= zona.nivel;
+        const desbloqueada = MODO_DESARROLLO || jugador.nivel >= zona.nivel;
         // ===================================
         // LISTA LATERAL
         // ===================================
@@ -145,7 +144,7 @@ function mostrarMapaReino() {
                 );
                 return;
             }
-reproducirSFX("open_place.wav");
+            reproducirSFX("open_place.wav");
 
             abrirZona(zona);
 
@@ -215,10 +214,10 @@ reproducirSFX("open_place.wav");
 
         div.onclick = () => {
             
-reproducirSFX("open_place.wav");
+            reproducirSFX("open_place.wav");
             if (!desbloqueada) {
 
-reproducirSFX("non.mp3");
+                reproducirSFX("non.mp3");
                 mostrarMensaje(
                     "Zona bloqueada",
                     `Necesitás alcanzar el nivel ${zona.nivel} para desbloquear esta zona.`
@@ -349,6 +348,96 @@ function abrirZona(zona){
     }
 
     // ===================================
+    // 🔭 OBSERVATORIO
+    // ===================================
+
+    if(zona.nombre === "Observatorio"){
+
+        irA(
+            "map",
+            "observatory",
+            mostrarObservatorio
+        );
+
+        return;
+    }
+/*
+    // ===================================
+    // 🏛️ ACADEMIA
+    // ===================================
+
+    if(zona.nombre === "Academia"){
+
+        irA(
+            "map",
+            "academy",
+            mostrarAcademia
+        );
+
+        return;
+    }
+
+    // ===================================
+    // 🐾 REFUGIO DE MASCOTAS
+    // ===================================
+
+    if(zona.nombre === "Mascotas"){
+
+        irA(
+            "map",
+            "pets",
+            mostrarMascotas
+        );
+
+        return;
+    }
+
+    // ===================================
+    // ⛪ SANTUARIO
+    // ===================================
+
+    if(zona.nombre === "Santuario"){
+
+        irA(
+            "map",
+            "sanctuary",
+            mostrarSantuario
+        );
+
+        return;
+    }
+
+    // ===================================
+    // 🌨️ NIEVES
+    // ===================================
+
+    if(zona.nombre === "Nieve"){
+
+        irA(
+            "map",
+            "snow",
+            mostrarNieve
+        );
+
+        return;
+    }
+
+    // ===================================
+    // ⚓ PUERTO
+    // ===================================
+
+    if(zona.nombre === "Puerto"){
+
+        irA(
+            "map",
+            "port",
+            mostrarPuerto
+        );
+
+        return;
+    }
+*/
+    // ===================================
     // 📜 ZONAS CON MISIONES
     // ===================================
 
@@ -377,7 +466,22 @@ function abrirZona(zona){
 
         return;
     }
+/*
+    // ===================================
+    // 🏛️ MUSEO
+    // ===================================
 
+    if(zona.nombre === "Museo"){
+
+        irA(
+            "map",
+            "museum",
+            mostrarMuseo
+        );
+
+        return;
+    }
+*/
     // ===================================
     // 🏆 LOGROS
     // ===================================
@@ -403,7 +507,22 @@ function abrirZona(zona){
 
         return;
     }
+/*
+    // ===================================
+    // ❄️ FROST
+    // ===================================
 
+    if(zona.nombre === "Frost"){
+
+        irA(
+            "map",
+            "frost",
+            mostrarFrost
+        );
+
+        return;
+    }
+*/
     // ===================================
     // 🎮 MINIJUEGOS
     // ===================================

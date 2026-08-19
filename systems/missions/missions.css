@@ -294,7 +294,7 @@
     background-repeat:no-repeat;
 }
 /* =======================================
-   FONDO DE LA BOSQUE
+   FONDO DEL BOSQUE
 ======================================= */
 
 .misiones-bosque{
@@ -304,6 +304,23 @@
             rgba(0,0,0,.65)
         ),
         url("../../assets/images/backgrounds/forest.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+}/* =======================================
+   FONDO DEL OBSERVATORIO
+======================================= */
+
+.misiones-observatorio{
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,.65),
+            rgba(0,0,0,.65)
+        ),
+        url("../../assets/images/backgrounds/observatory.jpg");
 
     background-size:cover;
 

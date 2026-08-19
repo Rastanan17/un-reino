@@ -1,0 +1,166 @@
+/* =======================================
+   OBSERVATORIO DE MÍRRAFEN
+======================================= */
+
+.observatorio{
+    position:relative;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+/* =======================================
+   FONDO
+======================================= */
+
+.observatory-background{
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    user-select:none;
+    pointer-events:none;
+}
+
+/* =======================================
+   ZONAS DEL OBSERVATORIO
+======================================= */
+
+.zona-observatorio{
+
+    position:absolute;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+
+    z-index:10;
+
+    font-size:clamp(
+        18px,
+        2vw,
+        30px
+    );
+
+    font-weight:bold;
+
+    color:#f5d76e;
+
+    text-shadow:
+        2px 2px 0 #331a06,
+        0 3px 5px rgba(5, 1, 1, 0.5);
+
+    user-select:none;
+
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease;
+}
+
+/* =======================================
+   EFECTO AL PASAR EL MOUSE
+======================================= */
+
+.zona-observatorio:hover{
+
+    transform:scale(1.08);
+
+    filter:
+        drop-shadow(
+            0 0 8px
+            rgba(255,220,100,0.8)
+        );
+
+}
+
+/* =======================================
+   ✨ MISIONES
+   VENTANA SUPERIOR
+======================================= */
+
+.zona-observatorio.misiones{
+
+    top:30%;
+    left:50%;
+
+    transform:
+        translateX(-50%);
+
+    width:24%;
+    height:10%;
+}
+
+/* =======================================
+   🗺️ PLANETAS
+   MAPA ESTELAR IZQUIERDO
+======================================= */
+
+.zona-observatorio.planetas{
+
+    left:5%;
+    top:45%;
+
+    width:22%;
+    height:15%;
+}
+
+/* =======================================
+   🔭 CONSTELACIONES
+   TELESCOPIO CENTRAL
+======================================= */
+
+.zona-observatorio.constelaciones{
+
+    left:50%;
+    top:55%;
+
+    width:28%;
+    height:15%;
+
+    transform:
+        translateX(-50%);
+}
+
+/* =======================================
+   🏮 SALIDA
+   LÁMPARA DERECHA
+======================================= */
+
+.zona-observatorio.salida{
+
+    right:2%;
+    top:55%;
+
+    width:18%;
+    height:15%;
+}
+
+/* =======================================
+   RESPONSIVE
+======================================= */
+
+@media(max-width:700px){
+
+    .zona-observatorio{
+
+        font-size:clamp(
+            14px,
+            3.5vw,
+            22px
+        );
+
+        -webkit-text-stroke:
+            1px #5b3518;
+
+        text-shadow:
+            1px 1px 0 #3b2110;
+    }
+
+}
