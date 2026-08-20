@@ -30,8 +30,8 @@ const zonasBosque = [
     {
         id: "salida",
         nombre: "Salida",
-        x: 50,
-        y: 530,
+        x: 250,
+        y: 500,
         width: 150,
         height: 150
     },
@@ -44,20 +44,20 @@ const zonasBosque = [
         id: "misiones",
         nombre: "Misiones",
         x: 780,
-        y: 380,
+        y: 420,
         width: 400,
         height: 100
     },
 
     // ===================================
-    // 🐺 ZONA DEL LOBO
+    // 🐺 ZONA DE CUENTOS
     // ===================================
 
     {
         id: "cuentos",
         nombre: "Cuentos",
         x: 1200,
-        y: 800,
+        y: 480,
         width: 180,
         height: 150
     },
@@ -70,7 +70,7 @@ const zonasBosque = [
         id: "pajaro",
         nombre: "Pájaro",
         x: 700,
-        y: 50,
+        y: 320,
         width: 180,
         height: 100
     }

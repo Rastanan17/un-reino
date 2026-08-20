@@ -18,7 +18,7 @@
             rgba(0,0,0,.70),
             rgba(0,0,0,.70)
         ),
-        url("../../assets/images/backgrounds/caves_all.png");
+        url("../../assets/images/backgrounds/caves_all.jpg");
 
     background-size:cover;
 
@@ -40,7 +40,7 @@
     height:auto;
 
     left:50%;
-    top:50%;
+    top:20%;
 
     transform:
         translate(-50%, -50%);
