@@ -94,7 +94,10 @@ window.addEventListener("DOMContentLoaded", () => {
 
 function iniciarModoDesarrollo(){
 
-    console.log("🧪 iniciarModoDesarrollo");
+    console.log(
+        "🧪 Estado Modo Sapo:",
+        MODO_DESARROLLO ? "ACTIVO 🐸" : "INACTIVO 🔒"
+    );
 
     const visor =
         document.getElementById("visorDesarrollo");
@@ -105,20 +108,22 @@ function iniciarModoDesarrollo(){
     if(!visor) return;
 
     // ===================================
-    // MODO NORMAL
+    // JUEGO NORMAL
     // ===================================
 
     if(!MODO_DESARROLLO){
 
-        console.log("🧪 Desarrollo DESACTIVADO");
+        console.log(
+            "🔒 Modo Sapo desactivado."
+        );
 
-        // El visor sigue existiendo porque
-        // contiene el juego.
+        // El visor contiene el juego.
+        // Por eso permanece visible.
 
         visor.style.display = "block";
 
-        // Ocultar solamente los controles
-        // de desarrollo.
+        // Los controles de desarrollo
+        // permanecen completamente ocultos.
 
         if(controles){
 
@@ -130,10 +135,12 @@ function iniciarModoDesarrollo(){
     }
 
     // ===================================
-    // MODO DESARROLLO
+    // MODO SAPO
     // ===================================
 
-    console.log("🧪 Desarrollo ACTIVADO");
+    console.log(
+        "🐸 Modo Sapo activado."
+    );
 
     visor.style.display = "block";
 
@@ -143,7 +150,12 @@ function iniciarModoDesarrollo(){
 
     }
 
-    const ancho = window.innerWidth;
+    // ===================================
+    // DETECTAR DISPOSITIVO
+    // ===================================
+
+    const ancho =
+        window.innerWidth;
 
     let modo;
 
@@ -163,12 +175,17 @@ function iniciarModoDesarrollo(){
 
     }
 
+    // ===================================
+    // APLICAR VISTA
+    // ===================================
+
     cambiarModoDesarrollo(modo);
 
     console.log(
-        "🧪 MODO DESARROLLO:",
+        "🧪 Vista de desarrollo:",
         modo
     );
+
 }
 
 // =======================================
@@ -193,14 +210,14 @@ function cambiarModoDesarrollo(modo){
     );
 
     console.log(
-        "🧪 MODO DE DESARROLLO:",
+        "🧪 Vista aplicada:",
         modo
     );
 
 }
 
 // =======================================
-// INICIAR MODO DESARROLLO
+// INICIALIZAR MODO DESARROLLO
 // =======================================
 
 window.addEventListener(

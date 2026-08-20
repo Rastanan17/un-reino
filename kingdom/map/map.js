@@ -115,14 +115,36 @@ function mostrarMapaReino() {
         Mercado: "🛒"
 
     };
+// =======================================
+// 🔒 COMPROBAR DESBLOQUEO DE ZONA
+// =======================================
 
+function zonaDesbloqueada(zona, jugador){
+
+    // 🐸 Modo Sapo:
+    // todas las zonas están disponibles
+    // para pruebas de desarrollo.
+
+    if(MODO_DESARROLLO){
+
+        return true;
+
+    }
+
+    // 👤 Juego normal:
+    // se respeta el nivel requerido.
+
+    return jugador.nivel >= zona.nivel;
+
+}
     // =======================================
     // CREAR ZONAS
     // =======================================
 
     zonas.forEach(zona => {
 
-        const desbloqueada = MODO_DESARROLLO || jugador.nivel >= zona.nivel;
+        const desbloqueada =
+    zonaDesbloqueada(zona, jugador);
         // ===================================
         // LISTA LATERAL
         // ===================================
@@ -274,7 +296,7 @@ function abrirZona(zona){
     // BLOQUEO POR NIVEL
     // ===================================
 
-    if(!MODO_DESARROLLO && jugador.nivel < zona.nivel){
+    if(!zonaDesbloqueada(zona, jugador)){
 
         mostrarMensaje(
 
