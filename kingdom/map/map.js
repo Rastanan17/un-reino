@@ -7,7 +7,28 @@ async function cargarMapa(){
     zonas = await respuesta.json();
     guardarMapa(zonas);
 }
+// =======================================
+// 🔒 COMPROBAR DESBLOQUEO DE ZONA
+// =======================================
 
+function zonaDesbloqueada(zona, jugador){
+
+    // 🐸 Modo Sapo:
+    // todas las zonas están disponibles
+    // para pruebas de desarrollo.
+
+    if(MODO_DESARROLLO){
+
+        return true;
+
+    }
+
+    // 👤 Juego normal:
+    // se respeta el nivel requerido.
+
+    return jugador.nivel >= zona.nivel;
+
+}
 // =======================================
 // MOSTRAR MAPA DEL REINO
 // =======================================
@@ -115,28 +136,7 @@ function mostrarMapaReino() {
         Mercado: "🛒"
 
     };
-// =======================================
-// 🔒 COMPROBAR DESBLOQUEO DE ZONA
-// =======================================
 
-function zonaDesbloqueada(zona, jugador){
-
-    // 🐸 Modo Sapo:
-    // todas las zonas están disponibles
-    // para pruebas de desarrollo.
-
-    if(MODO_DESARROLLO){
-
-        return true;
-
-    }
-
-    // 👤 Juego normal:
-    // se respeta el nivel requerido.
-
-    return jugador.nivel >= zona.nivel;
-
-}
     // =======================================
     // CREAR ZONAS
     // =======================================
