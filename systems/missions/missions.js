@@ -876,6 +876,7 @@ function posponerMision(id){
     guardarEstadoMisiones();
     mostrarTablonMisiones();
     cerrarPergamino();
+    reproducirSFX("non.mp3");
     mostrarMensaje("📜 Misión pospuesta",
         "Podrás retomarla cuando quieras."
     );
@@ -927,6 +928,7 @@ function completarMision(id){
         guardarJugador(jugador);
     }
     console.log("MISIÓN COMPLETADA:", mision);
+    reproducirSFX("mission_complete.wav");
     mostrarMensaje("🏆 Misión completada",
         `Ganaste ⭐ ${mision.xp} XP y 💰 ${mision.oquos} Oquos`
     );

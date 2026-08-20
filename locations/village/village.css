@@ -3,16 +3,64 @@
 ======================================= */
 
 .aldea{
+
     position:absolute;
+
     width:100%;
     height:100%;
+
     min-height:600px;
+
     overflow:hidden;
 
-    background-image:url("../../assets/images/backgrounds/village/village_day.jpg");
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
+
+}
+
+/* =======================================
+   🌅 AMANECER
+======================================= */
+
+.aldea.momento-dawn{
+
+    background-image:
+        url("../../assets/images/backgrounds/village/village_dawn.jpg");
+
+}
+
+/* =======================================
+   ☀️ DÍA
+======================================= */
+
+.aldea.momento-day{
+
+    background-image:
+        url("../../assets/images/backgrounds/village/village_day.jpg");
+
+}
+
+/* =======================================
+   🌇 ATARDECER
+======================================= */
+
+.aldea.momento-sunset{
+
+    background-image:
+        url("../../assets/images/backgrounds/village/village_sunset.jpg");
+
+}
+
+/* =======================================
+   🌙 NOCHE
+======================================= */
+
+.aldea.momento-night{
+
+    background-image:
+        url("../../assets/images/backgrounds/village/village_night.jpg");
+
 }
 
 /* =======================================

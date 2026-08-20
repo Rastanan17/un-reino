@@ -29,6 +29,8 @@ const perfilBase = {
     // Progreso de juego
     misionesCompletadas: [],
     logros: [],
+    // Historial del Reino
+    historial:[],
     racha: 0,
     zonasRestauradas: [],
     ultimoReinicio: "",
@@ -80,6 +82,41 @@ function guardarJugador(datos){
     perfiles[id] = datos;
     localStorage.setItem("perfiles", JSON.stringify(perfiles));
 }
+// =======================================
+// 👑 REGISTRAR ACONTECIMIENTO
+// =======================================
+
+function registrarAcontecimiento(tipo, texto){
+
+    const jugador = cargarJugador();
+
+    if(!jugador) return;
+
+    if(!jugador.historial){
+        jugador.historial = [];
+    }
+
+    const acontecimiento = {
+
+        id: Date.now(),
+
+        fecha: obtenerFechaHoy(),
+
+        tipo: tipo,
+
+        texto: texto
+
+    };
+
+    jugador.historial.push(acontecimiento);
+
+    guardarJugador(jugador);
+
+    console.log(
+        "👑 ACONTECIMIENTO REGISTRADO:",
+        acontecimiento
+    );
+}
 // ---------------------------------------
 // Obtener rango
 // ---------------------------------------
@@ -98,30 +135,126 @@ function obtenerRango(nivel){
 // ---------------------------------------
 // Dar recompensa
 // ---------------------------------------
-function sumarRecompensa(xp, oquos) {
-    console.log("RECIBIDO -> XP:", xp, "Oquos:", oquos);
+function sumarRecompensa(xp, oquos){
+
+    console.log(
+        "RECIBIDO -> XP:",
+        xp,
+        "Oquos:",
+        oquos
+    );
+
     const jugador = cargarJugador();
+
     if(!jugador) return;
+
+    // ===================================
+    // GUARDAR ESTADO ANTERIOR
+    // ===================================
+
+    const nivelAnterior =
+        jugador.nivel;
+
+    const rangoAnterior =
+        jugador.rango;
+
+    // ===================================
+    // RECOMPENSAS
+    // ===================================
+
     jugador.xp += xp;
     jugador.oquos += oquos;
-    while (jugador.xp >= jugador.xpNecesaria) {
+
+    // ===================================
+    // SUBIR DE NIVEL
+    // ===================================
+
+    while(
+        jugador.xp >= jugador.xpNecesaria
+    ){
+
         jugador.xp -= jugador.xpNecesaria;
+
         jugador.nivel++;
+
         jugador.xpNecesaria += 50;
     }
-    jugador.rango = obtenerRango(jugador.nivel);
+
+    // ===================================
+    // ACTUALIZAR RANGO
+    // ===================================
+
+    jugador.rango =
+        obtenerRango(jugador.nivel);
+
+    // ===================================
+    // GUARDAR JUGADOR
+    // ===================================
+
     guardarJugador(jugador);
+
     actualizarPerfil();
-}
-// ---------------------------------------
-// Restaurar una zona del Reino
-// ---------------------------------------
-function desbloquearZona(zona) {
-    const jugador = cargarJugador();
-    if (!jugador.zonasRestauradas.includes(zona)) {
-        jugador.zonasRestauradas.push(zona);
-        guardarJugador(jugador);
+
+    // ===================================
+    // 👑 REGISTRAR NUEVO RANGO
+    // ===================================
+
+    if(
+        jugador.rango !== rangoAnterior
+    ){
+
+        registrarAcontecimiento(
+            "rango",
+            `Has obtenido el rango "${jugador.rango}".`
+        );
+
+        console.log(
+            "👑 NUEVO RANGO:",
+            jugador.rango
+        );
     }
+
+    // ===================================
+    // 👑 REGISTRAR SUBIDA DE NIVEL
+    // ===================================
+
+    if(
+        jugador.nivel > nivelAnterior
+    ){
+
+        registrarAcontecimiento(
+            "nivel",
+            `Alcanzaste el nivel ${jugador.nivel}.`
+        );
+
+        console.log(
+            "👑 NUEVO ACONTECIMIENTO:",
+            `Nivel ${jugador.nivel}`
+        );
+    }
+
+}
+// =======================================
+// RESTAURAR UNA ZONA DEL REINO
+// =======================================
+function desbloquearZona(zona){
+
+    const jugador = cargarJugador();
+
+    if(!jugador) return;
+
+    if(jugador.zonasRestauradas.includes(zona)){
+        return;
+    }
+
+    jugador.zonasRestauradas.push(zona);
+
+    guardarJugador(jugador);
+
+    registrarAcontecimiento(
+        "zona",
+        `La zona ${zona} fue restaurada.`
+    );
 }
 // ---------------------------------------
 // Reiniciar partida

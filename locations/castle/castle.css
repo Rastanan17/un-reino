@@ -17,12 +17,54 @@
 
     overflow:hidden;
 
-    background-image:url("../../assets/images/backgrounds/castle/castle_day.jpg");
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
 }
 
+/* =======================================
+   🌅 AMANECER
+======================================= */
+
+.castillo.momento-dawn{
+
+    background-image:
+        url("../../assets/images/backgrounds/castle/castle_dawn.jpg");
+
+}
+
+/* =======================================
+   ☀️ DÍA
+======================================= */
+
+.castillo.momento-day{
+
+    background-image:
+        url("../../assets/images/backgrounds/castle/castle_day.jpg");
+
+}
+
+/* =======================================
+   🌇 ATARDECER
+======================================= */
+
+.castillo.momento-sunset{
+
+    background-image:
+        url("../../assets/images/backgrounds/castle/castle_sunset.jpg");
+
+}
+
+/* =======================================
+   🌙 NOCHE
+======================================= */
+
+.castillo.momento-night{
+
+    background-image:
+        url("../../assets/images/backgrounds/castle/castle_night.jpg");
+
+}
 /* =======================================
    ELEMENTOS GENERALES
 ======================================= */
@@ -68,11 +110,11 @@
 .salir{
     position:absolute;
 
-    width:10%;
+    width:0%;
     aspect-ratio:100 / 135;
 
-    left:20%;
-    top:20%;
+    left:45%;
+    bottom: 5%;
 }
 
 .salir img{
@@ -87,11 +129,11 @@
 .armeria{
     position:absolute;
 
-    width:10%;
+    width:0%;
     aspect-ratio:200 / 300;
 
-    left:60%;
-    top:20%;
+    left:20%;
+    top:30%;
 }
 
 .armeria img{
@@ -106,11 +148,11 @@
 .trono{
     position:absolute;
 
-    width:15%;
+    width:0%;
     aspect-ratio:210 / 300;
 
-    left:45%;
-    top:50%;
+    left:44%;
+    top:47%;
 }
 
 .trono img{
@@ -125,11 +167,11 @@
 .tablon{
     position:absolute;
 
-    width:25%;
+    width:0%;
     aspect-ratio:230 / 320;
 
-    right:0%;
-    top:20%;
+    right:35%;
+    top:30%;
 }
 
 .tablon img{
@@ -144,11 +186,10 @@
 .guardias1{
     position:absolute;
 
-    width:30%;
-    height:30%;
+    width:0%;
 
-    left:1%;
-    bottom:20%;
+    left:15%;
+    bottom:45%;
 }
 
 .guardias1 img{
@@ -165,11 +206,10 @@
 .guardias2{
     position:absolute;
 
-    width:25%;
-    height:30%;
+    width:0%;
 
-    right:1%;
-    bottom:20%;
+    right:30%;
+    bottom:45%;
 }
 
 .guardias2 img{
@@ -186,10 +226,10 @@
 .light1{
     position:absolute;
 
-    width:7%;
+    width:10%;
     aspect-ratio:1 / 1;
 
-    right:24%;
+    right:10%;
     top:30%;
 }
 
@@ -205,11 +245,11 @@
 .light2{
     position:absolute;
 
-    width:7%;
+    width:10%;
     aspect-ratio:1 / 1;
 
-    left:22%;
-    top:35%;
+    left:5%;
+    top:30%;
 }
 
 .light2 img{
@@ -224,11 +264,11 @@
 .light3{
     position:absolute;
 
-    width:20%;
+    width:10%;
     aspect-ratio:300 / 100;
 
-    left:25%;
-    top:46%;
+    left:44%;
+    top:43.5%;
 }
 
 .light3 img{
@@ -243,11 +283,11 @@
 .light4{
     position:absolute;
 
-    width:5%;
+    width:45%;
     aspect-ratio:3 / 1;
 
-    left:23%;
-    top:53%;
+    left:27%;
+    top:52%;
 }
 
 .light4 img{
@@ -262,11 +302,11 @@
 .name{
     display:block;
 
-    margin:8px 0 0;
+    margin:12px 0 0;
 
     color:#d4af37;
 
-    font-size:clamp(.65rem, 1.2vw, 1rem);
+    font-size:clamp(1.65rem, 3vw, 1rem);
 
     font-weight:bold;
     text-align:center;

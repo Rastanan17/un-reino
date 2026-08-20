@@ -85,6 +85,14 @@ function mostrarBosque(){
 
     console.log("🌲 Entrando al Bosque");
 
+    const momento =
+        obtenerMomentoDelDia();
+
+    console.log(
+        "🕐 Momento del día:",
+        momento
+    );
+
     const content =
         document.getElementById("content");
 
@@ -101,7 +109,7 @@ function mostrarBosque(){
             <img
                 id="forestBackground"
                 class="forest-background"
-                src="assets/images/backgrounds/forest/forest_day.jpg"
+                src="assets/images/backgrounds/forest/forest_${momento}.jpg"
                 alt="Bosque de Mírrafen"
             >
 

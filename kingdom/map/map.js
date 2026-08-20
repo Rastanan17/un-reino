@@ -129,11 +129,20 @@ function mostrarMapaReino() {
 
         Castillo: "🏰",
         Aldea: "🏡",
-        Bosque: "🌲",
+        Mercado: "🛒",
         Granja: "🌾",
+        Cavernas: "🌀",
+        Bosque: "🌲",
         Santuario: "⛪",
         Observatorio: "🔭",
-        Mercado: "🛒"
+        Biblioteca: "📚",
+        Puerto: "⚓",
+        Nieve: "⛄",
+        Bar: "🍺",
+        Academia: "🎓",
+        Museo: "🏛️",
+        Mascotas: "🐾",
+        Hielo: "❄️"
 
     };
 
@@ -154,7 +163,7 @@ function mostrarMapaReino() {
         item.className = "zoneItem";
 
         item.textContent = desbloqueada
-            ? `${iconos[zona.nombre] || "🌀"} ${zona.nombre}`
+            ? `${iconos[zona.nombre] || "📍"} ${zona.nombre}`
             : `🔒 Nivel ${zona.nivel}`;
 
         item.onclick = () => {

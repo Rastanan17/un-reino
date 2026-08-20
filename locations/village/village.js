@@ -21,10 +21,17 @@ async function cargarDialogosAldea(){
 // MOSTRAR ALDEA
 // =======================================
 function mostrarAldea(){
+    const momento =
+        obtenerMomentoDelDia();
+
+    console.log(
+        "🕐 Momento del día:",
+        momento
+    );
     const content = document.getElementById("content");
     if(!content) return;
     content.innerHTML = `
-        <section class="aldea">
+        <section class="aldea momento-${momento}">
             <!-- =================================
                  NAVEGACIÓN
             ================================== -->

@@ -7,6 +7,13 @@
 // =======================================
 
 function mostrarGranja(){
+    const momento =
+        obtenerMomentoDelDia();
+
+    console.log(
+        "🕐 Momento del día:",
+        momento
+    );
 
     const content = document.getElementById("content");
 
@@ -27,7 +34,7 @@ function mostrarGranja(){
 
     content.innerHTML = `
 
-        <section class="granja">
+        <section class="granja momento-${momento}">
 
             <!-- =================================
                  NAVEGACIÓN

@@ -1,6 +1,7 @@
 /* =======================================
    MERCADO DE MÍRRAFEN
 ======================================= */
+
 .mercado{
     position: relative;
     width: 100%;
@@ -8,10 +9,29 @@
     min-height: 0;
     overflow: hidden;
 
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+/* =======================================
+   MOMENTO DEL DÍA
+======================================= */
+
+.mercado.dawn{
+    background-image:url("../../assets/images/backgrounds/market/market_dawn.jpg");
+}
+
+.mercado.day{
     background-image:url("../../assets/images/backgrounds/market/market_day.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+}
+
+.mercado.sunset{
+    background-image:url("../../assets/images/backgrounds/market/market_sunset.jpg");
+}
+
+.mercado.night{
+    background-image:url("../../assets/images/backgrounds/market/market_night.jpg");
 }
 /* =======================================
    MERCADER

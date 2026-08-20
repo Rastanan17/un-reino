@@ -292,6 +292,8 @@ Un Reino<
 				throne.png
 			castle.css
 			castle.js
+			throne.css
+			throne.js
 		caves<
 			caves.css
 			caves.js

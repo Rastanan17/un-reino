@@ -16,6 +16,13 @@ function mostrarObservatorio(){
 
     console.log("🔭 Entrando al Observatorio");
 
+    const momento =
+        obtenerMomentoDelDia();
+
+    console.log(
+        "🕐 Momento del día:",
+        momento
+    );
     const content =
         document.getElementById("content");
 
@@ -32,7 +39,7 @@ function mostrarObservatorio(){
             <img
                 id="observatoryBackground"
                 class="observatory-background"
-                src="assets/images/backgrounds/observatory/observatory_day.jpg"
+                src="assets/images/backgrounds/observatory/observatory_${momento}.jpg"
                 alt="Observatorio de Mírrafen"
             >
 

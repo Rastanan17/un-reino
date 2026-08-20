@@ -22,3 +22,26 @@ function revisarCalendario(){
     jugador.ultimoIngreso = hoy.toISOString().split("T")[0];
     guardarJugador(jugador);
 }
+// =======================================
+// MOMENTO DEL DÍA
+// =======================================
+
+function obtenerMomentoDelDia(){
+
+    const hora = new Date().getHours();
+
+    if(hora >= 6 && hora < 9){
+        return "dawn";
+    }
+
+    if(hora >= 9 && hora < 18){
+        return "day";
+    }
+
+    if(hora >= 18 && hora < 21){
+        return "sunset";
+    }
+
+    return "night";
+
+}

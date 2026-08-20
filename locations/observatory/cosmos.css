@@ -69,10 +69,10 @@
 
 .constelacion-boton{
 
-    justify-self:start;
+    justify-self:center;
 
-    width:48px;
-    height:48px;
+    width:45px;
+    height:45px;
 
     border-radius:50%;
 
@@ -394,16 +394,16 @@
 
     .constelaciones-barra{
 
-        width:96vw;
+        width:90vw;
 
-        min-height:54px;
+        min-height:50px;
 
     }
 
     .constelacion-boton{
 
-        width:42px;
-        height:42px;
+        width:40px;
+        height:40px;
 
         font-size:26px;
 

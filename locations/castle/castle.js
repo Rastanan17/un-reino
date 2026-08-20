@@ -34,15 +34,23 @@ async function cargarDialogosGuardias(){
 // =======================================
 function mostrarCastillo(){
     const jugador = cargarJugador();
+    
     if (!jugador) {
         return;
     }
+    const momento =
+        obtenerMomentoDelDia();
+
+    console.log(
+        "🕐 Momento del día:",
+        momento
+    );
     reproducirMusica("assets/sounds/ambient_castle.mp3",
         0.35
     );
     const content = document.getElementById("content");
     content.innerHTML = `
-        <section class="castillo">
+        <section class="castillo momento-${momento}">
             <!-- ===========================
                  GUARDIAS
             ============================ -->

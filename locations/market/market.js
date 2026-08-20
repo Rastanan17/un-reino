@@ -24,6 +24,13 @@ function mostrarMercado(){
         console.warn("No hay un jugador activo.");
         return;
     }
+    const momento =
+        obtenerMomentoDelDia();
+
+    console.log(
+        "🕐 Momento del día:",
+        momento
+    );
     const content = document.getElementById("content");
     if(!content){
         console.error("No se encontró #content.");
@@ -33,7 +40,7 @@ function mostrarMercado(){
     // ESCENARIO DEL MERCADO
     // ===================================
     content.innerHTML = `
-        <section class="mercado">
+        <section class="mercado ${momento}">
             <!-- =================================
                 INFORMACIÓN DEL JUGADOR
             ================================== -->
