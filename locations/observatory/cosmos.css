@@ -1,0 +1,427 @@
+/* =======================================
+   MAPA ESTELAR
+======================================= */
+
+.constelaciones{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    overflow:hidden;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    box-sizing:border-box;
+
+    padding:
+        10px
+        10px
+        12px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(20,35,75,0.55),
+            rgba(2,5,15,0.95)
+        );
+
+}
+
+/* =======================================
+   BARRA SUPERIOR
+======================================= */
+
+.constelaciones-barra{
+
+    width:min(
+        572px,
+        94vw
+    );
+
+    min-height:62px;
+
+    flex-shrink:0;
+
+    display:grid;
+
+    grid-template-columns:
+        1fr
+        auto
+        1fr;
+
+    align-items:center;
+
+    margin-bottom:8px;
+
+}
+
+/* =======================================
+   BOTÓN NAVEGACIÓN
+======================================= */
+
+.constelacion-boton{
+
+    justify-self:start;
+
+    width:48px;
+    height:48px;
+
+    border-radius:50%;
+
+    border:
+        2px solid
+        rgba(150,200,255,0.45);
+
+    background:
+        rgba(5,15,35,0.85);
+
+    color:#fff;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+    transition:
+        transform .2s ease,
+        filter .2s ease;
+
+}
+
+.constelacion-siguiente{
+
+    justify-self:end;
+
+}
+
+.constelacion-boton:hover:not(:disabled){
+
+    transform:scale(1.1);
+
+    filter:
+        drop-shadow(
+            0 0 10px
+            rgba(150, 200, 255, 0.85)
+        );
+
+}
+
+.constelacion-boton:disabled{
+
+    opacity:.25;
+
+    cursor:default;
+
+}
+
+/* =======================================
+   CENTRO
+======================================= */
+
+.constelacion-centro{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:3px;
+
+}
+
+/* =======================================
+   VOLVER
+======================================= */
+
+.boton-volver-observatorio{
+
+    padding:
+        5px 13px;
+
+    border-radius:18px;
+
+    border:
+        1px solid
+        rgba(180,210,255,0.4);
+
+    background:
+        rgba(5,10,30,0.88);
+
+    color:#fff;
+
+    font-size:14px;
+
+    cursor:pointer;
+
+    white-space:nowrap;
+
+    transition:
+        transform .2s ease,
+        filter .2s ease;
+
+}
+
+.boton-volver-observatorio:hover{
+
+    transform:scale(1.05);
+
+    filter:brightness(1.2);
+
+}
+
+/* =======================================
+   CONTADOR
+======================================= */
+
+.constelacion-contador{
+
+    color:#d8e9ff;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    text-shadow:
+        0 2px 5px #000;
+
+}
+
+/* =======================================
+   PÁGINA
+======================================= */
+
+.constelacion-pagina{
+
+    flex:1;
+
+    min-height:0;
+
+    width:min(
+        572px,
+        94vw
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 0 30px
+        rgba(70,130,220,0.35);
+
+}
+
+/* =======================================
+   IMAGEN
+======================================= */
+
+.constelacion-imagen{
+
+    display:block;
+
+    height:100%;
+
+    width:auto;
+
+    max-width:100%;
+
+    object-fit:contain;
+
+    user-select:none;
+
+    pointer-events:none;
+
+}
+
+/* =======================================
+   ENTRADAS
+======================================= */
+
+.constelacion-entrada{
+
+    animation:
+        constelacionEntrada
+        .4s ease both;
+
+}
+
+.constelacion-siguiente{
+
+    animation:
+        constelacionEntradaDerecha
+        .4s ease both;
+
+}
+
+.constelacion-anterior{
+
+    animation:
+        constelacionEntradaIzquierda
+        .4s ease both;
+
+}
+
+@keyframes constelacionEntrada{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.97);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+@keyframes constelacionEntradaDerecha{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+@keyframes constelacionEntradaIzquierda{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+/* =======================================
+   SALIDAS
+======================================= */
+
+.salir-izquierda{
+
+    animation:
+        constelacionSalidaIzquierda
+        .35s ease forwards;
+
+}
+
+.salir-derecha{
+
+    animation:
+        constelacionSalidaDerecha
+        .35s ease forwards;
+
+}
+
+@keyframes constelacionSalidaIzquierda{
+
+    to{
+
+        opacity:0;
+
+        transform:
+            translateX(-60px);
+
+    }
+
+}
+
+@keyframes constelacionSalidaDerecha{
+
+    to{
+
+        opacity:0;
+
+        transform:
+            translateX(60px);
+
+    }
+
+}
+
+/* =======================================
+   CELULAR
+======================================= */
+
+@media(max-width:600px){
+
+    .constelaciones{
+
+        padding:
+            6px;
+
+    }
+
+    .constelaciones-barra{
+
+        width:96vw;
+
+        min-height:54px;
+
+    }
+
+    .constelacion-boton{
+
+        width:42px;
+        height:42px;
+
+        font-size:26px;
+
+    }
+
+    .boton-volver-observatorio{
+
+        font-size:12px;
+
+        padding:
+            4px 10px;
+
+    }
+
+    .constelacion-contador{
+
+        font-size:11px;
+
+    }
+
+}

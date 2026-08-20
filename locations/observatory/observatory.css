@@ -88,10 +88,7 @@
 .zona-observatorio.misiones{
 
     top:30%;
-    left:50%;
-
-    transform:
-        translateX(-50%);
+    left:40%;
 
     width:24%;
     height:10%;
@@ -118,14 +115,12 @@
 
 .zona-observatorio.constelaciones{
 
-    left:50%;
-    top:55%;
+    left:40%;
+    top:50%;
 
     width:28%;
     height:15%;
 
-    transform:
-        translateX(-50%);
 }
 
 /* =======================================

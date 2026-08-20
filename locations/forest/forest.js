@@ -54,8 +54,8 @@ const zonasBosque = [
     // ===================================
 
     {
-        id: "ruido",
-        nombre: "Ruido",
+        id: "cuentos",
+        nombre: "Cuentos",
         x: 1200,
         y: 800,
         width: 180,
@@ -155,7 +155,7 @@ function obtenerIconoZonaBosque(id){
         return "";
     }
 
-    if(id === "ruidos"){
+    if(id === "cuentos"){
         return "";
     }
 
@@ -223,10 +223,10 @@ function interactuarZonaBosque(id){
     // 🐺 LOBO
     // ===================================
 
-    if(id === "ruidos"){
+    if(id === "cuentos"){
 
         console.log(
-            "🐺 Zona del lobo"
+            "📖 Entrando a los Cuentos"
         );
 
         if(sonidoLobo){
@@ -236,6 +236,7 @@ function interactuarZonaBosque(id){
             );
 
         }
+        mostrarCuentos();
 
         return;
     }

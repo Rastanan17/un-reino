@@ -55,7 +55,7 @@ function mostrarObservatorio(){
                 class="zona-observatorio planetas"
                 onclick="verPlanetas()"
             >
-                🪐 Planetas
+                🪐 Astros
             </div>
 
             <!-- ==========================
@@ -66,7 +66,7 @@ function mostrarObservatorio(){
                 class="zona-observatorio constelaciones"
                 onclick="verConstelaciones()"
             >
-                ⭐ Constelaciones
+                ⭐ Cosmos
             </div>
 
             <!-- ==========================
@@ -107,57 +107,60 @@ function abrirMisionesObservatorio(){
 
 }
 
+function mostrarConstelaciones(){
+
+    console.log(
+        "⭐ Entrando al mapa estelar"
+    );
+
+    const content =
+        document.getElementById("content");
+
+    if(!content) return;
+
+    constelacionActual = 0;
+
+    renderizarConstelacion("entrada");
+
+}
+
 // =======================================
-// 🪐 VER PLANETAS
+// 🪐 ASTROS
 // =======================================
 
 function verPlanetas(){
 
     console.log(
-        "🪐 Abriendo mapa estelar"
+        "🔭 Abriendo Astros"
     );
 
     reproducirSFX(
         "open_place.wav"
     );
 
-    // -----------------------------------
-    // TEMPORAL
-    // -----------------------------------
-    // Más adelante acá abriremos
-    // el sistema de planetas.
+    detenerSonidoObservatorio();
 
-    mostrarMensaje(
-        "🪐 Mapa estelar",
-        "Muy pronto podrás explorar los planetas de Mírrafen."
-    );
+    mostrarAstros();
 
 }
 
 // =======================================
-// ⭐ VER CONSTELACIONES
+// ⭐ VER COSMOS
 // =======================================
 
 function verConstelaciones(){
 
     console.log(
-        "⭐ Observando constelaciones"
+        "⭐ Abriendo mapa estelar"
     );
 
     reproducirSFX(
         "open_place.wav"
     );
 
-    // -----------------------------------
-    // TEMPORAL
-    // -----------------------------------
-    // Más adelante acá abriremos
-    // el sistema de constelaciones.
+    detenerSonidoObservatorio();
 
-    mostrarMensaje(
-        "🔭 Telescopio",
-        "Muy pronto podrás observar las constelaciones de Mírrafen."
-    );
+    mostrarConstelaciones();
 
 }
 

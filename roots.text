@@ -5,40 +5,40 @@ Un Reino<
 		images<
 			backgrounds<
 				castle<
-					castle_after.jpg
 					castle_dawn.jpg
 					castle_day.jpg
 					castle_night.jpg
+					castle_sunset.jpg
 				farm<
-					farm_after.jpg
 					farm_dawn.jpg
 					farm_day.jpg
 					farm_night.jpg
+					farm_sunset.jpg
 				forest<
-					forest_after.jpg
 					forest_dawn.jpg
 					forest_day.jpg
 					forest_night.jpg
+					forest_sunset.jpg
 				library<
-					library_after.jpg
 					library_dawn.jpg
 					library_day.jpg
 					library_night.jpg
+					library_sunset.jpg
 				market<
-					market_after.jpg
 					market_dawn.jpg
 					market_day.jpg
 					market_night.jpg
+					market_sunset.jpg
 				observatory<
-					observatory_after.jpg
 					observatory_dawn.jpg
 					observatory_day.jpg
 					observatory_night.jpg
-				vilalge<
-					village_after.jpg
+					observatory_sunset.jpg
+				village<
 					village_dawn.jpg
 					village_day.jpg
 					village_night.jpg
+					village_sunset.jpg
 				castle-ruins.jpg
 				castle.jpg
                 cave_fire.png
@@ -323,6 +323,15 @@ Un Reino<
 			farm.css
 			farm.js	
 		forest<
+			images<
+				caperucita.png
+				cenicienta.png
+				hansel_gretel.png
+				patito_feo.png
+				pinocho.png
+				tres_cerditos.png
+			cuentos.css
+			cuentos.js
 			forest.css
 			forest.js
 		frost<
@@ -410,18 +419,26 @@ Un Reino<
 			(vacio)
 		observatory<
 			images<
-				can_mayor.jpg
-				centauro.jpg
-				cruz_del_sur.jpg
-				escorpio.jpg
-				jupiter.jpg
-				la_quilla.jpg
-				marte.jpg
-				orion.jpg
-				saturno.jpg
-				sol.jpg
-				tierra.jpg
-				venus.jpg
+				astros<
+					jupiter.jpg
+					marte.jpg
+					saturno.jpg
+					sol.jpg
+					tierra.jpg
+					venus.jpg
+				cosmos<
+					can_mayor.jpg
+					centauro.jpg
+					cruz_del_sur.jpg
+					escorpio.jpg
+					la_quilla.jpg
+					orion.jpg
+			astros.css
+			astros.js
+			cosmos.css
+			cosmos.js
+			observatory.css
+			observatory.js
 		pets<
 			(vacio)
 		port<
