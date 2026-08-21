@@ -1,248 +1,301 @@
-/* =======================================
-   ALDEA DE MÍRRAFEN
-======================================= */
+ /* =======================================
+    ALDEA DE MÍRRAFEN
+    CALIBRACIÓN DE ZONAS
+    TEMPORAL
+ ======================================= */
 
 .aldea{
-
     position:absolute;
-
     width:100%;
     height:100%;
-
     min-height:600px;
-
     overflow:hidden;
-
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
-
 }
 
 /* =======================================
-   🌅 AMANECER
+   🌅 MOMENTOS DEL DÍA
 ======================================= */
 
 .aldea.momento-dawn{
-
     background-image:
         url("../../assets/images/backgrounds/village/village_dawn.jpg");
-
 }
-
-/* =======================================
-   ☀️ DÍA
-======================================= */
 
 .aldea.momento-day{
-
     background-image:
         url("../../assets/images/backgrounds/village/village_day.jpg");
-
 }
-
-/* =======================================
-   🌇 ATARDECER
-======================================= */
 
 .aldea.momento-sunset{
-
     background-image:
         url("../../assets/images/backgrounds/village/village_sunset.jpg");
-
 }
-
-/* =======================================
-   🌙 NOCHE
-======================================= */
 
 .aldea.momento-night{
-
     background-image:
         url("../../assets/images/backgrounds/village/village_night.jpg");
+}
+
+/* =======================================
+   ZONAS INTERACTIVAS
+   CALIBRACIÓN
+======================================= */
+
+.zona-aldea{
+    position:absolute;
+
+    box-sizing:border-box;
+
+    z-index:100;
+
+    cursor:pointer;
+    display:block;
+}
+
+/* =======================================
+   ALDEANAS
+======================================= */
+
+.senora1{
+    width:10%;
+    height:10%;
+
+    right:0%;
+    top:40%;
+}
+
+.senora2{
+    width:10%;
+    height:10%;
+
+    left:0%;
+    top:50%;
+}
+
+.senora3{
+    width:10%;
+    height:15%;
+
+    right:5%;
+    top:60%;
+}
+
+.senora4{
+    width:10%;
+    height:5%;
+
+    right:5%;
+    top:55%;
+}
+
+/* =======================================
+   ALDEANOS
+======================================= */
+
+.senor1{
+    width:5%;
+    height:15%;
+
+    right:0%;
+    top:60%;
+}
+
+.senor2{
+    width:15%;
+    height:15%;
+
+    left:45%;
+    top:65%;
+}
+
+.senor3{
+    width:15%;
+    height:15%;
+
+    left:65%;
+    top:65%;
+}
+
+/* =======================================
+   NIÑOS
+======================================= */
+
+.nino1{
+    width:20%;
+    height:10%;
+
+    left:20%;
+    top:50%;
+}
+
+.nino2{
+    width:20%;
+    height:10%;
+
+    left:50%;
+    top:50%;
+}
+
+.nino3{
+    width:15%;
+    height:5%;
+
+    left:70%;
+    top:55%;
+}
+/* =======================================
+   PATOS
+======================================= */
+
+.patos1{
+    width:30%;
+    height:20%;
+
+    left:10%;
+    top:60%;
+}
+
+.patos2{
+    width:20%;
+    height:5%;
+
+    right:10%;
+    top:50%;
+}
+
+/* =======================================
+   CAMPANA
+   → MISIONES
+======================================= */
+
+.campana{
+    width:30%;
+    height:10%;
+
+    left:10%;
+    top:40%;
+}
+
+/* =======================================
+   CASTILLO
+   → SALIDA
+======================================= */
+
+.salidaAldea{
+    width:60%;
+    height:30%;
+
+    left:20%;
+    top:20%;
+}
+
+/* =======================================
+   CASA CON TORRE
+   → ARMERÍA
+======================================= */
+
+.casaConTorre{
+    width:30%;
+    height:10%;
+
+    right:20%;
+    top:40%;
+}
+
+/* =======================================
+   HOVER
+======================================= */
+
+.zona-aldea:hover{
+
+    transform:scale(1.02);
 
 }
 
 /* =======================================
-   ELEMENTOS GENERALES
+   RESPONSIVE
 ======================================= */
 
-.aldea img{
-    user-select:none;
+@media(max-width:900px){
+
+    .aldea{
+        width:100%;
+        height:100%;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .aldea{
+        width:100%;
+        height:100%;
+    }
+
+    .zona-aldea{
+
+        border-width:2px;
+
+    }
+
+}
+.zona-interactiva{
+    position:absolute;
+    z-index:100;
+}
+
+.nombre-zona{
+    position:absolute;
+
+    top:5px;
+    left:50%;
+    transform:translateX(-50%);
+
+    width:max-content;
+
+    margin:0;
+
+    color:#ffd700;
+
+    font-size:clamp(12px, 1vw, 30px);
+
+    font-weight:bold;
+
+    text-align:center;
+
+    white-space:nowrap;
+
+    text-shadow:
+        -2px -2px 0 #000,
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000,
+         0 2px 5px #000;
+
     pointer-events:none;
 }
-
-.aldea-item,
-.aldea-personaje,
-.aldea-animal,
-.aldea-objeto{
-    position:absolute;
-    cursor:pointer;
-    transition:transform .2s ease, filter .2s ease;
-}
-
 /* =======================================
-   INTERACCIÓN
+   RESALTADO DEL NOMBRE AL PASAR EL CURSOR
 ======================================= */
 
-.aldea-item:hover,
-.aldea-personaje:hover{
-    filter:brightness(1.2);
-    transform:scale(1.08);
+.zona-interactiva:hover .nombre-zona{
+    transform:translateX(-50%) scale(1.12);
+    color:#fff2a8;
+    text-shadow:
+        -2px -2px 0 #000,
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000,
+         0 0 8px #ffd700,
+         0 2px 6px #000;
 }
 
-/* =======================================
-   NAVEGACIÓN
-======================================= */
-
-/* GUARDIA → CASTILLO */
-.aldea .guardia{
-    width:clamp(42px, 5vw, 60px);
-    height:auto;
-    aspect-ratio:60 / 90;
-    left:40%;
-    top:65%;
-}
-
-/* ANCIANO → MAPA */
-.aldea .mapa{
-    width:clamp(32px, 4vw, 44px);
-    height:auto;
-    aspect-ratio:44 / 72;
-    right:10%;
-    bottom:15%;
-}
-
-/* MERCADO */
-.aldea .tienda{
-    width:clamp(70px, 8vw, 104px);
-    height:auto;
-    aspect-ratio:104 / 110;
-    right:35%;
-    top:45%;
-}
-
-/* MISIONES */
-.aldea .misiones{
-    width:clamp(50px, 6vw, 75px);
-    height:auto;
-    aspect-ratio:75 / 85;
-    right:15%;
-    top:55%;
-}
-
-/* =======================================
-   PERSONAJES
-======================================= */
-
-.aldea .persona1{
-    width:clamp(24px, 3vw, 34px);
-    height:auto;
-    aspect-ratio:34 / 59;
-    left:35%;
-    top:55%;
-}
-
-.aldea .persona2{
-    width:clamp(24px, 3vw, 33px);
-    height:auto;
-    aspect-ratio:33 / 59;
-    left:63%;
-    top:57%;
-}
-
-.aldea .persona3{
-    width:clamp(26px, 3.2vw, 36px);
-    height:auto;
-    aspect-ratio:36 / 58;
-    left:30%;
-    top:70%;
-}
-
-.aldea .persona4{
-    width:clamp(28px, 3.5vw, 40px);
-    height:auto;
-    aspect-ratio:40 / 48;
-    left:60%;
-    top:71%;
-}
-
-.aldea .people4{
-    width:clamp(22px, 2.7vw, 30px);
-    height:auto;
-    aspect-ratio:30 / 79;
-    left:20%;
-    top:61%;
-}
-
-.aldea .people7{
-    width:clamp(16px, 2vw, 22px);
-    height:auto;
-    aspect-ratio:22 / 57;
-    right:35%;
-    top:51%;
-}
-
-.aldea .people9{
-    width:clamp(26px, 3.2vw, 36px);
-    height:auto;
-    aspect-ratio:36 / 46;
-    left:80%;
-    top:65%;
-}
-
-/* =======================================
-   PERROS
-======================================= */
-
-.aldea .dog1{
-    width:clamp(22px, 2.5vw, 30px);
-    height:auto;
-    aspect-ratio:30 / 26;
-    left:16%;
-    top:65%;
-}
-
-.aldea .dog2{
-    width:clamp(32px, 4vw, 47px);
-    height:auto;
-    aspect-ratio:47 / 45;
-    left:40%;
-    top:60%;
-}
-
-.aldea .dog3{
-    width:clamp(38px, 5vw, 57px);
-    height:auto;
-    aspect-ratio:57 / 33;
-    right:23%;
-    top:75%;
-}
-
-.aldea .dog4{
-    width:clamp(20px, 2.3vw, 25px);
-    height:auto;
-    aspect-ratio:25 / 32;
-    left:70%;
-    top:67%;
-}
-
-/* =======================================
-   VASIJAS
-======================================= */
-
-.aldea .vasija1{
-    width:clamp(32px, 4vw, 46px);
-    height:auto;
-    aspect-ratio:46 / 48;
-    left:22%;
-    top:57%;
-}
-
-.aldea .vasija2{
-    width:clamp(30px, 3.7vw, 43px);
-    height:auto;
-    aspect-ratio:43 / 47;
-    right:1%;
-    top:60%;
+.nombre-zona{
+    transition:
+        transform 0.18s ease,
+        color 0.18s ease,
+        text-shadow 0.18s ease;
 }

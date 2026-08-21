@@ -5,310 +5,79 @@
 ======================================= */
 
 /* =======================================
-   CASTILLO — ESCENARIO
+   FONDO DEL CASTILLO
+======================================= */
+
+.castle-background{
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+    object-position:50% 50%;
+
+    z-index:1;
+}
+
+/* =======================================
+   CASTILLO
 ======================================= */
 
 .castillo{
-    position:relative;
+    position:absolute;
 
     width:100%;
     height:100%;
-    min-height:0;
+    min-height:600px;
 
     overflow:hidden;
 
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
+    background:#000;
 }
 
 /* =======================================
-   🌅 AMANECER
+   ZONAS INTERACTIVAS
 ======================================= */
 
-.castillo.momento-dawn{
-
-    background-image:
-        url("../../assets/images/backgrounds/castle/castle_dawn.jpg");
-
-}
-
-/* =======================================
-   ☀️ DÍA
-======================================= */
-
-.castillo.momento-day{
-
-    background-image:
-        url("../../assets/images/backgrounds/castle/castle_day.jpg");
-
-}
-
-/* =======================================
-   🌇 ATARDECER
-======================================= */
-
-.castillo.momento-sunset{
-
-    background-image:
-        url("../../assets/images/backgrounds/castle/castle_sunset.jpg");
-
-}
-
-/* =======================================
-   🌙 NOCHE
-======================================= */
-
-.castillo.momento-night{
-
-    background-image:
-        url("../../assets/images/backgrounds/castle/castle_night.jpg");
-
-}
-/* =======================================
-   ELEMENTOS GENERALES
-======================================= */
-
-.castillo img{
-    display:block;
-
-    width:100%;
-    height:100%;
-
-    object-fit:contain;
-
-    user-select:none;
-    pointer-events:none;
-}
-
-/* =======================================
-   OBJETOS INTERACTIVOS
-======================================= */
-
-.objeto,
-.guardias1,
-.guardias2{
+.zona-castillo{
     position:absolute;
+
+    box-sizing:border-box;
+
+    z-index:10;
 
     cursor:pointer;
 
     transition:
-        transform .25s ease,
-        filter .25s ease;
-}
-
-.objeto:hover,
-.guardias1:hover,
-.guardias2:hover{
-    filter:brightness(1.2);
+        background .2s ease,
+        border-color .2s ease,
+        transform .2s ease;
 }
 
 /* =======================================
-   SALIDA — ESTANDARTE IZQUIERDO
+   NOMBRE DE LA ZONA
 ======================================= */
 
-.salir{
+.zona-castillo .name{
     position:absolute;
 
-    width:0%;
-    aspect-ratio:100 / 135;
+    top:5px;
+    left:50%;
 
-    left:45%;
-    bottom: 5%;
-}
+    transform:translateX(-50%);
 
-.salir img{
-    width:100%;
-    height:100%;
-}
+    width:max-content;
 
-/* =======================================
-   ARMERÍA — ESTANDARTE AZUL
-======================================= */
+    margin:0;
 
-.armeria{
-    position:absolute;
+    color:#ffd700;
 
-    width:0%;
-    aspect-ratio:200 / 300;
-
-    left:20%;
-    top:30%;
-}
-
-.armeria img{
-    width:100%;
-    height:100%;
-}
-
-/* =======================================
-   TRONO
-======================================= */
-
-.trono{
-    position:absolute;
-
-    width:0%;
-    aspect-ratio:210 / 300;
-
-    left:44%;
-    top:47%;
-}
-
-.trono img{
-    width:100%;
-    height:100%;
-}
-
-/* =======================================
-   MISIONES — ESTANDARTE DERECHO
-======================================= */
-
-.tablon{
-    position:absolute;
-
-    width:0%;
-    aspect-ratio:230 / 320;
-
-    right:35%;
-    top:30%;
-}
-
-.tablon img{
-    width:100%;
-    height:100%;
-}
-
-/* =======================================
-   GUARDIAS IZQUIERDA
-======================================= */
-
-.guardias1{
-    position:absolute;
-
-    width:0%;
-
-    left:15%;
-    bottom:45%;
-}
-
-.guardias1 img{
-    width:100%;
-    height:100%;
-
-    object-fit:contain;
-}
-
-/* =======================================
-   GUARDIAS DERECHA
-======================================= */
-
-.guardias2{
-    position:absolute;
-
-    width:0%;
-
-    right:30%;
-    bottom:45%;
-}
-
-.guardias2 img{
-    width:100%;
-    height:100%;
-
-    object-fit:contain;
-}
-
-/* =======================================
-   VELA DERECHA — LIGHT 1
-======================================= */
-
-.light1{
-    position:absolute;
-
-    width:10%;
-    aspect-ratio:1 / 1;
-
-    right:10%;
-    top:30%;
-}
-
-.light1 img{
-    width:100%;
-    height:100%;
-}
-
-/* =======================================
-   VELA IZQUIERDA — LIGHT 2
-======================================= */
-
-.light2{
-    position:absolute;
-
-    width:10%;
-    aspect-ratio:1 / 1;
-
-    left:5%;
-    top:30%;
-}
-
-.light2 img{
-    width:100%;
-    height:100%;
-}
-
-/* =======================================
-   LUCES SOBRE LA CHIMENEA — LIGHT 3
-======================================= */
-
-.light3{
-    position:absolute;
-
-    width:10%;
-    aspect-ratio:300 / 100;
-
-    left:44%;
-    top:43.5%;
-}
-
-.light3 img{
-    width:100%;
-    height:100%;
-}
-
-/* =======================================
-   FOGATA — LIGHT 4
-======================================= */
-
-.light4{
-    position:absolute;
-
-    width:45%;
-    aspect-ratio:3 / 1;
-
-    left:27%;
-    top:52%;
-}
-
-.light4 img{
-    width:100%;
-    height:100%;
-}
-
-/* =======================================
-   NOMBRES DE OBJETOS
-======================================= */
-
-.name{
-    display:block;
-
-    margin:12px 0 0;
-
-    color:#d4af37;
-
-    font-size:clamp(1.65rem, 3vw, 1rem);
+    font-size:clamp(18px, 2vw, 30px);
 
     font-weight:bold;
+
     text-align:center;
 
     white-space:nowrap;
@@ -318,74 +87,73 @@
          2px -2px 0 #000,
         -2px  2px 0 #000,
          2px  2px 0 #000,
-         0 2px 4px #000;
+         0 2px 5px #000;
+
+    pointer-events:none;
 }
 
 /* =======================================
-   EFECTO DE INTERACCIÓN
+   EFECTO AL PASAR EL MOUSE
 ======================================= */
 
-.objeto::after,
-.guardias1::after,
-.guardias2::after{
-    content:"";
+.zona-castillo:hover{
 
-    position:absolute;
-
-    left:50%;
-    bottom:-10px;
-
-    transform:translateX(-50%);
-
-    width:70%;
-    height:10px;
-
-    border-radius:50%;
-
-    background:rgba(0,0,0,.35);
-
-    opacity:0;
-
-    transition:.25s;
-}
-
-.objeto:hover::after,
-.guardias1:hover::after,
-.guardias2:hover::after{
-    opacity:1;
+    transform:scale(1.02);
 }
 
 /* =======================================
-   EFECTO DE LUCES — PARPADEO
+   TABLET
 ======================================= */
 
-.light1,
-.light2,
-.light3,
-.light4{
-    animation:parpadeoLuz 4s infinite ease-in-out;
+@media (max-width:900px){
 
-    transform-origin:center;
+    .castillo{
+        width:100%;
+        height:100%;
+    }
+
+    .zona-castillo .name{
+        font-size:clamp(16px, 2.5vw, 24px);
+    }
 }
 
 /* =======================================
-   DELAY DE CADA LUZ
+   CELULAR
 ======================================= */
 
-.light1{
-    animation-delay:.3s;
+@media (max-width:600px){
+
+    .castillo{
+        width:100%;
+        height:100%;
+    }
+
+    /*
+       En celular ocultamos los nombres
+       para no tapar los elementos del escenario.
+    */
+
+    .zona-castillo .name{
+        display:none;
+    }
+
+    /*
+       Las zonas continúan siendo las mismas.
+       No modificamos sus posiciones porque
+       están calculadas proporcionalmente
+       sobre el fondo 1599 × 1200.
+    */
 }
 
-.light2{
-    animation-delay:1.1s;
-}
+/* =======================================
+   CELULAR MUY PEQUEÑO
+======================================= */
 
-.light3{
-    animation-delay:.7s;
-}
+@media (max-width:380px){
 
-.light4{
-    animation-delay:1.6s;
+    .zona-castillo .name{
+        display:none;
+    }
 }
 
 /* =======================================
@@ -398,7 +166,7 @@
     top:50%;
     left:50%;
 
-    transform:translate(-50%,-50%);
+    transform:translate(-50%, -50%);
 
     width:min(900px, 90vw);
 
@@ -406,7 +174,7 @@
 }
 
 /* =======================================
-   PERFIL
+   PERFIL DEL JUGADOR
 ======================================= */
 
 .profile{
@@ -415,8 +183,6 @@
 
     box-sizing:border-box;
 
-    font-family:'MedievalSharp', cursive;
-
     margin:25px auto;
     padding:20px;
 
@@ -424,6 +190,8 @@
     align-items:center;
 
     gap:25px;
+
+    font-family:'MedievalSharp', cursive;
 
     background:#433321;
 
@@ -436,57 +204,10 @@
 }
 
 /* =======================================
-   ANIMACIÓN DE LAS LUCES
+   RESPONSIVE DEL PERFIL
 ======================================= */
 
-@keyframes parpadeoLuz{
-
-    0%{
-        opacity:1;
-        filter:brightness(1);
-    }
-
-    20%{
-        opacity:.92;
-        filter:brightness(1.08);
-    }
-
-    40%{
-        opacity:1;
-        filter:brightness(1.18);
-    }
-
-    55%{
-        opacity:.88;
-        filter:brightness(.95);
-    }
-
-    70%{
-        opacity:1;
-        filter:brightness(1.12);
-    }
-
-    85%{
-        opacity:.94;
-        filter:brightness(1.03);
-    }
-
-    100%{
-        opacity:1;
-        filter:brightness(1);
-    }
-}
-
-/* =======================================
-   TABLET
-======================================= */
-
-@media(max-width:900px){
-
-    .castillo{
-        width:100%;
-        height:100%;
-    }
+@media (max-width:900px){
 
     #panelJugador{
         width:90vw;
@@ -495,91 +216,14 @@
 
     .profile{
         max-width:100%;
+
         padding:16px;
 
         gap:16px;
     }
-
-    .name{
-        font-size:.8rem;
-    }
-
-    .light4{
-        width:25%;
-    }
 }
 
-/* =======================================
-   CELULAR
-======================================= */
-
-@media(max-width:600px){
-
-    .castillo{
-        width:100%;
-        height:100%;
-    }
-
-    /*
-       En celular los nombres dejan de competir
-       con los elementos del escenario.
-    */
-
-    .name{
-        display:none;
-    }
-
-    /*
-       Los objetos conservan su posición relativa
-       pero reducen ligeramente su escala.
-    */
-
-    .salir{
-        width:13%;
-    }
-
-    .armeria{
-        width:15%;
-    }
-
-    .trono{
-        width:22%;
-    }
-
-    .tablon{
-        width:23%;
-    }
-
-    /*
-       Guardias
-    */
-
-    .guardias1,
-    .guardias2{
-        width:36%;
-        height:28%;
-    }
-
-    /*
-       Luces
-    */
-
-    .light1,
-    .light2{
-        width:6%;
-    }
-
-    .light3{
-        width:23%;
-    }
-
-    .light4{
-        width:10%;
-    }
-
-    /*
-       Perfil
-    */
+@media (max-width:600px){
 
     #panelJugador{
         width:94vw;
@@ -591,47 +235,5 @@
         gap:12px;
 
         border-width:2px;
-    }
-}
-
-/* =======================================
-   CELULAR MUY PEQUEÑO
-======================================= */
-
-@media(max-width:380px){
-
-    .salir{
-        width:12%;
-    }
-
-    .armeria{
-        width:14%;
-    }
-
-    .trono{
-        width:21%;
-    }
-
-    .tablon{
-        width:22%;
-    }
-
-    .guardias1,
-    .guardias2{
-        width:34%;
-        height:27%;
-    }
-
-    .light1,
-    .light2{
-        width:5.5%;
-    }
-
-    .light3{
-        width:21%;
-    }
-
-    .light4{
-        width:9%;
     }
 }

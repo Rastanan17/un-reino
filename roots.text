@@ -202,6 +202,8 @@ Un Reino<
 		navigation<
 			(vacío)
 		ui<
+			hud.css
+			hud.js
 			notifications.css - (vacío)
 			notifications.js - (vacío)
 			pergamino.css
@@ -260,6 +262,7 @@ Un Reino<
 				explorer.jpg
 				witch.jpg
 				wolf.jpg
+			armeria.js
 			portal.css
 			portal.js
 		profiles<

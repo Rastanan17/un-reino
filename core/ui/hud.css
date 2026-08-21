@@ -1,0 +1,128 @@
+/* =======================================
+   REINO DE MÍRRAFEN
+   HUD DEL JUGADOR
+======================================= */
+
+#playerHUD{
+    position:absolute;
+    top:10px;
+    left:50%;
+    transform:translateX(-50%);
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    z-index:1000;
+
+    padding:6px 12px;
+
+    background:#4b2d16;
+    border:2px solid #c9a227;
+    border-radius:12px;
+
+    box-sizing:border-box;
+
+    pointer-events:none;
+}
+
+/* =======================================
+   AVATAR
+======================================= */
+
+.hudAvatar{
+    width:48px;
+    height:48px;
+
+    flex-shrink:0;
+
+    border:2px solid #ffd700;
+    border-radius:50%;
+
+    overflow:hidden;
+
+    background:#111;
+}
+
+.hudAvatar img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+    display:block;
+}
+
+/* =======================================
+   NIVEL Y OQUOS
+======================================= */
+
+.hudLevel,
+.hudCoins{
+    color:#fff;
+    font-family:"MedievalSharp", serif;
+
+    font-size:18px;
+    font-weight:bold;
+
+    white-space:nowrap;
+
+    text-shadow:
+        2px 2px 0 #000,
+        0 0 4px #000;
+}
+
+/* =======================================
+   OQUOS
+======================================= */
+
+.hudCoins{
+    color:#ffd700;
+}
+
+/* =======================================
+   PC
+======================================= */
+
+.modo-pc #playerHUD{
+    top:12px;
+}
+
+/* =======================================
+   TABLET
+======================================= */
+
+.modo-tablet #playerHUD{
+    top:10px;
+    padding:5px 10px;
+    gap:9px;
+}
+
+.modo-tablet .hudAvatar{
+    width:42px;
+    height:42px;
+}
+
+.modo-tablet .hudLevel,
+.modo-tablet .hudCoins{
+    font-size:16px;
+}
+
+/* =======================================
+   CELULAR
+======================================= */
+
+.modo-celular #playerHUD{
+    top:8px;
+    padding:4px 8px;
+    gap:7px;
+}
+
+.modo-celular .hudAvatar{
+    width:34px;
+    height:34px;
+}
+
+.modo-celular .hudLevel,
+.modo-celular .hudCoins{
+    font-size:13px;
+}

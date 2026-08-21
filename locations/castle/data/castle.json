@@ -1,77 +1,302 @@
 [
-    {
-      "id": 1,
-      "guardia": "guardias1",
-      "texto": "Paso firme, ciudadano. El Rey no tolera alborotadores."
-    },
-    {
-      "id": 2,
-      "guardia": "guardias1",
-      "texto": "Si buscas audiencia con el Lord, tendrás que esperar como todos."
-    },
-    {
-      "id": 3,
-      "guardia": "guardias1",
-      "texto": "Llevo ocho horas parado con esta armadura... mis pies ya no existen."
-    },
-    {
-      "id": 4,
-      "guardia": "guardias1",
-      "texto": "Alto ahí. ¿Tienes permiso para rondar por los pasillos del castillo?"
-    },
-    {
-      "id": 5,
-      "guardia": "guardias1",
-      "texto": "Mantén las manos donde pueda verlas y no tendremos problemas."
-    },
-    {
-      "id": 6,
-      "guardia": "guardias1",
-      "texto": "¿Has visto al bufón? Si vuelve a esconder mi yelmo, lo lanzaré al foso."
-    },
-    {
-      "id": 7,
-      "guardia": "guardias1",
-      "texto": "Circule, ciudadano. No hay nada que ver aquí."
-    },
-    {
-      "id": 8,
-      "guardia": "guardias1",
-      "texto": "La guardia nocturna vio luces sospechosas en el bosque... no me gusta nada."
-    },
-    {
-      "id": 9,
-      "guardia": "guardias2",
-      "texto": "Dicen que el cocinero preparó jabalí asado hoy... ¡ojalá nos dejen las sobras!"
-    },
-    {
-      "id": 10,
-      "guardia": "guardias2",
-      "texto": "No me mires a mí, yo solo sigo las órdenes del capitán."
-    },
-    {
-      "id": 11,
-      "guardia": "guardias2",
-      "texto": "Un paso en falso y pasarás la noche en la mazmorra más fría del castillo."
-    },
-    {
-      "id": 12,
-      "guardia": "guardias2",
-      "texto": "¿Acaso parezco un guía? El salón del trono está al fondo a la derecha."
-    },
-    {
-      "id": 13,
-      "guardia": "guardias2",
-      "texto": "Solía ser un aventurero como tú, hasta que acepté este trabajo en la guardia."
-    },
-    {
-      "id": 14,
-      "guardia": "guardias2",
-      "texto": "Asegúrate de no hacer ruido cerca de los aposentos reales."
-    },
-    {
-      "id": 15,
-      "guardia": "guardias2",
-      "texto": "A veces me pregunto si estas armaduras son de adorno o realmente protegen."
-    }
-  ]
+  {
+    "id": 1,
+    "guardia": "guardias1",
+    "texto": "Paso firme, ciudadano. El Rey no tolera alborotadores."
+  },
+  {
+    "id": 2,
+    "guardia": "guardias1",
+    "texto": "Si buscas audiencia con el Lord, tendrás que esperar como todos."
+  },
+  {
+    "id": 3,
+    "guardia": "guardias1",
+    "texto": "Muévete de una vez, mi turno terminó hace diez minutos."
+  },
+  {
+    "id": 4,
+    "guardia": "guardias1",
+    "texto": "Otro campesino más... Como si no tuviera suficiente con este casco pesado."
+  },
+  {
+    "id": 5,
+    "guardia": "guardias1",
+    "texto": "No toques las antorchas, no tengo ganas de apagar otro incendio."
+  },
+  {
+    "id": 6,
+    "guardia": "guardias1",
+    "texto": "¿No tenés un hogar al cual ir a molestar?"
+  },
+  {
+    "id": 7,
+    "guardia": "guardias1",
+    "texto": "El próximo que me pregunte la hora va a terminar en los calabozos."
+  },
+  {
+    "id": 8,
+    "guardia": "guardias1",
+    "texto": "Odio las guardias nocturnas. El viento de este castillo te hiela los huesos."
+  },
+  {
+    "id": 9,
+    "guardia": "guardias1",
+    "texto": "Avanza rápido. Mi lanza pesa tonelada y media hoy."
+  },
+  {
+    "id": 10,
+    "guardia": "guardias1",
+    "texto": "Si no venís a pagar impuestos, despejá la entrada."
+  },
+  {
+    "id": 11,
+    "guardia": "guardias1",
+    "texto": "Por todos los cielos... ¿Cuándo van a engrasar las puertas de esta fortaleza?"
+  },
+  {
+    "id": 12,
+    "guardia": "guardias1",
+    "texto": "Ni se te ocurra mirar de reojo hacia la sala del trono."
+  },
+  {
+    "id": 13,
+    "guardia": "guardias1",
+    "texto": "Llevo doce horas parado acá y nadie me ofreció ni un sorbo de agua."
+  },
+  {
+    "id": 14,
+    "guardia": "guardias1",
+    "texto": "Si rompes algo dentro del castillo, lo pagás con trabajo en las caballerizas."
+  },
+  {
+    "id": 15,
+    "guardia": "guardias1",
+    "texto": "Circula, circula. No hay nada interesante para ver acá."
+  },
+  {
+    "id": 16,
+    "guardia": "guardias2",
+    "texto": "A veces me pregunto si estas armaduras son de adorno o realmente protegen."
+  },
+  {
+    "id": 17,
+    "guardia": "guardias2",
+    "texto": "¿Sabías que el dragón del rey en realidad le tiene miedo a los ratones?"
+  },
+  {
+    "id": 18,
+    "guardia": "guardias2",
+    "texto": "Mi lanza y yo tenemos una gran relación: ella se queda quieta y yo me apoyo."
+  },
+  {
+    "id": 19,
+    "guardia": "guardias2",
+    "texto": "Si entrás al castillo, avisale al cocinero que me guarde un muslo de pollo."
+  },
+  {
+    "id": 20,
+    "guardia": "guardias2",
+    "texto": "Me dijeron 'mantenete alerta', pero nadie me dijo cómo no dormirme parado."
+  },
+  {
+    "id": 21,
+    "guardia": "guardias2",
+    "texto": "Tengo un chiste sobre catapultas, pero es muy pesado."
+  },
+  {
+    "id": 22,
+    "guardia": "guardias2",
+    "texto": "¿Por qué los fantasmas del castillo no entran a las torres? ¡Porque les da vértigo!"
+  },
+  {
+    "id": 23,
+    "guardia": "guardias2",
+    "texto": "Dicen que el escudo del Rey refleja la verdad... yo solo veo mi feo casco."
+  },
+  {
+    "id": 24,
+    "guardia": "guardias2",
+    "texto": "Te dejaría pasar gratis, pero el capitán me cobraría las mallas de hierro."
+  },
+  {
+    "id": 25,
+    "guardia": "guardias2",
+    "texto": "¡Alto ahí! ...Nah, mentira, pasá tranquilo, me aburría estar solo."
+  },
+  {
+    "id": 26,
+    "guardia": "guardias2",
+    "texto": "Si ves volar una gárgola, no te preocupes, seguro se le cayó la billetera."
+  },
+  {
+    "id": 27,
+    "guardia": "guardias2",
+    "texto": "Lo bueno de usar casco es que nadie ve cuando estoy haciendo caras feísimas."
+  },
+  {
+    "id": 28,
+    "guardia": "guardias2",
+    "texto": "¿Buscás al bufón real? Creo que se tomó el día, así que me toca a mí."
+  },
+  {
+    "id": 29,
+    "guardia": "guardias2",
+    "texto": "Cuidado con las escaleras del patio, están más torcidas que las leyes del reino."
+  },
+  {
+    "id": 30,
+    "guardia": "guardias2",
+    "texto": "Soy el guardia más rápido del castillo... cuando van a servir el almuerzo."
+  },
+  {
+    "id": 31,
+    "guardia": "guardias3",
+    "texto": "Asegúrate de no hacer ruido cerca de los aposentos reales."
+  },
+  {
+    "id": 32,
+    "guardia": "guardias3",
+    "texto": "Bienvenido al castillo, viajero. Que tengas un excelente día."
+  },
+  {
+    "id": 33,
+    "guardia": "guardias3",
+    "texto": "Si te perdés en los pasillos, podés preguntarme lo que necesites."
+  },
+  {
+    "id": 34,
+    "guardia": "guardias3",
+    "texto": "Cuidado con el escalón de la entrada, suele estar resbaladizo por el musgo."
+  },
+  {
+    "id": 35,
+    "guardia": "guardias3",
+    "texto": "Es un honor resguardar las puertas para vecinos tan amables como vos."
+  },
+  {
+    "id": 36,
+    "guardia": "guardias3",
+    "texto": "Si venís por la feria del patio interior, está repleta de cosas hermosas."
+  },
+  {
+    "id": 37,
+    "guardia": "guardias3",
+    "texto": "Que el Rey te acompañe en tus aventuras por el territorio."
+  },
+  {
+    "id": 38,
+    "guardia": "guardias3",
+    "texto": "Tómate tu tiempo, las visitas siempre son bien recibidas en la fortaleza."
+  },
+  {
+    "id": 39,
+    "guardia": "guardias3",
+    "texto": "Si tenés sed, hay un pilón de agua fresca cerca de las caballerizas."
+  },
+  {
+    "id": 40,
+    "guardia": "guardias3",
+    "texto": "Buen camino, valiente explorador. Volvé a visitarnos pronto."
+  },
+  {
+    "id": 41,
+    "guardia": "guardias3",
+    "texto": "Asegúrate de abrigo, la brisa de la torre más alta pega fuerte hoy."
+  },
+  {
+    "id": 42,
+    "guardia": "guardias3",
+    "texto": "Los guardias estamos para protegerte, no dudes en pedir ayuda."
+  },
+  {
+    "id": 43,
+    "guardia": "guardias3",
+    "texto": "Qué linda espada llevás al cinto, se nota que la cuidás bien."
+  },
+  {
+    "id": 44,
+    "guardia": "guardias3",
+    "texto": "Pasa adelante, el salón principal está climatizado junto a las chimeneas."
+  },
+  {
+    "id": 45,
+    "guardia": "guardias3",
+    "texto": "Espero que encuentres lo que venís a buscar en el reino."
+  },
+  {
+    "id": 46,
+    "guardia": "guardias4",
+    "texto": "¿Escuchaste eso? Juraría que algo se movió entre las sombras de las almenas."
+  },
+  {
+    "id": 47,
+    "guardia": "guardias4",
+    "texto": "Por favor no hagas movimientos bruscos... me asusto muy fácil."
+  },
+  {
+    "id": 48,
+    "guardia": "guardias4",
+    "texto": "Dicen que por las noches se pasea el fantasma del antiguo Lord por acá..."
+  },
+  {
+    "id": 49,
+    "guardia": "guardias4",
+    "texto": "¡Ay! Pensé que eras un duende... Qué susto me diste al doblar la esquina."
+  },
+  {
+    "id": 50,
+    "guardia": "guardias4",
+    "texto": "¿Aseguraste bien el cerrojo de la puerta al entrar? Decime que sí."
+  },
+  {
+    "id": 51,
+    "guardia": "guardias4",
+    "texto": "No me gusta la oscuridad de los pasillos subterráneos, huele a monstruo."
+  },
+  {
+    "id": 52,
+    "guardia": "guardias4",
+    "texto": "Si viene una plaga o un dragón, yo te aviso... desde arriba de un árbol."
+  },
+  {
+    "id": 53,
+    "guardia": "guardias4",
+    "texto": "¿Vos también escuchás un susurro en las murallas o estoy volviéndome loco?"
+  },
+  {
+    "id": 54,
+    "guardia": "guardias4",
+    "texto": "Espero que no haya murciélagos volando por el gran salón esta noche."
+  },
+  {
+    "id": 55,
+    "guardia": "guardias4",
+    "texto": "Uf, menos mal que sos un ciudadano. Pensé que venía una tropa enemiga."
+  },
+  {
+    "id": 56,
+    "guardia": "guardias4",
+    "texto": "Mi escudo tiembla... bueno, en realidad tiembla mi mano detrás del escudo."
+  },
+  {
+    "id": 57,
+    "guardia": "guardias4",
+    "texto": "Por favor, camina despacio. Los ruidos fuertes me hacen saltar."
+  },
+  {
+    "id": 58,
+    "guardia": "guardias4",
+    "texto": "Si llega a haber un ataque, decile a mi mamá que la quería mucho."
+  },
+  {
+    "id": 59,
+    "guardia": "guardias4",
+    "texto": "¿Ese crujido fue la madera del puente o una criatura acechando?"
+  },
+  {
+    "id": 60,
+    "guardia": "guardias4",
+    "texto": "No me dejes solo acá afuera mucho tiempo... este lugar da bastante escalofrío."
+  }
+]

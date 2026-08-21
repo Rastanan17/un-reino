@@ -1,115 +1,354 @@
 // =======================================
 // ALDEA DE MÍRRAFEN
 // =======================================
+
 // =======================================
 // DIÁLOGOS
 // =======================================
-let dialogosAldea = [];
+
+let dialogosAldea = {
+    nino: [],
+    aldeano: [],
+    aldeana: []
+};
+
+// =======================================
+// CARGAR DIÁLOGOS
+// =======================================
+
 async function cargarDialogosAldea(){
+
     try{
-        const respuesta = await fetch("locations/village/data/villagers.json");
+
+        const respuesta =
+            await fetch("locations/village/data/villagers.json");
+
         if(!respuesta.ok){
-            throw new Error("No se pudo cargar village.json");
+
+            throw new Error(
+                "No se pudo cargar villagers.json"
+            );
         }
-        dialogosAldea = await respuesta.json();
-        console.log("Diálogos de la aldea cargados:", dialogosAldea);
+
+        const datos = await respuesta.json();
+
+        dialogosAldea =
+            datos.dialogos_aldea || {
+                nino: [],
+                aldeano: [],
+                aldeana: []
+            };
+
+        console.log(
+            "🏡 Diálogos de la aldea cargados:",
+            dialogosAldea
+        );
+
     }catch(error){
-        console.error("Error cargando diálogos de la aldea:", error);
+
+        console.error(
+            "❌ Error cargando diálogos de la aldea:",
+            error
+        );
+
     }
+
 }
+
 // =======================================
 // MOSTRAR ALDEA
 // =======================================
+
 function mostrarAldea(){
+
     const momento =
         obtenerMomentoDelDia();
+
+        console.log("🌅 MOMENTO RECIBIDO POR ALDEA:", momento);
+console.log("🌅 TIPO:", typeof momento);
 
     console.log(
         "🕐 Momento del día:",
         momento
     );
-    const content = document.getElementById("content");
-    if(!content) return;
+
+    const content =
+        document.getElementById("content");
+
+    if(!content){
+
+        console.error(
+            "❌ No se encontró #content"
+        );
+
+        return;
+    }
+
+    // ===================================
+    // ESCENARIO
+    // ===================================
+
     content.innerHTML = `
         <section class="aldea momento-${momento}">
+
             <!-- =================================
-                 NAVEGACIÓN
+                PERSONAJES — ALDEANAS
             ================================== -->
-            <!-- GUARDIA → CASTILLO -->
-            <div class="aldea-item guardia" onclick="reproducirSonidoAldea('assets/sounds/man_talk.mp3'); entrarArmeriaDesdeAldea()">
-                <img src="locations/village/images/castillo.png" alt="guardia">
+
+            <div class="zona-interactiva senora1">
+                <span class="nombre-zona">SEÑORAS</span>
+                <canvas
+                    id="senora1"
+                    class="zona-aldea"
+                    onclick="
+                        reproducirSonidoAldea(
+                            'assets/sounds/woman_talk.mp3'
+                        );
+                        hablarPersonaAldea('aldeana');
+                    "
+                ></canvas>
             </div>
-            <!-- ANCIANO → MAPA -->
-            <div class="aldea-item mapa" onclick="reproducirSFX('exit.mp3'); irA('village', 'map', mostrarMapaReino)">
-                <img src="locations/village/images/mapa.png" alt="Mapa">
-                <p class="name">Salir</p>
+
+            <div class="zona-interactiva senora2">
+                <span class="nombre-zona">SEÑORA</span>
+                <canvas
+                    id="senora2"
+                    class="zona-aldea"
+                    onclick="
+                        reproducirSonidoAldea(
+                            'assets/sounds/woman_talk.mp3'
+                        );
+                        hablarPersonaAldea('aldeana');
+                    "
+                ></canvas>
             </div>
-            <!-- MERCADO -->
-            <div class="aldea-item tienda" onclick="reproducirSonidoAldea('assets/sounds/woman_talk.mp3'); hablarPersonaAldea()">
-                <p class="name">Mercado</p>
-                <img src="locations/village/images/mercado.png" alt="Mercado">
+
+            <div class="zona-interactiva senora3">
+                <span class="nombre-zona">SEÑORA</span>
+                <canvas
+                    id="senora3"
+                    class="zona-aldea"
+                    onclick="
+                        reproducirSonidoAldea(
+                            'assets/sounds/woman_talk.mp3'
+                        );
+                        hablarPersonaAldea('aldeana');
+                    "
+                ></canvas>
             </div>
-            <!-- MISIONES -->
-            <div class="aldea-item misiones" onclick="reproducirSonidoAldea('assets/sounds/woman_talk.mp3'); mostrarMisionesAldea()">
-                <p class="name">Misiones</p>
-                <img src="locations/village/images/misiones.png" alt="Misiones">
+
+            <div class="zona-interactiva senora4">
+                <span class="nombre-zona">SEÑORAS</span>
+                <canvas
+                    id="senora4"
+                    class="zona-aldea"
+                    onclick="
+                        reproducirSonidoAldea(
+                            'assets/sounds/woman_talk.mp3'
+                        );
+                        hablarPersonaAldea('aldeana');
+                    "
+                ></canvas>
             </div>
+
             <!-- =================================
-                 PERSONAJES
+                PERSONAJES — ALDEANOS
             ================================== -->
-            <div class="aldea-personaje persona1" onclick="reproducirSonidoAldea('assets/sounds/man_talk.mp3'); hablarPersonaAldea('persona1')">
-                <img src="locations/village/images/persona1.png" alt="Habitante">
+
+            <div class="zona-interactiva senor1">
+                <span class="nombre-zona">SEÑOR</span>
+                <canvas
+                    id="senor1"
+                    class="zona-aldea"
+                    onclick="
+                        reproducirSonidoAldea(
+                            'assets/sounds/man_talk.mp3'
+                        );
+                        hablarPersonaAldea('aldeano');
+                    "
+                ></canvas>
             </div>
-            <div class="aldea-personaje persona2" onclick="reproducirSonidoAldea('assets/sounds/man_talk.mp3'); hablarPersonaAldea('persona2')">
-                <img src="locations/village/images/persona2.png" alt="Habitante">
+
+            <div class="zona-interactiva senor2">
+                <span class="nombre-zona">SEÑOR</span>
+                <canvas
+                    id="senor2"
+                    class="zona-aldea"
+                    onclick="
+                        reproducirSonidoAldea(
+                            'assets/sounds/man_talk.mp3'
+                        );
+                        hablarPersonaAldea('aldeano');
+                    "
+                ></canvas>
             </div>
-            <div class="aldea-personaje persona3" onclick="reproducirSonidoAldea('assets/sounds/man_talk.mp3'); hablarPersonaAldea('persona3')">
-                <img src="locations/village/images/persona3.png" alt="Niño">
+
+            <div class="zona-interactiva senor3">
+                <span class="nombre-zona">SEÑOR</span>
+                <canvas
+                    id="senor3"
+                    class="zona-aldea"
+                    onclick="
+                        reproducirSonidoAldea(
+                            'assets/sounds/man_talk.mp3'
+                        );
+                        hablarPersonaAldea('aldeano');
+                    "
+                ></canvas>
             </div>
-            <div class="aldea-personaje persona4" onclick="reproducirSonidoAldea('assets/sounds/man_talk.mp3'); hablarPersonaAldea('persona4')">
-                <img src="locations/village/images/persona4.png" alt="Niño">
-            </div>
-            <div class="aldea-personaje people4" onclick="reproducirSonidoAldea('assets/sounds/woman_talk.mp3'); hablarPersonaAldea('people4')">
-                <img src="locations/village/images/people4.png" alt="Habitante">
-            </div>
-            <div class="aldea-personaje people7" onclick="reproducirSonidoAldea('assets/sounds/woman_talk.mp3'); hablarPersonaAldea('people7')">
-                <img src="locations/village/images/people7.png" alt="Habitante">
-            </div>
-            <div class="aldea-personaje people9" onclick="reproducirSonidoAldea('assets/sounds/woman_talk.mp3'); hablarPersonaAldea('people9')">
-                <img src="locations/village/images/people9.png" alt="Niña">
-            </div>
+
             <!-- =================================
-                 PERROS
+                NIÑOS
             ================================== -->
-            <div class="aldea-animal dog1" onclick="reproducirSonidoAldea('assets/sounds/perro1.mp3')">
-                <img src="locations/village/images/dog1.png" alt="Perro">
+
+            <div class="zona-interactiva nino1">
+                <span class="nombre-zona">NIÑOS</span>
+                <canvas
+                    id="nino1"
+                    class="zona-aldea"
+                    onclick="
+                        reproducirSonidoAldea(
+                            'assets/sounds/man_talk.mp3'
+                        );
+                        hablarPersonaAldea('nino');
+                    "
+                ></canvas>
             </div>
-           <div class="aldea-animal dog2" onclick="reproducirSonidoAldea('assets/sounds/perro2.mp3')">
-                <img src="locations/village/images/dog2.png" alt="Perro">
+
+            <div class="zona-interactiva nino2">
+                <span class="nombre-zona">NIÑOS</span>
+                <canvas
+                    id="nino2"
+                    class="zona-aldea"
+                    onclick="
+                        reproducirSonidoAldea(
+                            'assets/sounds/man_talk.mp3'
+                        );
+                        hablarPersonaAldea('nino');
+                    "
+                ></canvas>
             </div>
-            <div class="aldea-animal dog3" onclick="reproducirSonidoAldea('assets/sounds/perro3.mp3')">
-                <img src="locations/village/images/dog3.png" alt="Perro">
+
+            <div class="zona-interactiva nino3">
+                <span class="nombre-zona">NIÑOS</span>
+                <canvas
+                    id="nino3"
+                    class="zona-aldea"
+                    onclick="
+                        reproducirSonidoAldea(
+                            'assets/sounds/man_talk.mp3'
+                        );
+                        hablarPersonaAldea('nino');
+                    "
+                ></canvas>
             </div>
-            <div class="aldea-animal dog4" onclick="reproducirSonidoAldea('assets/sounds/perro1.mp3')">
-                <img src="locations/village/images/dog4.png" alt="Perro">
-            </div>
+
             <!-- =================================
-                 VASIJAS
+                PATOS
             ================================== -->
-            <div class="aldea-objeto vasija1" onclick="reproducirSonidoAldea('assets/sounds/woman_talk.mp3')">
-                <img src="locations/village/images/vasija1.png" alt="Vasija">
+
+            <div class="zona-interactiva patos1">
+                <span class="nombre-zona">PATOS</span>
+                <canvas
+                    id="patos1"
+                    class="zona-aldea"
+                    onclick="
+                        reproducirSonidoAldea(
+                            'assets/sounds/pato1.mp3'
+                        );
+                    "
+                ></canvas>
             </div>
-            <div class="aldea-objeto vasija2" onclick="reproducirSonidoAldea('assets/sounds/man_talk.mp3')">
-                <img src="locations/village/images/vasija2.png" alt="Vasija">
+
+            <div class="zona-interactiva patos2">
+                <span class="nombre-zona">PATOS</span>
+                <canvas
+                    id="patos2"
+                    class="zona-aldea"
+                    onclick="
+                        reproducirSonidoAldea(
+                            'assets/sounds/pato2.mp3'
+                        );
+                    "
+                ></canvas>
             </div>
+
+            <!-- =================================
+                MISIONES
+            ================================== -->
+
+            <div class="zona-interactiva campana">
+                <span class="nombre-zona">MISIONES</span>
+                <canvas
+                    id="campana"
+                    class="zona-aldea"
+                    onclick="
+                        reproducirSFX('open_place.wav');
+                        mostrarMisionesAldea();
+                    "
+                ></canvas>
+            </div>
+
+            <!-- =================================
+                SALIDA → MAPA
+            ================================== -->
+
+            <div class="zona-interactiva salidaAldea">
+                <span class="nombre-zona">SALIDA</span>
+                <canvas
+                    id="salidaAldea"
+                    class="zona-aldea salidaAldea"
+                    onclick="
+                        reproducirSFX('exit.mp3');
+                        irA(
+                            'village',
+                            'map',
+                            mostrarMapaReino
+                        );
+                    "
+                ></canvas>
+            </div>
+
+            <!-- =================================
+                ARMERÍA
+            ================================== -->
+
+            <div class="zona-interactiva casaConTorre">
+                <span class="nombre-zona">ARMERIA</span>
+                <canvas
+                    id="casaConTorre"
+                    class="zona-aldea"
+                    onclick="
+                        reproducirSonidoAldea(
+                            'assets/sounds/man_talk.mp3'
+                        );
+                        entrarArmeriaDesdeAldea();
+                    "
+                ></canvas>
+            </div>
+
         </section>
-    `;    // Cargar diálogos si todavía no están cargados
-    if(dialogosAldea.length === 0){
+
+    `;
+
+    // ===================================
+    // CARGAR DIÁLOGOS
+    // ===================================
+
+    if(
+        !dialogosAldea.nino.length &&
+        !dialogosAldea.aldeano.length &&
+        !dialogosAldea.aldeana.length
+    ){
+
         cargarDialogosAldea();
+
     }
+
 }
+
 // =======================================
-// ARMERÍA DE LA ALDEA
+// ARMERÍA
 // =======================================
 
 function entrarArmeriaDesdeAldea(){
@@ -117,54 +356,99 @@ function entrarArmeriaDesdeAldea(){
     origenArmeria = "aldea";
 
     mostrarArmeria();
+
 }
+
 // =======================================
-// CASTILLO
+// MISIONES
 // =======================================
-function irAlCastillo(){
-    mostrarCastillo();
-}
-// =======================================
-// MERCADO
-// =======================================
-function entrarMercadoDesdeAldea(){
-    mostrarMercado();
-}
-// =======================================
-// MISIONES DE LA ALDEA
-// =======================================
+
 function mostrarMisionesAldea(){
+
     filtroZona = "Aldea";
+
     mostrarMisiones();
+
 }
+
 // =======================================
-// REPRODUCIR SONIDO DE ALDEA
+// SONIDOS
 // =======================================
+
 function reproducirSonidoAldea(ruta){
-    const audio = new Audio(ruta);
+
+    const audio =
+        new Audio(ruta);
+
     audio.volume = 0.8;
+
     audio.play().catch(error => {
-        console.warn("No se pudo reproducir el sonido:", error);
+
+        console.warn(
+            "No se pudo reproducir el sonido:",
+            error
+        );
+
     });
-    // Máximo 5 segundos
+
     setTimeout(() => {
+
         audio.pause();
+
         audio.currentTime = 0;
+
     }, 5000);
+
 }
+
 // =======================================
 // HABLAR CON HABITANTE
 // =======================================
-function hablarPersonaAldea(personaje){
-    const disponibles = dialogosAldea.filter(
-        dialogo => dialogo.personaje === personaje
-    );
-    if(disponibles.length === 0){
-        mostrarMensaje("🏡 Habitante de Mírrafen",
+
+function hablarPersonaAldea(tipo){
+
+    const disponibles =
+        dialogosAldea[tipo];
+
+    if(
+        !disponibles ||
+        disponibles.length === 0
+    ){
+
+        mostrarMensaje(
+            "🏡 Habitante de Mírrafen",
             "Hola, viajero."
         );
+
         return;
     }
-    const dialogo = disponibles[ Math.floor(Math.random() * disponibles.length) ];
-    mostrarMensaje("🏡 Habitante de Mírrafen", dialogo.texto);
+
+    // ===================================
+    // FRASE ALEATORIA
+    // ===================================
+
+    const dialogo =
+        disponibles[
+            Math.floor(
+                Math.random() *
+                disponibles.length
+            )
+        ];
+
+    // ===================================
+    // MOSTRAR DIÁLOGO
+    // ===================================
+
+    mostrarMensaje(
+
+        tipo === "nino"
+            ? "🧒 Niño de Mírrafen"
+            : tipo === "aldeana"
+                ? "👩 Aldeana de Mírrafen"
+                : "👨 Aldeano de Mírrafen",
+
+        dialogo.texto
+
+    );
+
 }

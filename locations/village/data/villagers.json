@@ -1,102 +1,109 @@
-[
-    {
-      "id": 1,
-      "tipo": "aldeano",
-      "texto": "Las cosechas vienen bien este año, aunque necesitamos un poco más de lluvia."
-    },
-    {
-      "id": 2,
-      "tipo": "aldeano",
-      "texto": "Asegúrate de estar dentro de casa antes de que caiga el sol. El bosque no es seguro de noche."
-    },
-    {
-      "id": 3,
-      "tipo": "aldeano",
-      "texto": "¡Buen día, viajero! Si buscas provisiones, deberías dar una vuelta por el mercado."
-    },
-    {
-      "id": 4,
-      "tipo": "aldeano",
-      "texto": "Dicen que los guardias del castillo están más estrictos que de costumbre... algo habrá pasado."
-    },
-    {
-      "id": 5,
-      "tipo": "aldeano",
-      "texto": "Trabajar en la tierra es duro, pero es una vida honesta."
-    },
-    {
-      "id": 6,
-      "tipo": "aldeano",
-      "texto": "¿Escuchaste los aullidos de anoche? Definitivamente no eran lobos comunes."
-    },
-    {
-      "id": 7,
-      "tipo": "aldeano",
-      "texto": "El pan de la panadería del centro sale calentito al mediodía, no te lo pierdas."
-    },
-    {
-      "id": 8,
-      "tipo": "aldeano",
-      "texto": "A veces sueño con dejar la aldea y recorrer el mundo... pero alguien tiene que cuidar a los animales."
-    },
-    {
-      "id": 9,
-      "tipo": "aldeana",
-      "texto": "El río viene crecido hoy. Tené cuidado si vas a cruzar por las piedras."
-    },
-    {
-      "id": 10,
-      "tipo": "aldeana",
-      "texto": "Si vas a la biblioteca, dile al monje que no olvide devolver el grimorio de hierbas."
-    },
-    {
-      "id": 11,
-      "tipo": "aldeana",
-      "texto": "Mis gallinas no han puesto un solo huevo en toda la semana, presiento que algo las asustó."
-    },
-    {
-      "id": 12,
-      "tipo": "aldeana",
-      "texto": "¡Qué lindo día para dar un paseo por la plaza!"
-    },
-    {
-      "id": 13,
-      "tipo": "aldeana",
-      "texto": "Dicen que el anciano del extremo del pueblo conoce remedios para cualquier mal."
-    },
-    {
-      "id": 14,
-      "tipo": "aldeana",
-      "texto": "Asegúrate de cerrar bien las puertas si vas a descansar en la posada."
-    },
-    {
-      "id": 15,
-      "tipo": "nino",
-      "texto": "¡Mire, señor! ¡Atrapé una rana gigante en el arroyo!"
-    },
-    {
-      "id": 16,
-      "tipo": "nino",
-      "texto": "Mi papá dice que cuando sea grande podré tener mi propia espada de verdad."
-    },
-    {
-      "id": 17,
-      "tipo": "nino",
-      "texto": "¡Jugamos a los caballeros y los monstruos! ¿Querés jugar con nosotros?"
-    },
-    {
-      "id": 18,
-      "tipo": "nino",
-      "texto": "Mamá me dijo que no me acerque al puente viejo, pero ahí es donde se esconden los mejores insectos."
-    },
-    {
-      "id": 19,
-      "tipo": "anciano",
-      "texto": "He visto pasar muchos reyes y guerras... pero este pueblo sigue en pie."
-    },
-    {
-      "id": 20,
-      "tipo": "anciano",
-      "texto": "En mis tiempos, el bosque no era tan profundo ni tan oscuro como ahora..."
-    }
-  ]
+{
+  "dialogos_aldea": {
+    "nino": [
+      { "id": 1, "tipo": "nino", "texto": "¡Hola, aventurero!" },
+      { "id": 2, "tipo": "nino", "texto": "¿Querés jugar a las escondidas?" },
+      { "id": 3, "tipo": "nino", "texto": "¡Mirá la piedra que encontré!" },
+      { "id": 4, "tipo": "nino", "texto": "Hoy no tengo ganas de hacer la tarea." },
+      { "id": 5, "tipo": "nino", "texto": "¿Viste mi pelota por ahí?" },
+      { "id": 6, "tipo": "nino", "texto": "¡Ese perro es re lindo!" },
+      { "id": 7, "tipo": "nino", "texto": "¡Te apuesto una carrera hasta el árbol!" },
+      { "id": 8, "tipo": "nino", "texto": "Mi mamá me dijo que vuelva antes del atardecer." },
+      { "id": 9, "tipo": "nino", "texto": "¿Tenés caramelos?" },
+      { "id": 10, "tipo": "nino", "texto": "¡Cuando sea grande voy a explorar todo el mapa!" },
+      { "id": 11, "tipo": "nino", "texto": "Mi hermano no me deja jugar con él." },
+      { "id": 12, "tipo": "nino", "texto": "¡Atrapé una mariposa re grande!" },
+      { "id": 13, "tipo": "nino", "texto": "¿Vos también tenés misiones?" },
+      { "id": 14, "tipo": "nino", "texto": "Ayer vi una estrella fugaz." },
+      { "id": 15, "tipo": "nino", "texto": "¡Miren, un escarabajo gigante!" },
+      { "id": 16, "tipo": "nino", "texto": "Me gusta la lluvia para saltar en los charcos." },
+      { "id": 17, "tipo": "nino", "texto": "¡Cuidado con el barro!" },
+      { "id": 18, "tipo": "nino", "texto": "¿Aprendiste a andar en bici sin rueditas?" },
+      { "id": 19, "tipo": "nino", "texto": "Tengo antojo de algo dulce..." },
+      { "id": 20, "tipo": "nino", "texto": "¡Shh! Estoy cazando monstruos invisibles." },
+      { "id": 21, "tipo": "nino", "texto": "Mi papá dice que soy re rápido." },
+      { "id": 22, "tipo": "nino", "texto": "¿Vas a la plaza?" },
+      { "id": 23, "tipo": "nino", "texto": "¡A que no me atrapás!" },
+      { "id": 24, "tipo": "nino", "texto": "El gato de la esquina me saludó." },
+      { "id": 25, "tipo": "nino", "texto": "¡Es un lindo día para andar afuera!" },
+      { "id": 26, "tipo": "nino", "texto": "Se me cayó un diente anoche." },
+      { "id": 27, "tipo": "nino", "texto": "¿Tenés un juguete para prestarme?" },
+      { "id": 28, "tipo": "nino", "texto": "¡Qué sombrero tan raro tenés!" },
+      { "id": 29, "tipo": "nino", "texto": "Me encantan las historias de dragones." },
+      { "id": 30, "tipo": "nino", "texto": "¡Mirá cómo salto!" },
+      { "id": 31, "tipo": "nino", "texto": "¡Uy, se me cruzó un pajarito!" },
+      { "id": 32, "tipo": "nino", "texto": "¿Por qué las nubes parecen de algodón?" },
+      { "id": 33, "tipo": "nino", "texto": "¡El último en llegar es un huevo podrido!" },
+      { "id": 34, "tipo": "nino", "texto": "Encontré una flor amarilla de la suerte." },
+      { "id": 35, "tipo": "nino", "texto": "¿Puedo ir con vos de aventura?" },
+      { "id": 36, "tipo": "nino", "texto": "Hoy comí helado de frutilla." },
+      { "id": 37, "tipo": "nino", "texto": "¡Mi perro corre más rápido que vos!" },
+      { "id": 38, "tipo": "nino", "texto": "Tengo los cordones desatados..." },
+      { "id": 39, "tipo": "nino", "texto": "¡Cuidado que hay hormigas!" },
+      { "id": 40, "tipo": "nino", "texto": "Me gusta mucho este pueblo." },
+      { "id": 41, "tipo": "nino", "texto": "¡Tengo una colección de canicas brillantes!" },
+      { "id": 42, "tipo": "nino", "texto": "¿Sabías que los sapos cantan cuando llueve?" },
+      { "id": 43, "tipo": "nino", "texto": "¡Un sapo saltó al estanque!" },
+      { "id": 44, "tipo": "nino", "texto": "Voy a construir una cabaña de ramas." },
+      { "id": 45, "tipo": "nino", "texto": "¡Mirá mi nuevo dibujo!" },
+      { "id": 46, "tipo": "nino", "texto": "¿Me enseñás un truco?" },
+      { "id": 47, "tipo": "nino", "texto": "Me encantan los cuentos antes de dormir." },
+      { "id": 48, "tipo": "nino", "texto": "¡Hoy es el mejor día de todos!" },
+      { "id": 49, "tipo": "nino", "texto": "¿Vas al mercado a comprar golosinas?" },
+      { "id": 50, "tipo": "nino", "texto": "¡Chau chau, nos vemos después!" }
+    ],
+    "aldeano": [
+      { "id": 51, "tipo": "aldeano", "texto": "Buen día, viajero." },
+      { "id": 53, "tipo": "aldeano", "texto": "El clima está hermoso para cosechar." },
+      { "id": 55, "tipo": "aldeano", "texto": "Trabajar duro siempre da sus frutos." },
+      { "id": 60, "tipo": "aldeano", "texto": "Tengo mucho trabajo por hacer hoy." },
+      { "id": 67, "tipo": "aldeano", "texto": "¿Conocés el camino hacia la granja?" },
+      { "id": 72, "tipo": "aldeano", "texto": "Si tenés Oquos, hay buenas ofertas." },
+      { "id": 74, "tipo": "aldeano", "texto": "Me vendría bien una taza de café caliente." },
+      { "id": 77, "tipo": "aldeano", "texto": "Cuidar las herramientas es la clave del trabajo." },
+      { "id": 81, "tipo": "aldeano", "texto": "Un mate amargo y a seguir trabajando." },
+      { "id": 84, "tipo": "aldeano", "texto": "Hay que regar la huerta antes de que pegue el sol." },
+      { "id": 86, "tipo": "aldeano", "texto": "Hoy promete ser un día muy productivo." },
+      { "id": 87, "tipo": "aldeano", "texto": "Revisá tu inventario antes de salir de viaje." },
+      { "id": 89, "tipo": "aldeano", "texto": "Me duelen las espaldas de cargar bolsas." },
+      { "id": 90, "tipo": "aldeano", "texto": "Acordate de guardar algo para el invierno." },
+      { "id": 95, "tipo": "aldeano", "texto": "Se nota que tenés espíritu de líder." },
+      { "id": 96, "tipo": "aldeano", "texto": "El trabajo en equipo ahorra mucho tiempo." },
+      { "id": 97, "tipo": "aldeano", "texto": "Voy a dar una caminata para despejar la mente." },
+      { "id": 98, "tipo": "aldeano", "texto": "No dejes para mañana lo que podés hacer hoy." },
+      { "id": 99, "tipo": "aldeano", "texto": "Espero que encuentres lo que estás buscando." },
+      { "id": 100, "tipo": "aldeano", "texto": "¡Que tengas un buen camino!" }
+    ],
+    "aldeana": [
+      { "id": 52, "tipo": "aldeana", "texto": "Pasa un día tranquilo por la aldea." },
+      { "id": 54, "tipo": "aldeana", "texto": "¿Buscás la tienda de suministros?" },
+      { "id": 56, "tipo": "aldeana", "texto": "Cuidado por la noche, baja mucho la temperatura." },
+      { "id": 57, "tipo": "aldeana", "texto": "Si necesitás ayuda, avisale al intendente." },
+      { "id": 58, "tipo": "aldeana", "texto": "Qué lindo ver caras nuevas por acá." },
+      { "id": 59, "tipo": "aldeana", "texto": "No te olvides de pasar por la panadería." },
+      { "id": 61, "tipo": "aldeana", "texto": "La vida en la aldea es muy tranquila." },
+      { "id": 62, "tipo": "aldeana", "texto": "¿Viste el aviso en el tablón?" },
+      { "id": 63, "tipo": "aldeana", "texto": "Asegurate de juntar suficientes provisiones." },
+      { "id": 64, "tipo": "aldeana", "texto": "Los chicos de hoy corren todo el día." },
+      { "id": 65, "tipo": "aldeana", "texto": "Un buen descanso renueva la energía." },
+      { "id": 66, "tipo": "aldeana", "texto": "El pan de hoy salió riquísimo." },
+      { "id": 68, "tipo": "aldeana", "texto": "Siempre hay misiones por completar." },
+      { "id": 69, "tipo": "aldeana", "texto": "Hacía tiempo que no veía a alguien tan ocupado." },
+      { "id": 70, "tipo": "aldeana", "texto": "Espero que tengas un excelente viaje." },
+      { "id": 71, "tipo": "aldeana", "texto": "La cosecha de este año viene muy bien." },
+      { "id": 73, "tipo": "aldeana", "texto": "Mantengamos la aldea limpia y ordenada." },
+      { "id": 75, "tipo": "aldeana", "texto": "Ayer vi una puesta de sol increíble." },
+      { "id": 76, "tipo": "aldeana", "texto": "Saludá a la gente cuando pases por la plaza." },
+      { "id": 78, "tipo": "aldeana", "texto": "El agua del pozo está helada hoy." },
+      { "id": 79, "tipo": "aldeana", "texto": "Qué bueno es tener vecinos amables." },
+      { "id": 80, "tipo": "aldeana", "texto": "Cuidado al cruzar por los puentes de madera." },
+      { "id": 82, "tipo": "aldeana", "texto": "La paciencia ayuda a resolver cualquier problema." },
+      { "id": 83, "tipo": "aldeana", "texto": "Si necesitás descansar, la posada está limpia." },
+      { "id": 85, "tipo": "aldeana", "texto": "Qué viento fresco que viene de la costa." },
+      { "id": 91, "tipo": "aldeana", "texto": "Las flores del camino están floreciendo preciosas." },
+      { "id": 92, "tipo": "aldeana", "texto": "No hay nada como la comida hecha en casa." },
+      { "id": 93, "tipo": "aldeana", "texto": "¿Escuchaste las novedades de la mañana?" },
+      { "id": 94, "tipo": "aldeana", "texto": "Un saludo cordial siempre abre puertas." }
+    ]
+  }
+}

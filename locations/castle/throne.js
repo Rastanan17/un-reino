@@ -32,6 +32,19 @@ function mostrarTrono(){
     }
 
     // ===================================
+    // OCULTAR HUD
+    // ===================================
+
+    const hud =
+        document.getElementById("playerHUD");
+
+    if(hud){
+
+        hud.style.display = "none";
+
+    }
+
+    // ===================================
     // HISTORIAL
     // ===================================
 
@@ -39,7 +52,7 @@ function mostrarTrono(){
         jugador.historial || [];
 
     // ===================================
-    // ESCENARIO
+    // CONTENIDO DEL TRONO
     // ===================================
 
     content.innerHTML = `
@@ -47,35 +60,158 @@ function mostrarTrono(){
         <section class="trono">
 
             <!-- ==========================
-                 INFORMACIÓN DEL JUGADOR
+                 PERFIL DEL AVENTURERO
             =========================== -->
 
-            <div class="info-jugador-trono">
+            <div class="perfil-trono">
 
-                <div>
-                    👤 ${jugador.nombre}
+                <div class="avatar-trono">
+
+                    <img
+                        src="${jugador.avatar}"
+                        alt="Avatar de ${jugador.nombre}"
+                    >
+
                 </div>
 
-                <div>
-                    ⭐ Nivel ${jugador.nivel}
-                </div>
+                <div class="datos-trono">
 
-                <div>
-                    👑 ${jugador.rango}
+                    <h1>
+                        ${jugador.nombre}
+                    </h1>
+
+                    <div class="dato-trono">
+
+                        ⚔️ Nivel
+                        <strong>
+                            ${jugador.nivel}
+                        </strong>
+
+                    </div>
+
+                    <div class="dato-trono">
+
+                        👑 ${jugador.rango}
+
+                    </div>
+
+                    <div class="dato-trono">
+
+                        💰 ${jugador.oquos} Oquos
+
+                    </div>
+
+                    <div class="xp-trono">
+
+                        <div class="xp-titulo">
+
+                            ⭐ Experiencia
+
+                        </div>
+
+                        <div class="xp-bar-trono">
+
+                            <div
+                                class="xp-fill-trono"
+                                style="
+                                    width:${
+                                        Math.min(
+                                            (
+                                                jugador.xp /
+                                                jugador.xpNecesaria
+                                            ) * 100,
+                                            100
+                                        )
+                                    }%;
+                                "
+                            ></div>
+
+                        </div>
+
+                        <div class="xp-text-trono">
+
+                            ${jugador.xp}
+                            /
+                            ${jugador.xpNecesaria}
+                            XP
+
+                        </div>
+
+                    </div>
+
                 </div>
 
             </div>
 
             <!-- ==========================
-                 TRONO
+                 ESTADÍSTICAS
             =========================== -->
 
-            <div class="trono-real">
+            <div class="estadisticas-trono">
 
-                <img
-                    src="locations/throne/images/throne.png"
-                    alt="Trono de Mírrafen"
-                >
+                <div class="estadistica">
+
+                    🗺️
+
+                    <span>
+                        Zonas restauradas
+                    </span>
+
+                    <strong>
+                        ${jugador.zonasRestauradas || 0}
+                    </strong>
+
+                </div>
+
+                <div class="estadistica">
+
+                    🎯
+
+                    <span>
+                        Misiones completadas
+                    </span>
+
+                    <strong>
+                        ${
+                            jugador.misionesCompletadas
+                                ? jugador.misionesCompletadas.length
+                                : 0
+                        }
+                    </strong>
+
+                </div>
+
+                <div class="estadistica">
+
+                    🔥
+
+                    <span>
+                        Racha
+                    </span>
+
+                    <strong>
+                        ${jugador.racha || 0}
+                    </strong>
+
+                </div>
+
+                <div class="estadistica">
+
+                    🏆
+
+                    <span>
+                        Logros
+                    </span>
+
+                    <strong>
+                        ${
+                            jugador.logros
+                                ? jugador.logros.length
+                                : 0
+                        }
+                    </strong>
+
+                </div>
 
             </div>
 
@@ -129,7 +265,7 @@ function mostrarTrono(){
 }
 
 // =======================================
-// GENERAR HISTORIAL
+// GENERAR HISTORIAL DEL TRONO
 // =======================================
 
 function generarHistorialTrono(historial){
@@ -137,21 +273,28 @@ function generarHistorialTrono(historial){
     if(!historial.length){
 
         return `
+
             <div class="historial-vacio">
 
                 📜
 
                 <p>
+
                     Aún no hay acontecimientos
                     registrados.
+
                 </p>
 
                 <small>
+
                     El Reino espera tus hazañas...
+
                 </small>
 
             </div>
+
         `;
+
     }
 
     // ===================================
@@ -168,15 +311,21 @@ function generarHistorialTrono(historial){
             let icono = "📜";
 
             if(acontecimiento.tipo === "nivel"){
+
                 icono = "⭐";
+
             }
 
             if(acontecimiento.tipo === "rango"){
+
                 icono = "👑";
+
             }
 
             if(acontecimiento.tipo === "zona"){
+
                 icono = "🏰";
+
             }
 
             return `
@@ -186,6 +335,7 @@ function generarHistorialTrono(historial){
                     <div class="acontecimiento-fecha">
 
                         ${icono}
+
                         📅 ${acontecimiento.fecha}
 
                     </div>
@@ -203,21 +353,36 @@ function generarHistorialTrono(historial){
         })
 
         .join("");
+
 }
+
 // =======================================
-// SALIR DEL TRONO
+// SALIR DEL TRONO → CASTILLO
 // =======================================
 
 function salirDelTrono(){
 
     console.log(
-        "🚪 Saliendo del Trono → Mapa"
+        "🚪 Saliendo del Trono → Castillo"
     );
 
-    irA(
-        "throne",
-        "map",
-        mostrarMapaReino
-    );
+    // ===================================
+    // MOSTRAR HUD NUEVAMENTE
+    // ===================================
+
+    const hud =
+        document.getElementById("playerHUD");
+
+    if(hud){
+
+        hud.style.display = "flex";
+
+    }
+
+    // ===================================
+    // VOLVER AL CASTILLO
+    // ===================================
+
+    mostrarCastillo();
 
 }

@@ -42,6 +42,8 @@ async function entrarAlReino(){
 
     actualizarPerfil();
 
+    mostrarHUDJugador();
+
     revisarCompensacion();
 
     await iniciarSistemaMisiones();
