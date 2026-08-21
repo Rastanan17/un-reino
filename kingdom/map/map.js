@@ -45,15 +45,7 @@ function mostrarMapaReino() {
 
         return;
     }
-
-    // 🎵 Música del mapa
-    reproducirMusica(
-        "assets/sounds/ambient_map.mp3",
-        0.35
-    );
-    // =======================================
-    // CONTENIDO
-    // =======================================
+    const momento = obtenerMomentoDelDia();
 
     const content = document.getElementById("content");
 
@@ -61,6 +53,14 @@ function mostrarMapaReino() {
         console.error("No se encontró #content.");
         return;
     }
+
+    reproducirMusica(
+        "assets/sounds/ambient_map.mp3",
+        0.35
+    );
+    // =======================================
+    // CONTENIDO
+    // =======================================
 
     content.innerHTML = `
 
@@ -80,7 +80,7 @@ function mostrarMapaReino() {
 
                 <img
                     id="mapImage"
-                    src="kingdom/map/images/map.png"
+                    src="kingdom/map/images/map_${momento}.jpg"
                     alt="Mapa del Reino">
 
             </div>
