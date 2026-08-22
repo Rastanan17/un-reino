@@ -158,7 +158,10 @@ function mostrarTrono(){
                     </span>
 
                     <strong>
-                        ${jugador.zonasRestauradas || 0}
+                        ${jugador.zonasRestauradas || 0}${jugador.zonasRestauradas
+                            ? jugador.zonasRestauradas.length
+                            : 0
+                        }
                     </strong>
 
                 </div>

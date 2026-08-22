@@ -5,37 +5,62 @@
 
 let musicaActual = null;
 
-
 // =======================================
 // REPRODUCIR MÚSICA
 // =======================================
 
-function reproducirMusica(ruta, volumen = 0.5) {
+function reproducirMusica(ruta, volumen = 0.5){
 
-    // Si ya está sonando exactamente esta música,
-    // no hacemos nada.
-    if (
-        musicaActual &&
-        musicaActual.src.includes(ruta) &&
-        !musicaActual.paused
-    ) {
+    // ===================================
+    // MÚSICA SILENCIADA
+    // ===================================
+
+    if(!musicaActivada()){
+
+        console.log(
+            "🎵 Música silenciada."
+        );
+
+        // Si había música sonando,
+        // la detenemos inmediatamente.
+        detenerMusica();
+
         return;
     }
 
+    // ===================================
+    // SI YA ESTÁ SONANDO ESTA MÚSICA
+    // ===================================
 
-    // Detener cualquier música anterior
+    if(
+        musicaActual &&
+        musicaActual.src.includes(ruta) &&
+        !musicaActual.paused
+    ){
+
+        return;
+    }
+
+    // ===================================
+    // DETENER MÚSICA ANTERIOR
+    // ===================================
+
     detenerMusica();
 
+    // ===================================
+    // CREAR NUEVA MÚSICA
+    // ===================================
 
-    // Crear nueva música
     musicaActual = new Audio(ruta);
 
     musicaActual.loop = true;
 
     musicaActual.volume = volumen;
 
+    // ===================================
+    // REPRODUCIR
+    // ===================================
 
-    // Intentar reproducir
     musicaActual.play().catch(error => {
 
         console.log(
@@ -47,17 +72,16 @@ function reproducirMusica(ruta, volumen = 0.5) {
 
 }
 
-
 // =======================================
 // DETENER MÚSICA
 // =======================================
 
-function detenerMusica() {
+function detenerMusica(){
 
-    if (!musicaActual) {
+    if(!musicaActual){
+
         return;
     }
-
 
     musicaActual.pause();
 
@@ -68,7 +92,29 @@ function detenerMusica() {
     musicaActual = null;
 
 }
-function reproducirSFX(nombre, volumen = 1) {
+
+// =======================================
+// REPRODUCIR SFX
+// =======================================
+
+function reproducirSFX(nombre, volumen = 1){
+
+    // ===================================
+    // SONIDOS SILENCIADOS
+    // ===================================
+
+    if(!sonidosActivados()){
+
+        console.log(
+            "🔇 Sonidos silenciados."
+        );
+
+        return;
+    }
+
+    // ===================================
+    // CREAR SONIDO
+    // ===================================
 
     const sonido = new Audio(
         `assets/sounds/${nombre}`
@@ -76,7 +122,18 @@ function reproducirSFX(nombre, volumen = 1) {
 
     sonido.volume = volumen;
 
+    // ===================================
+    // REPRODUCIR
+    // ===================================
+
     sonido.play().catch(error => {
-        console.warn("No se pudo reproducir SFX:", nombre, error);
+
+        console.warn(
+            "No se pudo reproducir SFX:",
+            nombre,
+            error
+        );
+
     });
+
 }

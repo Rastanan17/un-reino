@@ -4,21 +4,27 @@
 ======================================= */
 
 #playerHUD{
+
     position:absolute;
+
     top:10px;
     left:50%;
+
     transform:translateX(-50%);
 
     display:flex;
     align-items:center;
-    gap:12px;
+
+    gap:9px;
 
     z-index:1000;
 
-    padding:6px 12px;
+    padding:5px 10px;
 
     background:#4b2d16;
+
     border:2px solid #c9a227;
+
     border-radius:12px;
 
     box-sizing:border-box;
@@ -31,12 +37,14 @@
 ======================================= */
 
 .hudAvatar{
+
     width:48px;
     height:48px;
 
     flex-shrink:0;
 
     border:2px solid #ffd700;
+
     border-radius:50%;
 
     overflow:hidden;
@@ -45,10 +53,12 @@
 }
 
 .hudAvatar img{
+
     width:100%;
     height:100%;
 
     object-fit:cover;
+
     display:block;
 }
 
@@ -58,10 +68,13 @@
 
 .hudLevel,
 .hudCoins{
+
     color:#fff;
+
     font-family:"MedievalSharp", serif;
 
     font-size:18px;
+
     font-weight:bold;
 
     white-space:nowrap;
@@ -76,7 +89,61 @@
 ======================================= */
 
 .hudCoins{
+
     color:#ffd700;
+}
+
+/* =======================================
+   CONFIGURACIÓN
+======================================= */
+
+.hudSettings{
+
+    width:24px;
+    height:24px;
+
+    padding:0;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    flex-shrink:0;
+
+    border:none;
+    border-radius:50%;
+
+    background:transparent;
+
+    color:#ffd700;
+
+    font-size:15px;
+
+    line-height:1;
+
+    cursor:pointer;
+
+    pointer-events:auto;
+
+    transition:
+        transform .2s ease,
+        filter .2s ease,
+        background .2s ease;
+}
+
+.hudSettings:hover{
+
+    transform:rotate(25deg) scale(1.1);
+
+    filter:brightness(1.2);
+
+    background:rgba(255,215,0,.12);
+}
+
+.hudSettings:active{
+
+    transform:scale(.95);
 }
 
 /* =======================================
@@ -84,6 +151,7 @@
 ======================================= */
 
 .modo-pc #playerHUD{
+
     top:12px;
 }
 
@@ -92,19 +160,32 @@
 ======================================= */
 
 .modo-tablet #playerHUD{
+
     top:10px;
-    padding:5px 10px;
-    gap:9px;
+
+    padding:5px 8px;
+
+    gap:7px;
 }
 
 .modo-tablet .hudAvatar{
+
     width:42px;
     height:42px;
 }
 
 .modo-tablet .hudLevel,
 .modo-tablet .hudCoins{
+
     font-size:16px;
+}
+
+.modo-tablet .hudSettings{
+
+    width:22px;
+    height:22px;
+
+    font-size:14px;
 }
 
 /* =======================================
@@ -112,17 +193,32 @@
 ======================================= */
 
 .modo-celular #playerHUD{
+
     top:8px;
-    padding:4px 8px;
-    gap:7px;
+
+    padding:3px 6px;
+
+    gap:5px;
 }
 
 .modo-celular .hudAvatar{
-    width:34px;
-    height:34px;
+
+    width:30px;
+    height:30px;
+
+    border-width:1px;
 }
 
 .modo-celular .hudLevel,
 .modo-celular .hudCoins{
+
+    font-size:12px;
+}
+
+.modo-celular .hudSettings{
+
+    width:20px;
+    height:20px;
+
     font-size:13px;
 }

@@ -64,12 +64,6 @@ function mostrarMapaReino() {
 
     content.innerHTML = `
 
-        <button
-            class="btnPerfil"
-            onclick="reproducirSFX('open_place.wav'); irA('map', 'portal', mostrarPortal)">
-            🔄 Cambiar perfil
-        </button>
-
         <h2>
             🗺️ Reino de ${jugador.nombre}
         </h2>

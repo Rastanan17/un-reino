@@ -1,0 +1,210 @@
+/* =======================================
+   REINO DE MÍRRAFEN
+   PANEL DE CONFIGURACIÓN
+======================================= */
+
+#panelConfiguracion{
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    z-index: 5000;
+}
+
+/* =======================================
+   PANEL
+======================================= */
+
+.configuracion{
+
+    width: min(300px, 85vw);
+
+    padding: 18px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    background: #4b2d16;
+
+    border: 2px solid #c9a227;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.5);
+}
+
+/* =======================================
+   TÍTULO
+======================================= */
+
+.configuracion-titulo{
+
+    margin-bottom: 5px;
+
+    text-align: center;
+
+    color: #ffd700;
+
+    font-family:
+        "MedievalSharp",
+        serif;
+
+    font-size: 20px;
+
+    text-shadow:
+        2px 2px 0 #000;
+}
+
+/* =======================================
+   OPCIONES
+======================================= */
+
+.configuracion-opcion{
+
+    width: 100%;
+
+    padding: 10px 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    box-sizing: border-box;
+
+    border: 1px solid
+        rgba(255,215,0,.35);
+
+    border-radius: 10px;
+
+    background:
+        rgba(0,0,0,.25);
+
+    color: white;
+
+    font-family:
+        "MedievalSharp",
+        serif;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    text-align: left;
+}
+
+/* =======================================
+   ESTADO
+======================================= */
+
+.configuracion-opcion strong{
+
+    margin-left: auto;
+
+    font-size: 12px;
+
+    color: #ffd700;
+}
+
+/* =======================================
+   HOVER
+======================================= */
+
+.configuracion-opcion:hover{
+
+    background:
+        rgba(255,215,0,.12);
+
+    border-color:
+        rgba(255,215,0,.7);
+}
+
+/* =======================================
+   CERRAR
+======================================= */
+
+.configuracion-cerrar{
+
+    align-self: center;
+
+    width: 30px;
+
+    height: 30px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: #ffd700;
+
+    font-size: 18px;
+
+    cursor: pointer;
+}
+
+.configuracion-cerrar:hover{
+
+    background:
+        rgba(255,215,0,.15);
+}
+
+/* =======================================
+   TABLET
+======================================= */
+
+@media (max-width:900px){
+
+    #panelConfiguracion{
+
+        top: 55px;
+
+        right: 10px;
+    }
+
+    .configuracion{
+
+        width: 270px;
+    }
+}
+
+/* =======================================
+   CELULAR
+======================================= */
+
+@media (max-width:600px){
+
+    #panelConfiguracion{
+
+        top: 50px;
+
+        right: 8px;
+    }
+
+    .configuracion{
+
+        width: 240px;
+
+        padding: 14px;
+    }
+
+    .configuracion-titulo{
+
+        font-size: 17px;
+    }
+
+    .configuracion-opcion{
+
+        padding: 9px;
+
+        font-size: 13px;
+    }
+}

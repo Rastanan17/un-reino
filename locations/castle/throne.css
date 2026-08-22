@@ -3,7 +3,10 @@
 ======================================= */
 
 .trono{
+
     width: min(1100px, 92%);
+    max-width: 1100px;
+
     margin: 30px auto;
     padding: 30px;
 
@@ -12,7 +15,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
     gap: 25px;
+
+    /*
+       El contenido del Trono puede crecer
+       libremente y desplazarse verticalmente.
+    */
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    box-sizing: border-box;
+
 }
 
 /* =======================================
@@ -20,10 +35,12 @@
 ======================================= */
 
 .perfil-trono{
+
     width: min(700px, 100%);
 
     display: flex;
     align-items: center;
+
     gap: 25px;
 
     padding: 20px;
@@ -32,8 +49,12 @@
 
     background: rgba(0, 0, 0, 0.45);
 
-    border: 2px solid rgba(255, 215, 120, 0.6);
+    border:
+        2px solid
+        rgba(255, 215, 120, 0.6);
+
     border-radius: 18px;
+
 }
 
 /* =======================================
@@ -41,27 +62,35 @@
 ======================================= */
 
 .avatar-trono{
+
     width: 140px;
     height: 140px;
 
     flex-shrink: 0;
 
     border-radius: 50%;
+
     overflow: hidden;
 
-    border: 4px solid #d6a84f;
+    border:
+        4px solid
+        #d6a84f;
 
     box-shadow:
-        0 0 15px rgba(214, 168, 79, 0.5);
+        0 0 15px
+        rgba(214, 168, 79, 0.5);
+
 }
 
 .avatar-trono img{
+
     width: 100%;
     height: 100%;
 
     object-fit: cover;
 
     display: block;
+
 }
 
 /* =======================================
@@ -69,28 +98,40 @@
 ======================================= */
 
 .datos-trono{
+
     flex: 1;
 
     display: flex;
     flex-direction: column;
 
     gap: 8px;
+
 }
 
 .datos-trono h1{
+
     margin: 0 0 5px;
 
-    font-family: "MedievalSharp", cursive;
+    font-family:
+        "MedievalSharp",
+        cursive;
 
-    font-size: clamp(24px, 4vw, 38px);
+    font-size:
+        clamp(24px, 4vw, 38px);
+
 }
 
 .dato-trono{
-    font-size: clamp(16px, 2vw, 22px);
+
+    font-size:
+        clamp(16px, 2vw, 22px);
+
 }
 
 .dato-trono strong{
+
     font-size: 1.15em;
+
 }
 
 /* =======================================
@@ -98,45 +139,60 @@
 ======================================= */
 
 .xp-trono{
+
     width: 100%;
 
     margin-top: 8px;
+
 }
 
 .xp-titulo{
+
     margin-bottom: 5px;
 
     font-size: 15px;
+
 }
 
 .xp-bar-trono{
+
     width: 100%;
+
     height: 16px;
 
     overflow: hidden;
 
     border-radius: 10px;
 
-    background: rgba(255,255,255,0.15);
+    background:
+        rgba(255,255,255,0.15);
 
-    border: 1px solid rgba(255,215,120,0.5);
+    border:
+        1px solid
+        rgba(255,215,120,0.5);
+
 }
 
 .xp-fill-trono{
+
     height: 100%;
 
     border-radius: inherit;
 
-    background: linear-gradient(
-        90deg,
-        #8b5a2b,
-        #d6a84f
-    );
+    background:
+        linear-gradient(
+            90deg,
+            #8b5a2b,
+            #d6a84f
+        );
 
-    transition: width 0.4s ease;
+    transition:
+        width 0.4s ease;
+
 }
 
 .xp-text-trono{
+
     margin-top: 4px;
 
     text-align: right;
@@ -144,6 +200,7 @@
     font-size: 13px;
 
     opacity: 0.85;
+
 }
 
 /* =======================================
@@ -151,6 +208,7 @@
 ======================================= */
 
 .estadisticas-trono{
+
     width: min(900px, 100%);
 
     display: grid;
@@ -159,9 +217,11 @@
         repeat(4, 1fr);
 
     gap: 15px;
+
 }
 
 .estadistica{
+
     min-height: 100px;
 
     padding: 15px;
@@ -170,6 +230,7 @@
 
     display: flex;
     flex-direction: column;
+
     align-items: center;
     justify-content: center;
 
@@ -177,19 +238,27 @@
 
     text-align: center;
 
-    background: rgba(0, 0, 0, 0.4);
+    background:
+        rgba(0, 0, 0, 0.4);
 
-    border: 1px solid rgba(255, 215, 120, 0.45);
+    border:
+        1px solid
+        rgba(255, 215, 120, 0.45);
 
     border-radius: 14px;
+
 }
 
 .estadistica span{
+
     font-size: 14px;
+
 }
 
 .estadistica strong{
+
     font-size: 25px;
+
 }
 
 /* =======================================
@@ -197,69 +266,94 @@
 ======================================= */
 
 .historial-trono{
+
     width: min(900px, 100%);
 
     padding: 20px;
 
     box-sizing: border-box;
 
-    background: rgba(0, 0, 0, 0.4);
+    background:
+        rgba(0, 0, 0, 0.4);
 
-    border: 1px solid rgba(255, 215, 120, 0.45);
+    border:
+        1px solid
+        rgba(255, 215, 120, 0.45);
 
     border-radius: 16px;
+
 }
 
 .titulo-historial{
+
     margin-bottom: 15px;
 
     text-align: center;
 
-    font-family: "MedievalSharp", cursive;
+    font-family:
+        "MedievalSharp",
+        cursive;
 
-    font-size: clamp(20px, 3vw, 28px);
+    font-size:
+        clamp(20px, 3vw, 28px);
+
 }
 
 .lista-historial{
+
     display: flex;
 
     flex-direction: column;
 
     gap: 10px;
+
 }
 
 .acontecimiento{
+
     padding: 12px;
 
-    background: rgba(255,255,255,0.06);
+    background:
+        rgba(255,255,255,0.06);
 
     border-radius: 10px;
 
-    border-left: 3px solid #d6a84f;
+    border-left:
+        3px solid
+        #d6a84f;
+
 }
 
 .acontecimiento-fecha{
+
     margin-bottom: 5px;
 
     font-size: 13px;
 
     opacity: 0.8;
+
 }
 
 .acontecimiento-texto{
+
     font-size: 15px;
+
 }
 
 .historial-vacio{
+
     padding: 30px;
 
     text-align: center;
 
     opacity: 0.8;
+
 }
 
 .historial-vacio p{
+
     margin: 10px 0;
+
 }
 
 /* =======================================
@@ -267,25 +361,35 @@
 ======================================= */
 
 .trono-salida{
+
     cursor: pointer;
 
     margin-top: 5px;
 
+    padding-bottom: 20px;
+
     transition:
         transform 0.2s ease,
         filter 0.2s ease;
+
 }
 
 .trono-salida img{
+
     width: 60px;
+
     height: auto;
 
     display: block;
+
 }
 
 .trono-salida:hover{
+
     transform: scale(1.1);
+
     filter: brightness(1.2);
+
 }
 
 /* =======================================
@@ -295,19 +399,30 @@
 @media (max-width: 900px){
 
     .trono{
+
         width: 94%;
+
         padding: 20px;
+
         margin: 20px auto;
+
+        gap: 20px;
+
     }
 
     .perfil-trono{
+
         width: 100%;
+
     }
 
     .estadisticas-trono{
+
         grid-template-columns:
             repeat(2, 1fr);
+
     }
+
 }
 
 /* =======================================
@@ -317,59 +432,93 @@
 @media (max-width: 600px){
 
     .trono{
+
         width: 96%;
+
         padding: 12px;
+
         margin: 15px auto;
 
         gap: 15px;
+
+        /*
+           Importante para celular:
+           permitir que el contenido
+           supere la altura visible.
+        */
+
+        min-height: 100%;
+
     }
 
     .perfil-trono{
+
         flex-direction: column;
 
         text-align: center;
 
         padding: 15px;
+
     }
 
     .avatar-trono{
+
         width: 100px;
         height: 100px;
+
     }
 
     .datos-trono{
+
         width: 100%;
+
     }
 
     .xp-text-trono{
+
         text-align: center;
+
     }
 
     .estadisticas-trono{
+
         grid-template-columns:
             repeat(2, 1fr);
 
         gap: 8px;
+
     }
 
     .estadistica{
+
         min-height: 85px;
+
         padding: 10px;
+
     }
 
     .estadistica strong{
+
         font-size: 21px;
+
     }
 
     .estadistica span{
+
         font-size: 12px;
+
     }
 
     .historial-trono{
+
         padding: 12px;
+
     }
 
     .acontecimiento{
+
         padding: 10px;
+
     }
+
 }

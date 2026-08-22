@@ -505,6 +505,8 @@ Un Reino<
 		compensacion<
 			compensacion.js
 		config<
+			configuracion.css
+			configuracion.js
 			settings.js
 			version.js
 		desafios<

@@ -108,7 +108,7 @@
 @media (max-width:900px){
 
     .castillo{
-        width:100%;
+        width:90%;
         height:100%;
     }
 
@@ -134,7 +134,8 @@
     */
 
     .zona-castillo .name{
-        display:none;
+        font-size:
+            clamp(14px, 4vw, 20px);
     }
 
     /*
@@ -150,12 +151,10 @@
 ======================================= */
 
 @media (max-width:380px){
-
     .zona-castillo .name{
         display:none;
     }
 }
-
 /* =======================================
    PANEL DEL JUGADOR
 ======================================= */

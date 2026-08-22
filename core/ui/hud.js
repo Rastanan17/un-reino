@@ -66,10 +66,18 @@ function mostrarHUDJugador(){
 
                     </div>
 
+                    <button
+                        id="hudSettings"
+                        class="hudSettings"
+                        onclick="toggleConfiguracion()"
+                        aria-label="Configuración"
+                    >
+                        ⚙️
+                    </button>
+
                 </div>
             `
         );
-
     }
 
     // ===================================
@@ -104,7 +112,6 @@ function actualizarHUDJugador(){
         );
 
         return;
-
     }
 
     const avatar =
@@ -122,7 +129,8 @@ function actualizarHUDJugador(){
 
     if(avatar){
 
-        avatar.src = jugador.avatar;
+        avatar.src =
+            jugador.avatar;
 
     }
 
