@@ -531,10 +531,6 @@ function crearPergamino(mision){
 
             <div class="contenido-pergamino-mision">
 
-                <div class="estado-mision">
-                    ${textoEstadoMision(mision.estado)}
-                </div>
-
                 <div class="titulo-mision">
                     ${mision.icono}
                     ${mision.titulo}

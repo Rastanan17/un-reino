@@ -1,5 +1,5 @@
 
 
-const VERSION = "v0.0.522";
+const VERSION = "v0.0.526";
 const BUILD = "06/08/2026";
 document.getElementById("version").textContent = VERSION;

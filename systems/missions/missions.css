@@ -494,29 +494,6 @@
 }
 
 /* =======================================
-   ESTADO DE MISIÓN
-======================================= */
-
-.estado-mision{
-
-    position:relative;
-
-    top:40px;
-
-    right:0;
-
-    text-align:center;
-
-    color:#38164b;
-
-    font-size:15px;
-
-    font-weight:bold;
-
-    text-transform:uppercase;
-}
-
-/* =======================================
    FLECHAS DE NAVEGACIÓN
 ======================================= */
 
@@ -836,7 +813,7 @@
 #visorPantalla.modo-celular .titulo-mision{
     margin-top:10px;
     padding:4px 25px 0;
-    font-size:32px;
+    font-size:30px;
     line-height:1.1;
 }
 
