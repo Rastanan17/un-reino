@@ -6,6 +6,86 @@
 let musicaActual = null;
 
 // =======================================
+// ESTADO DE MÚSICA
+// =======================================
+
+function musicaActivada(){
+
+    return localStorage.getItem("musicaActivada") !== "false";
+
+}
+
+// =======================================
+// ACTIVAR / DESACTIVAR MÚSICA
+// =======================================
+
+function toggleMusica(){
+
+    const estadoActual = musicaActivada();
+
+    if(estadoActual){
+
+        // ===============================
+        // SILENCIAR
+        // ===============================
+
+        localStorage.setItem(
+            "musicaActivada",
+            "false"
+        );
+
+        detenerMusica();
+
+        console.log(
+            "🔇 Música silenciada."
+        );
+
+    }else{
+
+        // ===============================
+        // ACTIVAR
+        // ===============================
+
+        localStorage.setItem(
+            "musicaActivada",
+            "true"
+        );
+
+        console.log(
+            "🎵 Música activada."
+        );
+
+    }
+
+    actualizarBotonMusica();
+}
+
+// =======================================
+// ACTUALIZAR BOTÓN
+// =======================================
+
+function actualizarBotonMusica(){
+
+    const boton =
+        document.getElementById("botonMusica");
+
+    if(!boton){
+        return;
+    }
+
+    if(musicaActivada()){
+
+        boton.textContent = "🔊 Música";
+
+    }else{
+
+        boton.textContent = "🔇 Música";
+
+    }
+
+}
+
+// =======================================
 // REPRODUCIR MÚSICA
 // =======================================
 
@@ -18,11 +98,10 @@ function reproducirMusica(ruta, volumen = 0.5){
     if(!musicaActivada()){
 
         console.log(
-            "🎵 Música silenciada."
+            "🔇 Música silenciada. No se reproduce:",
+            ruta
         );
 
-        // Si había música sonando,
-        // la detenemos inmediatamente.
         detenerMusica();
 
         return;
@@ -79,7 +158,6 @@ function reproducirMusica(ruta, volumen = 0.5){
 function detenerMusica(){
 
     if(!musicaActual){
-
         return;
     }
 
@@ -89,8 +167,52 @@ function detenerMusica(){
 
     musicaActual.src = "";
 
+    musicaActual.load();
+
     musicaActual = null;
 
+}
+
+// =======================================
+// SILENCIAR TODO
+// =======================================
+
+function silenciarTodaLaMusica(){
+
+    // ===================================
+    // GUARDAR ESTADO
+    // ===================================
+
+    localStorage.setItem(
+        "musicaActivada",
+        "false"
+    );
+
+    // ===================================
+    // DETENER MÚSICA CONTROLADA
+    // ===================================
+
+    detenerMusica();
+
+    // ===================================
+    // DETENER CUALQUIER AUDIO
+    // QUE HAYA SIDO CREADO POR OTRO
+    // SISTEMA DEL JUEGO
+    // ===================================
+
+    document.querySelectorAll("audio").forEach(audio => {
+
+        audio.pause();
+
+        audio.currentTime = 0;
+
+    });
+
+    console.log(
+        "🔇 Toda la música del Reino fue silenciada."
+    );
+
+    actualizarBotonMusica();
 }
 
 // =======================================

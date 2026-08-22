@@ -34,7 +34,7 @@ async function cargarHistoria(){
 
 function iniciarIntro(){
 
-    // 🔊 Botón Comenzar
+    // 🔊 Sonido del botón
     reproducirSFX("touch.mp3");
 
     document.getElementById("btnComenzar").style.display = "none";
@@ -42,9 +42,30 @@ function iniciarIntro(){
     const musica =
         document.getElementById("introMusic");
 
-    musica.volume = 0.3;
+    if(musica){
 
-    musica.play();
+        musica.volume = 0.3;
+
+        if(musicaActivada()){
+
+            musica.currentTime = 0;
+
+            musica.play().catch(error => {
+
+                console.warn(
+                    "No se pudo reproducir la música del intro:",
+                    error
+                );
+
+            });
+
+        }else{
+
+            musica.pause();
+            musica.currentTime = 0;
+
+        }
+    }
 
     document
         .getElementById("crawl")

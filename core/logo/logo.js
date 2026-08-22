@@ -36,7 +36,13 @@ function iniciarLogo(){
         introLogo.style.display = "none";
 
         video.style.display = "block";
+video.addEventListener("play", () => {
 
+    if(!musicaActivada()){
+        video.muted = true;
+    }
+
+});
         video.play();
 
     }, 700);
@@ -52,6 +58,29 @@ function iniciarLogo(){
 // ---------------------------------------
 
 function continuarHistoria(){
+
+    // ===================================
+    // DETENER INTRO
+    // ===================================
+
+    const introMusic =
+        document.getElementById("introMusic");
+
+    if(introMusic){
+        introMusic.pause();
+        introMusic.currentTime = 0;
+        introMusic.muted = true;
+    }
+
+    // ===================================
+    // DETENER MÚSICA DEL SISTEMA
+    // ===================================
+
+    detenerMusica();
+
+    // ===================================
+    // PASAR A HISTORIA
+    // ===================================
 
     document.getElementById("logoScreen").style.display = "none";
 

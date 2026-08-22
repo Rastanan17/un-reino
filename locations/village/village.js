@@ -294,20 +294,19 @@ console.log("🌅 TIPO:", typeof momento);
             ================================== -->
 
             <div class="zona-interactiva salidaAldea">
-                <span class="nombre-zona">SALIDA</span>
-                <canvas
-                    id="salidaAldea"
-                    class="zona-aldea salidaAldea"
-                    onclick="
-                        reproducirSFX('exit.mp3');
+            <span class="nombre-zona">SALIDA</span>
+
+            <canvas
+                id="salidaAldea"
+                class="zona-aldea"
+                onclick="reproducirSFX('exit.mp3');
                         irA(
                             'village',
                             'map',
                             mostrarMapaReino
-                        );
-                    "
-                ></canvas>
-            </div>
+                        );"
+            ></canvas>
+        </div>
 
             <!-- =================================
                 ARMERÍA

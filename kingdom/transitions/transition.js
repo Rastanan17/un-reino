@@ -181,11 +181,12 @@ function ejecutarTransicion(origen, destino, accionDestino) {
 
     video.src = videoSrc;
 
-    // 🔊 Activar sonido del video
-    video.muted = false;
+    // ===================================
+    // SONIDO DEL VIDEO SEGÚN CONFIGURACIÓN
+    // ===================================
 
+    video.muted = !musicaActivada();
     video.volume = 1;
-
     video.loop = false;
 
     // ===================================

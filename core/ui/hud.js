@@ -32,7 +32,6 @@ function mostrarHUDJugador(){
 
         visor.insertAdjacentHTML(
             "afterbegin",
-
             `
                 <div id="playerHUD">
 
@@ -94,7 +93,22 @@ function mostrarHUDJugador(){
     }
 
     actualizarHUDJugador();
+}
 
+// =======================================
+// OCULTAR HUD
+// =======================================
+
+function ocultarHUDJugador(){
+
+    const hud =
+        document.getElementById("playerHUD");
+
+    if(hud){
+
+        hud.style.display = "none";
+
+    }
 }
 
 // =======================================
@@ -103,7 +117,8 @@ function mostrarHUDJugador(){
 
 function actualizarHUDJugador(){
 
-    const jugador = cargarJugador();
+    const jugador =
+        cargarJugador();
 
     if(!jugador){
 
