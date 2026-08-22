@@ -3,11 +3,16 @@
 ======================================= */
 
 .mercado{
+
     position: relative;
+
     width: 100%;
     height: 100%;
+
     min-height: 0;
+
     overflow: hidden;
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -18,19 +23,27 @@
 ======================================= */
 
 .mercado.dawn{
-    background-image: url("../../assets/images/backgrounds/market/market_dawn.jpg");
+
+    background-image:
+        url("../../assets/images/backgrounds/market/market_dawn.jpg");
 }
 
 .mercado.day{
-    background-image: url("../../assets/images/backgrounds/market/market_day.jpg");
+
+    background-image:
+        url("../../assets/images/backgrounds/market/market_day.jpg");
 }
 
 .mercado.sunset{
-    background-image: url("../../assets/images/backgrounds/market/market_sunset.jpg");
+
+    background-image:
+        url("../../assets/images/backgrounds/market/market_sunset.jpg");
 }
 
 .mercado.night{
-    background-image: url("../../assets/images/backgrounds/market/market_night.jpg");
+
+    background-image:
+        url("../../assets/images/backgrounds/market/market_night.jpg");
 }
 
 /* =======================================
@@ -39,15 +52,16 @@
 ======================================= */
 
 #dialogoBorin{
+
     position: absolute;
 
-    /* CENTRO DEL MERCADO */
     left: 50%;
     top: 50%;
 
     transform: translate(-50%, -50%);
 
     width: 70%;
+
     min-height: 130px;
     max-height: 45%;
 
@@ -58,13 +72,22 @@
     overflow: auto;
 
     display: flex;
+
     justify-content: center;
     align-items: center;
 
     pointer-events: auto;
 
-    border: clamp(4px, 0.5vw, 8px) solid #FFE474;
-    outline: clamp(2px, 0.2vw, 3px) solid #975E05;
+    border:
+        clamp(4px, 0.5vw, 8px)
+        solid
+        #FFE474;
+
+    outline:
+        clamp(2px, 0.2vw, 3px)
+        solid
+        #975E05;
+
     border-radius: 5%;
 
     background: #FEFCA5;
@@ -78,25 +101,29 @@
 ======================================= */
 
 .borin-dialogo{
+
     width: 100%;
     height: auto;
     min-height: 100%;
 
     box-sizing: border-box;
 
-    padding: clamp(12px, 3vw, 20px);
+    padding:
+        clamp(12px, 3vw, 20px);
 
     text-align: center;
 
     color: #4a2a16;
 
     display: flex;
+
     flex-direction: column;
 
     justify-content: center;
     align-items: center;
 
-    gap: clamp(5px, 1vw, 10px);
+    gap:
+        clamp(5px, 1vw, 10px);
 }
 
 /* =======================================
@@ -104,7 +131,10 @@
 ======================================= */
 
 .borin-nombre{
-    font-size: clamp(13px, 1.8vw, 19px);
+
+    font-size:
+        clamp(17px, 2.5vw, 20px);
+
     font-weight: bold;
 
     margin-bottom: 2px;
@@ -115,9 +145,12 @@
 ======================================= */
 
 .borin-texto{
+
     width: 100%;
 
-    font-size: clamp(12px, 2vw, 16px);
+    font-size:
+        clamp(16px, 5vw, 16px);
+
     font-weight: bold;
 
     line-height: 1.25;
@@ -132,12 +165,16 @@
 ======================================= */
 
 .borin-dialogo button{
-    width: clamp(100px, 10vw, 140px);
+
+    width:
+        clamp(100px, 10vw, 140px);
+
     min-height: 45px;
 
     padding: 6px 8px;
 
-    font-size: clamp(12px, 2vw, 14px);
+    font-size:
+        clamp(12px, 2vw, 14px);
 
     margin: 2px;
 
@@ -156,6 +193,7 @@
 ======================================= */
 
 .info-jugador-mercado{
+
     position: absolute;
 
     top: 0%;
@@ -167,14 +205,19 @@
 
     box-sizing: border-box;
 
-    background: rgba(70, 38, 20, 0.92);
+    background:
+        rgba(70, 38, 20, 0.92);
 
-    border: 2px solid #b8862c;
+    border:
+        2px solid
+        #b8862c;
+
     border-radius: 7px;
 
     color: #f5d76e;
 
     font-size: 12px;
+
     font-weight: bold;
 
     text-align: center;
@@ -186,6 +229,7 @@
 }
 
 .jugador-nombre{
+
     white-space: nowrap;
 
     overflow: hidden;
@@ -196,6 +240,7 @@
 }
 
 .jugador-oquos{
+
     color: #ffd95a;
 
     white-space: nowrap;
@@ -206,7 +251,9 @@
 ======================================= */
 
 .mercado-mostrador{
-    background-image: url("images/mostrador.png");
+
+    background-image:
+        url("images/mostrador.png");
 
     position: absolute;
 
@@ -222,15 +269,17 @@
 
 /* =======================================
    SALIDA
+   ARRIBA A LA DERECHA
 ======================================= */
 
 .mercado-salida{
+
     position: absolute;
 
-    right: 3%;
     bottom: 3%;
+    right: 3%;
 
-    z-index: 30;
+    z-index: 60;
 
     cursor: pointer;
 
@@ -240,13 +289,17 @@
 }
 
 .mercado-salida img{
-    width: 50px;
-    height: 50px;
+
+    width: 70px;
+    height: 70px;
 
     object-fit: contain;
+
+    display: block;
 }
 
 .mercado-salida:hover{
+
     transform: scale(1.5);
 
     filter: brightness(1.25);
@@ -256,85 +309,94 @@
    MERCADO — TABLET
 ======================================= */
 
-@media (min-width: 400px) and (max-width: 1000px){
+#visorPantalla.modo-tablet .mercado{
 
-    .mercado{
-        width: 800px;
-        height: 1100px;
-    }
+    width: 800px;
+    height: 1100px;
+}
 
-    .item-mercado-contenedor{
-        width: 60px;
-        height: 60px;
-    }
+#visorPantalla.modo-tablet .item-mercado-contenedor{
 
-    .item-mercado{
-        width: 45px;
-        height: 45px;
-    }
+    width: 60px;
+    height: 60px;
+}
 
-    #dialogoBorin{
-        width: 60%;
-        min-height: 150px;
-    }
+#visorPantalla.modo-tablet .item-mercado{
+
+    width: 45px;
+    height: 45px;
+}
+
+#visorPantalla.modo-tablet #dialogoBorin{
+
+    width: 60%;
+
+    min-height: 150px;
 }
 
 /* =======================================
    MERCADO — CELULAR
 ======================================= */
 
-@media (max-width: 399px){
+#visorPantalla.modo-celular .mercado{
 
-    .mercado{
-        width: 450px;
-        height: 900px;
+    width: 700px;
+    height: 1300px;
 
-        background-size: 100% 100%;
-    }
+}
 
-    .item-mercado-contenedor{
-        width: 60px;
-        height: 60px;
-    }
+#visorPantalla.modo-celular .item-mercado-contenedor{
 
-    .item-mercado{
-        width: 30px;
-        height: 30px;
-    }
+    width: 60px;
+    height: 60px;
+}
 
-    /* ===================================
-       DIÁLOGO CENTRADO EN CELULAR
-    =================================== */
+#visorPantalla.modo-celular .item-mercado{
 
-    #dialogoBorin{
-        left: 50%;
-        top: 50%;
+    width: 50px;
+    height: 50px;
+}
 
-        width: 90%;
-        min-height: 130px;
-        max-height: 42%;
+/* =======================================
+   DIÁLOGO — CELULAR
+======================================= */
 
-        transform: translate(-50%, -50%);
-    }
+#visorPantalla.modo-celular #dialogoBorin{
 
-    .borin-dialogo{
-        padding: 8px;
-    }
+    left: 50%;
+    top: 50%;
 
-    .borin-nombre{
-        font-size: 13px;
-    }
+    width: 90%;
 
-    .borin-texto{
-        font-size: 12px;
-    }
+    min-height: 130px;
+    max-height: 42%;
 
-    .borin-dialogo button{
-        width: 110px;
-        min-height: 42px;
+    transform:
+        translate(-50%, -50%);
+}
 
-        font-size: 12px;
-    }
+#visorPantalla.modo-celular .borin-dialogo{
+
+    padding: 8px;
+}
+
+#visorPantalla.modo-celular .borin-nombre{
+
+    font-size: 17px;
+}
+
+#visorPantalla.modo-celular .borin-texto{
+
+    font-size: 14px;
+}
+
+#visorPantalla.modo-celular .borin-dialogo button{
+
+    width: 110px;
+
+    min-height: 42px;
+
+    font-size: 12px;
 }
 
 /* =======================================
@@ -342,6 +404,7 @@
 ======================================= */
 
 #itemsMercado{
+
     position: absolute;
 
     inset: 0;
@@ -359,6 +422,7 @@
 ======================================= */
 
 .item-mercado-contenedor{
+
     position: absolute;
 
     width: 60px;
@@ -375,9 +439,12 @@
 
     cursor: pointer;
 
-    background: rgba(255, 245, 190, 0.82);
+    background:
+        rgba(255, 245, 190, 0.82);
 
-    border: 2px solid rgba(151, 94, 5, 0.75);
+    border:
+        2px solid
+        rgba(151, 94, 5, 0.75);
 
     border-radius: 14px;
 
@@ -397,6 +464,7 @@
 ======================================= */
 
 .item-mercado{
+
     width: 45px;
     height: 45px;
 
@@ -410,15 +478,18 @@
 ======================================= */
 
 .item-mercado-contenedor:hover{
+
     transform: scale(1.08);
 
-    background: rgba(255, 248, 210, 0.95);
+    background:
+        rgba(255, 248, 210, 0.95);
 
     box-shadow:
         0 5px 12px rgba(0, 0, 0, 0.55);
 }
 
 .item-mercado-contenedor:hover .item-mercado{
+
     transform: scale(1.08);
 
     filter: brightness(1.15);
@@ -431,98 +502,119 @@
 /* -------- LADO IZQUIERDO -------- */
 
 .item-coca{
+
     left: 5%;
     top: 0%;
 }
 
 .item-natacion{
+
     left: 5%;
     top: 8%;
 }
 
 .item-libro{
+
     left: 5%;
     top: 16%;
 }
 
 .item-bici{
+
     left: 5%;
     top: 24%;
 }
 
 .item-arbol{
+
     left: 25%;
     top: 24%;
 }
 
 .item-luces2{
+
     left: 45%;
     top: 24%;
 }
 
 .item-waffle{
+
     left: 65%;
     top: 24%;
 }
 
 .item-pizza{
+
     left: 85%;
     top: 24%;
 }
 
+/* -------- LADO IZQUIERDO ABAJO -------- */
+
 .item-manos{
+
     left: 5%;
     top: 72%;
 }
 
 .item-tele{
+
     left: 5%;
     top: 81%;
 }
 
 .item-compu{
+
     left: 5%;
     top: 90%;
 }
 
-/* -------- ARRIBA 1 -------- */
+/* -------- ARRIBA -------- */
 
 .item-musica{
+
     left: 25%;
     top: 8%;
 }
 
 .item-pintura{
+
     left: 45%;
     top: 8%;
 }
 
 .item-sombrilla{
+
     left: 65%;
     top: 8%;
 }
 
 .item-vaso{
+
     left: 85%;
     top: 8%;
 }
 
 .item-chocolate{
+
     left: 25%;
     top: 16%;
 }
 
 .item-burguer{
+
     left: 45%;
     top: 16%;
 }
 
 .item-mcBurguer{
+
     left: 65%;
     top: 16%;
 }
 
 .item-galleta{
+
     left: 85%;
     top: 16%;
 }
@@ -530,56 +622,67 @@
 /* -------- ABAJO -------- */
 
 .item-mando{
+
     left: 25%;
     top: 72%;
 }
 
 .item-mapaBosque{
+
     left: 25%;
     top: 81%;
 }
 
 .item-mapaLeon{
+
     left: 25%;
     top: 90%;
 }
 
 .item-joystick{
+
     left: 45%;
     top: 72%;
 }
 
 .item-pelota{
+
     left: 45%;
     top: 81%;
 }
 
 .item-varita{
+
     left: 45%;
     top: 90%;
 }
 
 .item-pochoclo{
+
     left: 65%;
     top: 72%;
 }
 
 .item-helado{
+
     left: 65%;
     top: 81%;
 }
 
 .item-carta{
+
     left: 65%;
     top: 90%;
 }
 
 .item-cometa{
+
     left: 85%;
     top: 81%;
 }
 
 .item-castillo{
+
     left: 85%;
     top: 72%;
 }

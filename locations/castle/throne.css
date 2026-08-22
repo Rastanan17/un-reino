@@ -358,38 +358,38 @@
 
 /* =======================================
    SALIR
+   ESQUINA SUPERIOR DERECHA
 ======================================= */
 
 .trono-salida{
+    position: absolute;
+
+    top: 15px;
+    right: 20px;
+
+    z-index: 100;
 
     cursor: pointer;
 
-    margin-top: 5px;
-
-    padding-bottom: 20px;
+    margin: 0;
+    padding: 0;
 
     transition:
         transform 0.2s ease,
         filter 0.2s ease;
-
 }
 
 .trono-salida img{
-
     width: 60px;
-
     height: auto;
 
     display: block;
-
 }
 
 .trono-salida:hover{
-
     transform: scale(1.1);
 
     filter: brightness(1.2);
-
 }
 
 /* =======================================

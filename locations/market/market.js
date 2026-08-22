@@ -1132,7 +1132,7 @@ function mostrarDesafioPregunta(
         <div class="borin-dialogo">
 
             <div class="borin-nombre">
-                🧙‍♂️ Borin
+                🧙‍♂️ Borin, el mercader
             </div>
 
             <div class="borin-texto">
