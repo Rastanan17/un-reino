@@ -1,0 +1,696 @@
+{
+  "npc": "guardian",
+  "nombre": "Roderick el Centinela",
+
+  "saludos": [
+    "Alto ahí, aventurero. El Centinela te ha visto llegar.",
+    "Buenos días, aventurero. Las murallas están seguras por ahora.",
+    "Que Mírrafen te acompañe en tu jornada.",
+    "Te estaba esperando. O quizá simplemente estaba haciendo guardia. Nunca se sabe.",
+    "Saludos, joven aventurero. ¿Vienes con buenas noticias?",
+    "Las puertas de Mírrafen están abiertas para quienes cumplen con su deber.",
+    "Ah, eres tú. Siempre es bueno ver una cara conocida en el castillo.",
+    "El reino sigue en pie. Eso significa que algo estamos haciendo bien.",
+    "Bienvenido al castillo. Aquí cada tarea tiene su importancia.",
+    "Te veo con energía. Espero que también tengas disciplina."
+  ],
+
+  "dialogos_guardia": [
+    "He protegido estas murallas durante años. Una cosa aprendí: la vigilancia empieza por prestar atención a los pequeños detalles.",
+    "Un verdadero defensor no protege solamente las puertas. También protege aquello que ama.",
+    "Las mejores batallas no siempre se libran con espadas. A veces se ganan simplemente haciendo lo que corresponde.",
+    "He visto guerreros muy fuertes caer por falta de paciencia. La fuerza sin control no sirve de mucho.",
+    "En tiempos de guerra aprendí que quien mantiene la calma suele encontrar la salida.",
+    "Un buen guardia revisa dos veces aquello que los demás dan por seguro.",
+    "No necesito que seas el aventurero más fuerte del reino. Necesito que seas constante.",
+    "Las murallas pueden proteger una ciudad, pero solamente las personas pueden mantenerla viva.",
+    "El valor no consiste en no tener miedo. Consiste en hacer lo correcto aunque una tarea no resulte divertida.",
+    "Recuerda esto: un reino se construye con grandes hazañas, pero también con pequeñas responsabilidades cumplidas todos los días."
+  ],
+
+  "desafios_reales": [
+    {
+      "tipo": "vida_real",
+      "titulo": "La cama del aventurero",
+      "descripcion": "Roderick necesita comprobar que tu campamento está en orden. Ve y ordena tu cama.",
+      "accion": "Ordenar la cama",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Inspección de equipo",
+      "descripcion": "Un aventurero preparado mantiene sus pertenencias organizadas. Ordena durante unos minutos tu espacio personal.",
+      "accion": "Ordenar tus cosas",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Entrenamiento del Centinela",
+      "descripcion": "Antes de comenzar el día, Roderick ordena una breve sesión de movimiento.",
+      "accion": "Hacer una breve rutina de ejercicio segura",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "La mesa del comedor",
+      "descripcion": "El comedor del castillo debe quedar preparado para el próximo banquete.",
+      "accion": "Ayudar a ordenar o limpiar la mesa",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Suministros",
+      "descripcion": "Roderick necesita que revises tus suministros personales y dejes preparado lo necesario para después.",
+      "accion": "Preparar tus cosas para una actividad próxima",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Patrulla doméstica",
+      "descripcion": "Hay algo fuera de lugar en tu territorio. Encuéntralo y déjalo en su sitio.",
+      "accion": "Ordenar un objeto que esté fuera de lugar",
+      "recompensa": {
+        "xp": 4,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Agua para el viajero",
+      "descripcion": "Todo buen aventurero debe recordar sus necesidades básicas durante la jornada.",
+      "accion": "Tomar agua",
+      "recompensa": {
+        "xp": 3,
+        "oquos": 1
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "La mesa de trabajo",
+      "descripcion": "Roderick inspeccionó tu zona de trabajo y encontró señales de desorden.",
+      "accion": "Ordenar tu escritorio o zona de trabajo",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Preparativos para la misión",
+      "descripcion": "Antes de salir del castillo, prepara todo lo que necesitarás para tu próxima actividad.",
+      "accion": "Preparar mochila, materiales o útiles",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "La prueba de disciplina",
+      "descripcion": "Roderick no te pide una hazaña. Te pide simplemente terminar una pequeña tarea pendiente.",
+      "accion": "Completar una tarea pendiente de tu lista",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 4
+      }
+    }
+  ],
+
+  "misiones_reino": [
+    {
+      "titulo": "Informe desde la Aldea",
+      "destino": "Aldea",
+      "descripcion": "Ve hasta la Aldea y revisa si todo parece estar en orden. Luego regresa al castillo.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Revisión del Mercado",
+      "destino": "Mercado",
+      "descripcion": "Los comerciantes necesitan saber que las rutas siguen abiertas. Visita el Mercado y regresa.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Mensaje para la Granja",
+      "destino": "Granja",
+      "descripcion": "Lleva el saludo del castillo hasta la Granja. Un reino funciona cuando sus habitantes se mantienen comunicados.",
+      "recompensa": {
+        "xp": 9,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Rumores del Bosque",
+      "destino": "Bosque",
+      "descripcion": "Los guardias han oído rumores extraños provenientes del Bosque. Investiga la zona.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Inspección de las Cavernas",
+      "destino": "Cavernas",
+      "descripcion": "Roderick quiere saber si las rutas de las Cavernas siguen siendo transitables.",
+      "recompensa": {
+        "xp": 12,
+        "oquos": 5
+      }
+    },
+    {
+      "titulo": "Mensaje al Observatorio",
+      "destino": "Observatorio",
+      "descripcion": "Lleva un mensaje del castillo hasta el Observatorio y averigua si Zephyr ha descubierto algo interesante.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Patrulla de la frontera",
+      "destino": "Nieve",
+      "descripcion": "Los territorios helados necesitan vigilancia. Visita la zona y regresa con un informe.",
+      "recompensa": {
+        "xp": 14,
+        "oquos": 6
+      }
+    },
+    {
+      "titulo": "Visita al Puerto",
+      "destino": "Puerto",
+      "descripcion": "Comprueba que las rutas comerciales del Puerto continúen funcionando.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "El conocimiento de Eldrin",
+      "destino": "Museo",
+      "descripcion": "Visita a Eldrin y pregúntale si existen novedades importantes para el castillo.",
+      "recompensa": {
+        "xp": 9,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Reporte de la Reina",
+      "destino": "Aldea",
+      "descripcion": "Roderick necesita que visites a Eleanor y regreses con cualquier novedad importante.",
+      "recompensa": {
+        "xp": 12,
+        "oquos": 5
+      }
+    }
+  ],
+
+  "desafios_combate": [
+    {
+      "titulo": "Entrenamiento de escudo",
+      "descripcion": "Roderick quiere comprobar tu disciplina. Mantén una buena postura durante unos minutos y concéntrate en tu tarea.",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 2
+      }
+    },
+    {
+      "titulo": "Prueba de concentración",
+      "descripcion": "El Centinela te ordena abandonar las distracciones y completar una tarea que hayas empezado.",
+      "recompensa": {
+        "xp": 7,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "La guardia silenciosa",
+      "descripcion": "Permanece unos minutos concentrado en una única actividad sin distraerte.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Resistencia del aventurero",
+      "descripcion": "Completa una pequeña tarea que normalmente intentarías dejar para después.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Orden de combate",
+      "descripcion": "Elige tres cosas que necesites hacer y completa las tres en orden.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Contraataque",
+      "descripcion": "Toma una tarea que hayas estado postergando y dale el primer paso ahora.",
+      "recompensa": {
+        "xp": 9,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Defensa perfecta",
+      "descripcion": "Durante tu próxima tarea, evita distraerte y mantén el objetivo hasta terminar.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Espada de disciplina",
+      "descripcion": "Completa una tarea sin que Roderick tenga que recordártela.",
+      "recompensa": {
+        "xp": 12,
+        "oquos": 5
+      }
+    },
+    {
+      "titulo": "Último entrenamiento",
+      "descripcion": "Antes de descansar, deja preparado algo que necesitarás mañana.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Victoria del Centinela",
+      "descripcion": "Elige una tarea pequeña y complétala completamente antes de volver a hablar con Roderick.",
+      "recompensa": {
+        "xp": 12,
+        "oquos": 5
+      }
+    }
+  ],
+
+  "consejos_del_centinela": [
+    "No intentes conquistar todo el reino en un día. Una misión completada vale más que diez empezadas.",
+    "Si algo parece demasiado grande, divídelo en pequeñas tareas.",
+    "La constancia es una espada que nunca pierde el filo.",
+    "Descansar también forma parte del entrenamiento.",
+    "Un buen aventurero sabe cuándo avanzar y cuándo detenerse.",
+    "No esperes a tener ganas de hacer una tarea. A veces la motivación aparece después de empezar.",
+    "Cuida tus herramientas. Un aventurero preparado trabaja mejor.",
+    "Antes de abandonar una tarea, pregúntate si realmente la terminaste.",
+    "Los errores también enseñan. Lo importante es aprender de ellos.",
+    "Tu mayor rival no siempre está fuera de las murallas. A veces es la distracción."
+  ],
+
+  "rumores": [
+    "He escuchado que algo extraño se mueve entre los árboles del Bosque.",
+    "Los comerciantes del Mercado hablan de una mercancía que nadie recuerda haber visto antes.",
+    "Dicen que en las Cavernas se ha encontrado algo que brilla incluso en completa oscuridad.",
+    "Zephyr asegura que las estrellas están formando una figura que no había visto antes.",
+    "Eldrin pasó toda la mañana revisando antiguos libros. Eso nunca suele ser una buena señal.",
+    "Alguien dejó unas huellas extrañas cerca de las murallas. Todavía no sabemos de quién son.",
+    "La Reina ha recibido noticias de tierras lejanas, pero todavía no ha revelado su contenido.",
+    "Los habitantes de la Granja dicen que los animales se comportan de manera extraña últimamente.",
+    "En el Puerto hay marineros contando historias sobre una isla que no aparece en ningún mapa.",
+    "Escuché que alguien encontró una vieja reliquia. Pero ya sabes cómo crecen los rumores en una taberna."
+  ],
+
+  "eventos_especiales": [
+  {
+    "id": "inspeccion_de_armas",
+    "titulo": "Inspección de equipamiento",
+    "descripcion": "Roderick requiere que verifiques que todo en tu inventario esté ordenado y en su lugar.",
+    "accion": "Ordenar tus pertenencias o espacio de trabajo",
+    "recompensa": {
+      "xp": 12,
+      "oquos": 5
+    }
+  },
+  {
+    "id": "guardia_nocturna",
+    "titulo": "Vigilancia nocturna",
+    "descripcion": "El reino descansa y la patrulla debe asegurarse de que todo quede preparado antes de dormir.",
+    "accion": "Dejar todo listo para el día siguiente",
+    "recompensa": {
+      "xp": 18,
+      "oquos": 7
+    }
+  },
+  {
+    "id": "relevo_de_puesto",
+    "titulo": "Relevo en la muralla",
+    "descripcion": "Roderick necesita que tomes su lugar por un momento cumpliendo tu responsabilidad a tiempo.",
+    "accion": "Completar una tarea exactamente a la hora pactada",
+    "recompensa": {
+      "xp": 15,
+      "oquos": 6
+    }
+  },
+  {
+    "id": "suministros_de_vanguardia",
+    "titulo": "Carga de suministros",
+    "descripcion": "Hay recursos que mover hasta las torres del castillo antes de que empiece la instrucción.",
+    "accion": "Aportar ayuda en una tarea física pesada del hogar",
+    "recompensa": {
+      "xp": 20,
+      "oquos": 8
+    }
+  },
+  {
+    "id": "juramento_del_guardian",
+    "titulo": "Juramento de disciplina",
+    "descripcion": "Un verdadero centinela cumple con su deber sin poner excusas ni postergarlo.",
+    "accion": "Completar de inmediato una tarea que solías posponer",
+    "recompensa": {
+      "xp": 25,
+      "oquos": 10
+    }
+  },
+  {
+    "id": "mantenimiento_de_puertas",
+    "titulo": "Limpieza de las defensas",
+    "descripcion": "Las armas y escudos deben brillar. Roderick te pide colaborar con la limpieza.",
+    "accion": "Limpiar un área común o tus herramientas de uso diario",
+    "recompensa": {
+      "xp": 14,
+      "oquos": 5
+    }
+  },
+  {
+    "id": "patrulla_silenciosa",
+    "titulo": "Patrulla sigilosa",
+    "descripcion": "Roderick mide tu concentración: debes realizar tus deberes con calma y enfoque total.",
+    "accion": "Completar una tarea en silencio y sin distracciones",
+    "recompensa": {
+      "xp": 16,
+      "oquos": 6
+    }
+  },
+  {
+    "id": "entrenamiento_de_resistencia",
+    "titulo": "Prueba de esfuerzo",
+    "descripcion": "Un guardia de élite mantiene la constancia incluso cuando la misión exige un extra.",
+    "accion": "Finalizar dos tareas consecutivas sin interrupción",
+    "recompensa": {
+      "xp": 22,
+      "oquos": 9
+    }
+  },
+  {
+    "id": "auxilio_al_ciudadano",
+    "titulo": "Servicio al reino",
+    "descripcion": "Roderick recuerda que un guardia protege y sirve a los habitantes del reino.",
+    "accion": "Hacer un favor o ayudar espontáneamente a alguien",
+    "recompensa": {
+      "xp": 18,
+      "oquos": 7
+    }
+  },
+  {
+    "id": "informe_al_comandante",
+    "titulo": "Rendición de cuentas",
+    "descripcion": "Llego el final del turno y Roderick debe revisar que todo haya quedado completado.",
+    "accion": "Revisar y marcar la lista de tareas del día",
+    "recompensa": {
+      "xp": 15,
+      "oquos": 6
+    }
+  }
+],
+
+  "historia_personal": [
+    {
+      "id": "historia_01",
+      "titulo": "Los primeros años",
+      "texto": "Antes de vestir la armadura de Mírrafen, fui un joven soldado que apenas sabía sostener una espada. Aprendí que la disciplina importa más que el talento."
+    },
+    {
+      "id": "historia_02",
+      "titulo": "La primera guerra",
+      "texto": "Mi primera guerra terminó antes de que pudiera comprender lo que estaba ocurriendo. Desde entonces aprendí a valorar los días tranquilos."
+    },
+    {
+      "id": "historia_03",
+      "titulo": "Las murallas",
+      "texto": "Cuando me asignaron estas murallas pensé que sería un trabajo sencillo. Después descubrí que proteger un reino significa estar preparado incluso cuando parece que no sucede nada."
+    },
+    {
+      "id": "historia_04",
+      "titulo": "El invierno",
+      "texto": "Hubo un invierno en el que las rutas quedaron bloqueadas durante semanas. Sobrevivimos gracias a la cooperación de todos los habitantes."
+    },
+    {
+      "id": "historia_05",
+      "titulo": "Una vieja batalla",
+      "texto": "Todavía conservo la espada con la que defendí la puerta oriental. Está vieja y marcada, pero me recuerda que ninguna victoria se consigue solo."
+    },
+    {
+      "id": "historia_06",
+      "titulo": "El verdadero valor",
+      "texto": "He conocido guerreros valientes y guerreros imprudentes. Con los años aprendí a distinguirlos: el valiente piensa antes de actuar."
+    },
+    {
+      "id": "historia_07",
+      "titulo": "El juramento",
+      "texto": "Mi juramento no fue proteger solamente al castillo. Juré proteger a quienes viven detrás de estas murallas."
+    },
+    {
+      "id": "historia_08",
+      "titulo": "El Centinela",
+      "texto": "Me llaman Centinela porque siempre estoy atento. Pero incluso un centinela necesita confiar en otros para proteger un reino."
+    },
+    {
+      "id": "historia_09",
+      "titulo": "El peso de la capa",
+      "descripcion": "Roderick reflexiona sobre la responsabilidad de liderar y la serenidad necesaria para tomar decisiones bajo presión.",
+      "texto": "Llevar la insignia de guardia no es una cuestión de poder o distinción. Pesa más el deber de cuidar a los demás que la propia armadura en los días de tormenta."
+    },
+    {
+      "id": "historia_10",
+      "titulo": "La nueva generación",
+      "descripcion": "Roderick observa a los jóvenes aprendices y comparte su visión sobre el futuro de las defensas del reino.",
+      "texto": "Veo a los jóvenes llegar con entusiasmo y prisa. Mi tarea no es solo enseñarles a blandir el acero, sino mostrarles que la constancia diaria es la verdadera fortaleza."
+    }
+  ],
+
+  "dialogos_por_nivel": {
+  "1": [
+    "Todavía estás comenzando tu aventura. Aprende a cumplir pequeñas misiones antes de buscar grandes hazañas.",
+    "Todo gran aventurero comienza siendo un aprendiz. No tengas prisa."
+  ],
+  "2": [
+    "Un paso tras otro. Así es como se cruzan las montañas del reino.",
+    "No subestimes el valor de los primeros logros; son la base de tu carácter."
+  ],
+  "3": [
+    "Estás formando tus hábitos. La disciplina empieza con los pequeños detalles.",
+    "Un buen escudo se moldea golpe a golpe; mantén la firmeza."
+  ],
+  "4": [
+    "Cada tarea completada te acerca un poco más a la maestría.",
+    "La constancia es la mejor arma que podés llevar en tu inventario."
+  ],
+  "5": [
+    "Ya has recorrido un buen trecho. Ahora empieza a demostrar constancia.",
+    "El reino comienza a reconocerte. No desperdicies esa confianza."
+  ],
+  "6": [
+    "El entusiasmo inicial se apaga pronto, pero el deber te mantiene de pie.",
+    "Sigue adelante, las murallas no se construyeron en un solo día."
+  ],
+  "7": [
+    "Empiezas a ganarte el respeto de la guardia. Mantén ese nivel.",
+    "Un verdadero aventurero no busca excusas, busca resultados."
+  ],
+  "8": [
+    "Veo más firmeza en tus pasos. Estás dejando de ser un novato.",
+    "Cada objetivo cumplido fortalece la paz de nuestras comarcas."
+  ],
+  "9": [
+    "Estás a un solo paso de un nuevo hito. No aflojes ahora.",
+    "Mírrafen premia a quienes perseveran día a día."
+  ],
+  "10": [
+    "Nivel diez. Ya no eres un simple visitante del castillo.",
+    "Has demostrado que puedes avanzar. Ahora demuestra que puedes mantener el ritmo."
+  ],
+  "11": [
+    "Los retos serán mayores a partir de aquí, pero sé que podés afrontarlos.",
+    "No cuentes los días, haz que cada día cuente para tu progresión."
+  ],
+  "12": [
+    "La rutina del guerrero es exigente, pero rinde sus frutos.",
+    "Tu reputación empieza a resonar entre los artesanos y mercaderes."
+  ],
+  "13": [
+    "No permitas que la comodidad te haga bajar la guardia.",
+    "Superar la pereza es la primera gran victoria en cualquier camino."
+  ],
+  "14": [
+    "Estás rozando un nuevo escalón. Afila tu determinación.",
+    "La confianza se demuestra cumpliendo la palabra empeñada."
+  ],
+  "15": [
+    "He visto cómo has progresado. Empiezas a comportarte como un verdadero aventurero.",
+    "Las puertas de Mírrafen empiezan a reconocerte. Sigue así."
+  ],
+  "16": [
+    "La verdadera fuerza no está en la armadura, sino en la voluntad.",
+    "No hay misión insignificante cuando se hace con dedicación."
+  ],
+  "17": [
+    "Ya enfrentaste dudas y las superaste. Nada te frena fácilmente.",
+    "Tu nombre figura con honor en los registros de la patrulla."
+  ],
+  "18": [
+    "Mantener la atención en lo importante es el arte del sabio.",
+    "Paso a paso, tu esfuerzo transforma el reino a tu alrededor."
+  ],
+  "19": [
+    "Un esfuerzo más para alcanzar la excelencia de este ciclo.",
+    "El cansancio es temporal, el orgullo de haber cumplido permanece."
+  ],
+  "20": [
+    "Has llegado lejos. Pero recuerda: un rango no te hace mejor que los demás. Tus acciones sí.",
+    "A estas alturas ya deberías saber que las grandes aventuras se construyen misión por misión."
+  ],
+  "21": [
+    "Nuevos horizontes se abren cuando dominás la disciplina básica.",
+    "Acepta cada responsabilidad como una oportunidad para crecer."
+  ],
+  "22": [
+    "Un centinela no descansa hasta ver el trabajo bien hecho.",
+    "Tu ejemplo inspira a los nuevos reclutas que pisan Mírrafen."
+  ],
+  "23": [
+    "No te confíes por tus logros pasados; enfócate en el presente.",
+    "El valor se demuestra en las tareas ordinarias de cada jornada."
+  ],
+  "24": [
+    "La preparación de hoy es la victoria de mañana.",
+    "Un paso firme vale más que cien saltos apresurados."
+  ],
+  "25": [
+    "Alcanzaste el punto medio. Pocos mantienen este nivel de compromiso.",
+    "Tu constancia es la mejor defensa que nuestro pueblo podría desear."
+  ],
+  "26": [
+    "El dominio de ti mismo es el mayor trofeo que vas a conseguir.",
+    "No te detengas cuando sientas cansancio; detente cuando termines."
+  ],
+  "27": [
+    "Cada hábito reforzado es una piedra más en tus murallas.",
+    "El verdadero honor reside en la palabra cumplida sin excusas."
+  ],
+  "28": [
+    "Tus decisiones diarias marcan el rumbo de tu propia leyenda.",
+    "Mantén la cabeza fría y el enfoque claro ante el deber."
+  ],
+  "29": [
+    "Estás a las puertas de la élite del reino. Demuestra de qué estás hecho.",
+    "El último tramo de una meta requiere el doble de tu concentración."
+  ],
+  "30": [
+    "Nivel treinta. Tu disciplina es un pilar fundamental para todos nosotros.",
+    "Pocos llegan hasta aquí con la cabeza en alto. Mi respeto, aventurero."
+  ],
+  "31": [
+    "El camino se vuelve más exigente, pero tu temple ya está forjado.",
+    "No busques aplausos; busca la satisfacción del deber concluido."
+  ],
+  "32": [
+    "La excelencia no es un acto aislado, es un hábito diario.",
+    "Quien sabe gobernar sus días puede superar cualquier desafío."
+  ],
+  "33": [
+    "Enfrenta las tareas difíciles primero; el resto caerá por su propio peso.",
+    "Tu temple ha resistido la prueba del tiempo y la rutina."
+  ],
+  "34": [
+    "Cerca de un nuevo rango insigne. Mantén la postura.",
+    "La verdadera maestría consiste en hacer lo correcto aun cuando nadie mira."
+  ],
+  "35": [
+    "Tu trayectoria en Mírrafen es intachable. Sigue marcando el paso.",
+    "Servir al reino con tanta constancia es propio de grandes héroes."
+  ],
+  "36": [
+    "Que tu voluntad siga siendo tan firme como el roble del bosque.",
+    "No hay tormenta que mueva a quien tiene claras sus prioridades."
+  ],
+  "37": [
+    "Cada victoria sobre la postergación te vuelve invencible.",
+    "Los grandes logros son la suma de pequeñas acciones cotidianas."
+  ],
+  "38": [
+    "Un veterano reconoce la importancia del enfoque en todo momento.",
+    "Falta muy poco para entrar en los anales de la guardia."
+  ],
+  "39": [
+    "Afila tu mente y tu espíritu. El umbral de los maestros te espera.",
+    "Estás demostrando la verdadera madera de la que estás hecho."
+  ],
+  "40": [
+    "Nivel cuarenta. Eres un verdadero referente dentro de las murallas.",
+    "Tu constancia ha dejado de ser una prueba para convertirse en tu legado."
+  ],
+  "41": [
+    "En estas alturas, solo compites contra tu propia versión del ayer.",
+    "Mantén la humildad del aprendiz aunque tengas la fuerza del veterano."
+  ],
+  "42": [
+    "Nada de lo que te propongas parecerá demasiado grande a este nivel.",
+    "Tu enfoque es afilado como el acero de una espada de vanguardia."
+  ],
+  "43": [
+    "El reino descansa tranquilo sabiendo de tu determinación diaria.",
+    "La constancia transforma el carbón en diamante y al novato en leyenda."
+  ],
+  "44": [
+    "Estás a un paso de la cima. No aflojes ni un solo segundo.",
+    "Demuestra que el esfuerzo de tanto tiempo sigue intacto."
+  ],
+  "45": [
+    "Solo los más perseverantes alcanzan semejante grado de maestría.",
+    "Tu nombre es sinónimo de cumplimiento, enfoque y respeto."
+  ],
+  "46": [
+    "La cumbre está a la vista. Mantén el ritmo hasta el final.",
+    "Cada tarea que completas reafirma el lugar que te has ganado."
+  ],
+  "47": [
+    "Nada puede desviarte de tu objetivo cuando tu propósito es claro.",
+    "Sigue adelante con la misma fuerza del primer día."
+  ],
+  "48": [
+    "Dos pasos más para alcanzar la máxima gloria del centinela.",
+    "Tu disciplina ha superado con creces las expectativas de la orden."
+  ],
+  "49": [
+    "Estás en el umbral absoluto. Un último esfuerzo y tocarás la cima.",
+    "Prepara tu espíritu: el nivel máximo está al alcance de tu mano."
+  ],
+  "50": [
+    "Nivel cincuenta. Has alcanzado la cima de la maestría en Mírrafen.",
+    "Tu nombre quedará grabado en la historia de estas murallas para siempre."
+  ]
+  }
+}

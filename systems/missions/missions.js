@@ -720,10 +720,6 @@ function abrirPergaminoMision(id){
             <p>${mision.descripcion}</p>
 
             <br>
-            <strong>📍 Lugar:</strong>
-            ${zonaMisionesActual}
-
-            <br>
             <strong>⚔️ Dificultad:</strong>
             ${mision.dificultad}
 

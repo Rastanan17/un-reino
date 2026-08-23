@@ -242,6 +242,8 @@ Un Reino<
 		music<
 			music.js
 		npc<
+			data<
+				guardian.json
 			images<
 				aurelia.png
 				balthazar.png
@@ -540,6 +542,11 @@ Un Reino<
 			store.css - (vacío)
 		storage<
 			storage.js
+		tutorial<
+			data<
+				tutorial.json
+			tutorial.css
+			tutorial.js
 	documents.text
 	index.html
 	manifest.json
