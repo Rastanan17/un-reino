@@ -1,0 +1,181 @@
+/* =======================================
+   NPCs DE MÍRRAFEN
+   SISTEMA BASE
+======================================= */
+
+.npc{
+
+    position:absolute;
+
+    width: 240px;
+    height: 300px;
+
+    transform:
+        translate(-50%, -50%);
+
+    z-index:100;
+
+    cursor:pointer;
+
+    user-select:none;
+
+}
+
+/* =======================================
+   SPRITE
+======================================= */
+
+.npc-sprite{
+
+    width:100%;
+    height:100%;
+
+    background-repeat:no-repeat;
+
+    background-size:
+        700% 300%;
+
+    background-position:
+        0% 0%;
+
+    image-rendering:auto;
+
+    pointer-events:none;
+    z-index: 51;
+}
+
+/* =======================================
+   NOMBRE
+======================================= */
+
+.npc-nombre{
+
+    position:absolute;
+
+    left:50%;
+    bottom:100%;
+
+    transform:
+        translateX(-50%);
+
+    width:max-content;
+
+    color:#ffd700;
+
+    font-size:18px;
+    font-weight:bold;
+
+    text-align:center;
+
+    white-space:nowrap;
+
+    text-shadow:
+        -1px -1px 0 #000,
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+
+    pointer-events:none;
+}
+
+/* =======================================
+   DESCRIPCIÓN
+======================================= */
+
+.npc-descripcion{
+
+    display:none;
+
+}
+
+/* =======================================
+   HOVER
+======================================= */
+
+.npc:hover{
+
+    transform:
+        translate(-50%, -50%)
+        scale(1.05);
+
+    filter:
+        brightness(1.1);
+
+}
+
+/* =======================================
+   CAMINATA
+======================================= */
+
+.npc-caminando .npc-sprite{
+
+    animation:
+        npcCaminar 0.8s steps(7) infinite;
+
+}
+
+@keyframes npcCaminar{
+
+    0%{
+        background-position:
+            0% 0%;
+    }
+
+    100%{
+        background-position:
+            100% 0%;
+    }
+
+}
+
+/* =======================================
+   TABLET
+======================================= */
+
+@media (max-width:900px){
+
+    .npc {
+        width: 210px;
+        height: 260px;
+    }
+
+    .npc-nombre{
+
+        font-size:15px;
+
+    }
+
+}
+
+/* =======================================
+   CELULAR
+======================================= */
+
+@media (max-width:600px){
+
+    .npc {
+        width: 170px;
+        height: 210px;
+    }
+
+    .npc-nombre{
+
+        font-size:14px;
+
+    }
+
+}
+
+/* =======================================
+   CELULAR PEQUEÑO
+======================================= */
+
+@media (max-width:380px){
+
+    .npc-nombre{
+
+        display:none;
+
+    }
+
+}

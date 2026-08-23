@@ -76,8 +76,8 @@ const zonasCastillo = [
     {
         id: "salida",
         nombre: "Salir",
-        x: 600,
-        y: 1000,
+        x: 1200,
+        y: 100,
         width: 400,
         height: 200
     },
@@ -230,6 +230,20 @@ function mostrarCastillo(){
         </section>
 
     `;
+
+    // ===================================
+    // 🧙 NPCs DEL CASTILLO
+    // ===================================
+
+    mostrarNPCsEnLugar("Castillo");
+
+    // ===================================
+    // CARGAR DIÁLOGOS
+    // ===================================
+
+    if(dialogosGuardias.length === 0){
+        cargarDialogosGuardias();
+    }
 
     // ===================================
     // CARGAR DIÁLOGOS

@@ -57,6 +57,20 @@
 }
 
 /* =======================================
+   PRIORIDAD DE ZONAS
+======================================= */
+
+/* El TRONO queda por debajo */
+.zona-castillo.trono{
+    z-index: 10;
+}
+
+/* La SALIDA siempre queda por encima */
+.zona-castillo.salida{
+    z-index: 20;
+}
+
+/* =======================================
    NOMBRE DE LA ZONA
 ======================================= */
 

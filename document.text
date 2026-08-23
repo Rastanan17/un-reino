@@ -558,4 +558,50 @@ nueva PALETA DE colores
 #F98828
 #F9FB90
 #F3B36C
-#4FB5F7
+#
+
+------------
+
+FeedBacks:
+Problema                        Prioridad
+Botón atrás reinicia	        🔴 Alta
+No entienden misiones reales	🔴 Alta
+Esperan misiones MMO	        🟠 Media
+Problemas de responsive	        🟠 Media
+Cosas que les gustan	        🟢 Mantener
+Ideas nuevas	                🔵 No implementar todavía
+
+------------
+NPCs:
+Academia - Lyra
+Castillo - Roderick
+Cavernas - Eliana
+Granja - Silas
+Bosque - Garrick
+Hielo - Valerius
+Biblioteca - Rowena
+Mercado - Borin
+Museo - Eldrin
+Observarotio - Zephyr
+Mascotas - Balthazar
+Puerto - Laudelino
+Santuario - 
+Nieve - 
+Aldea - Eleanor
+
+-----------
+
+y bueno los personajes tambien estan preparadisimsos, sin fondo. todos iguales. son 3 filas con 5 estados en total. la primera fila es de las direcciones: tiene 7 sprites: down, down-right, right, up, up-left, up, left. la segunda fila tiene 2 bloques. la primera tiene 4 imagenes y son de accion (buscando el desafio). y la segunda tiene 3 imagenes (encontrando y presentando el desafio). la tercera fila tiene 2 bloques. la primera tiene 4 imagenes y son de idle, los 4 (pensando o esperando una respuesta). y el segundo bloque tiene 3 imagenes y son de victoria, los 3 festejando. las dimensiones de cada img es 667x374
+Este spritesheet está organizado en una **grilla regular de 3 filas x 7 columnas** (21 frames en total).
+**Estructura de la Grilla**
+| **Fila**              | **Columnas** | **Animaciones / Acciones representadas**              |                                                      |          |                                                                 |          |                                                                          |          |                                                           |      |
+| --------------------- | ------------ | ----------------------------------------------------- | ---------------------------------------------------- | -------- | --------------------------------------------------------------- | -------- | ------------------------------------------------------------------------ | -------- | --------------------------------------------------------- | ---- |
+| **Fila 1 (Superior)** | 1 a 7        | **Caminata / Movimiento (4 Direcciones):**<br><br>    | • Col 1 y 2: Frente (idle / caminata)                | <br><br> | • Col 3 y 4: Perfil derecho                                     | <br><br> | • Col 5: 3/4 espalda / perfil                                            | <br><br> | • Col 6 y 7: Espalda                                      | <br> |
+| **Fila 2 (Central)**  | 1 a 7        | **Combate / Habilidades (Ataque y Defensa):**<br><br> | • Col 1: Pose de guardia con espada y escudo         | <br><br> | • Col 2, 3 y 4: Bloqueo con escudo y efectos de destello/mágico | <br><br> | • Col 5, 6 y 7: Ataque con espada / estocada con estela de corte (slash) | <br>     |                                                           |      |
+| **Fila 3 (Inferior)** | 1 a 7        | **Poses estáticas y Celebración:**<br><br>            | • Col 1 y 2: Frente estático (sin casco / con casco) | <br><br> | • Col 3: Perfil estático                                        | <br><br> | • Col 4: Espalda estática con capa                                       | <br><br> | • Col 5, 6 y 7: Animación de victoria / alzando la espada | <br> |
+**Distribución para el Corte de Tiles (CSS / Engine)**
+- **Filas (Y):** 3 filas de igual altura.
+- **Columnas (X):** 7 columnas de igual ancho.
+- **Margen / Padding:** Tienen un espacio transparente uniforme alrededor de cada personaje. Si recortás la imagen dividiendo el ancho total entre 7 y el alto total entre 3, cada frame te queda alineado al centro de su celda.
+
+----------------

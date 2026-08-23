@@ -1,106 +1,130 @@
 [
-    {
-        "id": "bibliotecaria",
-        "nombre": "Lady Rowena de los Tomos",
-        "categoria": "lectura",
-        "lugar": "biblioteca",
-        "sprite": "images/rowena.png",
-        "descripcion": "Guardián de todos los libros del Reino."
-    },
-    {
-        "id": "sabio",
-        "nombre": "Maestro Eldrin el Erudito",
-        "categoria": "conocimiento",
-        "lugar": "torre",
-        "sprite": "images/eldrin.png",
-        "descripcion": "Conoce todos los secretos del Reino."
-    },
-    {
-        "id": "narrador",
-        "nombre": "Garrick el Narrador de Sombras",
-        "categoria": "historias",
-        "lugar": "taberna",
-        "sprite": "images/garrick.png",
-        "descripcion": "Tejedor de mitos y relator de leyendas oscuras."
-    },
-    {
-        "id": "susurrador",
-        "nombre": "Silas el Susurrador de Árboles",
-        "categoria": "naturaleza",
-        "lugar": "bosque",
-        "sprite": "images/silas.png",
-        "descripcion": "Comunica la sabiduría antigua del bosque ancestral."
-    },
-    {
-        "id": "comandante",
-        "nombre": "Valerius Di'rroka",
-        "categoria": "estrategia",
-        "lugar": "cuartel",
-        "sprite": "images/valerius.png",
-        "descripcion": "Líder acróbata y maestra táctica de la vanguardia."
-    },
-    {
-        "id": "forjadora",
-        "nombre": "Eliana la Forjadora",
-        "categoria": "creatividad",
-        "lugar": "herreria",
-        "sprite": "images/eliana.png",
-        "descripcion": "Moldea artefactos y da forma a grandes ideas."
-    },
-    {
-        "id": "cocinero",
-        "nombre": "Maestro Cocinero",
-        "categoria": "alimentacion",
-        "lugar": "cocina",
-        "sprite": "images/balthazar.png",
-        "descripcion": "Especialista en banquetes revitalizantes y recetas del reino."
-    },
-    {
-        "id": "bardo",
-        "nombre": "Bardo Menestrel",
-        "categoria": "musica",
-        "lugar": "plaza",
-        "sprite": "images/laudelino.png",
-        "descripcion": "Inspirador de tropas con cantares y baladas legendarias."
-    },
-    {
-        "id": "reina",
-        "nombre": "Reina Soberana",
-        "categoria": "valores",
-        "lugar": "trono",
-        "sprite": "images/eleanor.png",
-        "descripcion": "Gobernante sabia que guía el destino de la comarca."
-    },
-    {
-        "id": "artista",
-        "nombre": "Artesana",
-        "categoria": "arte",
-        "lugar": "Academia",
-        "sprite": "images/lyra.png",
-        "descripcion": "Maestra de las manualidades y artesanías."
-    },
-    {
-        "id": "mercader",
-        "nombre": "Mercader",
-        "categoria": "mercado",
-        "lugar": "Mercado",
-        "sprite": "images/borin.png",
-        "descripcion": ""
-    },
-    {
-        "id": "guardian",
-        "nombre": "guardia",
-        "categoria": "guardia",
-        "lugar": "castillo",
-        "sprite": "images/roderick.png",
-        "descripcion": "Guardia del Reino."
-    },
-    {
-        "id": "alqumia",
-        "nombre": "Alquimista",
-        "categoria": "alquimia",
-        "lugar": "alquimista",
-        "sprite": "images/zephyr.png",
-        "descripcion": "Maestra de las manualidades y artesanías."
-    }
+  {
+    "id": "guardian",
+    "nombre": "Roderick el Centinela",
+    "categoria": "guardia",
+    "lugar": "Castillo",
+    "sprite": "kingdom/npc/images/roderick.png",
+    "descripcion": "Defensor de las murallas y protector de los portones del palacio real."
+  },
+  {
+    "id": "reina",
+    "nombre": "Eleanor Reina Soberana",
+    "categoria": "valores",
+    "lugar": "Aldea",
+    "sprite": "kingdom/npc/images/eleanor.png",
+    "descripcion": "Gobernante sabia que guía el destino de la comarca."
+  },
+  {
+    "id": "mercader",
+    "nombre": "Borin el Cambista",
+    "categoria": "mercado",
+    "lugar": "Mercado",
+    "sprite": "kingdom/npc/images/borin.png",
+    "descripcion": "Experto comerciante de reliquias, insumos y recursos exóticos."
+  },
+  {
+    "id": "susurrador",
+    "nombre": "Silas el Susurrador de Árboles",
+    "categoria": "naturaleza",
+    "lugar": "Granja",
+    "sprite": "kingdom/npc/images/silas.png",
+    "descripcion": "Comunica la sabiduría antigua del bosque ancestral."
+  },
+  {
+    "id": "forjadora",
+    "nombre": "Eliana la Forjadora",
+    "categoria": "creatividad",
+    "lugar": "Cavernas",
+    "sprite": "kingdom/npc/images/eliana.png",
+    "descripcion": "Moldea artefactos y da forma a grandes ideas."
+  },
+  {
+    "id": "narrador",
+    "nombre": "Garrick el Narrador de Sombras",
+    "categoria": "historias",
+    "lugar": "Bosque",
+    "sprite": "kingdom/npc/images/garrick.png",
+    "descripcion": "Tejedor de mitos y relator de leyendas oscuras."
+  },
+  {
+    "id": "sacerdotisa",
+    "nombre": "Aurelia la Clarividente",
+    "categoria": "espiritualidad",
+    "lugar": "Santuario",
+    "sprite": "kingdom/npc/images/aurelia.png",
+    "descripcion": "Guardiana del fuego sagrado y protectora de las bendiciones del reino."
+  },
+  {
+    "id": "alqumia",
+    "nombre": "Zephyr el Astral",
+    "categoria": "alquimia",
+    "lugar": "Observatorio",
+    "sprite": "kingdom/npc/images/zephyr.png",
+    "descripcion": "Estudioso de los astros, pócimas estelares y secretos del cosmos."
+  },
+  {
+    "id": "bibliotecaria",
+    "nombre": "Lady Rowena de los Tomos",
+    "categoria": "lectura",
+    "lugar": "Biblioteca",
+    "sprite": "kingdom/npc/images/rowena.png",
+    "descripcion": "Guardián de todos los libros del Reino."
+  },
+  {
+    "id": "bardo",
+    "nombre": "Laudelino Bardo Menestrel",
+    "categoria": "musica",
+    "lugar": "Puerto",
+    "sprite": "kingdom/npc/images/laudelino.png",
+    "descripcion": "Inspirador de tropas con cantares y baladas legendarias."
+  },
+  {
+    "id": "explorador",
+    "nombre": "Kaelen el Rastrojo de Escarcha",
+    "categoria": "supervivencia",
+    "lugar": "Nieve",
+    "sprite": "kingdom/npc/images/kaelen.png",
+    "descripcion": "Rastreador de las cumbres heladas y maestro de la orientación en ventiscas."
+  },
+  {
+    "id": "tabernero",
+    "nombre": "Barnaby el Tabernero",
+    "categoria": "social",
+    "lugar": "Bar",
+    "sprite": "kingdom/npc/images/barnaby.png",
+    "descripcion": "Anfitrión del refugio de cazadores, siempre dispuesto a servir una buena hidromiel y escuchar rumores."
+  },
+  {
+    "id": "artista",
+    "nombre": "Lyra la Artesana",
+    "categoria": "arte",
+    "lugar": "Academia",
+    "sprite": "kingdom/npc/images/lyra.png",
+    "descripcion": "Maestra de las manualidades y artesanías."
+  },
+  {
+    "id": "sabio",
+    "nombre": "Maestro Eldrin el Erudito",
+    "categoria": "conocimiento",
+    "lugar": "Museo",
+    "sprite": "kingdom/npc/images/eldrin.png",
+    "descripcion": "Conoce todos los secretos del Reino."
+  },
+  {
+    "id": "cocinero",
+    "nombre": "Balthazar Maestro Cocinero",
+    "categoria": "alimentacion",
+    "lugar": "Mascotas",
+    "sprite": "kingdom/npc/images/balthazar.png",
+    "descripcion": "Especialista en banquetes revitalizantes y recetas del reino."
+  },
+  {
+    "id": "comandante",
+    "nombre": "Valerius Di'rroka",
+    "categoria": "estrategia",
+    "lugar": "Hielo",
+    "sprite": "kingdom/npc/images/valerius.png",
+    "descripcion": "Líder acróbata y maestra táctica de la vanguardia."
+  }
 ]

@@ -243,12 +243,15 @@ Un Reino<
 			music.js
 		npc<
 			images<
+				aurelia.png
 				balthazar.png
+				barnaby.png
 				borin.png
 				eldrin.png
 				eleanor.png
 				eliana.png
 				garrick.png
+				kaelen.png
 				laudelino.png
 				lyra.png
 				roderick.png
@@ -257,6 +260,7 @@ Un Reino<
 				valerius.png
 				zephyr.png
 			habitantes.json
+			npc.css
 			npc.js - (vacío)
 		portal<
 			avatars<
