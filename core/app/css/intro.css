@@ -1,401 +1,190 @@
 /* =======================================
    INTRO — UN REINO EN MÍRRAFEN
 ======================================= */
-
 body{
     margin:0;
     overflow:hidden;
     background:black;
     font-family:'MedievalSharp', cursive;
 }
-
 /* =======================================
    FONDO
 ======================================= */
-
 #background{
     position:fixed;
     inset:0;
     width:100%;
     height:100%;
-
     background:url("../../../assets/images/backgrounds/castle-ruins.jpg");
     background-size:cover;
     background-position:center;
-
     filter:brightness(.35);
-
     font-family:'MedievalSharp', cursive;
 }
-
 /* =======================================
    OSCURECIMIENTO
 ======================================= */
-
 #overlay{
     position:fixed;
     inset:0;
     width:100%;
     height:100%;
-
-    background:
-        linear-gradient(
-            to top,
-            rgba(0,0,0,.85),
-            rgba(0,0,0,.2)
-        );
-
+    background:linear-gradient(to top, rgba(0,0,0,.85), rgba(0,0,0,.2));
     font-family:'MedievalSharp', cursive;
 }
-
 /* =======================================
    CONTENEDOR DEL TEXTO
 ======================================= */
-
 .crawl-container{
     position:absolute;
     inset:0;
-
     width:100%;
     height:100%;
-
     perspective:400px;
-
     overflow:hidden;
-
     font-family:'MedievalSharp', cursive;
 }
-
 /* =======================================
    TEXTO DE INTRODUCCIÓN
 ======================================= */
-
 .crawl{
     position:absolute;
-
     bottom:100%;
     left:50%;
-
-    transform:
-        translateX(-50%)
-        rotateX(10deg);
-
+    transform:translateX(-50%) rotateX(10deg);
     transform-origin:50% 100%;
-
     /*
        El ancho se adapta al dispositivo.
        Evitamos que el texto ocupe toda
        la pantalla en celulares.
     */
     width:clamp(280px,70vw,1000px);
-
     color:#ffd54f;
-
-    /*
-       El tamaño ahora también escala.
-    */
+    /*El tamaño ahora también escala.*/
     font-size:clamp(1rem,2vw,1.5rem);
-
     font-weight:bold;
-
     text-align:center;
-
     white-space:pre-line;
-
     animation:none;
-
     text-shadow:0 0 10px black;
-
     display:block;
-
     box-sizing:border-box;
 }
-
 /* =======================================
    ANIMACIÓN DEL TEXTO
 ======================================= */
-
 @keyframes crawl{
-    0%{
-        bottom:-100%;
-    }
-
-    100%{
-        bottom:140%;
-    }
+    0%{ bottom:-100%; }
+    100%{ bottom:140%; }
 }
-
 .crawl.start-crawl{
     animation:crawlAnimation 100s linear forwards;
 }
-
 @keyframes crawlAnimation{
-
-    0%{
-        top:80%;
-        opacity:1;
-    }
-
-    90%{
-        opacity:1;
-    }
-
-    100%{
-        top:-100%;
-        opacity:0;
-    }
+    0%{ top:80%; opacity:1; }
+    90%{ opacity:1; }
+    100%{ top:-100%; opacity:0; }
 }
-
 /* =======================================
    CONTROLES DE INTRO
 ======================================= */
-
 .intro-controls{
-
     position:absolute;
-
     bottom:clamp(20px,4vh,40px);
-
     left:50%;
-
     transform:translateX(-50%);
-
     z-index:9999;
-
     display:flex;
-
     justify-content:center;
     align-items:center;
-
     gap:15px;
-
     width:auto;
-
     font-family:'MedievalSharp', cursive;
 }
-
 /* =======================================
    BOTÓN COMENZAR
 ======================================= */
-
 #btnComenzar{
-
     font-family:'MedievalSharp', cursive;
-
-    padding:clamp(10px,1.5vw,15px)
-            clamp(18px,3vw,30px);
-
+    padding:clamp(10px,1.5vw,15px) clamp(18px,3vw,30px);
     font-size:clamp(.9rem,1.5vw,1.2rem);
-
     font-weight:bold;
-
     cursor:pointer;
-
     background-color:#f39c12;
-
     color:#fff;
-
     border:2px solid #d35400;
-
     border-radius:8px;
-
-    box-shadow:
-        0 4px 10px rgba(0,0,0,.5);
-
+    box-shadow:0 4px 10px rgba(0,0,0,.5);
     white-space:nowrap;
-
-    transition:
-        transform .2s ease,
-        background-color .2s ease;
+    transition:transform .2s ease, background-color .2s ease;
 }
-
 #btnComenzar:hover{
-
     background-color:#e67e22;
-
     transform:scale(1.05);
 }
-
 /* =======================================
    BOTÓN IR AL REINO
 ======================================= */
-
 #startButton{
-
     font-family:'MedievalSharp', cursive;
-
-    padding:clamp(10px,1.5vw,15px)
-            clamp(18px,3vw,30px);
-
+    padding:clamp(10px,1.5vw,15px) clamp(18px,3vw,30px);
     font-size:clamp(.9rem,1.5vw,1.2rem);
-
     font-weight:bold;
-
     cursor:pointer;
-
     background-color:#f39c12;
-
     color:#fff;
-
     border:2px solid #d35400;
-
     border-radius:8px;
-
-    box-shadow:
-        0 4px 10px rgba(0,0,0,.5);
-
+    box-shadow:0 4px 10px rgba(0,0,0,.5);
     display:none;
-
     white-space:nowrap;
-
     transition:transform .2s ease;
 }
-
 #startButton:hover{
-
     transform:scale(1.05);
 }
-
 /* =======================================
    BOTÓN SALTAR
 ======================================= */
-
 #btnSaltar{
-
     font-family:'MedievalSharp', cursive;
-
-    padding:clamp(9px,1.3vw,12px)
-            clamp(15px,2.5vw,22px);
-
+    padding:clamp(9px,1.3vw,12px) clamp(15px,2.5vw,22px);
     border:2px solid #d35400;
-
     border-radius:10px;
-
     background:#F39C12;
-
-    box-shadow:
-        0 4px 10px rgba(0,0,0,.5);
-
+    box-shadow:0 4px 10px rgba(0,0,0,.5);
     color:#fff;
-
     font-size:clamp(.9rem,1.5vw,1.2rem);
-
     font-weight:bold;
-
     cursor:pointer;
-
     display:none;
-
     z-index:9999;
-
     white-space:nowrap;
-
     transition:transform .2s ease;
 }
-
 #btnSaltar:hover{
-
     transform:scale(1.05);
 }
-
 /* =======================================
    TABLET
 ======================================= */
-
 @media (max-width:900px){
-
-    .crawl{
-
-        width:80%;
-
-        font-size:clamp(
-            .95rem,
-            2.2vw,
-            1.3rem
-        );
-    }
-
-    .intro-controls{
-
-        bottom:30px;
-
-        gap:12px;
-    }
-
+    .crawl{width:80%; font-size:clamp(.95rem, 2.2vw, 1.3rem);}
+    .intro-controls{bottom:30px; gap:12px;}
 }
-
 /* =======================================
    CELULAR
 ======================================= */
-
 @media (max-width:600px){
-
-    .crawl{
-
-        width:88%;
-
-        font-size:clamp(
-            .85rem,
-            4vw,
-            1.1rem
-        );
-
-        line-height:1.45;
-    }
-
-    .intro-controls{
-
-        bottom:20px;
-
-        width:90%;
-
-        flex-direction:column;
-
-        align-items:center;
-
-        gap:8px;
-    }
-
-    .intro-controls button{
-
-        width:90%;
-
-        max-width:320px;
-
-        font-size:1rem;
-
-        padding:10px 15px;
-    }
-
+    .crawl{width:88%; font-size:clamp(.85rem, 4vw, 1.1rem); line-height:1.45;}
+    .intro-controls{bottom:20px; width:90%; flex-direction:column; align-items:center; gap:8px;}
+    .intro-controls button{width:90%; max-width:320px; font-size:1rem; padding:10px 15px;}
 }
-
 /* =======================================
    CELULAR PEQUEÑO
 ======================================= */
-
 @media (max-width:380px){
-
-    .crawl{
-
-        width:90%;
-
-        font-size:.82rem;
-
-        line-height:1.4;
-    }
-
-    .intro-controls{
-
-        bottom:15px;
-    }
-
-    .intro-controls button{
-
-        width:95%;
-
-        font-size:.9rem;
-
-        padding:9px 12px;
-    }
-
+    .crawl{width:90%; font-size:.82rem; line-height:1.4;}
+    .intro-controls{bottom:15px;}
+    .intro-controls button{width:95%; font-size:.9rem; padding:9px 12px;}
 }

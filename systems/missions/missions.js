@@ -529,32 +529,34 @@ function iniciarTemporizadorPergamino(id){
     const mision = misiones.find(m => m.id === id);
     if(!mision) return;
     const intervalo = setInterval(() => {
-            const elemento = document.getElementById("temporizadorMision");
-            // Si el pergamino se cerró,
-            // dejamos de actualizarlo.
-            if(!elemento){
-                clearInterval(intervalo);
-                return;
-            }
-            const inicio = mision.inicio || Date.now();
-            const transcurrido = Math.floor(
-                    (Date.now() - inicio) / 1000
-                );
-            const restante = Math.max(0, mision.duracion - transcurrido);
-            // -------------------------------
-            // TODAVÍA QUEDA TIEMPO
-            // -------------------------------
-            if(restante > 0){
-                elemento.textContent = formatearTiempo(restante);
-            }
-            // -------------------------------
-            // TERMINÓ EL TIEMPO
-            // -------------------------------
-            else{
-                clearInterval(intervalo);
-                abrirPergaminoMision(id);
-            }
-        },1000);
+        const elemento = document.getElementById("temporizadorMision");
+        // -----------------------------------
+        // PERGAMINO CERRADO
+        // -----------------------------------
+        if(!elemento){
+            clearInterval(intervalo);
+            return;
+        }
+        // -----------------------------------
+        // CALCULAR TIEMPO
+        // -----------------------------------
+        const inicio = mision.inicio || Date.now();
+        const transcurrido = Math.floor((Date.now() - inicio) / 1000);
+        const restante = Math.max(0, mision.duracion - transcurrido);
+        // -----------------------------------
+        // TODAVÍA QUEDA TIEMPO
+        // -----------------------------------
+        if(restante > 0){
+            elemento.textContent = formatearTiempo(restante);
+            return;
+        }
+        // -----------------------------------
+        // ⏱️ TIEMPO TERMINADO
+        // -----------------------------------
+        clearInterval(intervalo);
+        elemento.textContent = "00:00";
+        console.log("⏱️ Tiempo terminado para misión:", mision.id);
+    }, 1000);
 }
 // =======================================
 // INICIAR MISIÓN
@@ -564,13 +566,32 @@ function iniciarMision(id){
     if(!mision) return;
     mision.estado = "enCurso";
     mision.inicio = Date.now();
-    guardarEstadoMisiones();
+     // Guardamos de qué lugar viene
+    mision.zona = zonaMisionesActual;
+    // Guardamos la duración
+    mision.duracionMision = mision.duracion;guardarEstadoMisiones();
+    mision.avisado = false;
     console.log("MISIÓN INICIADA:", mision);
     cerrarPergamino();
     mostrarMensaje("⚔️ Misión iniciada",
         `Has comenzado: "${mision.titulo}"`
     );
     mostrarTablonMisiones();
+}
+// =======================================
+// ⏱️ VIGILANTE GLOBAL DE MISIONES
+// =======================================
+let intervaloVigilanteMisiones = null;
+function iniciarVigilanteMisiones(){
+    // Evitar duplicarlo
+    if(intervaloVigilanteMisiones){
+        return;
+    }
+    console.log("⏱️ Vigilante global de misiones iniciado.");
+    revisarMisionesEnCurso();
+    intervaloVigilanteMisiones = setInterval(() => {
+        revisarMisionesEnCurso();
+    }, 1000);
 }
 // =======================================
 // TERMINAR MISIÓN MANUALMENTE
@@ -595,6 +616,7 @@ function posponerMision(id){
     }
     mision.estado = "disponible";
     delete mision.inicio;
+    mision.avisado = false;
     guardarEstadoMisiones();
     mostrarTablonMisiones();
     cerrarPergamino();
@@ -622,6 +644,11 @@ function completarMision(id){
     // DAR RECOMPENSA
     // ===================================
     sumarRecompensa(mision.xp, mision.oquos);
+    // ===================================
+    // 🔔 NOTIFICACIÓN DE RECOMPENSA
+    // ===================================
+    notificarXP(mision.xp);
+    notificarOquos(mision.oquos);
     /// ===================================
     // REGISTRAR EN PERFIL
     // ===================================
@@ -650,7 +677,10 @@ function guardarEstadoMisiones(){
         const identificador = `${zonaMisionesActual}:${rangoEdad}:${mision.id}`;
         estadosGuardados[identificador] = {
             estado: mision.estado,
-            inicio: mision.inicio || null
+            inicio: mision.inicio || null,
+            zona: mision.zona || zonaMisionesActual,
+            duracion: mision.duracionMision || mision.duracion || 0,
+            avisado: mision.avisado || false
         };
     });
     localStorage.setItem("estadoMisiones", JSON.stringify(estadosGuardados));
@@ -671,6 +701,7 @@ function cargarEstadoMisiones(){
             if(estados[identificador]){
                 mision.estado = estados[identificador].estado;
                 mision.inicio = estados[identificador].inicio;
+                mision.avisado = estados[identificador].avisado || false;
             }
         });
     }catch(error){
@@ -697,6 +728,71 @@ function obtenerTiempoRestante(mision){
     const seg = segundos % 60;
         return `⏳ ${minutos}:${seg.toString().padStart(2,"0")
     }`;
+}
+// =======================================
+// 🔎 REVISAR MISIONES EN CURSO
+// =======================================
+function revisarMisionesEnCurso(){
+    const datos = localStorage.getItem("estadoMisiones");
+    if(!datos){ return; }
+    try{
+        const estados = JSON.parse(datos);
+        let huboCambios = false;
+        Object.keys(estados).forEach(clave => {
+            const estado = estados[clave];
+            // -----------------------------------
+            // SOLO MISIONES EN CURSO
+            // -----------------------------------
+            if(estado.estado !== "enCurso"){
+                return;
+            }
+            if(!estado.inicio){
+                return;
+            }
+            // -----------------------------------
+            // CALCULAR TIEMPO
+            // -----------------------------------
+            const transcurrido = Date.now() - estado.inicio;
+            // -----------------------------------
+            // ⏱️ TERMINÓ
+            // -----------------------------------
+            if(transcurrido >= estado.duracion * 1000){
+                //--------------------------------
+                // YA FUE AVISADA
+                //--------------------------------
+                if(estado.avisado){
+                    return;
+                }
+                if(!estado.duracion){
+                    console.warn("⚠️ Misión sin duración:", clave, estado);
+                    return;
+                }
+                console.log("🏆 MISIÓN TERMINÓ:", clave);
+                const partes = clave.split(":");
+                const zona = partes[0];
+                const idMision = Number(partes[2]);
+                // -----------------------------------
+                // 🔔 AVISO
+                // -----------------------------------
+                const rangoEdad = partes[1];
+                const id = Number(partes[2]);
+                notificarMisionLista(zona, idMision);
+                // -----------------------------------
+                // MARCAR AVISO
+                // -----------------------------------
+                estado.avisado = true;
+                huboCambios = true;
+            }
+        });
+        // -----------------------------------
+        // GUARDAR CAMBIOS
+        // -----------------------------------
+        if(huboCambios){
+            localStorage.setItem("estadoMisiones", JSON.stringify(estados));
+        }
+    }catch(error){
+        console.error("❌ Error revisando misiones:", error);
+    }
 }
 // =======================================
 // INICIALIZAR SISTEMA
@@ -735,3 +831,8 @@ function mostrarMisiones(){
     }
     cargarMisionesCastillo();
 }
+// =======================================
+// 🚀 INICIAR VIGILANTE GLOBAL
+// =======================================
+
+iniciarVigilanteMisiones();

@@ -27,6 +27,7 @@ async function entrarAlReino(){
     mostrarHUDJugador();
     iniciarSistemaTutorial();
     revisarCompensacion();
+    iniciarVigilanteMisiones();
     await iniciarSistemaMisiones();
     await cargarMapa();
     await cargarRecompensas();

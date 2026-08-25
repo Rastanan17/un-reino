@@ -2,144 +2,322 @@
    UN REINO EN MÍRRAFEN
    SISTEMA DE NOTIFICACIONES
    ======================================= */
-
 #notificaciones {
-
     position: fixed;
-
     top: 20px;
     right: 20px;
-
     z-index: 99999;
-
     display: flex;
-
     flex-direction: column;
-
     gap: 10px;
-
     pointer-events: none;
-
 }
-
 /* =======================================
    NOTIFICACIÓN
    ======================================= */
-
 .notificacion {
-
     min-width: 240px;
     max-width: 320px;
-
     padding: 14px 18px;
-
     border-radius: 12px;
-
     background: rgba(20, 20, 30, 0.95);
-
     border: 2px solid rgba(255,255,255,0.25);
-
-    box-shadow:
-        0 6px 20px rgba(0,0,0,0.45);
-
+    box-shadow:0 6px 20px rgba(0,0,0,0.45);
     color: white;
-
     opacity: 0;
-
-    transform:
-        translateX(40px)
-        scale(0.95);
-
-    transition:
-        opacity 0.5s ease,
-        transform 0.5s ease;
-
+    transform:translateX(40px) scale(0.95);
+    transition:opacity 0.5s ease, transform 0.5s ease;
 }
-
 /* =======================================
    NOTIFICACIÓN VISIBLE
    ======================================= */
-
 .notificacionVisible {
-
     opacity: 1;
-
-    transform:
-        translateX(0)
-        scale(1);
-
+    transform:translateX(0) scale(1);
 }
-
 /* =======================================
    TÍTULO
    ======================================= */
-
 .notificacionTitulo {
-
     font-size: 18px;
-
     font-weight: bold;
-
     margin-bottom: 5px;
-
 }
-
 /* =======================================
    TEXTO
    ======================================= */
-
 .notificacionTexto {
-
     font-size: 15px;
-
 }
-
 /* =======================================
    TIPOS
    ======================================= */
-
 .notificacion-xp {
-
     border-color: gold;
-
 }
-
 .notificacion-oquos {
-
     border-color: #4fc3f7;
-
 }
-
 .notificacion-nivel {
-
     border-color: #b388ff;
-
-    transform:
-        translateX(40px)
-        scale(0.9);
-
+    transform:translateX(40px) scale(0.9);
 }
-
 .notificacion-zona {
-
     border-color: #66bb6a;
-
 }
-
 .notificacion-logro {
-
     border-color: #ffca28;
-
 }
-
 /* =======================================
    NIVEL VISIBLE
    ======================================= */
-
 .notificacion-nivel.notificacionVisible {
-
-    transform:
-        translateX(0)
-        scale(1.05);
-
+    transform:translateX(0) scale(1.05);
+}
+.notificacion-mision {
+    border-color: #ffca28;
+}
+/* =========================================
+   🏆 MODAL — MISIÓN COMPLETADA
+   ========================================= */
+.modal-mision-completada {
+    width: 90%;
+    max-width: 520px;
+    margin: auto;
+    padding: 28px 24px;
+    text-align: center;
+    box-sizing: border-box;
+}
+/* -----------------------------------------
+   TÍTULO
+   ----------------------------------------- */
+.modal-mision-titulo {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+/* -----------------------------------------
+   AVATAR
+   ----------------------------------------- */
+.modal-mision-avatar {
+    width: 150px;
+    height: 180px;
+    margin: 5px auto 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+#avatarVictoryMision {
+    width: 128px;
+    height: 160px;
+    image-rendering: pixelated;
+}
+/* -----------------------------------------
+   MENSAJE
+   ----------------------------------------- */
+.modal-mision-mensaje {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin: 15px auto 25px;
+    max-width: 420px;
+}
+/* -----------------------------------------
+   BOTONES
+   ----------------------------------------- */
+.modal-mision-botones {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+/* -----------------------------------------
+   RECLAMAR
+   ----------------------------------------- */
+.btn-reclamar-mision {
+    width: 85%;
+    max-width: 320px;
+    padding: 13px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* -----------------------------------------
+   CERRAR
+   ----------------------------------------- */
+.btn-cerrar-mision {
+    width: 70%;
+    max-width: 260px;
+    padding: 10px 18px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+@media (max-width: 600px){
+    .modal-mision-completada { width: 94%; padding: 22px 16px; }
+    .modal-mision-titulo { font-size: 1.55rem; }
+    .modal-mision-mensaje { font-size: 1rem; }
+    .modal-mision-avatar { width: 130px; height: 150px; }
+    #avatarVictoryMision { width: 110px; height: 140px; }
+    .btn-reclamar-mision { width: 92%; }
+}
+/* =======================================
+   🏆 MISIÓN COMPLETADA
+   ======================================= */
+.mision-completada-contenido {
+    width: 100%;
+    text-align: center;
+}
+/* ---------------------------------------
+   AVATAR VICTORIA
+   --------------------------------------- */
+.avatar-victory-mision {
+    width: 150px;
+    height: 170px;
+    margin: 5px auto 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+/* ---------------------------------------
+   MENSAJE
+   --------------------------------------- */
+.mision-completada-mensaje {
+    max-width: 420px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    text-align: center;
+}
+/* ---------------------------------------
+   DESTACAR NOMBRE DE MISIÓN
+   --------------------------------------- */
+.mision-completada-mensaje strong {
+    font-weight: bold;
+}
+/* =======================================
+   📱 CELULAR
+   ======================================= */
+@media (max-width: 600px){
+    .avatar-victory-mision { width: 125px; height: 145px; margin-bottom: 10px; }
+    .mision-completada-mensaje { font-size: 0.98rem; line-height: 1.45; }
+}
+/* =======================================
+   🏆 MODAL MISIÓN TERMINADA
+======================================= */
+.modal-mision-terminada {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.65);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+/* =======================================
+   MODAL VISIBLE
+======================================= */
+.modal-mision-visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+/* =======================================
+   PANEL
+======================================= */
+.modal-mision-panel {
+    position: relative;
+    width: min(500px, 92vw);
+    max-height: 90vh;
+    overflow: hidden;
+    padding: 30px 25px;
+    text-align: center;
+    border-radius: 20px;
+    background: #f4e2b8;
+    border: 4px solid #8a5a2b;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.55);
+    transform: scale(0.85);
+    transition: transform 0.25s ease;
+}
+/* =======================================
+   ESCALA AL MOSTRAR
+======================================= */
+.modal-mision-visible .modal-mision-panel {
+    transform: scale(1);
+}
+/* =======================================
+   CERRAR
+======================================= */
+.modal-mision-cerrar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+}
+/* =======================================
+   TÍTULO
+======================================= */
+.modal-mision-titulo {
+    margin-bottom: 15px;
+    font-size: clamp(22px, 5vw, 32px);
+    font-weight: bold;
+    color: #5b3519;
+}
+/* =======================================
+   AVATAR
+======================================= */
+.mision-victoria-avatar {
+    margin: 5px auto 15px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: hidden;
+    image-rendering: pixelated;
+}
+/* =======================================
+   TEXTO
+======================================= */
+.modal-mision-texto {
+    margin: 15px auto;
+    max-width: 420px;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #3e2919;
+}
+.modal-mision-texto p {
+    margin: 8px 0;
+}
+/* =======================================
+   ACCIONES
+======================================= */
+.modal-mision-acciones {
+    margin-top: 20px;
+}
+/* =======================================
+   BOTÓN RECLAMAR
+======================================= */
+.modal-mision-reclamar {
+    padding: 13px 25px;
+    border: 3px solid #6f451f;
+    border-radius: 12px;
+    background: #c9984d;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #6f451f;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+.modal-mision-reclamar:active {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 #6f451f;
 }

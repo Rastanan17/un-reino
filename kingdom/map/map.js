@@ -59,13 +59,6 @@ function mostrarMapaReino() {
                     id="mapImage"
                     src="kingdom/map/images/map_${momento}.jpg"
                     alt="Mapa del Reino">
-                <button
-                    class="mapTutorialButton"
-                    onclick="abrirTutorial('mapa')"
-                    aria-label="Abrir guía del mapa"
-                    >
-                    ❓
-                </button>
             </div>
             <aside id="zoneList"></aside>
         </div>
@@ -411,6 +404,22 @@ function abrirZona(zona){
         "Zona",
         "Esta zona todavía está en construcción."
     );
+}
+// =======================================
+// 🧭 IR DIRECTAMENTE A UNA ZONA
+// =======================================
+function irDirectamenteAZona(nombreZona){
+    if(!nombreZona){
+        console.warn("⚠️ No se recibió una zona.");
+        return;
+    }
+    const zona = zonas.find(z => z.nombre === nombreZona);
+    if(!zona){
+        console.warn("⚠️ No se encontró la zona:", nombreZona);
+        return;
+    }
+    console.log("🧭 Navegando directamente a:", nombreZona);
+    abrirZona(zona);
 }
 // =======================================
 function obtenerEstadoZona(zona){

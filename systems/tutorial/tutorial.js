@@ -355,7 +355,7 @@ function cerrarTutorial(){
     // -----------------------------------
     reproducirAnimacionTutorial("despedida");
     // -----------------------------------
-    // ESPERAR 2 SEGUNDOS
+    // ESPERAR 1 SEGUNDOS
     // -----------------------------------
     setTimeout(() => {
         // Detener cualquier animación
