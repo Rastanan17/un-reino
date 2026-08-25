@@ -365,25 +365,20 @@
 /* ======================================
    FIN DEL MAPA
 ====================================== */
-
 /* ======================================
    📱 CELULAR REAL
 ====================================== */
-
 @media (max-width: 600px){
-
     #kingdomLayout{
         flex-direction:column;
         align-items:center;
         gap:8px;
         width:100%;
     }
-
     #kingdomMap{
         width:100%;
         max-width:none;
     }
-
     #zoneList{
         width:100%;
         max-width:none;
@@ -392,46 +387,81 @@
         gap:5px;
         padding:5px;
     }
-
     .zone{
         width:45px;
         height:45px;
     }
-
     .zoneSprite img{
         width:45px;
     }
-
     .zoneName{
         display:none;
     }
-
     .zoneLevel{
         display:none;
     }
-
 }
-
 /* =======================================
    TÍTULO DEL MAPA
 ======================================= */
-
 #content > h2{
     position: relative;
     z-index: 5;
     margin-top: 70px;
     text-align: center;
 }
-
 /* =======================================
    CELULAR
 ======================================= */
-
 @media (max-width: 600px){
-
     #content > h2{
         margin-top: 85px;
         font-size: 22px;
     }
-
+}
+/* =======================================
+   BOTÓN DE AYUDA DEL MAPA
+======================================= */
+#kingdomMap {
+    position: relative;
+}
+.mapTutorialButton {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 2px solid #c9a227;
+    border-radius: 50%;
+    background: #4b2d16;
+    color: #fff;
+    font-family: "MedievalSharp", serif;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 50;
+    box-shadow: 0 2px 5px #000;
+    transition: transform .2s ease, filter .2s ease;
+}
+.mapTutorialButton:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+.mapTutorialButton:active {
+    transform: scale(.95);
+}
+.modo-tablet .mapTutorialButton {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+}
+.modo-celular .mapTutorialButton {
+    top: 8px;
+    right: 8px;
+    width: 34px;
+    height: 34px;
+    font-size: 17px;
 }

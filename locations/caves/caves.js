@@ -3,7 +3,7 @@
 // =======================================
 
 function mostrarCavernas(){
-
+establecerLugarTutorial("cuevas");
     console.log("🪨 Entrando a las Cavernas");
 
     const content =

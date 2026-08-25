@@ -1,0 +1,311 @@
+{
+    "mapa": {
+        "titulo": "🗺️ Guía del Mapa",
+        "opciones": {
+            "queHacer": {
+                "titulo": "⚔️ ¿Qué hacer?",
+                "texto": [
+                    "En Mírrafen tendrás distintas misiones para completar.",
+                    "Cada misión puede darte ⭐ XP y 💰 Oquos."
+                ]
+            },
+            "dondeIr": {
+                "titulo": "📍 ¿Dónde ir?",
+                "texto": [
+                    "El mapa te permite explorar las diferentes zonas del Reino.",
+                    "Algunas zonas se desbloquean a medida que subís de nivel."
+                ]
+            },
+            "comoHacer": {
+                "titulo": "❓ ¿Cómo hago?",
+                "texto": [
+                    "Elegí una misión y leé las instrucciones del pergamino.",
+                    "Cuando estés listo, comenzá la misión."
+                ]
+            }
+        }
+    },
+
+    "aldea": {
+        "titulo": "🏘️ Guía de la Aldea",
+        "opciones": {
+            "quienesSon": {
+                "titulo": "👥 ¿Quiénes son?",
+                "texto": [
+                    "En la Aldea viven distintos habitantes de Mírrafen.",
+                    "Cada uno puede tener una función diferente dentro del Reino."
+                ]
+            },
+            "aldeano": {
+                "titulo": "🧑‍🌾 ¿Qué hace el aldeano?",
+                "texto": [
+                    "Los aldeanos pueden darte información y ayudarte a conocer mejor el Reino."
+                ]
+            },
+            "salida": {
+                "titulo": "🚪 ¿Qué hace la salida?",
+                "texto": [
+                    "La salida te permite regresar al mapa del Reino."
+                ]
+            },
+            "reina": {
+                "titulo": "👑 ¿Qué hace la reina?",
+                "texto": [
+                    "La reina es una de las figuras principales del Reino.",
+                    "Podrás recibir información y orientación sobre tu aventura."
+                ]
+            }
+        }
+    },
+
+    "castillo": {
+        "titulo": "🏰 Guía del Castillo",
+        "opciones": {
+            "misiones": {
+                "titulo": "📜 ¿Qué son las misiones?",
+                "texto": [
+                    "Las misiones son tareas que podés realizar para ayudar al Reino.",
+                    "Al completarlas obtenés recompensas."
+                ]
+            },
+            "reina": {
+                "titulo": "👑 ¿Quién es la reina?",
+                "texto": [
+                    "La reina Eleanor gobierna Mírrafen y forma parte de la historia del Reino."
+                ]
+            },
+            "guardian": {
+                "titulo": "🛡️ ¿Quién es el guardián?",
+                "texto": [
+                    "El guardián protege el castillo y puede ayudarte con información."
+                ]
+            },
+            "queHacerCastillo": {
+                "titulo": "🏰 ¿Qué puedo hacer en el castillo?",
+                "texto": [
+                    "Podés consultar misiones principales y hablar con la reina o el guardián.",
+                    "Es un lugar clave para avanzar en la historia del Reino."
+                ]
+            },
+            "dondeMisiones": {
+                "titulo": "📜 ¿Dónde están las misiones?",
+                "texto": [
+                    "Las misiones disponibles se encuentran dentro del pergamino o panel de misiones.",
+                    "Revisá el castillo para enterarte de los nuevos desafíos."
+                ]
+            },
+            "queEncontrar": {
+                "titulo": "🛡️ ¿Qué puedo encontrar aquí?",
+                "texto": [
+                    "Encontrarás la sede del trono del Reino y a sus protectores.",
+                    "Es la zona central para coordinar las tareas más importantes."
+                ]
+            }
+        }
+    },
+
+    "mercado": {
+        "titulo": "🛒 Guía del Mercado",
+        "opciones": {
+            "quienEsBorin": {
+                "titulo": "🧑‍💼 ¿Quién es Borin?",
+                "texto": [
+                    "Borin es el comerciante encargado del mercado.",
+                    "Podés interactuar con él para comprar o ver los objetos disponibles."
+                ]
+            },
+            "queHacerMercado": {
+                "titulo": "🛍️ ¿Qué puedo hacer en el mercado?",
+                "texto": [
+                    "Podés canjear tus 💰 Oquos por diferentes artículos y recompensas.",
+                    "También podés revisar los desafíos comerciales de la zona."
+                ]
+            },
+            "queSonOquos": {
+                "titulo": "💰 ¿Qué son los Oquos?",
+                "texto": [
+                    "Los 💰 Oquos son las monedas del Reino de Mírrafen.",
+                    "Se obtienen completando misiones y desafíos."
+                ]
+            },
+            "queComprar": {
+                "titulo": "🎁 ¿Qué puedo comprar?",
+                "texto": [
+                    "Podés adquirir ítems, cosméticos y mejoras especiales para tu personaje.",
+                    "El catálogo de Borin ofrece distintos productos según tu nivel."
+                ]
+            },
+            "desafios": {
+                "titulo": "🎯 ¿Qué son los desafíos?",
+                "texto": [
+                    "Son tareas adicionales que te otorgan monedas y recompensas extra.",
+                    "Completalos para conseguir más 💰 Oquos."
+                ]
+            },
+            "salidaMercado": {
+                "titulo": "🚪 ¿Cómo vuelvo al mapa?",
+                "texto": [
+                    "Buscá el botón o puerta de salida dentro de la interfaz.",
+                    "Al presionarlo regresarás al mapa principal del Reino."
+                ]
+            }
+        }
+    },
+
+    "granja": {
+        "titulo": "🌾 Guía de la Granja",
+        "opciones": {
+            "queHacerGranja": {
+                "titulo": "🌾 ¿Qué puedo hacer en la granja?",
+                "texto": [
+                    "Podés interactuar con las actividades agrícolas y ayudar en las tareas del campo.",
+                    "Es un lugar genial para aprender y completar tareas cotidianas del Reino."
+                ]
+            },
+            "misionesGranja": {
+                "titulo": "📜 ¿Hay misiones aquí?",
+                "texto": [
+                    "Sí, podés encontrar misiones específicas relacionadas con la vida rural.",
+                    "Completarlas te dará ⭐ XP y 💰 Oquos."
+                ]
+            },
+            "quienTrabaja": {
+                "titulo": "🧑‍🌾 ¿Quién trabaja aquí?",
+                "texto": [
+                    "Encontrará a los agricultores y campesinos del Reino.",
+                    "Ellos te guiarán en las tareas y actividades de la granja."
+                ]
+            },
+            "salidaGranja": {
+                "titulo": "🚪 ¿Cómo vuelvo al mapa?",
+                "texto": [
+                    "Presioná la opción de salida para abandonar la granja.",
+                    "Esto te llevará de vuelta a la vista general del mapa."
+                ]
+            }
+        }
+    },
+
+    "cuevas": {
+        "titulo": "🕳️ Guía de las Cuevas",
+        "opciones": {
+            "cuevaFuego": {
+                "titulo": "🔥 ¿Qué hay en la cueva de fuego?",
+                "texto": [
+                    "Es una de las zonas subterráneas del Reino con desafíos calurosos.",
+                    "Aquí encontrarás recursos y misiones ambientales del elemento fuego."
+                ]
+            },
+            "cuevaMinerales": {
+                "titulo": "💎 ¿Qué hay en la cueva de minerales?",
+                "texto": [
+                    "Es una cueva llena de vetas y materiales preciosos.",
+                    "Es la zona indicada para las actividades de minería e investigación."
+                ]
+            },
+            "cuevaHielo": {
+                "titulo": "❄️ ¿Qué hay en la cueva de hielo?",
+                "texto": [
+                    "Una cueva helada repleta de acertijos y temperaturas bajo cero.",
+                    "Ofrece desafíos helados y recompensas ocultas."
+                ]
+            },
+            "comoFuncionan": {
+                "titulo": "⛏️ ¿Cómo funcionan las cuevas?",
+                "texto": [
+                    "Cada cueva representa un bioma distinto con sus propias reglas.",
+                    "Podés explorarlas para extraer recursos o superar desafíos."
+                ]
+            },
+            "carroMinero": {
+                "titulo": "🛒 ¿Para qué sirve el carro minero?",
+                "texto": [
+                    "El carro minero te ayuda a transportar materiales o moverte entre secciones.",
+                    "Es un elemento fundamental para el trabajo dentro de las minas."
+                ]
+            },
+            "salidaCuevas": {
+                "titulo": "🚪 ¿Cómo salgo de las cuevas?",
+                "texto": [
+                    "Utilizá la salida marcada en la interfaz de la cueva.",
+                    "Volverás inmediatamente a la superficie en el mapa principal."
+                ]
+            }
+        }
+    },
+
+    "bosque": {
+        "titulo": "🌲 Guía del Bosque",
+        "opciones": {
+            "queHacerBosque": {
+                "titulo": "🌲 ¿Qué puedo hacer en el bosque?",
+                "texto": [
+                    "Podés explorar la naturaleza y descubrir los misterios que esconde la vegetación.",
+                    "Es una zona ideal para adentrarte en historias y misiones."
+                ]
+            },
+            "cuentos": {
+                "titulo": "📖 ¿Qué son los cuentos?",
+                "texto": [
+                    "Son relatos e historias especiales situados en el entorno del bosque.",
+                    "Te permiten leer y aprender sobre la tradición del Reino."
+                ]
+            },
+            "queEncontrarBosque": {
+                "titulo": "🗺️ ¿Qué puedo encontrar aquí?",
+                "texto": [
+                    "Encontrarás senderos, criaturas fantásticas y rincones de lectura.",
+                    "Es el lugar indicado para conectar con las leyendas de Mírrafen."
+                ]
+            },
+            "salidaBosque": {
+                "titulo": "🚪 ¿Cómo vuelvo al mapa?",
+                "texto": [
+                    "Seleccioná la opción de regresar o salir de la zona.",
+                    "Retornarás al mapa para continuar viaje hacia otros destinos."
+                ]
+            }
+        }
+    },
+
+    "observatorio": {
+        "titulo": "🔭 Guía del Observatorio",
+        "opciones": {
+            "queEsObservatorio": {
+                "titulo": "🔭 ¿Qué es el observatorio?",
+                "texto": [
+                    "Es el centro astronómico del Reino para contemplar el cielo.",
+                    "Aquí podés estudiar las estrellas y aprender sobre el universo."
+                ]
+            },
+            "queObservar": {
+                "titulo": "⭐ ¿Qué puedo observar?",
+                "texto": [
+                    "Podés mirar a través del telescopio para divisar astros y constelaciones.",
+                    "Cada observación puede revelar nueva información astronómica."
+                ]
+            },
+            "queEsCosmos": {
+                "titulo": "🌌 ¿Qué es el cosmos?",
+                "texto": [
+                    "Es el gran espacio que rodea al mundo de Mírrafen.",
+                    "Aprender sobre el cosmos te ayuda a comprender los ciclos del Reino."
+                ]
+            },
+            "queSonAstros": {
+                "titulo": "✨ ¿Qué son los astros?",
+                "texto": [
+                    "Son los cuerpos celestes como estrellas, planetas y la luna.",
+                    "Podés identificarlos y registrarlos durante tus visitas al observatorio."
+                ]
+            },
+            "salidaObservatorio": {
+                "titulo": "🚪 ¿Cómo vuelvo al mapa?",
+                "texto": [
+                    "Elegí el botón de salida en la pantalla del observatorio.",
+                    "Te llevará de vuelta a la vista general del Reino."
+                ]
+            }
+        }
+    }
+}

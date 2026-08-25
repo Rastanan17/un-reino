@@ -1,0 +1,288 @@
+/* =======================================
+   UN REINO EN MÍRRAFEN
+   SISTEMA DE TUTORIAL
+   ======================================= */
+
+.tutorial{
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 9000;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0,0,0,0.55);
+
+}
+
+/* =======================================
+   PANEL
+   ======================================= */
+
+.tutorialPanel{
+
+    position: relative;
+
+    width: min(90%, 700px);
+
+    min-height: 300px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+
+    background: rgba(35, 25, 18, 0.97);
+
+    border: 3px solid #c9a45c;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 0 20px rgba(0,0,0,0.8);
+
+    color: #fff;
+
+    font-family: "MedievalSharp", serif;
+
+}
+
+/* =======================================
+   BOTÓN CERRAR
+   ======================================= */
+
+.tutorialCerrar{
+
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+
+    width: 38px;
+    height: 38px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+}
+
+/* =======================================
+   CONTENEDOR DEL AVATAR
+   ======================================= */
+
+.tutorialAvatar{
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 150px;
+    height: 190px;
+
+    overflow: hidden;
+
+}
+
+/* =======================================
+   FRAME DEL SPRITESHEET
+   ======================================= */
+
+.tutorialSprite{
+
+    flex-shrink: 0;
+
+    background-repeat: no-repeat;
+
+    image-rendering: pixelated;
+
+}
+
+/* =======================================
+   CONTENIDO
+   ======================================= */
+
+.tutorialContenido{
+
+    flex: 1;
+
+    text-align: center;
+
+}
+
+.tutorialContenido h2{
+
+    margin-top: 0;
+
+    margin-bottom: 15px;
+
+    font-size: 28px;
+
+}
+
+.tutorialContenido p{
+
+    margin: 8px 0;
+
+    line-height: 1.5;
+
+}
+
+/* =======================================
+   OPCIONES
+   ======================================= */
+
+.tutorialOpciones{
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-top: 20px;
+
+}
+
+/* =======================================
+   BOTONES
+   ======================================= */
+
+.tutorialBoton{
+
+    width: 100%;
+
+    padding: 10px 15px;
+
+    border: 2px solid #c9a45c;
+
+    border-radius: 10px;
+
+    background: rgba(80, 55, 30, 0.9);
+
+    color: white;
+
+    font-family: "MedievalSharp", serif;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        background 0.15s ease;
+
+}
+
+.tutorialBoton:hover{
+
+    transform: scale(1.03);
+
+    background: rgba(110, 75, 35, 0.95);
+
+}
+
+/* =======================================
+   TABLET
+   ======================================= */
+
+@media (max-width: 900px){
+
+    .tutorialPanel{
+
+        width: 90%;
+
+        padding: 20px;
+
+        gap: 15px;
+
+    }
+
+    .tutorialAvatar{
+
+        width: 120px;
+        height: 170px;
+
+    }
+
+    .tutorialContenido h2{
+
+        font-size: 23px;
+
+    }
+
+    .tutorialBoton{
+
+        font-size: 15px;
+
+    }
+
+}
+
+/* =======================================
+   CELULAR
+   ======================================= */
+
+@media (max-width: 600px){
+
+    .tutorialPanel{
+
+        width: 92%;
+
+        min-height: auto;
+
+        flex-direction: column;
+
+        padding: 20px 15px;
+
+        gap: 5px;
+
+    }
+
+    .tutorialAvatar{
+
+        width: 100px;
+        height: 125px;
+
+    }
+
+    .tutorialContenido h2{
+
+        font-size: 21px;
+
+    }
+
+    .tutorialContenido p{
+
+        font-size: 14px;
+
+    }
+
+    .tutorialBoton{
+
+        padding: 8px;
+
+        font-size: 14px;
+
+    }
+
+}

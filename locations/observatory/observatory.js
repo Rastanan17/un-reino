@@ -13,7 +13,7 @@ let musicaObservatorio = null;
 // =======================================
 
 function mostrarObservatorio(){
-
+establecerLugarTutorial("observatorio");
     console.log("🔭 Entrando al Observatorio");
 
     const momento =

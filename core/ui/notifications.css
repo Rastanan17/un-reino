@@ -1,0 +1,145 @@
+/* =======================================
+   UN REINO EN MÍRRAFEN
+   SISTEMA DE NOTIFICACIONES
+   ======================================= */
+
+#notificaciones {
+
+    position: fixed;
+
+    top: 20px;
+    right: 20px;
+
+    z-index: 99999;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    pointer-events: none;
+
+}
+
+/* =======================================
+   NOTIFICACIÓN
+   ======================================= */
+
+.notificacion {
+
+    min-width: 240px;
+    max-width: 320px;
+
+    padding: 14px 18px;
+
+    border-radius: 12px;
+
+    background: rgba(20, 20, 30, 0.95);
+
+    border: 2px solid rgba(255,255,255,0.25);
+
+    box-shadow:
+        0 6px 20px rgba(0,0,0,0.45);
+
+    color: white;
+
+    opacity: 0;
+
+    transform:
+        translateX(40px)
+        scale(0.95);
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+
+}
+
+/* =======================================
+   NOTIFICACIÓN VISIBLE
+   ======================================= */
+
+.notificacionVisible {
+
+    opacity: 1;
+
+    transform:
+        translateX(0)
+        scale(1);
+
+}
+
+/* =======================================
+   TÍTULO
+   ======================================= */
+
+.notificacionTitulo {
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    margin-bottom: 5px;
+
+}
+
+/* =======================================
+   TEXTO
+   ======================================= */
+
+.notificacionTexto {
+
+    font-size: 15px;
+
+}
+
+/* =======================================
+   TIPOS
+   ======================================= */
+
+.notificacion-xp {
+
+    border-color: gold;
+
+}
+
+.notificacion-oquos {
+
+    border-color: #4fc3f7;
+
+}
+
+.notificacion-nivel {
+
+    border-color: #b388ff;
+
+    transform:
+        translateX(40px)
+        scale(0.9);
+
+}
+
+.notificacion-zona {
+
+    border-color: #66bb6a;
+
+}
+
+.notificacion-logro {
+
+    border-color: #ffca28;
+
+}
+
+/* =======================================
+   NIVEL VISIBLE
+   ======================================= */
+
+.notificacion-nivel.notificacionVisible {
+
+    transform:
+        translateX(0)
+        scale(1.05);
+
+}

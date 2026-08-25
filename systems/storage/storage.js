@@ -194,6 +194,7 @@ function sumarRecompensa(xp, oquos){
     guardarJugador(jugador);
 
     actualizarPerfil();
+    actualizarHUDJugador();
 
     // ===================================
     // 👑 REGISTRAR NUEVO RANGO
@@ -287,12 +288,28 @@ function reiniciarMisionesDiarias(){
 // Verificar cambio de día
 // ---------------------------------------
 function verificarNuevoDia(){
+
     const jugador = cargarJugador();
+
     if(!jugador) return;
+
     const hoy = obtenerFechaHoy();
+
+    console.log("📅 Último reinicio:", jugador.ultimoReinicio);
+    console.log("📅 Hoy:", hoy);
+    console.log(
+        "📦 Estado misiones:",
+        localStorage.getItem("estadoMisiones")
+    );
+
     if(jugador.ultimoReinicio !== hoy){
+
+        console.log("🌅 RESET DE MISIONES EJECUTADO");
+
         reiniciarMisionesDiarias();
+
         jugador.ultimoReinicio = hoy;
+
         guardarJugador(jugador);
     }
 }

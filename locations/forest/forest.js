@@ -84,7 +84,7 @@ const zonasBosque = [
 function mostrarBosque(){
 
     console.log("🌲 Entrando al Bosque");
-
+establecerLugarTutorial("bosque");
     const momento =
         obtenerMomentoDelDia();
 

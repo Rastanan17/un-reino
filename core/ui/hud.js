@@ -2,69 +2,51 @@
 // REINO DE MÍRRAFEN
 // HUD DEL JUGADOR
 // =======================================
-
 // =======================================
 // MOSTRAR HUD
 // =======================================
-
 function mostrarHUDJugador(){
-
-    const visor =
-        document.getElementById("visorPantalla");
-
+    const visor = document.getElementById("visorPantalla");
     if(!visor){
-
-        console.error(
-            "❌ No se encontró #visorPantalla"
-        );
-
+        console.error("❌ No se encontró #visorPantalla");
         return;
     }
-
     // ===================================
     // EVITAR DUPLICAR EL HUD
     // ===================================
-
-    let hud =
-        document.getElementById("playerHUD");
-
+    let hud = document.getElementById("playerHUD");
     if(!hud){
-
         visor.insertAdjacentHTML(
             "afterbegin",
             `
                 <div id="playerHUD">
-
                     <div class="hudAvatar">
-
                         <img
                             id="hudPlayerAvatar"
                             src=""
                             alt="Avatar"
                         >
-
                     </div>
-
                     <div class="hudLevel">
-
                         ⚔️
-
                         <span id="hudPlayerLevel">
                             1
                         </span>
-
                     </div>
-
                     <div class="hudCoins">
-
                         💰
-
                         <span id="hudPlayerCoins">
                             0
                         </span>
-
                     </div>
-
+                    <button
+                        id="hudTutorial"
+                        class="hudTutorial"
+                        onclick="abrirTutorial()"
+                        aria-label="Tutorial"
+                    >
+                        ❓
+                    </button>
                     <button
                         id="hudSettings"
                         class="hudSettings"
@@ -73,102 +55,56 @@ function mostrarHUDJugador(){
                     >
                         ⚙️
                     </button>
-
                 </div>
             `
         );
     }
-
     // ===================================
     // ASEGURAR QUE ESTÉ VISIBLE
     // ===================================
-
-    hud =
-        document.getElementById("playerHUD");
-
+    hud = document.getElementById("playerHUD");
     if(hud){
-
         hud.style.display = "flex";
-
     }
-
     actualizarHUDJugador();
 }
-
 // =======================================
 // OCULTAR HUD
 // =======================================
-
 function ocultarHUDJugador(){
-
-    const hud =
-        document.getElementById("playerHUD");
-
+    const hud = document.getElementById("playerHUD");
     if(hud){
-
         hud.style.display = "none";
-
     }
 }
-
 // =======================================
 // ACTUALIZAR HUD
 // =======================================
-
 function actualizarHUDJugador(){
-
-    const jugador =
-        cargarJugador();
-
+    const jugador = cargarJugador();
     if(!jugador){
-
-        console.log(
-            "No hay perfil activo para el HUD"
-        );
-
+        console.log("No hay perfil activo para el HUD");
         return;
     }
-
-    const avatar =
-        document.getElementById("hudPlayerAvatar");
-
-    const nivel =
-        document.getElementById("hudPlayerLevel");
-
-    const oquos =
-        document.getElementById("hudPlayerCoins");
-
+    const avatar = document.getElementById("hudPlayerAvatar");
+    const nivel = document.getElementById("hudPlayerLevel");
+    const oquos = document.getElementById("hudPlayerCoins");
     // ===================================
     // AVATAR
     // ===================================
-
     if(avatar){
-
-        avatar.src =
-            jugador.avatar;
-
+        avatar.src = jugador.avatar;
     }
-
     // ===================================
     // NIVEL
     // ===================================
-
     if(nivel){
-
-        nivel.textContent =
-            jugador.nivel;
-
+        nivel.textContent = jugador.nivel;
     }
-
     // ===================================
     // OQUOS
     // ===================================
-
     if(oquos){
-
-        oquos.textContent =
-            jugador.oquos;
-
+        oquos.textContent = jugador.oquos;
     }
-
 }

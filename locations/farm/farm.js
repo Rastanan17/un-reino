@@ -7,6 +7,7 @@
 // =======================================
 
 function mostrarGranja(){
+    establecerLugarTutorial("granja");
     const momento =
         obtenerMomentoDelDia();
 

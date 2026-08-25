@@ -186,7 +186,7 @@ function mostrarCastillo(){
     if(!jugador){
         return;
     }
-
+establecerLugarTutorial("castillo");
     const momento = obtenerMomentoDelDia();
 
     const content =

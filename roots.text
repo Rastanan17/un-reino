@@ -53,13 +53,6 @@ Un Reino<
 				theatre_day.jpg
 				theatre_night.jpg
 				village.jpg
-			characters<
-				alien.jpg
-				dwarf.jpg
-				elf.jpg
-				explorer.jpg
-				witch.jpg
-				wolf.jpg
 			icons<
 				bar.jpg
 				castle.jpg
@@ -101,6 +94,7 @@ Un Reino<
 				roll_2.png
 				roll_3.png
 				skull.png
+				tutorial.png
 			ui<
 				favicom.ico
 				next_soon.png
@@ -545,6 +539,13 @@ Un Reino<
 		tutorial<
 			data<
 				tutorial.json
+			images<
+				alien.png
+				dwarf.png
+				elf.png
+				explorer.png
+				witch.png
+				wolf.png
 			tutorial.css
 			tutorial.js
 	documents.text

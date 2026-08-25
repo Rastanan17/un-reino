@@ -57,15 +57,15 @@ const NPC_DIALOGO_FRAMES = [0, 1];
 // CONFIGURACIÓN DEL MOVIMIENTO
 // =======================================
 
-const NPC_VELOCIDAD = 0.4;
+const NPC_VELOCIDAD = 0.5;
 
 const NPC_INTERVALO_FRAME = 180;
 
 // Límites de patrulla
 
-const NPC_LIMITE_IZQUIERDA = 35;
+const NPC_LIMITE_IZQUIERDA = 25;
 
-const NPC_LIMITE_DERECHA = 65;
+const NPC_LIMITE_DERECHA = 75;
 
 // =======================================
 // POSICIONES DE LOS NPC

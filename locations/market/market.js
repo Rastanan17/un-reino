@@ -27,7 +27,7 @@ let desafioActual = null;
 // =======================================
 
 function mostrarMercado(){
-
+establecerLugarTutorial("mercado");
     const jugador = cargarJugador();
 
     if(!jugador){
@@ -56,22 +56,6 @@ function mostrarMercado(){
     content.innerHTML = `
 
         <section class="mercado ${momento}">
-
-            <!-- =================================
-                 INFORMACIÓN DEL JUGADOR
-            ================================== -->
-
-            <div id="infoJugadorMercado" class="info-jugador-mercado">
-
-                <div class="jugador-nombre">
-                    👤 ${jugador.nombre}
-                </div>
-
-                <div class="jugador-oquos">
-                    🪙 ${jugador.oquos} Oquos
-                </div>
-
-            </div>
 
             <!-- =================================
                  DIÁLOGO DE BORIN

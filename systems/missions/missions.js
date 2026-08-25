@@ -27,37 +27,22 @@ const ARCHIVO_MISIONES_SANTUARIO = "systems/missions/data/missionsSanctuary.json
 // OBTENER CLAVE DE MISIONES POR EDAD
 // =======================================
 function obtenerClaveMisionesPorEdad(){
-
     const jugador = cargarJugador();
-
     if(!jugador){
         return "misiones_6_8";
     }
-
     switch(jugador.rangoEdad){
-
-        case "6-8":
-            return "misiones_6_8";
-
-        case "9-11":
-            return "misiones_9_11";
-
-        case "12-14":
-            return "misiones_12_14";
-
-        case "15-17":
-            return "misiones_15_17";
-
-        default:
-            return "misiones_6_8";
+        case "6-8": return "misiones_6_8";
+        case "9-11": return "misiones_9_11";
+        case "12-14": return "misiones_12_14";
+        case "15-17": return "misiones_15_17";
+        default: return "misiones_6_8";
     }
 }
 // =======================================
 // CLAVE DE ESTADOS SEGÚN LA ZONA
 // =======================================
-
 function obtenerClaveEstadoMisiones(){
-
     const claves = {
         "Castillo": "estadoMisionesCastillo",
         "Aldea": "estadoMisionesAldea",
@@ -72,74 +57,39 @@ function obtenerClaveEstadoMisiones(){
         "Puerto": "estadoMisionesPuerto",
         "Santuario": "estadoMisionesSantuario"
     };
-
     return claves[zonaMisionesActual] || "estadoMisionesCastillo";
 }
 // =======================================
 // CARGAR MISIONES DEL CASTILLO
 // =======================================
 async function cargarMisionesCastillo(){
-
     zonaMisionesActual = "Castillo";
-
     try{
-
         const respuesta = await fetch(
             ARCHIVO_MISIONES_CASTILLO
         );
-
         if(!respuesta.ok){
-            throw new Error(
-                `No se pudo cargar ${ARCHIVO_MISIONES_CASTILLO}`
-            );
+            throw new Error(`No se pudo cargar ${ARCHIVO_MISIONES_CASTILLO}`);
         }
-
         const datos = await respuesta.json();
-
-        const claveEdad =
-            obtenerClaveMisionesPorEdad();
-
+        const claveEdad = obtenerClaveMisionesPorEdad();
         misiones = datos[claveEdad] || [];
-
-        console.log(
-            "MISIONES CASTILLO CARGADAS:",
-            claveEdad,
-            misiones
-        );
-
+        console.log("MISIONES CASTILLO CARGADAS:", claveEdad, misiones);
         // Recuperar estados guardados
         cargarEstadoMisiones();
-
         paginaActual = 0;
-
         mostrarTablonMisiones();
-
     }catch(error){
-
-        console.error(
-            "Error cargando misiones del Castillo:",
-            error
-        );
-
-        const content =
-            document.getElementById("content");
-
+        console.error("Error cargando misiones del Castillo:", error);
+        const content = document.getElementById("content");
         if(content){
-
             content.innerHTML = `
                 <section class="tablon-misiones">
-
                     <h2>⚠️ Error</h2>
-
-                    <p>
-                        No se pudieron cargar
-                        las misiones del Castillo.
-                    </p>
-
+                    <p>No se pudieron cargar las misiones del Castillo.</p>
                     <button onclick="mostrarCastillo()">
                         ← Volver
                     </button>
-
                 </section>
             `;
         }
@@ -156,10 +106,7 @@ async function cargarMisionesAldea(){
             throw new Error(`No se pudo cargar ${ARCHIVO_MISIONES_ALDEA}`);
         }
         const datos = await respuesta.json();
-
-        const claveEdad =
-            obtenerClaveMisionesPorEdad();
-
+        const claveEdad = obtenerClaveMisionesPorEdad();
         misiones = datos[claveEdad] || [];
         console.log("MISIONES ALDEA CARGADAS:", misiones);
         // Recuperar estados guardados
@@ -182,53 +129,26 @@ async function cargarMisionesAldea(){
 }
 async function cargarMisionesGranja(){
     zonaMisionesActual = "Granja";
-
     try{
-        const respuesta =
-            await fetch(ARCHIVO_MISIONES_GRANJA);
-
+        const respuesta = await fetch(ARCHIVO_MISIONES_GRANJA);
         if(!respuesta.ok){
-            throw new Error(
-                `No se pudo cargar ${ARCHIVO_MISIONES_GRANJA}`
-            );
+            throw new Error(`No se pudo cargar ${ARCHIVO_MISIONES_GRANJA}`);
         }
-
         const datos = await respuesta.json();
-
-        const claveEdad =
-            obtenerClaveMisionesPorEdad();
-
+        const claveEdad = obtenerClaveMisionesPorEdad();
         misiones = datos[claveEdad] || [];
-
-        console.log(
-            "MISIONES GRANJA CARGADAS:",
-            misiones
-        );
-
+        console.log("MISIONES GRANJA CARGADAS:", misiones);
         cargarEstadoMisiones();
-
         paginaActual = 0;
-
         mostrarTablonMisiones();
-
     }catch(error){
-
-        console.error(
-            "Error cargando misiones de la Granja:",
-            error
-        );
-
-        const content =
-            document.getElementById("content");
-
+        console.error("Error cargando misiones de la Granja:", error);
+        const content = document.getElementById("content");
         if(content){
             content.innerHTML = `
                 <section class="tablon-misiones">
                     <h2>⚠️ Error</h2>
-                    <p>
-                        No se pudieron cargar las misiones
-                        de la Granja.
-                    </p>
+                    <p>No se pudieron cargar las misiones de la Granja.</p>
                     <button onclick="mostrarGranja()">
                         ← Volver
                     </button>
@@ -240,186 +160,89 @@ async function cargarMisionesGranja(){
 // =======================================
 // CARGAR MISIONES DEL BOSQUE
 // =======================================
-
 async function cargarMisionesBosque(){
-
     // ===================================
     // ZONA ACTUAL
     // ===================================
-
     zonaMisionesActual = "Bosque";
-
     try{
-
         // ===================================
         // CARGAR JSON
         // ===================================
-
-        const respuesta =
-            await fetch(ARCHIVO_MISIONES_BOSQUE);
-
+        const respuesta = await fetch(ARCHIVO_MISIONES_BOSQUE);
         if(!respuesta.ok){
-
-            throw new Error(
-                `No se pudo cargar ${ARCHIVO_MISIONES_BOSQUE}`
-            );
-
+            throw new Error(`No se pudo cargar ${ARCHIVO_MISIONES_BOSQUE}`);
         }
-
-        const datos =
-            await respuesta.json();
-
+        const datos = await respuesta.json();
         // ===================================
         // OBTENER MISIONES SEGÚN EDAD
         // ===================================
-
-        const claveEdad =
-            obtenerClaveMisionesPorEdad();
-
-        misiones =
-            datos[claveEdad] || [];
-
-        console.log(
-            "🌲 MISIONES BOSQUE CARGADAS:",
-            claveEdad,
-            misiones
-        );
-
+        const claveEdad = obtenerClaveMisionesPorEdad();
+        misiones = datos[claveEdad] || [];
+        console.log("🌲 MISIONES BOSQUE CARGADAS:", claveEdad, misiones);
         // ===================================
         // RECUPERAR ESTADOS GUARDADOS
         // ===================================
-
         cargarEstadoMisiones();
-
         // ===================================
         // COMENZAR DESDE LA PRIMERA PÁGINA
         // ===================================
-
         paginaActual = 0;
-
         // ===================================
         // MOSTRAR TABLÓN
         // ===================================
-
         mostrarTablonMisiones();
-
     }catch(error){
-
-        console.error(
-            "Error cargando misiones del Bosque:",
-            error
-        );
-
+        console.error("Error cargando misiones del Bosque:", error);
         // ===================================
         // MOSTRAR ERROR
         // ===================================
-
-        const content =
-            document.getElementById("content");
-
+        const content = document.getElementById("content");
         if(content){
-
             content.innerHTML = `
-
                 <section class="tablon-misiones">
-
                     <h2>⚠️ Error</h2>
-
-                    <p>
-                        No se pudieron cargar
-                        las misiones del Bosque.
-                    </p>
-
+                    <p>No se pudieron cargar las misiones del Bosque.</p>
                     <button onclick="mostrarBosque()">
                         ← Volver al Bosque
                     </button>
-
                 </section>
-
             `;
-
         }
-
     }
-
 }
 // =======================================
 // CARGAR MISIONES DEL OBSERVATORIO
 // =======================================
-
 async function cargarMisionesObservatorio(){
-
     zonaMisionesActual = "Observatorio";
-
     try{
-
-        const respuesta =
-            await fetch(ARCHIVO_MISIONES_OBSERVATORIO);
-
+        const respuesta = await fetch(ARCHIVO_MISIONES_OBSERVATORIO);
         if(!respuesta.ok){
-
-            throw new Error(
-                `No se pudo cargar ${ARCHIVO_MISIONES_OBSERVATORIO}`
-            );
-
+            throw new Error(`No se pudo cargar ${ARCHIVO_MISIONES_OBSERVATORIO}`);
         }
-
-        const datos =
-            await respuesta.json();
-
-        const claveEdad =
-            obtenerClaveMisionesPorEdad();
-
-        misiones =
-            datos[claveEdad] || [];
-
-        console.log(
-            "🔭 MISIONES OBSERVATORIO CARGADAS:",
-            claveEdad,
-            misiones
-        );
-
+        const datos = await respuesta.json();
+        const claveEdad = obtenerClaveMisionesPorEdad();
+        misiones = datos[claveEdad] || [];
+        console.log("🔭 MISIONES OBSERVATORIO CARGADAS:", claveEdad, misiones);
         cargarEstadoMisiones();
-
         paginaActual = 0;
-
         mostrarTablonMisiones();
-
     }catch(error){
-
-        console.error(
-            "Error cargando misiones del Observatorio:",
-            error
-        );
-
-        const content =
-            document.getElementById("content");
-
+        console.error("Error cargando misiones del Observatorio:", error);
+        const content = document.getElementById("content");
         if(content){
-
             content.innerHTML = `
-
                 <section class="tablon-misiones">
-
                     <h2>⚠️ Error</h2>
-
-                    <p>
-                        No se pudieron cargar
-                        las misiones del Observatorio.
-                    </p>
-
+                    <p>No se pudieron cargar las misiones del Observatorio.</p>
                     <button onclick="mostrarObservatorio()">
                         ← Volver al Observatorio
                     </button>
-
                 </section>
-
             `;
-
         }
-
     }
-
 }
 // =======================================
 // TABLÓN DE MISIONES
@@ -457,19 +280,15 @@ function mostrarTablonMisiones(){
 // VOLVER DESDE LAS MISIONES
 // =======================================
 function volverDeMisiones(){
-
     reproducirSFX("exit.mp3");
-
     if(zonaMisionesActual === "Aldea"){
         mostrarAldea();
         return;
     }
-
     if(zonaMisionesActual === "Bosque"){
         mostrarBosque();
         return;
     }
-
     if(zonaMisionesActual === "Granja"){
         mostrarGranja();
         return;
@@ -478,70 +297,44 @@ function volverDeMisiones(){
         mostrarObservatorio();
         return;
     }
-        
     mostrarCastillo();
 }
 // =======================================
 // CREAR PERGAMINO DEL TABLÓN
 // =======================================
-
 function crearPergamino(mision){
-
     let tiempo = "";
-
     // ===================================
     // TIEMPO SOLO SI ESTÁ EN CURSO
     // ===================================
-
     if(mision.estado === "enCurso"){
-
-        const inicio =
-            mision.inicio || Date.now();
-
+        const inicio = mision.inicio || Date.now();
         const transcurrido =
-            Math.floor(
-                (Date.now() - inicio) / 1000
-            );
-
-        const restante =
-            Math.max(
-                0,
-                mision.duracion - transcurrido
-            );
-
+            Math.floor((Date.now() - inicio) / 1000);
+        const restante = Math.max(0, mision.duracion - transcurrido);
         tiempo = `
             <div class="tiempo-mision"
                  data-inicio="${inicio}"
                  data-duracion="${mision.duracion}">
-                 
                 ⏳
                 <span class="temporizador-mision">
                     ${formatearTiempo(restante)}
                 </span>
-
             </div>
         `;
     }
-
     return `
-
         <div
             class="pergamino2 estado-${mision.estado}"
             onclick="abrirPergaminoMision(${mision.id})">
-
             <div class="contenido-pergamino-mision">
-
                 <div class="titulo-mision">
                     ${mision.icono}
                     ${mision.titulo}
                 </div>
-
                 ${tiempo}
-
             </div>
-
         </div>
-
     `;
 }
 // =======================================
@@ -599,174 +392,111 @@ function paginaSiguienteMisiones(){
 // ABRIR MISIÓN
 // =======================================
 function abrirPergaminoMision(id){
-
     const mision = misiones.find(m => m.id === id);
-
     if(!mision) return;
-
     let botones = [];
-
     // ===================================
     // MISIÓN DISPONIBLE
     // ===================================
-
     if(mision.estado === "disponible"){
-
         botones.push({
             texto: "⚔️ Comenzar misión",
             accion: `accionBotonMision(() => iniciarMision(${mision.id}))`
         });
-
     }
-
     // ===================================
     // MISIÓN EN CURSO
     // ===================================
-
     else if(mision.estado === "enCurso"){
-
         botones.push({
             texto: "✅ Ya terminé",
             accion: `accionBotonMision(() => terminarMision(${mision.id}))`
         });
-
         botones.push({
             texto: "⏸️ Posponer",
             accion: `accionBotonMision(() => posponerMision(${mision.id}))`
         });
-
     }
-
     // ===================================
     // MISIÓN COMPLETADA
     // ===================================
-
     else if(mision.estado === "completada"){
-
         botones.push({
             texto: "🏆 Completada",
             accion: `accionBotonMision(() => cerrarPergamino())`
         });
-
     }
-
     // ===================================
     // CERRAR
     // ===================================
-
     botones.push({
         texto: "❌ Cerrar",
         accion: `accionBotonMision(() => cerrarPergamino())`
     });
-
     // ===================================
     // INFORMACIÓN DEL TIEMPO
     // ===================================
-
     let informacionTiempo = "";
-
     if(mision.estado === "enCurso"){
-
-        const inicio =
-            mision.inicio || Date.now();
-
-        const transcurrido =
-            Math.floor(
-                (Date.now() - inicio) / 1000
-            );
-
-        const restante =
-            Math.max(
-                0,
-                mision.duracion - transcurrido
-            );
-
+        const inicio = mision.inicio || Date.now();
+        const transcurrido = Math.floor((Date.now() - inicio) / 1000);
+        const restante = Math.max(0, mision.duracion - transcurrido);
         if(restante > 0){
-
             informacionTiempo = `
                 <br>
                 <strong>⏳ Tiempo restante:</strong>
-                <span id="temporizadorMision">
-                    ${formatearTiempo(restante)}
-                </span>
+                <span id="temporizadorMision">${formatearTiempo(restante)}</span>
             `;
-
         }else{
-
             informacionTiempo = `
                 <br>
-                <strong class="mision-lista">
-                    🏆 ¡Tiempo terminado!
-                </strong>
+                <strong class="mision-lista">🏆 ¡Tiempo terminado!</strong>
                 <br>
-                <span>
-                    Podés finalizar la misión cuando quieras.
-                </span>
+                <span>Podés finalizar la misión cuando quieras.</span>
             `;
         }
     }
-
     // ===================================
     // MOSTRAR PERGAMINO
     // ===================================
-
     mostrarPergamino({
-
         icono: mision.icono,
-
         titulo: mision.titulo,
-
         descripcion: `
             <p>${mision.descripcion}</p>
-
             <br>
             <strong>⚔️ Dificultad:</strong>
             ${mision.dificultad}
-
             <br>
             <strong>⭐ XP:</strong>
             ${mision.xp}
-
             <br>
             <strong>💰 Oquos:</strong>
             ${mision.oquos}
-
             <br>
             <strong>⏱️ Duración:</strong>
             ${formatearDuracion(mision.duracion)}
-
             ${informacionTiempo}
         `,
-
         botones: botones
     });
-
     // ===================================
     // TEMPORIZADOR
     // ===================================
-
     if(mision.estado === "enCurso"){
-
         iniciarTemporizadorPergamino(
             mision.id
         );
-
     }
 }
 // =======================================
 // ACCIÓN DE BOTÓN DE MISIÓN
 // =======================================
-
 function accionBotonMision(accion){
-
     reproducirSFX("touch.mp3");
-
     if(typeof accion === "function"){
-
         accion();
-
     }
-
 }
 // =======================================
 // FORMATEAR DURACIÓN
@@ -869,9 +599,7 @@ function posponerMision(id){
     mostrarTablonMisiones();
     cerrarPergamino();
     reproducirSFX("non.mp3");
-    mostrarMensaje("📜 Misión pospuesta",
-        "Podrás retomarla cuando quieras."
-    );
+    mostrarMensaje("📜 Misión pospuesta", "Podrás retomarla cuando quieras.");
 }
 // =======================================
 // COMPLETAR MISIÓN
@@ -897,109 +625,56 @@ function completarMision(id){
     /// ===================================
     // REGISTRAR EN PERFIL
     // ===================================
-
     const jugador = cargarJugador();
-
     if(jugador){
-
-        const identificadorMision =
-            `${zonaMisionesActual}:${mision.id}`;
-
+        const identificadorMision = `${zonaMisionesActual}:${mision.id}`;
         if(
-            !jugador.misionesCompletadas.includes(
-                identificadorMision
-            )
+            !jugador.misionesCompletadas.includes(identificadorMision)
         ){
-
-            jugador.misionesCompletadas.push(
-                identificadorMision
-            );
-
+            jugador.misionesCompletadas.push(identificadorMision);
         }
-
         guardarJugador(jugador);
     }
     console.log("MISIÓN COMPLETADA:", mision);
     reproducirSFX("mission_complete.wav");
-    mostrarMensaje("🏆 Misión completada",
-        `Ganaste ⭐ ${mision.xp} XP y 💰 ${mision.oquos} Oquos`
-    );
+    mostrarMensaje("🏆 Misión completada", `Ganaste ⭐ ${mision.xp} XP y 💰 ${mision.oquos} Oquos`);
     mostrarTablonMisiones();
 }
 // =======================================
 // GUARDAR ESTADOS DE MISIONES
 // =======================================
 function guardarEstadoMisiones(){
-
-    const estadosGuardados =
-        JSON.parse(
-            localStorage.getItem("estadoMisiones")
-        ) || {};
-
-    const rangoEdad =
-        cargarJugador()?.rangoEdad || "6-8";
-
+    const estadosGuardados = JSON.parse(localStorage.getItem("estadoMisiones")) || {};
+    const rangoEdad = cargarJugador()?.rangoEdad || "6-8";
     misiones.forEach(mision => {
-
-        const identificador =
-            `${zonaMisionesActual}:${rangoEdad}:${mision.id}`;
-
+        const identificador = `${zonaMisionesActual}:${rangoEdad}:${mision.id}`;
         estadosGuardados[identificador] = {
-
             estado: mision.estado,
-
-            inicio:
-                mision.inicio || null
+            inicio: mision.inicio || null
         };
     });
-
-    localStorage.setItem(
-        "estadoMisiones",
-        JSON.stringify(estadosGuardados)
-    );
+    localStorage.setItem("estadoMisiones", JSON.stringify(estadosGuardados));
 }
 // =======================================
 // RECUPERAR ESTADOS DE MISIONES
 // =======================================
 function cargarEstadoMisiones(){
-
-    const datos =
-        localStorage.getItem("estadoMisiones");
-
+    const datos = localStorage.getItem("estadoMisiones");
     if(!datos){
         return;
     }
-
     try{
-
-        const estados =
-            JSON.parse(datos);
-
-        const rangoEdad =
-            cargarJugador()?.rangoEdad || "6-8";
-
+        const estados = JSON.parse(datos);
+        const rangoEdad = cargarJugador()?.rangoEdad || "6-8";
         misiones.forEach(mision => {
-
-            const identificador =
-                `${zonaMisionesActual}:${rangoEdad}:${mision.id}`;
-
+            const identificador = `${zonaMisionesActual}:${rangoEdad}:${mision.id}`;
             if(estados[identificador]){
-
-                mision.estado =
-                    estados[identificador].estado;
-
-                mision.inicio =
-                    estados[identificador].inicio;
+                mision.estado = estados[identificador].estado;
+                mision.inicio = estados[identificador].inicio;
             }
-
         });
-
     }catch(error){
-
-        console.error(
-            "Error recuperando estados:",
-            error
-        );
+        console.error("Error recuperando estados:", error);
     }
 }
 // =======================================
@@ -1027,49 +702,29 @@ function obtenerTiempoRestante(mision){
 // INICIALIZAR SISTEMA
 // =======================================
 async function iniciarSistemaMisiones(){
-
     try{
-
-        const respuesta =
-            await fetch(ARCHIVO_MISIONES_CASTILLO);
-
+        const respuesta = await fetch(ARCHIVO_MISIONES_CASTILLO);
         if(!respuesta.ok){
-            throw new Error(
-                "No se pudo cargar el JSON de misiones."
-            );
+            throw new Error("No se pudo cargar el JSON de misiones.");
         }
-
         const datos = await respuesta.json();
-
-        console.log(
-            "Sistema de misiones iniciado:",
-            datos
-        );
-
+        console.log("Sistema de misiones iniciado:", datos);
     }catch(error){
-
-        console.error(
-            "Error iniciando sistema de misiones:",
-            error
-        );
+        console.error("Error iniciando sistema de misiones:", error);
     }
 }
-
 // =======================================
 // COMPATIBILIDAD CON MAPA
 // =======================================
 function mostrarMisiones(){
-
     if(filtroZona === "Aldea"){
         cargarMisionesAldea();
         return;
     }
-
     if(filtroZona === "Granja"){
         cargarMisionesGranja();
         return;
     }
- 
     if(filtroZona === "Bosque"){
         cargarMisionesBosque();
         return;
@@ -1078,6 +733,5 @@ function mostrarMisiones(){
         cargarMisionesObservatorio();
         return;
     }
-
     cargarMisionesCastillo();
 }

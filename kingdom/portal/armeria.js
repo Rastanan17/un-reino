@@ -415,6 +415,16 @@ function guardarEdicionPerfil(id){
         JSON.stringify(perfiles)
     );
 
+    // ===================================
+    // ACTUALIZAR HUD
+    // ===================================
+
+    if(
+        localStorage.getItem("perfilActivo") === id
+    ){
+        actualizarHUDJugador();
+    }
+
     console.log(
         "🛡️ Perfil actualizado:",
         jugador

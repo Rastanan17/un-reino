@@ -60,7 +60,7 @@ async function cargarDialogosAldea(){
 // =======================================
 
 function mostrarAldea(){
-
+establecerLugarTutorial("aldea");
     const momento =
         obtenerMomentoDelDia();
 

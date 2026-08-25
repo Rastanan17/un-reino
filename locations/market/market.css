@@ -1,688 +1,372 @@
 /* =======================================
    MERCADO DE MÍRRAFEN
 ======================================= */
-
 .mercado{
-
     position: relative;
-
     width: 100%;
     height: 100%;
-
     min-height: 0;
-
     overflow: hidden;
-
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-
 /* =======================================
    MOMENTO DEL DÍA
 ======================================= */
-
 .mercado.dawn{
-
-    background-image:
-        url("../../assets/images/backgrounds/market/market_dawn.jpg");
+    background-image:url("../../assets/images/backgrounds/market/market_dawn.jpg");
 }
-
 .mercado.day{
-
-    background-image:
-        url("../../assets/images/backgrounds/market/market_day.jpg");
+    background-image:url("../../assets/images/backgrounds/market/market_day.jpg");
 }
-
 .mercado.sunset{
-
-    background-image:
-        url("../../assets/images/backgrounds/market/market_sunset.jpg");
+    background-image:url("../../assets/images/backgrounds/market/market_sunset.jpg");
 }
-
 .mercado.night{
-
-    background-image:
-        url("../../assets/images/backgrounds/market/market_night.jpg");
+    background-image:url("../../assets/images/backgrounds/market/market_night.jpg");
 }
-
 /* =======================================
    DIÁLOGO DEL MERCADO
    SIN BORIN
 ======================================= */
-
 #dialogoBorin{
-
     position: absolute;
-
     left: 50%;
     top: 50%;
-
     transform: translate(-50%, -50%);
-
     width: 70%;
-
     min-height: 130px;
     max-height: 45%;
-
     box-sizing: border-box;
-
     z-index: 40;
-
     overflow: auto;
-
     display: flex;
-
     justify-content: center;
     align-items: center;
-
     pointer-events: auto;
-
-    border:
-        clamp(4px, 0.5vw, 8px)
-        solid
-        #FFE474;
-
-    outline:
-        clamp(2px, 0.2vw, 3px)
-        solid
-        #975E05;
-
+    border:clamp(4px, 0.5vw, 8px) solid #FFE474;
+    outline:clamp(2px, 0.2vw, 3px) solid #975E05;
     border-radius: 5%;
-
     background: #FEFCA5;
-
-    box-shadow:
-        0 5px 15px rgba(0,0,0,0.45);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.45);
 }
-
 /* =======================================
    CONTENIDO DEL DIÁLOGO
 ======================================= */
-
 .borin-dialogo{
-
     width: 100%;
     height: auto;
     min-height: 100%;
-
     box-sizing: border-box;
-
-    padding:
-        clamp(12px, 3vw, 20px);
-
+    padding: clamp(12px, 3vw, 20px);
     text-align: center;
-
     color: #4a2a16;
-
     display: flex;
-
     flex-direction: column;
-
     justify-content: center;
     align-items: center;
-
-    gap:
-        clamp(5px, 1vw, 10px);
+    gap: clamp(5px, 1vw, 10px);
 }
-
 /* =======================================
    NOMBRE DEL MERCADO
 ======================================= */
-
 .borin-nombre{
-
-    font-size:
-        clamp(17px, 2.5vw, 20px);
-
+    font-size: clamp(17px, 2.5vw, 20px);
     font-weight: bold;
-
     margin-bottom: 2px;
 }
-
 /* =======================================
    TEXTO
 ======================================= */
-
 .borin-texto{
-
     width: 100%;
-
-    font-size:
-        clamp(16px, 5vw, 16px);
-
+    font-size: clamp(16px, 5vw, 16px);
     font-weight: bold;
-
     line-height: 1.25;
-
     margin: 0;
-
     overflow-wrap: break-word;
 }
-
 /* =======================================
    BOTONES DEL DIÁLOGO
 ======================================= */
-
 .borin-dialogo button{
-
-    width:
-        clamp(100px, 10vw, 140px);
-
+    width: clamp(100px, 10vw, 140px);
     min-height: 45px;
-
     padding: 6px 8px;
-
-    font-size:
-        clamp(12px, 2vw, 14px);
-
+    font-size: clamp(12px, 2vw, 14px);
     margin: 2px;
-
     display: flex;
-
     justify-content: center;
     align-items: center;
-
     gap: 8px;
-
     box-sizing: border-box;
 }
-
-/* =======================================
-   INFORMACIÓN DEL JUGADOR
-======================================= */
-
-.info-jugador-mercado{
-
-    position: absolute;
-
-    top: 2%;
-    right: 2%;
-
-    width: 30%;
-
-    padding: 8px 10px;
-
-    box-sizing: border-box;
-
-    background:
-        rgba(70, 38, 20, 0.92);
-
-    border:
-        2px solid
-        #b8862c;
-
-    border-radius: 7px;
-
-    color: #f5d76e;
-
-    font-size: 12px;
-
-    font-weight: bold;
-
-    text-align: center;
-
-    z-index: 50;
-
-    box-shadow:
-        0 3px 6px rgba(0,0,0,0.5);
-}
-
-.jugador-nombre{
-
-    white-space: nowrap;
-
-    overflow: hidden;
-
-    text-overflow: ellipsis;
-
-    margin-bottom: 4px;
-}
-
-.jugador-oquos{
-
-    color: #ffd95a;
-
-    white-space: nowrap;
-}
-
-/* =======================================
-   MOSTRADOR
-======================================= */
-
-.mercado-mostrador{
-
-    background-image:
-        url("images/mostrador.png");
-
-    position: absolute;
-
-    left: 50%;
-    bottom: 24%;
-
-    transform: translateX(-50%);
-
-    z-index: 20;
-
-    pointer-events: none;
-}
-
 /* =======================================
    SALIDA
    ARRIBA A LA DERECHA
 ======================================= */
-
 .mercado-salida{
-
     position: absolute;
-
-    bottom: 3%;
-    right: 3%;
-
+    top: 1%;
+    right: 7%;
     z-index: 60;
-
     cursor: pointer;
-
-    transition:
-        transform 0.2s ease,
-        filter 0.2s ease;
+    transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .mercado-salida img{
-
     width: 70px;
     height: 70px;
-
     object-fit: contain;
-
     display: block;
 }
-
 .mercado-salida:hover{
-
     transform: scale(1.5);
-
     filter: brightness(1.25);
 }
-
 /* =======================================
    MERCADO — TABLET
 ======================================= */
-
 #visorPantalla.modo-tablet .mercado{
-
     width: 800px;
     height: 1100px;
 }
-
 #visorPantalla.modo-tablet .item-mercado-contenedor{
-
     width: 60px;
     height: 60px;
 }
-
 #visorPantalla.modo-tablet .item-mercado{
-
     width: 45px;
     height: 45px;
 }
-
 #visorPantalla.modo-tablet #dialogoBorin{
-
     width: 60%;
-
     min-height: 150px;
 }
-
 /* =======================================
    MERCADO — CELULAR
 ======================================= */
-
 #visorPantalla.modo-celular .mercado{
-
     width: 700px;
     height: 1300px;
-
 }
-
 #visorPantalla.modo-celular .item-mercado-contenedor{
-
     width: 60px;
     height: 60px;
 }
-
 #visorPantalla.modo-celular .item-mercado{
-
     width: 50px;
     height: 50px;
 }
-
 /* =======================================
    DIÁLOGO — CELULAR
 ======================================= */
-
 #visorPantalla.modo-celular #dialogoBorin{
-
     left: 50%;
     top: 50%;
-
     width: 90%;
-
     min-height: 130px;
     max-height: 42%;
-
-    transform:
-        translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
-
 #visorPantalla.modo-celular .borin-dialogo{
-
     padding: 8px;
 }
-
 #visorPantalla.modo-celular .borin-nombre{
-
     font-size: 17px;
 }
-
 #visorPantalla.modo-celular .borin-texto{
-
     font-size: 14px;
 }
-
 #visorPantalla.modo-celular .borin-dialogo button{
-
     width: 110px;
-
     min-height: 42px;
-
     font-size: 12px;
 }
-
 /* =======================================
    ITEMS DEL MERCADO
 ======================================= */
-
 #itemsMercado{
-
     position: absolute;
-
     inset: 0;
-
     width: 100%;
     height: 100%;
-
     pointer-events: none;
-
     z-index: 10;
 }
-
 /* =======================================
    CONTENEDOR DE CADA ITEM
 ======================================= */
-
 .item-mercado-contenedor{
-
     position: absolute;
-
     width: 60px;
     height: 60px;
-
     display: flex;
-
     justify-content: center;
     align-items: center;
-
     pointer-events: auto;
-
     user-select: none;
-
     cursor: pointer;
-
-    background:
-        rgba(255, 245, 190, 0.82);
-
-    border:
-        2px solid
-        rgba(151, 94, 5, 0.75);
-
+    background: rgba(255, 245, 190, 0.82);
+    border: 2px solid rgba(151, 94, 5, 0.75);
     border-radius: 14px;
-
     box-sizing: border-box;
-
-    box-shadow:
-        0 3px 8px rgba(0, 0, 0, 0.45);
-
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.45);
     transition:
         transform 0.2s ease,
         background 0.2s ease,
         box-shadow 0.2s ease;
 }
-
 /* =======================================
    IMAGEN DEL ITEM
 ======================================= */
-
 .item-mercado{
-
     width: 45px;
     height: 45px;
-
     object-fit: contain;
-
     display: block;
 }
-
 /* =======================================
    EFECTO AL PASAR / TOCAR
 ======================================= */
-
 .item-mercado-contenedor:hover{
-
     transform: scale(1.08);
-
-    background:
-        rgba(255, 248, 210, 0.95);
-
-    box-shadow:
-        0 5px 12px rgba(0, 0, 0, 0.55);
+    background: rgba(255, 248, 210, 0.95);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.55);
 }
-
 .item-mercado-contenedor:hover .item-mercado{
-
     transform: scale(1.08);
-
     filter: brightness(1.15);
 }
-
 /* =======================================
    DISTRIBUCIÓN DE ITEMS
 ======================================= */
-
-/* -------- LADO IZQUIERDO -------- */
-
-.item-coca{
-
-    left: 5%;
-    top: 0%;
-}
-
-.item-natacion{
-
-    left: 5%;
-    top: 8%;
-}
-
-.item-libro{
-
-    left: 5%;
-    top: 16%;
-}
-
-.item-bici{
-
-    left: 5%;
-    top: 24%;
-}
-
-.item-arbol{
-
-    left: 25%;
-    top: 24%;
-}
-
-.item-luces2{
-
-    left: 45%;
-    top: 24%;
-}
-
-.item-waffle{
-
-    left: 65%;
-    top: 24%;
-}
-
-.item-pizza{
-
-    left: 85%;
-    top: 24%;
-}
-
-/* -------- LADO IZQUIERDO ABAJO -------- */
-
-.item-manos{
-
-    left: 5%;
-    top: 72%;
-}
-
-.item-tele{
-
-    left: 5%;
-    top: 81%;
-}
-
-.item-compu{
-
-    left: 5%;
-    top: 90%;
-}
-
 /* -------- ARRIBA -------- */
-
-.item-musica{
-
-    left: 25%;
-    top: 8%;
-}
-
+/* -------- FILA 1 -------- */
 .item-pintura{
-
+    left: 5%;
+    top: 8%;
+}
+.item-natacion{
+    left: 25%;
+    top: 8%;
+}
+.item-musica{
     left: 45%;
     top: 8%;
 }
-
 .item-sombrilla{
-
     left: 65%;
     top: 8%;
 }
-
+.item-libro{
+    left: 85%;
+    top: 8%;
+}
+/* -------- FILA 2 -------- */
 .item-vaso{
-
-    left: 85%;
-    top: 8%;
-}
-
-.item-chocolate{
-
-    left: 25%;
+    left: 5%;
     top: 16%;
 }
-
 .item-burguer{
-
+    left: 25%;
+    top: 16%;
+}
+.item-pizza{
     left: 45%;
     top: 16%;
 }
-
 .item-mcBurguer{
-
     left: 65%;
     top: 16%;
 }
-
+.item-coca{
+    left: 85%;
+    top: 16%;
+}
+/* -------- FILA 3 -------- */
 .item-galleta{
-
-    left: 85%;
-    top: 16%;
+    left: 5%;
+    top: 24%;
 }
-
-/* -------- ABAJO -------- */
-
-.item-mando{
-
-    left: 25%;
-    top: 72%;
-}
-
-.item-mapaBosque{
-
-    left: 25%;
-    top: 81%;
-}
-
-.item-mapaLeon{
-
-    left: 25%;
-    top: 90%;
-}
-
-.item-joystick{
-
-    left: 45%;
-    top: 72%;
-}
-
-.item-pelota{
-
-    left: 45%;
-    top: 81%;
-}
-
-.item-varita{
-
-    left: 45%;
-    top: 90%;
-}
-
 .item-pochoclo{
-
-    left: 65%;
-    top: 72%;
+    left: 25%;
+    top: 24%;
 }
-
 .item-helado{
-
-    left: 65%;
-    top: 81%;
+    left: 45%;
+    top: 24%;
 }
-
-.item-carta{
-
+.item-chocolate{
     left: 65%;
-    top: 90%;
+    top: 24%;
 }
-
+.item-waffle{
+    left: 85%;
+    top: 24%;
+}
+/* -------- ABAJO -------- */
+/* -------- FILA 1 -------- */
+.item-compu{
+    left: 5%;
+    bottom: 25%;
+}
+.item-mando{
+    left: 25%;
+    bottom: 25%;
+}
+.item-pelota{
+    left: 45%;
+    bottom: 25%;
+}
+.item-joystick{
+    left: 65%;
+    bottom: 25%;
+}
+.item-tele{
+    left: 85%;
+    bottom: 25%;
+}
+/* -------- FILA 2 -------- */
+.item-bici{
+    left: 5%;
+    bottom: 15%;
+}
+.item-mapaBosque{
+    left: 25%;
+    bottom: 15%;
+}
+.item-arbol{
+    left: 45%;
+    bottom: 15%;
+}
+.item-mapaLeon{
+    left: 65%;
+    bottom: 15%;
+}
 .item-cometa{
-
     left: 85%;
-    top: 81%;
+    bottom: 15%;
 }
-
+/* -------- FILA 3 -------- */
+.item-luces2{
+    left: 5%;
+    bottom: 5%;
+}
+.item-carta{
+    left: 25%;
+    bottom: 5%;
+}
+.item-manos{
+    left: 45%;
+    bottom: 5%;
+}
 .item-castillo{
-
+    left: 65%;
+    bottom: 5%;
+}
+.item-varita{
     left: 85%;
-    top: 72%;
+    bottom: 5%;
 }
