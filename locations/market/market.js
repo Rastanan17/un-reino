@@ -50,6 +50,10 @@ function mostrarMercado(){
         </section>
     `;
     // ===================================
+    // CARGAR NPCs DEL MERCADO
+    // ===================================
+    mostrarNPCsEnLugar("Mercado");
+    // ===================================
     // CARGAR DATOS DEL MERCADO
     // ===================================
     Promise.all([

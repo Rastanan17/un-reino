@@ -24,6 +24,10 @@ establecerLugarTutorial("cuevas");
         </section>
 
     `;
+    // ===================================
+    // CARGAR NPCs DEL MERCADO
+    // ===================================
+    mostrarNPCsEnLugar("Cavernas");
 
 }
 

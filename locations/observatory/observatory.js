@@ -90,6 +90,10 @@ establecerLugarTutorial("observatorio");
         </div>
 
     `;
+    // ===================================
+    // CARGAR NPCs DEL SANTUARIO
+    // ===================================
+    mostrarNPCsEnLugar("Santuario");
 
     iniciarSonidoObservatorio();
 

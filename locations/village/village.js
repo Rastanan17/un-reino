@@ -110,6 +110,10 @@ function mostrarAldea(){
     if(!dialogosAldea.nino.length && !dialogosAldea.aldeano.length && !dialogosAldea.aldeana.length){
         cargarDialogosAldea();
     }
+    // ===================================
+    // CARGAR NPCs DE LA ALDEA
+    // ===================================
+    mostrarNPCsEnLugar("Aldea");
 }
 // =======================================
 // MISIONES

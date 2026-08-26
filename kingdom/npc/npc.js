@@ -61,7 +61,72 @@ const NPC_POSICIONES = {
         lugar: "Mercado",
         x: 50,
         y: 60
-    }
+    },
+    susurrador: {
+        lugar: "Granja",
+        x: 50,
+        y: 80
+    },
+    forjadora: {
+        lugar: "Cavernas",
+        x: 50,
+        y: 80
+    },
+    narrador: {
+        lugar: "Bosque",
+        x: 50,
+        y: 80
+    },
+    astral: {
+        lugar: "Observatorio",
+        x: 50,
+        y: 80
+    },
+    sacerdotisa: {
+        lugar: "Santuario",
+        x: 50,
+        y: 80
+    }/*,
+    bibliotecaria: {
+        lugar: "Biblioteca",
+        x: 50,
+        y: 80
+    },
+    bardo: {
+        lugar: "Puerto",
+        x: 50,
+        y: 80
+    },
+    explorador: {
+        lugar: "Nieve",
+        x: 50,
+        y: 80
+    },
+    tabernero: {
+        lugar: "Bar",
+        x: 50,
+        y: 80
+    },
+    artista: {
+        lugar: "Academia",
+        x: 50,
+        y: 80
+    },
+    sabio: {
+        lugar: "Museo",
+        x: 50,
+        y: 80
+    },
+    cocinero: {
+        lugar: "Mascotas",
+        x: 50,
+        y: 80
+    },
+    comandante: {
+        lugar: "Hielo",
+        x: 50,
+        y: 80
+    }*/ 
 };
 const NPC_ANIMACIONES = {
     walk: [0, 1, 2, 3, 4, 5, 6],
@@ -117,7 +182,20 @@ function obtenerContenedorNPCLugar(lugar){
     const contenedores = {
         "Castillo": ".castillo",
         "Aldea": ".aldea",
-        "Mercado": ".mercado"
+        "Mercado": ".mercado",
+        "Granja": ".granja",
+        "Cavernas": ".cavernas",
+        "Bosque": ".bosque",
+        "Observatorio": ".observatorio",
+        "Santuario": ".santuario"/*,
+        "Biblioteca": ".biblioteca",
+        "Puerto": ".puerto",
+        "Nieve": ".nieve",
+        "Bar": ".bar",
+        "Academia": ".academia",
+        "Museo": ".museo",
+        "Mascotas": ".mascotas",
+        "Hielo": ".hielo"*/
     };
     const selector = contenedores[lugar];
     if(!selector){
@@ -140,7 +218,7 @@ function crearNPC(npc){
     // ===================================
     const contenedor = obtenerContenedorNPCLugar(npc.lugar);
     if(!contenedor){
-        console.warn(`⚠️ No se encontró el contenedor para ${npc.nombre} en ${npc.lugar}`);
+        console.warn(`⚠️ No se encontró el contenedor para ${npc.nombre}`);
         return;
     }
     // ===================================

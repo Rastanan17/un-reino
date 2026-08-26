@@ -34,6 +34,11 @@ Un Reino<
 					observatory_day.jpg
 					observatory_night.jpg
 					observatory_sunset.jpg
+				sanctuary<
+					sanctuary_day.jpg
+					sanctuary_dawn.jpg
+					sanctuary_night.jpg
+					sanctuary_sunset.jpg
 				village<
 					village_dawn.jpg
 					village_day.jpg
@@ -460,7 +465,8 @@ Un Reino<
 		port<
 			(vacio)
 		sanctuary<
-			(vacio)
+			sanctuary.css
+			sanctuary.js
 		snow<
 			(vacio)
 		village<

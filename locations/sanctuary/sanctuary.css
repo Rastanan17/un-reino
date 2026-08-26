@@ -1,0 +1,80 @@
+/* =======================================
+   SANTUARIO DE MÍRRAFEN
+   ======================================= */
+.santuario {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* =======================================
+   MOMENTOS DEL DÍA
+   ======================================= */
+.santuario.momento-day{
+    background-image:url("../../assets/images/backgrounds/sanctuary/sanctuary_day.jpg");
+}
+.santuario.momento-sunset{
+    background-image:url("../../assets/images/backgrounds/sanctuary/sanctuary_sunset.jpg");
+}
+.santuario.momento-night{
+    background-image:url("../../assets/images/backgrounds/sanctuary/sanctuary_night.jpg");
+}
+.santuario.momento-dawn{
+    background-image:url("../../assets/images/backgrounds/sanctuary/sanctuary_dawn.jpg");
+}
+/* =======================================
+   NPCs
+   ======================================= */
+.santuario .npc {
+    position: absolute;
+    z-index: 20;
+}
+/* =======================================
+   SALIDA
+   ======================================= */
+.santuario-salida {
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.santuario-salida img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+.santuario-salida:hover img {
+    transform: scale(1.08);
+}
+/* =======================================
+   NOMBRE / INDICADOR
+   ======================================= */
+.santuario-salida::after {
+    content: "SALIR";
+    position: absolute;
+    bottom: -22px;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+    pointer-events: none;
+}
+/* =======================================
+   RESPONSIVE
+   ======================================= */
+@media (max-width: 900px) {
+    .santuario-salida { width: 65px; height: 65px; }
+}
+@media (max-width: 600px) {
+    .santuario-salida { width: 55px; height: 55px; left: 3%; bottom: 4%; }
+    .santuario-salida::after { font-size: 10px; bottom: -18px; }
+}

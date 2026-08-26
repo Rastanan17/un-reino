@@ -175,6 +175,10 @@ function mostrarGranja(){
             </div>
         </section>
     `;
+    // ===================================
+    // CARGAR NPCs DEL GRANJA
+    // ===================================
+    mostrarNPCsEnLugar("Granja");
 }
 
 // =======================================

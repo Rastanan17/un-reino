@@ -140,6 +140,10 @@ establecerLugarTutorial("bosque");
         </div>
 
     `;
+    // ===================================
+    // CARGAR NPCs DEL BOSQUE
+    // ===================================
+    mostrarNPCsEnLugar("Bosque");
 
     // ===================================
     // INICIAR SONIDOS

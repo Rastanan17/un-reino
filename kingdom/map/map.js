@@ -296,7 +296,7 @@ function abrirZona(zona){
             mostrarMascotas
         );
         return;
-    }
+    }*/
     // ===================================
     // ⛪ SANTUARIO
     // ===================================
@@ -307,7 +307,7 @@ function abrirZona(zona){
             mostrarSantuario
         );
         return;
-    }
+    }/*
     // ===================================
     // 🌨️ NIEVES
     // ===================================
