@@ -1,14 +1,7 @@
 // =======================================
 // REINO DE MÍRRAFEN
-// Archivo principal
-// =======================================
-// Sistema de almacenamiento
-// =======================================
-// =======================================
-// REINO DE MÍRRAFEN
 // SISTEMA DE ALMACENAMIENTO
 // =======================================
-
 const perfilBase = {
     id: "",
     nombre: "",
@@ -85,37 +78,21 @@ function guardarJugador(datos){
 // =======================================
 // 👑 REGISTRAR ACONTECIMIENTO
 // =======================================
-
 function registrarAcontecimiento(tipo, texto){
-
     const jugador = cargarJugador();
-
     if(!jugador) return;
-
     if(!jugador.historial){
         jugador.historial = [];
     }
-
     const acontecimiento = {
-
         id: Date.now(),
-
         fecha: obtenerFechaHoy(),
-
         tipo: tipo,
-
         texto: texto
-
     };
-
     jugador.historial.push(acontecimiento);
-
     guardarJugador(jugador);
-
-    console.log(
-        "👑 ACONTECIMIENTO REGISTRADO:",
-        acontecimiento
-    );
+    console.log("👑 ACONTECIMIENTO REGISTRADO:", acontecimiento);
 }
 // ---------------------------------------
 // Obtener rango
@@ -136,126 +113,64 @@ function obtenerRango(nivel){
 // Dar recompensa
 // ---------------------------------------
 function sumarRecompensa(xp, oquos){
-
-    console.log(
-        "RECIBIDO -> XP:",
-        xp,
-        "Oquos:",
-        oquos
-    );
-
+    console.log("RECIBIDO -> XP:", xp, "Oquos:", oquos);
     const jugador = cargarJugador();
-
     if(!jugador) return;
-
     // ===================================
     // GUARDAR ESTADO ANTERIOR
     // ===================================
-
-    const nivelAnterior =
-        jugador.nivel;
-
-    const rangoAnterior =
-        jugador.rango;
-
+    const nivelAnterior = jugador.nivel;
+    const rangoAnterior = jugador.rango;
     // ===================================
     // RECOMPENSAS
     // ===================================
-
     jugador.xp += xp;
     jugador.oquos += oquos;
-
     // ===================================
     // SUBIR DE NIVEL
     // ===================================
-
-    while(
-        jugador.xp >= jugador.xpNecesaria
-    ){
-
+    while(jugador.xp >= jugador.xpNecesaria){
         jugador.xp -= jugador.xpNecesaria;
-
         jugador.nivel++;
-
         jugador.xpNecesaria += 50;
     }
-
     // ===================================
     // ACTUALIZAR RANGO
     // ===================================
-
-    jugador.rango =
-        obtenerRango(jugador.nivel);
-
+    jugador.rango = obtenerRango(jugador.nivel);
     // ===================================
     // GUARDAR JUGADOR
     // ===================================
-
     guardarJugador(jugador);
-
     actualizarPerfil();
     actualizarHUDJugador();
-
     // ===================================
     // 👑 REGISTRAR NUEVO RANGO
     // ===================================
-
-    if(
-        jugador.rango !== rangoAnterior
-    ){
-
-        registrarAcontecimiento(
-            "rango",
-            `Has obtenido el rango "${jugador.rango}".`
-        );
-
-        console.log(
-            "👑 NUEVO RANGO:",
-            jugador.rango
-        );
+    if(jugador.rango !== rangoAnterior){
+        registrarAcontecimiento("rango", `Has obtenido el rango "${jugador.rango}".`);
+        console.log("👑 NUEVO RANGO:", jugador.rango);
     }
-
     // ===================================
     // 👑 REGISTRAR SUBIDA DE NIVEL
     // ===================================
-
-    if(
-        jugador.nivel > nivelAnterior
-    ){
-
-        registrarAcontecimiento(
-            "nivel",
-            `Alcanzaste el nivel ${jugador.nivel}.`
-        );
-
-        console.log(
-            "👑 NUEVO ACONTECIMIENTO:",
-            `Nivel ${jugador.nivel}`
-        );
+    if(jugador.nivel > nivelAnterior){
+        registrarAcontecimiento("nivel", `Alcanzaste el nivel ${jugador.nivel}.`);
+        console.log("👑 NUEVO ACONTECIMIENTO:", `Nivel ${jugador.nivel}`);
     }
-
 }
 // =======================================
 // RESTAURAR UNA ZONA DEL REINO
 // =======================================
 function desbloquearZona(zona){
-
     const jugador = cargarJugador();
-
     if(!jugador) return;
-
     if(jugador.zonasRestauradas.includes(zona)){
         return;
     }
-
     jugador.zonasRestauradas.push(zona);
-
     guardarJugador(jugador);
-
-    registrarAcontecimiento(
-        "zona",
-        `La zona ${zona} fue restaurada.`
-    );
+    registrarAcontecimiento("zona", `La zona ${zona} fue restaurada.`);
 }
 // ---------------------------------------
 // Reiniciar partida
@@ -273,43 +188,26 @@ function obtenerFechaHoy() {
 // =======================================
 // REINICIO DE MISIONES DIARIAS
 // =======================================
-
 function reiniciarMisionesDiarias(){
-
     // Todas las misiones de todas las zonas
     // se guardan actualmente en esta única clave.
     localStorage.removeItem("estadoMisiones");
-
-    console.log(
-        "🌅 Misiones diarias reiniciadas"
-    );
+    console.log("🌅 Misiones diarias reiniciadas");
 }
 // ---------------------------------------
 // Verificar cambio de día
 // ---------------------------------------
 function verificarNuevoDia(){
-
     const jugador = cargarJugador();
-
     if(!jugador) return;
-
     const hoy = obtenerFechaHoy();
-
     console.log("📅 Último reinicio:", jugador.ultimoReinicio);
     console.log("📅 Hoy:", hoy);
-    console.log(
-        "📦 Estado misiones:",
-        localStorage.getItem("estadoMisiones")
-    );
-
+    console.log("📦 Estado misiones:", localStorage.getItem("estadoMisiones"));
     if(jugador.ultimoReinicio !== hoy){
-
         console.log("🌅 RESET DE MISIONES EJECUTADO");
-
         reiniciarMisionesDiarias();
-
         jugador.ultimoReinicio = hoy;
-
         guardarJugador(jugador);
     }
 }

@@ -200,14 +200,8 @@ establecerLugarTutorial("castillo");
 
         <section class="castillo momento-${momento}">
 
-            <img
-                class="castle-background"
-                src="assets/images/backgrounds/castle/castle_${momento}.jpg"
-                alt="Castillo de Mírrafen"
-            >
-
+            <img class="castle-background" src="assets/images/backgrounds/castle/castle_${momento}.jpg" alt="Castillo de Mírrafen">
             ${zonasCastillo.map(zona => `
-
                 <div
                     class="zona-castillo ${zona.id}"
                     style="
@@ -215,18 +209,12 @@ establecerLugarTutorial("castillo");
                         top:${(zona.y / CASTLE_HEIGHT) * 100}%;
                         width:${(zona.width / CASTLE_WIDTH) * 100}%;
                         height:${(zona.height / CASTLE_HEIGHT) * 100}%;
-                    "
-                    onclick="interactuarZonaCastillo('${zona.id}')"
-                >
-
+                    " onclick="interactuarZonaCastillo('${zona.id}')">
                     <span class="name">
                         ${zona.nombre}
                     </span>
-
                 </div>
-
             `).join("")}
-
         </section>
 
     `;

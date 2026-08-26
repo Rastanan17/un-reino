@@ -68,7 +68,7 @@ function obtenerDatosLugarTutorial(){
 // =======================================
 // CONFIGURACIÓN DEL SPRITESHEET
 // =======================================
-const SPRITE_ANCHO = 500;
+const SPRITE_ANCHO = 476;
 const SPRITE_ALTO = 500;
 const SPRITE_FILAS = 3;
 // Filas 1 y 2 → 7 frames

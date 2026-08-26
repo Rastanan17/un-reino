@@ -3,7 +3,6 @@
     CALIBRACIÓN DE ZONAS
     TEMPORAL
  ======================================= */
-
 .aldea{
     position:relative;
     width:100%;
@@ -14,273 +13,142 @@
     background-position:center;
     background-repeat:no-repeat;
 }
-
 /* =======================================
    🌅 MOMENTOS DEL DÍA
 ======================================= */
-
 .aldea.momento-dawn{
-    background-image:
-        url("../../assets/images/backgrounds/village/village_dawn.jpg");
+    background-image:url("../../assets/images/backgrounds/village/village_dawn.jpg");
 }
-
 .aldea.momento-day{
-    background-image:
-        url("../../assets/images/backgrounds/village/village_day.jpg");
+    background-image:url("../../assets/images/backgrounds/village/village_day.jpg");
 }
-
 .aldea.momento-sunset{
-    background-image:
-        url("../../assets/images/backgrounds/village/village_sunset.jpg");
+    background-image:url("../../assets/images/backgrounds/village/village_sunset.jpg");
 }
-
 .aldea.momento-night{
-    background-image:
-        url("../../assets/images/backgrounds/village/village_night.jpg");
+    background-image:url("../../assets/images/backgrounds/village/village_night.jpg");
 }
-
 /* =======================================
    ZONAS INTERACTIVAS
    CALIBRACIÓN
 ======================================= */
-
 .zona-aldea {
     width: 100%;
     height: 100%;
-
     display: block;
-
     box-sizing: border-box;
-
     z-index: 100;
     cursor: pointer;
 }
-
 /* =======================================
    ALDEANAS
 ======================================= */
-
 .senora1{
     width:15%;
     height:10%;
-
     right:0%;
-    top:40%;
+    top:50%;
 }
-
 .senora2{
-    width:20%;
+    width:15%;
     height:10%;
-
     left:0%;
     top:50%;
 }
-
-.senora3{
-    width:10%;
-    height:15%;
-
-    right:10%;
-    top:60%;
-}
-
-.senora4{
-    width:10%;
-    height:10%;
-
-    right:0%;
-    top:50%;
-}
-
 /* =======================================
    ALDEANOS
 ======================================= */
-
 .senor1{
-    width:10%;
-    height:15%;
-
+    width:15%;
+    height:10%;
     right:0%;
-    top:60%;
+    top:40%;
 }
-
 .senor2{
-    width:20%;
-    height:15%;
-
-    left:40%;
-    top:60%;
+    width:15%;
+    height:10%;
+    left:0%;
+    top:40%;
 }
-
-.senor3{
-    width:20%;
-    height:15%;
-
-    left:60%;
-    top:60%;
-}
-
 /* =======================================
    NIÑOS
 ======================================= */
-
 .nino1{
-    width:25%;
-    height:10%;
-
-    left:20%;
-    top:50%;
-}
-
-.nino2{
-    width:25%;
-    height:10%;
-
-    left:45%;
-    top:50%;
-}
-
-.nino3{
-    width:20%;
+    width:15%;
     height:5%;
-
-    left:70%;
+    left:20%;
+    top:55%;
+}
+.nino2{
+    width:15%;
+    height:5%;
+    left:65%;
     top:55%;
 }
 /* =======================================
    PATOS
 ======================================= */
-
 .patos1{
-    width:30%;
-    height:15%;
-
-    left:10%;
-    top:60%;
-}
-
-.patos2{
     width:20%;
     height:5%;
-
-    right:10%;
+    left:65%;
     top:50%;
 }
-
 /* =======================================
    CAMPANA
    → MISIONES
 ======================================= */
-
 .campana{
     width:30%;
-    height:10%;
-
-    left:10%;
+    height:5%;
+    left:20%;
     top:40%;
 }
-
 /* =======================================
    CASTILLO
    → SALIDA
 ======================================= */
-
 .salidaAldea{
     width:60%;
     height:10%;
-
     left:20%;
     top:25%;
 }
-
-/* =======================================
-   CASA CON TORRE
-   → ARMERÍA
-======================================= */
-
-.casaConTorre{
-    width:30%;
-    height:10%;
-
-    right:20%;
-    top:40%;
-}
-
 /* =======================================
    HOVER
 ======================================= */
-
 .zona-aldea:hover{
-    
     transform:scale(1.02);
-
-}
-
-/* =======================================
-   RESPONSIVE
-======================================= */
-
-@media(max-width:900px){
-
-    .aldea{
-        width:100%;
-        height:100%;
-    }
-
-}
-
-@media(max-width:600px){
-
-    .aldea{
-        width:100%;
-        height:100%;
-    }
-
-    .zona-aldea{
-        border-width:2px;
-    }
-
 }
 .zona-interactiva {
+    background-color:#ffd90049;
     position: absolute;
     z-index: 100;
     box-sizing: border-box;
 }
-
 .nombre-zona{
     position:absolute;
-
     top:50%;
     left:50%;
     transform:translateX(-50%);
-
     width:max-content;
-
     margin:0;
-
     color:#ffd700;
-
     font-size:clamp(12px, 1vw, 30px);
-
     font-weight:bold;
-
     text-align:center;
-
     white-space:nowrap;
-
     text-shadow:
         -2px -2px 0 #000,
          2px -2px 0 #000,
         -2px  2px 0 #000,
          2px  2px 0 #000,
          0 2px 5px #000;
-
     pointer-events:none;
 }
 /* =======================================
    RESALTADO DEL NOMBRE AL PASAR EL CURSOR
 ======================================= */
-
 .zona-interactiva:hover .nombre-zona{
     transform:translateX(-50%) scale(1.12);
     color:#fff2a8;
@@ -292,10 +160,16 @@
          0 0 8px #ffd700,
          0 2px 6px #000;
 }
-
 .nombre-zona{
-    transition:
-        transform 0.18s ease,
-        color 0.18s ease,
-        text-shadow 0.18s ease;
+    transition:transform 0.18s ease, color 0.18s ease, text-shadow 0.18s ease;
+}
+/* =======================================
+   RESPONSIVE
+======================================= */
+@media(max-width:900px){
+    .aldea{ width:100%; height:100%; }
+}
+@media(max-width:600px){
+    .aldea{ width:100%; height:100%; }
+    .zona-aldea{ border-width:2px; }
 }

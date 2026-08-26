@@ -1,0 +1,686 @@
+{
+  "npc": "sacerdotisa",
+  "nombre": "Aurelia Stay",
+  
+  "saludos": [
+    "Pasa en paz, alma caminante. El aire del Santuario ya anunciaba tu presencia.",
+    "Saludos, viajero. Las velas se han encendido para iluminar el sendero de tu espíritu.",
+    "Bienvenido a este rincón sagrado. Que la agitación del reino quede fuera de estas puertas.",
+    "Siento la vibración de tu llegada. Acomoda tu mente y déjala reposar en el silencio.",
+    "Que la luz interior te guíe. Ven, busca un momento de paz en la penumbra del altar.",
+    "Te estaba esperando. Los inciensos han tomado la forma de tu destino.",
+    "El Santuario te abre sus brazos. Respira profundo y suelta las cargas de la jornada.",
+    "Saludos. La claridad no siempre llega con el sol; a veces despierta en la calma del espíritu.",
+    "Aproxímate con respeto y la mente despejada. La verdad habita en las aguas tranquilas.",
+    "Bienvenido, caminante de Mírrafen. Que tu búsqueda hoy encuentre puerto en la serenidad."
+  ],
+  "dialogos_espiritual": [
+    "La verdadera visión no nace de los ojos del cuerpo, sino del silencio con el que escuchas a tu alma.",
+    "Un espíritu en paz es un escudo más impenetrable que cualquier armadura de acero forjado.",
+    "Las respuestas que buscas en el vasto reino a menudo aguardan escondidas en tu propia respiración.",
+    "Cuando la mente se aquieta, hasta las decisiones más oscuras revelan su sendero luminoso.",
+    "No temas al vacío de la meditación; es allí donde se siembran las semillas de la claridad.",
+    "El destino no es un hilo rígido, sino una trama que tejes con cada intención sincera de tu corazón.",
+    "Aprende a perdonar tus tropiezos pasados; la luz solo puede reflejarse en un estanque sin turbulencias.",
+    "La magia espiritual no altera el mundo exterior, transforma la mirada de quien lo contempla.",
+    "Nutre tu espíritu diariamente, pues un alma fuerte sostiene al cuerpo incluso en las peores tempestades.",
+    "Busca el equilibrio entre el hacer y el ser; en la calma reside la verdadera fortaleza del reino."
+  ],
+  "desafios_espirituales": [
+    {
+      "tipo": "vida_real",
+      "titulo": "Respiro del Altar",
+      "descripcion": "Aurélia te invita a pausar el ajetreo del día y conectar con tu centro mediante la respiración.",
+      "accion": "Inhalar y exhalar profundamente durante un minuto en calma",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Purificación del agua",
+      "descripcion": "Refresca tu templo interior para mantener la mente clara y alerta ante las sombras.",
+      "accion": "Beber un vaso de agua pura con plena consciencia",
+      "recompensa": {
+        "xp": 4,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Santuario limpio",
+      "descripcion": "El orden externo refleja la paz interior. Despeja tu lugar inmediato de trabajo o descanso.",
+      "accion": "Retirar tres objetos innecesarios de tu espacio de trabajo",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Pausa de contemplación",
+      "descripcion": "Aparta la vista de las pantallas e iluminación artificial para descansar la mirada espiritual.",
+      "accion": "Cerrar los ojos o mirar por la ventana durante 3 minutos",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Postura de alineación",
+      "descripcion": "Mantener la columna recta permite que la energía y la intención fluyan sin trabas.",
+      "accion": "Corregir tu postura y mantener los hombros relajados",
+      "recompensa": {
+        "xp": 4,
+        "oquos": 1
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Silencio del espíritu",
+      "descripcion": "Tómate un momento sin ruidos externos para escuchar los pensamientos que necesitas ordenar.",
+      "accion": "Permanecer dos minutos en absoluto silencio",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Gratitud en el altar",
+      "descripcion": "Reconocer las pequeñas victorias del día fortalece la luz que habita en tu pecho.",
+      "accion": "Agradecer mentalmente tres aspectos positivos de tu jornada",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Aseo de energía",
+      "descripcion": "Lava la tensión acumulada en tus manos para liberar el cansancio de las labores.",
+      "accion": "Lavar tus manos o rostro con agua fresca",
+      "recompensa": {
+        "xp": 4,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Paso consciente",
+      "descripcion": "Camina sintiendo el peso de tu cuerpo sobre la tierra y la firmeza de tu sendero.",
+      "accion": "Caminar brevemente prestando atención a cada pisada",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "La intención del día",
+      "descripcion": "Clarifica en tu mente la virtud principal que guiará tu actuar en los próximos momentos.",
+      "accion": "Definir una intención o palabra clave para tu jornada",
+      "recompensa": {
+        "xp": 7,
+        "oquos": 3
+      }
+    }
+  ],
+  "misiones_reino": [
+    {
+      "titulo": "Bendición de la Aldea",
+      "destino": "Aldea",
+      "descripcion": "Lleva la paz del Santuario a la Aldea y asegúrate de que sus habitantes mantengan la armonía.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Serenidad en el Castillo",
+      "destino": "Castillo",
+      "descripcion": "Visita el castillo para ofrecer palabras de calma a los guardias que velan por las murallas.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Susurros del Bosque Sagrado",
+      "destino": "Bosque",
+      "descripcion": "Adéntrate en el Bosque y conecta con el anciano cuentacuentos para renovar las energías antiguas.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Luz en las Cavernas",
+      "destino": "Cavernas",
+      "descripcion": "Desciende a las Cavernas y lleva una chispa de paz espiritual a las profundidades de la roca.",
+      "recompensa": {
+        "xp": 12,
+        "oquos": 5
+      }
+    },
+    {
+      "titulo": "Reflejos del Observatorio",
+      "destino": "Observatorio",
+      "descripcion": "Consulta con Zephyr la alineación de las estrellas para interpretar las visiones del Santuario.",
+      "recompensa": {
+        "xp": 11,
+        "oquos": 5
+      }
+    },
+    {
+      "titulo": "Armonía en el Mercado",
+      "destino": "Mercado",
+      "descripcion": "Camina por el Mercado llevando una presencia serena que aplace los conflictos de los comerciantes.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Gratitud en la Granja",
+      "destino": "Granja",
+      "descripcion": "Viaja a la Granja para bendecir los frutos de la tierra y a quienes los cultivan con paciencia.",
+      "recompensa": {
+        "xp": 9,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Mareas del Puerto",
+      "destino": "Puerto",
+      "descripcion": "Acércate al Puerto para ofrecer oraciones de buen viaje a los marineros que zarpan hacia lo desconocido.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Memoria del Museo",
+      "destino": "Museo",
+      "descripcion": "Visita a Eldrin para meditar sobre el significado espiritual de las reliquias del pasado.",
+      "recompensa": {
+        "xp": 9,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Paz de las Cumbres",
+      "destino": "Nieve",
+      "descripcion": "Asciende a las cumbres heladas para realizar un ritual de purificación en la nieve inmaculada.",
+      "recompensa": {
+        "xp": 14,
+        "oquos": 6
+      }
+    }
+  ],
+  "desafios_modales": [
+    {
+      "titulo": "Palabra pacífica",
+      "descripcion": "Aurélia mide tu armonía espiritual: responde con amabilidad y mesura a quienes te hablen.",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 2
+      }
+    },
+    {
+      "titulo": "Escucha atenta",
+      "descripcion": "Muestra empatía prestando atención plena a otra persona sin interrumpir su mensaje.",
+      "recompensa": {
+        "xp": 7,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Gesto de compasión",
+      "descripcion": "Ofrece tu ayuda o un mensaje de aliento a alguien que enfrente una dificultad hoy.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Dominio de la ira",
+      "descripcion": "Frente a un momento de frustración, mantén la serenidad y responde con ecuanimidad.",
+      "recompensa": {
+        "xp": 9,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "El don de la paciencia",
+      "descripcion": "Aguarda tu turno o el desarrollo de un proceso sin caer en la prisa ni en el enojo.",
+      "recompensa": {
+        "xp": 7,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Tono moderado",
+      "descripcion": "Habla en un volumen suave y pausado durante tus conversaciones del día.",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 2
+      }
+    },
+    {
+      "titulo": "Mano abierta",
+      "descripcion": "Realiza un acto desinteresado por el bienestar de tu entorno o de otra persona.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Respeto a los espacios",
+      "descripcion": "Deja el lugar donde estuviste en mejores condiciones o más limpio de como lo encontraste.",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Aceptación serena",
+      "descripcion": "Acepta un cambio inesperado en tus planes manteniendo una disposición flexible y tranquila.",
+      "recompensa": {
+        "xp": 9,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Despedida en armonía",
+      "descripcion": "Cierra una conversación o tu jornada laboral deseando sinceramente el bien a los demás.",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 2
+      }
+    }
+  ],
+  "consejos_de_la_paz": [
+    "No busques acallar el ruido exterior antes de haber encontrado la calma dentro de ti.",
+    "Un pensamiento negativo solo tiene el poder que tu atención decide otorgarle.",
+    "La paz no es la ausencia de problemas, sino la presencia de luz para afrontarlos.",
+    "Respira hondo en los momentos de caos; la calma siempre es una elección consciente.",
+    "Trata a tu alma con la misma delicadeza con la que cuidarías una llama en medio del viento.",
+    "El rencor es una carga pesada que frena tus pasos; suéltalo para poder avanzar ligero.",
+    "No te compares con el caminar de otros; cada espíritu recorre un sendero único y valioso.",
+    "Cultiva momentos de silencio diario; son el abono que nutre la sabiduria interior.",
+    "La amabilidad que entregas a los demás es un espejo que devuelve serenidad a tu corazón.",
+    "Confía en el ritmo natural de las cosas; la flor no se apresura para abrir sus pétalos."
+  ],
+  "rumores": [
+    "He sentido en los inciensos una corriente del norte que habla de cambios pacíficos en Mírrafen.",
+    "Dicen las visiones que el estanque del Santuario reflejará verdades profundas a medianoche.",
+    "Zephyr me comentó que los astros velan el descanso de quienes buscan la armonía diaria.",
+    "Se murmura que las viejas piedras de las Cavernas resonaron con un tono curativo al atardecer.",
+    "Las aguas del Puerto transmiten una brisa serena que parece calmar las mentes inquietas.",
+    "Escuché que un viajero dejó en la Aldea un amuleto capaz de disipar la negatividad.",
+    "Dicen que entre los árboles del Bosque vaga un espíritu guardián que protege a los meditadores.",
+    "Eldrin encontró textos que describen un ritual antiguo para devolver la tranquilidad al hogar.",
+    "Los agricultores aseguran que la tierra bendecida produce frutos que reconfortan el espíritu.",
+    "Se comenta que la luz de las velas en el altar adoptó la figura de un ave en pleno vuelo."
+  ],
+  "eventos_especiales": [
+    {
+      "id": "alineacion_espiritual",
+      "titulo": "Noche de las Velas Sagradas",
+      "descripcion": "El Santuario abre sus puertas para una meditación profunda en busca de la luz interior.",
+      "accion": "Realizar una sesión de meditación o reflexión de 15 minutos",
+      "recompensa": {
+        "xp": 18,
+        "oquos": 7
+      }
+    },
+    {
+      "id": "paciencia_infinita",
+      "titulo": "Vigilia de la Serenidad",
+      "descripcion": "Demuestra el temple de tu espíritu completando una tarea con paciencia absoluta.",
+      "accion": "Trabajar en una labor minuciosa sin mostrar frustración",
+      "recompensa": {
+        "xp": 20,
+        "oquos": 8
+      }
+    },
+    {
+      "id": "rio_de_purificacion",
+      "titulo": "Marea de Limpieza Interior",
+      "descripcion": "Libera la mente de viejas distracciones para dar la bienvenida a nuevas intenciones.",
+      "accion": "Escribir y soltar una preocupación que te inquiete",
+      "recompensa": {
+        "xp": 16,
+        "oquos": 6
+      }
+    },
+    {
+      "id": "luz_del_santuario",
+      "titulo": "Bendición de Armonía",
+      "descripcion": "Llena tu día de actos amables y mantén una actitud apacible durante la jornada.",
+      "accion": "Mantener la calma en todas las interacciones del día",
+      "recompensa": {
+        "xp": 22,
+        "oquos": 9
+      }
+    },
+    {
+      "id": "renacer_espiritual",
+      "titulo": "El Despertar de la Mente",
+      "descripcion": "Aurélia te invita a iniciar la jornada alineando tu pensamiento con la serenidad.",
+      "accion": "Comenzar tus actividades con una breve pausa de orden y calma",
+      "recompensa": {
+        "xp": 15,
+        "oquos": 6
+      }
+    },
+    {
+      "id": "circulo_de_paz",
+      "titulo": "Escudo de la Compasión",
+      "descripcion": "Genera un entorno de tranquilidad a tu alrededor apoyando a quien lo necesite.",
+      "accion": "Brindar ayuda calmada y atenta a una persona cercana",
+      "recompensa": {
+        "xp": 24,
+        "oquos": 10
+      }
+    },
+    {
+      "id": "viento_sanador",
+      "titulo": "Respiro Profundo",
+      "descripcion": "Haz de las pausas conscientes tu mejor herramienta para disipar la carga mental.",
+      "accion": "Realizar tres pausas de respiración a lo largo del día",
+      "recompensa": {
+        "xp": 18,
+        "oquos": 7
+      }
+    },
+    {
+      "id": "misterio_del_altar",
+      "titulo": "Visiones de Claridad",
+      "descripcion": "Analiza con calma una situación compleja hasta encontrar la mejor solución espiritual.",
+      "accion": "Resolver una duda o pendiente analizando pros y contras",
+      "recompensa": {
+        "xp": 25,
+        "oquos": 10
+      }
+    },
+    {
+      "id": "el_don_del_perdon",
+      "titulo": "Liberación de Cargas",
+      "descripcion": "Deja ir los pequeños resentimientos que enturbian tu paz en el reino de Mírrafen.",
+      "accion": "Aceptar un error con madurez y seguir adelante sin culpa",
+      "recompensa": {
+        "xp": 20,
+        "oquos": 8
+      }
+    },
+    {
+      "id": "cierre_sagrado",
+      "titulo": "El Reposo del Guerrero",
+      "descripcion": "Cierra el día con un ritual de gratitud y preparación para un sueño reparador.",
+      "accion": "Agradecer los logros del día y dejar tu espacio listo antes de dormir",
+      "recompensa": {
+        "xp": 22,
+        "oquos": 9
+      }
+    }
+  ],
+  "historia_personal": [
+    {
+      "id": "historia_01",
+      "titulo": "El despertar de la visión",
+      "texto": "Desde pequeña descubrí que al cerrar los ojos podía percibir los hilos de luz que unen los pensamientos de las personas con las estrellas de Mírrafen."
+    },
+    {
+      "id": "historia_02",
+      "titulo": "La construcción del Santuario",
+      "texto": "Este Santuario se erigió sobre una fuente natural de aguas puras. Venimos aquí a recordar que la claridad es nuestro estado más natural."
+    },
+    {
+      "id": "historia_03",
+      "titulo": "El valor del silencio",
+      "texto": "Pasé tres años en las cumbres heladas practicando el voto de silencio. Allí comprendí que la mente habla con mayor nitidez cuando la voz se detiene."
+    },
+    {
+      "id": "historia_04",
+      "titulo": "La lección de las aguas",
+      "texto": "Un anciano sabio me enseñó que si agitas el agua de un cuenco no puedes ver tu reflejo; solo al dejar que reposa aparece la imagen clara."
+    },
+    {
+      "id": "historia_05",
+      "titulo": "El incienso de luna",
+      "texto": "Conservo una mezcla especial de resinas y flores secas. Su aroma ayuda a pacificar hasta al corazón más azotado por la tormenta."
+    },
+    {
+      "id": "historia_06",
+      "titulo": "El refugio de los caminantes",
+      "texto": "A lo largo de los años he visto cruzar estas puertas a guerreros, reyes y campesinos. Bajo la luz del Santuario, todos buscan exactamente lo mismo: paz."
+    },
+    {
+      "id": "historia_07",
+      "titulo": "Las visiones del reino",
+      "texto": "Mis visiones no predicen un destino inevitable, sino las corrientes que se forman según las intenciones que los habitantes deciden cultivar."
+    },
+    {
+      "id": "historia_08",
+      "titulo": "El espejo del alma",
+      "texto": "En el altar guardo un pequeño espejo de plata pulida. Nos recuerda que no podemos cambiar la luz del mundo sin antes ajustar la nuestra."
+    },
+    {
+      "id": "historia_09",
+      "titulo": "La brisa en las velas",
+      "texto": "Muchas veces me preguntan por qué mantengo las velas encendidas. No es solo por iluminación, sino para recordar que la esperanza requiere atención constante."
+    },
+    {
+      "id": "historia_10",
+      "titulo": "El legado de Aurélia",
+      "texto": "Mi misión en Mírrafen no es dar respuestas mágicas, sino acompañar a cada viajero a descubrir la fuerza y la serenidad que ya habitan en su interior."
+    }
+  ],
+  
+  "dialogos_por_nivel": {
+    "1": [
+      "Bienvenido al Santuario. Respira profundo y da tu primer paso en paz.",
+      "Todo gran viaje espiritual comienza con una sola respiración consciente."
+    ],
+    "2": [
+      "El camino de Mírrafen empieza a abrirse ante tu mente inquieta.",
+      "Aprende a escuchar el silencio; allí se esconden tus primeras certezas."
+    ],
+    "3": [
+      "Tu espíritu busca su propio ritmo en medio de la agitación cotidiana.",
+      "No apresures el paso; la serenidad se cultiva poco a poco."
+    ],
+    "4": [
+      "Siento que tu luz interior comienza a brillar con más constancia.",
+      "Cada pequeña intención positiva fortalece el templo de tu alma."
+    ],
+    "5": [
+      "Nivel cinco. Has demostrado que buscas el equilibrio de verdad.",
+      "Tu presencia en el Santuario ya es más firme y apacible."
+    ],
+    "6": [
+      "Las sombras del cansancio se disipan cuando mantienes tu centro.",
+      "Sigue adelante; la calma no es ausencia de ruido, sino paz interior."
+    ],
+    "7": [
+      "Tus decisiones diarias empiezan a reflejar una mayor armonía.",
+      "Un espíritu disciplinado encuentra belleza en los deberes simples."
+    ],
+    "8": [
+      "La confusión cede terreno ante la claridad de tu mirada.",
+      "El agua tranquila de tu mente refleja verdades más profundas."
+    ],
+    "9": [
+      "Estás a las puertas de un nuevo despertar en tu sendero.",
+      "Manten la fe en tu proceso; cada día aportas luz a Mírrafen."
+    ],
+    "10": [
+      "Nivel diez. Tu energía ya se percibe serena en todo el Santuario.",
+      "Has superado las primeras distracciones. Ahora empieza la verdadera maestría."
+    ],
+    "11": [
+      "No permitas que las prisas del reino enturbien tu paz conquistada.",
+      "La ecuanimidad es tu mejor aliada ante los imprevistos del día."
+    ],
+    "12": [
+      "Tu voz transmite una tranquilidad que reconforta a quienes te rodean.",
+      "Aprender a soltar lo que no puedes controlar es un acto de gran sabiduría."
+    ],
+    "13": [
+      "Las raíces de tu fe y disciplina son cada vez más profundas.",
+      "Incluso en los días grises, la llama de tu altar interno permanece encendida."
+    ],
+    "14": [
+      "La verdadera fuerza no grita ni se impone; habita en la calma.",
+      "Siento que tu mente aprende a filtrar las distracciones vanas."
+    ],
+    "15": [
+      "Nivel quince. La luz que emana de ti inspira a otros viajeros.",
+      "Has construido un refugio interior al que siempre puedes regresar."
+    ],
+    "16": [
+      "Los vientos de Mírrafen traen presagios de mayor madurez espiritual.",
+      "Enfrenta las tareas difíciles con una sonrisa serena."
+    ],
+    "17": [
+      "Aprecia los descansos del camino; la meditación nutre la acción.",
+      "Tu espíritu se ha vuelto tan firme como los muros del templo."
+    ],
+    "18": [
+      "La empatía en tus palabras ayuda a sanar las fricciones del reino.",
+      "Observa tus emociones sin juzgarlas; déjalas pasar como nubes."
+    ],
+    "19": [
+      "Un paso más cerca de una visión superior de tus propios actos.",
+      "La constancia en la paz genera una fortaleza inquebrantable."
+    ],
+    "20": [
+      "Nivel veinte. Ya no eres un simple aprendiz de la meditación.",
+      "Has transformado tus hábitos en pequeños rituales de armonía."
+    ],
+    "21": [
+      "Las dudas menores se desvanecen bajo la luz de tu presencia.",
+      "Cultiva la gratitud y descubrirás riqueza en cada momento."
+    ],
+    "22": [
+      "Tu capacidad para mantener la compostura empieza a ser legendaria.",
+      "El perdón hacia ti mismo es la clave para seguir avanzando."
+    ],
+    "23": [
+      "La intuición habla con más fuerza cuando la mente no juzga.",
+      "Que cada una de tus acciones sea un reflejo de tu luz interior."
+    ],
+    "24": [
+      "Sientes cómo la energía del Santuario fluye en perfecta sincronía contigo.",
+      "Tu serenidad ante el conflicto es un escudo para todo el reino."
+    ],
+    "25": [
+      "Nivel veinticinco. Has alcanzado el punto medio de esta travesía de luz.",
+      "Tu espíritu brilla con la sobriedad y sabiduría de los antiguos."
+    ],
+    "26": [
+      "Las tempestades externas ya no logran agitar el fondo de tu alma.",
+      "Continúa caminando con humildad y firmeza de propósito."
+    ],
+    "27": [
+      "La verdadera visión te permite ver más allá de las apariencias.",
+      "Tu paciencia transforma los entornos más caóticos en oasis de paz."
+    ],
+    "28": [
+      "Un corazón compasivo es la mayor fuente de poder en Mírrafen.",
+      "Cada pensamiento luminoso retumba positivamente en el universo."
+    ],
+    "29": [
+      "Te aproximas a un umbral de entendimiento aún más profundo.",
+      "La serenidad no se busca afuera, se despliega desde tu interior."
+    ],
+    "30": [
+      "Nivel treinta. Aurélia reconoce en ti a un verdadero pilar del Santuario.",
+      "Tu maestría en la calma es un faro para las almas perdidas."
+    ],
+    "31": [
+      "Las palabras amables que siembras hoy darán frutos de paz mañana.",
+      "Incluso en el silencio prolongado, tu sabiduría sigue comunicando."
+    ],
+    "32": [
+      "El desapego de lo irrelevante te otorga una libertad envidiable.",
+      "Tu mente se ha vuelto tan clara como las cumbres de nieve."
+    ],
+    "33": [
+      "Los misterios del reino se revelan a quienes caminan sin ego.",
+      "Sigue nutriendo tu espíritu con acciones sinceras y nobles."
+    ],
+    "34": [
+      "Siento que tu mirada penetra el velo de las cosas cotidianas.",
+      "La disciplina espiritual ha dejado de ser un esfuerzo; es tu naturaleza."
+    ],
+    "35": [
+      "Nivel treinta y cinco. El conocimiento del alma guía tus pasos.",
+      "Un verdadero maestro encuentra paz tanto en la acción como en el reposo."
+    ],
+    "36": [
+      "Tu paciencia ha desmontado las barreras de la impaciencia e ira.",
+      "Transmites una calma ancestral que tranquiliza al reino entero."
+    ],
+    "37": [
+      "Las visiones del Santuario confirman la pureza de tu trayectoria.",
+      "Permanece receptivo a las lecciones simples que aún ofrece la vida."
+    ],
+    "38": [
+      "Nada turba a quien ha encontrado su verdadero centro en el cosmos.",
+      "Tu luz actúa como un antídoto contra la pesadez del mundo."
+    ],
+    "39": [
+      "Rozas las alturas del dominio sobre tus pensamientos y actos.",
+      "El equilibrio que has alcanzado es fruto de tu dedicación diaria."
+    ],
+    "40": [
+      "Nivel cuarenta. Te has convertido en un guardián de la paz en Mírrafen.",
+      "Tu aura irradia la tranquilidad de las estrellas sobre el altar."
+    ],
+    "41": [
+      "Pocos aventureros comprenden el espíritu con la profundidad que tú posees.",
+      "Tu silencio enseña más que mil discursos apresurados."
+    ],
+    "42": [
+      "El reino entero se beneficia de la serenidad que contagias.",
+      "Camina con la certeza de quien conoce el propósito de su existencia."
+    ],
+    "43": [
+      "Las pruebas del camino se convierten en simples peldaños de luz.",
+      "Tu compasión no conoce límites ni exige recompensa alguna."
+    ],
+    "44": [
+      "Has trascendido las pequeñas turbulencias que antes te detenían.",
+      "En tu presencia, la confusión se disuelve naturalmente."
+    ],
+    "45": [
+      "Nivel cuarenta y cinco. Un modelo de templanza para todos en el reino.",
+      "Tu fe en la bondad interior es un pilar inamovible."
+    ],
+    "46": [
+      "Tu visión abarca el pasado, el presente y la paz del mañana.",
+      "Sigue siendo el refugio tranquilo en medio de cualquier tormenta."
+    ],
+    "47": [
+      "Siento una consonancia perfecta entre tu alma y el universo.",
+      "Cada una de tus palabras lleva la impronta de la verdad interior."
+    ],
+    "48": [
+      "Te acercas a la cúspide de la evolución espiritual en el Santuario.",
+      "Tu serenidad refleja la plenitud de un espíritu alineado."
+    ],
+    "49": [
+      "Un solo paso te separa del dominio absoluto de la luz interna.",
+      "Mírrafen contempla con reverencia el nivel de tu serenidad."
+    ],
+    "50": [
+      "Nivel cincuenta. Te has elevado como una leyenda viva de la paz espiritual.",
+      "Eres la calma misma. El Santuario y el reino de Mírrafen honran tu luz eterna."
+    ]
+  }
+}

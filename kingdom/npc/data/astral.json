@@ -1,0 +1,706 @@
+{
+  "npc": "astral",
+  "nombre": "Lord Zephyr",
+
+  "saludos": [
+    "Saludos, caminante. Has ascendido hasta la cima donde las estrellas susurran los secretos de Mírrafen.",
+    "Bienvenido al Observatorio. Ajusta tu mirada, el cosmos tiene un mensaje para ti hoy.",
+    "Ah, aventurero. Justo a tiempo: la alineación astral muestra destellos prometedores sobre tu destino.",
+    "Pasa en silencio. Las lentes del telescopio están captando la luz de constelaciones olvidadas.",
+    "Saludos. Que la claridad de la bóveda celeste guíe tus pasos en el mundo terrenal.",
+    "Bienvenido. Mirar hacia las estrellas nos recuerda cuán infinitas son nuestras posibilidades.",
+    "Te estaba observando llegar. Tu aura brilla con la misma intensidad que un meteoro en tránsito.",
+    "Pisa con cuidado los mapas estelares. El universo está en constante movimiento y nosotros con él.",
+    "Qué alegría verte en las alturas. Las estrellas no mienten, tu determinación se nota desde aquí.",
+    "Saludos, explorador. El Observatorio siempre estará abierto para quienes buscan una perspectiva superior."
+  ],
+  "dialogos_astrales": [
+    "Las estrellas no determinan tu destino, aventurero; simplemente iluminan los caminos para que elijas con sabiduría.",
+    "Incluso la estrella más brillante del firmamento necesitó oscuridad para poder ser descubierta.",
+    "El orden de las constelaciones nos enseña que el gran caos del universo se sostiene con hermosa disciplina.",
+    "No le temas a las noches sin luna; son las mejores para contemplar la inmensidad que llevas dentro.",
+    "Cada decisión que tomas en la tierra resuena como una pequeña pulsación en el plano astrofísico.",
+    "Un astrónomo no solo mira el cielo: aprende a calcular el tiempo y a cultivar una paciencia infinita.",
+    "El cosmos no se apresura y, sin embargo, todo en él se completa en el momento exacto.",
+    "Cuando sientas que tu tarea es insignificante, recuerda que estás hecho del mismo polvo que los cometas.",
+    "A través de los espejos del telescopio he aprendido que la perspectiva cambia la magnitud de cualquier problema.",
+    "Mantén la mirada en los astros, pero recuerda siempre mantener tus pies firmes sobre la tierra de Mírrafen."
+  ],
+  "desafios_del_universo": [
+    {
+      "tipo": "vida_real",
+      "titulo": "Alineación de lentes",
+      "descripcion": "Zephyr necesita que limpies tu visor terrenal. Deja reluciente una superficie de cristal o tu pantalla.",
+      "accion": "Limpiar una pantalla, lentes o ventana",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Perspectiva del cosmos",
+      "descripcion": "Para comprender la inmensidad, debes estirar tu cuerpo y alcanzar el punto más alto que puedas.",
+      "accion": "Realizar un estiramiento enfocado hacia arriba durante un minuto",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "El reloj de sol",
+      "descripcion": "Los astros exigen puntualidad. Inicia tu próxima tarea exactamente en el minuto planificado.",
+      "accion": "Comenzar una actividad a una hora exacta sin demoras",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Respiración estelar",
+      "descripcion": "Sincroniza tu energía con el ritmo cósmico tomando una pausa de ventilación al aire libre.",
+      "accion": "Respirar aire fresco junto a una ventana o al aire libre",
+      "recompensa": {
+        "xp": 4,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Mapa de navegación",
+      "descripcion": "Un buen astrónomo documenta sus hallazgos. Escribe las 3 tareas principales de tu día.",
+      "accion": "Anotar tu lista de objetivos prioritarios",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Luz en la penumbra",
+      "descripcion": "Optimiza la iluminación de tu área de estudio o trabajo para cuidar tus ojos.",
+      "accion": "Ajustar la luz de tu espacio para trabajar con comodidad",
+      "recompensa": {
+        "xp": 4,
+        "oquos": 1
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Gravedad cero",
+      "descripcion": "Despeja tu mesa de objetos pesados o innecesarios para trabajar con ligereza.",
+      "accion": "Retirar cosas innecesarias de tu escritorio",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Hidratación orbital",
+      "descripcion": "Mantén el equilibrio de tus fluidos vitales antes de continuar con la observación.",
+      "accion": "Tomar un vaso completo de agua pura",
+      "recompensa": {
+        "xp": 3,
+        "oquos": 1
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Órbita nocturna",
+      "descripcion": "Prepara tus herramientas estelares desde la noche anterior para asegurar un gran amanecer.",
+      "accion": "Dejar la ropa o utiles organizados para mañana",
+      "recompensa": {
+        "xp": 7,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Estrella fugaz",
+      "descripcion": "Completa una labor de forma rápida y concisa antes de que el destello se apague.",
+      "accion": "Resolver una microtarea pendiente de menos de 5 minutos",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 4
+      }
+    }
+  ],
+  "misiones_reino": [
+    {
+      "titulo": "La sombra sobre la Aldea",
+      "destino": "Aldea",
+      "descripcion": "Observa el comportamiento del cielo sobre la Aldea y confirma que la ruta permanece despejada.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Cálculo de marea en el Puerto",
+      "destino": "Puerto",
+      "descripcion": "Visita el Puerto para compartir con los navegantes la tabla de fases lunares de este mes.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Consulta con Aurélia",
+      "destino": "Santuario",
+      "descripcion": "Lleva los nuevos mapas celestes a Aurélia en el Santuario para cruzar visiones e impresiones.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Ecos de las Cavernas",
+      "destino": "Cavernas",
+      "descripcion": "Investiga si la alineación planetaria de esta noche afecta los minerales brillantes de las Cavernas.",
+      "recompensa": {
+        "xp": 12,
+        "oquos": 5
+      }
+    },
+    {
+      "titulo": "Cielo despejado en la Nieve",
+      "destino": "Nieve",
+      "descripcion": "Asciende a la zona helada para tomar mediciones atmosféricas puras desde la cumbre.",
+      "recompensa": {
+        "xp": 14,
+        "oquos": 6
+      }
+    },
+    {
+      "titulo": "Suministros del Mercado",
+      "destino": "Mercado",
+      "descripcion": "Consigue cristales pulidos en el Mercado para la reparación de las lentes secundarias.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Cosecha bajo la luna",
+      "destino": "Granja",
+      "descripcion": "Verifica en la Granja cómo la última luna llena influyó en la maduración de los cultivos.",
+      "recompensa": {
+        "xp": 9,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Registro en el Museo",
+      "destino": "Museo",
+      "descripcion": "Consulta con Eldrin en el Museo sobre antiguos pergaminos que documenten eclipses pasados.",
+      "recompensa": {
+        "xp": 9,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Brazos del Castillo",
+      "destino": "Castillo",
+      "descripcion": "Lleva un reporte de clima astral a Roderick para coordinar la visibilidad de los guardias nocturnos.",
+      "recompensa": {
+        "xp": 11,
+        "oquos": 5
+      }
+    },
+    {
+      "titulo": "La canopia del Bosque",
+      "destino": "Bosque",
+      "descripcion": "Averigua si la densa arboleda del Bosque permite vislumbrar la lluvia de meteoros prevista.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    }
+  ],
+  "desafios_cosmos": [
+    {
+      "tipo": "vida_real",
+      "titulo": "Enfoque telescópico",
+      "descripcion": "Elimina toda distracción visual y mantén la concentración absoluta en tu objetivo actual.",
+      "accion": "Trabajar 15 minutos en una única tarea sin mirar el teléfono",
+      "recompensa": {
+        "xp": 7,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Constancia de planeta",
+      "descripcion": "Como los astros en su órbita, completa tus hábitos con ritmo constante sin interrupciones.",
+      "accion": "Completar dos rutinas cotidianas en el orden previsto",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Fuerza gravitatoria",
+      "descripcion": "Mantén la firmeza ante la pereza. Atrae tu voluntad hacia la resolución del deber.",
+      "accion": "Iniciar de inmediato una tarea que te producía flojera",
+      "recompensa": {
+        "xp": 9,
+        "oquos": 4
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Supernova de energía",
+      "descripcion": "Aplica una ráfaga intensa de productividad para quitar de tu camino un asunto pendiente.",
+      "accion": "Terminar por completo un trabajo postergado",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Silencio espacial",
+      "descripcion": "Aísla el ruido ambiental para sumergirte en el análisis profundo de tu materia o tarea.",
+      "accion": "Estudiar o trabajar en completo silencio durante 20 minutos",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Marea de disciplina",
+      "descripcion": "Arovecha el impulso de la jornada para avanzar en tres pasos consecutivos.",
+      "accion": "Realizar tres pequeñas acciones útiles una tras otra",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Órbita limpia",
+      "descripcion": "Remueve el desorden a tu alrededor para permitir que tu mente fluya sin rozamiento.",
+      "accion": "Dejar impecable tu mesa o espacio de trabajo principal",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Horizonte lejano",
+      "descripcion": "Piensa a largo plazo: prepara el terreno para las actividades de la próxima semana.",
+      "accion": "Organizar tu agenda o calendario semanal",
+      "recompensa": {
+        "xp": 9,
+        "oquos": 4
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Cálculo preciso",
+      "descripcion": "Revisa con detalle tu trabajo para evitar que pequeñez alguna arruine el resultado.",
+      "accion": "Verificar y corregir un documento, tarea o proyecto",
+      "recompensa": {
+        "xp": 7,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Constelación completada",
+      "descripcion": "Une todas las piezas sueltas de tu jornada y declara tu victoria sobre el desorden.",
+      "accion": "Marcar como concluidas todas las metas que fijaste hoy",
+      "recompensa": {
+        "xp": 12,
+        "oquos": 5
+      }
+    }
+  ],
+  "consejos_de_los_astros": [
+    "No intentes abarcar todo el cielo de una vez; observa una estrella a la vez con paciencia.",
+    "Las fases cambian: habrá días de luna llena y energía, y días oscuros para descansar.",
+    "El desorden en tu entorno es como una tormenta solar que nubla tu propia visión.",
+    "La constancia es la fuerza gravitatoria que mantiene unidos tus grandes proyectos.",
+    "Incluso la trayectoria más compleja se calcula paso a paso mediante fórmulas sencillas.",
+    "No te compares con otros astros; cada cometa tiene su propia velocidad y destino.",
+    "Cuando el horizonte se ponga oscuro, recuerda que es la premisa necesaria para ver la luz.",
+    "Un pequeño error de cálculo al inicio cambia todo el recorrido; revisa tus bases.",
+    "La mente cansada comete espejismos; sabé cuándo pausar la observación para dormir.",
+    "Tu potencial no tiene límites conocidos, salvo los que tu propia mente decide fijar."
+  ],
+  "rumores": [
+    "He notado una alineación atípica sobre las Cavernas; tal vez oculte algo brillante.",
+    "Los comerciantes del Mercado dicen que las estrellas guían mejor las caravanas esta temporada.",
+    "Dicen que Aurélia vio en sus visiones la llegada de un fenómeno celeste histórico.",
+    "En el Puerto afirman que el reflejo de la constelación del Barco anunció buen clima marítimo.",
+    "Eldrin cree que las tablas astronómicas de la biblioteca antigua ocultan un mapa perdido.",
+    "Un destello verdoso cruzó el firmamento sobre el Bosque anoche. Aún intento descifrarlo.",
+    "Los agricultores aseguran que la posición de Saturno está favoreciendo sus cosechas de maíz.",
+    "En el Castillo se comenta que el reloj de sol marcó la mediodía con tres minutos de desvío.",
+    "Zephyr pasa horas ajustando el lente principal; algo importante se aproxima en el cielo.",
+    "Aseguran que en la cumbre helada de la Nieve las estrellas se ven tan cerca que se pueden contar."
+  ],
+  "eventos_especiales": [
+    {
+      "id": "lluvia_de_meteoros",
+      "titulo": "Noche de las Estrellas Fugaces",
+      "descripcion": "El cosmos nos regala un espectáculo brillante. Aprovecha el impulso para pedir y ejecutar una gran meta.",
+      "accion": "Escribir un gran objetivo personal y dar el primer paso para realizarlo",
+      "recompensa": {
+        "xp": 20,
+        "oquos": 8
+      }
+    },
+    {
+      "id": "eclipse_de_claridad",
+      "titulo": "Alineación de los Gran Planetas",
+      "descripcion": "El universo equilibra sus fuerzas. Es el momento perfecto para reestructurar tu rutina entera.",
+      "accion": "Revisar y reordenar completamente tus horarios o hábitos diarios",
+      "recompensa": {
+        "xp": 22,
+        "oquos": 9
+      }
+    },
+    {
+      "id": "solsticio_de_mirrafen",
+      "titulo": "Solsticio de Gran Luz",
+      "descripcion": "El día más largo del año te otorga energía extra para limpiar el desorden acumulado.",
+      "accion": "Hacer una limpieza profunda de tu habitación o taller",
+      "recompensa": {
+        "xp": 25,
+        "oquos": 10
+      }
+    },
+    {
+      "id": "luna_azul",
+      "titulo": "El Despertar de la Luna Azul",
+      "descripcion": "Un evento poco frecuente en Mírrafen. Dedica tiempo a aprender algo totalmente nuevo.",
+      "accion": "Leer o investigar sobre un tema desconocido durante 20 minutos",
+      "recompensa": {
+        "xp": 18,
+        "oquos": 7
+      }
+    },
+    {
+      "id": "transito_de_cometa",
+      "titulo": "Paso del Cometa Plateado",
+      "descripcion": "Su alta velocidad exige respuestas rápidas y certeras antes de que desaparezca en el vacío.",
+      "accion": "Resolver tres asuntos pendientes menores en un solo bloque de tiempo",
+      "recompensa": {
+        "xp": 16,
+        "oquos": 6
+      }
+    },
+    {
+      "id": "equinoccio_de_paz",
+      "titulo": "Equinoccio de Equilibrio",
+      "descripcion": "El día y la noche miden exactamente lo mismo. Busca la armonía entre trabajo y descanso.",
+      "accion": "Cumplir tus deberes a tiempo y dedicar una hora al descanso de calidad",
+      "recompensa": {
+        "xp": 15,
+        "oquos": 6
+      }
+    },
+    {
+      "id": "superluna_de_fuego",
+      "titulo": "Resplandor de la Superluna",
+      "descripcion": "La fuerza marea aumenta. Canales esa energía física para realizar un esfuerzo extra.",
+      "accion": "Realizar una caminata o rutina de ejercicios intensa y segura",
+      "recompensa": {
+        "xp": 20,
+        "oquos": 8
+      }
+    },
+    {
+      "id": "aurora_astral",
+      "titulo": "El Manto de la Aurora",
+      "descripcion": "Luces de colores cubren el cielo del Observatorio. Inspírate para ordenar tu espacio creativo.",
+      "accion": "Organizar tus herramientas, útiles o proyectos creativos",
+      "recompensa": {
+        "xp": 18,
+        "oquos": 7
+      }
+    },
+    {
+      "id": "conjunción_mística",
+      "titulo": "Conjunción de los Sabios",
+      "descripcion": "Las energías del conocimiento se cruzan. Pide consejo o ayuda para resolver un problema duro.",
+      "accion": "Consultar a alguien con más experiencia sobre una duda personal o laboral",
+      "recompensa": {
+        "xp": 17,
+        "oquos": 6
+      }
+    },
+    {
+      "id": "viento_solar",
+      "titulo": "Ráfaga de Viento Solar",
+      "descripcion": "Un impulso de energía pura barre el reino. Inicia y concluye un proyecto en el mismo día.",
+      "accion": "Empezar y terminar una tarea completa antes de que caiga la noche",
+      "recompensa": {
+        "xp": 24,
+        "oquos": 10
+      }
+    }
+  ],
+  "historia_personal": [
+    {
+      "id": "historia_01",
+      "titulo": "El primer catalejo",
+      "texto": "Cuando era solo un niño en las colinas, construí mi primer tubo con trozos de cristal pulido a mano. Aquella noche descubrí que los lunares de la luna eran verdaderas montañas."
+    },
+    {
+      "id": "historia_02",
+      "titulo": "La construcción del telescopio",
+      "texto": "Subir las enormes lentes de bronce hasta la cima del Observatorio tomó meses de esfuerzo compartido. Cada engranaje valió la pena para abrir esta ventana al cosmos."
+    },
+    {
+      "id": "historia_03",
+      "titulo": "La noche del gran cometa",
+      "texto": "Hace veinte años, un cometa brillante iluminó Mírrafen durante tres semanas seguidas. Desde aquel evento juré dedicar mi vida al estudio de los mapas estelares."
+    },
+    {
+      "id": "historia_04",
+      "titulo": "El cuaderno de notas",
+      "texto": "Guardo docenas de cuadernos repletos de coordenadas y fechas. Cada hoja representa una noche entera de vigilia buscando comprender la armonía del reino."
+    },
+    {
+      "id": "historia_05",
+      "titulo": "El lenguaje de las estrellas",
+      "texto": "Muchos piensan que las estrellas adivinan la suerte, pero yo solo veo matemáticas, luz y tiempo entrelazados en una hermosa danza infinita."
+    },
+    {
+      "id": "historia_06",
+      "titulo": "El frio de las vigilias",
+      "texto": "Las noches en la torre suelen ser heladas y solitarias. Pero el calor del descubrimiento compensa cualquier viento frío que se cuele por la cúpula."
+    },
+    {
+      "id": "historia_07",
+      "titulo": "Colaboración con el Museo",
+      "texto": "Suelo pasar tardes enteras debatiendo con Eldrin. Él busca el origen de las cosas en el suelo y los libros viejos, mientras yo lo busco en la luz de los cielos."
+    },
+    {
+      "id": "historia_08",
+      "titulo": "El reloj astrológico",
+      "texto": "Diseñé el gran mecanismo de latón que marca los equinoccios en la plaza central. Es mi forma de recordarles a todos que el tiempo es nuestro bien más valioso."
+    },
+    {
+      "id": "historia_09",
+      "titulo": "La calma de las alturas",
+      "texto": "Cuando el ajetreo del mercado o del castillo abruma el reino, subir aquí arriba me devuelve la serenidad. Las estrellas siempre te ofrecen la mejor perspectiva."
+    },
+    {
+      "id": "historia_10",
+      "titulo": "El legado de Zephyr",
+      "texto": "Mi sueño es dejar cartas estelares tan precisas que los futuros navegantes de Mírrafen jamás pierdan el rumbo, ni en el mar ni en sus propias vidas."
+    }
+  ],
+  
+  "dialogos_por_nivel": {
+    "1": [
+      "Bienvenido al Observatorio. El firmamento es vasto, pero cada gran astrónomo comenzó aprendiendo a mirar.",
+      "Apenas das tus primeros pasos. Sintoniza tus sentidos antes de intentar descifrar el cosmos."
+    ],
+    "2": [
+      "Tus primeros logros empiezan a tomar forma en tu mapa personal.",
+      "Paso a paso; incluso la luz de una estrella tarda años en llegar a nosotros."
+    ],
+    "3": [
+      "Estás cultivando el hábito de la observación. Mantén la mirada fija en tus objetivos.",
+      "La constancia es la gravedad que sostiene cada una de tus acciones."
+    ],
+    "4": [
+      "Poco a poco despejas las nubes de la distracción. Buen trabajo.",
+      "Cada tarea completada ajusta la lente con la que miras el mundo."
+    ],
+    "5": [
+      "Nivel cinco. Ya no eres un visitante casual en la cúpula del Observatorio.",
+      "Tus pasos se vuelven más firmes y tus hábitos comienzan a consolidarse."
+    ],
+    "6": [
+      "No te apresures; el ritmo orbital requiere paciencia y ritmo constante.",
+      "Aprende a valorar las tareas pequeñas, pues son la base de los grandes descubrimientos."
+    ],
+    "7": [
+      "Veo una chispa de determinación en tu mirada. No la dejes apagar.",
+      "Cuando la pereza intente nublar tu cielo, recuerda por qué comenzaste."
+    ],
+    "8": [
+      "Tu disciplina está brillando con luz propia en todo el reino.",
+      "Revisa tus progresos con cuidado; un cálculo preciso asegura el éxito."
+    ],
+    "9": [
+      "Estás cerca de consolidar tu primera etapa. Mantén la aceleración.",
+      "El esfuerzo diario es la energía que te permite romper la atracción terrestre."
+    ],
+    "10": [
+      "¡Nivel diez! Has completado la primera órbita de tu formación.",
+      "Has demostrado constancia. Ahora el universo te exigirá mayor enfoque."
+    ],
+    "11": [
+      "Nuevos horizontes se abren ante ti. Ajusta tus instrumentos para el siguiente tramo.",
+      "La disciplina ya no es una obligación para ti, sino tu forma de avanzar."
+    ],
+    "12": [
+      "Los retos crecen, pero tu capacidad para concentrarte también ha aumentado.",
+      "No pierdas la calma ante la acumulación de deberes; aborda uno a la vez."
+    ],
+    "13": [
+      "Tus hábitos diarios son tan precisos como los engranajes de un telescopio.",
+      "Incluso en las noches más cerradas, tu determinación ilumina el camino."
+    ],
+    "14": [
+      "Cada decisión correcta reafirma el rumbo que has elegido trazar.",
+      "Sigue perfeccionando tu método; el conocimiento requiere rigor constante."
+    ],
+    "15": [
+      "Nivel quince. La perseverancia te está transformando en un pilar del reino.",
+      "Tu energía resuena con la armonía de las grandes constelaciones."
+    ],
+    "16": [
+      "No permitas que las distracciones menores alteren tu órbita diaria.",
+      "Un astrónomo experto sabe que la serenidad es clave para no cometer errores."
+    ],
+    "17": [
+      "Tus acciones reflejan una madurez que inspira a quienes te rodean.",
+      "Continúa eliminando lo innecesario para dar espacio a lo verdaderamente importante."
+    ],
+    "18": [
+      "Has superado momentos de duda manteniendo la disciplina intacta.",
+      "La claridad mental se alcanza cuando logras dominar tu propia voluntad."
+    ],
+    "19": [
+      "Estás a las puertas de un nuevo umbral. No bajes el ritmo ahora.",
+      "El firmamento premia a quienes no se rinden ante la complejidad del camino."
+    ],
+    "20": [
+      "¡Nivel veinte! Un hito extraordinario en tu travesía por Mírrafen.",
+      "Has construido cimientos sólidos. Es hora de apuntar hacia metas aún más elevadas."
+    ],
+    "21": [
+      "Alcanzar este nivel demuestra que la constancia se ha vuelto parte de tu esencia.",
+      "Las estrellas observan con atención a aquellos que convierten su deber en arte."
+    ],
+    "22": [
+      "Tu enfoque es afilado como la luz que atraviesa el cristal del telescopio.",
+      "Sigue puliendo tus hábitos; el verdadero dominio requiere práctica ininterrumpida."
+    ],
+    "23": [
+      "Cada jornada superada es un testimonio de tu capacidad para vencer la desidia.",
+      "Mantén la mente despierta; el universo siempre tiene una lección lista."
+    ],
+    "24": [
+      "Tu estructura diaria es sólida como las piedras ancestrales de este Observatorio.",
+      "No hay tormenta que pueda desplazar a quien conoce perfectamente su objetivo."
+    ],
+    "25": [
+      "¡Nivel veinticinco! Has alcanzado la mitad del mapa estelar principal.",
+      "Tu trayectoria es un ejemplo claro de lo que la voluntad constante puede lograr."
+    ],
+    "26": [
+      "No te confíes por los éxitos pasados; el cosmos está en constante evolución.",
+      "Revisa siempre tus fundamentos para asegurarte de que tu avance sea firme."
+    ],
+    "27": [
+      "Tu nivel de concentración te permite resolver problemas complejos con elegancia.",
+      "La serenidad en tu actuar demuestra que dominas la presión cotidiana."
+    ],
+    "28": [
+      "Cada meta cumplida abre la puerta a responsabilidades de mayor alcance.",
+      "El conocimiento acumulado debe traducirse en acciones útiles para tu entorno."
+    ],
+    "29": [
+      "Te encuentras al borde de la maestría intermedia. Siente la fuerza de tu avance.",
+      "Nada puede detener a un espíritu que ha aprendido a gobernarse a sí mismo."
+    ],
+    "30": [
+      "¡Nivel treinta! Pocos exploradores alcanzan semejante grado de madurez.",
+      "Tu disciplina brilla como una estrella de primera magnitud en el firmamento."
+    ],
+    "31": [
+      "Desde esta altura, los pequeños inconvenientes de la tierra se ven insignificantes.",
+      "Conserva la humildad del aprendiz incluso cuando hayas alcanzado la cima."
+    ],
+    "32": [
+      "Tu capacidad de trabajo se ha vuelto metódica, precisa y sumamente eficiente.",
+      "El desorden no encuentra lugar en una mente entrenada para la claridad."
+    ],
+    "33": [
+      "Incluso cuando el camino se torna denso, tu determinación marca la pauta.",
+      "Sigue trazando rutas claras en tu cuaderno de vida; tu futuro se escribe hoy."
+    ],
+    "34": [
+      "Tus logros diarios se encadenan formando una constelación impecable.",
+      "La excelencia no es un acto aislado, sino una cadena ininterrumpida de elecciones."
+    ],
+    "35": [
+      "¡Nivel treinta y cinco! La sabiduría astral guía cada uno de tus pasos.",
+      "Has transformado el esfuerzo en un flujo natural y lleno de propósito."
+    ],
+    "36": [
+      "Tu presencia en Mírrafen transmite orden, foco y un compromiso inquebrantable.",
+      "Sigue perfeccionando el arte de la paciencia activa; todo llega en su momento."
+    ],
+    "37": [
+      "Las leyes del universo respaldan a quienes trabajan con rigor y honestidad.",
+      "Ninguna distracción terrenal puede apartarte ya de tu verdadero centro."
+    ],
+    "38": [
+      "Tu capacidad para organizar tu entorno refleja la paz interior que has construido.",
+      "Continúa avanzando con la elegancia silenciosa de los planetas en su curso."
+    ],
+    "39": [
+      "El nivel cuarenta se vislumbra en el horizonte. Prepárate para el tramo final.",
+      "Tu fuerza de voluntad se ha templado hasta volverse casi indestructible."
+    ],
+    "40": [
+      "¡Nivel cuarenta! Te has convertido en un auténtico Maestro de los Astros.",
+      "Tu nombre figura entre los observadores más dedicados de toda la historia del reino."
+    ],
+    "41": [
+      "En estas alturas del viaje, la excelencia es la única norma aceptable.",
+      "Tu visión abarca horizontes que para otros resultan completamente invisibles."
+    ],
+    "42": [
+      "Cada hábito que has pulido es ahora un escudo impenetrable contra el caos.",
+      "Enseña con tu ejemplo la belleza que reside en la autodisciplina diaria."
+    ],
+    "43": [
+      "Tu entendimiento de la armonía cósmica se traduce en una efectividad incomparable.",
+      "No hay tarea en el reino que supere tu capacidad de organización y ejecución."
+    ],
+    "44": [
+      "Has superado las pruebas del tiempo, del cansancio y de la duda.",
+      "Tu mente se mantiene serena y enfocada, sin importar la magnitud del reto."
+    ],
+    "45": [
+      "¡Nivel cuarenta y cinco! Estás rozando los límites de la iluminación astral.",
+      "Tu legado de constancia servirá de guía para las futuras generaciones de Mírrafen."
+    ],
+    "46": [
+      "Falta muy poco para completar la gran bóveda de este viaje iniciado desde cero.",
+      "Siente la inmensidad del universo respaldando cada una de tus acciones."
+    ],
+    "47": [
+      "Tu nivel de maestría convierte cualquier obstáculo en una simple variable a ajustar.",
+      "La claridad de tu propósito ilumina hasta el rincón más oscuro de la cúpula."
+    ],
+    "48": [
+      "Apenas un par de peldaños te separan de la plenitud absoluta en la cumbre.",
+      "Mantén la concentración al máximo hasta dar el último paso de esta jornada."
+    ],
+    "49": [
+      "Nivel cuarenta y nueve. Toda la cúpula del Observatorio aguarda tu coronación.",
+      "Revisa por última vez tu trayectoria; estás listo para la trascendencia total."
+    ],
+    "50": [
+      "¡Nivel cincuenta! Has alcanzado la cima absoluta de la sabiduría y el enfoque astral.",
+      "Tu voluntad y tu disciplina se han alineado eternamente con las estrellas de Mírrafen."
+    ]
+  }
+}

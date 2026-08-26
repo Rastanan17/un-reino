@@ -1,0 +1,686 @@
+{
+  "npc": "mercader",
+  "nombre": "Jhaim Borin",
+
+  "saludos": [
+    "¡Acércate, aventurero! El mejor género de Mírrafen lo encuentras en mi puesto.",
+    "¡Buenas! Monedas, especias o buena conversación... todo tiene valor en el mercado.",
+    "Que el comercio próspero de Mírrafen llene tus bolsillos hoy.",
+    "Ah, una cara dispuesta a hacer negocios. Dime, ¿qué necesitas para tu travesía?",
+    "¡Bienvenido! El mercado nunca duerme, y las oportunidades tampoco.",
+    "Pasa, pasa. No cobro por mirar, pero seguro encuentras algo indispensable.",
+    "Salud, viajero. ¿Vienes a comprar, a vender o a escuchar las novedades del reino?",
+    "Un buen día para el intercambio. Espero que traigas oquos y buenas intenciones.",
+    "¡Por las barbas de mis ancestros! Hacía tiempo que no veía a alguien con tantas ganas de progresar.",
+    "Aquí en el mercado, cada objeto cuenta una historia y cada trato genera prosperidad."
+  ],
+  "dialogos_mercader": [
+    "El secreto de un gran comerciante no es vender caro, sino saber exactamente qué necesita la gente.",
+    "Las monedas van y vienen como las olas del puerto, pero la reputación de un buen mercader dura para siempre.",
+    "He recorrido Mírrafen de punta a punta. Nada enseña más sobre la vida que el libre intercambio entre comarcas.",
+    "Un cofre lleno no sirve de nada si no sabes invertir en recursos que te hagan crecer mañana.",
+    "En el mercado no hay atajos: cuentas claras, pesas exactas y tratos honestos.",
+    "A veces el recurso más valioso no se mide en oquos, sino en el tiempo que ahorras estando bien preparado.",
+    "Un buen aventurero administra su inventario con la misma precisión con la que blande una espada.",
+    "Comprar barato por apurado suele salir caro al final del viaje. Revisa siempre la calidad de tus insumos.",
+    "La oferta y la demanda cambian, pero la necesidad de organización es constante en todo el reino.",
+    "Cada oquo invertido en tu formación personal rinde más intereses que cualquier tesoro escondido en cavernas."
+  ],
+  "desafios_mercantiles": [
+    {
+      "tipo": "vida_real",
+      "titulo": "Inventario en orden",
+      "descripcion": "Borin insiste en que un puesto desordenado ahuyenta a los clientes. Pon en orden tu espacio.",
+      "accion": "Clasificar y organizar un cajón o estante de tu habitación",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "El balance del comerciante",
+      "descripcion": "Todo buen negocio revisa sus recursos. Haz un conteo claro de lo que tienes pendiente hoy.",
+      "accion": "Anotar tu lista de tareas y prioridades para la jornada",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Ahorro de suministros",
+      "descripcion": "Evita el derroche en tu puesto de trabajo. Aprovecha los recursos al máximo.",
+      "accion": "Reciclar o reutilizar un material que tenías pensado desechar",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Sustento del viajero",
+      "descripcion": "No puedes comerciar con el estómago vacío. Prepárate un refrigerio para mantener la energía.",
+      "accion": "Preparar y consumir un tentempié saludable",
+      "recompensa": {
+        "xp": 4,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Mantenimiento del puesto",
+      "descripcion": "Limpiar el mostrador atrae la prosperidad. Elimina el polvo y la suciedad de tu zona.",
+      "accion": "Limpiar la superficie de tu escritorio o mesa de trabajo",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Control de gastos",
+      "descripcion": "Borin te propone revisar en qué inviertes tus recursos para evitar desperdicios.",
+      "accion": "Revisar y anotar tus compromisos o gastos pendientes",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Preparación de la mercadería",
+      "descripcion": "Prepara tus cosas con antelación para que la jornada transcurra sin sobresaltos.",
+      "accion": "Dejar listos tus materiales o útiles para la siguiente actividad",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Optimización del tiempo",
+      "descripcion": "El tiempo es oquos. Completa una tarea breve en el menor tiempo posible sin perder calidad.",
+      "accion": "Realizar una tarea doméstica rápida en menos de 5 minutos",
+      "recompensa": {
+        "xp": 7,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Mesa limpia, negocio próspero",
+      "descripcion": "Despeja tu mesa de comedor o trabajo para recibir la siguiente jornada como corresponde.",
+      "accion": "Retirar platos, tazas o papeles fuera de lugar",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "La Gran Venta de Disciplina",
+      "descripcion": "Completa esa tarea difícil que estabas postergando para cerrar un gran trato personal.",
+      "accion": "Completar la tarea principal de tu lista diaria",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 4
+      }
+    }
+  ],
+  "misiones_reino": [
+    {
+      "titulo": "Abasto para la Aldea",
+      "destino": "Aldea",
+      "descripcion": "Lleva muestras de telas y especias a los aldeanos para renovar el comercio local.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Suministros para la Guardia",
+      "destino": "Castillo",
+      "descripcion": "Visita a Roderick en el castillo para entregar un cargamento de cera y aceite para las armaduras.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Trigo de la Granja",
+      "destino": "Granja",
+      "descripcion": "Pacta el precio de los sacos de grano directamente con los granjeros antes de la cosecha.",
+      "recompensa": {
+        "xp": 9,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Rutas del Bosque",
+      "destino": "Bosque",
+      "descripcion": "Comprueba si las caravanas de comerciantes pueden cruzar el bosque de manera segura.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Minerales de las Cavernas",
+      "destino": "Cavernas",
+      "descripcion": "Investiga los precios de las piedras preciosas y metales extraídos en las profundidades.",
+      "recompensa": {
+        "xp": 12,
+        "oquos": 5
+      }
+    },
+    {
+      "titulo": "Lentes para el Observatorio",
+      "destino": "Observatorio",
+      "descripcion": "Entrega cristal pulido a Zephyr para la reparación de sus instrumentos astronómicos.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Comercio Helado",
+      "destino": "Nieve",
+      "descripcion": "Ofrece pieles y mantas de abrigo a las patrullas apostadas en las regiones del norte.",
+      "recompensa": {
+        "xp": 14,
+        "oquos": 6
+      }
+    },
+    {
+      "titulo": "Carga en el Puerto",
+      "destino": "Puerto",
+      "descripcion": "Supervisa el desembarco de mercancías exóticas traídas por los mercaderes de ultramar.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Reliquias del Museo",
+      "destino": "Museo",
+      "descripcion": "Lleva antigüedades encontradas en el mercado a Eldrin para su correcta catalogación.",
+      "recompensa": {
+        "xp": 9,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Trueque en el Mercado",
+      "destino": "Mercado",
+      "descripcion": "Ayuda a Borin a reorganizar las mercancías del puesto principal antes del mediodía.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    }
+  ],
+  "desafios_economicos": [
+    {
+      "titulo": "Ahorro estratégico",
+      "descripcion": "Borin evalúa tu capacidad de reserva. Completa un objetivo sin gastar recursos innecesarios.",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Inversión de tiempo",
+      "descripcion": "Dedica un bloque de tiempo ininterrumpido a avanzar en un proyecto valioso.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Eliminación de deudas",
+      "descripcion": "Finaliza de inmediato una obligación que venías aplazando desde hace días.",
+      "recompensa": {
+        "xp": 9,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Negociación sabia",
+      "descripcion": "Busca la forma más eficiente y económica de resolver un problema cotidiano.",
+      "recompensa": {
+        "xp": 7,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Presupuesto claro",
+      "descripcion": "Planifica tus próximas tres tareas para maximizar el rendimiento de tu energía.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Trueque ventajoso",
+      "descripcion": "Cambia un mal hábito por una acción productiva durante el resto del día.",
+      "recompensa": {
+        "xp": 9,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Reserva de emergencia",
+      "descripcion": "Deja una tarea pequeña completada hoy que te adelante trabajo para mañana.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 5
+      }
+    },
+    {
+      "titulo": "Cierre de balance",
+      "descripcion": "Al finalizar la tarde, evalúa qué objetivos lograste cumplir y cuáles debes ajustar.",
+      "recompensa": {
+        "xp": 7,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Oferta relámpago",
+      "descripcion": "Aprovecha un momento libre para realizar una tarea pendiente en tiempo récord.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Socio de confianza",
+      "descripcion": "Colabora con alguien en su tarea para que ambos terminen más rápido y mejor.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 5
+      }
+    }
+  ],
+  "consejos_de_negocios": [
+    "No pongas todas tus monedas en un solo saco; diversifica tus esfuerzos y proyectos.",
+    "El mejor momento para prepararte fue ayer; el segundo mejor momento es ahora mismo.",
+    "Un cliente satisfecho trae a tres más; la buena reputación es la mejor publicidad.",
+    "Aprende a distinguir entre un gasto inútil de energía y una inversión que dará frutos.",
+    "Si no sabes calcular tu tiempo, terminarás regalando tu trabajo más valioso.",
+    "No temas negociar los plazos, pero una vez fijada la fecha, cumple sin excusas.",
+    "El mercado cambia rápido; quien no se adapta a las novedades se queda con mercadería vieja.",
+    "Saber decir 'no' a un trato desventajoso es tan importante como saber cerrar una gran venta.",
+    "La puntualidad en la entrega es la moneda de oro de la confianza profesional.",
+    "Observa a la competencia no con envidia, sino para aprender lo que puedes mejorar."
+  ],
+  "rumores": [
+    "Escuché que las caravanas del norte traen telas con bordados mágicos que nunca se ensucian.",
+    "Dicen que un mercader ambulante encontró una moneda tan vieja que no tiene rostro grabado.",
+    "En las tabernas comentan que los precios del grano subirán debido a las nieblas en la frontera.",
+    "Se rumorea que alguien pagó una fortuna en oquos por un mapa que señala un gran almacén olvidado.",
+    "Los marineros del puerto afirman que desembarcaron especias que cambian de sabor según quien las pruebe.",
+    "Dicen que Borin esconde un libro de cuentas donde tiene anotado el valor exacto de todo el reino.",
+    "Comentan que los artesanos de la aldea están preparando una feria como no se ve en años.",
+    "Oí que en las cavernas se descubrió una veta de cristal que brilla más que las linternas de aceite.",
+    "Aseguran que la corte real comprará grandes suministros de cuero para las patrullas del bosque.",
+    "Dicen que si sabes buscar bien en los puestos del fondo, encuentras objetos raros traídos de ultramar."
+  ],
+  "eventos_especiales": [
+    {
+      "id": "gran_feria_comercial",
+      "titulo": "La Gran Feria de Mírrafen",
+      "descripcion": "El mercado se llena de puestos especiales y Borin ofrece grandes recompensas por colaborar.",
+      "accion": "Ordenar por completo tu área de trabajo e inventario de útiles",
+      "recompensa": {
+        "xp": 20,
+        "oquos": 8
+      }
+    },
+    {
+      "id": "liquidacion_de_temporada",
+      "titulo": "Limpieza de Almacén",
+      "descripcion": "Momento de desocupar espacio y deshacerse de lo que ya no sirve para dar paso a lo nuevo.",
+      "accion": "Desechar o reciclar 5 cosas que ya no utilices",
+      "recompensa": {
+        "xp": 18,
+        "oquos": 7
+      }
+    },
+    {
+      "id": "caravana_exotica",
+      "titulo": "Llegada de la Caravana",
+      "descripcion": "Mercaderes lejanos visitan el mercado y requieren ayuda para catalogar sus pertenencias.",
+      "accion": "Anotar y clasificar tus proyectos o metas de la semana",
+      "recompensa": {
+        "xp": 22,
+        "oquos": 9
+      }
+    },
+    {
+      "id": "pacto_de_suministros",
+      "titulo": "Contrato Real de Abasto",
+      "descripcion": "La corona solicitó un pedido masivo que exige máxima concentración y rigor.",
+      "accion": "Completar dos tareas complejas sin interrupción",
+      "recompensa": {
+        "xp": 25,
+        "oquos": 10
+      }
+    },
+    {
+      "id": "dia_del_trueque",
+      "titulo": "Jornada del Intercambio",
+      "descripcion": "Un día para colaborar y ayudar a otros a resolver sus tareas pendientes.",
+      "accion": "Ayudar a un compañero, amigo o familiar con sus deberes",
+      "recompensa": {
+        "xp": 18,
+        "oquos": 7
+      }
+    },
+    {
+      "id": "subasta_de_reliquias",
+      "titulo": "La Gran Subasta",
+      "descripcion": "Borin busca los objetos más valiosos. Pon en valor tus habilidades personales.",
+      "accion": "Dedicar 20 minutos a estudiar o practicar una habilidad valiosa",
+      "recompensa": {
+        "xp": 24,
+        "oquos": 10
+      }
+    },
+    {
+      "id": "revision_de_pesas",
+      "titulo": "Auditoría del Mercado",
+      "descripcion": "Se comprueba la precisión de todas las balanzas. Verifica la exactitud de tu trabajo.",
+      "accion": "Revisar un trabajo o tarea ya hecha para corregir posibles errores",
+      "recompensa": {
+        "xp": 15,
+        "oquos": 6
+      }
+    },
+    {
+      "id": "ruta_comercial_expres",
+      "titulo": "Envío de Urgencia",
+      "descripcion": "Un paquete debe ser preparado y entregado antes de que cierre la jornada.",
+      "accion": "Terminar una tarea con tiempo límite inmediato",
+      "recompensa": {
+        "xp": 20,
+        "oquos": 8
+      }
+    },
+    {
+      "id": "fondo_de_prosperidad",
+      "titulo": "Inversión Futura",
+      "descripcion": "Momento de guardar recursos para proyectos de gran envergadura en el reino.",
+      "accion": "Ahorrar tiempo preparando hoy lo que necesitarás mañana temprano",
+      "recompensa": {
+        "xp": 22,
+        "oquos": 9
+      }
+    },
+    {
+      "id": "cierre_de_caja",
+      "titulo": "El Balance Anual",
+      "descripcion": "Borin celebra la productividad alcanzada tras un largo período de esfuerzo diario.",
+      "accion": "Repasar tus logros semanales y fijar nuevas metas",
+      "recompensa": {
+        "xp": 28,
+        "oquos": 12
+      }
+    }
+  ],
+  "historia_personal": [
+    {
+      "id": "historia_01",
+      "titulo": "El primer carro",
+      "texto": "Empecé en este oficio con poco más que un carro viejo de madera y un saco de manzanas de la granja. Descubrí que la puntualidad y la palabra valen más que el oro."
+    },
+    {
+      "id": "historia_02",
+      "titulo": "La travesía del puerto",
+      "texto": "En mi juventud viajé en los barcos mercantes de ultramar. Entre tormentas y puertos desconocidos aprendí a valorar la estabilidad que ofrece un reino como Mírrafen."
+    },
+    {
+      "id": "historia_03",
+      "titulo": "El puesto del mercado",
+      "texto": "Cuando me establecí en este mercado, muchos pensaron que no duraría una estación. Hoy mi tienda es un punto de referencia para aventureros y artesanos."
+    },
+    {
+      "id": "historia_04",
+      "titulo": "La balanza de bronce",
+      "texto": "Esta balanza me la entregó mi padre. No mide solo el peso de las mercancías; me recuerda cada mañana que el equilibrio y la honestidad son la base de todo trato."
+    },
+    {
+      "id": "historia_05",
+      "titulo": "El gran invierno",
+      "texto": "Durante el año del gran hielo, compartí las reservas de mi almacén con los vecinos de la aldea. Aprendí que un negocio próspero depende de la salud de su comunidad."
+    },
+    {
+      "id": "historia_06",
+      "titulo": "El mapa de las rutas",
+      "texto": "He trazado a mano mapas de cada sendero comercial de Mírrafen. Conocer el camino adecuado te ahorra tropiezos, pérdidas y tiempo valioso."
+    },
+    {
+      "id": "historia_07",
+      "titulo": "El cliente más exigente",
+      "texto": "Una vez negocié suministros directamente para la guardia del castillo. Roderick revisó cada broche y cada correa; desde entonces entiendo el valor de la exigencia."
+    },
+    {
+      "id": "historia_08",
+      "titulo": "La moneda de la suerte",
+      "texto": "Conservo el primer oquo que gané por mi propia cuenta. Está desgastado, pero me recuerda que los grandes caudales se construyen moneda a moneda."
+    },
+    {
+      "id": "historia_09",
+      "titulo": "El arte del trueque",
+      "texto": "No todo en la vida se paga con dinero. He cambiado sacos de harinas por lecciones de historia o por arreglos en la estructura de mi tienda. Todo saber suma."
+    },
+    {
+      "id": "historia_10",
+      "titulo": "El futuro del mercado",
+      "texto": "Veo pasar a jóvenes aventureros todos los días. Mi deseo es dejarles un mercado próspero, justo y lleno de oportunidades para quienes estén dispuestos a trabajar."
+    }
+  ],
+  
+  "dialogos_por_nivel": {
+    "1": [
+      "¡Bienvenido al mercado de Mírrafen! Todo gran comerciante empieza con los bolsillos vacíos y la mente despierta.",
+      "Aprende a contar tus primeros oquos y no los gastes en la primera baratija que veas."
+    ],
+    "2": [
+      "Veo que vuelves por aquí. Mantener la constancia en tus visitas es el primer paso para prosperar.",
+      "Un pequeño paso para un aventurero, pero una buena inversión para tu futuro."
+    ],
+    "3": [
+      "Poco a poco le vas agarrando el ritmo a tus tareas. El esfuerzo diario siempre paga dividendos.",
+      "Organiza tu inventario antes de salir de viaje; un morral desordenado solo te resta tiempo."
+    ],
+    "4": [
+      "Tus decisiones empiezan a notarse. Apenas estás juntando tus primeros recursos, pero vas por buen camino.",
+      "En el mercado premiamos a quienes cumplen su palabra. Sigue así."
+    ],
+    "5": [
+      "¡Nivel cinco! Ya no te ves tan desorientado entre los puestos del mercado.",
+      "Has demostrado que puedes mantener la disciplina básica. Hora de aspirar a mejores tratos."
+    ],
+    "6": [
+      "Un comerciante hábil sabe que el secreto está en la preparación diaria.",
+      "No dejes para mañana los recados de hoy, o el interés se te acumulará."
+    ],
+    "7": [
+      "Cada tarea completada es una moneda de oro en tu caja de experiencia personal.",
+      "Empiezas a moverte por Mírrafen con bastante seguridad. Me gusta ver ese progreso."
+    ],
+    "8": [
+      "Tus hábitos se están volviendo tan firmes como la madera de mi mostrador.",
+      "Evita las distracciones carismáticas; concéntrate en cumplir lo pactado."
+    ],
+    "9": [
+      "Estás a las puertas de tu primer gran hito. Mantén el ritmo en tus obligaciones.",
+      "La constancia es la mercancía más valiosa de todo el reino."
+    ],
+    "10": [
+      "¡Nivel diez! Ya eres una cara conocida y respetada en los pasillos de esta feria.",
+      "Has superado la etapa de novato. Ahora empieza la verdadera gestión de tu tiempo."
+    ],
+    "11": [
+      "Nuevos niveles traen mayores responsabilidades. Revisa bien tu lista de deberes.",
+      "No te confíes por tus primeros logros; el mercado exige atención continua."
+    ],
+    "12": [
+      "Veo que sabes priorizar las cosas importantes. Eso te ahorrará muchos tropiezos.",
+      "Un cliente constante vale más que diez compradores ocasionales."
+    ],
+    "13": [
+      "La disciplina es como el buen hierro: requiere golpe a golpe para no doblarse.",
+      "Ajusta tus metas de la jornada antes de que el sol llegue a lo alto."
+    ],
+    "14": [
+      "Te noto más ágil para resolver imprevistos. Esa flexibilidad no se compra con oquos.",
+      "Aprovecha cada hora de trabajo; el tiempo perdido no se recupera en ninguna subasta."
+    ],
+    "15": [
+      "Quince niveles demostrando voluntad. Mi puesto siempre tendrá las puertas abiertas para ti.",
+      "Empiezas a inspirar a otros habitantes de la comarca con tu ritmo diario."
+    ],
+    "16": [
+      "Un verdadero profesional no busca excusas, busca soluciones eficientes.",
+      "Cuida tus herramientas y mantén limpio tu espacio; habla bien de tu negocio."
+    ],
+    "17": [
+      "Los grandes imperios comerciales se construyeron completando tareas pequeñas una por una.",
+      "Sigue sumando experiencia. La paciencia rinde mejores frutos que la prisa."
+    ],
+    "18": [
+      "Estás aprendiendo a administrar tu energía como un sabio administrador de tesoros.",
+      "Cada objetivo alcanzado refuerza la confianza que el reino tiene en ti."
+    ],
+    "19": [
+      "Un paso más y alcanzarás una importante meseta. No aflojes justo antes de la meta.",
+      "Prepara tus proyectos para la siguiente etapa; se vienen retos más exigentes."
+    ],
+    "20": [
+      "¡Nivel veinte! Tu reputación como alguien cumplidor resuena hasta en el castillo.",
+      "Has consolidado tu rutina personal. Ahora debes aprender a sostenerla sin flaquear."
+    ],
+    "21": [
+      "Los vientos del comercio cambian, pero tu disciplina se mantiene firme.",
+      "Analiza en qué inviertes tus horas libres; el descanso enfocado también es productividad."
+    ],
+    "22": [
+      "Saber negociar contigo es un placer: cumples lo que prometes sin vueltas.",
+      "Sigue puliendo tu método de trabajo. La excelencia es un hábito diario."
+    ],
+    "23": [
+      "Incluso cuando el trabajo parece pesado, recuerdas por qué empezaste este viaje.",
+      "Un obstáculo superado es un margen de ganancia pura en tu aprendizaje."
+    ],
+    "24": [
+      "Tu organización en las tareas cotidianas impresiona a más de un mercader veterano.",
+      "Mantén tus objetivos claros y no permitas que los rumores te desvíen."
+    ],
+    "25": [
+      "¡Nivel veinticinco! La mitad del camino principal recorrida con total elegancia.",
+      "Eres el claro ejemplo de que el trabajo constante vence a cualquier imprevisto."
+    ],
+    "26": [
+      "No hay atajos para el éxito duradero. Tu constancia te respalda.",
+      "Revisa tu balance del día; reconocer lo avanzado te da impulso para seguir."
+    ],
+    "27": [
+      "Tu palabra vale tanto como una bolsa llena de oquos en este mercado.",
+      "Aprende a delegar o despejar lo innecesario para enfocar tu atención en lo vital."
+    ],
+    "28": [
+      "La concentración que demuestras al trabajar evita cualquier margen de error.",
+      "Cada detalle que atiendes a tiempo te ahorra reparar desastres después."
+    ],
+    "29": [
+      "Un último esfuerzo para rozar los treinta niveles. Se siente la firmeza en tus pasos.",
+      "Prepara tu espacio de trabajo; vas a necesitar estructura para lo que viene."
+    ],
+    "30": [
+      "¡Nivel treinta! Ya eres un pilar fundamental en la economía de Mírrafen.",
+      "Treinta escalones de disciplina superados. Tu capacidad de enfoque es admirable."
+    ],
+    "31": [
+      "Los desafíos ya no te asustan; sabes dividirlos en partes manejables y resolverlos.",
+      "Sigue administrando tus proyectos con la precisión de un maestro zapatero."
+    ],
+    "32": [
+      "A este nivel, la postergación es un enemigo derrotado para ti.",
+      "Tus días rinden el doble porque sabes exactamente qué hacer a cada momento."
+    ],
+    "33": [
+      "El mercado valora la calidad de tu trabajo cotidiano. Nunca bajes la vara.",
+      "Una mente despejada y un plan de acción claro valen más que cien espadas."
+    ],
+    "34": [
+      "Incluso bajo presión, sabes mantener la calma y cerrar tus compromisos.",
+      "Tu constancia es una lección de vida para todos los aprendices del poblado."
+    ],
+    "35": [
+      "¡Nivel treinta y cinco! Pocos aventureros demuestran este grado de compromiso.",
+      "Has construido cimientos de piedra para tu crecimiento. Sigue edificando."
+    ],
+    "36": [
+      "Cada tarea terminada a tiempo es un trato cerrado con tu propio destino.",
+      "Mantén la chispa y el entusiasmo; la rutina se vence con buenos propósitos."
+    ],
+    "37": [
+      "Tu capacidad para sobreponerte a los días difíciles demuestra verdadera fortaleza.",
+      "Un verdadero maestro de los recursos no malgasta ni un minuto de su día."
+    ],
+    "38": [
+      "Mírrafen prospera porque ciudadanos como tú eligen actuar en vez de postergar.",
+      "Sigue puliendo tu rutina personal; el margen de mejora nunca se agota."
+    ],
+    "39": [
+      "A un solo nivel del grupo de los cuarenta. Tu determinación es implacable.",
+      "Organiza tus carpetas y tareas pendientes; se acerca un gran salto."
+    ],
+    "40": [
+      "¡Nivel cuarenta! Tu nombre ya figura entre los grandes referentes del reino.",
+      "Cuarenta niveles demostrando que el orden y la voluntad lo transforman todo."
+    ],
+    "41": [
+      "La maestría no es un destino, es una forma de caminar cada mañana.",
+      "Tus proyectos avanzan sobre rieles gracias al rigor de tus hábitos."
+    ],
+    "42": [
+      "No hay imprevisto comercial ni tarea aplazada que pueda frenar tu marcha.",
+      "Invertiste tiempo en ti mismo y hoy cosechas los frutos del conocimiento."
+    ],
+    "43": [
+      "El respeto que infundes en el mercado se gana con hechos, no con palabras.",
+      "Sigue manteniendo limpia tu zona de acción y despejada tu mente."
+    ],
+    "44": [
+      "Estás administrando tu tiempo a un nivel reservado para unos pocos elegidos.",
+      "Tus acciones diarias garantizan la prosperidad de tu propio reino."
+    ],
+    "45": [
+      "¡Nivel cuarenta y cinco! Estás muy cerca de la cúspide de la excelencia.",
+      "Tu disciplina inspira a los mercaderes más veteranos de Mírrafen."
+    ],
+    "46": [
+      "Cualquier reto que se presente lo resuelves con método, orden y paciencia.",
+      "El valor de tu trabajo diario no tiene precio en ninguna moneda conocida."
+    ],
+    "47": [
+      "Falta muy poco para rozar el nivel máximo. Sostén la guardia y el ritmo.",
+      "Cada responsabilidad asumida la cumples con impecable pulcritud."
+    ],
+    "48": [
+      "Tu inventario mental está más claro y ordenado que nunca.",
+      "Estás a dos pasos de la cumbre. El esfuerzo de semanas dará su fruto definitivo."
+    ],
+    "49": [
+      "¡Un último empujón! Estás al borde de alcanzar el máximo estatus en el reino.",
+      "Prepara tu mente y tus recursos para la coronación de tu constancia."
+    ],
+    "50": [
+      "¡Nivel cincuenta! Has alcanzado la cima de la maestría personal y mercantil en Mírrafen.",
+      "Eres una leyenda de la disciplina en el reino. Tu constancia ha transformado todo a tu alrededor."
+    ]
+  }
+}

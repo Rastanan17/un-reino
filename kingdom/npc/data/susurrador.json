@@ -1,0 +1,604 @@
+{
+  "npc": "susurrador",
+  "nombre": "Kurt Silas",
+  
+  "saludos": [
+    "Camina despacio, viajero. La tierra siente cada uno de tus pasos.",
+    "Bienvenido a la Granja de Mírrafen. Respira profundo, aquí la prisa no sirve de nada.",
+    "Que los brotes de Mírrafen te den la bienvenida hoy.",
+    "Ah, aventurero. Deja los ruidos del reino afuera; la naturaleza requiere silencio.",
+    "Saludos. Si buscas respuestas, pregúntale a los árboles; ellos tienen memoria de siglos.",
+    "Bienvenido. Justo a tiempo para ver cómo despiertan los cultivos con el sol.",
+    "Hola, viajero. La tierra siempre da fruto a quien sabe trabajarla con paciencia.",
+    "Que la sombra del gran roble te cobije en tu travesía.",
+    "Siente la brisa... hoy los árboles susurran historias de buenos augurios.",
+    "Pasa, toma asiento en el pasto. Aquí la verdadera fuerza se cultiva día a día."
+  ],
+  "dialogos_granjero": [
+    "Quien no cuida las raíces, no puede pretender cosechar frutos dulces en el futuro.",
+    "La tierra no sabe de excusas ni de prisas; solo entiende de constancia y riego diario.",
+    "Escucha las hojas secas al caer: nos enseñan que dejar ir lo viejo es necesario para volver a brotar.",
+    "Un buen árbol no crece fuerte por la altura de sus ramas, sino por la firmeza de sus raíces.",
+    "No te desesperes si la semilla no germina al primer día; las grandes cosas llevan su tiempo.",
+    "Trabajar la tierra te enseña a respetar los ritmos naturales. Forzar las cosas solo rompe el tallo.",
+    "El viento puede doblar la rama más delgada, pero si la raíz es profunda, el árbol jamás caerá.",
+    "El secreto de una buena cosecha está en preparar el terreno mucho antes de sembrar.",
+    "Los árboles hablan entre sí bajo tierra; nosotros deberíamos aprender a cooperar con esa misma armonía.",
+    "Cada pequeña gota de agua cuenta. Nunca subestimes el impacto de las pequeñas acciones constantes."
+  ],
+  "desafios_granjeros": [
+    {
+      "tipo": "vida_real",
+      "titulo": "Sembrar el hábito",
+      "descripcion": "Silas te pide cuidar tu propio espacio como si fuera un surco fértil. Limpia y arregla tu entorno.",
+      "accion": "Ordenar la zona donde vas a trabajar o estudiar",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Riego vital",
+      "descripcion": "Así como los brotes necesitan agua para crecer, tu cuerpo necesita mantenerse hidratado.",
+      "accion": "Beber un vaso de agua fresca",
+      "recompensa": {
+        "xp": 3,
+        "oquos": 1
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Deshierbe de distracciones",
+      "descripcion": "Quita las malas hierbas que no dejan crecer tus proyectos principales.",
+      "accion": "Eliminar objetos o pestañas innecesarias de tu vista",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Luz solar",
+      "descripcion": "Abre las ventanas y deja que el aire y la luz renueven tu energía.",
+      "accion": "Ventilar tu habitación durante unos minutos",
+      "recompensa": {
+        "xp": 4,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Nutrir el cuerpo",
+      "descripcion": "Un granjero fuerte necesita buenos nutrientes. Elige una opción saludable para comer.",
+      "accion": "Comer una fruta o alimento nutritivo",
+      "recompensa": {
+        "xp": 4,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Poda de pendientes",
+      "descripcion": "Corta de raíz una pequeña tarea que esté molestando en tu lista diaria.",
+      "accion": "Completar una tarea pendiente de menos de 10 minutos",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Tierra firme",
+      "descripcion": "Conéctate con el momento presente haciendo una pausa de estiramiento y postura.",
+      "accion": "Hacer 5 minutos de estiramiento o postura corporal adecuada",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Abono de conocimiento",
+      "descripcion": "Enriquece tu mente leyendo o aprendiendo algo útil antes de continuar.",
+      "accion": "Leer 5 páginas o repasar apuntes importantes",
+      "recompensa": {
+        "xp": 7,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Herramientas limpias",
+      "descripcion": "Silas jamás deja una azada sucia. Limpia tus útiles de trabajo al terminar.",
+      "accion": "Acomodar tus lápices, cuadernos o dispositivos",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "La cosecha principal",
+      "descripcion": "Dedica tu máximo esfuerzo a finalizar el compromiso más importante de tu día.",
+      "accion": "Completar la tarea principal del día",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 4
+      }
+    }
+  ],
+  "misiones_reino": [
+    {
+      "titulo": "Semillas para la Aldea",
+      "destino": "Aldea",
+      "descripcion": "Lleva un cargamento de semillas seleccionadas a los habitantes para sus huertos familiares.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Frutos para la Guardia",
+      "destino": "Castillo",
+      "descripcion": "Envía hortalizas frescas a Roderick para mantener la energía de la guardia real.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Intercambio en el Mercado",
+      "destino": "Mercado",
+      "descripcion": "Visita a Borin para entregar la cosecha de trigo y pactar la venta de insumos.",
+      "recompensa": {
+        "xp": 9,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Estudio del Bosque Anciando",
+      "destino": "Bosque",
+      "descripcion": "Investiga el estado de la vegetación en el límite del bosque ancestral.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Hongos de las Cavernas",
+      "destino": "Cavernas",
+      "descripcion": "Recolecta muestras de esporas subterráneas para analizar el compost natural.",
+      "recompensa": {
+        "xp": 12,
+        "oquos": 5
+      }
+    },
+    {
+      "titulo": "El Clima del Observatorio",
+      "destino": "Observatorio",
+      "descripcion": "Pregunta a Zephyr por las predicciones de lluvias para planificar las próximas siembras.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Plantas del Norte",
+      "destino": "Nieve",
+      "descripcion": "Lleva brotes resistentes al frío a los puestos avanzados de la frontera helada.",
+      "recompensa": {
+        "xp": 14,
+        "oquos": 6
+      }
+    },
+    {
+      "titulo": "Carga de Madera al Puerto",
+      "destino": "Puerto",
+      "descripcion": "Transporta tablones de cedro cultivado hasta el puerto para reparar los navíos.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Hierbas para el Museo",
+      "destino": "Museo",
+      "descripcion": "Entrega especímenes de flores secas a Eldrin para su archivo botánico.",
+      "recompensa": {
+        "xp": 9,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Cuidado del Huerto",
+      "destino": "Granja",
+      "descripcion": "Ayuda a Silas a regar los árboles antiguos del centro de la granja.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    }
+  ],
+  "consejos_de_cultivo": [
+    "No sirve de nada inundar la tierra un solo día; lo que hace crecer al árbol es la constancia del riego.",
+    "Si quieres que una planta crezca sana, retira a tiempo las hojas secas que le quitan energía.",
+    "Respeta tus momentos de descanso; la tierra también necesita quedar en barbecho para recuperar nutrientes.",
+    "Cada semilla tiene su propia estación. No te compares con el ritmo de crecimiento de los demás.",
+    "Las raíces profundas se forman soportando los días de viento fuerte.",
+    "Prepara el suelo con paciencia antes de exigir grandes resultados a tus proyectos.",
+    "Observa los pequeños cambios diarios; la naturaleza no hace grandes saltos, sino avances constantes.",
+    "El abono de hoy, aunque parezca insignificante, sostiene la gran cosecha del mañana.",
+    "Protege tus brotes más jóvenes de la prisa y del exceso de exigencia.",
+    "Cultiva la paciencia: el fruto más dulce es siempre el que más tiempo tardó en madurar."
+  ],
+  "rumores": [
+    "Los árboles del borde del bosque estuvieron murmurando un nombre que no reconocí.",
+    "Dicen que los cultivos crecen el doble de rápido cerca de donde Zephyr instaló sus telescopios.",
+    "Un viajero contó que en las Cavernas florece un tipo de musgo que brilla en la penumbra.",
+    "Se rumorea que la Reina envió a buscar semillas de un árbol medicinal muy raro.",
+    "En el mercado dicen que los animales de la granja reaccionan minutos antes de que cambie el clima.",
+    "Escuché que un antiguo roble en el centro del reino abrió una grieta con forma de puerta.",
+    "Los marineros del puerto juran haber visto un cargamento de especias que perfumó toda la bahía.",
+    "Dicen que Eldrin encontró en el museo una receta antigua para acelerar el crecimiento del trigo.",
+    "Comentan que las noches heladas del norte están empezando a ceder terreno a la primavera.",
+    "Un anciano asegura que si escuchas con atención el tronco de un álamo, puedes oír el agua correr subterránea."
+  ],
+  "eventos_especiales": [
+    {
+      "id": "fiesta_de_la_cosecha",
+      "titulo": "La Cosecha Mayor",
+      "descripcion": "Es momento de juntar los frutos del esfuerzo acumulado durante semanas.",
+      "accion": "Hacer un recuento y finalizar tres tareas importantes de tu lista",
+      "recompensa": {
+        "xp": 22,
+        "oquos": 9
+      }
+    },
+    {
+      "id": "solsticio_de_primavera",
+      "titulo": "Despertar del Bosque",
+      "descripcion": "La naturaleza florece y Silas exige una limpieza profunda para renovar el aire.",
+      "accion": "Limpiar y reordenar completamente tu mesa de trabajo",
+      "recompensa": {
+        "xp": 18,
+        "oquos": 7
+      }
+    },
+    {
+      "id": "gran_sequia",
+      "titulo": "Prueba de la Sequía",
+      "descripcion": "Los recursos son escasos. Debes concentrar tu energía únicamente en lo esencial.",
+      "accion": "Completar tu tarea prioritaria sin atender ninguna distracción",
+      "recompensa": {
+        "xp": 20,
+        "oquos": 8
+      }
+    },
+    {
+      "id": "siembra_real",
+      "titulo": "Siembra del Reino",
+      "descripcion": "Sostenida por la corona, esta jornada requiere planificar los cultivos a largo plazo.",
+      "accion": "Escribir tus 3 metas principales para el próximo mes",
+      "recompensa": {
+        "xp": 25,
+        "oquos": 10
+      }
+    },
+    {
+      "id": "poda_invernal",
+      "titulo": "La Gran Poda",
+      "descripcion": "Momento de eliminar todo aquello que ocupa espacio sin aportar valor a tu rutina.",
+      "accion": "Deshacerte de compromisos o notas viejas que ya no sirven",
+      "recompensa": {
+        "xp": 16,
+        "oquos": 6
+      }
+    },
+    {
+      "id": "bendicion_del_roble",
+      "titulo": "Rito del Roble Anciano",
+      "descripcion": "Silas realiza una ofrenda por la constancia de los habitantes del reino.",
+      "accion": "Completar dos actividades saludables consecutivas",
+      "recompensa": {
+        "xp": 20,
+        "oquos": 8
+      }
+    },
+    {
+      "id": "cuidado_de_animales",
+      "titulo": "Refugio Campestre",
+      "descripcion": "Los graneros necesitan ser preparados para resguardar a las criaturas.",
+      "accion": "Dejar ordenados tus espacios antes de finalizar la tarde",
+      "recompensa": {
+        "xp": 15,
+        "oquos": 6
+      }
+    },
+    {
+      "id": "feria_botanica",
+      "titulo": "Exposición de Germinados",
+      "descripcion": "Muestra al reino el avance de tus proyectos personales más valiosos.",
+      "accion": "Revisar y actualizar el estado de tus objetivos personales",
+      "recompensa": {
+        "xp": 22,
+        "oquos": 9
+      }
+    },
+    {
+      "id": "lluvia_milagrosa",
+      "titulo": "Lluvia de la Abundancia",
+      "descripcion": "El clima favorece el crecimiento rápido. Aprovecha el impulso del día.",
+      "accion": "Avanzar el doble de lo planeado en un proyecto pendiente",
+      "recompensa": {
+        "xp": 24,
+        "oquos": 10
+      }
+    },
+    {
+      "id": "raices_fuertes",
+      "titulo": "Juramento de la Tierra",
+      "descripcion": "Un evento para celebrar la constancia y el compromiso inflexible con el deber.",
+      "accion": "Completar todas tus tareas planificadas durante la jornada",
+      "recompensa": {
+        "xp": 28,
+        "oquos": 12
+      }
+    }
+  ],
+  "historia_personal": [
+    {
+      "id": "historia_01",
+      "titulo": "El primer brote",
+      "texto": "Cuando era joven, pensaba que para ser fuerte había que ser como las rocas. Con los años aprendí que el bambú, que se dobla con el viento y no se rompe, es mucho más resistente."
+    },
+    {
+      "id": "historia_02",
+      "titulo": "El susurro del sauce",
+      "texto": "Pasé semanas sentado bajo el viejo sauce del arroyo. Allí entendí que la naturaleza tiene su propio lenguaje: no usa palabras, sino paciencia y movimiento."
+    },
+    {
+      "id": "historia_03",
+      "titulo": "La gran helada",
+      "texto": "Recuerdo un año en que el invierno congeló hasta la última raíz. Pensamos que todo estaba perdido, pero al llegar la primavera, los brotes renacieron con más fuerza."
+    },
+    {
+      "id": "historia_04",
+      "titulo": "El guardián de la granja",
+      "texto": "Me dieron la responsabilidad de cuidar estas tierras cuando el antiguo granjero partió. Juré proteger cada semilla y enseñar el valor del esfuerzo a quien viniera."
+    },
+    {
+      "id": "historia_05",
+      "titulo": "El roble central",
+      "texto": "El gran roble que ves allá fue plantado el mismo día en que se fundó Mírrafen. Sus raíces sostienen más historias de las que ningún libro podría registrar."
+    },
+    {
+      "id": "historia_06",
+      "titulo": "La lección de la sequía",
+      "texto": "La sequía me enseñó que cuando no hay agua en la superficie, las raíces se ven obligadas a crecer más profundo. De las dificultades salimos más consolidados."
+    },
+    {
+      "id": "historia_07",
+      "titulo": "Sembrar sin prisa",
+      "texto": "He visto a muchos aventureros querer cosechar al día siguiente de plantar. Siempre les digo lo mismo: quien no sabe esperar, solo cosecha frutos amargos."
+    },
+    {
+      "id": "historia_08",
+      "titulo": "El lenguaje de las hojas",
+      "texto": "Me llaman 'susurrador' porque entiendo cuándo a un árbol le falta agua o cuando el viento le molesta. Solo hace falta observar con atención y respeto."
+    },
+    {
+      "id": "historia_09",
+      "titulo": "El descanso de la tierra",
+      "texto": "Aprendí a no forzar los campos durante el invierno. Todos necesitamos un tiempo de silencio y descanso para poder florecer con energía en la siguiente etapa."
+    },
+    {
+      "id": "historia_10",
+      "titulo": "Un legado verde",
+      "texto": "Mi tarea no es solo cultivar trigo o manzanas; es enseñarle a cada viajero que la constancia diaria es la única semilla que garantiza un futuro próspero."
+    }
+  ],
+  
+  "dialogos_por_nivel": {
+    "1": [
+      "Apenas estás brotando de la tierra. Ten paciencia y deja que el sol haga su trabajo.",
+      "Todo gran árbol comenzó siendo una diminuta semilla sin aparentes certezas."
+    ],
+    "2": [
+      "El primer riego es el más importante. Empiezas a tomar forma en este suelo.",
+      "No busques dar frutos todavía; ocúpate en afirmarte bien a la tierra."
+    ],
+    "3": [
+      "Tus primeras raíces ya buscan profundidad. Sigue cultivando con paciencia.",
+      "La constancia de un pequeño esfuerzo diario moverá más que cualquier impulso violento."
+    ],
+    "4": [
+      "Las hojas jóvenes necesitan cuidado. Mantén la atención en tus rutinas cotidianas.",
+      "Sigue regando tus hábitos; el brote requiere protección en sus primeros días."
+    ],
+    "5": [
+      "Nivel cinco. Tu primer tallo firme ya se sostiene contra el viento suave.",
+      "Has superado los primeros días de duda. La tierra empieza a responder a tu dedicación."
+    ],
+    "6": [
+      "El entusiasmo inicial se calma, pero la savia sigue corriendo por dentro.",
+      "No te detengas si el día parece gris; las nubes también traen la lluvia que necesitas."
+    ],
+    "7": [
+      "Tus ramas buscan espacio. Cada tarea cumplida es un nuevo brote verde.",
+      "Aprende a podar las distracciones antes de que ahoguen tu crecimiento."
+    ],
+    "8": [
+      "La sombra que proyectas empieza a notarse en la granja. Mantén el ritmo.",
+      "Un cultivo saludable no necesita prisas, solo la disciplina del riego diario."
+    ],
+    "9": [
+      "Estás a un paso de consolidar tu primer gran tramo. No descuides la tierra.",
+      "Quien cuida el surco con esmero jamás se queda con las manos vacías."
+    ],
+    "10": [
+      "Nivel diez. Ya no eres un simple brote, tus ramas empiezan a dar estructura.",
+      "Has demostrado que sabes esperar y trabajar. Mírrafen reconoce tu constancia."
+    ],
+    "11": [
+      "Las raíces profundas soportan las tempestades. Sigue fortaleciendo tus bases.",
+      "Un árbol alto requiere un suelo bien preparado; no apresures las etapas."
+    ],
+    "12": [
+      "El viento del norte empieza a soplar fuerte, pero tu tronco se mantiene firme.",
+      "Cada hábito completado refuerza la corteza que te protege del desorden."
+    ],
+    "13": [
+      "Incluso en los días de sequía, un buen cultivador encuentra la forma de avanzar.",
+      "Observa el crecimiento silencioso; la naturaleza trabaja sin hacer ruido."
+    ],
+    "14": [
+      "Tus hojas filtran la luz con maestría. La rutina se vuelve tu mejor aliada.",
+      "El rigor diario no quita libertad, le da estructura a tu florecer."
+    ],
+    "15": [
+      "Nivel quince. La madera de tu carácter se vuelve más dura y resistente.",
+      "Poco a poco te conviertes en un punto de referencia para los que recién empiezan."
+    ],
+    "16": [
+      "No te confiarías de un árbol sin corteza; cuida tus límites y mantén tu enfoque.",
+      "La tierra te nutre si tú la respetas con acciones claras todos los días."
+    ],
+    "17": [
+      "Ramas más fuertes sostienen desafíos más grandes. Prepárate para seguir cargando.",
+      "La verdadera fuerza campesina se demuestra cuando la tarea resulta pesada."
+    ],
+    "18": [
+      "La lluvia de hoy preparará la gran cosecha del mañana. Mantén la calma.",
+      "Aprende a leer el tiempo: hay momentos para sembrar y momentos para cosechar."
+    ],
+    "19": [
+      "Un paso más para consolidar esta etapa. La copa de tu árbol ya busca el cielo.",
+      "No dejes que una mala jornada eche a perder semanas de buen cuidado."
+    ],
+    "20": [
+      "Nivel veinte. Tu presencia en los campos de Mírrafen es firme como la de un roble.",
+      "Dos decenas de escalones. La disciplina ha dejado de ser un esfuerzo y es ya tu naturaleza."
+    ],
+    "21": [
+      "Las estaciones cambian, pero un árbol bien arraigado conserva su esencia.",
+      "Si los vientos son fuertes, dobla tus ramas con flexibilidad, pero no cedas la raíz."
+    ],
+    "22": [
+      "Tus frutos comienzan a madurar. La paciencia da su justa recompensa.",
+      "No presiones la fruta para que madure antes; cada cosa tiene su momento exacto."
+    ],
+    "23": [
+      "Limpiar la mala hierba es un trabajo continuo. No bajes la guardia.",
+      "El orden en tu espacio refleja el orden con el que manejas tus días."
+    ],
+    "24": [
+      "Tus raíces se entrelazan con la historia de este reino. Eres parte de la granja.",
+      "Quien aprende a escuchar el susurro de la tierra nunca camina desorientado."
+    ],
+    "25": [
+      "Nivel veinticinco. Has alcanzado la mitad del camino principal con impecable firmeza.",
+      "Un cuarto de siglo de niveles en Mírrafen. Tu huella en el suelo es imborrable."
+    ],
+    "26": [
+      "La madera de tu tronco resiste el frío y el calor sin agrietarse.",
+      "Sigue nutriendo tu mente con la misma dedicación con la que abonas tus campos."
+    ],
+    "27": [
+      "Las aves del reino encuentran refugio en tus ramas. Tu esfuerzo ayuda a otros.",
+      "Liderar con el ejemplo es la forma más pura de sembrar en los demás."
+    ],
+    "28": [
+      "Las tempestades de la vida no derrumban a quien tiene bases sólidas.",
+      "Mantén la mirada en el horizonte mientras tus pies siguen bien fijos en el suelo."
+    ],
+    "29": [
+      "A las puertas de un nuevo umbral. Que la savia del esfuerzo siga corriendo.",
+      "La constancia es la diferencia entre un matorral pasajero y un bosque eterno."
+    ],
+    "30": [
+      "Nivel treinta. Tu copa da sombra a la granja entera; eres un pilar para el reino.",
+      "Treinta escalones superados. Pocos aventureros demuestran este respeto por la tierra."
+    ],
+    "31": [
+      "Incluso los árboles más grandes siguen creciendo un anillo más cada año.",
+      "Nunca se deja de aprender de la tierra. Mantén la humildad del primer día."
+    ],
+    "32": [
+      "La corteza de tu experiencia te protege de las distracciones del camino.",
+      "Cada cicatriz en la madera es el recuerdo de una batalla superada con temple."
+    ],
+    "33": [
+      "El suelo bajo tus pies es fértil porque supiste cuidarlo con responsabilidad.",
+      "Tus hábitos son la estructura que te sostiene cuando las fuerzas escasean."
+    ],
+    "34": [
+      "Sigue expandiendo tus ramas. Todavía hay espacio en el cielo de Mírrafen.",
+      "El progreso constante es más valioso que las grandes hazañas desordenadas."
+    ],
+    "35": [
+      "Nivel treinta y cinco. Tu fortaleza inspira a los nuevos brotes que llegan al reino.",
+      "Has transformado un pequeño terreno en un bosque próspero y lleno de vida."
+    ],
+    "36": [
+      "La lluvia de la experiencia alimenta tus decisiones cotidianas.",
+      "Saber cuándo descansar es tan crucial como saber cuándo usar la azada."
+    ],
+    "37": [
+      "Los inviernos más duros no logran apagar la vida que guardas en el interior.",
+      "Firmeza en el tronco, flexibilidad en las ramas, paz en la raíz."
+    ],
+    "38": [
+      "Tus acciones resuenan en los susurros del viento a través del valle.",
+      "Cada pequeño deber cumplido a tiempo es una victoria sobre la apatía."
+    ],
+    "39": [
+      "Rozando un nuevo hito. La constancia ha sido tu mejor herramienta.",
+      "Prepara el terreno para los grandes frutos que están por consolidarse."
+    ],
+    "40": [
+      "Nivel cuarenta. Te has convertido en un verdadero guardián de la naturaleza.",
+      "Cuarenta niveles de esfuerzo. Tu nombre susurra entre las hojas más altas del bosque."
+    ],
+    "41": [
+      "En las alturas del conocimiento, el aire es más limpio pero exige más equilibrio.",
+      "No hay tormenta en Mírrafen que pueda mover un tronco tan consolidado."
+    ],
+    "42": [
+      "La madurez de tu madera es evidente para cualquiera que visite la granja.",
+      "Tus días se mueven en perfecta armonía con los ciclos del reino."
+    ],
+    "43": [
+      "Un sabio de la tierra no presume de sus flores; deja que los frutos hablen.",
+      "Sigue cultivando la serenidad ante los imprevistos del camino."
+    ],
+    "44": [
+      "Tus raíces han llegado a las corrientes más profundas y puras del suelo.",
+      "La energía que pones en tus deberes regresa multiplicada en forma de paz."
+    ],
+    "45": [
+      "Nivel cuarenta y cinco. Muy pocos alcanzan la serenidad y firmeza que hoy demuestras.",
+      "Estás cerca del cumbre. La lección de la tierra ha sido aprendida con maestría."
+    ],
+    "46": [
+      "El bosque te reconoce como un anciano sabio, sin importar tu edad terrenal.",
+      "Tus decisiones son meditadas, tu acción es certera como el golpe de un hacha experta."
+    ],
+    "47": [
+      "Nada en la granja se mueve sin que reconozcas su propósito en el ciclo.",
+      "Has dominado el arte de la paciencia y el valor del trabajo diario."
+    ],
+    "48": [
+      "Falta muy poco para rozar la cima. Mantén la humildad del primer brote.",
+      "Que el viento lleve tu historia a todos los rincones de Mírrafen."
+    ],
+    "49": [
+      "Un último tramo. Tu árbol roza las estrellas del cielo del reino.",
+      "Prepara el espíritu para completar la mayor de las maestrías campestres."
+    ],
+    "50": [
+      "Nivel cincuenta. Eres el Gran Susurrador, uno solo con los bosques y campos de Mírrafen.",
+      "Has alcanzado la cúspide. Tu disciplina ha florecido en la cosecha más gloriosa del reino."
+    ]
+  }
+}

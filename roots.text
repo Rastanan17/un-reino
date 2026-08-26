@@ -237,7 +237,14 @@ Un Reino<
 			music.js
 		npc<
 			data<
+				astral.json
+				forjadora.json
 				guardian.json
+				mercader.json
+				narrador.json
+				reina.json
+				sacerdotisa.json
+				susurrador.json
 			images<
 				aurelia.png
 				balthazar.png
@@ -522,6 +529,9 @@ Un Reino<
 				missionsFarm.json
 				missionsForest.json - (vacío)
 				missionsFrost.json - (vacío)
+				missionsLibrary.json
+				missionsObservatory.json
+				missionssanctuary.json
 				missionsSnow.json - (vacío)
 				missionsVillage.json
 			images<

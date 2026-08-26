@@ -63,6 +63,8 @@ function obtenerClaveEstadoMisiones(){
 // CARGAR MISIONES DEL CASTILLO
 // =======================================
 async function cargarMisionesCastillo(){
+    console.log("🚨 cargarMisionesCastillo() LLAMADA");
+    console.trace();
     zonaMisionesActual = "Castillo";
     try{
         const respuesta = await fetch(
@@ -813,6 +815,8 @@ async function iniciarSistemaMisiones(){
 // COMPATIBILIDAD CON MAPA
 // =======================================
 function mostrarMisiones(){
+    console.log("🔎 mostrarMisiones() → filtroZona:", filtroZona);
+    console.log("🔎 zonaMisionesActual:", zonaMisionesActual);
     if(filtroZona === "Aldea"){
         cargarMisionesAldea();
         return;

@@ -1,0 +1,706 @@
+{
+  "npc": "narrador",
+  "nombre": "Soul Garrick",
+
+  "saludos": [
+    "Pasa, viajero... La sombra de los árboles es vasta y guarda historias para quien sabe escuchar.",
+    "Bienvenido al susurro del follaje. ¿Vienes a buscar un relato o a convertirte en uno?",
+    "Las hojas secas crujen bajo tus pies, pero el bosque ya conocía tu llegada mucho antes.",
+    "Acomódate junto al musgo. Las historias más oscuras y bellas se cuentan bajo el dosel de los árboles.",
+    "Ah, una cara nueva entre los robles antiguos. Que la sombra te sirva de refugio y no de trampa.",
+    "Saludos, caminante. Si buscas la verdad, la encontrarás envuelta en la ficción de mis palabras.",
+    "El viento del bosque trae ecos del pasado de Mírrafen. Siéntate y escucha antes de que se evaporen.",
+    "Cuidado por dónde caminas; cada raíz de este bosque oculta la memoria de una antigua leyenda.",
+    "Bienvenido. La noche no es para temer, sino para dar forma a los mitos que habitan entre nosotros.",
+    "Acércate a la penumbra. Te aseguro que la luz de una buena historia ilumina más que cualquier antorcha."
+  ],
+  "dialogos_cuentacuentos": [
+    "Las palabras bien elegidas tienen más poder para moldear reinos que diez mil espadas de acero.",
+    "Una historia no muere cuando se olvida; muere cuando nadie se atreve a contar la versión correcta.",
+    "El bosque no guarda secretos por malicia, sino para proteger a quienes aún no están listos para la verdad.",
+    "No juzgues a un personaje por su sombra; es en los rincones oscuros donde más resalta la luz.",
+    "Toda leyenda empieza con una simple decisión tomada en el momento en que nadie estaba mirando.",
+    "Si escuchas con atención la brisa entre las ramas, descubrirás que el mundo entero es un gran libro abierto.",
+    "Los héroes no se crean con finales felices, sino con los capítulos difíciles que supieron superar.",
+    "La magia de un relato no está en las criaturas fantásticas, sino en el eco de verdad que deja en tu pecho.",
+    "Escribir tu propio camino requiere el coraje de enfrentarte a la hoja en blanco de cada mañana.",
+    "Cuidado con lo que recuerdas y con lo que imaginas; a veces la línea entre ambas cosas es tan fina como un hilo de seda."
+  ],
+  "desafios_narrativos": [
+    {
+      "tipo": "vida_real",
+      "titulo": "Organizar el manuscrito",
+      "descripcion": "Garrick no tolera las páginas desordenadas en su refugio del bosque. Ordena tu zona de trabajo.",
+      "accion": "Ordenar y despejar tu escritorio o espacio personal",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "La tinta en el pergamino",
+      "descripcion": "El primer paso de todo gran relato es plasmar la idea inicial en papel.",
+      "accion": "Escribir tus metas o lista de tareas del día",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Aseo de la biblioteca",
+      "descripcion": "Un entorno limpio permite que las ideas fluyan entre la penumbra del bosque.",
+      "accion": "Acomodar libros, cuadernos o carpetas en su sitio",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Pausa del bardo",
+      "descripcion": "Relaja la tensión de la espalda antes de sumergirte en la siguiente gran jornada.",
+      "accion": "Realizar una breve rutina de estiramiento",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Ropa de escena",
+      "descripcion": "Un buen narrador se prepara antes de salir al escenario del mundo.",
+      "accion": "Ordenar tu guardarropa o dejar lista la ropa a usar",
+      "recompensa": {
+        "xp": 4,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "El elixir de las musas",
+      "descripcion": "La garganta de un cuentacuentos necesita estar fresca antes de empezar a narrar.",
+      "accion": "Tomar un vaso de agua fresca",
+      "recompensa": {
+        "xp": 3,
+        "oquos": 1
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "El prólogo decisivo",
+      "descripcion": "Vence la parálisis del pergamino en blanco dando el primer paso sin dudar.",
+      "accion": "Comenzar de inmediato una tarea pendiente que venías postergando",
+      "recompensa": {
+        "xp": 7,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Edición y pulido",
+      "descripcion": "Un capítulo no se entrega sin una revisión cuidadosa de los errores.",
+      "accion": "Revisar y perfeccionar un trabajo ya terminado",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Alimento para la mente",
+      "descripcion": "Aprende de las grandes obras antes de intentar escribir la tuya.",
+      "accion": "Leer 10 minutos de un libro o artículo interesante",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "El desenlace glorioso",
+      "descripcion": "Mantén la concentración absoluta hasta poner el punto final a tu labor.",
+      "accion": "Finalizar completamente una tarea de principio a fin",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 4
+      }
+    }
+  ],
+  "misiones_reino": [
+    {
+      "titulo": "Crónicas de la Aldea",
+      "destino": "Aldea",
+      "descripcion": "Visita la aldea para recopilar las viejas fábulas que la gente cuenta al atardecer.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Historias del Puerto",
+      "destino": "Puerto",
+      "descripcion": "Ve al puerto a escuchar las marineras sobre criaturas que habitan mares lejanos.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Mitos del Castillo",
+      "destino": "Castillo",
+      "descripcion": "Investiga los archivos del castillo en busca de relatos de los antiguos reyes.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Murmullos de las Cavernas",
+      "destino": "Cavernas",
+      "descripcion": "Desciende a las cavernas y escucha el eco de la roca que Eliana suele transformar.",
+      "recompensa": {
+        "xp": 12,
+        "oquos": 5
+      }
+    },
+    {
+      "titulo": "Leyendas del Observatorio",
+      "destino": "Observatorio",
+      "descripcion": "Consulta a Zephyr sobre las constelaciones y el origen de las mitologías estelares.",
+      "recompensa": {
+        "xp": 11,
+        "oquos": 5
+      }
+    },
+    {
+      "titulo": "Relatos de Cosecha",
+      "destino": "Granja",
+      "descripcion": "Pasa por la granja para documentar las antiguas tradiciones del campo en Mírrafen.",
+      "recompensa": {
+        "xp": 9,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Manuscritos del Museo",
+      "destino": "Museo",
+      "descripcion": "Conversa con Eldrin para revisar pergaminos antiguos que necesitan traducción.",
+      "recompensa": {
+        "xp": 9,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Cuentos de la Nieve",
+      "destino": "Nieve",
+      "descripcion": "Viaja a los picos helados para registrar los mitos sobre los guardianes del invierno.",
+      "recompensa": {
+        "xp": 14,
+        "oquos": 6
+      }
+    },
+    {
+      "titulo": "Rumores del Mercado",
+      "destino": "Mercado",
+      "descripcion": "Pasea por el mercado para captar las historias exageradas de los mercaderes viajeras.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "El Árbol Ancestral",
+      "destino": "Bosque",
+      "descripcion": "Adéntrate en el corazón del bosque para meditar bajo la sombra del roble más antiguo.",
+      "recompensa": {
+        "xp": 12,
+        "oquos": 5
+      }
+    }
+  ],
+  "desafios_literarios": [
+    {
+      "tipo": "disciplina",
+      "titulo": "Narrativa fluida",
+      "descripcion": "Garrick te pide evitar distracciones y concentrarte en el fluir constante de tus deberes.",
+      "accion": "Trabajar concentrado durante 20 minutos sin mirar el teléfono",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "disciplina",
+      "titulo": "Léxico de respeto",
+      "descripcion": "Un gran narrador cuida las palabras que usa para dirigirse a los demás.",
+      "accion": "Expresarte con amabilidad y educación durante todo el día",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "disciplina",
+      "titulo": "El arco de personaje",
+      "descripcion": "Supera una incomodidad pequeña para demostrar tu evolución personal.",
+      "accion": "Hacer una tarea pesada con una actitud positiva y resuelta",
+      "recompensa": {
+        "xp": 7,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "disciplina",
+      "titulo": "Coherencia narrativa",
+      "descripcion": "Asegúrate de que tus acciones del día coincidan plenamente con lo que prometiste.",
+      "accion": "Cumplir una promesa o compromiso asumido previamente",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "disciplina",
+      "titulo": "Estructura en tres actos",
+      "descripcion": "Divide tu jornada laboral en inicio, desarrollo y cierre perfectamente marcados.",
+      "accion": "Planificar, ejecutar y revisar un bloque de trabajo estructurado",
+      "recompensa": {
+        "xp": 9,
+        "oquos": 4
+      }
+    },
+    {
+      "tipo": "disciplina",
+      "titulo": "Eliminar el relleno",
+      "descripcion": "Descarta las actividades triviales que roban tiempo a tus verdaderas misiones.",
+      "accion": "Eliminar una distracción innecesaria de tu rutina habitual",
+      "recompensa": {
+        "xp": 7,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "disciplina",
+      "titulo": "Ritmo poético",
+      "descripcion": "Completa tus tareas con elegancia y sin prisas caóticas.",
+      "accion": "Realizar un deber de principio a fin manteniendo la calma",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "disciplina",
+      "titulo": "Voz propia",
+      "descripcion": "Toma decisiones basadas en tu propio criterio sin buscar la validación constante.",
+      "accion": "Resolver un problema de forma autónoma e independiente",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 4
+      }
+    },
+    {
+      "tipo": "disciplina",
+      "titulo": "El conflicto resuelto",
+      "descripcion": "Enfrenta directamente ese pequeño obstáculo que estabas evitando abordar.",
+      "accion": "Afrontar y solucionar una dificultad o pendiente molesto",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "tipo": "disciplina",
+      "titulo": "El epílogo perfecto",
+      "descripcion": "Antes de retirarte a descansar, deja preparado el escenario para la mañana siguiente.",
+      "accion": "Dejar la mesa y el entorno totalmente ordenados antes de dormir",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    }
+  ],
+  "consejos_de_la_narrativa": [
+    "No empieces una historia buscando el final impresionar; concéntrate en construir bien el primer capítulo.",
+    "Las sombras no son tus enemigas; son simplemente el lugar donde la luz aún no ha decidido entrar.",
+    "Un buen relato no necesita fuegos artificiales si la verdad interior de sus personajes es firme.",
+    "Aprende a escuchar las pausas entre las palabras; a menudo allí reside el verdadero mensaje.",
+    "Si te equivocas en una decisión, no rompas la hoja; integra el tropiezo como un giro inesperado del guion.",
+    "Para inspirar a otros con tus palabras, primero debes haber vivido experiencias dignas de ser contadas.",
+    "No le temas a los momentos de silencio; son el abono sobre el que crecen las mejores ideas.",
+    "La diferencia entre un mito y un rumor radica en la profundidad de la enseñanza que deja a su paso.",
+    "Mantén la curiosidad despierta; hasta el detalle más insignificante puede ser la llave de una gran aventura.",
+    "Recuerda siempre que tú eres el único autor capaz de escribir las páginas del día que tienes por delante."
+  ],
+  "rumores": [
+    "Dicen que en el corazón del bosque existe un árbol cuyas hojas susurran los nombres de antiguos reyes.",
+    "Escuché que Roderick encontró marcas extrañas en los árboles del límite oriental, pero prefirió guardar silencio.",
+    "Se comenta entre las sombras que Zephyr descubrió una estrella que parpadea siguiendo el ritmo de un tambor.",
+    "Los mercaderes dicen que un viajero ofreció un libro lleno de páginas transparentes que nadie pudo leer.",
+    "Rumoran que Eldrin oculta en el museo un pergamino donde el mapa de Mírrafen cambia según la hora del día.",
+    "Dicen que las brasas del taller de Eliana cantan melodías olvidadas cuando se las deja enfriar solas.",
+    "Se comenta que en las noches sin luna, el lago del bosque refleja un cielo completamente diferente al nuestro.",
+    "Los agricultores aseguran haber visto siluetas danzando entre los trigales antes del amanecer.",
+    "Dicen que los barcos del puerto trajeron historias sobre una niebla marina que repite las voces de la infancia.",
+    "Se murmura que alguien intentó escribir la historia del futuro de Mírrafen, pero la tinta desaparecía al instante."
+  ],
+  "eventos_especiales": [
+    {
+      "id": "noche_de_fogon",
+      "titulo": "Círculo de Sombras",
+      "descripcion": "Las sombras del bosque se vuelven más densas. Es tiempo de compartir grandes logros al calor del fuego.",
+      "accion": "Compartir una historia o un avance importante de tu día con alguien",
+      "recompensa": {
+        "xp": 18,
+        "oquos": 7
+      }
+    },
+    {
+      "id": "eclipse_de_hojas",
+      "titulo": "La Noche de los Relatos",
+      "descripcion": "El bosque entero guarda silencio para escuchar una narrativa completa y sin interrupciones.",
+      "accion": "Mantener una sesión de estudio o trabajo de 45 minutos en silencio",
+      "recompensa": {
+        "xp": 22,
+        "oquos": 9
+      }
+    },
+    {
+      "id": "susurro_ancestral",
+      "titulo": "Ecos de la Selva",
+      "descripcion": "Las raíces profundas transmiten la sabiduria del pasado a quien sabe concentrarse.",
+      "accion": "Aprender algo totalmente nuevo y tomar apuntes detallados",
+      "recompensa": {
+        "xp": 20,
+        "oquos": 8
+      }
+    },
+    {
+      "id": "el_pergamino_perdido",
+      "titulo": "La Gran Antología",
+      "descripcion": "Garrick busca recopilar las mejores hazañas realizadas en el reino durante la semana.",
+      "accion": "Completar todas tus metas diarias planificadas para hoy",
+      "recompensa": {
+        "xp": 28,
+        "oquos": 12
+      }
+    },
+    {
+      "id": "baile_de_sombras",
+      "titulo": "Danza de la Penumbra",
+      "descripcion": "Transforma los momentos oscuros del día en oportunidades para crear algo bello.",
+      "accion": "Convertir un error reciente en un aprendizaje práctico",
+      "recompensa": {
+        "xp": 16,
+        "oquos": 6
+      }
+    },
+    {
+      "id": "el_cantar_del_bardo",
+      "titulo": "La Poesía del Esfuerzo",
+      "descripcion": "El esfuerzo constante merece ser inmortalizado en los cantares del reino.",
+      "accion": "Superar dos tareas difíciles de manera continua",
+      "recompensa": {
+        "xp": 20,
+        "oquos": 8
+      }
+    },
+    {
+      "id": "vigilia_del_bosque",
+      "titulo": "Vigilia de los Arboles",
+      "descripcion": "Permanece atento y despejado ante las distracciones que rondan el campamento.",
+      "accion": "Completar la tarde de labores sin desviarte del plan inicial",
+      "recompensa": {
+        "xp": 24,
+        "oquos": 10
+      }
+    },
+    {
+      "id": "la_leyenda_viva",
+      "titulo": "Forja de Mitos",
+      "descripcion": "Demuestra con hechos que tu nombre merece figurar en los libros de Mírrafen.",
+      "accion": "Realizar una acción generosa o de gran valor personal",
+      "recompensa": {
+        "xp": 25,
+        "oquos": 10
+      }
+    },
+    {
+      "id": "encuentro_en_la_espura",
+      "titulo": "La Hoja Inmaculada",
+      "descripcion": "Comienza una obra totalmente nueva con determinación y sin vacilar.",
+      "accion": "Iniciar un nuevo proyecto o hábito con paso firme",
+      "recompensa": {
+        "xp": 18,
+        "oquos": 7
+      }
+    },
+    {
+      "id": "el_gran_cierre",
+      "titulo": "El Fin del Capítulo",
+      "descripcion": "Cierra las páginas de la jornada con la tranquilidad del deber cumplido.",
+      "accion": "Revisar y dar por concluidas todas las labores pendientes",
+      "recompensa": {
+        "xp": 22,
+        "oquos": 9
+      }
+    }
+  ],
+  "historia_personal": [
+    {
+      "id": "historia_01",
+      "titulo": "El origen de las sombras",
+      "texto": "No siempre viví bajo la copa de estos árboles antiguos. Solía recorrer los grandes salones, pero descubrí que las mejores historias nacen lejos de las luces brillantes."
+    },
+    {
+      "id": "historia_02",
+      "titulo": "El primer libro destruido",
+      "texto": "Una vez escribí un compendio lleno de halagos hacia un antiguo tirano. El viento del bosque se llevó sus páginas y desde ese día decidí contar solo la verdad."
+    },
+    {
+      "id": "historia_03",
+      "titulo": "El lenguaje de las hojas",
+      "texto": "Me tomó años comprender que los árboles de Mírrafen guardan en sus anillos la memoria de cada era. Solo debes apoyar el oído en la corteza y guardar silencio."
+    },
+    {
+      "id": "historia_04",
+      "titulo": "La pluma de cuervo",
+      "texto": "Esta pluma con la que anotó las crónicas perteneció a un ave que cruzó Mírrafen de extremo a extremo. Me recuerda que para narrar hay que saber mirar desde lo alto."
+    },
+    {
+      "id": "historia_05",
+      "titulo": "La noche de la niebla",
+      "texto": "Hubo un tiempo en que una niebla espesa cubrió el bosque durante semanas. La gente venía a mi hoguera no por calor, sino para no sentirse sola en la penumbra."
+    },
+    {
+      "id": "historia_06",
+      "titulo": "El mapa sin nombres",
+      "texto": "Conservo un mapa antiguo donde las tierras de Mírrafen no tienen nombres escritos. Me gusta recordar que los lugares los hacen las historias de quienes los habitan."
+    },
+    {
+      "id": "historia_07",
+      "titulo": "El encuentro con Roderick",
+      "texto": "Conozco al Centinela desde que era un joven recluta. Él cuida las murallas del castillo con acero; yo cuido el recuerdo de sus victorias con palabras."
+    },
+    {
+      "id": "historia_08",
+      "titulo": "El secreto del cuentacuentos",
+      "texto": "Muchos piensan que invento cada detalle de lo que narro. La verdad es que solo organizo los pedazos de realidad que la gente deja caer sin darse cuenta."
+    },
+    {
+      "id": "historia_09",
+      "titulo": "El peso del silencio",
+      "texto": "A veces la historia más poderosa es la que se decide no contar hasta que las personas involucradas hayan encontrado la paz necesaria para escucharla."
+    },
+    {
+      "id": "historia_10",
+      "titulo": "El legado del bosque",
+      "texto": "Mi tarea en este mundo es asegurarme de que cuando nosotros ya no estemos, las historias de coraje y esfuerzo sigan resonando entre estos mismos árboles."
+    }
+  ],
+  
+  "dialogos_por_nivel": {
+    "1": [
+      "Apenas das tus primeros pasos entre las sombras del bosque; la historia acaba de comenzar.",
+      "Bienvenido al inicio del camino. Guarda bien cada lección que aprendas en este primer capítulo."
+    ],
+    "2": [
+      "Veo que la tinta empieza a correr por tus venas; no te detengas ahora.",
+      "Un pequeño paso para el viajero, pero el prólogo ya empieza a tomar forma."
+    ],
+    "3": [
+      "Tus decisiones empiezan a dejar huella en la hojarasca del bosque.",
+      "Sigue escuchando el murmullo de los árboles; tienen mucho más que enseñarte."
+    ],
+    "4": [
+      "La constancia afina tu voz como la práctica afina la cítara del bardo.",
+      "Cada paso firme que das ahuyenta las dudas que merodean en la penumbra."
+    ],
+    "5": [
+      "Has superado las primeras páginas. La disciplina comienza a mostrar sus frutos.",
+      "Cinco peldaños recorridos; el bosque ya no te ve como a un extraño."
+    ],
+    "6": [
+      "Las sombras del camino se vuelven tus aliadas a medida que ganas temple.",
+      "Un buen narrador sabe que los cimientos sólidos sostienen los relatos más grandes."
+    ],
+    "7": [
+      "Tu ritmo no decae; la trama de tu aventura empieza a ponerse interesante.",
+      "El viento trae tus primeros logros a oídos de quienes habitan el bosque."
+    ],
+    "8": [
+      "No hay atajos para el verdadero conocimiento, pero vas por la senda correcta.",
+      "Mantén la mirada atenta; cada obstáculo superado es un párrafo bien escrito."
+    ],
+    "9": [
+      "Estás a las puertas de un primer gran hito. La pluma no debe vacilar.",
+      "Siente la firmeza de tu paso; el miedo al pergamino en blanco ha quedado atrás."
+    ],
+    "10": [
+      "Diez niveles de esfuerzo constante. Ya no eres un simple caminante en Mírrafen.",
+      "Tu determinación empieza a forjar una leyenda digna de ser escuchada junto al fuego."
+    ],
+    "11": [
+      "Inicias un nuevo capítulo. Deja que la experiencia pasada impulse tu marcha.",
+      "Las raíces del bosque reconocen la fuerza de quien no abandona sus metas."
+    ],
+    "12": [
+      "Cada jornada completada añade una valiosa ilustración a tu pergamino.",
+      "La constancia es la magia más pura que existe en estas tierras."
+    ],
+    "13": [
+      "Incluso en los días oscuros, tu enfoque ilumina el sendero entre la maleza.",
+      "No temas a las tramas complejas; tienes la capacidad de resolver cada conflicto."
+    ],
+    "14": [
+      "Tus acciones hablan con más claridad y elocuencia que mil palabras vanas.",
+      "El bosque observa con respeto a quien demuestra disciplina día tras día."
+    ],
+    "15": [
+      "Quince escalones superados. Tu carácter se moldea con la solidez del roble.",
+      "Los rumores sobre tu dedicación comienzan a circular por los rincones del reino."
+    ],
+    "16": [
+      "La paciencia y el trabajo diario son el secreto para dominar cualquier arte.",
+      "Continúa puliendo tus hábitos; el pulso de tu historia es cada vez más firme."
+    ],
+    "17": [
+      "Las distracciones del camino ya no logran desviarte de tu verdadero propósito.",
+      "Hay una nobleza serena en cumplir con el deber sin buscar aplausos fáciles."
+    ],
+    "18": [
+      "Tus esfuerzos pasados son la estructura que sostiene tus victorias de hoy.",
+      "Avanzas con la confianza de quien conoce bien el terreno que pisa."
+    ],
+    "19": [
+      "Un paso más para alcanzar un nuevo umbral. Mantén el temple hasta el final.",
+      "La sombra de los árboles te protege porque has probado ser digno de este lugar."
+    ],
+    "20": [
+      "Veinte niveles de historia construida. Tu nombre empieza a resonar con peso.",
+      "Has demostrado que las grandes hazañas son solo la suma de pequeñísimos compromisos."
+    ],
+    "21": [
+      "Cruzaste la frontera de la mitad del camino inicial; tu madurez es evidente.",
+      "El tono de tu aventura se vuelve más profundo y lleno de sabiduría."
+    ],
+    "22": [
+      "Incluso las tormentas más recias respetan al árbol de raíces profundas.",
+      "Sigue escribiendo tu destino con la pulcritud de los antiguos cronistas."
+    ],
+    "23": [
+      "Nada de lo que has conseguido ha sido por azar; todo es fruto de tu entrega.",
+      "La penumbra ya no infunde temor a quien lleva la luz de la disciplina por dentro."
+    ],
+    "24": [
+      "Tus hábitos son la armadura invisible que te protege en las jornadas difíciles.",
+      "Cada día resuelto con éxito es una victoria silenciosa sobre la pereza."
+    ],
+    "25": [
+      "Un cuarto de siglo en niveles. Tu transformación es digna de un poema épico.",
+      "Has llegado a un punto de inflexión donde tu voluntad inspira a quienes te rodean."
+    ],
+    "26": [
+      "No te detengas a contemplar lo andado por demasiado tiempo; aún queda mapa por descubrir.",
+      "La madurez de un héroe se mide por su capacidad de mantener el rumbo en la rutina."
+    ],
+    "27": [
+      "El bosque te habla con soltura porque sabe que entiendes su verdadero lenguaje.",
+      "Tu enfoque es fino como el trazo de la mejor tinta sobre el mejor pergamino."
+    ],
+    "28": [
+      "Los desafíos se vuelven más complejos, pero tu capacidad para resolverlos crece a la par.",
+      "Sigue sumando capítulos de superación; la obra maestra está cobrando forma."
+    ],
+    "29": [
+      "Rozas el umbral del nivel treinta. La excelencia ya no es un acto, es tu costumbre.",
+      "Mantén la mente serena y la mano firme; los momentos decisivos se acercan."
+    ],
+    "30": [
+      "Treinta niveles. Muy pocos viajeros mantienen la llama encendida durante tanto tiempo.",
+      "Tu historia en Mírrafen ya no se escribe con trazos ligeros, sino grabada en la piedra."
+    ],
+    "31": [
+      "Con la experiencia acumulada, cada nuevo reto es solo una oportunidad para destacar.",
+      "La sabiduría no consiste en no tropezar, sino en levantarse antes de que la página se seque."
+    ],
+    "32": [
+      "Miras hacia atrás y ves un camino limpio y ordenado, forjado con puro trabajo duro.",
+      "Tus palabras y actos guardan la coherencia que distingue a los grandes líderes."
+    ],
+    "33": [
+      "El bosque de Mírrafen guarda tus secretos más valiosos porque has sabido honrarlo.",
+      "La constancia ha dejado de ser un esfuerzo para convertirse en parte de tu naturaleza."
+    ],
+    "34": [
+      "Un paso constante vence a la prisa alocada en cualquier relato memorable.",
+      "Sigue cultivando esa templanza; es el bien más preciado en tiempos de incertidumbre."
+    ],
+    "35": [
+      "Nivel treinta y cinco. Tu trayectoria brilla con luz propia entre las sombras del dosel.",
+      "Has superado pruebas que habrían hecho dudar al viajero menos preparado."
+    ],
+    "36": [
+      "Tu capacidad de concentrarte en lo importante ha vuelto tu avance imparable.",
+      "Cada página de tu diario refleja el dominio absoluto sobre tu propio tiempo."
+    ],
+    "37": [
+      "Los antiguos mitos del reino hablan de voluntades inquebrantables como la tuya.",
+      "No hay viento en este bosque capaz de desviarte de la meta que te has fijado."
+    ],
+    "38": [
+      "Tu recorrido es prueba viva de que el verdadero valor se demuestra en lo cotidiano.",
+      "Continúa con la cabeza alta; estás trazando las líneas de un clímax formidable."
+    ],
+    "39": [
+      "A un solo paso de la cuarentena. El ambiente del bosque vibra con tu energía.",
+      "Prepara tu temple; el reconocimiento a tu constancia está más cerca que nunca."
+    ],
+    "40": [
+      "Cuarenta niveles de grandeza. Pocos han dejado una impronta tan profunda en Mírrafen.",
+      "Eres un maestro de tu propia narrativa; el destino escucha lo que tienes para dictar."
+    ],
+    "41": [
+      "En las alturas de este nivel, la claridad de tu visión es total sobre todo el reino.",
+      "Tu historia sirve de faro para los viajeros que apenas comienzan a caminar entre los árboles."
+    ],
+    "42": [
+      "El conocimiento acumulado te permite resolver con gracia lo que a otros causa angustia.",
+      "Continúa honrando el arte de la disciplina; cada detalle de tu día cuenta."
+    ],
+    "43": [
+      "La sombra del bosque ya no es un misterio para ti, sino un hogar donde reinas con templanza.",
+      "Tus logros no necesitan adornos; la solidez de tu trabajo habla por sí sola."
+    ],
+    "44": [
+      "Sigue puliendo cada gesto y cada tarea con la dedicación de un auténtico artesano.",
+      "Estás escribiendo las páginas doradas de una epopeya que perdurará por generaciones."
+    ],
+    "45": [
+      "Nivel cuarenta y cinco. Muy cerca de la cima de la sabiduría narrativa.",
+      "Tu perseverancia ha demostrado que no hay obstáculo capaz de frenar a una mente enfocada."
+    ],
+    "46": [
+      "El respeto que infundes en el reino se ha ganado gota a gota, día tras día.",
+      "Cada decisión que tomas está impregnada de la serenidad que otorga la experiencia."
+    ],
+    "47": [
+      "Las sombras del bosque se inclinan con respeto ante el paso de un auténtico veterano.",
+      "Tu viaje es una lección magistral de cómo convertir la rutina en una obra de arte."
+    ],
+    "48": [
+      "Apenas unos pasos te separan de la cúspide. Mantén la humildad y el enfoque de siempre.",
+      "Siente la satisfacción del trabajo bien hecho; la gran conclusión está al alcance de la mano."
+    ],
+    "49": [
+      "En el umbral del nivel máximo, tu voluntad es tan firme y eterna como las raíces del bosque.",
+      "Prepara tu pluma para el último gran trazo de esta legendaria etapa."
+    ],
+    "50": [
+      "Nivel cincuenta. Has alcanzado la cumbre de los narradores de Mírrafen; tu historia es inmortal.",
+      "Las sombras y los árboles susurrarán tu nombre por siempre. Has completado una obra maestra."
+    ]
+  }
+}

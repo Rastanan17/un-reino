@@ -1,0 +1,695 @@
+{
+  "npc": "reina",
+  "nombre": "Reina Eleanor",
+
+  "saludos": [
+
+    "Bienvenido a la aldea, aventurero. Es un honor verte servir a Mírrafen.",
+    "Saludos. Aunque el trono esté en el castillo, mi corazón permanece cerca de mi pueblo.",
+    "Que la luz de Mírrafen guíe tus pasos en este día.",
+    "Un gusto encontrarte en la aldea. ¿En qué puede la corona orientar tu camino?",
+    "Las decisiones del reino se toman pensando en personas como tú. Bienvenido.",
+    "Hola, joven viajero. Espero que encuentres serenidad y propósito en nuestras tierras.",
+    "Cada ciudadano y aventurero construye el futuro de Mírrafen. Gracias por tu presencia.",
+    "Saludos. Caminar entre la gente me recuerda por qué juré proteger este reino.",
+    "Veo determinación en tu mirada. Mírrafen siempre necesita almas dispuestas a servir.",
+    "Sea cual sea tu cometido hoy, recuerda actuar con sabiduría y honor."
+  ],
+  "dialogos_reina": [
+
+    "Gobernar no significa dictar órdenes desde las alturas, sino escuchar las necesidades de cada rincón del reino.",
+    "La verdadera nobleza no reside en la corona ni en el cetro, sino en el compromiso diario con la justicia.",
+    "A veces, las decisiones más difíciles son las que nadie nota, pero sostienen la paz de todo el pueblo.",
+    "He venido a la aldea para estar cerca de las familias que alimentan y sostienen nuestro hogar.",
+    "Un reino prospera cuando sus habitantes cuidan unos de otros con respeto y constancia.",
+    "La fuerza militar protege nuestras fronteras, pero la virtud de la gente protege nuestra alma.",
+    "No temo a las amenazas externas si sé que el interior de Mírrafen permanece unido y enfocado.",
+    "Llevar la corona es recordar en todo momento que las acciones del presente labran el destino del mañana.",
+    "La sabiduría se cultiva en el silencio, la reflexión y la disposición para aprender de los demás.",
+    "Nunca subestimes el valor de un gesto amable; a menudo es la chispa que transforma una comunidad."
+  ],
+  "desafios_reales": [
+
+    {
+      "tipo": "vida_real",
+      "titulo": "Espacio digno de la corte",
+      "descripcion": "La Reina Eleanor recuerda que el orden exterior refleja la claridad de la mente. Ordena tu mesa o lugar de estudio.",
+      "accion": "Limpiar y organizar tu escritorio o mesa de trabajo",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "El banquete real de la salud",
+      "descripcion": "Eleanor cuida el bienestar de su pueblo y te insta a nutrir tu cuerpo de forma adecuada.",
+      "accion": "Comer una pieza de fruta o una opción saludable",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Carta de gratitud",
+      "descripcion": "La soberana valora los lazos afectivos. Expresa agradecimiento a alguien que te haya ayudado recientemente.",
+      "accion": "Escribir un mensaje de agradecimiento a un familiar o amigo",
+      "recompensa": {
+        "xp": 7,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Aire fresco en la comarca",
+      "descripcion": "Un líder mantiene la mente despejada mediante el descanso e inhalando aire limpio.",
+      "accion": "Ventilar tu habitación durante unos minutos",
+      "recompensa": {
+        "xp": 4,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Hidratación soberana",
+      "descripcion": "Eleanor te pide priorizar tu salud básica antes de emprender cualquier marcha agotadora.",
+      "accion": "Beber un vaso de agua pura",
+      "recompensa": {
+        "xp": 3,
+        "oquos": 1
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Postura de majestuosidad",
+      "descripcion": "La reina observa que la disciplina física fortalece la voluntad personal.",
+      "accion": "Realizar estiramientos suaves de espalda y cuello durante 3 minutos",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Atavío impecable",
+      "descripcion": "Presentarse con pulcritud ante los demás muestra respeto hacia uno mismo y hacia el reino.",
+      "accion": "Doblar o guardar la ropa que haya quedado fuera de sitio",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Lectura en los archivos",
+      "descripcion": "El conocimiento nutre la capacidad de gobernar tu propia vida. Dedica tiempo a la lectura.",
+      "accion": "Leer 5 páginas de un libro o artículo educativo",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 4
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Reposar la mente",
+      "descripcion": "Incluso la realeza necesita breves momentos de desconexión para tomar mejores decisiones.",
+      "accion": "Tómate 5 minutos alejados de pantallas digitales",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "La palabra empeñada",
+      "descripcion": "Eleanor premia el cumplimiento de compromisos personales que hayas dejado pospuestos.",
+      "accion": "Cumplir una promesa o responsabilidad doméstica pendiente",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 4
+      }
+    }
+  ],
+  "misiones_reino": [
+
+    {
+      "titulo": "Inspección del Castillo",
+      "destino": "Castillo",
+      "descripcion": "Visita el Castillo Real y asegúrate de que el Centinela Roderick mantenga la guardia firme.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Comercio justo en el Mercado",
+      "destino": "Mercado",
+      "descripcion": "Acude al Mercado para verificar que los suministros lleguen sin contratiempos a la población.",
+      "recompensa": {
+        "xp": 9,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Abasto de la Granja",
+      "destino": "Granja",
+      "descripcion": "Viaja a la Granja y transmite la gratitud de la realeza a los agricultores por la última cosecha.",
+      "recompensa": {
+        "xp": 9,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Vigilancia en los senderos",
+      "destino": "Bosque",
+      "descripcion": "Recorre el Bosque para comprobar que las rutas de transporte permanezcan libres de peligros.",
+      "recompensa": {
+        "xp": 11,
+        "oquos": 5
+      }
+    },
+    {
+      "titulo": "Exploración subterránea",
+      "destino": "Cavernas",
+      "descripcion": "Dirígete a las Cavernas y evalúa la estabilidad de los caminos mineros para la corona.",
+      "recompensa": {
+        "xp": 12,
+        "oquos": 5
+      }
+    },
+    {
+      "titulo": "Consulta con las estrellas",
+      "destino": "Observatorio",
+      "descripcion": "Visita el Observatorio para recibir el último informe astronómico de Zephyr.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Monitoreo del norte helado",
+      "destino": "Nieve",
+      "descripcion": "Viaja a la región de Nieve para asegurar que los campamentos avanzados tengan cobijo.",
+      "recompensa": {
+        "xp": 14,
+        "oquos": 6
+      }
+    },
+    {
+      "titulo": "Apertura de rutas marítimas",
+      "destino": "Puerto",
+      "descripcion": "Revisa la llegada de navíos en el Puerto y cerciórate del correcto registro de aduanas.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Consulta histórica",
+      "destino": "Museo",
+      "descripcion": "Habla con Eldrin en el Museo para revisar los decretos antiguos sobre los tratados de paz.",
+      "recompensa": {
+        "xp": 9,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Recorrido de bienestar",
+      "destino": "Aldea",
+      "descripcion": "Patrulla las calles de la Aldea y constata que los vecinos vivan en tranquilidad.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    }
+  ],
+  "desafios_modales": [
+
+    {
+      "titulo": "Elegancia en el trato",
+      "descripcion": "Eleanor evalúa tu educación. Saluda con amabilidad y respeto a las personas con las que te cruces hoy.",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 2
+      }
+    },
+    {
+      "titulo": "Escucha cortesana",
+      "descripcion": "Un buen noble sabe escuchar. Presta atención plena a alguien sin interrumpir mientras habla.",
+      "recompensa": {
+        "xp": 7,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Agradecimiento sutil",
+      "descripcion": "Muestra gratitud espontánea empleando 'por favor' y 'gracias' en cada interacción de la jornada.",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 2
+      }
+    },
+    {
+      "titulo": "Tono moderado",
+      "descripcion": "La Reina valora la serenidad. Habla con un tono calmado y respetuoso, evitando alzar la voz.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Puntualidad real",
+      "descripcion": "Llegar a tiempo es la cortesía de la realeza. Inicia tu siguiente actividad exactamente a la hora fijada.",
+      "recompensa": {
+        "xp": 9,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Mesa con distinción",
+      "descripcion": "Demuestra etiqueta refinada durante tu comida, cuidando tus modales y postura.",
+      "recompensa": {
+        "xp": 7,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Gestos de caballerosidad",
+      "descripcion": "Ofrece tu ayuda o cede el paso amablemente a alguien en tu entorno cercano.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Palabras conciliadoras",
+      "descripcion": "Frente a un desacuerdo, responde de forma madura y pacífica sin caer en disputas innecesarias.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 5
+      }
+    },
+    {
+      "titulo": "Cuidado del entorno público",
+      "descripcion": "Trata las cosas comunes con respeto; recoge cualquier desperdicio que encuentres fuera de lugar.",
+      "recompensa": {
+        "xp": 7,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Serenidad ante el caos",
+      "descripcion": "Muestra aplomo y temple distinguido ante una complicación inesperada durante el día.",
+      "recompensa": {
+        "xp": 9,
+        "oquos": 4
+      }
+    }
+  ],
+  "consejos_de_la_realeza": [
+
+    "Un verdadero líder no busca ser servido, sino servir a los demás con humildad y justicia.",
+    "La paciencia y la diplomacia suelen resolver nudos que la espada jamás podría desatar.",
+    "No tomes decisiones importantes bajo el impulso del enojo ni firmes promesas durante la euforia.",
+    "El respeto de tu pueblo no se exige con títulos; se gana con consistencia y rectitud.",
+    "Saber escuchar a los sabios y al pueblo llano por igual es el verdadero pilar del buen juicio.",
+    "Cuidar los pequeños compromisos diarios prepara tu carácter para asumir grandes responsabilidades.",
+    "La verdadera grandeza se mide por la capacidad de mantener la calma cuando reina la incertidumbre.",
+    "Aprende a delegar y a confiar en las virtudes de quienes te rodean; nadie construye un reino a solas.",
+    "Admite tus tropiezos con dignidad; la honestidad fortalece tu autoridad mucho más que la vanidad.",
+    "Invierte tiempo en cultivar tu mente; la cultura y el saber son los tesoros más perdurables."
+  ],
+  "rumores": [
+
+    "Dicen que los diplomáticos de tierras lejanas enviaron una carta sellada a la corte esta mañana.",
+    "Se comenta en el mercado que la Reina Eleanor pasea de incógnito por la aldea al atardecer.",
+    "He oído que los antiguos pergaminos del palacio mencionan una fuente secreta bajo la montaña.",
+    "Cuentan que la corona planea financiar la restauración de los viejos acueductos del sur.",
+    "Los consejeros murmuran que se está preparando un gran festival de la cosecha para todo Mírrafen.",
+    "Dicen que Eleanor guardó una valiosa reliquia familiar en el cofre del gran salón.",
+    "Un viajero afirmó ver luces doradas sobre el bosque, coincidiendo con la visita real.",
+    "Rumoran que la Reina otorgará insignias de honor a los aventureros más constantes del reino.",
+    "Se dice que las rutas comerciales hacia el este volverán a abrirse pronto gracias a un acuerdo de paz.",
+    "Hablan de un antiguo decreto real que pronto revelará un nuevo territorio dentro de nuestras fronteras."
+  ],
+  "eventos_especiales": [
+
+    {
+      "id": "audiencia_real",
+      "titulo": "Audiencia con la Reina Eleanor",
+      "descripcion": "La soberana otorga una sesión privada para revisar los avances y esfuerzos de los ciudadanos.",
+      "accion": "Presentar un resumen organizado de tus logros o tareas completadas",
+      "recompensa": {
+        "xp": 20,
+        "oquos": 8
+      }
+    },
+    {
+      "id": "decreto_de_limpieza",
+      "titulo": "Gran Decreto de la Aldea",
+      "descripcion": "Eleanor proclama una jornada especial para renovar el orden en todos los hogares del reino.",
+      "accion": "Realizar una limpieza profunda en una habitación entera",
+      "recompensa": {
+        "xp": 25,
+        "oquos": 10
+      }
+    },
+    {
+      "id": "banquete_comunitario",
+      "titulo": "Preparativos para el Banquete",
+      "descripcion": "La nobleza patrocina un evento festivo para celebrar la constancia de Mírrafen.",
+      "accion": "Ayudar a cocinar o preparar alimentos para la familia",
+      "recompensa": {
+        "xp": 18,
+        "oquos": 7
+      }
+    },
+    {
+      "id": "consejo_de_honor",
+      "titulo": "Asamblea del Honor",
+      "descripcion": "Momento de reflexión donde Eleanor premia la conducta ejemplar dentro de la comunidad.",
+      "accion": "Identificar y corregir un mal hábito durante todo el día",
+      "recompensa": {
+        "xp": 22,
+        "oquos": 9
+      }
+    },
+    {
+      "id": "donativo_real",
+      "titulo": "Obra de Beneficencia",
+      "descripcion": "La reina invita a compartir la prosperidad con quienes más lo necesitan.",
+      "accion": "Separar objetos o prendas en buen estado para donar o regalar",
+      "recompensa": {
+        "xp": 20,
+        "oquos": 8
+      }
+    },
+    {
+      "id": "vigilia_de_sabiduria",
+      "titulo": "Noche de Sabiduría Real",
+      "descripcion": "Una jornada orientada al crecimiento intelectual y la introspección personal.",
+      "accion": "Dedicar 30 minutos continuos al estudio o aprendizaje de una nueva habilidad",
+      "recompensa": {
+        "xp": 24,
+        "oquos": 10
+      }
+    },
+    {
+      "id": "jornada_diplomatica",
+      "titulo": "Pacto de la Concordia",
+      "descripcion": "Eleanor destaca la importancia de promover la paz y resolver malentendidos.",
+      "accion": "Pedir disculpas o resolver un problema pendiente con otra persona",
+      "recompensa": {
+        "xp": 22,
+        "oquos": 9
+      }
+    },
+    {
+      "id": "inspeccion_aldeana",
+      "titulo": "Recorrido Soberano",
+      "descripcion": "La Reina camina personalmente por las calles evaluando la dedicación de su gente.",
+      "accion": "Completar tres tareas cotidianas seguidas sin posponer ninguna",
+      "recompensa": {
+        "xp": 26,
+        "oquos": 11
+      }
+    },
+    {
+      "id": "ceremonia_de_perseverancia",
+      "titulo": "Medalla de la Perseverancia",
+      "descripcion": "Premio otorgado por la corona a quienes no se rinden ante la complejidad cotidiana.",
+      "accion": "Finalizar un proyecto o tarea larga que llevaba días postergada",
+      "recompensa": {
+        "xp": 30,
+        "oquos": 12
+      }
+    },
+    {
+      "id": "brindis_por_mirrafen",
+      "titulo": "Brindis por la Prosperidad",
+      "descripcion": "Eleanor celebra los logros colectivos reunidos al término de un largo ciclo.",
+      "accion": "Hacer una lista de metas alcanzadas y planificar los próximos pasos",
+      "recompensa": {
+        "xp": 18,
+        "oquos": 7
+      }
+    }
+  ],
+  "historia_personal": [
+
+    {
+      "id": "historia_01",
+      "titulo": "La herencia del linaje",
+      "texto": "Nací en el castillo, pero mis primeros recuerdos de valor ocurrieron cuando mi madre me enseñó a mirar a la gente no como súbditos, sino como la esencia viva de Mírrafen."
+    },
+    {
+      "id": "historia_02",
+      "titulo": "La coronación tempestuosa",
+      "texto": "Asumí la corona durante una época de incertidumbre y cosechas difíciles. Aprendí rápido que un gobernante firme debe ser como un roble: fuerte frente al viento, pero flexible."
+    },
+    {
+      "id": "historia_03",
+      "titulo": "El refugio en la aldea",
+      "texto": "Cuando los compromisos de palacio resultan abrumadores, vengo a la aldea. Estar cerca de la vida cotidiana me recuerda el motivo exacto de cada decreto y ley que firmo."
+    },
+    {
+      "id": "historia_04",
+      "titulo": "El tratado olvidado",
+      "texto": "Hace años evité un conflicto fronterizo no mediante tropas, sino conversando pacientemente durante tres días enteros con los enviados vecinos. La diplomacia es una virtud poderosa."
+    },
+    {
+      "id": "historia_05",
+      "titulo": "El viejo mentor",
+      "texto": "Eldrin, el conservador del museo, fue uno de mis primeros maestros. De él aprendí a valorar la historia para evitar repetir las equivocaciones de quienes nos precedieron."
+    },
+    {
+      "id": "historia_06",
+      "titulo": "El valor de la guardia",
+      "texto": "Conozco al centinela Roderick desde que ambos éramos jóvenes. Su lealtad inquebrantable me reconforta; sé que las defensas del reino están en manos de un hombre justo."
+    },
+    {
+      "id": "historia_07",
+      "titulo": "El sello real",
+      "texto": "Guardo el sello familiar no como un símbolo de poder, sino como un recordatorio constante de que cada sello estampado afectará el bienestar de miles de vidas."
+    },
+    {
+      "id": "historia_08",
+      "titulo": "Tiempos de escasez",
+      "texto": "Durante un invierno inclemente, la corte racionó sus propios suministros al igual que el resto del pueblo. Aquella unión consolidó la confianza entre la corona y los ciudadanos."
+    },
+    {
+      "id": "historia_09",
+      "titulo": "La mirada hacia el futuro",
+      "texto": "Gobernar no se limita al día de hoy. Mi mayor anhelo es construir una base sólida para que las próximas generaciones de Mírrafen prosperen en paz y conocimiento."
+    },
+    {
+      "id": "historia_10",
+      "titulo": "El arte del temple",
+      "texto": "Muchos piensan que llevar la corona da libertad total, pero en verdad exige un autocontrol continuo. Antes de guiar a todo un reino, uno debe aprender a dominarse a sí mismo."
+    }
+  ],
+
+  "dialogos_por_nivel": {
+    "1": [
+      "Bienvenido a tu primer paso en Mírrafen. Todo gran camino comienza con una decisión humilde.",
+      "No pretendas abarcar el reino en un solo día; enfócate en la tarea que tienes enfrente."
+    ],
+    "2": [
+      "Veo que has comenzado a moverte por la aldea. La constancia empieza a rendir sus frutos.",
+      "Un paso a la vez construye el hábito más firme."
+    ],
+    "3": [
+      "Poco a poco adquieres el ritmo de un verdadero habitante de Mírrafen.",
+      "La disciplina en los pequeños detalles sostiene las más grandes empresas."
+    ],
+    "4": [
+      "Tus progresos no pasan desapercibidos. Sigue cultivando tu atención diaria.",
+      "Cada pequeño esfuerzo sumado es la piedra angular de tu carácter."
+    ],
+    "5": [
+      "Has alcanzado el nivel cinco. Demuestras que tu compromiso no era un simple impulso.",
+      "La constancia inicial es el puente hacia la verdadera maestría."
+    ],
+    "6": [
+      "Mantén la serenidad en tus ocupaciones. El entusiasmo pasa, pero el deber permanece.",
+      "Avanzar implica superar la pereza cotidiana con elegancia."
+    ],
+    "7": [
+      "Tu dedicación le da vitalidad a nuestra comunidad. Continúa con ese temple.",
+      "Un alma enfocada no se distrae por los obstáculos del camino."
+    ],
+    "8": [
+      "Tus acciones reflejan orden y método. Es una cualidad digna de admirar.",
+      "Mírrafen premia a quienes no dejan para mañana lo que corresponde hoy."
+    ],
+    "9": [
+      "Estás a las puertas de un primer gran hito. No aflojes tu marcha ahora.",
+      "La paciencia es la virtud que transforma el trabajo diario en sabiduría."
+    ],
+    "10": [
+      "Nivel diez. Ya no eres un principiante; tu nombre empieza a resonar con respeto.",
+      "Has demostrado firmeza. Ahora el reto es sostener este estándar en el tiempo."
+    ],
+    "11": [
+      "Los compromisos aumentan a medida que creces, pero sé que tu voluntad está a la altura.",
+      "No cuentes los días; haz que cada jornada cuente para tu propio desarrollo."
+    ],
+    "12": [
+      "La verdadera nobleza se demuestra cumpliendo la palabra empeñada día a día.",
+      "Tu reputación de persona responsable empieza a consolidarse en la comarca."
+    ],
+    "13": [
+      "Incluso cuando el cansancio asoma, mantener la postura distingue a los grandes.",
+      "Organizar tu tiempo es la mejor herramienta para proteger tu tranquilidad."
+    ],
+    "14": [
+      "Veo madurez en la forma en que gestionas tus responsabilidades.",
+      "Cada hábito positivo que refuerzas es una fortaleza invencible para tu mente."
+    ],
+    "15": [
+      "Nivel quince. Has superado con elegancia las primeras pruebas de constancia.",
+      "La confianza que la corte deposita en ti se basa en tu conducta intachable."
+    ],
+    "16": [
+      "No permitas que las distracciones banales te desvíen de tus metas principales.",
+      "El dominio propio es el primer paso para liderar cualquier aspecto de la vida."
+    ],
+    "17": [
+      "Tus esfuerzos continuos son un ejemplo silencioso para quienes te rodean.",
+      "Quien sabe gobernarse a sí mismo no teme a los contratiempos externos."
+    ],
+    "18": [
+      "La perseverancia rompe cualquier barrera, por alta que parezca al principio.",
+      "Cultiva la excelencia en cada acción, sin importar cuán modesta sea."
+    ],
+    "19": [
+      "Un paso más y alcanzarás un nuevo nivel de distinción. Mantén la concentración.",
+      "Los verdaderos logros se cuecen a fuego lento, con trabajo diario y paciente."
+    ],
+    "20": [
+      "Nivel veinte. Te has convertido en un pilar fundamental para el reino de Mírrafen.",
+      "Has probado que la disciplina no es una carga, sino la libertad de superarse."
+    ],
+    "21": [
+      "A partir de aquí, las exigencias son mayores, pero tu carácter es más fuerte.",
+      "La claridad de tus objetivos te protegerá de las dudas del camino."
+    ],
+    "22": [
+      "Un porte distinguido y una mente ordenada pueden resolver las mayores crisis.",
+      "Sigue perfeccionando tus rutinas; en ellas reside tu verdadera fuerza."
+    ],
+    "23": [
+      "La consistencia es el sello de las mentes brillantes. No te detengas.",
+      "Observo cómo resuelves cada deber con temple y eficacia. Excelente trabajo."
+    ],
+    "24": [
+      "Cada meta cumplida abre la puerta a un horizonte más amplio de posibilidades.",
+      "El respeto que inspiras se debe a la seriedad con la que afrontas cada día."
+    ],
+    "25": [
+      "Nivel veinticinco. Estás exactamente en la mitad de un trayecto extraordinario.",
+      "Tu trayectoria en Mírrafen demuestra que la determinación supera cualquier obstáculo."
+    ],
+    "26": [
+      "Que el orgullo de lo alcanzado no nuble tu deseo de seguir aprendiendo.",
+      "La verdadera humildad radica en saber que siempre podemos mejorar un poco más."
+    ],
+    "27": [
+      "Tus decisiones son cada vez más certeras y maduras. Es un honor observarte.",
+      "El orden que mantienes a tu alrededor refleja la paz que reina en tu interior."
+    ],
+    "28": [
+      "Las grandes obras del reino se erigieron con el mismo rigor que tú aplicas hoy.",
+      "Un espíritu constante no se quiebra ante la rutina; la transforma en maestría."
+    ],
+    "29": [
+      "Estás rozando una nueva cima. Afronta el último tramo con tu distinción habitual.",
+      "La serenidad ante la presión es la marca indiscutible de un líder."
+    ],
+    "30": [
+      "Nivel treinta. Tu recorrido es una lección viva de perseverancia y honor.",
+      "Te has ganado un lugar de profundo respeto dentro y fuera de estas murallas."
+    ],
+    "31": [
+      "Los desafíos de hoy preparan el triunfo de mañana. Sigue adelante con entereza.",
+      "No hay tarea insignificante cuando se realiza con propósito y elegancia."
+    ],
+    "32": [
+      "Tu capacidad para mantener el enfoque en medio del ruido es admirable.",
+      "Un carácter bien templado es el escudo más firme contra la apatía."
+    ],
+    "33": [
+      "Continúa refinando tus hábitos; el conocimiento aplicado es verdadero poder.",
+      "La nobleza de tus actos diarios engrandece a todo el pueblo de Mírrafen."
+    ],
+    "34": [
+      "Cada día que cumples con tu deber refuerzas los cimientos de tu propio futuro.",
+      "La perseverancia transforma lo ordinario en una hazaña digna de recordar."
+    ],
+    "35": [
+      "Nivel treinta y cinco. Muy pocos alcanzan este grado de madurez y constancia.",
+      "Tu compromiso constante es el reflejo de una voluntad inquebrantable."
+    ],
+    "36": [
+      "Mantén la guardia alta frente a la complacencia; la excelencia requiere cuidado diario.",
+      "La sabiduría no es acumular datos, sino actuar con rectitud en cada instante."
+    ],
+    "37": [
+      "Tu serenidad transmite confianza a todos los habitantes de la aldea.",
+      "Afrontar las responsabilidades con una sonrisa es la cima de la elegancia."
+    ],
+    "38": [
+      "El tiempo invertido en cultivar la disciplina siempre rinde los mejores frutos.",
+      "Cada paso que das demuestra la solidez de los valores que te guían."
+    ],
+    "39": [
+      "Te aproximas a un nuevo umbral de maestría. Mantén el ritmo y la concentración.",
+      "La grandeza no se proclama; se demuestra en el silencio de la tarea cumplida."
+    ],
+    "40": [
+      "Nivel cuarenta. Tu nombre queda grabado entre los ciudadanos más ilustres de Mírrafen.",
+      "Has alcanzado una solidez ejemplar. Tu constancia es inspiradora."
+    ],
+    "41": [
+      "En los niveles más altos, el desafío es perfeccionar los detalles más sutiles.",
+      "La verdadera maestría consiste en hacer que lo difícil parezca natural."
+    ],
+    "42": [
+      "Tu presencia en el reino es sinónimo de orden, respeto y determinación.",
+      "Sigue demostrando que el rigor personal es el camino más directo al éxito."
+    ],
+    "43": [
+      "Un espíritu instruido y disciplinado no teme a ningún cambio ni incertidumbre.",
+      "Las riendas de tu destino están firmemente en tus manos. Continúa así."
+    ],
+    "44": [
+      "Cada jornada superada con éxito es un tributo a tu propia capacidad de superación.",
+      "La virtud de la paciencia ha florecido en ti de manera extraordinaria."
+    ],
+    "45": [
+      "Nivel cuarenta y cinco. Muy pocos rozan las cumbres que tú estás pisando hoy.",
+      "Tu historia en el reino es testimonio de que la voluntad rompe cualquier límite."
+    ],
+    "46": [
+      "Estás en el tramo final hacia la cumbre. Mantén la dignidad y la cabeza alta.",
+      "El respeto de la corte y del pueblo se revalida con cada buen hábito que mantienes."
+    ],
+    "47": [
+      "La consistencia demostrada hasta aquí es la marca de una mente excepcional.",
+      "No hay atajos para la grandeza; cada nivel ganado es un trofeo a tu esfuerzo."
+    ],
+    "48": [
+      "Tu temple ante la rutina ha sido impecable. Mírrafen se enorgullece de ti.",
+      "Siente la satisfacción del deber cumplido mientras te preparas para el tramo final."
+    ],
+    "49": [
+      "A un solo nivel del máximo reconocimiento. Recorre este último tramo con solemnidad.",
+      "Todo el camino recorrido te ha preparado para sostener la victoria definitiva."
+    ],
+    "50": [
+      "Nivel cincuenta. Has alcanzado la cima de la maestría, la disciplina y el honor en Mírrafen.",
+      "Como Reina, me inclino ante tu extraordinaria constancia. Eres un ejemplo eterno para este reino."
+    ]
+  }
+}

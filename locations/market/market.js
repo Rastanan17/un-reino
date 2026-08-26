@@ -1,1407 +1,972 @@
 // =======================================
 // MERCADO DE MÍRRAFEN
 // =======================================
-
 // =======================================
 // PRODUCTOS DEL MERCADO
 // =======================================
-
 let productosMercado = [];
 let productoActual = null;
-
 // =======================================
 // DIÁLOGOS DE BORIN
 // =======================================
-
 let dialogosBorin = {};
-
 // =======================================
 // DESAFÍOS DEL MERCADO
 // =======================================
-
 let desafiosMercado = [];
 let desafioActual = null;
-
 // =======================================
 // MOSTRAR MERCADO
 // =======================================
-
 function mostrarMercado(){
-establecerLugarTutorial("mercado");
+    establecerLugarTutorial("mercado");
     const jugador = cargarJugador();
-
     if(!jugador){
         console.warn("No hay un jugador activo.");
         return;
     }
-
     const momento = obtenerMomentoDelDia();
-
-    console.log(
-        "🕐 Momento del día:",
-        momento
-    );
-
+    console.log("🕐 Momento del día:", momento);
     const content = document.getElementById("content");
-
     if(!content){
         console.error("No se encontró #content.");
         return;
     }
-
     // ===================================
     // ESCENARIO DEL MERCADO
     // ===================================
-
     content.innerHTML = `
-
         <section class="mercado ${momento}">
-
             <!-- =================================
                  DIÁLOGO DE BORIN
             ================================== -->
-
             <div id="dialogoBorin" class="dialogo-borin"></div>
-
             <!-- =================================
                  SALIR AL MAPA
             ================================== -->
-
-            <div
-                class="mercado-salida"
-                onclick="irAlMapaDesdeMercado()"
-            >
-
-                <img
-                    src="assets/images/items/exit.png"
-                    alt="Salir"
-                >
-
+            <div class="mercado-salida" onclick="irAlMapaDesdeMercado()">
+                <img src="assets/images/items/exit.png" alt="Salir">
             </div>
-
         </section>
-
     `;
-
     // ===================================
     // CARGAR DATOS DEL MERCADO
     // ===================================
-
     Promise.all([
-
         cargarProductosMercado(),
         cargarDialogosBorin(),
         cargarDesafiosMercado()
-
     ]).then(() => {
-
         cargarItemsMercado();
-
     });
-
 }
-
 // =======================================
 // VOLVER AL MAPA
 // =======================================
-
 function irAlMapaDesdeMercado(){
-
     console.log("Saliendo del Mercado → Mapa");
-
-    irA(
-        "market",
-        "map",
-        mostrarMapaReino
-    );
-
+    irA("market", "map", mostrarMapaReino);
 }
-
 // =======================================
 // CARGAR PRODUCTOS DEL MERCADO
 // =======================================
-
 async function cargarProductosMercado(){
-
     try{
-
         const respuesta = await fetch(
             "locations/market/data/shop.json"
         );
-
         if(!respuesta.ok){
-
-            throw new Error(
-                `Error HTTP ${respuesta.status}`
-            );
-
+            throw new Error(`Error HTTP ${respuesta.status}`);
         }
-
         productosMercado = await respuesta.json();
-
-        console.log(
-            "🏪 Productos del mercado cargados:",
-            productosMercado
+        console.log("🏪 Productos del mercado cargados:", productosMercado
         );
-
         return productosMercado;
-
     }catch(error){
-
         console.error(
             "❌ Error al cargar shop.json:",
             error
         );
-
         productosMercado = [];
-
         return [];
-
     }
-
 }
-
 // =======================================
 // CARGAR DIÁLOGOS DE BORIN
 // =======================================
-
 async function cargarDialogosBorin(){
-
     try{
-
         const respuesta = await fetch(
             "locations/market/data/dialogs_borin.json"
         );
-
         const datos = await respuesta.json();
-
         dialogosBorin = datos.dialogs_borin;
-
         console.log(
             "🧙‍♂️ Diálogos de Borin cargados:",
             dialogosBorin
         );
-
     }catch(error){
-
         console.error(
             "❌ Error cargando diálogos de Borin:",
             error
         );
-
     }
-
 }
-
 // =======================================
 // OBTENER DIÁLOGO ALEATORIO DE BORIN
 // =======================================
-
 function obtenerDialogoBorin(categoria){
-
     const dialogos = dialogosBorin[categoria];
-
     if(!dialogos || dialogos.length === 0){
-
         console.warn(
             "⚠️ No existen diálogos para:",
             categoria
         );
-
         return "...";
-
     }
-
     const indice = Math.floor(
         Math.random() * dialogos.length
     );
-
     return dialogos[indice];
-
 }
-
 // =======================================
 // SELECCIONAR ITEM DEL MERCADO
 // =======================================
-
 function seleccionarItemMercado(nombre){
-
     console.log(
         "🔎 Buscando producto para:",
         nombre
     );
-
     const producto = productosMercado.find(
         item => item.item === nombre
     );
-
     if(!producto){
-
         console.warn(
             "⚠️ No existe producto para el objeto:",
             nombre
         );
-
         return;
-
     }
-
     console.log(
         "🛒 PRODUCTO SELECCIONADO:",
         producto
     );
-
     // ===================================
     // DIÁLOGO DE BORIN
     // ===================================
-
     const dialogo = obtenerDialogoBorin(
         "seleccionar_item"
     );
-
     console.log(
         "🧙‍♂️ BORIN:",
         dialogo
     );
-
     const panel = document.getElementById(
         "dialogoBorin"
     );
-
     if(panel){
-
         panel.innerHTML = `
-
             <div class="borin-dialogo">
-
                 <div class="borin-nombre">
                     🧙‍♂️ Borin
                 </div>
-
                 <div class="borin-texto">
                     ${dialogo}
                 </div>
-
                 <div class="producto-dialogo">
-
                     <div class="producto-nombre">
                         ${producto.icono} ${producto.nombre}
                     </div>
-
                     <div class="producto-precio">
                         🪙 ${producto.precio} Oquos
                     </div>
-
                 </div>
-
                 <div class="producto-botones">
-
                     <button
                         class="boton-conseguir"
                         onclick="conseguirProductoMercado(${producto.id})"
                     >
                         CONSEGUIR
                     </button>
-
                     <button
                         class="boton-volver"
                         onclick="cerrarProductoMercado()"
                     >
                         VOLVER
                     </button>
-
                 </div>
-
-            </div>
-
+           </div>
         `;
-
     }
-
 }
-
 // =======================================
 // CONSEGUIR PRODUCTO
 // =======================================
-
 function conseguirProductoMercado(id){
-
     console.log(
         "🛒 CONSEGUIR PRODUCTO:",
         id
     );
-
     const producto = productosMercado.find(
         item => item.id === id
     );
-
     if(!producto){
-
-        console.warn(
+       console.warn(
             "⚠️ No se encontró el producto:",
             id
         );
-
         return;
-
     }
-
     productoActual = producto;
-
     console.log(
         "🛒 PRODUCTO A CONFIRMAR:",
         producto
     );
-
     // ===================================
-    // DIÁLOGO DE CONFIRMACIÓN
+   // DIÁLOGO DE CONFIRMACIÓN
     // ===================================
-
     const dialogo = obtenerDialogoBorin(
-        "confirmar_item"
+       "confirmar_item"
     );
-
     const panel = document.getElementById(
         "dialogoBorin"
     );
-
     if(!panel){
-
         console.error(
             "❌ No se encontró #dialogoBorin."
         );
-
         return;
-
     }
-
     panel.innerHTML = `
-
         <div class="borin-dialogo">
-
             <div class="borin-nombre">
-                🧙‍♂️ Borin
-            </div>
-
+               🧙‍♂️ Borin
+           </div>
             <div class="borin-texto">
-                ${dialogo}
-            </div>
-
+               ${dialogo}
+           </div>
             <div class="producto-dialogo">
-
                 <div class="producto-nombre">
-                    ${producto.icono}
-                    ${producto.nombre}
-                </div>
-
+                   ${producto.icono}
+                   ${producto.nombre}
+               </div>
                 <div class="producto-precio">
-                    🪙 ${producto.precio} Oquos
-                </div>
-
+                   🪙 ${producto.precio} Oquos
+               </div>
             </div>
-
             <div class="producto-botones">
-
                 <button
-                    class="boton-conseguir"
-                    onclick="confirmarItemMercado(${producto.id})"
-                >
-                    SÍ, QUIERO
-                </button>
-
+                   class="boton-conseguir"
+                   onclick="confirmarItemMercado(${producto.id})"
+               >
+                   SÍ, QUIERO
+               </button>
                 <button
-                    class="boton-volver"
-                    onclick="rechazarOfertaMercado(${producto.id})"
-                >
-                    NO, VOLVER
-                </button>
-
+                   class="boton-volver"
+                   onclick="rechazarOfertaMercado(${producto.id})"
+               >
+                   NO, VOLVER
+               </button>
             </div>
-
         </div>
-
     `;
-
 }
-
 // =======================================
 // RECHAZAR OFERTA
 // =======================================
-
 function rechazarOfertaMercado(id){
-
     console.log(
         "❌ OFERTA RECHAZADA:",
         id
     );
-
     const producto = productosMercado.find(
-        item => item.id === id
-    );
-
+       item => item.id === id
+   );
     if(!producto){
-
         console.warn(
-            "⚠️ No se encontró el producto:",
-            id
-        );
-
+           "⚠️ No se encontró el producto:",
+           id
+       );
         return;
-
     }
-
     const dialogo = obtenerDialogoBorin(
-        "rechazar_oferta"
-    );
-
+       "rechazar_oferta"
+   );
     const panel = document.getElementById(
-        "dialogoBorin"
-    );
-
+       "dialogoBorin"
+   );
     if(!panel){
-        return;
-    }
-
+       return;
+   }
     panel.innerHTML = `
-
         <div class="borin-dialogo">
-
             <div class="borin-nombre">
-                🧙‍♂️ Borin
-            </div>
-
+               🧙‍♂️ Borin
+           </div>
             <div class="borin-texto">
-                ${dialogo}
-            </div>
-
+               ${dialogo}
+           </div>
             <div class="producto-botones">
-
                 <button
-                    class="boton-conseguir"
-                    onclick="ofrecerOtroItemMercado()"
-                >
-                    VER OTRA COSA
-                </button>
-
+                   class="boton-conseguir"
+                   onclick="ofrecerOtroItemMercado()"
+               >
+                   VER OTRA COSA
+               </button>
             </div>
-
         </div>
-
     `;
-
 }
-
 // =======================================
 // OFRECER OTRO ITEM
 // =======================================
-
 function ofrecerOtroItemMercado(){
-
     console.log(
-        "🔄 BORIN OFRECE OTRO ITEM"
-    );
-
+       "🔄 BORIN OFRECE OTRO ITEM"
+   );
     const dialogo = obtenerDialogoBorin(
-        "ofrecer_otro_item"
-    );
-
+       "ofrecer_otro_item"
+   );
     const panel = document.getElementById(
-        "dialogoBorin"
-    );
-
+       "dialogoBorin"
+   );
     if(!panel){
-        return;
-    }
-
+       return;
+   }
     panel.innerHTML = `
-
         <div class="borin-dialogo">
-
             <div class="borin-nombre">
-                🧙‍♂️ Borin
-            </div>
-
+               🧙‍♂️ Borin
+           </div>
             <div class="borin-texto">
-                ${dialogo}
-            </div>
-
+               ${dialogo}
+           </div>
             <div class="producto-botones">
-
                 <button
-                    class="boton-volver"
-                    onclick="cerrarProductoMercado()"
-                >
-                    VOLVER A MIRAR
-                </button>
-
+                   class="boton-volver"
+                   onclick="cerrarProductoMercado()"
+               >
+                   VOLVER A MIRAR
+               </button>
             </div>
-
         </div>
-
     `;
-
 }
-
 // =======================================
 // CONFIRMAR ITEM DEL MERCADO
 // =======================================
-
 function confirmarItemMercado(id){
-
     console.log(
-        "✅ ITEM CONFIRMADO:",
-        id
-    );
-
+       "✅ ITEM CONFIRMADO:",
+       id
+   );
     const producto = productosMercado.find(
-        item => item.id === id
-    );
-
+       item => item.id === id
+   );
     if(!producto){
-
         console.warn(
-            "⚠️ No se encontró el producto:",
-            id
-        );
-
+           "⚠️ No se encontró el producto:",
+           id
+       );
         return;
-
     }
-
     console.log(
-        "🛒 ITEM CONFIRMADO:",
-        producto
-    );
-
+       "🛒 ITEM CONFIRMADO:",
+       producto
+   );
     // ===================================
-    // VERIFICAR OQUOS
+   // VERIFICAR OQUOS
     // ===================================
-
     const jugador = cargarJugador();
-
     if(!jugador){
-
         console.warn(
-            "⚠️ No se encontró el jugador activo."
+           "⚠️ No se encontró el jugador activo."
         );
-
         return;
-
     }
-
     if(jugador.oquos < producto.precio){
-
         console.log(
-            "🪙 OQUOS INSUFICIENTES:",
-            jugador.oquos,
-            "/",
-            producto.precio
-        );
-
+           "🪙 OQUOS INSUFICIENTES:",
+           jugador.oquos,
+           "/",
+           producto.precio
+       );
         const dialogo = obtenerDialogoBorin(
-            "sin_oquos"
-        );
-
+           "sin_oquos"
+       );
         const panel = document.getElementById(
-            "dialogoBorin"
-        );
-
+           "dialogoBorin"
+       );
         if(!panel){
-            return;
-        }
-
+           return;
+       }
         panel.innerHTML = `
-
             <div class="borin-dialogo">
-
                 <div class="borin-nombre">
-                    🧙‍♂️ Borin
-                </div>
-
+                   🧙‍♂️ Borin
+               </div>
                 <div class="borin-texto">
-                    ${dialogo}
-                </div>
-
+                   ${dialogo}
+               </div>
                 <div class="desafio-opciones">
-
                     <button
-                        class="btn-desafio"
-                        onclick="indecisoMercado()"
-                    >
-                        👀 SEGUIR MIRANDO
-                    </button>
-
+                       class="btn-desafio"
+                       onclick="indecisoMercado()"
+                   >
+                       👀 SEGUIR MIRANDO
+                   </button>
                     <button
-                        class="btn-desafio"
-                        onclick="salirDelMercado()"
-                    >
-                        🚪 SALIR
-                    </button>
-
+                       class="btn-desafio"
+                       onclick="salirDelMercado()"
+                   >
+                       🚪 SALIR
+                   </button>
                 </div>
-
             </div>
-
         `;
-
         return;
-
     }
-
     // ===================================
-    // BORIN — ELEGIR TIPO DE DESAFÍO
-    // ===================================
-
+   // BORIN — ELEGIR TIPO DE DESAFÍO
+   // ===================================
     const dialogo = obtenerDialogoBorin(
-        "elegir_tipo_desafio"
-    );
-
+       "elegir_tipo_desafio"
+   );
     const panel = document.getElementById(
-        "dialogoBorin"
-    );
-
+       "dialogoBorin"
+   );
     if(!panel){
-        return;
-    }
-
+       return;
+   }
     panel.innerHTML = `
-
         <div class="borin-dialogo">
-
             <div class="borin-nombre">
-                🧙‍♂️ Borin
-            </div>
-
+               🧙‍♂️ Borin
+           </div>
             <div class="borin-texto">
-                ${dialogo}
-            </div>
-
+               ${dialogo}
+           </div>
             <div class="desafio-opciones">
-
                 <button
-                    class="btn-desafio"
-                    onclick="elegirDesafioPregunta(${producto.id})"
-                >
-                    🧠 Responder
-                </button>
-
+                   class="btn-desafio"
+                   onclick="elegirDesafioPregunta(${producto.id})"
+               >
+                   🧠 Responder
+               </button>
                 <button
-                    class="btn-desafio"
+                   class="btn-desafio"
                     onclick="elegirDesafioAccion(${producto.id})"
-                >
-                    🎯 Desafío
-                </button>
+               >
+                   🎯 Desafío
+               </button>
 
-            </div>
+          </div>
 
-        </div>
-
+       </div>
     `;
-
 }
-
 // =======================================
 // INDECISO
 // =======================================
-
 function indecisoMercado(){
-
     console.log(
-        "🤔 JUGADOR INDECISO"
-    );
-
+       "🤔 JUGADOR INDECISO"
+   );
     const dialogo = obtenerDialogoBorin(
-        "indeciso_pensando"
-    );
-
+       "indeciso_pensando"
+   );
     const panel = document.getElementById(
-        "dialogoBorin"
-    );
+       "dialogoBorin"
+   );
 
-    if(!panel){
-        return;
-    }
-
+   if(!panel){
+       return;
+   }
     panel.innerHTML = `
-
         <div class="borin-dialogo">
-
             <div class="borin-nombre">
-                🧙‍♂️ Borin
-            </div>
-
+               🧙‍♂️ Borin
+           </div>
             <div class="borin-texto">
                 ${dialogo}
-            </div>
-
+           </div>
             <div class="desafio-opciones">
-
                 <button
-                    class="btn-desafio"
-                    onclick="ofrecerOtroItemMercado()"
-                >
+                   class="btn-desafio"
+                   onclick="ofrecerOtroItemMercado()"
+               >
                     👀 VER OTRO
-                </button>
-
+               </button>
                 <button
                     class="btn-desafio"
-                    onclick="salirDelMercado()"
-                >
-                    🚪 SALIR
+                   onclick="salirDelMercado()"
+               >
+                   🚪 SALIR
                 </button>
-
             </div>
-
         </div>
-
     `;
-
 }
-
 // =======================================
 // ELEGIR DESAFÍO — PREGUNTA
 // =======================================
-
 function elegirDesafioPregunta(id){
-
     console.log(
-        "🧠 TIPO DE DESAFÍO: PREGUNTA",
-        id
+       "🧠 TIPO DE DESAFÍO: PREGUNTA",
+       id
     );
-
     const dialogo = obtenerDialogoBorin(
-        "opcion_responder"
-    );
-
+       "opcion_responder"
+   );
     const desafios = desafiosMercado.filter(
         desafio => desafio.tipo === "responder"
-    );
-
+   );
     if(desafios.length === 0){
-
         console.warn(
             "⚠️ No hay desafíos de pregunta disponibles."
-        );
-
+       );
         return;
-
     }
-
     const desafio =
-        desafios[
+       desafios[
             Math.floor(
-                Math.random() * desafios.length
-            )
-        ];
-
+               Math.random() * desafios.length
+           )
+       ];
     console.log(
         "❓ DESAFÍO DE PREGUNTA SELECCIONADO:",
-        desafio
-    );
-
+       desafio
+   );
     mostrarDesafioPregunta(
-        desafio,
+       desafio,
         dialogo
-    );
-
+   );
 }
-
 // =======================================
 // ELEGIR DESAFÍO — ACCIÓN
 // =======================================
-
 function elegirDesafioAccion(id){
-
     console.log(
-        "🎯 TIPO DE DESAFÍO: ACCIÓN",
-        id
-    );
-
+       "🎯 TIPO DE DESAFÍO: ACCIÓN",
+       id
+   );
     const dialogo = obtenerDialogoBorin(
         "opcion_desafio"
-    );
-
+   );
     const desafios = desafiosMercado.filter(
-        desafio => desafio.tipo === "desafio"
+       desafio => desafio.tipo === "desafio"
     );
-
     if(desafios.length === 0){
-
         console.warn(
-            "⚠️ No hay desafíos de acción disponibles."
-        );
+           "⚠️ No hay desafíos de acción disponibles."
+       );
 
-        return;
-
+       return;
     }
-
     const desafio =
-        desafios[
-            Math.floor(
-                Math.random() * desafios.length
+       desafios[
+           Math.floor(
+               Math.random() * desafios.length
             )
-        ];
-
+       ];
     const panel = document.getElementById(
-        "dialogoBorin"
-    );
+       "dialogoBorin"
+   );
 
-    if(!panel){
-        return;
+   if(!panel){
+       return;
     }
-
     panel.innerHTML = `
-
         <div class="borin-dialogo">
-
             <div class="borin-nombre">
-                🧙‍♂️ Borin
-            </div>
+               🧙‍♂️ Borin
+           </div>
 
-            <div class="borin-texto">
-                ${dialogo}
-            </div>
-
+           <div class="borin-texto">
+               ${dialogo}
+           </div>
             <div class="desafio-panel">
 
-                <div class="desafio-titulo">
-                    🎯 DESAFÍO
-                </div>
+               <div class="desafio-titulo">
+                   🎯 DESAFÍO
+               </div>
 
-                <div class="desafio-texto">
-                    ${desafio.texto}
+               <div class="desafio-texto">
+                   ${desafio.texto}
                 </div>
-
                 <button
-                    class="btn-desafio-completar"
-                    onclick="completarDesafioMercado('${desafio.id}', ${id})"
-                >
+                   class="btn-desafio-completar"
+                   onclick="completarDesafioMercado('${desafio.id}', ${id})"
+               >
                     ${desafio.boton_completar}
-                </button>
-
+               </button>
             </div>
-
         </div>
-
     `;
-
 }
-
 // =======================================
 // COMPLETAR DESAFÍO
 // =======================================
-
 function completarDesafioMercado(
     desafioId,
     productoId
 ){
-
     console.log(
-        "🎯 DESAFÍO COMPLETADO:",
-        desafioId
-    );
-
+       "🎯 DESAFÍO COMPLETADO:",
+       desafioId
+   );
     const desafio = desafiosMercado.find(
-        item => item.id === desafioId
+       item => item.id === desafioId
     );
-
     if(!desafio){
-
         console.warn(
-            "⚠️ No se encontró el desafío:",
-            desafioId
+           "⚠️ No se encontró el desafío:",
+           desafioId
         );
-
         return;
-
     }
-
     const dialogo = obtenerDialogoBorin(
-        "desafio_completado"
-    );
-
+       "desafio_completado"
+   );
     const panel = document.getElementById(
         "dialogoBorin"
-    );
-
+   );
     if(!panel){
-        return;
-    }
-
+       return;
+   }
     panel.innerHTML = `
-
         <div class="borin-dialogo">
 
-            <div class="borin-nombre">
-                🧙‍♂️ Borin
-            </div>
+           <div class="borin-nombre">
+               🧙‍♂️ Borin
+           </div>
 
-            <div class="borin-texto">
-                ${dialogo}
-            </div>
+           <div class="borin-texto">
+               ${dialogo}
+           </div>
 
-            <div class="desafio-exito">
-                🎉 ¡DESAFÍO SUPERADO!
-            </div>
-
+           <div class="desafio-exito">
+               🎉 ¡DESAFÍO SUPERADO!
+           </div>
         </div>
-
     `;
 
-    // ===================================
+   // ===================================
     // EFECTUAR COMPRA
-    // ===================================
-
+   // ===================================
     efectuarCompraMercado();
-
 }
-
 // =======================================
 // EFECTUAR COMPRA
 // =======================================
-
 function efectuarCompraMercado(){
-
     console.log(
-        "🪙 EFECTUANDO COMPRA"
-    );
+       "🪙 EFECTUANDO COMPRA"
+   );
 
-    if(!productoActual){
-
+   if(!productoActual){
         console.warn(
             "⚠️ No existe producto actual."
-        );
-
+       );
         return;
-
     }
-
     const jugador = cargarJugador();
-
-    if(!jugador){
-
+   if(!jugador){
         console.warn(
-            "⚠️ No se encontró el jugador activo."
-        );
-
+           "⚠️ No se encontró el jugador activo."
+       );
         return;
-
     }
-
     const precio = productoActual.precio;
-
-    console.log(
-        "🪙 SALDO ANTES:",
-        jugador.oquos
-    );
-
+   console.log(
+       "🪙 SALDO ANTES:",
+       jugador.oquos
+   );
     console.log(
         "🪙 PRECIO:",
-        precio
-    );
-
+       precio
+   );
     // ===================================
-    // DESCONTAR OQUOS
+   // DESCONTAR OQUOS
     // ===================================
-
     jugador.oquos -= precio;
-
     guardarJugador(jugador);
-
     actualizarPerfil();
-
-    console.log(
-        "🪙 OQUOS DESPUÉS:",
+   console.log(
+       "🪙 OQUOS DESPUÉS:",
         jugador.oquos
-    );
-
+   );
     // ===================================
     // DIÁLOGO COMPRA EXITOSA
-    // ===================================
-
+   // ===================================
     const dialogo = obtenerDialogoBorin(
         "compra_exitosa"
     );
-
     const panel = document.getElementById(
-        "dialogoBorin"
-    );
-
+       "dialogoBorin"
+   );
     if(!panel){
-        return;
+       return;
     }
-
     panel.innerHTML = `
-
         <div class="borin-dialogo">
-
             <div class="borin-nombre">
-                🧙‍♂️ Borin
-            </div>
-
+               🧙‍♂️ Borin
+           </div>
             <div class="borin-texto">
                 ${dialogo}
-            </div>
-
+           </div>
             <div class="producto-conseguido">
-                🎁 ¡PRODUCTO CONSEGUIDO!
+               🎁 ¡PRODUCTO CONSEGUIDO!
             </div>
-
             <div class="compra-resumen">
-
                 💸 Gastaste:
-                <strong>${precio} Oquos</strong>
-
+               <strong>${precio} Oquos</strong>
                 <br>
-
                 🪙 Te quedan:
                 <strong>${jugador.oquos} Oquos</strong>
-
             </div>
-
             <div class="desafio-opciones">
-
                 <button
-                    class="btn-desafio"
+                   class="btn-desafio"
                     onclick="volverAElegirProducto()"
-                >
-                    🛒 Elegir otro
-                </button>
-
+               >
+                   🛒 Elegir otro
+               </button>
                 <button
-                    class="btn-desafio"
+                   class="btn-desafio"
                     onclick="salirDelMercado()"
-                >
-                    🚪 Salir
-                </button>
-
+               >
+                   🚪 Salir
+               </button>
             </div>
 
-        </div>
-
+       </div>
     `;
-
 }
-
 // =======================================
 // MOSTRAR PREGUNTA
 // =======================================
-
 function mostrarDesafioPregunta(
     desafio,
     dialogo
 ){
-
     console.log(
         "❓ MOSTRANDO PREGUNTA:",
         desafio
     );
-
     const panel = document.getElementById(
-        "dialogoBorin"
-    );
-
+       "dialogoBorin"
+   );
     if(!panel){
-
         console.error(
             "No se encontró #dialogoBorin."
-        );
-
+       );
         return;
-
     }
 
-    panel.innerHTML = `
-
+   panel.innerHTML = `
         <div class="borin-dialogo">
-
             <div class="borin-nombre">
-                🧙‍♂️ Borin, el mercader
-            </div>
+               🧙‍♂️ Borin, el mercader
+           </div>
 
-            <div class="borin-texto">
-                ${dialogo}
-            </div>
-
-            <div class="desafio-panel">
-
+           <div class="borin-texto">
+               ${dialogo}
+           </div>
+           <div class="desafio-panel">
                 <div class="desafio-titulo">
-                    🧠 PREGUNTA
-                </div>
-
-                <div class="desafio-texto">
-                    ${desafio.texto}
-                </div>
-
+                  🧠 PREGUNTA
+              </div>
+              <div class="desafio-texto">
+                   ${desafio.texto}
+               </div>
                 <div class="desafio-opciones">
-
                     ${desafio.opciones.map(
-                        (opcion, indice) => `
-
+                       (opcion, indice) => `
                         <button
-                            class="boton-respuesta"
-                            onclick="responderDesafio(${indice})"
-                        >
-                            ${opcion}
-                        </button>
-
-                    `
-                    ).join("")}
-
+                          class="boton-respuesta"
+                           onclick="responderDesafio(${indice})"
+                       >
+                           ${opcion}
+                       </button>
+                   `
+                   ).join("")}
                 </div>
-
             </div>
-
         </div>
-
     `;
-
     desafioActual = desafio;
-
 }
-
 // =======================================
 // RESPONDER DESAFÍO
 // =======================================
-
 function responderDesafio(indice){
-
     if(!desafioActual){
-
         console.warn(
-            "⚠️ No hay desafío activo."
-        );
-
+           "⚠️ No hay desafío activo."
+       );
         return;
-
     }
-
-    console.log(
-        "🧠 RESPUESTA ELEGIDA:",
-        indice
-    );
-
-    // ===================================
-    // RESPUESTA INCORRECTA
-    // ===================================
-
+   console.log(
+       "🧠 RESPUESTA ELEGIDA:",
+       indice
+   );
+   // ===================================
+   // RESPUESTA INCORRECTA
+   // ===================================
     if(indice !== desafioActual.respuesta_correcta){
-
         console.log(
-            "❌ RESPUESTA INCORRECTA:",
-            desafioActual.id
-        );
-
+          "❌ RESPUESTA INCORRECTA:",
+           desafioActual.id
+       );
         const dialogo = obtenerDialogoBorin(
-            "respuesta_incorrecta"
-        );
-
+           "respuesta_incorrecta"
+       );
         const panel = document.getElementById(
-            "dialogoBorin"
-        );
-
+           "dialogoBorin"
+      );
         if(panel){
-
             panel.innerHTML = `
-
                 <div class="borin-dialogo">
-
                     <div class="borin-nombre">
-                        🧙‍♂️ Borin
-                    </div>
-
+                       🧙‍♂️ Borin
+                  </div>
                     <div class="borin-texto">
-                        ${dialogo}
-                    </div>
-
+                       ${dialogo}
+                   </div>
                     <button
-                        class="boton-respuesta"
-                        onclick="mostrarDesafioPregunta(
-                            desafioActual,
-                            obtenerDialogoBorin('opcion_responder')
-                        )"
-                    >
-                        Intentar otra vez
-                    </button>
-
+                       class="boton-respuesta"
+                      onclick="mostrarDesafioPregunta(
+                           desafioActual,
+                           obtenerDialogoBorin('opcion_responder')
+                      )"
+                   >
+                       Intentar otra vez
+                   </button>
                 </div>
-
             `;
-
-        }
-
+       }
         return;
-
     }
-
     // ===================================
-    // RESPUESTA CORRECTA
-    // ===================================
-
-    console.log(
-        "✅ RESPUESTA CORRECTA:",
-        desafioActual.id
-    );
-
+   // RESPUESTA CORRECTA
+   // ===================================
+   console.log(
+       "✅ RESPUESTA CORRECTA:",
+       desafioActual.id
+   );
     efectuarCompraMercado();
-
 }
-
 // =======================================
 // VOLVER A ELEGIR PRODUCTO
 // =======================================
-
 function volverAElegirProducto(){
-
     console.log(
-        "🔄 VOLVER A ELEGIR PRODUCTO"
-    );
-
+       "🔄 VOLVER A ELEGIR PRODUCTO"
+   );
     const dialogo = obtenerDialogoBorin(
         "volver_a_elegir"
-    );
-
+   );
     const panel = document.getElementById(
-        "dialogoBorin"
+       "dialogoBorin"
     );
-
     if(!panel){
-        return;
-    }
-
+       return;
+   }
     panel.innerHTML = `
-
         <div class="borin-dialogo">
-
             <div class="borin-nombre">
-                🧙‍♂️ Borin
-            </div>
-
+               🧙‍♂️ Borin
+           </div>
             <div class="borin-texto">
                 ${dialogo}
-            </div>
-
+           </div>
         </div>
-
     `;
-
 }
-
 // =======================================
 // SALIR DEL MERCADO
 // =======================================
-
 function salirDelMercado(){
-
     console.log(
-        "🚪 SALIR DEL MERCADO"
-    );
-
+       "🚪 SALIR DEL MERCADO"
+   );
     const dialogo = obtenerDialogoBorin(
-        "salir_mercado"
-    );
-
+       "salir_mercado"
+   );
     const panel = document.getElementById(
-        "dialogoBorin"
-    );
-
+       "dialogoBorin"
+   );
     if(!panel){
-        return;
-    }
-
-    panel.innerHTML = `
-
-        <div class="borin-dialogo">
-
+       return;
+   }
+  panel.innerHTML = `
+       <div class="borin-dialogo">
             <div class="borin-nombre">
-                🧙‍♂️ Borin
+               🧙‍♂️ Borin
             </div>
-
             <div class="borin-texto">
-                ${dialogo}
-            </div>
-
+               ${dialogo}
+           </div>
         </div>
-
     `;
-
 }
-
 // =======================================
 // CERRAR PRODUCTO
 // =======================================
-
 function cerrarProductoMercado(){
-
     const panel = document.getElementById(
-        "dialogoBorin"
-    );
-
+       "dialogoBorin"
+   );
     if(!panel){
-        return;
-    }
-
+       return;
+   }
     panel.innerHTML = "";
-
 }
-
 // =======================================
 // MOSTRAR ITEMS DEL MERCADO
 // =======================================
-
 function cargarItemsMercado(){
-
     const mercado = document.querySelector(
-        ".mercado"
-    );
-
+       ".mercado"
+   );
     if(!mercado){
-
         console.error(
-            "No se encontró .mercado"
-        );
-
-        return;
-
+           "No se encontró .mercado"
+       );
+       return;
     }
-
     // ===================================
-    // CREAR CONTENEDOR
-    // ===================================
-
+   // CREAR CONTENEDOR
+   // ===================================
     const contenedor = document.createElement(
-        "div"
+       "div"
     );
-
     contenedor.id = "itemsMercado";
-
     mercado.appendChild(contenedor);
-
     // ===================================
-    // ITEMS DISPONIBLES
-    // ===================================
-
+   // ITEMS DISPONIBLES
+   // ===================================
     const items = [
-
         // Los bloqueados quedan
-        // para una etapa posterior.
-
+       // para una etapa posterior.
         /* los que estan bloqueados los dejamos para mas adelante*/
-        "arbol",
-        /*"arroz",*/
-        /*"balanza",*/
-        /*"barril",*/
-        "bici",
-        "burguer",
-        "carta",
-        "castillo",
-        /*"chancho",*/
-        "chocolate",
-        "coca",
-        /*"cofre1",*/
-        /*"cofre2",*/
-        "cometa",
-        "compu",
+       "arbol",
+       /*"arroz",*/
+       /*"balanza",*/
+       /*"barril",*/
+       "bici",
+       "burguer",
+       "carta",
+       "castillo",
+       /*"chancho",*/
+       "chocolate",
+       "coca",
+       /*"cofre1",*/
+       /*"cofre2",*/
+       "cometa",
+       "compu",
         /*"flor1",*/
         /*"flor2",*/
         /*"flor3",*/
@@ -1437,131 +1002,89 @@ function cargarItemsMercado(){
         "varita",
         "vaso",
         "waffle"
-
     ];
-
     // ===================================
     // CREAR CADA ITEM
     // ===================================
-
     items.forEach(nombre => {
-
         // ===================================
-        // BUSCAR PRODUCTO
-        // ===================================
-
+       // BUSCAR PRODUCTO
+       // ===================================
         const producto = productosMercado.find(
-            item => item.item === nombre
-        );
-
+           item => item.item === nombre
+       );
         if(!producto){
-
             console.warn(
-                "⚠️ No se encontró producto para:",
-                nombre
-            );
-
+               "⚠️ No se encontró producto para:",
+               nombre
+           );
             return;
-
         }
-
         // ===================================
-        // CONTENEDOR DEL ITEM
-        // ===================================
-
+       // CONTENEDOR DEL ITEM
+       // ===================================
         const itemContenedor =
-            document.createElement("div");
-
+           document.createElement("div");
         itemContenedor.className =
-            `item-mercado-contenedor item-${nombre}`;
-
+           `item-mercado-contenedor item-${nombre}`;
         // ===================================
-        // IMAGEN
-        // ===================================
-
+       // IMAGEN
+       // ===================================
         const img =
-            document.createElement("img");
-
+           document.createElement("img");
         img.src =
-            `locations/market/images/${nombre}.png`;
-
+           `locations/market/images/${nombre}.png`;
         img.className =
-            "item-mercado";
-
+           "item-mercado";
         img.alt =
-            nombre;
-
+           nombre;
         // ===================================
-        // INTERACCIÓN
+       // INTERACCIÓN
         // ===================================
-
         itemContenedor.addEventListener(
-            "click",
-            () => {
-
+           "click",
+           () => {
                 seleccionarItemMercado(nombre);
-
             }
-        );
-
+       );
         // ===================================
-        // ARMAR ITEM
-        // ===================================
+       // ARMAR ITEM
+       // ===================================
 
-        itemContenedor.appendChild(img);
-
+       itemContenedor.appendChild(img);
         contenedor.appendChild(
-            itemContenedor
-        );
-
+           itemContenedor
+       );
     });
-
 }
-
 // =======================================
 // CARGAR DESAFÍOS
 // =======================================
-
 async function cargarDesafiosMercado(){
-
     try{
-
         const respuesta = await fetch(
-            "locations/market/data/desafios.json"
-        );
-
+           "locations/market/data/desafios.json"
+       );
         if(!respuesta.ok){
-
             throw new Error(
-                `Error HTTP ${respuesta.status}`
-            );
-
+               `Error HTTP ${respuesta.status}`
+           );
         }
-
         const datos =
-            await respuesta.json();
-
-        desafiosMercado =
-            datos.desafios;
-
-        console.log(
-            "🎯 Desafíos cargados:",
-            desafiosMercado
-        );
-
+          await respuesta.json();
+       desafiosMercado =
+          datos.desafios;
+       console.log(
+           "🎯 Desafíos cargados:",
+           desafiosMercado
+       );
         return desafiosMercado;
-
     }catch(error){
-
         console.error(
-            "❌ Error cargando desafíos:",
-            error
-        );
-
+           "❌ Error cargando desafíos:",
+           error
+       );
         desafiosMercado = [];
-
         return [];
-
     }
-
 }
