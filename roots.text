@@ -115,6 +115,7 @@ Un Reino<
 			ambient_map.mp3
 			ambient_observatory.mp3
 			ambient_portal.mp3
+			ambient_sanctuary.mp3
 			ambient_village.mp3
 			ambiental_farm.mp3
 			birds.mp3
@@ -128,6 +129,7 @@ Un Reino<
 			cerdo1.mp3
 			correct.mp3
 			cristal.mp3
+			ducks.mp3
 			error.wav
 			exit.mp3
 			gallina1.mp3
@@ -173,10 +175,12 @@ Un Reino<
 			map-library.mp4
 			map-market.mp4
 			map-observatory.mp4
+			map-sanctuary.mp4
 			map-village.mp4
 			market-map.mp4
 			observatory-map.mp4
 			portal-map.mp4
+			sanctuary.mp4
 			village-map.mp4
 	core<
 		app<
@@ -358,7 +362,8 @@ Un Reino<
 		frost<
 			(vacio)
 		library<
-			(vacio)
+			library.css
+			library.js
 		market<
 			data<
 				desafios.json

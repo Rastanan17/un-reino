@@ -184,96 +184,47 @@ function obtenerIconoZonaBosque(id){
 // =======================================
 
 function interactuarZonaBosque(id){
-
-    console.log(
-        "🌲 Zona del bosque:",
-        id
-    );
-
+    console.log("🌲 Zona del bosque:", id);
     // ===================================
     // 🚪 SALIDA → MAPA
     // ===================================
-
     if(id === "salida"){
-
-        reproducirSFX(
-            "exit.mp3"
-        );
-
+        reproducirSFX("exit.mp3");
         detenerSonidoBosque();
-
-        irA(
-            "forest",
-            "map",
-            mostrarMapaReino
-        );
-
+        irA("forest", "map", mostrarMapaReino);
         return;
     }
-
     // ===================================
     // 📜 MISIONES
     // ===================================
-
     if(id === "misiones"){
-
-        reproducirSFX(
-            "open_place.wav"
-        );
-
-        filtroZona =
-            "Bosque";
-
+        reproducirSFX("open_place.wav");
+        filtroZona = "Bosque";
         detenerSonidoBosque();
-
         mostrarMisiones();
-
         return;
     }
-
     // ===================================
     // 🐺 LOBO
     // ===================================
-
     if(id === "cuentos"){
-
-        console.log(
-            "📖 Entrando a los Cuentos"
-        );
-
+        console.log("📖 Entrando a los Cuentos");
         if(sonidoLobo){
-
-            reproducirSonidoExtra(
-                sonidoLobo
-            );
-
+            reproducirSonidoExtra(sonidoLobo);
         }
         mostrarCuentos();
-
         return;
     }
-
     // ===================================
     // 🐦 PÁJAROS
     // ===================================
-
     if(id === "pajaro"){
-
-        console.log(
-            "🐦 Zona de los pájaros"
-        );
-
+        console.log("🐦 Zona de los pájaros");
         if(sonidoPajaros){
-
-            reproducirSonidoExtra(
-                sonidoPajaros
-            );
-
+            reproducirSonidoExtra(sonidoPajaros);
         }
-
         return;
     }
-
 }
 
 // =======================================

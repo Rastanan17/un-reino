@@ -7,8 +7,8 @@
 const MISIONES_POR_PAGINA = 2;
 let misiones = [];
 let paginaActual = 0;
-let zonaMisionesActual = "Castillo";
-let filtroZona = "Castillo";
+let zonaMisionesActual = null;
+let filtroZona = null;
 // Archivo de datos del Castillo
 const ARCHIVO_MISIONES_CASTILLO = "systems/missions/data/missionsCastle.json";
 const ARCHIVO_MISIONES_ALDEA = "systems/missions/data/missionsVillage.json";
@@ -57,7 +57,11 @@ function obtenerClaveEstadoMisiones(){
         "Puerto": "estadoMisionesPuerto",
         "Santuario": "estadoMisionesSantuario"
     };
-    return claves[zonaMisionesActual] || "estadoMisionesCastillo";
+    if (!zonaMisionesActual) {
+        console.warn("⚠️ No hay zona de misiones definida.");
+        return null;
+    }
+    return claves[zonaMisionesActual] || null;
 }
 // =======================================
 // CARGAR MISIONES DEL CASTILLO
@@ -247,6 +251,39 @@ async function cargarMisionesObservatorio(){
     }
 }
 // =======================================
+// CARGAR MISIONES DE LA BIBLIOTECA
+// =======================================
+async function cargarMisionesBiblioteca(){
+    zonaMisionesActual = "Biblioteca";
+    try{
+        const respuesta = await fetch(ARCHIVO_MISIONES_BIBLIOTECA);
+        if(!respuesta.ok){
+            throw new Error(`No se pudo cargar ${ARCHIVO_MISIONES_BIBLIOTECA}`);
+        }
+        const datos = await respuesta.json();
+        const claveEdad = obtenerClaveMisionesPorEdad();
+        misiones = datos[claveEdad] || [];
+        console.log("📚 MISIONES BIBLIOTECA CARGADAS:", claveEdad, misiones);
+        cargarEstadoMisiones();
+        paginaActual = 0;
+        mostrarTablonMisiones();
+    }catch(error){
+        console.error("Error cargando misiones de la biblioteca:", error);
+        const content = document.getElementById("content");
+        if(content){
+            content.innerHTML = `
+                <section class="tablon-misiones">
+                    <h2>⚠️ Error</h2>
+                    <p>No se pudieron cargar las misiones de la biblioteca.</p>
+                    <button onclick="mostrarBiblioteca()">
+                        ← Volver a la Biblioteca
+                    </button>
+                </section>
+            `;
+        }
+    }
+}
+// =======================================
 // TABLÓN DE MISIONES
 // =======================================
 function mostrarTablonMisiones(){
@@ -283,6 +320,10 @@ function mostrarTablonMisiones(){
 // =======================================
 function volverDeMisiones(){
     reproducirSFX("exit.mp3");
+    if(zonaMisionesActual === "Castillo"){
+        mostrarCastillo();
+        return;
+    }
     if(zonaMisionesActual === "Aldea"){
         mostrarAldea();
         return;
@@ -299,8 +340,13 @@ function volverDeMisiones(){
         mostrarObservatorio();
         return;
     }
-    mostrarCastillo();
-}
+    if(zonaMisionesActual === "Biblioteca"){
+        mostrarBiblioteca();
+        return;
+    }
+    console.warn("⚠️ No se encontró una función de retorno para:", zonaMisionesActual);
+    irA("map", "map", mostrarMapaReino);
+    }
 // =======================================
 // CREAR PERGAMINO DEL TABLÓN
 // =======================================
@@ -817,26 +863,68 @@ async function iniciarSistemaMisiones(){
 function mostrarMisiones(){
     console.log("🔎 mostrarMisiones() → filtroZona:", filtroZona);
     console.log("🔎 zonaMisionesActual:", zonaMisionesActual);
+    // ===================================
+    // SEGURIDAD
+    // ===================================
+    if(!filtroZona){
+        console.warn("⚠️ No se puede abrir misiones: zona no definida.");
+        mostrarMensaje("⚠️ Zona no definida", "No se pudo determinar de dónde vienen estas misiones.");
+        return;
+    }
+    // ===================================
+    // SINCRONIZAR ZONA ACTUAL
+    // ===================================
+    zonaMisionesActual = filtroZona;
+    console.log("📍 Zona de misiones establecida:", zonaMisionesActual);
+    // ===================================
+    // CASTILLO
+    // ===================================
+    if(filtroZona === "Castillo"){
+        cargarMisionesCastillo();
+        return;
+    }
+    // ===================================
+    // ALDEA
+    // ===================================
     if(filtroZona === "Aldea"){
         cargarMisionesAldea();
         return;
     }
+    // ===================================
+    // GRANJA
+    // ===================================
     if(filtroZona === "Granja"){
         cargarMisionesGranja();
         return;
     }
+    // ===================================
+    // BOSQUE
+    // ===================================
     if(filtroZona === "Bosque"){
         cargarMisionesBosque();
         return;
     }
+    // ===================================
+    // OBSERVATORIO
+    // ===================================
     if(filtroZona === "Observatorio"){
         cargarMisionesObservatorio();
         return;
     }
-    cargarMisionesCastillo();
+    // ===================================
+    // BIBLIOTECA
+    // ===================================
+    if(filtroZona === "Biblioteca"){
+        cargarMisionesBiblioteca();
+        return;
+    }
+    // ===================================
+    // ZONA SIN MISIONES
+    // ===================================
+    console.warn("⚠️ No existe cargador de misiones para:", filtroZona);
+    mostrarMensaje("📜 Misiones", `La zona "${filtroZona}" todavía no tiene misiones configuradas.`);
 }
 // =======================================
 // 🚀 INICIAR VIGILANTE GLOBAL
 // =======================================
-
 iniciarVigilanteMisiones();

@@ -196,13 +196,9 @@ function entrarArmeriaDesdeGranja(){
 // =======================================
 // MISIONES DE LA GRANJA
 // =======================================
-
 function mostrarMisionesGranja(){
-
     filtroZona = "Granja";
-
     mostrarMisiones();
-
 }
 
 // =======================================

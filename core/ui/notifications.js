@@ -344,11 +344,7 @@ function cerrarModalMisionTerminada(){
 // 🏆 RECLAMAR MISIÓN TERMINADA
 // =======================================
 function reclamarMisionTerminada(zona, idMision){
-    console.log(
-        "🏆 Reclamar misión:",
-        zona,
-        idMision
-    );
+    console.log("🏆 Reclamar misión:", zona, idMision);
     // -----------------------------------
     // CERRAR MODAL
     // -----------------------------------
@@ -357,97 +353,59 @@ function reclamarMisionTerminada(zona, idMision){
     // 🏰 CASTILLO
     // -----------------------------------
     if(zona === "Castillo"){
-        irA(
-            "map",
-            "castle",
-            () => {
-                console.log(
-                    "🏰 Llegamos al Castillo para reclamar:",
-                    idMision
-                );
-                filtroZona = "Castillo";
-                mostrarMisiones();
-            }
-        );
+        irA("map", "castle", () => {
+            console.log("🏰 Llegamos al Castillo para reclamar:", idMision);
+            filtroZona = "Castillo";
+            mostrarMisiones();
+        });
         return;
    }
     // -----------------------------------
     // 🏡 ALDEA
     // -----------------------------------
     if(zona === "Aldea"){
-        irA(
-            "map",
-            "village",
-            () => {
-                console.log(
-                    "🏡 Llegamos a la Aldea para reclamar:",
-                    idMision
-                );
-                filtroZona = "Aldea";
-                mostrarMisiones();
-            }
-        );
+        irA("map", "village", () => {
+            console.log("🏡 Llegamos a la Aldea para reclamar:", idMision);
+            filtroZona = "Aldea";
+            mostrarMisiones();
+        });
         return;
     }
     // -----------------------------------
     // 🌾 GRANJA
     // -----------------------------------
     if(zona === "Granja"){
-        irA(
-            "map",
-            "farm",
-            () => {
-                console.log(
-                    "🌾 Llegamos a la Granja para reclamar:",
-                    idMision
-                );
-                filtroZona = "Granja";
-                mostrarMisiones();
-            }
-        );
+        irA("map", "farm", () => {
+            console.log("🌾 Llegamos a la Granja para reclamar:", idMision);
+            filtroZona = "Granja";
+            mostrarMisiones();
+        });
         return;
     }
     // -----------------------------------
     // 🌲 BOSQUE
     // -----------------------------------
     if(zona === "Bosque"){
-        irA(
-            "map",
-            "forest",
-            () => {
-                console.log(
-                    "🌲 Llegamos al Bosque para reclamar:",
-                    idMision
-                );
-                filtroZona = "Bosque";
-                mostrarMisiones();
-            }
-        );
+        irA("map", "forest", () => {
+            console.log("🌲 Llegamos al Bosque para reclamar:", idMision);
+            filtroZona = "Bosque";
+            mostrarMisiones();
+        });
         return;
     }
    // -----------------------------------
     // 🔭 OBSERVATORIO
     // -----------------------------------
     if(zona === "Observatorio"){
-        irA(
-            "map",
-            "observatory",
-            () => {
-                console.log(
-                    "🔭 Llegamos al Observatorio para reclamar:",
-                    idMision
-                );
-                filtroZona = "Observatorio";
-                mostrarMisiones();
-            }
-        );
+        irA("map", "observatory", () => {
+            console.log("🔭 Llegamos al Observatorio para reclamar:", idMision);
+            filtroZona = "Observatorio";
+            mostrarMisiones();
+        });
         return;
     }
     // -----------------------------------
     // ⚠️ ZONA NO CONFIGURADA
     // -----------------------------------
-    console.warn(
-        "⚠️ No existe navegación para reclamar misión en:",
-        zona
-    );
+    console.warn("⚠️ No existe navegación para reclamar misión en:", zona);
 }

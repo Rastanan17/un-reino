@@ -86,42 +86,42 @@ const NPC_POSICIONES = {
         lugar: "Santuario",
         x: 50,
         y: 80
-    }/*,
+    },
     bibliotecaria: {
         lugar: "Biblioteca",
         x: 50,
         y: 80
-    },
+    }/*,
     bardo: {
         lugar: "Puerto",
         x: 50,
         y: 80
-    },
+    }*//*,
     explorador: {
         lugar: "Nieve",
         x: 50,
         y: 80
-    },
+    }*//*,
     tabernero: {
         lugar: "Bar",
         x: 50,
         y: 80
-    },
+    }*//*,
     artista: {
         lugar: "Academia",
         x: 50,
         y: 80
-    },
+    }*//*,
     sabio: {
         lugar: "Museo",
         x: 50,
         y: 80
-    },
+    }*//*,
     cocinero: {
         lugar: "Mascotas",
         x: 50,
         y: 80
-    },
+    }*//*,
     comandante: {
         lugar: "Hielo",
         x: 50,
@@ -187,15 +187,15 @@ function obtenerContenedorNPCLugar(lugar){
         "Cavernas": ".cavernas",
         "Bosque": ".bosque",
         "Observatorio": ".observatorio",
-        "Santuario": ".santuario"/*,
-        "Biblioteca": ".biblioteca",
-        "Puerto": ".puerto",
-        "Nieve": ".nieve",
-        "Bar": ".bar",
-        "Academia": ".academia",
-        "Museo": ".museo",
-        "Mascotas": ".mascotas",
-        "Hielo": ".hielo"*/
+        "Santuario": ".santuario",
+        "Biblioteca": ".biblioteca"/*,*/
+        /*"Puerto": ".puerto",*/
+        /*"Nieve": ".nieve",*/
+        /*"Bar": ".bar",*/
+        /*"Academia": ".academia",*/
+        /*"Museo": ".museo",*/
+        /*"Mascotas": ".mascotas",*/
+        /*"Hielo": ".hielo"*/
     };
     const selector = contenedores[lugar];
     if(!selector){

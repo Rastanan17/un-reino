@@ -214,120 +214,84 @@ function abrirZona(zona){
     // BLOQUEO POR NIVEL
     // ===================================
     if(!zonaDesbloqueada(zona, jugador)){
-        mostrarMensaje(
-            "🧭 Región desconocida",
-            `Necesitas llegar al Nivel ${zona.nivel}`
-        );
+        mostrarMensaje("🧭 Región desconocida", `Necesitas llegar al Nivel ${zona.nivel}`);
         return;
     }
     // ===================================
     // 🏰 CASTILLO
     // ===================================
     if(zona.nombre === "Castillo"){
-        irA(
-            "map",
-            "castle",
-            mostrarCastillo
-        );
+        irA("map", "castle", mostrarCastillo);
         return;
     }
     // ===================================
     // 🏡 ALDEA
     // ===================================
     if(zona.nombre === "Aldea"){
-        irA(
-            "map",
-            "village",
-            mostrarAldea
-        );
+        irA("map", "village", mostrarAldea);
         return;
     }
     // ===================================
     // 🌾 GRANJA
     // ===================================
     if(zona.nombre === "Granja"){
-        irA(
-            "map",
-            "farm",
-            mostrarGranja
-        );
+        irA("map", "farm", mostrarGranja);
         return;
     }
     // ===================================
     // 🌲 BOSQUE
     // ===================================
     if(zona.nombre === "Bosque"){
-        irA(
-            "map",
-            "forest",
-            mostrarBosque
-        );
+        irA("map", "forest", mostrarBosque);
+        return;
+    }
+    // ===================================
+    // ⛪ SANTUARIO
+    // ===================================
+    if(zona.nombre === "Santuario"){
+        irA("map", "sanctuary", mostrarSantuario);
         return;
     }
     // ===================================
     // 🔭 OBSERVATORIO
     // ===================================
     if(zona.nombre === "Observatorio"){
-        irA(
-            "map",
-            "observatory",
-            mostrarObservatorio
-        );
+        irA("map", "observatory", mostrarObservatorio);
+        return;
+    }
+    // ===================================
+    // 📚 BIBLIOTECA
+    // ===================================
+    if(zona.nombre === "Biblioteca"){
+        irA("map", "library", mostrarBiblioteca);
         return;
     }/*
     // ===================================
     // 🏛️ ACADEMIA
     // ===================================
     if(zona.nombre === "Academia"){
-        irA(
-            "map",
-            "academy",
-            mostrarAcademia
-        );
+        irA("map", "academy", mostrarAcademia);
         return;
     }
     // ===================================
     // 🐾 REFUGIO DE MASCOTAS
     // ===================================
     if(zona.nombre === "Mascotas"){
-        irA(
-            "map",
-            "pets",
-            mostrarMascotas
-        );
+        irA("map", "pets", mostrarMascotas);
         return;
-    }*/
-    // ===================================
-    // ⛪ SANTUARIO
-    // ===================================
-    if(zona.nombre === "Santuario"){
-        irA(
-            "map",
-            "sanctuary",
-            mostrarSantuario
-        );
-        return;
-    }/*
+    }*//*
     // ===================================
     // 🌨️ NIEVES
     // ===================================
     if(zona.nombre === "Nieve"){
-        irA(
-            "map",
-            "snow",
-            mostrarNieve
-        );
+        irA("map", "snow", mostrarNieve);
         return;
     }
     // ===================================
     // ⚓ PUERTO
     // ===================================
     if(zona.nombre === "Puerto"){
-        irA(
-            "map",
-            "port",
-            mostrarPuerto
-        );
+        irA("map", "port", mostrarPuerto);
         return;
     }*/
     // ===================================
@@ -343,22 +307,14 @@ function abrirZona(zona){
     // ===================================
     if(zona.tipo === "mercado"){
         console.log("Entrando al mercado");
-        irA(
-            "map",
-            "market",
-            mostrarMercado
-        );
+        irA("map", "market", mostrarMercado);
         return;
     }/*
     // ===================================
     // 🏛️ MUSEO
     // ===================================
     if(zona.nombre === "Museo"){
-        irA(
-            "map",
-            "museum",
-            mostrarMuseo
-        );
+        irA("map", "museum", mostrarMuseo);
         return;
     }*/
     // ===================================
@@ -372,22 +328,14 @@ function abrirZona(zona){
     // 🌀 CAVERNAS
     // ===================================
     if(zona.nombre === "Cavernas"){
-        irA(
-            "map",
-            "caves",
-            mostrarCavernas
-        );
+        irA("map", "caves", mostrarCavernas);
         return;
     }/*
     // ===================================
     // ❄️ FROST
     // ===================================
     if(zona.nombre === "Frost"){
-        irA(
-            "map",
-            "frost",
-            mostrarFrost
-        );
+        irA("map", "frost", mostrarFrost);
         return;
     }*/
     // ===================================
@@ -400,10 +348,7 @@ function abrirZona(zona){
     // ===================================
     // ZONA EN CONSTRUCCIÓN
     // ===================================
-    mostrarMensaje(
-        "Zona",
-        "Esta zona todavía está en construcción."
-    );
+    mostrarMensaje("Zona", "Esta zona todavía está en construcción.");
 }
 // =======================================
 // 🧭 IR DIRECTAMENTE A UNA ZONA

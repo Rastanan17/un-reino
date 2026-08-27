@@ -47,7 +47,7 @@
     width:15%;
     height:10%;
     right:0%;
-    top:50%;
+    top:60%;
 }
 .senora2{
     width:15%;
@@ -62,7 +62,7 @@
     width:15%;
     height:10%;
     right:0%;
-    top:40%;
+    top:45%;
 }
 .senor2{
     width:15%;
@@ -80,9 +80,9 @@
     top:55%;
 }
 .nino2{
-    width:15%;
+    width:20%;
     height:5%;
-    left:65%;
+    left:55%;
     top:55%;
 }
 /* =======================================
@@ -90,9 +90,9 @@
 ======================================= */
 .patos1{
     width:20%;
-    height:5%;
-    left:65%;
-    top:50%;
+    height:13%;
+    left:15%;
+    top:60%;
 }
 /* =======================================
    CAMPANA
@@ -121,7 +121,6 @@
     transform:scale(1.02);
 }
 .zona-interactiva {
-    background-color:#ffd90049;
     position: absolute;
     z-index: 100;
     box-sizing: border-box;

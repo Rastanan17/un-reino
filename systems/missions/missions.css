@@ -310,7 +310,8 @@
     background-position:center;
 
     background-repeat:no-repeat;
-}/* =======================================
+}
+/* =======================================
    FONDO DEL OBSERVATORIO
 ======================================= */
 
@@ -326,6 +327,16 @@
 
     background-position:center;
 
+    background-repeat:no-repeat;
+}
+/* =======================================
+   FONDO DE LA BIBLIOTECA
+======================================= */
+.misiones-biblioteca{
+    background-image:linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
+        url("../../assets/images/backgrounds/library.jpg");
+    background-size:cover;
+    background-position:center;
     background-repeat:no-repeat;
 }
 /* =======================================

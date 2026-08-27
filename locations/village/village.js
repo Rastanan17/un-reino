@@ -86,7 +86,7 @@ function mostrarAldea(){
             ================================== -->
             <div class="zona-interactiva patos1">
                 <span class="nombre-zona">PATOS</span>
-                <canvas id="patos1" class="zona-aldea" onclick="reproducirSonidoAldea('assets/sounds/pato1.mp3');"></canvas>
+                <canvas id="patos1" class="zona-aldea" onclick="reproducirSonidoAldea('assets/sounds/ducks.mp3');"></canvas>
             </div>
             <!-- =================================
                 MISIONES
