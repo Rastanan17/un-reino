@@ -318,6 +318,44 @@ Un Reino<
 			throne.css
 			throne.js
 		caves<
+			data<
+				fire.json
+				ice.json
+				mineral.json
+			images<
+				carbon1.png
+				carbon2.png
+				diamante1.png
+				diamante2.png
+				gema1.png
+				gema2.png
+				mineral1.png
+				mineral2.png
+				mineral3.png
+				mineral4.png
+				mineral5.png
+				mineral6.png
+				mineral7.png
+				roca0.png
+				roca1.png
+				roca2.png
+				roca3.png
+				roca4.png
+				roca5.png
+				roca6.png
+				roca7.png
+				roca8.png
+				roca9.png
+				tierra1.png
+				tierra2.png
+				tierra3.png
+			minigames<
+				fire.css
+				fire.js
+				ice.css
+				ice.js
+				mineral.css
+				mineral.js
 			caves.css
 			caves.js
 		farm<

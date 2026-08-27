@@ -69,10 +69,31 @@
     pointer-events: none;
 }
 /* =======================================
+   🖥️ PC
+======================================= */
+@media(min-width:1101px){
+    .santuario-salida{ left:5%; bottom:50%; width:80px; height:80px; }
+    .santuario-salida::after{ font-size:12px; bottom:-22px; }
+}
+/* =======================================
    RESPONSIVE
    ======================================= */
 @media (max-width: 900px) {
     .santuario-salida { width: 65px; height: 65px; }
+}
+/* =======================================
+   📲 TABLET
+======================================= */
+@media(min-width:701px) and (max-width:1100px){
+    .santuario-salida{ left:4%; bottom:35%; width:70px; height:70px; }
+    .santuario-salida::after{ font-size:11px; bottom:-20px; }
+}
+/* =======================================
+   📱 CELULAR
+======================================= */
+@media(max-width:700px){
+    .santuario-salida{ left:3%; bottom:4%; width:55px; height:55px; }
+    .santuario-salida::after{ font-size:10px; bottom:-18px; }
 }
 @media (max-width: 600px) {
     .santuario-salida { width: 55px; height: 55px; left: 3%; bottom: 4%; }

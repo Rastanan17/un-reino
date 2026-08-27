@@ -1,68 +1,123 @@
 /* =======================================
-   CAVERNAS DE MÍRRAFEN
+   🪨 CAVERNAS DE MÍRRAFEN
 ======================================= */
-
 .cavernas{
-
-    position:absolute;
-
-    width:100%;
-    height:100%;
-
-    min-height:600px;
-
-    overflow:hidden;
-
-    background-image:
-        linear-gradient(
-            rgba(0,0,0,.70),
-            rgba(0,0,0,.70)
-        ),
-        url("../../assets/images/backgrounds/caves_all.jpg");
-
-    background-size:cover;
-
-    background-position:center;
-
-    background-repeat:no-repeat;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
-
 /* =======================================
-   PRÓXIMAMENTE
+   🪨 FONDO
 ======================================= */
-
-.cavernas-proximamente{
-
-    position:absolute;
-
-    width:clamp(250px, 70vw, 600px);
-
-    height:auto;
-
-    left:50%;
-    top:20%;
-
-    transform:
-        translate(-50%, -50%);
-
-    user-select:none;
-
-    cursor:pointer;
-
-    transition:
-        transform .2s ease,
-        filter .2s ease;
+.cavernas-background{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    user-select: none;
+    pointer-events: none;
 }
-
 /* =======================================
-   INTERACCIÓN
+   🎮 ZONAS INTERACTIVAS
 ======================================= */
-
-.cavernas-proximamente:hover{
-
-    transform:
-        translate(-50%, -50%)
-        scale(1.05);
-
-    filter:brightness(1.2);
+.zona-caverna{
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+}
+/* =======================================
+   💎 MINERALES
+======================================= */
+.zona-caverna.minerales{
+    left: 40%;
+    top: 31%;
+    width: 25%;
+    height: 30%;
+}
+/* =======================================
+   🔥 FUEGO
+======================================= */
+.zona-caverna.fuego{
+    left: 15%;
+    top: 30%;
+    width: 25%;
+    height: 30%;
+}
+/* =======================================
+   ❄️ HIELO
+======================================= */
+.zona-caverna.hielo{
+    right: 23%;
+    top: 40%;
+    width: 25%;
+    height: 30%;
+}
+/* =======================================
+   CARTEL PRÓXIMAMENTE
+======================================= */
+.zona-caverna img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    pointer-events: none;
+    transition: transform 0.15s ease;
+}
+/* =======================================
+   ⚠️ TEMBLOR
+======================================= */
+.caverna-temblor{
+    animation: temblorCaverna 0.4s ease;
+}
+@keyframes temblorCaverna{
+    0%   { transform: translateX(0); }
+    20%  { transform: translateX(-7px); }
+    40%  { transform: translateX(7px); }
+    60%  { transform: translateX(-5px); }
+    80%  { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+}
+/* =======================================
+   🛒 SALIDA
+======================================= */
+.caverna-salida{
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    width: 100px;
+    height: 100px;
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.caverna-salida img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+.caverna-salida:hover img{
+    transform: scale(1.08);
+}
+/* =======================================
+   💻 TABLET
+======================================= */
+@media (max-width: 900px){
+    .caverna-salida{ width: 75px; height: 75px; left: 50%; bottom: 20%; }
+}
+/* =======================================
+   📱 CELULAR
+======================================= */
+@media (max-width: 600px){
+    .caverna-salida{ width: 58px; height: 58px; left: 50%; bottom: 20%; }
+    .zona-caverna.minerales{ left: 8%; top: 34%; width: 30%; height: 28%; }
+    .zona-caverna.fuego{ left: 35%; top: 29%; width: 30%; height: 28%; }
+    .zona-caverna.hielo{ right: 7%; top: 34%; width: 30%; height: 28%; }
 }

@@ -1,0 +1,97 @@
+{
+    "juego": {
+        "id": "mineral",
+        "nombre": "La Gran Excavación",
+        "descripcion": "Explora las profundidades de Mírrafen y descubre los minerales ocultos.",
+        "nivelInicial": 1,
+        "nivelMaximo": 100,
+        "bloquesDificultad": 10
+    },
+
+    "recursos": {
+        "rocas": [
+            "roca0",
+            "roca1",
+            "roca2",
+            "roca3",
+            "roca4",
+            "roca5",
+            "roca6",
+            "roca7",
+            "roca8",
+            "roca9"
+        ],
+
+        "tierra": [
+            "tierra1",
+            "tierra2",
+            "tierra3"
+        ],
+
+        "minerales": [
+            {
+                "id": "mineral",
+                "nombre": "Mineral",
+                "imagenes": [
+                    "mineral1",
+                    "mineral2",
+                    "mineral3",
+                    "mineral4",
+                    "mineral5",
+                    "mineral6",
+                    "mineral7"
+                ],
+                "valor": 10,
+                "xp": 5
+            },
+            {
+                "id": "carbon",
+                "nombre": "Carbón",
+                "imagenes": [
+                    "carbon1",
+                    "carbon2"
+                ],
+                "valor": 15,
+                "xp": 8
+            },
+            {
+                "id": "gema",
+                "nombre": "Gema",
+                "imagenes": [
+                    "gema1",
+                    "gema2"
+                ],
+                "valor": 30,
+                "xp": 15
+            },
+            {
+                "id": "diamante",
+                "nombre": "Diamante",
+                "imagenes": [
+                    "diamante1",
+                    "diamante2"
+                ],
+                "valor": 100,
+                "xp": 40
+            }
+        ]
+    },
+
+    "dificultad": {
+        "base": {
+            "cantidadRocas": 8,
+            "probabilidadMineral": 0.35,
+            "probabilidadCarbon": 0.10,
+            "probabilidadGema": 0.04,
+            "probabilidadDiamante": 0.01
+        },
+
+        "incrementoCada10Niveles": {
+            "cantidadRocas": 2,
+            "probabilidadMineral": 0.03,
+            "probabilidadCarbon": 0.02,
+            "probabilidadGema": 0.01,
+            "probabilidadDiamante": 0.005
+        }
+    }
+}
