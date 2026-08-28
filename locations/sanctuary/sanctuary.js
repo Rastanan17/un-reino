@@ -21,7 +21,7 @@ function mostrarSantuario(){
             ================================== -->
             <div class="santuario-salida"
                 onclick="reproducirSFX('open_place.wav'); irA('sanctuary', 'map', mostrarMapaReino)">
-                <img src="../../assets/images/items/mapa-letters.png"
+                <img src="../../assets/images/items/antorcha1.png"
                     alt="Salir al mapa">
             </div>
         </section>

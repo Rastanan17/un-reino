@@ -300,6 +300,10 @@ function crearNPC(npc){
 // =======================================
 // INTERACTUAR CON NPC
 // =======================================
+// =======================================
+// INTERACTUAR CON NPC
+// =======================================
+
 async function interactuarNPC(id){
     const npc = obtenerNPC(id);
     if(!npc){
@@ -307,36 +311,91 @@ async function interactuarNPC(id){
     }
     console.log("🧙 Interactuando con:", npc.nombre);
     // ===================================
-    // CARGAR DATOS DEL NPC
+    // 🎯 COMPROBAR DESAFÍO NPC ACTIVO
+    // ===================================
+    const desafioActivoGuardado = localStorage.getItem("desafioNPCActivo");
+    if(desafioActivoGuardado){
+        try{
+            const desafioActivo = JSON.parse(desafioActivoGuardado);
+            console.log("🎯 Desafío NPC activo encontrado:", desafioActivo);
+            // ===================================
+            // COMPROBAR DESTINATARIO
+            // ===================================
+            const destinatarioID = desafioActivo.destinatarioID;
+            const destinatario =
+                desafioActivo.destinatario;
+            const coincideID =
+                destinatarioID &&
+                String(destinatarioID) === String(npc.id);
+            const coincideNombre =
+                destinatario &&
+                String(destinatario).toLowerCase() ===
+                String(npc.nombre).toLowerCase();
+            // ===================================
+            // 🎯 ESTE NPC ES EL DESTINATARIO
+            // ===================================
+            if(coincideID || coincideNombre){
+                console.log(
+                    "🎯 DESAFÍO DESTINADO A ESTE NPC:",
+                    npc.nombre
+                );
+                mostrarEntregaDesafioNPC(
+                    npc,
+                    desafioActivo
+                );
+                return;
+            }
+        }catch(error){
+            console.error(
+                "❌ Error leyendo desafioNPCActivo:",
+                error
+            );
+        }
+    }
+    // ===================================
+    // 📜 CARGAR DATOS DEL NPC
     // ===================================
     const datos = await cargarDatosNPC(id);
     // ===================================
     // SI NO HAY DATOS
     // ===================================
     if(!datos){
-        mostrarMensaje(npc.nombre, npc.descripcion);
+        mostrarMensaje(
+            npc.nombre,
+            npc.descripcion
+        );
         return;
     }
     // ===================================
     // SELECCIONAR CONTENIDO
     // ===================================
-    const contenido = seleccionarDialogoNPC(datos);
-    if(!contenido){
-        mostrarMensaje(npc.nombre, npc.descripcion);
+    const contenido =
+        seleccionarDialogoNPC(datos);
+    // ===================================
+    // 🎯 DETECTAR DESAFÍO
+    // ===================================
+    if(
+        contenido &&
+        typeof contenido === "object" &&
+        contenido.tipo === "desafio"
+    ){
+        mostrarDesafioNPC(
+            npc,
+            contenido.datos
+        );
         return;
     }
     // ===================================
-    // MOSTRAR
+    // 💬 DIÁLOGO NORMAL
     // ===================================
-    mostrarMensaje(npc.nombre, contenido);
+    mostrarMensaje(
+        npc.nombre,
+        contenido
+    );
 }
 // =======================================
 // SELECCIONAR DIÁLOGO NPC
 // SISTEMA DE PROBABILIDADES
-// =======================================
-// =======================================
-// SELECCIONAR DIÁLOGO NPC
-// SISTEMA GENÉRICO PARA TODOS LOS NPC
 // =======================================
 function seleccionarDialogoNPC(datos){
     const secciones = [];
@@ -352,40 +411,55 @@ function seleccionarDialogoNPC(datos){
         }
     }
     // ===================================
-    // CONTENIDO GENERAL
+    // ⛏️ DESAFÍOS DE LAS CAVERNAS
+    // ===================================
+    if (
+        Array.isArray(datos.desafios_cavernas) &&
+        datos.desafios_cavernas.length > 0
+    ) {
+        agregarSeccion(datos.desafios_cavernas, 4);
+        console.log(
+            "⛏️ Desafíos de cavernas disponibles:",
+            datos.desafios_cavernas.length
+        );
+    }
+    // ===================================
+    // 💬 CONTENIDO GENERAL
     // ===================================
     agregarSeccion(datos.saludos, 4);
-    agregarSeccion(datos.rumores, 3);
-    agregarSeccion(datos.historia_personal, 1);
+    agregarSeccion(datos.rumores, 4);
+    agregarSeccion(datos.historia_personal, 4);
     // ===================================
-    // DIÁLOGOS ESPECÍFICOS
+    // 🛡️ DIÁLOGOS ESPECÍFICOS
     // ===================================
-    agregarSeccion(datos.dialogos_guardia, 4);
+    agregarSeccion(datos.dialogos_guardia, 3);
     agregarSeccion(datos.consejos_del_centinela, 3);
-    agregarSeccion(datos.dialogos_reina, 4);
+    agregarSeccion(datos.dialogos_reina, 3);
     agregarSeccion(datos.consejos_de_la_realeza, 3);
     // ===================================
-    // DESAFÍOS
+    // 🎯 DESAFÍOS
     // ===================================
     agregarSeccion(datos.desafios_reales, 2);
-    agregarSeccion(datos.desafios_combate, 1);
+    agregarSeccion(datos.desafios_combate, 2);
     agregarSeccion(datos.desafios_modales, 2);
     // ===================================
-    // MISIONES DEL REINO
+    // 🗺️ MISIONES DEL REINO
     // ===================================
-    agregarSeccion(datos.misiones_reino, 2);
+    agregarSeccion(datos.misiones_reino, 1);
     // ===================================
-    // EVENTOS ESPECIALES
+    // ⭐ EVENTOS ESPECIALES
     // ===================================
     agregarSeccion(datos.eventos_especiales, 1);
     // ===================================
-    // DIÁLOGOS SEGÚN NIVEL
+    // 📈 DIÁLOGOS SEGÚN NIVEL
     // ===================================
     let perfilActivo = null;
     const perfilGuardado = localStorage.getItem("perfilActivo");
     if(perfilGuardado){
-        try{perfilActivo = JSON.parse(perfilGuardado);
-        }catch(error){ perfilActivo = {
+        try{
+            perfilActivo = JSON.parse(perfilGuardado);
+        }catch(error){
+            perfilActivo = {
                 nombre: perfilGuardado
             };
         }
@@ -396,7 +470,10 @@ function seleccionarDialogoNPC(datos){
     if(perfilActivo){
         const nivel = Number(perfilActivo.nivel) || 1;
         const dialogosNivel = datos.dialogos_por_nivel?.[nivel];
-        if(Array.isArray(dialogosNivel) && dialogosNivel.length > 0){
+        if(
+            Array.isArray(dialogosNivel) &&
+            dialogosNivel.length > 0
+        ){
             agregarSeccion(dialogosNivel, 2);
         }
     }
@@ -407,37 +484,145 @@ function seleccionarDialogoNPC(datos){
         return null;
     }
     // ===================================
-    // ELEGIR SECCIÓN
+    // 🎲 ELEGIR SECCIÓN
     // ===================================
-    const seccion = secciones[ Math.floor(Math.random() * secciones.length) ];
+    const seccion = secciones[
+        Math.floor(Math.random() * secciones.length)
+    ];
     if(!Array.isArray(seccion) || seccion.length === 0){
         return null;
     }
     // ===================================
-    // ELEGIR ELEMENTO
+    // 🎲 ELEGIR ELEMENTO
     // ===================================
-    const elegido = seccion[ Math.floor(Math.random() * seccion.length) ];
+    const elegido = seccion[
+        Math.floor(Math.random() * seccion.length)
+    ];
     // ===================================
-    // TEXTO DIRECTO
+    // 🎯 DETECTAR DESAFÍO NPC
+    // ===================================
+    if(
+        typeof elegido === "object" &&
+        elegido !== null &&
+        elegido.id !== undefined &&
+        elegido.mision
+    ){
+        console.log("🎯 DESAFÍO NPC DETECTADO:", elegido);
+        return {
+            tipo: "desafio",
+            datos: elegido
+        };
+    }
+    // ===================================
+    // 💬 TEXTO NORMAL
     // ===================================
     if(typeof elegido === "string"){
         return elegido;
     }
+    return (
+        elegido?.texto ||
+        elegido?.mensaje ||
+        elegido?.descripcion ||
+        elegido?.titulo ||
+        null
+    );
+    if(!elegido){
+        return null;
+    }
     // ===================================
-    // OBJETOS
+    // 🎯 DETECTAR DESAFÍO / MISIÓN / EVENTO
     // ===================================
-    return ( elegido.texto || elegido.mensaje || elegido.descripcion || elegido.titulo || null );
+    if(
+        typeof elegido === "object" && elegido !== null
+    ){
+        // -------------------------------
+        // DESAFÍO DE VIDA REAL
+        // -------------------------------
+        if(
+            elegido.tipo === "vida_real" &&
+            elegido.titulo &&
+            elegido.accion &&
+            elegido.recompensa
+        ){
+            console.log("🎯 DESAFÍO DE VIDA REAL DETECTADO:", elegido);
+            return { tipo: "desafio", datos: elegido };
+        }
+        // -------------------------------
+        // MISIÓN DEL REINO
+        // -------------------------------
+        if(
+            elegido.titulo &&
+            elegido.destino &&
+            elegido.descripcion &&
+            elegido.recompensa
+        ){
+            console.log("🗺️ MISIÓN DEL REINO DETECTADA:", elegido);
+            return { tipo: "desafio", datos: elegido };
+        }
+        // -------------------------------
+        // EVENTO ESPECIAL
+        // -------------------------------
+        if(
+            elegido.id &&
+            elegido.titulo &&
+            elegido.descripcion &&
+            elegido.accion &&
+            elegido.recompensa
+        ){
+            console.log("⭐ EVENTO ESPECIAL DETECTADO:", elegido);
+            return { tipo: "desafio", datos: elegido };
+        }
+        // -------------------------------
+        // MISIÓN RECIBIDA
+        // -------------------------------
+        if(
+            elegido.mision_id &&
+            elegido.objeto_requerido &&
+            elegido.dialogo_entrega
+        ){
+            console.log("📦 MISIÓN RECIBIDA DETECTADA:", elegido);
+            return { tipo: "desafio", datos: elegido };
+        }
+    }
+    // ===================================
+    // 💬 TEXTO NORMAL
+    // ===================================
+    if(typeof elegido === "string"){
+        return elegido;
+    }
+    return (
+        elegido.texto ||
+        elegido.mensaje ||
+        elegido.descripcion ||
+        elegido.titulo ||
+        null
+    );
 }
-// =======================================
-// CARGAR DATOS ESPECÍFICOS DEL NPC
-// =======================================
-async function cargarDatosNPC(id){
+    // =======================================
+    // 📜 RUTAS ESPECIALES DE DATOS DE NPC
+    // =======================================
+    const RUTAS_DATOS_NPC = { forjadora: "locations/caves/data/eliana.json" };
+    // =======================================
+    // CARGAR DATOS ESPECÍFICOS DEL NPC
+    // =======================================
+    async function cargarDatosNPC(id){
+    // -----------------------------------
+    // SI YA SE ESTÁ CARGANDO
+    // -----------------------------------
     if(cargandoDatosNPC[id]){
         return cargandoDatosNPC[id];
     }
-    cargandoDatosNPC[id] = fetch(`kingdom/npc/data/${id}.json`).then(respuesta => {
+    // -----------------------------------
+    // DETERMINAR RUTA
+    // -----------------------------------
+    const ruta = RUTAS_DATOS_NPC[id] || `kingdom/npc/data/${id}.json`;
+    console.log(`📜 Cargando datos de ${id}:`, ruta);
+    // -----------------------------------
+    // CARGAR JSON
+    // -----------------------------------
+    cargandoDatosNPC[id] = fetch(ruta).then(respuesta => {
         if(!respuesta.ok){
-            throw new Error(`No se pudo cargar ${id}.json`);
+            throw new Error(`No se pudo cargar ${ruta}`);
         }
         return respuesta.json();
     }).then(datos => {

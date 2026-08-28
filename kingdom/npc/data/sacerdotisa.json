@@ -30,7 +30,7 @@
     {
       "tipo": "vida_real",
       "titulo": "Respiro del Altar",
-      "descripcion": "Aurélia te invita a pausar el ajetreo del día y conectar con tu centro mediante la respiración.",
+      "descripcion": "Aurelia te invita a pausar el ajetreo del día y conectar con tu centro mediante la respiración.",
       "accion": "Inhalar y exhalar profundamente durante un minuto en calma",
       "recompensa": {
         "xp": 5,
@@ -223,7 +223,7 @@
   "desafios_modales": [
     {
       "titulo": "Palabra pacífica",
-      "descripcion": "Aurélia mide tu armonía espiritual: responde con amabilidad y mesura a quienes te hablen.",
+      "descripcion": "Aurelia mide tu armonía espiritual: responde con amabilidad y mesura a quienes te hablen.",
       "recompensa": {
         "xp": 6,
         "oquos": 2
@@ -370,7 +370,7 @@
     {
       "id": "renacer_espiritual",
       "titulo": "El Despertar de la Mente",
-      "descripcion": "Aurélia te invita a iniciar la jornada alineando tu pensamiento con la serenidad.",
+      "descripcion": "Aurelia te invita a iniciar la jornada alineando tu pensamiento con la serenidad.",
       "accion": "Comenzar tus actividades con una breve pausa de orden y calma",
       "recompensa": {
         "xp": 15,
@@ -476,7 +476,7 @@
     },
     {
       "id": "historia_10",
-      "titulo": "El legado de Aurélia",
+      "titulo": "El legado de Aurelia",
       "texto": "Mi misión en Mírrafen no es dar respuestas mágicas, sino acompañar a cada viajero a descubrir la fuerza y la serenidad que ya habitan en su interior."
     }
   ],
@@ -599,7 +599,7 @@
       "La serenidad no se busca afuera, se despliega desde tu interior."
     ],
     "30": [
-      "Nivel treinta. Aurélia reconoce en ti a un verdadero pilar del Santuario.",
+      "Nivel treinta. Aurelia reconoce en ti a un verdadero pilar del Santuario.",
       "Tu maestría en la calma es un faro para las almas perdidas."
     ],
     "31": [

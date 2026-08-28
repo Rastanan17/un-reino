@@ -87,10 +87,10 @@
 ======================================= */
 .caverna-salida{
     position: absolute;
-    left: 50%;
-    bottom: 20%;
-    width: 100px;
-    height: 100px;
+    right: 10%;
+    bottom: 30%;
+    width: 150px;
+    height: 150px;
     z-index: 30;
     display: flex;
     align-items: center;
@@ -110,13 +110,13 @@
    💻 TABLET
 ======================================= */
 @media (max-width: 900px){
-    .caverna-salida{ width: 75px; height: 75px; left: 50%; bottom: 20%; }
+    .caverna-salida{ width: 100px; height: 100px; right: 10%; bottom: 30%; }
 }
 /* =======================================
    📱 CELULAR
 ======================================= */
 @media (max-width: 600px){
-    .caverna-salida{ width: 58px; height: 58px; left: 50%; bottom: 20%; }
+    .caverna-salida{ width: 75px; height: 75px; right: 10%; bottom: 30%; }
     .zona-caverna.minerales{ left: 8%; top: 34%; width: 30%; height: 28%; }
     .zona-caverna.fuego{ left: 35%; top: 29%; width: 30%; height: 28%; }
     .zona-caverna.hielo{ right: 7%; top: 34%; width: 30%; height: 28%; }

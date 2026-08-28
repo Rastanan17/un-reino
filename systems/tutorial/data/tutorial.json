@@ -357,5 +357,37 @@
                 ]
             }
         }
+    },
+
+    "santuario": {
+        "titulo": "Guía del Santuario (RELAX)",
+        "opciones": {
+            "queEsSantuario": {
+                "titulo": "¿Qué es el Santuario?",
+                "texto": [
+                "Es un lugar para relajarse, lejos de los ruidos del reino."
+                ]
+            },
+            "quienEsAurelia": {
+                "titulo": "¿Quién es Aurelia?",
+                "texto": [
+                "Aurelia es la sacerdotisa y guía de meditación.",
+                "Consulta con ella para obtener sabiduría ancestral."
+                ]
+            },
+            "queHacer": {
+                "titulo": "¿Qué puedo hacer aquí?",
+                "texto": [
+                "Este lugar es para relajarse: escucha la música y disfruta el momento.",
+                "Puedes cambiar el ambiente musical interactuando con el cartel."
+                ]
+            },
+            "comoSalir": {
+                "titulo": "¿Cómo salgo?",
+                "texto": [
+                "Acércate a la antorcha, tira de ella y te llevará de regreso al mapa."
+                ]
+            }
+        }
     }
 }

@@ -49,10 +49,10 @@ Un Reino<
                 cave_fire.png
                 cave_frost.png
                 cave_mineral.png
-                caves_all.png
-				caves_alll.png
+                caves_all.jpg
                 farm.png
 				forest.jpg
+				library.jpg
 				observatory.jpg
 				theatre_after.jpg
 				theatre_day.jpg
@@ -319,43 +319,66 @@ Un Reino<
 			throne.js
 		caves<
 			data<
-				fire.json
-				ice.json
-				mineral.json
-			images<
-				carbon1.png
-				carbon2.png
-				diamante1.png
-				diamante2.png
-				gema1.png
-				gema2.png
-				mineral1.png
-				mineral2.png
-				mineral3.png
-				mineral4.png
-				mineral5.png
-				mineral6.png
-				mineral7.png
-				roca0.png
-				roca1.png
-				roca2.png
-				roca3.png
-				roca4.png
-				roca5.png
-				roca6.png
-				roca7.png
-				roca8.png
-				roca9.png
-				tierra1.png
-				tierra2.png
-				tierra3.png
+				eliana.json
 			minigames<
-				fire.css
-				fire.js
-				ice.css
-				ice.js
-				mineral.css
-				mineral.js
+				fire<
+					images<
+						bag.png	
+						pico_fire.png	
+						pico_new.png
+						pico_roto.png					
+					fire.json
+					fire.css
+					fire.js
+				ice<
+					images<
+						bag.png	
+						pico_ice.png	
+						pico_new.png
+						pico_roto.png	
+					ice.json
+					ice.css
+					ice.js
+ 				mineral<
+					images<
+						bag.png	
+						carbon1.png
+						carbon2.png
+						carbon3.png
+						diamante1.png
+						diamante2.png
+						gema1.png
+						gema2.png
+						mineral1.png
+						mineral2.png
+						mineral3.png
+						mineral4.png
+						mineral5.png
+						mineral6.png
+						mineral7.png
+						pico_ice.png
+						pico_mineral.png
+						pico_new.png
+						pico_roto.png
+						roca0.png
+						roca1.png
+						roca2.png
+						roca3.png
+						roca4.png
+						roca5.png
+						roca9.png
+						rota0.png
+						rota1.png
+						rota2.png
+						rota3.png
+						rota4.png
+						rota5.png
+						tierra1.png
+						tierra2.png
+						tierra3.png
+					mineral.json
+					mineral.css
+					mineral.js
 			caves.css
 			caves.js
 		farm<

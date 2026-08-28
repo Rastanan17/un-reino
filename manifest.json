@@ -3,6 +3,6 @@
     "short_name":"Un Reino",
     "start_url":"./index.html",
     "display":"standalone",
-    "background_color":"#1f2937",
-    "theme_color":"#1f2937"
+    "background_color":"#2C0E4E",
+    "theme_color":"#875DFF"
 }
