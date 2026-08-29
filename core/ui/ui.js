@@ -288,6 +288,21 @@ function entregarDesafioNPC(){
     const tipoPico =
         desafio.tipo_pico || "Picos";
     // ===================================
+    // ⛏️ ENTREGAR PICOS AL INVENTARIO
+    // ===================================
+    if(picos > 0){
+        if(typeof agregarPicosMineral === "function"){
+            agregarPicosMineral(picos);
+            console.log(
+                `⛏️ Recompensa entregada: +${picos} ${tipoPico}`
+            );
+        }else{
+            console.error(
+                "❌ agregarPicosMineral() no está disponible."
+            );
+        }
+    }
+    // ===================================
     // CERRAR MODAL ACTUAL
     // ===================================
     document
