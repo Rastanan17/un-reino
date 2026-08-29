@@ -36,16 +36,26 @@
 ======================================= */
 .zona-caverna.minerales{
     left: 40%;
-    top: 31%;
-    width: 25%;
-    height: 30%;
+    top: 40%;
+    width: 15%;
+    height: 10%;
+    color:#e6dca5;
+    font-weight:bold;
+    text-shadow:
+        -2px -2px 0 #000,
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000,
+         0 2px 5px #000;
+    background-color: rgba(0, 0, 0, 0.445);
+    border-radius: 100px;
 }
 /* =======================================
    🔥 FUEGO
 ======================================= */
 .zona-caverna.fuego{
-    left: 15%;
-    top: 30%;
+    left: 0%;
+    top: 40%;
     width: 25%;
     height: 30%;
 }
@@ -53,7 +63,7 @@
    ❄️ HIELO
 ======================================= */
 .zona-caverna.hielo{
-    right: 23%;
+    right: 0%;
     top: 40%;
     width: 25%;
     height: 30%;
@@ -87,8 +97,8 @@
 ======================================= */
 .caverna-salida{
     position: absolute;
-    right: 10%;
-    bottom: 30%;
+    right: 5%;
+    top: 5%;
     width: 150px;
     height: 150px;
     z-index: 30;
@@ -96,6 +106,8 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    background-color: rgba(250, 248, 245, 0.397);
+    border-radius: 100px;
 }
 .caverna-salida img{
     width: 100%;
@@ -105,6 +117,19 @@
 }
 .caverna-salida:hover img{
     transform: scale(1.08);
+}
+.caverna-salida{
+    position:absolute;
+    color:#e6dca5;
+    flex-direction: column;
+    font-weight:bold;
+    text-shadow:
+        -2px -2px 0 #000,
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000,
+         0 2px 5px #000;
+    border-radius: 100px;
 }
 /* =======================================
    💻 TABLET
@@ -116,8 +141,8 @@
    📱 CELULAR
 ======================================= */
 @media (max-width: 600px){
-    .caverna-salida{ width: 75px; height: 75px; right: 10%; bottom: 30%; }
-    .zona-caverna.minerales{ left: 8%; top: 34%; width: 30%; height: 28%; }
-    .zona-caverna.fuego{ left: 35%; top: 29%; width: 30%; height: 28%; }
-    .zona-caverna.hielo{ right: 7%; top: 34%; width: 30%; height: 28%; }
+    .caverna-salida{ width: 75px; height: 75px; right: 5%; top: 5%; background-color: rgba(250, 248, 245, 0.397); border-radius: 100px;}
+    .zona-caverna.minerales{ left: 40%; top: 45%; width: 25%; height: 5%; color:#e6dca5; font-weight:bold; background-color: rgba(0, 0, 0, 0.445); border-radius: 100px;}
+    .zona-caverna.fuego{ left: 2%; top: 40%; width: 30%; height: 28%; }
+    .zona-caverna.hielo{ right: 2%; top: 40%; width: 30%; height: 28%; }
 }

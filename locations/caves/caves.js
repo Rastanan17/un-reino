@@ -33,10 +33,11 @@ function mostrarCavernas(){
                 <img src="assets/images/ui/next_soon.png" alt="Próximamente">
             </div>
             <!-- ===================================
-                 🛒 CARRO MINERO — SALIDA
+                 🗺️ YUNQUE — SALIDA
             ==================================== -->
             <div class="caverna-salida" onclick="salirDeCavernas()">
                 <img src="assets/images/items/anvil.png" alt="Salir de las Cavernas">
+                <span>🗺️ Salida</span>
             </div>
         </section>
     `;

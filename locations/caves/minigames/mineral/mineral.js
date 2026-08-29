@@ -212,6 +212,8 @@ function mostrarPantallaMineral(){
 
     if(!content) return;
 
+    ocultarHUDJugador();
+
     content.innerHTML = `
 
         <section class="mineral-game">
@@ -352,6 +354,55 @@ function ajustarCanvasMineral(){
     );
 
     dibujarMineral();
+}
+function zonaDisponibleParaMisiones(zona, jugador){
+    if(!zona || !jugador){
+        return false;
+    }
+
+    const nivelJugador = Number(jugador.nivel) || 1;
+
+    // ===================================
+    // 🗺️ ZONAS NORMALES
+    // ===================================
+
+    if(zona.nombre !== "Caverna de Fuego" &&
+       zona.nombre !== "Caverna de Hielo"){
+
+        return nivelJugador >= (Number(zona.nivel) || 1);
+    }
+
+    // ===================================
+    // 🔥 CAVERNA DE FUEGO
+    // ===================================
+
+    if(zona.nombre === "Caverna de Fuego"){
+
+        const nivelMineralGuardado =
+            localStorage.getItem("nivelMineral");
+
+        const nivelMineral =
+            Number(nivelMineralGuardado) || 1;
+
+        return nivelMineral >= 30;
+    }
+
+    // ===================================
+    // ❄️ CAVERNA DE HIELO
+    // ===================================
+
+    if(zona.nombre === "Caverna de Hielo"){
+
+        const nivelFuegoGuardado =
+            localStorage.getItem("nivelFuego");
+
+        const nivelFuego =
+            Number(nivelFuegoGuardado) || 1;
+
+        return nivelFuego >= 30;
+    }
+
+    return false;
 }
 
 // =======================================
@@ -931,56 +982,30 @@ function golpearRoca(roca){
 // =======================================
 // 💎 DESCUBRIR ROCA
 // =======================================
-
 function descubrirRoca(roca){
-
-    roca.estado =
-        "descubierto";
-
-    roca.descubierta =
-        true;
-
+    roca.estado = "descubierto";
+    roca.descubierta = true;
     recursosMineral++;
-
-    let xpGanada =
-        datosMineral
-            .excavacion
-            .xpRocaVacia;
-
-    if(
-        roca.mineral
-    ){
-
-        xpGanada =
-            roca.mineral.xp;
-
-        console.log(
-            "💎 Recurso encontrado:",
-            roca.mineral.nombre
-        );
-
+    let xpGanada = datosMineral.excavacion.xpRocaVacia;
+    if(roca.mineral){
+        xpGanada = roca.mineral.xp;
+        console.log("💎 Recurso encontrado:", roca.mineral.nombre);
     }else{
-
-        console.log(
-            "🪨 Roca vacía"
-        );
+        console.log("🪨 Roca vacía");
     }
-
-    xpMineral +=
-        xpGanada;
-
+    xpMineral += xpGanada;
     comprobarNivelMineral();
-
+    // =======================================
+    // 🎁 HALLAZGO ESPECIAL: +3 PICOS
+    // =======================================
+    const probabilidadPicos = datosMineral.picos?.probabilidadHallazgo || 0;
+    if(Math.random() < probabilidadPicos){
+        encontrarPicosMineral();
+    }
     actualizarHUDMineral();
-
     dibujarMineral();
-
-    setTimeout(
-        () => recogerRecurso(roca),
-        700
-    );
+    setTimeout(() => recogerRecurso(roca), 700);
 }
-
 // =======================================
 // 🎒 RECOGER RECURSO
 // =======================================
@@ -1183,6 +1208,8 @@ function salirMinijuegoMineral(){
         "exit.mp3"
     );
 
+    mostrarHUDJugador();
+    
     irA(
         "mineral",
         "caves",

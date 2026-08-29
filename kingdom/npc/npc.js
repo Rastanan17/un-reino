@@ -300,94 +300,158 @@ function crearNPC(npc){
 // =======================================
 // INTERACTUAR CON NPC
 // =======================================
-// =======================================
-// INTERACTUAR CON NPC
-// =======================================
-
 async function interactuarNPC(id){
+
     const npc = obtenerNPC(id);
+
     if(!npc){
         return;
     }
+
     console.log("🧙 Interactuando con:", npc.nombre);
+
     // ===================================
     // 🎯 COMPROBAR DESAFÍO NPC ACTIVO
     // ===================================
-    const desafioActivoGuardado = localStorage.getItem("desafioNPCActivo");
+
+    const desafioActivoGuardado =
+        localStorage.getItem("desafioNPCActivo");
+
     if(desafioActivoGuardado){
+
         try{
-            const desafioActivo = JSON.parse(desafioActivoGuardado);
-            console.log("🎯 Desafío NPC activo encontrado:", desafioActivo);
+
+            const desafioActivo =
+                JSON.parse(desafioActivoGuardado);
+
+            console.log(
+                "🎯 Desafío NPC activo encontrado:",
+                desafioActivo
+            );
+
             // ===================================
-            // COMPROBAR DESTINATARIO
+            // 🎯 OBTENER DESTINATARIO
             // ===================================
-            const destinatarioID = desafioActivo.destinatarioID;
+            // Soportamos ambas variantes:
+            //
+            // destinatario_id  ← JSON actual
+            // destinatarioID   ← sistema anterior
+            // ===================================
+
+            const destinatarioID =
+                desafioActivo.destinatario_id ||
+                desafioActivo.destinatarioID;
+
             const destinatario =
                 desafioActivo.destinatario;
+
+            // ===================================
+            // 🎯 COMPROBAR ID
+            // ===================================
+
             const coincideID =
                 destinatarioID &&
-                String(destinatarioID) === String(npc.id);
+                String(destinatarioID).toLowerCase() ===
+                String(npc.id).toLowerCase();
+
+            // ===================================
+            // 🎯 COMPROBAR NOMBRE
+            // ===================================
+
             const coincideNombre =
                 destinatario &&
                 String(destinatario).toLowerCase() ===
                 String(npc.nombre).toLowerCase();
+
+            console.log(
+                "🎯 Comprobación destinatario:",
+                {
+                    desafioID: destinatarioID,
+                    desafioNombre: destinatario,
+                    npcID: npc.id,
+                    npcNombre: npc.nombre,
+                    coincideID,
+                    coincideNombre
+                }
+            );
+
             // ===================================
             // 🎯 ESTE NPC ES EL DESTINATARIO
             // ===================================
+
             if(coincideID || coincideNombre){
+
                 console.log(
                     "🎯 DESAFÍO DESTINADO A ESTE NPC:",
                     npc.nombre
                 );
+
                 mostrarEntregaDesafioNPC(
                     npc,
                     desafioActivo
                 );
+
                 return;
             }
+
         }catch(error){
+
             console.error(
                 "❌ Error leyendo desafioNPCActivo:",
                 error
             );
         }
     }
+
     // ===================================
     // 📜 CARGAR DATOS DEL NPC
     // ===================================
+
     const datos = await cargarDatosNPC(id);
+
     // ===================================
     // SI NO HAY DATOS
     // ===================================
+
     if(!datos){
+
         mostrarMensaje(
             npc.nombre,
             npc.descripcion
         );
+
         return;
     }
+
     // ===================================
     // SELECCIONAR CONTENIDO
     // ===================================
+
     const contenido =
         seleccionarDialogoNPC(datos);
+
     // ===================================
     // 🎯 DETECTAR DESAFÍO
     // ===================================
+
     if(
         contenido &&
         typeof contenido === "object" &&
         contenido.tipo === "desafio"
     ){
+
         mostrarDesafioNPC(
             npc,
             contenido.datos
         );
+
         return;
     }
+
     // ===================================
     // 💬 DIÁLOGO NORMAL
     // ===================================
+
     mostrarMensaje(
         npc.nombre,
         contenido
@@ -634,6 +698,46 @@ function seleccionarDialogoNPC(datos){
         return null;
     });
     return cargandoDatosNPC[id];
+}
+function filtrarDesafiosCaverna(desafios) {
+
+    if(!Array.isArray(desafios)){
+        return [];
+    }
+
+    const nivelMineral = Number(
+        localStorage.getItem("nivelMineral")
+    ) || 1;
+
+    const nivelFuego = Number(
+        localStorage.getItem("nivelFuego")
+    ) || 0;
+
+    return desafios.filter(desafio => {
+
+        const tipo = String(
+            desafio.tipo_caverna || ""
+        ).toLowerCase();
+
+        // 🪨 MINERALES
+        if(tipo === "minerales"){
+            return true;
+        }
+
+        // 🔥 FUEGO
+        if(tipo === "fuego"){
+            return nivelMineral >= 30;
+        }
+
+        // ❄️ HIELO
+        if(tipo === "hielo"){
+            return nivelFuego >= 30;
+        }
+
+        // Si aparece un tipo desconocido,
+        // no lo ofrecemos.
+        return false;
+    });
 }
 // =======================================
 // ANIMACIÓN Y MOVIMIENTO DE NPC

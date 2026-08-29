@@ -18,6 +18,7 @@
     "cantidadInicial": 0,
     "consumoPorGolpe": 1,
     "hallazgoCantidad": 3,
+    "probabilidadHallazgo": 0.05,
     "imagenes": {
         "normal": "pico_mineral",
         "sinPicos": "pico_roto",
