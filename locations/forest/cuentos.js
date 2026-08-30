@@ -42,6 +42,7 @@ let cuentoActual = 0;
 // =======================================
 function mostrarCuentos(){
     console.log("📖 Entrando a los cuentos");
+    ocultarHUDJugador();
     const content = document.getElementById("content");
     if(!content) return;
     cuentoActual = 0;
@@ -128,5 +129,6 @@ function animarCambioCuento(direccion){
 // SALIR DE CUENTOS
 // =======================================
 function salirDeCuentos(){
+    mostrarHUDJugador();
     mostrarBosque();
 }

@@ -1,7 +1,7 @@
 // =======================================
 // PERGAMINO DEL REINO
 // =======================================
-const sonidoPergamino = new Audio("../../assets/sounds/bookFlip.wav");
+const sonidoPergamino = new Audio("assets/sounds/paper_slide.mp3");
 // ---------------------------------------
 // Abrir pergamino
 // ---------------------------------------

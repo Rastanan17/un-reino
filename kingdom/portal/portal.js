@@ -343,10 +343,7 @@ async function crearNuevoPerfil(){
     // ===================================
     localStorage.setItem("perfilActivo", id);
     // ===================================
-    // ENTRAR AL REINO
+    // HISTORIA DEL NUEVO AVENTURERO
     // ===================================
-    irA("portal", "map", async () => {
-            await entrarAlReino();
-        }
-    );
+    iniciarHistoriaNuevoAventurero();
 }

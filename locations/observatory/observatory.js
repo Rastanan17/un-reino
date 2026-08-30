@@ -69,13 +69,6 @@ function abrirMisionesObservatorio(){
     detenerSonidoObservatorio();
     mostrarMisiones();
 }
-function mostrarConstelaciones(){
-    console.log("⭐ Entrando al mapa estelar");
-    const content = document.getElementById("content");
-    if(!content) return;
-    constelacionActual = 0;
-    renderizarConstelacion("entrada");
-}
 // =======================================
 // 🪐 ASTROS
 // =======================================

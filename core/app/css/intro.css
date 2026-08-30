@@ -8,6 +8,17 @@ body{
     font-family:'MedievalSharp', cursive;
 }
 /* =======================================
+   CAPA PRINCIPAL DE LA INTRO
+======================================= */
+#introScreen{
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    overflow: hidden;
+}
+/* =======================================
    FONDO
 ======================================= */
 #background{
@@ -20,6 +31,7 @@ body{
     background-position:center;
     filter:brightness(.35);
     font-family:'MedievalSharp', cursive;
+    z-index: 0;
 }
 /* =======================================
    OSCURECIMIENTO
@@ -31,6 +43,7 @@ body{
     height:100%;
     background:linear-gradient(to top, rgba(0,0,0,.85), rgba(0,0,0,.2));
     font-family:'MedievalSharp', cursive;
+    z-index: 1;
 }
 /* =======================================
    CONTENEDOR DEL TEXTO
@@ -43,6 +56,7 @@ body{
     perspective:400px;
     overflow:hidden;
     font-family:'MedievalSharp', cursive;
+    z-index: 2;
 }
 /* =======================================
    TEXTO DE INTRODUCCIÓN
@@ -100,6 +114,7 @@ body{
     gap:15px;
     width:auto;
     font-family:'MedievalSharp', cursive;
+    z-index: 3;
 }
 /* =======================================
    BOTÓN COMENZAR
