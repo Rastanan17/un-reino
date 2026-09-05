@@ -9,6 +9,11 @@ Un Reino<
 					castle_day.jpg
 					castle_night.jpg
 					castle_sunset.jpg
+				caves<
+					cave_fire.png
+					cave_frost.png
+					cave_mineral.png
+					caves_all.jpg
 				farm<
 					farm_dawn.jpg
 					farm_day.jpg
@@ -29,12 +34,22 @@ Un Reino<
 					market_day.jpg
 					market_night.jpg
 					market_sunset.jpg
+				missions<
+					castle.jpg
+					farm.png
+					forest.jpg
+					library.jpg
+					observatory.jpg
+					village.jpg
 				observatory<
 					observatory_dawn.jpg
 					observatory_day.jpg
 					observatory_night.jpg
 					observatory_sunset.jpg
 				sanctuary<
+					aros1.png
+					aros2.png
+					aros3.png
 					sanctuary_day.jpg
 					sanctuary_dawn.jpg
 					sanctuary_night.jpg
@@ -44,20 +59,6 @@ Un Reino<
 					village_day.jpg
 					village_night.jpg
 					village_sunset.jpg
-				castle-ruins.jpg
-				castle.jpg
-                cave_fire.png
-                cave_frost.png
-                cave_mineral.png
-                caves_all.jpg
-                farm.png
-				forest.jpg
-				library.jpg
-				observatory.jpg
-				theatre_after.jpg
-				theatre_day.jpg
-				theatre_night.jpg
-				village.jpg
 			icons<
 				bar.jpg
 				castle.jpg
@@ -144,6 +145,8 @@ Un Reino<
 			gallina1.mp3
 			gallina2.mp3
 			gallina3.mp3
+			ganzo1.mp3
+			intro.mp3
 			level_up.wav
 			man_talk.mp3
 			mission_complete.wav
@@ -169,6 +172,7 @@ Un Reino<
 			wolf.mp3
             woman_talk.mp3
 		videos<
+			arca_pixeles_studio.mp4
 			bar-map.mp4
 			castle-map.mp4
 			caves-map.mp4
@@ -198,16 +202,9 @@ Un Reino<
 				main.css
 			data<
 				history.json
-			images<
-				arca_pixeles_studio.jpg
-				intro.jpeg
 			js<
 				app.js
 				intro.js
-			sounds<
-				intro.mp3
-			videos<
-				arca_pixeles_studio.mp4
 		logo<
 			logo.css
 			logo.js
@@ -216,8 +213,8 @@ Un Reino<
 		ui<
 			hud.css
 			hud.js
-			notifications.css - (vacío)
-			notifications.js - (vacío)
+			notifications.css
+			notifications.js
 			pergamino.css
 			pergamino.js
 			ui.js
@@ -643,5 +640,5 @@ Un Reino<
 	index.html
 	manifest.json
 	README.md
-    roots.text
+    roots.text (este archivo)
 	service-workers.js

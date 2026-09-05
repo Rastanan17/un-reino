@@ -12,7 +12,7 @@ const CLAVE_PICOS_MINERAL =
     "picosMineral";
 
 const FONDO_MINERAL =
-    "assets/images/backgrounds/cave_mineral.png";
+    "assets/images/backgrounds/caves/cave_mineral.png";
 
 let imagenFondoMineral = null;
 

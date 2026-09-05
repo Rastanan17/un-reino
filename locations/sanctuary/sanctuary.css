@@ -135,7 +135,147 @@
          1px  1px 0 #000;
     pointer-events:none;
 }
+/* =======================================
+   🔮 CAPAS ARCANAS
+======================================= */
+.santuario-aros{
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    pointer-events: none;
+}
+/* =======================================
+   🔮 AROS
+======================================= */
+.aro-santuario{
+    position: absolute;
+    left: 50%;
+    transform-origin: center;
+    pointer-events: none;
+    user-select: none;
+}
+/* =======================================
+   ✨ ARO SUPERIOR
+======================================= */
+.aro-1{
+    top: 5%;
+    width: 26%;
+    transform: translateX(-50%);
+    animation: aroPulso1 4s ease-in-out infinite;
+    filter:drop-shadow(0 0 4px #aa4747) drop-shadow(0 0 8px #FFFEF1);
+    animation: aroPulso1 4s ease-in-out infinite, aroGiroDerecha 12s ease-in-out infinite;
+}
+/* =======================================
+   ✨ ARO CENTRAL
+======================================= */
+.aro-2{
+    top: 5%;
+    width: 38%;
+    transform: translateX(-50%);
+    animation: aroPulso2 5s ease-in-out infinite;
+    filter: drop-shadow(0 0 5px #aa4747) drop-shadow(0 0 10px #FFFEF1);
+    animation: aroPulso2 5s ease-in-out infinite, aroGiroIzquierda 16s ease-in-out infinite;
+}
+/* =======================================
+   ✨ ARO INFERIOR
+======================================= */
+.aro-3{
+    top: 5%;
+    width: 44%;
+    transform: translateX(-50%);
+    animation: aroPulso3 6s ease-in-out infinite;
+    filter: drop-shadow(0 0 4px #aa4747) drop-shadow(0 0 9px #FFFEF1);
+    animation: aroPulso3 6s ease-in-out infinite, aroGiroDerecha 20s ease-in-out infinite;
+}
+/* =======================================
+   ✨ ANIMACIONES
+======================================= */
+@keyframes aroPulso1{
+    0%, 100%{ opacity: .60;
+        transform: translateX(-50%) scale(.98);
+        filter: drop-shadow(0 0 3px #fff4d6) drop-shadow(0 0 6px #ffd98a);
+    }
+    50%{ opacity: 1;
+        transform: translateX(-50%) scale(1.04);
+        filter: drop-shadow(0 0 8px #fff8e8) drop-shadow(0 0 18px #ffd36a) drop-shadow(0 0 28px #d9a83e);
+    }
+}
+@keyframes aroPulso2{
+    0%, 100%{ opacity: .65;
+        transform:  translateX(-50%)
+            scale(1);
 
+        filter:
+            drop-shadow(0 0 4px #fff8e8)
+            drop-shadow(0 0 8px #e8c675);
+    }
+
+    50%{
+        opacity: 1;
+
+        transform:
+            translateX(-50%)
+            scale(1.05);
+
+        filter:
+            drop-shadow(0 0 9px #ffffff)
+            drop-shadow(0 0 20px #f1d68a)
+            drop-shadow(0 0 32px #c79c46);
+    }
+}
+
+@keyframes aroPulso3{
+
+    0%, 100%{
+        opacity: .55;
+
+        transform:
+            translateX(-50%)
+            scale(.97);
+
+        filter:
+            drop-shadow(0 0 3px #eaf8ff)
+            drop-shadow(0 0 7px #bdeaff);
+    }
+
+    50%{
+        opacity: .95;
+
+        transform:
+            translateX(-50%)
+            scale(1.03);
+
+        filter:
+            drop-shadow(0 0 8px #ffffff)
+            drop-shadow(0 0 17px #ccefff)
+            drop-shadow(0 0 27px #91d7ef);
+    }
+}
+/* =======================================
+   🔄 OSCILACIÓN
+======================================= */
+
+@keyframes aroGiroDerecha{
+
+    0%, 100%{
+        margin-left: -4px;
+    }
+
+    50%{
+        margin-left: 4px;
+    }
+}
+
+@keyframes aroGiroIzquierda{
+
+    0%, 100%{
+        margin-left: 5px;
+    }
+
+    50%{
+        margin-left: -5px;
+    }
+}
 /* =======================================
    🖥️ PC
 ======================================= */

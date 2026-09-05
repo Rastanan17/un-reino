@@ -33,6 +33,11 @@ function mostrarSantuario(){
     // ===================================
     content.innerHTML = `
         <section class="santuario momento-${momento}">
+            <div class="santuario-aros">
+                <img src="assets/images/backgrounds/sanctuary/aros1.png" class="aro-santuario aro-1" alt="">
+                <img src="assets/images/backgrounds/sanctuary/aros2.png" class="aro-santuario aro-2" alt="">
+                <img src="assets/images/backgrounds/sanctuary/aros3.png" class="aro-santuario aro-3" alt="">
+            </div>
             <!-- =================================
                  SALIDA → MAPA
             ================================== -->
