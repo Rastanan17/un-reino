@@ -1,0 +1,305 @@
+{
+  "npc": "arqueologa",
+  "nombre": "Margot Kaellen",
+
+  "saludos": [
+    "Bienvenido al campamento. Sacúdete la nieve antes de entrar; ya tenemos suficientes muestras sin catalogar.",
+    "Has llegado en buen momento. Encontré algo esta mañana y todavía no sé exactamente qué es. Mi clase favorita de problema.",
+    "Saludos, explorador. Aquí arriba las respuestas suelen estar enterradas bajo nieve, hielo o varios siglos de malas suposiciones.",
+    "Pasa. Antes de tocar nada, observa. Es una regla poco emocionante y extraordinariamente útil.",
+    "Bienvenido a las Nieves de Mírrafen. Cada huella puede significar algo... aunque a veces simplemente significa que alguien caminó por allí.",
+    "Has vuelto. Excelente. Necesito otro par de ojos y, preferentemente, alguien que no haya mirado estas notas durante seis horas.",
+    "Acércate al mapa. Hay una zona que nuestros registros no explican del todo.",
+    "Saludos. Los lugares silenciosos cuentan muchas cosas cuando aprendemos qué señales buscar.",
+    "Bienvenido al norte. Aquí exploramos para descubrir, no para demostrar que nuestra primera idea era correcta.",
+    "Pasa, aventurero. Todavía quedan partes de Mírrafen que nadie ha comprendido completamente. Una situación intolerable que pienso disfrutar."
+  ],
+
+  "dialogos": [
+    "Explorar no significa tocar todo lo que encuentras. Muchas veces significa observar sin alterar.",
+    "Un hallazgo pierde parte de su historia cuando olvidamos registrar dónde apareció.",
+    "Antes de interpretar algo, describe lo que realmente puedes observar.",
+    "Una expedición empieza mucho antes de llegar al lugar de estudio.",
+    "No todo objeto extraño es antiguo y no todo objeto antiguo es importante por las razones que imaginamos.",
+    "El terreno también es una fuente de información: posición, materiales y contexto pueden contar tanto como el objeto mismo.",
+    "Una hipótesis sirve para orientar preguntas, no para obligar al descubrimiento a coincidir con ella.",
+    "Si encuentras algo que contradice tu idea inicial, acabas de encontrar algo interesante.",
+    "Un explorador responsable sabe cuándo continuar y cuándo detenerse porque faltan información, permiso o condiciones seguras.",
+    "El mejor hallazgo no siempre es una reliquia espectacular. A veces es una pequeña pista que permite entender todo lo demás."
+  ],
+
+  "desafios_reales": [
+    {
+      "tipo": "vida_real",
+      "titulo": "Tres huellas",
+      "descripcion": "Margot comienza toda exploración observando detalles antes de sacar conclusiones.",
+      "accion": "Observar un lugar seguro y conocido e identificar tres detalles que normalmente pasan desapercibidos",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Cuaderno de campo",
+      "descripcion": "Un descubrimiento sin registro puede transformarse rápidamente en un recuerdo impreciso.",
+      "accion": "Registrar con palabras, dibujo o foto apropiada algo interesante que hayas observado",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "¿Qué veo realmente?",
+      "descripcion": "Margot quiere separar observación de interpretación.",
+      "accion": "Elegir un objeto y escribir o decir tres cosas observables sin explicar todavía qué crees que significa",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Mapa del terreno",
+      "descripcion": "Ubicar un hallazgo forma parte de comprenderlo.",
+      "accion": "Dibujar un mapa sencillo de un espacio conocido señalando varios puntos importantes",
+      "recompensa": {
+        "xp": 4,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Objeto cotidiano",
+      "descripcion": "Margot sostiene que incluso algo común puede estudiarse como si fuera un hallazgo.",
+      "accion": "Elegir un objeto seguro y averiguar qué material lo compone y para qué sirve",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Antes de explorar",
+      "descripcion": "Prepararse evita que la curiosidad se convierta en improvisación absurda.",
+      "accion": "Pensar qué información necesitarías antes de visitar o estudiar un lugar nuevo",
+      "recompensa": {
+        "xp": 4,
+        "oquos": 1
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Dos posibilidades",
+      "descripcion": "Una pista puede tener más de una explicación.",
+      "accion": "Elegir una observación sencilla y proponer dos posibles explicaciones",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Comparar muestras",
+      "descripcion": "Las diferencias pequeñas pueden revelar información importante.",
+      "accion": "Comparar dos objetos cotidianos seguros e identificar dos semejanzas y dos diferencias",
+      "recompensa": {
+        "xp": 7,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "La pregunta del terreno",
+      "descripcion": "Cada buen hallazgo debería producir al menos una pregunta.",
+      "accion": "Después de observar algo interesante, formular una pregunta que te gustaría investigar",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Exploración segura",
+      "descripcion": "Margot jamás inicia una expedición sin pensar primero dónde puede explorar responsablemente.",
+      "accion": "Elegir un lugar seguro y autorizado que te gustaría observar mejor y explicar qué buscarías allí",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 4
+      }
+    }
+  ],
+
+  "misiones_reino": [
+    {
+      "titulo": "Mapas de la Corona",
+      "destino": "Aldea",
+      "descripcion": "Visita a Eleanor y consulta qué zonas de Mírrafen todavía necesitan ser documentadas después de la reconstrucción.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Rutas de la Guardia",
+      "destino": "Castillo",
+      "descripcion": "Pregunta a Roderick qué señales utilizan los guardias para detectar cambios en caminos y estructuras durante sus patrullas.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Objetos llegados de lejos",
+      "destino": "Mercado",
+      "descripcion": "Pregunta a Borin por algún objeto extranjero y registra qué sabe realmente sobre su procedencia.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Huellas entre cultivos",
+      "destino": "Granja",
+      "descripcion": "Habla con Silas sobre las señales naturales que observa para saber qué ha ocurrido en una zona de cultivo.",
+      "recompensa": {
+        "xp": 9,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Materiales de profundidad",
+      "destino": "Cavernas",
+      "descripcion": "Consulta a Eliana sobre cómo distingue materiales según su apariencia, origen y comportamiento dentro de las Cavernas.",
+      "recompensa": {
+        "xp": 12,
+        "oquos": 5
+      }
+    },
+    {
+      "titulo": "Leyendas del territorio",
+      "destino": "Bosque",
+      "descripcion": "Pide a Garrick una antigua historia asociada a un lugar concreto y analiza qué pista podría investigarse sin asumir que toda la leyenda es literal.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Refugio del explorador",
+      "destino": "Santuario",
+      "descripcion": "Habla con Aurélia sobre la importancia de descansar y recuperar claridad durante expediciones prolongadas.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Coordenadas del cielo",
+      "destino": "Observatorio",
+      "descripcion": "Pregunta a Zephyr cómo utiliza referencias astronómicas para ubicar y comparar observaciones realizadas desde distintos puntos.",
+      "recompensa": {
+        "xp": 11,
+        "oquos": 5
+      }
+    },
+    {
+      "titulo": "Diarios de expedición",
+      "destino": "Biblioteca",
+      "descripcion": "Consulta a Rowena sobre antiguos cuadernos de campo y descubre qué información vuelve útil un registro de exploración.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Reliquias con procedencia",
+      "destino": "Museo",
+      "descripcion": "Trabaja con Eldrin para identificar qué información necesita un museo antes de explicar correctamente el origen de una pieza.",
+      "recompensa": {
+        "xp": 14,
+        "oquos": 6
+      }
+    }
+  ],
+
+  "consejos": [
+    "Observa antes de interpretar.",
+    "Nunca alteres un lugar, objeto o entorno únicamente para satisfacer tu curiosidad.",
+    "Un buen registro incluye contexto, no solamente aquello que llamó tu atención.",
+    "No necesitas encontrar algo espectacular para que una exploración haya valido la pena.",
+    "Una hipótesis es una explicación provisional, no una promesa de tener razón.",
+    "Si aparecen datos que contradicen tu idea inicial, actualiza la idea.",
+    "Explorar responsablemente implica respetar permisos, límites y lugares protegidos.",
+    "No retires objetos de sitios históricos, naturales o ajenos. Documentar es muy diferente de apropiarse.",
+    "Saber detener una expedición también es una habilidad de explorador.",
+    "El descubrimiento más valioso puede ser descubrir qué pregunta deberíamos hacer después."
+  ],
+
+  "rumores": [
+    "Rowena encontró un diario que describe una estructura enterrada en el norte, pero la ubicación indicada no coincide con nuestros mapas actuales.",
+    "Eldrin conserva una pieza de metal cuya composición se parece a objetos encontrados bajo el hielo.",
+    "Zephyr cree que algunas ruinas del norte fueron orientadas utilizando posiciones antiguas de ciertas estrellas.",
+    "Eliana quiere analizar fragmentos minerales recuperados de una vieja construcción. Naturalmente me recuerda cada cinco minutos que no debo limpiar demasiado las muestras.",
+    "Laudelino asegura haber visto una torre sobresaliendo entre la nieve durante uno de sus viajes. Laudelino también asegura haber vencido una vez a una tormenta cantándole.",
+    "Silas identificó semillas conservadas en antiguos recipientes encontrados cerca del límite de la nieve.",
+    "Garrick conoce una leyenda sobre una ciudad que quedó dormida bajo el invierno. Me temo que considera mi investigación una excelente oportunidad narrativa.",
+    "Roderick conserva mapas militares con caminos que ya no aparecen en el terreno actual.",
+    "Borin tiene una moneda proveniente de una región que ninguno de nuestros registros comerciales menciona.",
+    "Una de las luces del antiguo campamento arqueológico volvió a encenderse recientemente. Todavía no sabemos qué mecanismo continúa alimentándola."
+  ],
+
+  "historia_personal": [
+    {
+      "id": "historia_01",
+      "titulo": "La niña de las montañas",
+      "texto": "Crecí en las regiones nevadas del norte de Mírrafen. Mientras otros niños veían kilómetros de hielo, yo imaginaba todo aquello que podría permanecer oculto debajo."
+    },
+    {
+      "id": "historia_02",
+      "titulo": "Las primeras expediciones",
+      "texto": "Comencé acompañando a investigadores que documentaban antiguos caminos y asentamientos. Mi trabajo consistía en observar, dibujar, medir y escribir. Al principio me parecía desesperadamente lento. Después comprendí que la precisión era aquello que permitía regresar con conocimiento y no solamente con objetos."
+    },
+    {
+      "id": "historia_03",
+      "titulo": "Lo que conserva el hielo",
+      "texto": "Descubrimos que el frío había preservado herramientas, estructuras y rastros de civilizaciones antiguas. El hielo no era simplemente un obstáculo. Era una especie de archivo natural que debía ser estudiado con cuidado."
+    },
+    {
+      "id": "historia_04",
+      "titulo": "Margot Kaellen",
+      "texto": "Con los años dirigí mis propias expediciones. Cartografiamos zonas remotas, catalogamos hallazgos y reconstruimos fragmentos de la historia anterior al Mírrafen que conocíamos."
+    },
+    {
+      "id": "historia_05",
+      "titulo": "El centro del norte",
+      "texto": "Fundamos un centro de investigación en las alturas, equipado con iluminación, sistemas de energía y depósitos para registrar hallazgos sin destruir su contexto. Investigadores de todo el reino venían a estudiar lo que aparecía bajo la nieve."
+    },
+    {
+      "id": "historia_06",
+      "titulo": "La expedición que no regresó",
+      "texto": "La guerra alcanzó incluso estas regiones alejadas. Varias bases quedaron destruidas y perdí a mi familia y a miembros de mi equipo durante aquellos años. Durante mucho tiempo el campamento quedó vacío."
+    },
+    {
+      "id": "historia_07",
+      "titulo": "Sola en el hielo",
+      "texto": "Regresé al norte cuando las rutas volvieron a ser transitables. Encontré instrumentos dañados, mapas incompletos y registros cubiertos por años de abandono. Pensé que había demasiada historia perdida como para reconstruirla."
+    },
+    {
+      "id": "historia_08",
+      "titulo": "La primera marca",
+      "texto": "Encontré una pequeña señal tallada en una piedra cerca del antiguo campamento. No era un gran tesoro, pero no aparecía en ninguno de nuestros registros. Volví a abrir mi cuaderno y comencé a escribir."
+    },
+    {
+      "id": "historia_09",
+      "titulo": "Volver al terreno",
+      "texto": "Reparé las luces, recuperé mapas y retomé expediciones seguras alrededor de las antiguas rutas. Cada nueva observación demostraba que el norte todavía guardaba preguntas que merecían ser investigadas."
+    },
+    {
+      "id": "historia_10",
+      "titulo": "La próxima expedición",
+      "texto": "Entonces llegaste tú. Al principio debía recordarte que observaras antes de tocar y que escribieras antes de olvidar. Ahora llegas con tus propias preguntas. Quizá el futuro de estas expediciones no dependa de que encuentres lo mismo que yo, sino de que descubras aquello que yo jamás pensé buscar."
+    }
+  ]
+}

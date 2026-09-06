@@ -3,35 +3,37 @@
   "nombre": "Dear Eliana",
 
   "saludos": [
-    "Cuidado por dónde pisas, aventurero. Las chispas de la forja no discriminan.",
-    "Bienvenido al corazón de piedra de Mírrafen. Aquí el metal cobra vida.",
-    "El calor de las cavernas te saluda. ¿Traes buena materia prima o solo curiosidad?",
-    "Que el martillo y el yunque guíen tu jornada hoy.",
-    "Ah, aventurero. Si vienes a template tu voluntad, has llegado al lugar indicado.",
-    "Saludos. El fuego de la caverna siempre está encendido para quien viene a trabajar.",
-    "Acércate a la hoguera. No hay mejor sitio para templar el carácter que bajo la montaña.",
-    "El eco del martillo resonó antes de que llegaras. La roca ya sabía de tu visita.",
-    "Bienvenido. Aquí abajo no importa de dónde vienes, sino de qué metal estás hecho.",
-    "Toma aliento. El aire huele a azufre y minerales, el verdadero perfume de la creación."
+    "Cuidado por dónde pisas, aventurero. Las Cavernas recompensan la atención mucho más que la prisa.",
+    "Bienvenido al corazón de piedra de Mírrafen. Aquí hasta el mineral más tosco puede convertirse en algo extraordinario.",
+    "Ah, aventurero. ¿Vienes dispuesto a intentarlo una vez o a seguir trabajando hasta conseguirlo?",
+    "Que el martillo y el yunque acompañen tu jornada. Hoy seguramente cometeremos algún error útil.",
+    "Has vuelto. Excelente. La primera pieza rara vez sale perfecta; por eso existe la segunda.",
+    "Saludos. Aquí no me interesa que hagas las cosas rápido. Me interesa que aprendas a hacerlas cada vez mejor.",
+    "Acércate. La forja está preparada para quien tenga paciencia suficiente para transformar lo que todavía no funciona.",
+    "El eco del taller resonaba antes de que llegaras. Estas cavernas recuerdan muchas generaciones de artesanos.",
+    "Bienvenido. Aquí abajo descubrimos de qué estamos hechos cuando algo no sale como esperábamos.",
+    "Toma aliento y observa tu trabajo. Antes del siguiente golpe siempre existe un instante para decidir dónde debe caer."
   ],
-  "dialogos_forjadora": [
-    "El hierro no se moldea con palabras amables; requiere fuego intenso, paciencia y golpes precisos.",
-    "Si enfrías el metal demasiado rápido, se vuelve quebradizo. En la vida hay que saber manejar los tiempos.",
-    "Una buena herramienta no es la que brilla más, sino la que jamás le falla a su dueño en el momento crítico.",
-    "Para crear algo duradero, primero debes estar dispuesto a soportar el calor de la transformación.",
-    "El yunque recibe mil golpes al día y sigue en pie. Sé como el yunque cuando las cosas se pongan difíciles.",
-    "No te asustes de las chispas; son solo el exceso de impurezas dejando el metal limpio.",
-    "Un trabajo mal hecho en la forja se paga caro después. Es mejor hacer las cosas bien desde el primer golpe.",
-    "La artesanía requiere cabeza fría y manos calientes. La rabia solo estropea la mezcla.",
-    "Hasta el mineral más bruto y tosco guarda una joya útil en su interior si sabes cómo trabajarlo.",
-    "Templar no es solo calentar y enfriar; es enseñarle al material a resistir cualquier presión futura."
+
+  "dialogos": [
+    "El primer intento no tiene que ser perfecto. Tiene que darte algo sobre lo que puedas seguir trabajando.",
+    "Golpear más fuerte no corrige una pieza. Primero debes descubrir dónde está el error.",
+    "Un artesano experimentado se equivoca también. La diferencia es que sabe observar qué ocurrió y utilizarlo en el siguiente intento.",
+    "Perseverar no significa repetir exactamente lo mismo esperando otro resultado. Significa probar, observar, corregir y volver a intentar.",
+    "La precisión suele vencer a la fuerza. Un pequeño ajuste en el lugar correcto puede cambiar una pieza entera.",
+    "Cuando algo se rompe, no preguntes solamente cómo arreglarlo. Pregunta primero por qué falló.",
+    "Una obra terminada todavía puede mejorarse. Aprender a revisar tu propio trabajo es parte del oficio.",
+    "La materia prima rara vez se parece al resultado final. La transformación necesita tiempo, trabajo y muchas decisiones pequeñas.",
+    "No ocultes tus errores. Déjalos sobre la mesa, estúdialos y conviértelos en parte de tu experiencia.",
+    "La maestría no llega cuando dejas de equivocarte. Llega cuando sabes qué hacer después de equivocarte."
   ],
-  "desafios_creativos": [
+
+  "desafios_reales": [
     {
       "tipo": "vida_real",
-      "titulo": "Limpieza del taller",
-      "descripcion": "Eliana no trabaja entre escoria. Deja tu zona de trabajo despejada y limpia como una forja lista.",
-      "accion": "Ordenar tu escritorio, mesa o área de trabajo",
+      "titulo": "Primer boceto",
+      "descripcion": "Toda creación comienza imperfecta. Eliana quiere que conviertas una idea en algo que puedas observar y mejorar.",
+      "accion": "Crear un primer boceto, borrador o versión sencilla de algo",
       "recompensa": {
         "xp": 5,
         "oquos": 2
@@ -39,9 +41,9 @@
     },
     {
       "tipo": "vida_real",
-      "titulo": "Diseño del plano",
-      "descripcion": "Antes de golpear el yunque hay que trazar la idea. Organiza tus metas en papel.",
-      "accion": "Escribir un boceto o lista de lo que vas a crear o hacer hoy",
+      "titulo": "Plano de la pieza",
+      "descripcion": "Antes de comenzar una creación, piensa qué resultado quieres conseguir y qué pasos podrían llevarte hasta él.",
+      "accion": "Escribir o dibujar un plan breve para una creación o proyecto",
       "recompensa": {
         "xp": 6,
         "oquos": 3
@@ -49,29 +51,19 @@
     },
     {
       "tipo": "vida_real",
-      "titulo": "Prueba de molde",
-      "descripcion": "Toda gran obra empieza por encajar las piezas básicas en su lugar exacto.",
-      "accion": "Acomodar 5 objetos que estén fuera de sitio en tu entorno",
+      "titulo": "Segundo intento",
+      "descripcion": "Algo no salió como querías. Perfecto: ahora tienes información que antes no tenías.",
+      "accion": "Repetir una tarea o creación mejorando un aspecto que salió mal anteriormente",
       "recompensa": {
-        "xp": 4,
-        "oquos": 2
+        "xp": 6,
+        "oquos": 3
       }
     },
     {
       "tipo": "vida_real",
-      "titulo": "Calor de hogar",
-      "descripcion": "Mantén el cuerpo listo para la tarea física con una buena pausa activa.",
-      "accion": "Realizar una serie de estiramientos o movimiento muscular",
-      "recompensa": {
-        "xp": 5,
-        "oquos": 2
-      }
-    },
-    {
-      "tipo": "vida_real",
-      "titulo": "Herramientas a punto",
-      "descripcion": "Eliana revisa sus tenazas y martillos. Deja listos tus útiles para la próxima labor.",
-      "accion": "Preparar los materiales, cuaderno o herramientas que usarás luego",
+      "titulo": "La falla escondida",
+      "descripcion": "Antes de corregir, encuentra exactamente qué parte necesita mejorar.",
+      "accion": "Revisar un trabajo propio e identificar al menos un error o aspecto mejorable",
       "recompensa": {
         "xp": 5,
         "oquos": 2
@@ -79,19 +71,29 @@
     },
     {
       "tipo": "vida_real",
-      "titulo": "Hidratación del herrero",
-      "descripcion": "Estar cerca del fuego agota las fuerzas. Recarga energías con agua fresca.",
-      "accion": "Tomar un vaso de agua",
+      "titulo": "Herramientas adecuadas",
+      "descripcion": "Un artesano elige los materiales necesarios antes de comenzar.",
+      "accion": "Preparar de forma segura los materiales necesarios para una actividad creativa o práctica",
       "recompensa": {
-        "xp": 3,
-        "oquos": 1
+        "xp": 5,
+        "oquos": 2
       }
     },
     {
       "tipo": "vida_real",
-      "titulo": "El primer martillazo",
-      "descripcion": "Vence la inercia y dale el primer golpe decisivo a una tarea compleja.",
-      "accion": "Iniciar de inmediato una labor que venías postergando",
+      "titulo": "Golpe preciso",
+      "descripcion": "No necesitas hacer mucho. Necesitas hacer una pequeña parte especialmente bien.",
+      "accion": "Elegir un detalle de un trabajo y mejorarlo con especial atención",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Pieza difícil",
+      "descripcion": "Elige una actividad apropiada que te resulte difícil y trabaja en ella sin abandonar ante el primer error.",
+      "accion": "Practicar durante un tiempo razonable una habilidad que todavía te cueste",
       "recompensa": {
         "xp": 7,
         "oquos": 3
@@ -100,8 +102,8 @@
     {
       "tipo": "vida_real",
       "titulo": "Pulido de detalles",
-      "descripcion": "Una pieza no está lista hasta que los bordes quedan suaves. Revisa tu trabajo.",
-      "accion": "Revisar y perfeccionar un trabajo o tarea ya terminada",
+      "descripcion": "Una pieza funcional puede convertirse en una buena pieza cuando revisas sus pequeños detalles.",
+      "accion": "Revisar y mejorar un trabajo que ya considerabas terminado",
       "recompensa": {
         "xp": 6,
         "oquos": 3
@@ -109,9 +111,9 @@
     },
     {
       "tipo": "vida_real",
-      "titulo": "Combustible para la llama",
-      "descripcion": "Alimenta tu mente con contenido de valor para mantener la chispa creativa.",
-      "accion": "Leer o aprender algo nuevo durante 10 minutos",
+      "titulo": "Aprender del descarte",
+      "descripcion": "Eliana conserva algunas piezas fallidas porque cada una contiene una lección.",
+      "accion": "Elegir un error reciente y explicar qué podrías hacer diferente la próxima vez",
       "recompensa": {
         "xp": 6,
         "oquos": 3
@@ -119,29 +121,30 @@
     },
     {
       "tipo": "vida_real",
-      "titulo": "La obra maestra",
-      "descripcion": "Pon toda tu concentración en terminar completamente una tarea sin interrupciones.",
-      "accion": "Finalizar una tarea importante de principio a fin",
+      "titulo": "La obra terminada",
+      "descripcion": "Después de planificar, intentar, corregir y pulir, llega el momento de completar la pieza.",
+      "accion": "Terminar una creación o proyecto apropiado y comparar el resultado con tu primera versión",
       "recompensa": {
         "xp": 8,
         "oquos": 4
       }
     }
   ],
+
   "misiones_reino": [
     {
       "titulo": "Herramientas para la Granja",
       "destino": "Granja",
-      "descripcion": "Lleva azadas y guadañas recién forjadas a Silas para la cosecha de la comarca.",
+      "descripcion": "Entrega a Silas herramientas reparadas para que pueda continuar recuperando los campos de Mírrafen.",
       "recompensa": {
         "xp": 9,
         "oquos": 4
       }
     },
     {
-      "titulo": "Repuesto para las Murallas",
+      "titulo": "Refuerzos para las Murallas",
       "destino": "Castillo",
-      "descripcion": "Lleva bisagras y refuerzos de hierro a Roderick para reparar las puertas del castillo.",
+      "descripcion": "Lleva a Roderick bisagras y refuerzos preparados para las antiguas puertas del Castillo.",
       "recompensa": {
         "xp": 10,
         "oquos": 4
@@ -150,16 +153,16 @@
     {
       "titulo": "Lingotes al Mercado",
       "destino": "Mercado",
-      "descripcion": "Entrega un cargamento de lingotes de bronce en el puesto de abastecimiento.",
+      "descripcion": "Entrega a Borin los materiales que la Forja puede intercambiar sin comprometer sus propias reservas.",
       "recompensa": {
         "xp": 8,
         "oquos": 3
       }
     },
     {
-      "titulo": "Muestras del Bosque",
+      "titulo": "Resinas del Bosque",
       "destino": "Bosque",
-      "descripcion": "Busca resina de pino en el límite del bosque para usar en los sellos de la herrería.",
+      "descripcion": "Consulta a Garrick sobre las antiguas resinas que los artesanos utilizaban para proteger determinadas piezas.",
       "recompensa": {
         "xp": 10,
         "oquos": 4
@@ -168,43 +171,43 @@
     {
       "titulo": "Suministros del Puerto",
       "destino": "Puerto",
-      "descripcion": "Recoge carbón de piedra importado que acaba de llegar en los navíos del puerto.",
+      "descripcion": "Visita a Laudelino en el Puerto y comprueba qué materiales han llegado desde otras regiones de Distal.",
       "recompensa": {
         "xp": 10,
         "oquos": 4
       }
     },
     {
-      "titulo": "Lentes para el Observatorio",
+      "titulo": "Soporte para el Observatorio",
       "destino": "Observatorio",
-      "descripcion": "Entrega un soporte de latón de alta precisión a Zephyr para sus telescopios.",
+      "descripcion": "Entrega a Zephyr una pieza de precisión destinada a restaurar uno de sus instrumentos astrales.",
       "recompensa": {
         "xp": 11,
         "oquos": 5
       }
     },
     {
-      "titulo": "Calderos para la Aldea",
+      "titulo": "Utensilios para la Aldea",
       "destino": "Aldea",
-      "descripcion": "Lleva utensilios de hierro fundido a las familias de la aldea principal.",
+      "descripcion": "Lleva a Eleanor varios utensilios reparados para devolverlos a las familias que están reconstruyendo sus hogares.",
       "recompensa": {
         "xp": 8,
         "oquos": 3
       }
     },
     {
-      "titulo": "Picos para la Nieve",
+      "titulo": "Equipo para la Expedición",
       "destino": "Nieve",
-      "descripcion": "Envía herramientas de agarre reforzado a los exploradores de los picos helados.",
+      "descripcion": "Entrega a Margot piezas y herramientas destinadas al mantenimiento seguro de su campamento arqueológico.",
       "recompensa": {
         "xp": 14,
         "oquos": 6
       }
     },
     {
-      "titulo": "Reliquias al Museo",
+      "titulo": "La Armadura Antigua",
       "destino": "Museo",
-      "descripcion": "Lleva una réplica de una antigua armadura forjada a Eldrin para su exhibición.",
+      "descripcion": "Lleva a Eldrin una pieza histórica recuperada para que pueda estudiarla y conservarla en el Museo.",
       "recompensa": {
         "xp": 9,
         "oquos": 4
@@ -213,484 +216,90 @@
     {
       "titulo": "Exploración Profunda",
       "destino": "Cavernas",
-      "descripcion": "Inspecciona las galerías bajas en busca de nuevas vetas de mineral de hierro.",
+      "descripcion": "Ayuda a Eliana a registrar qué galerías podrían contener nuevos materiales para futuras creaciones.",
       "recompensa": {
         "xp": 12,
         "oquos": 5
       }
     }
   ],
-  "desafios_modales": [
-    {
-      "titulo": "Cortesía del artesano",
-      "descripcion": "Eliana valora el respeto en la caverna. Pide las cosas con amabilidad durante el día.",
-      "accion": "Usar 'por favor' y 'gracias' de forma consciente en cada interacción",
-      "recompensa": {
-        "xp": 5,
-        "oquos": 2
-      }
-    },
-    {
-      "titulo": "Escucha atenta",
-      "descripcion": "En la forja, ignorar una indicación arruina la pieza. Escucha sin interrumpir.",
-      "accion": "Escuchar con atención a alguien sin interrumpir su idea",
-      "recompensa": {
-        "xp": 6,
-        "oquos": 3
-      }
-    },
-    {
-      "titulo": "Palabras templadas",
-      "descripcion": "Controla el tono de voz aunque sientas que el ambiente se calienta.",
-      "accion": "Responder con calma en una situación de molestia o impaciencia",
-      "recompensa": {
-        "xp": 7,
-        "oquos": 3
-      }
-    },
-    {
-      "titulo": "Mesa de trabajo compartida",
-      "descripcion": "Un taller ordenado respeta el espacio del compañero. Ayuda en la convivencia.",
-      "accion": "Dejar impecable un espacio común al terminar de usarlo",
-      "recompensa": {
-        "xp": 5,
-        "oquos": 2
-      }
-    },
-    {
-      "titulo": "Saludar al entrar al taller",
-      "descripcion": "Demuestra educación y presencia al llegar a cualquier lugar.",
-      "accion": "Saludar de manera clara y amable al entrar a un espacio",
-      "recompensa": {
-        "xp": 4,
-        "oquos": 2
-      }
-    },
-    {
-      "titulo": "Puntualidad de bronce",
-      "descripcion": "Llegar a tiempo es el primer signo de respeto por el tiempo de los demás.",
-      "accion": "Cumplir un horario o cita exactamente a la hora acordada",
-      "recompensa": {
-        "xp": 8,
-        "oquos": 4
-      }
-    },
-    {
-      "titulo": "Ayuda con la carga",
-      "descripcion": "Si ves a alguien levantando algo pesado, ofrece tu apoyo antes de que lo pida.",
-      "accion": "Ayudar a cargar o mover algo pesado en el hogar",
-      "recompensa": {
-        "xp": 7,
-        "oquos": 3
-      }
-    },
-    {
-      "titulo": "Agradecer el alimento",
-      "descripcion": "Respeta el trabajo de quien prepara la comida para el equipo.",
-      "accion": "Agradecer la comida y colaborar a juntar la mesa al finalizar",
-      "recompensa": {
-        "xp": 5,
-        "oquos": 2
-      }
-    },
-    {
-      "titulo": "Pedir permiso",
-      "descripcion": "No tomes herramientas ajenas sin consultar primero.",
-      "accion": "Pedir permiso explícito antes de tomar u ocupar algo que no es tuyo",
-      "recompensa": {
-        "xp": 5,
-        "oquos": 2
-      }
-    },
-    {
-      "titulo": "Paz en la caverna",
-      "descripcion": "Evita portazos y ruidos innecesarios cuando otros están concentrados.",
-      "accion": "Moverte y realizar tus deberes de forma silenciosa y cuidadosa",
-      "recompensa": {
-        "xp": 6,
-        "oquos": 3
-      }
-    }
+
+  "consejos": [
+    "El primer intento no necesita ser perfecto; necesita existir para que puedas mejorarlo.",
+    "Antes de repetir exactamente lo mismo, descubre por qué no funcionó.",
+    "La precisión suele resolver problemas que la fuerza solamente empeora.",
+    "Una corrección pequeña puede transformar una pieza completa.",
+    "No confundas perseverancia con obstinación. Perseverar también significa cambiar de método.",
+    "Guarda alguna versión antigua de tus trabajos. A veces necesitamos mirar atrás para descubrir cuánto aprendimos.",
+    "Cuando algo funcione, intenta comprender por qué. El éxito también puede enseñarte.",
+    "Una obra terminada merece una última revisión antes de considerarla definitiva.",
+    "Aprender una habilidad requiere intentos que nadie exhibiría orgullosamente. También esos intentos cuentan.",
+    "La verdadera maestría aparece cuando eres capaz de ayudar a otro a mejorar sin hacer el trabajo por él."
   ],
-  "consejos_de_la_creacion": [
-    "No intentes darle forma al hierro cuando está frío; primero calienta tu determinación.",
-    "El secreto de una buena forja no es la fuerza del golpe, sino la precisión de la caída.",
-    "Comete errores en el molde de prueba, no en la pieza final. Planificar ahorra material.",
-    "Si una estructura se rompe, investiga la falla en la soldadura antes de volver a empezar.",
-    "El calor se maneja con respeto. Si te apresuras, te quemas; si te descuidas, el metal se arruina.",
-    "Mantén tu yunque limpio. La suciedad acumulada deforma el resultado de tus creaciones.",
-    "La perseverancia es el carbón que mantiene viva la llama cuando la motivación se apaga.",
-    "Mide dos veces, corta una sola. El buen artesano valora la precisión sobre la prisa.",
-    "No le temas al trabajo pesado; las manos con callos son testimonio de maestría.",
-    "Una pieza hermosa nace de pulir sin descanso hasta eliminar hasta el último defecto."
-  ],
+
   "rumores": [
-    "Dicen que en el fondo de las cavernas se oye un eco que no responde a los golpes de mi martillo.",
-    "Los mineros juran haber encontrado una veta de mineral verde que brilla en la penumbra.",
-    "Escuché en el mercado que las espadas viejas del castillo están apareciendo con un brillo extraño.",
-    "Se comenta que Zephyr pidió un metal tan liviano como una pluma para un nuevo invento.",
-    "Eldrin trajo un manuscrito antiguo que habla de una aleación perdida en tiempos del primer rey.",
-    "Los marineros dicen que trajeron piedras volcánicas de una isla lejana que retienen el calor días enteros.",
-    "Roderick estuvo encargando escudos adicionales. Me pregunto qué habrá visto en las fronteras.",
-    "Dicen que si dejas un objeto gastado cerca del fuego de la granja, Silas puede sanar su madera.",
-    "En la aldea comentan que el calor de estas cavernas está manteniendo tibia el agua de los pozos.",
-    "Se rumorea que alguien intentó forjar una llave capaz de abrir cualquier cerradura de Mírrafen."
+    "Hay galerías antiguas donde todavía pueden verse las vías de los carros que conectaban las tres grandes cuevas.",
+    "Algunos mineros aseguran que una veta desconocida ha comenzado a brillar en las profundidades de la Cueva de Minerales.",
+    "Roderick conserva piezas de armaduras fabricadas aquí antes de la guerra. Reconocería el trabajo de mi antiguo taller en cualquier lugar.",
+    "Zephyr busca un material suficientemente preciso para restaurar una parte de su gran reloj cósmico.",
+    "Eldrin conserva herramientas de los primeros forjadores de Mírrafen. Algún día conseguiré que me permita examinarlas fuera de una vitrina.",
+    "Los marineros han traído minerales procedentes de regiones de Distal que nuestras antiguas caravanas jamás alcanzaron.",
+    "Todavía existen túneles bloqueados desde la guerra. Algunos conducían directamente hacia la Cueva de Fuego.",
+    "Silas conserva herramientas que mi familia fabricó para la antigua Granja. Algunas han sobrevivido mejor que los edificios que ayudaron a construir.",
+    "La Cueva de Hielo permanece silenciosa desde hace mucho tiempo. Demasiado silenciosa para mi gusto.",
+    "Dicen que bajo el antiguo taller existe una cámara donde mi clan guardaba sus mejores diseños. Si sobrevivió al derrumbe, todavía podría estar allí."
   ],
-  "eventos_especiales": [
-    {
-      "id": "gran_fundicion",
-      "titulo": "Día de la Gran Fundición",
-      "descripcion": "El horno principal alcanza su máxima temperatura. Es hora de crear sin parar.",
-      "accion": "Avanzar fuertemente en tu proyecto creativo o de estudio principal",
-      "recompensa": {
-        "xp": 22,
-        "oquos": 9
-      }
-    },
-    {
-      "id": "templado_de_acero",
-      "titulo": "Prueba del Templado",
-      "descripcion": "Hora de poner a prueba la resistencia de tu carácter bajo máxima presión.",
-      "accion": "Completar dos tareas complejas consecutivas sin distracciones",
-      "recompensa": {
-        "xp": 20,
-        "oquos": 8
-      }
-    },
-    {
-      "id": "mantenimiento_de_forja",
-      "titulo": "Limpieza del Taller Real",
-      "descripcion": "Las cavernas requieren una puesta a punto general para evitar accidentes.",
-      "accion": "Hacer una limpieza profunda de tu habitación o zona de estudio",
-      "recompensa": {
-        "xp": 18,
-        "oquos": 7
-      }
-    },
-    {
-      "id": "encargo_de_la_corona",
-      "titulo": "La Armadura de la Reina",
-      "descripcion": "Un pedido de alta exigencia que requiere el máximo refinamiento posible.",
-      "accion": "Revisar y entregar un trabajo con impecable presentación",
-      "recompensa": {
-        "xp": 25,
-        "oquos": 10
-      }
-    },
-    {
-      "id": "recoleccion_de_mineral",
-      "titulo": "Expedición a la Veta Profunda",
-      "descripcion": "Búsqueda de insumos de alta calidad en los rincones más lejanos.",
-      "accion": "Juntar y clasificar tus notas, archivos o materiales de estudio",
-      "recompensa": {
-        "xp": 16,
-        "oquos": 6
-      }
-    },
-    {
-      "id": "invencion_de_aleacion",
-      "titulo": "La Aleación Perfecta",
-      "descripcion": "Combina dos habilidades o conocimientos diferentes para resolver un problema.",
-      "accion": "Usar un método creativo nuevo para resolver una tarea cotidiana",
-      "recompensa": {
-        "xp": 20,
-        "oquos": 8
-      }
-    },
-    {
-      "id": "martillo_de_oro",
-      "titulo": "Ritmo Ininterrumpido",
-      "descripcion": "Mantén el ritmo constante del martillo durante toda la sesión de trabajo.",
-      "accion": "Trabajar en bloque enfocado durante 45 minutos seguidos",
-      "recompensa": {
-        "xp": 22,
-        "oquos": 9
-      }
-    },
-    {
-      "id": "feria_de_artesanos",
-      "titulo": "Muestra de Artesanía",
-      "descripcion": "Exhibe tus progresos ante los demás habitantes del reino.",
-      "accion": "Compartir o mostrar un logro completado a un amigo o familiar",
-      "recompensa": {
-        "xp": 15,
-        "oquos": 6
-      }
-    },
-    {
-      "id": "fuego_eterno",
-      "titulo": "La Llama Incombustible",
-      "descripcion": "Sostén tu compromiso diario aun cuando la motivación parezca decaer.",
-      "accion": "Cumplir tus metas del día a pesar del cansancio",
-      "recompensa": {
-        "xp": 24,
-        "oquos": 10
-      }
-    },
-    {
-      "id": "maestria_del_yunque",
-      "titulo": "Sello de la Forjadora",
-      "descripcion": "Eliana reconoce formalmente la excelencia y durabilidad de tus obras.",
-      "accion": "Completar la lista entera de responsabilidades planificadas para hoy",
-      "recompensa": {
-        "xp": 28,
-        "oquos": 12
-      }
-    }
-  ],
+
   "historia_personal": [
     {
       "id": "historia_01",
       "titulo": "El primer martillazo",
-      "texto": "Apenas tenía fuerza para sostener el martillo de mi padre. Se me cayó tres veces al suelo antes de lograr golpear el lingote caliente por primera vez."
+      "texto": "Crecí escuchando el ritmo de los martillos bajo la montaña. Apenas podía sostener las herramientas de mi familia cuando intenté trabajar mi primera pieza. Salió torcida. Mi padre la conservó durante años para recordarme que todo maestro comenzó haciendo algo bastante malo."
     },
     {
       "id": "historia_02",
-      "titulo": "El calor de la montaña",
-      "texto": "Muchos le temen a la oscuridad de las cavernas, pero para mí no hay lugar más acogedor. El brillo de la forja ilumina mejor que cualquier sol."
+      "titulo": "Aprendiz de la montaña",
+      "texto": "Pasé años como aprendiz recorriendo talleres, clasificando minerales y observando a artesanos más experimentados. La forja me enseñó que la paciencia y la precisión podían transformar materiales que parecían inútiles."
     },
     {
       "id": "historia_03",
-      "titulo": "La espada rota",
-      "texto": "Una vez entregué una hoja hecha con prisa. Se partió en el primer entrenamiento. Desde ese día juré que jamás saldría de mi taller algo imperfecto."
+      "titulo": "Tres cavernas",
+      "texto": "Con el tiempo ayudamos a organizar las tres grandes regiones de estas profundidades: Minerales, Fuego y Hielo. Carros recorrían las galerías llevando recursos entre ellas y los talleres trabajaban sin descanso."
     },
     {
       "id": "historia_04",
-      "titulo": "El secreto del acero",
-      "texto": "Mi maestro me enseñó que el hierro tiene memoria. Recuerda cada golpe que le das, y si lo tratas con brusquedad innecesaria, te responderá rompiéndose."
+      "titulo": "La Forjadora",
+      "texto": "Terminé convirtiéndome en Eliana la Forjadora, maestra de las Cavernas. Fabricábamos herramientas para Silas, protecciones para la Guardia y piezas de precisión para los grandes proyectos de Mírrafen."
     },
     {
       "id": "historia_05",
-      "titulo": "La grieta en la piedra",
-      "texto": "Durante un gran derrumbe en las cavernas, usamos nuestras palancas de hierro fundido para sostener la bóveda. El metal resistió y salvamos a los mineros."
+      "titulo": "El oficio de transformar",
+      "texto": "Nunca me interesó fabricar objetos únicamente para admirarlos. Una buena creación debía resolver un problema. Para mí, transformar mineral en algo útil era una forma de mejorar el mundo con las propias manos."
     },
     {
       "id": "historia_06",
-      "titulo": "El yunque heredado",
-      "texto": "Este yunque tiene más de cien años en Mírrafen. Ha recibido millones de impactos y sigue estando tan firme como el primer día. Espero ser igual de fuerte."
+      "titulo": "Cuando tembló la montaña",
+      "texto": "La guerra alcanzó incluso estas profundidades. La montaña tembló, varias galerías quedaron bloqueadas y las vías que unían nuestras cuevas desaparecieron bajo la roca."
     },
     {
       "id": "historia_07",
-      "titulo": "El arte del templado",
-      "texto": "Aprender a enfriar la pieza en el momento exacto me tomó años de quemaduras y ensayos. El secreto no está en los ojos, sino en escuchar el silbido del vapor."
+      "titulo": "La última forja",
+      "texto": "Perdí a mi familia, a muchos miembros de mi clan y los talleres donde habíamos trabajado durante generaciones. Cuando el último gran horno se apagó, pensé que también se había terminado nuestro oficio."
     },
     {
       "id": "historia_08",
-      "titulo": "Los encargos reales",
-      "texto": "He forjado desde herramientas para los agricultores hasta los adornos del trono. Para mí cada pieza exige el mismo nivel de respeto y entrega."
+      "titulo": "Una pequeña llama",
+      "texto": "Mucho después regresé con las pocas herramientas que había conseguido recuperar. Encendí un fuego pequeño en medio del antiguo taller y reparé una herramienta. No era una obra maestra. Era simplemente la primera cosa que las Cavernas volvían a producir."
     },
     {
       "id": "historia_09",
-      "titulo": "Chispas en la noche",
-      "texto": "A veces me quedo trabajando cuando todos duermen. En el silencio de la caverna, el sonido rítmico del martillo es la mejor música que existe."
+      "titulo": "Volver a escuchar el martillo",
+      "texto": "Comencé a despejar las vías de los carros, preparar los yunques y revisar los accesos a las tres cuevas. Cada golpe volvía a producir un eco que durante años había desaparecido de la montaña."
     },
     {
       "id": "historia_10",
-      "titulo": "El legado de Mírrafen",
-      "texto": "Mi misión aquí no es solo moldear hierro, sino enseñarle a los jóvenes aventureros que la disciplina y el trabajo duro son el verdadero oro de la vida."
+      "titulo": "El siguiente artesano",
+      "texto": "Entonces llegaste tú. Al principio solo necesitaba un par de manos que ayudaran a recuperar las Cavernas. Ahora empiezo a preguntarme si algún día estas paredes volverán a escuchar más de un martillo trabajando al mismo tiempo."
     }
-  ],
-  
-  "dialogos_por_nivel": {
-    "1": [
-      "Bienvenido a las Cavernas. Toma una respiración profunda y acostúmbrate al olor a carbón.",
-      "Apenas empiezas el camino, pero hasta la espada más poderosa comenzó siendo un trozo de hierro tosco."
-    ],
-    "2": [
-      "El primer paso es el más difícil; mantener el ritmo es lo que realmente importa.",
-      "Sostén el martillo con firmeza, sin apretar de más para no agotar la mano antes de tiempo."
-    ],
-    "3": [
-      "Veo que regresas. Eso demuestra que el calor del taller no te asusta.",
-      "No busques perfeccionar la pieza al primer golpe; la forma aparece con la repetición."
-    ],
-    "4": [
-      "Cuidado con las chispas en la piel; pronto te acostumbrarás a su picadura.",
-      "El yunque siempre está listo para recibir tu esfuerzo; no lo hagas esperar."
-    ],
-    "5": [
-      "Has superado los primeros días. Ya no te ves tan desorientado entre las rocas.",
-      "Un artesano constante vale más que diez guerreros impacientes."
-    ],
-    "6": [
-      "Observa el color de las brasas; cuando el fuego amarillea, el metal está a punto.",
-      "Cada tarea terminada es un eslabón firme en la cadena de tu progreso."
-    ],
-    "7": [
-      "Tu presencia en la caverna empieza a sentirse natural. Sigue alimentando la llama.",
-      "No le temas a los errores; en la forja, todo trozo doblado se puede volver a fundir."
-    ],
-    "8": [
-      "Empiezas a moverte con soltura. El aire denso ya no te hace toser.",
-      "Mantén las herramientas limpias; un martillo desportillado deforma el trabajo."
-    ],
-    "9": [
-      "Siento que le vas agarrando el gusto al sonido rítmico del metal.",
-      "La constancia es el mejor combustible cuando la motivación escasea."
-    ],
-    "10": [
-      "Nivel diez. Ya no eres un visitante ocasional, sino alguien que sabe lo que busca.",
-      "El metal responde distinto cuando quien lo golpea sabe exactamente qué quiere crear."
-    ],
-    "11": [
-      "El trabajo duro deja marcas en las manos, pero otorga temple en la cabeza.",
-      "Cuando sientas cansancio, recuerda por qué encendiste la primera chispa."
-    ],
-    "12": [
-      "Tus trazos y acciones empiezan a mostrar firmeza. Se nota el hábito.",
-      "Aprende a escuchar el silbido del agua al enfriar el hierro; te dirá si quedó bien templado."
-    ],
-    "13": [
-      "Las galerías del fondo guardan minerales duros, ideales para quien soporta la rutina.",
-      "La paciencia no es esperar sin hacer nada, es trabajar duro mientras el calor hace lo suyo."
-    ],
-    "14": [
-      "Veo menos dudas en tus movimientos. Estás convirtiendo el esfuerzo en maestría.",
-      "No descuides la postura al trabajar; el cuerpo es tu herramienta principal."
-    ],
-    "15": [
-      "Quince niveles acumulados. El metal empieza a ceder ante tu determinación.",
-      "Las piezas pequeñas exigen tanta concentración como los grandes encargos."
-    ],
-    "16": [
-      "El humo de la forja aclara las ideas de quien busca enfocarse.",
-      "Siembra disciplina cada día y cosecharás resultados imposibles de romper."
-    ],
-    "17": [
-      "Tus golpes en el yunque suenan con una cadencia limpia y segura.",
-      "Un trabajo apresurado siempre revela sus grietas tarde o temprano."
-    ],
-    "18": [
-      "Te mueves por la caverna como si conocieras cada veta de la roca.",
-      "Respeta el fuego y el fuego trabajará a tu favor."
-    ],
-    "19": [
-      "Estás a un paso de consolidar otra etapa importante de tu preparación.",
-      "Hasta la piedra más dura se moldea con la caída gota a gota del agua o el golpe constante del hierro."
-    ],
-    "20": [
-      "¡Nivel veinte! Ya tienes la resistencia de un verdadero habitante de las cavernas.",
-      "Has demostrado que no le tienes miedo a las jornadas largas ni al trabajo pesado."
-    ],
-    "21": [
-      "El carbón de piedra arde más fuerte cuando se trabaja en equipo.",
-      "Tu voluntad empieza a ser tan dura como el bronce que moldeamos aquí."
-    ],
-    "22": [
-      "No te confíes por el progreso; los detalles más finos requieren máxima atención.",
-      "Un buen acabado en los bordes distingue al aficionado del profesional."
-    ],
-    "23": [
-      "El eco de tus pasos en las rocas transmite confianza y propósito.",
-      "Mide dos veces antes de aplicar el corte definitivo."
-    ],
-    "24": [
-      "Cada desafío superado deja tu carácter más pulido y libre de impurezas.",
-      "Las manos cansadas al final del día son el mejor testimonio de un deber cumplido."
-    ],
-    "25": [
-      "Llegaste a la mitad del camino principal. Tu disciplina habla por ti.",
-      "Ya no solo sigues instrucciones; empiezas a entender la naturaleza de cada esfuerzo."
-    ],
-    "26": [
-      "El fuego de la forja reconoce a quienes acuden a él día tras día sin falta.",
-      "A veces hay que dejar enfriar la pieza un momento para ver con claridad las fallas."
-    ],
-    "27": [
-      "Tus cimientos son sólidos. Se nota que no tomaste atajos en el camino.",
-      "El esfuerzo diario es la única aleación capaz de resistir el paso del tiempo."
-    ],
-    "28": [
-      "Las vetas más profundas de Mírrafen solo se entregan a los más perseverantes.",
-      "Mantén la cabeza fría aunque la presión alrededor empiece a subir."
-    ],
-    "29": [
-      "Un paso más y alcanzarás una marca de madurez impecable.",
-      "No te detengas cuando veas el objetivo cerca; mantén la potencia hasta el final."
-    ],
-    "30": [
-      "¡Nivel treinta! Tu nombre empieza a sonar con peso entre los talleres del reino.",
-      "Tus creaciones ya no solo sirven, sino que inspiran a quienes recién se acercan a la forja."
-    ],
-    "31": [
-      "Las exigencias crecen, pero tus hombros están más preparados que nunca.",
-      "Saber corregir un error a tiempo es la marca de la verdadera experiencia."
-    ],
-    "32": [
-      "El aire de la caverna ya no te pesa; lo respiras como parte de tu rutina diaria.",
-      "Cuando el metal parece indomable, es cuando más calmado debe estar el artesano."
-    ],
-    "33": [
-      "Sigue afinando la técnica. El poder sin precisión solo genera residuos.",
-      "Cada hábito positivo que construyes es una armadura invisible contra la pereza."
-    ],
-    "34": [
-      "Veo cómo resuelves los imprevistos con la tranquilidad de quien ya lo ha visto antes.",
-      "El verdadero valor de una herramienta está en la utilidad que le das día a día."
-    ],
-    "35": [
-      "Treinta y cinco niveles. Te has ganado el respeto de cada rincón de este taller.",
-      "No dejes que el orgullo ablande tu atención a los detalles básicos."
-    ],
-    "36": [
-      "Incluso los materiales más difíciles ceden ante la constancia de tu ritmo.",
-      "El fuego ilumina a quienes se atreven a pararse frente a él con trabajo real."
-    ],
-    "37": [
-      "Tu concentración en la tarea es difícil de perturbar. Un rasgo admirable.",
-      "Nada se construye de la noche a la mañana; la maestría es una suma de días continuos."
-    ],
-    "38": [
-      "Estás moldeando tu destino con la misma firmeza con la que trabajas el acero.",
-      "Asegúrate de que cada acción tuya lleve tu sello característico de calidad."
-    ],
-    "39": [
-      "Bordeas las grandes ligas de los maestros forjadores de Mírrafen.",
-      "Prepárate, porque las pruebas que vienen exigirán lo mejor de tu repertorio."
-    ],
-    "40": [
-      "¡Nivel cuarenta! Tu dedicación ha demostrado ser inquebrantable.",
-      "Pocos llegan a este punto con la misma entereza y humildad que mantienes tú."
-    ],
-    "41": [
-      "A este nivel, cada movimiento tuyo es eficiente, medido y certero.",
-      "Enseña con tu ejemplo a los que recién empiezan a dar sus primeros martillazos."
-    ],
-    "42": [
-      "El calor extremo de las profundidades ya no abate tu temple.",
-      "Las grandes obras no requieren aspavientos, solo calidad impecable."
-    ],
-    "43": [
-      "Tu dominio sobre los procesos demuestra el tiempo invertido sin descanso.",
-      "Mantén encendida la llama de la curiosidad; siempre hay un detalle nuevo por pulir."
-    ],
-    "44": [
-      "La estructura de tu carácter es tan firme como el yunque ancestral del taller.",
-      "Nada de lo que has construido hasta hoy fue fruto de la casualidad."
-    ],
-    "45": [
-      "Nivel cuarenta y cinco. Quedan muy pocos peldaños para alcanzar la cima.",
-      "Tus manos conocen el trabajo y tu mente domina los tiempos a la perfección."
-    ],
-    "46": [
-      "Siente la solidez de lo que has logrado; nadie puede quitarte el esfuerzo invertido.",
-      "El acero pulido refleja la dedicación de quien pasó horas perfeccionándolo."
-    ],
-    "47": [
-      "Estás a las puertas de la maestría absoluta en las cavernas de Mírrafen.",
-      "No aflojes el paso ahora que la meta está a la vista."
-    ],
-    "48": [
-      "El eco de tu trabajo resuena en toda la montaña con autoridad.",
-      "Un verdadero maestro encuentra satisfacción tanto en el proceso como en el resultado."
-    ],
-    "49": [
-      "Un último esfuerzo te separa del nivel máximo de aprendizaje en este taller.",
-      "Concentra toda tu experiencia en el próximo golpe; la obra casi está completa."
-    ],
-    "50": [
-      "¡Nivel cincuenta! Has alcanzado la cumbre de la forja. Tu temple es legendario.",
-      "Mírrafen contempla hoy a un verdadero Maestro Forjador. Tu obra perdurará en el tiempo."
-    ]
-  }
+  ]
 }

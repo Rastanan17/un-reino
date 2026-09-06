@@ -208,8 +208,6 @@ Un Reino<
 		logo<
 			logo.css
 			logo.js
-		navigation<
-			(vacío)
 		ui<
 			hud.css
 			hud.js
@@ -252,14 +250,22 @@ Un Reino<
 			music.js
 		npc<
 			data<
+				arqueologa.json
+				artesana.json
 				astral.json
+				bardo.json
+				bibliotecaria.json
+				chef.json
+				curador.json
 				forjadora.json
 				guardian.json
+				maestra.json
 				mercader.json
 				narrador.json
 				reina.json
 				sacerdotisa.json
 				susurrador.json
+				tabernero.json
 			images<
 				aurelia.png
 				balthazar.png

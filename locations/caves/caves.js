@@ -12,7 +12,7 @@ function mostrarCavernas(){
             <!-- ===================================
                  🪨 FONDO DE LAS CAVERNAS
             ==================================== -->
-            <img class="cavernas-background" src="assets/images/backgrounds/caves_all.jpg"
+            <img class="cavernas-background" src="assets/images/backgrounds/caves/caves_all.jpg"
                 alt="Cavernas de Mírrafen">
             <!-- ===================================
                  💎 CUEVA DE MINERALES

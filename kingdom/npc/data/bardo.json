@@ -1,0 +1,305 @@
+{
+  "npc": "bardo",
+  "nombre": "Laudelino Kuino",
+
+  "saludos": [
+    "¡Viajero! Llegas justo cuando estaba intentando decidir si ese barco trae mercancías, problemas o una historia excelente.",
+    "Bienvenido al Puerto. Aquí casi todos los caminos terminan... y otros tantos comienzan.",
+    "Acércate al muelle. Desde aquí puedes mirar el horizonte durante horas, aunque personalmente recomiendo cruzarlo alguna vez.",
+    "¡Has vuelto! Eso significa que sobreviviste a tu última aventura o, mucho mejor, que vienes buscando otra.",
+    "Saludos, caminante. En el Puerto nadie pregunta solamente de dónde vienes. También queremos saber hacia dónde piensas ir.",
+    "Escucha esas cuerdas, las olas y las voces del muelle. Cada llegada cambia un poco la melodía de este lugar.",
+    "Bienvenido. No necesitas recorrer medio Distal para vivir una aventura. A veces basta con tomar un camino que nunca habías elegido.",
+    "¡Explorador! Tengo el laúd afinado y el muelle lleno de viajeros. Sería una auténtica tragedia desperdiciar semejante combinación.",
+    "Pasa. Si encuentras algo interesante durante el viaje, procura regresar para contarlo. Los bardos tenemos necesidades profesionales.",
+    "El horizonte sigue allí. Una falta de consideración tremenda, porque cada vez que lo miro aparecen ganas de descubrir qué hay detrás."
+  ],
+
+  "dialogos": [
+    "Una aventura no comienza cuando llegas a un lugar desconocido. Comienza cuando decides salir de aquello que ya conoces.",
+    "Ser aventurero no significa actuar sin pensar. Prepararse bien permite llegar más lejos.",
+    "No todos los caminos interesantes aparecen en los mapas.",
+    "Viajar enseña algo curioso: aquello que en casa parecía normal puede resultar extraordinario para otra persona.",
+    "Cuando algo no sale como esperabas, tienes dos opciones: abandonar la historia o descubrir hacia dónde acaba de cambiar.",
+    "La curiosidad abre caminos, pero la atención permite descubrir lo que hay en ellos.",
+    "No necesitas hacer algo peligroso para que sea una aventura. Necesitas encontrar algo nuevo para ti.",
+    "Un buen viajero observa antes de decidir que un lugar extraño está equivocado simplemente porque funciona de otra manera.",
+    "Regresar también forma parte de viajar. Solo entonces descubres qué cambió afuera y qué cambió en ti.",
+    "Las mejores aventuras dejan algo más que recuerdos. Dejan preguntas, habilidades, amistades y alguna historia que merece ser contada."
+  ],
+
+  "desafios_reales": [
+    {
+      "tipo": "vida_real",
+      "titulo": "Un camino diferente",
+      "descripcion": "Laudelino te propone romper una pequeña costumbre para observar algo nuevo.",
+      "accion": "Realizar una actividad cotidiana de una manera diferente y segura, o elegir un recorrido distinto acompañado cuando corresponda",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Explorador cercano",
+      "descripcion": "No hace falta cruzar un océano para descubrir algo que nunca habías observado.",
+      "accion": "Encontrar tres detalles nuevos en un lugar conocido y seguro",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Algo nuevo",
+      "descripcion": "Todo aventurero necesita acostumbrarse a ser principiante de vez en cuando.",
+      "accion": "Probar una actividad nueva, apropiada para tu edad y segura",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Mapa del explorador",
+      "descripcion": "Laudelino sostiene que saber dónde estás ayuda bastante cuando pretendes descubrir hacia dónde ir.",
+      "accion": "Dibujar un mapa sencillo de un lugar que conozcas",
+      "recompensa": {
+        "xp": 4,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Preparar la partida",
+      "descripcion": "Las buenas aventuras suelen comenzar antes de salir.",
+      "accion": "Pensar qué necesitarías llevar para una salida o actividad próxima y preparar solamente lo necesario",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Curiosidad viajera",
+      "descripcion": "Cada lugar tiene algo que descubrir incluso antes de visitarlo.",
+      "accion": "Investigar una curiosidad sobre un lugar de tu ciudad, país o del mundo",
+      "recompensa": {
+        "xp": 4,
+        "oquos": 1
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Hablar con otro viajero",
+      "descripcion": "Las personas también pueden abrir ventanas hacia lugares que no conocemos.",
+      "accion": "Preguntar a una persona de confianza por algún lugar que haya visitado y qué recuerda de él",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Cambio de rumbo",
+      "descripcion": "Un plan que cambia no significa necesariamente que la aventura terminó.",
+      "accion": "Ante un cambio pequeño de planes, encontrar una alternativa segura que permita continuar",
+      "recompensa": {
+        "xp": 7,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Bitácora del día",
+      "descripcion": "Los viajeros que observan bien siempre regresan con algo que contar.",
+      "accion": "Registrar con unas palabras, un dibujo o una foto apropiada algo nuevo que hayas descubierto hoy",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Pequeña expedición",
+      "descripcion": "Laudelino te propone convertir una salida cotidiana en una misión de exploración.",
+      "accion": "Durante una salida segura y autorizada, encontrar algo que nunca habías observado antes",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 4
+      }
+    }
+  ],
+
+  "misiones_reino": [
+    {
+      "titulo": "Permiso de la Corona",
+      "destino": "Aldea",
+      "descripcion": "Visita a Eleanor y descubre qué necesita considerar la Corona antes de autorizar una expedición fuera de las rutas habituales.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Consejo del Centinela",
+      "destino": "Castillo",
+      "descripcion": "Pregunta a Roderick qué preparación considera indispensable antes de abandonar una zona protegida.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Provisiones del viajero",
+      "destino": "Mercado",
+      "descripcion": "Habla con Borin sobre cómo elegir suministros útiles sin cargar con media tienda durante una expedición.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Caminos del Bosque",
+      "destino": "Bosque",
+      "descripcion": "Pide a Garrick una historia sobre alguien que tomó un camino desconocido y descubre qué encontró al final.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Herramientas para el camino",
+      "destino": "Cavernas",
+      "descripcion": "Consulta a Eliana sobre cómo un buen explorador elige la herramienta adecuada antes de comenzar una tarea.",
+      "recompensa": {
+        "xp": 12,
+        "oquos": 5
+      }
+    },
+    {
+      "titulo": "Antes de partir",
+      "destino": "Santuario",
+      "descripcion": "Visita a Aurélia y comparte un momento de calma antes de comenzar una nueva expedición.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Orientarse por el cielo",
+      "destino": "Observatorio",
+      "descripcion": "Pregunta a Zephyr cómo los viajeros pueden comprender su posición observando referencias del cielo y del entorno.",
+      "recompensa": {
+        "xp": 11,
+        "oquos": 5
+      }
+    },
+    {
+      "titulo": "Relatos de otros viajeros",
+      "destino": "Biblioteca",
+      "descripcion": "Consulta a Rowena sobre antiguos diarios de viaje y descubre cómo eran las expediciones de Mírrafen antes de la guerra.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Expedición del Norte",
+      "destino": "Nieve",
+      "descripcion": "Habla con Margot sobre cómo organiza una expedición y qué observa cuando llega a un lugar desconocido.",
+      "recompensa": {
+        "xp": 14,
+        "oquos": 6
+      }
+    },
+    {
+      "titulo": "Recuerdos del camino",
+      "destino": "Museo",
+      "descripcion": "Visita a Eldrin y busca una reliquia que haya llegado a Mírrafen gracias a algún antiguo viajero.",
+      "recompensa": {
+        "xp": 9,
+        "oquos": 4
+      }
+    }
+  ],
+
+  "consejos": [
+    "La curiosidad puede decirte hacia dónde mirar. La preparación decide si podrás llegar.",
+    "No confundas aventura con peligro. Una experiencia nueva no necesita ser arriesgada para enseñarte algo.",
+    "Antes de explorar un lugar nuevo, averigua lo suficiente para hacerlo de forma segura.",
+    "Un cambio de planes no siempre arruina una aventura. A veces simplemente escribe otro capítulo.",
+    "Observa antes de decidir que una costumbre diferente es extraña. Para alguien, la extraña podría ser la tuya.",
+    "Viajar ligero no significa ir sin preparación. Significa distinguir lo necesario de aquello que solo pesa.",
+    "Pregunta a quienes conocen el lugar. Los mapas son excelentes, pero rara vez saben dónde preparan el mejor desayuno.",
+    "Una bitácora no necesita registrar cada minuto. Conserva aquello que no quieres olvidar.",
+    "Regresar no es retroceder. Toda expedición necesita un lugar desde el cual poder contarla.",
+    "No esperes conocer todo el mundo antes de considerarte explorador. Empieza aprendiendo a mirar de otra manera el lugar donde ya estás."
+  ],
+
+  "rumores": [
+    "Un barco llegó al amanecer con una bandera que nadie del Puerto reconoce. Naturalmente, Borin ya quiere saber qué transporta y yo quiero saber de dónde viene.",
+    "Roderick encontró restos de una antigua ruta más allá de los caminos que todavía patrulla la Guardia.",
+    "Margot afirma que uno de sus mapas del norte muestra una estructura que no aparece en ningún registro de Rowena.",
+    "Zephyr cree que ciertas antiguas rutas marítimas fueron trazadas utilizando una constelación que hoy tiene otro nombre.",
+    "Garrick asegura conocer una historia sobre una isla que aparece solamente durante determinadas mareas. Zephyr hizo una expresión maravillosa cuando la escuchó.",
+    "Eldrin conserva una brújula cuyo origen nadie ha logrado identificar.",
+    "Borin recibió una moneda extranjera procedente de una región de Distal con la que Mírrafen no comercia desde antes de la guerra.",
+    "Algunos marineros aseguran haber visto luces en una parte deshabitada de la costa. Otros aseguran que los primeros habían dormido muy poco.",
+    "Aurélia conserva un pequeño objeto entregado hace años por un viajero que prometió regresar. Nunca lo hizo.",
+    "Hay un viejo mapa clavado detrás de mi escenario. Le falta una esquina y nadie sabe qué había allí. Comprenderás que semejante provocación resulta difícil de ignorar."
+  ],
+
+  "historia_personal": [
+    {
+      "id": "historia_01",
+      "titulo": "El muchacho de los valles",
+      "texto": "No nací junto al mar. Crecí en los valles interiores de Mírrafen, donde las montañas ocupaban casi todo el horizonte. De niño quería saber qué había detrás de cada una."
+    },
+    {
+      "id": "historia_02",
+      "titulo": "Las primeras cuerdas",
+      "texto": "Descubrí la música antes que los grandes caminos. Con unas pocas cuerdas aprendí que una melodía podía reunir a personas que minutos antes eran completas desconocidas."
+    },
+    {
+      "id": "historia_03",
+      "titulo": "El bardo viajero",
+      "texto": "Cuando fui suficientemente mayor comencé a recorrer Mírrafen. Tocaba en aldeas, posadas, celebraciones y cruces de caminos. Cada viaje me entregaba una historia y cada historia terminaba convertida en una nueva melodía."
+    },
+    {
+      "id": "historia_04",
+      "titulo": "La voz de Mírrafen",
+      "texto": "Con los años comenzaron a llamarme Laudelino el Bardo. Mis canciones llegaron a las fiestas de la Aldea y hasta las celebraciones de la Corona. Nunca me interesó demasiado la fama. Me interesaba que una plaza llena de desconocidos pudiera cantar y reír como si se conocieran desde siempre."
+    },
+    {
+      "id": "historia_05",
+      "titulo": "Todos los caminos",
+      "texto": "Viajé por gran parte del reino con mi traje verde y dorado, mi sombrero de pluma amarilla y este mismo laúd. Creía conocer todos los caminos importantes de Mírrafen. Resultó ser una confianza bastante optimista."
+    },
+    {
+      "id": "historia_06",
+      "titulo": "Cuando desapareció el camino de regreso",
+      "texto": "La guerra alcanzó los valles donde había nacido. Perdí mi hogar y a mi familia durante aquellos años, y muchos de los caminos que conocía dejaron de llevar a los lugares que recordaba."
+    },
+    {
+      "id": "historia_07",
+      "titulo": "Hacia el mar",
+      "texto": "Me desplacé hacia el Puerto junto a otros supervivientes. La primera vez que vi el horizonte abierto del mar comprendí algo extraño: había perdido el camino de regreso, pero delante de mí todavía existían caminos que nunca había recorrido."
+    },
+    {
+      "id": "historia_08",
+      "titulo": "El bardo del Puerto",
+      "texto": "Comencé a tocar para marineros, comerciantes y viajeros. Aprendí canciones de otras regiones, escuché historias de tierras lejanas y descubrí que el Puerto podía convertirse en un hogar sin parecerse en nada al lugar donde había nacido."
+    },
+    {
+      "id": "historia_09",
+      "titulo": "Volver a partir",
+      "texto": "Cuando Mírrafen comenzó a levantarse, también regresaron los barcos y las rutas. Cada vela que aparecía en el horizonte me recordaba que reconstruir un reino no significa solamente recuperar lo perdido. También significa descubrir hacia dónde puede ir después."
+    },
+    {
+      "id": "historia_10",
+      "titulo": "La próxima balada",
+      "texto": "Entonces llegaste tú. Al principio pensé que simplemente tendría nuevas aventuras que cantar. Ahora sospecho algo mejor: quizá algún día no necesites que un bardo convierta tu vida en una historia. Quizá regreses al Puerto con tantas historias propias que sea yo quien tenga que sentarse a escucharte."
+    }
+  ]
+}

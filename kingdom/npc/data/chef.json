@@ -1,0 +1,305 @@
+{
+  "npc": "chef",
+  "nombre": "Bart Balthazar",
+
+  "saludos": [
+    "Bienvenido al Palacio Culinario. Lávate las manos y trae curiosidad; lo segundo ensucia bastante menos.",
+    "Has vuelto. Excelente. Hoy trabajaremos con una receta que todavía puede mejorar.",
+    "Pasa, aprendiz. Una cocina organizada hace menos ruido que una cocina improvisada y produce resultados bastante mejores.",
+    "Saludos. Aquí no cocinamos únicamente para llenar platos. Cocinamos para cuidar a quien los recibe.",
+    "Bienvenido. Antes de comenzar, revisa qué necesitas. Descubrir un ingrediente faltante a mitad del proceso es una tradición que preferiría extinguir.",
+    "Acércate al mesón. Hoy aprenderemos que una receta es una guía, no una excusa para dejar de observar.",
+    "Has llegado justo a tiempo. Necesito otra opinión sobre esta preparación, y mi propia lengua ya presentó una queja formal.",
+    "Bienvenido al Palacio. La presentación importa, pero no tanto como aquello que intentamos esconder debajo de ella.",
+    "Pasa, cocinero. Un buen plato necesita técnica. Un gran plato también necesita saber para quién fue preparado.",
+    "Saludos. Si al terminar sabes hacer algo útil para ti o para compartir con otros, consideraré la jornada bastante bien aprovechada."
+  ],
+
+  "dialogos": [
+    "Cocinar empieza antes de mezclar ingredientes. Empieza preparando el espacio, leyendo el proceso y entendiendo qué puedes hacer de forma segura.",
+    "Una receta enseña proporciones y pasos. La experiencia enseña qué observar mientras esos pasos ocurren.",
+    "No todo plato necesita ser complicado para estar bien hecho.",
+    "Crear para otros implica preguntar también qué necesitan, qué pueden comer y qué disfrutan.",
+    "Un ingrediente desperdiciado es trabajo, tiempo y recursos que alguien tuvo que producir.",
+    "La limpieza durante el proceso no es decoración. Forma parte del trabajo.",
+    "Probar y ajustar sirve cuando puede hacerse de forma segura y apropiada. Adivinar desde el otro extremo de la cocina tiene menos prestigio del que imaginas.",
+    "Una presentación bonita puede mejorar una experiencia, pero nunca debe reemplazar el cuidado del contenido.",
+    "Compartir comida es una forma antigua de servicio, hospitalidad y comunidad.",
+    "La verdadera habilidad culinaria aparece cuando puedes adaptarte sin perder seguridad, orden ni propósito."
+  ],
+
+  "desafios_reales": [
+    {
+      "tipo": "vida_real",
+      "titulo": "Preparar el mesón",
+      "descripcion": "Bartolomeo insiste en que todo trabajo culinario comienza con orden.",
+      "accion": "Preparar de forma segura el espacio y los materiales necesarios para una tarea sencilla de cocina",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Leer antes de empezar",
+      "descripcion": "Descubrir el paso cuatro mientras estás ejecutando el paso siete produce resultados fascinantes por razones incorrectas.",
+      "accion": "Leer completa una receta sencilla y explicar qué pasos necesitarías realizar antes de comenzar",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Ingredientes contados",
+      "descripcion": "La cocina también es organización y medición.",
+      "accion": "Reunir y contar o medir ingredientes seguros para una preparación apropiada con supervisión si corresponde",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Preparación sin fuego",
+      "descripcion": "Hay mucho que aprender en una cocina antes de acercarse a cualquier fuente de calor.",
+      "accion": "Ayudar a preparar una comida o colación sencilla que no requiera tareas peligrosas",
+      "recompensa": {
+        "xp": 4,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Orden durante el trabajo",
+      "descripcion": "Bartolomeo considera sospechosa toda receta que termina enterrada bajo una montaña de utensilios.",
+      "accion": "Mantener organizado tu espacio mientras realizas una preparación sencilla",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Servir con cuidado",
+      "descripcion": "La experiencia de una comida también depende de cómo llega a la mesa.",
+      "accion": "Ayudar a servir de forma segura una comida, bebida o colación apropiada",
+      "recompensa": {
+        "xp": 4,
+        "oquos": 1
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Aprovechar recursos",
+      "descripcion": "Usar bien los ingredientes también forma parte del oficio.",
+      "accion": "Ayudar a guardar correctamente ingredientes o alimentos siguiendo las indicaciones de un adulto responsable",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Para quién cocinamos",
+      "descripcion": "Bartolomeo quiere que pienses primero en la persona que recibirá la preparación.",
+      "accion": "Preguntar a alguien de confianza qué comida sencilla disfruta y qué detalle hace que le guste",
+      "recompensa": {
+        "xp": 7,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Presentación sencilla",
+      "descripcion": "Un pequeño cuidado visual puede transformar una preparación sin convertirla en concurso imperial.",
+      "accion": "Presentar de manera ordenada y agradable una comida o colación segura",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Compartir lo creado",
+      "descripcion": "Bartolomeo considera incompleto todo oficio que jamás llega a beneficiar a otra persona.",
+      "accion": "Participar en la preparación o presentación de algo sencillo para compartir con tu familia o personas de confianza",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 4
+      }
+    }
+  ],
+
+  "misiones_reino": [
+    {
+      "titulo": "Mesa de la Corona",
+      "destino": "Aldea",
+      "descripcion": "Pregunta a Eleanor cómo se organizaban los grandes banquetes para que la comida sirviera a la comunidad y no solamente mostrara riqueza.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Raciones de la Guardia",
+      "destino": "Castillo",
+      "descripcion": "Consulta a Roderick qué necesitaban los guardias para organizar sus provisiones durante jornadas de servicio.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Ingredientes y valor",
+      "destino": "Mercado",
+      "descripcion": "Pregunta a Borin cómo compara calidad, cantidad y precio antes de comprar provisiones para una cocina.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "De la tierra a la mesa",
+      "destino": "Granja",
+      "descripcion": "Habla con Silas sobre el trabajo necesario antes de que un ingrediente llegue a una cocina.",
+      "recompensa": {
+        "xp": 9,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Herramientas del Palacio",
+      "destino": "Cavernas",
+      "descripcion": "Visita a Eliana y descubre qué características necesita una herramienta para ser útil, resistente y apropiada para el trabajo culinario del reino.",
+      "recompensa": {
+        "xp": 12,
+        "oquos": 5
+      }
+    },
+    {
+      "titulo": "Recetas que viajaron",
+      "destino": "Puerto",
+      "descripcion": "Pregunta a Laudelino por algún alimento o costumbre culinaria que conoció durante sus viajes y cómo cambió al llegar a Mírrafen.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Mesa y camaradería",
+      "destino": "Bar",
+      "descripcion": "Habla con Barnaby sobre cómo una comida compartida puede ayudar a que distintas personas se sientan parte del mismo lugar.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "La receta escrita",
+      "destino": "Biblioteca",
+      "descripcion": "Consulta a Rowena sobre antiguas recetas y qué información permite reproducir una preparación generaciones después.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Perfeccionar la técnica",
+      "destino": "Academia",
+      "descripcion": "Pregunta a Lysa cómo transforma una receta que funciona en un proceso más preciso y consistente.",
+      "recompensa": {
+        "xp": 11,
+        "oquos": 5
+      }
+    },
+    {
+      "titulo": "Utensilios del pasado",
+      "destino": "Museo",
+      "descripcion": "Consulta a Eldrin qué utensilios antiguos muestran cómo cambiaron las cocinas y costumbres de Mírrafen.",
+      "recompensa": {
+        "xp": 9,
+        "oquos": 4
+      }
+    }
+  ],
+
+  "consejos": [
+    "Antes de cocinar, revisa qué tareas corresponden a tu edad y cuáles necesitan supervisión de un adulto.",
+    "No utilices cuchillos peligrosos, fuego, aceite caliente, hornos u otros elementos de riesgo sin la ayuda apropiada.",
+    "Lee una receta completa antes de comenzar.",
+    "Mantener las manos, superficies y utensilios limpios forma parte del proceso.",
+    "No pruebes ingredientes desconocidos ni alimentos que un adulto responsable haya indicado que no son apropiados.",
+    "Antes de preparar comida para otra persona, pregunta por alergias, restricciones o necesidades que deban tenerse en cuenta.",
+    "Un plato sencillo bien preparado vale más que una preparación complicada ejecutada sin cuidado.",
+    "Aprende a utilizar solamente la cantidad que necesitas para reducir desperdicios.",
+    "Si algo sale diferente a lo esperado, analiza el proceso antes de intentar corregirlo improvisando.",
+    "Cocinar para otras personas es una forma de servicio. El objetivo no es presumir de técnica, sino crear algo seguro, útil y agradable para compartir."
+  ],
+
+  "rumores": [
+    "Lysa insiste en que cocina y alquimia aplicada comparten principios. Yo insisto en que mis salsas nunca han intentado convertirse en luz astral.",
+    "Borin calcula el costo de mis ingredientes antes de probar el plato. Un defecto moral que aparentemente viene incluido con ser mercader.",
+    "Silas me regaló una pequeña caja con productos de la nueva cosecha. La primera preparación hecha con ellos fue mucho más importante que sofisticada.",
+    "Barnaby afirma que cualquier comida mejora si se comparte. Por una vez, el Oso y yo no tenemos nada que discutir.",
+    "Laudelino ha traído recetas de lugares tan lejanos que sospecho que al menos un tercio fueron inventadas durante el viaje.",
+    "Rowena conserva libros de cocina donde las cantidades están descritas como 'una buena medida'. He presentado una queja formal contra nuestros antepasados.",
+    "Eldrin tiene utensilios tan antiguos que nadie sabe exactamente cómo se utilizaban. Naturalmente quiere que yo lo descubra sin rayarlos.",
+    "Eliana fabricó para el Palacio una serie de utensilios que sobrevivieron a años de abandono. Jamás se lo diré demasiadas veces; podría volverse insoportable.",
+    "Eleanor todavía recuerda ciertos platos servidos durante celebraciones anteriores a la guerra. Me ha pedido que no intente copiarlos exactamente.",
+    "Existe una pequeña cuchara de madera guardada en mi cocina que no tiene valor para un coleccionista. Fue la herramienta que utilizó mi primer maestro."
+  ],
+
+  "historia_personal": [
+    {
+      "id": "historia_01",
+      "titulo": "El niño de las cocinas del norte",
+      "texto": "Crecí en los grandes salones helados del norte de Mírrafen. Allí descubrí algo extraño: incluso rodeados de nieve, las cocinas eran siempre los lugares más cálidos."
+    },
+    {
+      "id": "historia_02",
+      "titulo": "La primera cuchara",
+      "texto": "Mi primer maestro me entregó una cuchara de madera y tareas muy pequeñas. Yo esperaba recetas extraordinarias. Él esperaba que aprendiera primero a trabajar con orden. Tardé años en admitir que tenía razón."
+    },
+    {
+      "id": "historia_03",
+      "titulo": "Cocina y alquimia",
+      "texto": "Estudié técnicas culinarias, conservación y antiguas preparaciones de Mírrafen que combinaban cocina con elementos de nuestra alquimia fantástica. Aprendí que una fórmula puede indicar cantidades, pero solamente la práctica enseña a comprender completamente el proceso."
+    },
+    {
+      "id": "historia_04",
+      "titulo": "Gran Chef Maestre",
+      "texto": "Con el tiempo dirigí cocinas, formé aprendices y preparé banquetes para viajeros, artesanos y la propia Corona. Me otorgaron el título de Gran Chef Maestre Bartolomeo Balthazar, un nombre extraordinariamente largo para alguien que todavía tenía que limpiar su propia mesa."
+    },
+    {
+      "id": "historia_05",
+      "titulo": "El Palacio Culinario",
+      "texto": "Levantamos el Palacio Culinario entre hielo y cristal. Sus cámaras frías conservaban ingredientes y sus grandes cocinas abastecían celebraciones, viajeros y comunidades que atravesaban temporadas difíciles."
+    },
+    {
+      "id": "historia_06",
+      "titulo": "Cuando se apagaron los fogones",
+      "texto": "La guerra vació despensas, destruyó cámaras y apagó las cocinas. Perdí a mi familia y a muchos compañeros con quienes había trabajado durante años. El Palacio quedó silencioso."
+    },
+    {
+      "id": "historia_07",
+      "titulo": "Las últimas provisiones",
+      "texto": "Conservamos algunos utensilios, recetas y pequeños recipientes con ingredientes difíciles de recuperar. Pero durante un tiempo aquellos objetos parecían recuerdos de un oficio que ya no tenía a quién servir."
+    },
+    {
+      "id": "historia_08",
+      "titulo": "El primer fuego",
+      "texto": "Cuando comenzaron a regresar habitantes, encendimos nuevamente una cocina pequeña. No preparamos un gran banquete. Hicimos algo sencillo para quienes estaban trabajando en la reconstrucción. Nunca una comida humilde me había parecido tan importante."
+    },
+    {
+      "id": "historia_09",
+      "titulo": "Servir otra vez",
+      "texto": "El Palacio empezó a vivir de nuevo cuando comprendimos que no necesitábamos recuperar primero toda su grandeza. Necesitábamos volver a ser útiles. Cada mesa servida era una pequeña parte del reino funcionando otra vez."
+    },
+    {
+      "id": "historia_10",
+      "titulo": "El siguiente gran chef",
+      "texto": "Cuando llegaste pensabas que cocinar consistía en seguir una receta hasta obtener comida. Ahora preparas, observas, ajustas, cuidas recursos y piensas en la persona que recibirá lo que creaste. Esa diferencia separa a quien simplemente cocina de quien comprende el oficio."
+    }
+  ]
+}

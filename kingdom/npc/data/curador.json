@@ -1,0 +1,305 @@
+{
+  "npc": "curador",
+  "nombre": "Mr. Eldrin",
+
+  "saludos": [
+    "Bienvenido al Museo. Puedes mirar todo lo que quieras. Tocar, en cambio, es una negociación bastante más complicada.",
+    "Has vuelto. Excelente. Hay una pieza nueva esperando alguien que haga preguntas antes de inventarle una historia.",
+    "Pasa, visitante. Cada objeto de esta sala sobrevivió suficiente tiempo como para merecer que lo observemos con atención.",
+    "Saludos. Aquí conservamos cosas antiguas, aunque intentamos no conservar también todos los errores antiguos.",
+    "Bienvenido al Museo de Mírrafen. Un objeto sin contexto puede ser hermoso. Un objeto con contexto puede contar una historia.",
+    "Acércate. Hoy no buscaremos el objeto más valioso, sino el que tenga algo interesante que enseñarnos.",
+    "Has llegado en buen momento. Estoy catalogando una pieza cuya función todavía discutimos.",
+    "Pasa. Los museos no existen para encerrar el pasado, sino para permitir que pueda seguir hablándonos.",
+    "Saludos, curioso. Recuerda: antiguo no significa automáticamente importante, y brillante tampoco.",
+    "Bienvenido. Si sales de aquí mirando los objetos cotidianos de otra manera, consideraré que no desperdiciamos la tarde."
+  ],
+
+  "dialogos": [
+    "El patrimonio no es solamente aquello que cuesta mucho dinero. También puede ser aquello que una comunidad considera importante conservar.",
+    "Antes de interpretar un objeto, pregunta de qué está hecho, dónde apareció, quién pudo utilizarlo y qué sabemos realmente de él.",
+    "Restaurar no significa convertir algo antiguo en algo nuevo. A veces significa impedir que siga deteriorándose.",
+    "Un objeto pierde parte de su significado cuando se separa de toda información sobre su procedencia.",
+    "Conservar implica tomar decisiones: qué guardar, cómo documentarlo y qué historia contar junto a ello.",
+    "No todo lo viejo debe conservarse para siempre, pero tampoco deberíamos destruir algo antes de comprender qué representa.",
+    "Un museo responsable distingue claramente entre aquello que sabe y aquello que solamente supone.",
+    "Los objetos pueden contar historias de personas que nunca dejaron documentos escritos.",
+    "El patrimonio pertenece a la memoria de una comunidad, no solamente al edificio que lo exhibe.",
+    "Cuidar el pasado no significa vivir dentro de él. Significa permitir que el presente pueda aprender de aquello que sobrevivió."
+  ],
+
+  "desafios_reales": [
+    {
+      "tipo": "vida_real",
+      "titulo": "Objeto con historia",
+      "descripcion": "Eldrin quiere demostrar que incluso algo cotidiano puede formar parte de una historia.",
+      "accion": "Elegir un objeto seguro de tu hogar y preguntar cuándo llegó, quién lo usa o por qué se conserva",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Ficha de museo",
+      "descripcion": "Una pieza sin información obliga al visitante a adivinar demasiado.",
+      "accion": "Crear una ficha sencilla para un objeto con nombre, material, uso y procedencia conocida",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Mirar sin tocar",
+      "descripcion": "La curiosidad no concede automáticamente permiso para manipular aquello que encontramos.",
+      "accion": "Observar con atención un objeto delicado o especial sin moverlo y describir tres detalles",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "¿De qué está hecho?",
+      "descripcion": "Los materiales también forman parte de la historia de una pieza.",
+      "accion": "Identificar de forma segura el material principal de dos objetos cotidianos",
+      "recompensa": {
+        "xp": 4,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Antes y ahora",
+      "descripcion": "Los objetos cambian cuando cambian las necesidades y tecnologías de las personas.",
+      "accion": "Comparar un objeto actual con una versión antigua del mismo tipo y señalar una diferencia",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Por qué lo guardamos",
+      "descripcion": "No todo valor puede medirse en monedas.",
+      "accion": "Preguntar por qué tu familia conserva un objeto, fotografía o recuerdo determinado",
+      "recompensa": {
+        "xp": 4,
+        "oquos": 1
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Estado de conservación",
+      "descripcion": "Eldrin empieza sus revisiones observando qué necesita atención.",
+      "accion": "Observar un objeto propio y seguro e identificar si está bien conservado o necesita un cuidado sencillo apropiado",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "La historia de una herramienta",
+      "descripcion": "Las herramientas muestran cómo las personas resolvían problemas.",
+      "accion": "Elegir una herramienta doméstica segura y averiguar para qué sirve y cómo pudo cambiar con el tiempo",
+      "recompensa": {
+        "xp": 7,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Colección ordenada",
+      "descripcion": "Una colección empieza a ser útil cuando existe alguna lógica para organizarla.",
+      "accion": "Agrupar varios objetos propios seguros utilizando un criterio como material, uso, tamaño o época",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Pequeña exposición",
+      "descripcion": "Conservar también implica saber explicar por qué algo merece atención.",
+      "accion": "Elegir tres objetos propios y explicar brevemente qué relación existe entre ellos",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 4
+      }
+    }
+  ],
+
+  "misiones_reino": [
+    {
+      "titulo": "Símbolos de la Corona",
+      "destino": "Aldea",
+      "descripcion": "Pregunta a Eleanor qué objetos representaban a la Corona y por qué algunos siguen teniendo significado para la comunidad.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "El escudo del León",
+      "destino": "Castillo",
+      "descripcion": "Habla con Roderick sobre el antiguo escudo del león dorado y registra qué representa más allá de su utilidad como pieza de armadura.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Monedas antiguas",
+      "destino": "Mercado",
+      "descripcion": "Consulta a Borin sobre antiguas formas de intercambio y por qué conserva ciertos Oquos de épocas anteriores.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Herramientas del campo",
+      "destino": "Granja",
+      "descripcion": "Pregunta a Silas qué herramientas antiguas muestran cómo cambiaron las labores agrícolas de Mírrafen.",
+      "recompensa": {
+        "xp": 9,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Obras de la Forja",
+      "destino": "Cavernas",
+      "descripcion": "Visita a Eliana y descubre qué señales permiten distinguir una herramienta cotidiana de una pieza excepcional de artesanía.",
+      "recompensa": {
+        "xp": 12,
+        "oquos": 5
+      }
+    },
+    {
+      "titulo": "La leyenda y el objeto",
+      "destino": "Bosque",
+      "descripcion": "Pide a Garrick una leyenda relacionada con una reliquia y separa aquello que pertenece al relato de lo que puede comprobarse sobre la pieza.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Objetos del Santuario",
+      "destino": "Santuario",
+      "descripcion": "Consulta a Aurélia sobre el significado de algunos objetos ceremoniales y por qué se conservan incluso cuando ya no se utilizan diariamente.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Instrumentos del conocimiento",
+      "destino": "Observatorio",
+      "descripcion": "Pregunta a Zephyr qué pueden enseñarnos los antiguos instrumentos científicos sobre la forma en que otras generaciones investigaban el mundo.",
+      "recompensa": {
+        "xp": 11,
+        "oquos": 5
+      }
+    },
+    {
+      "titulo": "Documento y objeto",
+      "destino": "Biblioteca",
+      "descripcion": "Trabaja con Rowena para relacionar una pieza del Museo con un registro escrito que ayude a comprender su historia.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Hallazgo del Norte",
+      "destino": "Nieve",
+      "descripcion": "Consulta a Margot sobre cómo debe documentarse un hallazgo antes de que pueda incorporarse responsablemente a una colección.",
+      "recompensa": {
+        "xp": 14,
+        "oquos": 6
+      }
+    }
+  ],
+
+  "consejos": [
+    "No retires objetos de sitios históricos, naturales, arqueológicos o ajenos. Un hallazgo responsable se documenta y se comunica.",
+    "Antes de limpiar, reparar o modificar algo antiguo o especial, consulta a un adulto responsable o a una persona que sepa cómo cuidarlo.",
+    "Antiguo no significa automáticamente valioso, pero tampoco significa inútil.",
+    "Un objeto sin procedencia conocida necesita más preguntas, no una historia inventada.",
+    "Conservar no siempre significa restaurar hasta que parezca nuevo.",
+    "Los materiales, marcas de uso y reparaciones también forman parte de la historia de una pieza.",
+    "Una exposición debería distinguir claramente entre hechos comprobados e interpretaciones.",
+    "Pregunta siempre quién utilizó un objeto y qué voces podrían faltar en la explicación.",
+    "El patrimonio de una comunidad merece respeto aunque no pertenezca a tu propia tradición.",
+    "El objetivo de un museo no es acumular cosas viejas. Es conservar evidencias que ayuden a comprender vidas, ideas y cambios."
+  ],
+
+  "rumores": [
+    "Roderick permitió finalmente que examinara uno de sus antiguos escudos. Lo vigiló durante toda la inspección como si yo fuera a huir corriendo con él bajo el brazo.",
+    "Borin conserva el primer Oquo que recuperó después de la guerra. Llevo años intentando convencerlo de que debería estar en una vitrina. Llevo años perdiendo esa discusión.",
+    "Eliana ha encontrado marcas de fabricantes en herramientas antiguas que permiten identificar talleres desaparecidos.",
+    "Rowena posee registros de piezas que figuraban en el Museo antes de la guerra y que todavía no hemos recuperado.",
+    "Margot asegura haber identificado una estructura bajo el hielo construida con una técnica que no aparece en nuestras colecciones.",
+    "Zephyr quiere recuperar un antiguo instrumento astronómico que considera científicamente valioso. Yo también. Naturalmente, nuestras razones son exactamente iguales y completamente diferentes.",
+    "Garrick conoce historias sobre reliquias que jamás han aparecido fuera de los cuentos. Confieso que encuentro eso irritantemente interesante.",
+    "Aurélia conserva objetos ceremoniales dañados porque incluso sus reparaciones cuentan parte de la historia del Santuario.",
+    "Laudelino ha ofrecido donar al Museo su viejo laúd dentro de muchos años. He decidido no explicarle todavía que debe seguir vivo para firmar la documentación.",
+    "Entre las piezas recuperadas existe una pequeña llave que no corresponde a ninguna cerradura conocida del Museo."
+  ],
+
+  "historia_personal": [
+    {
+      "id": "historia_01",
+      "titulo": "El niño de las vitrinas",
+      "texto": "Desde pequeño me fascinaban los objetos antiguos. No por su precio ni por su rareza, sino porque imaginaba todas las manos que habían pasado por ellos antes de llegar hasta nosotros."
+    },
+    {
+      "id": "historia_02",
+      "titulo": "Aprender a conservar",
+      "texto": "Comencé como ayudante de catálogo. Limpiaba vitrinas, copiaba fichas y aprendía a manipular piezas con cuidado. Pronto descubrí que conservar un objeto exigía conocer tanto sus materiales como su historia."
+    },
+    {
+      "id": "historia_03",
+      "titulo": "Las historias materiales",
+      "texto": "Me especialicé en catalogación y restauración. Marcas, reparaciones, materiales y desgaste podían revelar aspectos de la vida cotidiana que jamás aparecían en los grandes libros."
+    },
+    {
+      "id": "historia_04",
+      "titulo": "Mr. Eldrin",
+      "texto": "Con los años fui nombrado curador del Gran Museo de Mírrafen. Recorrí el reino reuniendo objetos, reliquias, herramientas, obras y fragmentos capaces de representar diferentes partes de nuestra historia."
+    },
+    {
+      "id": "historia_05",
+      "titulo": "Las llaves del Museo",
+      "texto": "Llevaba siempre conmigo las llaves de las colecciones más importantes. No eran símbolos de propiedad. Eran recordatorios de responsabilidad: aquellas piezas no me pertenecían. Estaban bajo mi cuidado."
+    },
+    {
+      "id": "historia_06",
+      "titulo": "Cuando vaciaron las galerías",
+      "texto": "Durante la guerra muchas salas fueron dañadas y numerosas colecciones desaparecieron. Perdí a mi familia y a colegas que habían dedicado su vida al Museo. Algunas piezas fueron destruidas y otras quedaron dispersas por Mírrafen."
+    },
+    {
+      "id": "historia_07",
+      "titulo": "Las últimas vitrinas",
+      "texto": "Conseguimos esconder algunas llaves, documentos y objetos pequeños antes de abandonar el edificio. Durante años pensé que aquellas piezas serían lo único que quedaría de la antigua colección."
+    },
+    {
+      "id": "historia_08",
+      "titulo": "La primera pieza que volvió",
+      "texto": "Un habitante apareció un día con una herramienta antigua que había pertenecido al Museo. No era nuestro objeto más famoso ni el más valioso, pero verla regresar a una vitrina hizo que las salas dejaran de parecer completamente vacías."
+    },
+    {
+      "id": "historia_09",
+      "titulo": "Un museo nuevo",
+      "texto": "Comenzaron a regresar piezas y aparecieron también objetos nuevos de la reconstrucción. Entonces comprendí que el Museo no debía limitarse a reconstruir exactamente sus viejas salas. La nueva historia de Mírrafen también merecía conservarse."
+    },
+    {
+      "id": "historia_10",
+      "titulo": "Las llaves siguientes",
+      "texto": "Cuando llegaste querías saber cuál era nuestra pieza más valiosa. Ahora preguntas quién utilizó cada objeto, de dónde proviene, qué sabemos realmente y por qué debería conservarse. Eso me interesa mucho más. Quizá las llaves del Museo siempre estuvieron destinadas a pasar de unas manos cuidadosas a otras."
+    }
+  ]
+}

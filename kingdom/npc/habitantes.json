@@ -2,129 +2,129 @@
   {
     "id": "guardian",
     "nombre": "Sir Roderick",
-    "categoria": "guardia",
+    "categoria": "disciplina",
     "lugar": "Castillo",
     "sprite": "kingdom/npc/images/roderick.png",
-    "descripcion": "El Centinela, Defensor de las murallas y protector de los portones del palacio real."
+    "descripcion": "El Guardia Real de Mírrafen, veterano protector del Castillo y maestro de la disciplina, la preparación y la constancia."
   },
   {
     "id": "reina",
     "nombre": "Reina Eleanor",
-    "categoria": "valores",
+    "categoria": "comunidad",
     "lugar": "Aldea",
     "sprite": "kingdom/npc/images/eleanor.png",
-    "descripcion": "Soberana gobernante sabia que guía el destino de la comarca."
+    "descripcion": "La Reina Soberana de Mírrafen, estratega y protectora de su pueblo, símbolo de comunidad, cooperación y servicio."
   },
   {
     "id": "mercader",
     "nombre": "Jhaim Borin",
-    "categoria": "mercado",
+    "categoria": "recompensas",
     "lugar": "Mercado",
     "sprite": "kingdom/npc/images/borin.png",
-    "descripcion": "Experto comerciante de reliquias, insumos y recursos exóticos."
+    "descripcion": "El gran mercader de Mírrafen y arquitecto de la circulación de los Oquos, maestro del valor, el intercambio y las recompensas."
   },
   {
     "id": "susurrador",
     "nombre": "Kurt Silas",
-    "categoria": "naturaleza",
+    "categoria": "responsabilidad",
     "lugar": "Granja",
     "sprite": "kingdom/npc/images/silas.png",
-    "descripcion": "El Susurrador de Árboles, comunica la sabiduría antigua del bosque ancestral."
+    "descripcion": "El Susurrador de Árboles, protector de los cultivos de Mírrafen y maestro de la responsabilidad, la paciencia y el cuidado constante."
   },
   {
     "id": "forjadora",
     "nombre": "Dear Eliana",
-    "categoria": "creatividad",
+    "categoria": "perseverancia",
     "lugar": "Cavernas",
     "sprite": "kingdom/npc/images/eliana.png",
-    "descripcion": "La Forjadora, moldea artefactos y da forma a grandes ideas."
+    "descripcion": "La legendaria Forjadora de las Cavernas, maestra del esfuerzo, la perseverancia y el arte de aprender de cada intento."
   },
   {
     "id": "narrador",
     "nombre": "Soul Garrick",
-    "categoria": "historias",
+    "categoria": "cuentos",
     "lugar": "Bosque",
     "sprite": "kingdom/npc/images/garrick.png",
-    "descripcion": "El Narrador de Sombras, tejedor de mitos y relator de leyendas oscuras."
+    "descripcion": "El Narrador de Sombras del Bosque, guardián de cuentos, leyendas y relatos que mantienen viva la imaginación de Mírrafen."
   },
   {
     "id": "sacerdotisa",
     "nombre": "Aurelia Stay",
-    "categoria": "espiritualidad",
+    "categoria": "calma",
     "lugar": "Santuario",
     "sprite": "kingdom/npc/images/aurelia.png",
-    "descripcion": "La Clarividente, guardiana del fuego sagrado y protectora de las bendiciones del reino."
+    "descripcion": "La Sacerdotisa del Santuario, guardiana de un refugio dedicado a la calma, la recuperación y la claridad antes de continuar el camino."
   },
   {
     "id": "astral",
     "nombre": "Lord Zephyr",
-    "categoria": "alquimia",
+    "categoria": "conocimiento",
     "lugar": "Observatorio",
     "sprite": "kingdom/npc/images/zephyr.png",
-    "descripcion": "El Alquimista, estudioso de los astros, pócimas estelares y secretos del cosmos."
+    "descripcion": "El Alquimista Astral del Observatorio, investigador del cosmos y maestro de la curiosidad, la observación y el conocimiento."
   },
   {
     "id": "bibliotecaria",
     "nombre": "Lady Rowena",
-    "categoria": "lectura",
+    "categoria": "historia",
     "lugar": "Biblioteca",
     "sprite": "kingdom/npc/images/rowena.png",
-    "descripcion": "Lady de los Tomos, guardián de todos los libros del Reino."
+    "descripcion": "La guardiana de los Tomos de Mírrafen, protectora de sus archivos, fuentes y memoria histórica."
   },
   {
     "id": "bardo",
     "nombre": "Laudelino Kuino",
-    "categoria": "musica",
+    "categoria": "aventura",
     "lugar": "Puerto",
     "sprite": "kingdom/npc/images/laudelino.png",
-    "descripcion": "El Bardo Menestrel, inspirador de tropas con cantares y baladas legendarias."
+    "descripcion": "El Bardo del Puerto, viajero y trovador que inspira a descubrir nuevos caminos, adaptarse y convertir cada aventura en una historia."
   },
   {
-    "id": "explorador",
+    "id": "arqueologa",
     "nombre": "Margot Kaellen",
-    "categoria": "supervivencia",
+    "categoria": "exploracion",
     "lugar": "Nieve",
     "sprite": "kingdom/npc/images/kaelen.png",
-    "descripcion": "El Rastrojo de Escarcha, rastreador de las cumbres heladas y maestro de la orientación en ventiscas."
+    "descripcion": "La Arqueóloga de las Nieves, exploradora de las regiones heladas y especialista en observar, registrar e investigar los secretos del terreno."
   },
   {
     "id": "tabernero",
     "nombre": "Oso Barnaby",
-    "categoria": "social",
+    "categoria": "camaraderia",
     "lugar": "Bar",
     "sprite": "kingdom/npc/images/barnaby.png",
-    "descripcion": "El Tabernero, anfitrión del refugio de cazadores, siempre dispuesto a servir una buena hidromiel y escuchar rumores."
+    "descripcion": "El Tabernero de Mírrafen, anfitrión y compañero de viajeros, maestro de la camaradería, la hospitalidad y el sentido de pertenencia."
   },
   {
-    "id": "artista",
+    "id": "artesana",
     "nombre": "Lysa McLyra",
-    "categoria": "arte",
+    "categoria": "perfeccionamiento",
     "lugar": "Academia",
     "sprite": "kingdom/npc/images/lyra.png",
-    "descripcion": "La Artesana, maestra de las manualidades y artesanías."
+    "descripcion": "La Artesana de la Academia, maestra de la práctica consciente, la precisión y el perfeccionamiento progresivo de cada habilidad."
   },
   {
-    "id": "sabio",
+    "id": "curador",
     "nombre": "Mr. Eldrin",
-    "categoria": "conocimiento",
+    "categoria": "patrimonio",
     "lugar": "Museo",
     "sprite": "kingdom/npc/images/eldrin.png",
-    "descripcion": "El Erudito, conoce todos los secretos del Reino."
+    "descripcion": "El sabio Curador del Museo, custodio de las reliquias y del patrimonio material que conserva la memoria de Mírrafen."
   },
   {
-    "id": "cocinero",
+    "id": "chef",
     "nombre": "Bart Balthazar",
-    "categoria": "alimentacion",
-    "lugar": "Mascotas",
+    "categoria": "creacion_servicio",
+    "lugar": "Hielo",
     "sprite": "kingdom/npc/images/balthazar.png",
-    "descripcion": "Maestro Cocinero, especialista en banquetes revitalizantes y recetas del reino."
+    "descripcion": "El Gran Chef Maestre del Palacio Culinario, creador de preparaciones destinadas a reunir, cuidar y servir a los habitantes de Mírrafen."
   },
   {
-    "id": "comandante",
-    "nombre": "Valerius Di'rroka",
-    "categoria": "estrategia",
-    "lugar": "Hielo",
+    "id": "maestra",
+    "nombre": "Valerius di'Rroka",
+    "categoria": "vinculo",
+    "lugar": "Mascotas",
     "sprite": "kingdom/npc/images/valerius.png",
-    "descripcion": "Líder acróbata y maestra táctica de la vanguardia."
+    "descripcion": "El Maestro de las Mascotas y protector de la fauna de Mírrafen, dedicado al cuidado, el respeto y la construcción de vínculos de confianza con los animales."
   }
 ]

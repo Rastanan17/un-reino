@@ -1,0 +1,305 @@
+{
+  "npc": "artesana",
+  "nombre": "Lysa McLyra",
+
+  "saludos": [
+    "Bienvenido a la Academia. Puedes dejar la perfección en la puerta; aquí trabajamos con algo bastante más útil: práctica.",
+    "Has vuelto. Excelente. El segundo intento suele ser mucho más interesante que el primero.",
+    "Pasa, aprendiz. Hoy veremos qué sabes hacer, no solamente qué sabes explicar.",
+    "Saludos. Si vienes buscando una fórmula mágica que sustituya la práctica, temo decepcionarte.",
+    "Acércate al taller. Hay herramientas preparadas, ejercicios pendientes y varios errores esperando ser útiles.",
+    "Bienvenido. No necesito que lo hagas perfectamente. Necesito que prestes suficiente atención para descubrir qué mejorar.",
+    "Has llegado justo a tiempo. Estaba revisando un trabajo que funciona correctamente y, por tanto, todavía podemos perfeccionar.",
+    "Pasa. Una habilidad no aparece completa de repente. Se construye intento tras intento.",
+    "Saludos, artesano. Observa primero la técnica y después intenta reproducirla con tus propias manos.",
+    "Bienvenido a la Academia de Mírrafen. Aquí el talento recibe permiso para entrar, pero la práctica paga el alquiler."
+  ],
+
+  "dialogos": [
+    "Conocer una técnica y dominarla son cosas distintas.",
+    "El primer intento sirve para descubrir qué todavía no sabes hacer.",
+    "No repitas exactamente el mismo error diez veces y lo llames práctica. Observa, ajusta y vuelve a intentar.",
+    "La precisión no significa lentitud. Significa saber qué detalles importan.",
+    "Antes de intentar mejorar todo a la vez, elige una sola parte.",
+    "Una buena corrección explica qué cambiar y por qué.",
+    "Comparar tu trabajo actual con el de ayer suele ser más útil que compararlo con alguien que lleva años practicando.",
+    "Una herramienta bien cuidada permite concentrarte en la habilidad, no en luchar contra el equipo.",
+    "Cuando una técnica ya funciona, empieza la parte interesante: hacerla más clara, eficiente o consistente.",
+    "Sabes que realmente aprendiste algo cuando puedes hacerlo sin copiar cada movimiento y además explicar cómo ayudarías a otro a aprenderlo."
+  ],
+
+  "desafios_reales": [
+    {
+      "tipo": "vida_real",
+      "titulo": "Primer intento",
+      "descripcion": "Lysa recuerda que toda habilidad comienza siendo incómodamente nueva.",
+      "accion": "Elegir una habilidad sencilla y apropiada que quieras mejorar y realizar un primer intento",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Una cosa a mejorar",
+      "descripcion": "Intentar corregir todo al mismo tiempo suele producir una elegante colección de nuevos errores.",
+      "accion": "Revisar algo que hayas hecho y elegir un solo detalle concreto para mejorar",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Segundo intento",
+      "descripcion": "La Academia valora especialmente aquello que cambia entre un intento y el siguiente.",
+      "accion": "Repetir una tarea sencilla aplicando una mejora que hayas identificado",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Observar una técnica",
+      "descripcion": "Antes de imitar un procedimiento, Lysa quiere que descubras qué partes lo componen.",
+      "accion": "Observar cómo una persona de confianza realiza una habilidad apropiada e identificar dos pasos importantes",
+      "recompensa": {
+        "xp": 4,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Preparar herramientas",
+      "descripcion": "Trabajar mejor también comienza teniendo preparado aquello que necesitas.",
+      "accion": "Ordenar y preparar los materiales seguros necesarios antes de realizar una actividad",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Instrucción precisa",
+      "descripcion": "Seguir instrucciones requiere comprenderlas, no obedecerlas como una estatua con manos.",
+      "accion": "Realizar una tarea sencilla siguiendo sus pasos y comprobar al final si omitiste alguno",
+      "recompensa": {
+        "xp": 4,
+        "oquos": 1
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Pedir una corrección",
+      "descripcion": "Una mirada externa puede encontrar aquello que dejamos de notar.",
+      "accion": "Pedir a una persona de confianza una sugerencia concreta para mejorar algo que estés aprendiendo",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Comparar versiones",
+      "descripcion": "El progreso resulta más visible cuando conservamos pruebas de nuestros intentos.",
+      "accion": "Comparar dos versiones de un trabajo propio e identificar qué mejoró y qué todavía podría mejorar",
+      "recompensa": {
+        "xp": 7,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Práctica breve",
+      "descripcion": "No toda sesión necesita durar horas para producir aprendizaje.",
+      "accion": "Practicar durante un periodo razonable una habilidad concreta concentrándote en un solo aspecto",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Explica tu técnica",
+      "descripcion": "Lysa utiliza una prueba despiadadamente eficaz: intenta explicar lo que crees que sabes.",
+      "accion": "Explicar con tus palabras los pasos básicos de una habilidad que estés practicando",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 4
+      }
+    }
+  ],
+
+  "misiones_reino": [
+    {
+      "titulo": "Disciplina de la Guardia",
+      "destino": "Castillo",
+      "descripcion": "Pregunta a Roderick cómo convierte una acción básica en una habilidad confiable mediante entrenamiento constante.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Aprender en comunidad",
+      "destino": "Aldea",
+      "descripcion": "Habla con Eleanor sobre cómo una comunidad puede enseñar habilidades sin humillar a quien todavía está aprendiendo.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Calidad y valor",
+      "destino": "Mercado",
+      "descripcion": "Pregunta a Borin qué diferencias observa entre un producto simplemente terminado y uno elaborado con verdadero cuidado.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Práctica paciente",
+      "destino": "Granja",
+      "descripcion": "Consulta a Silas sobre habilidades que solamente pueden aprenderse observando cambios durante varios días o ciclos.",
+      "recompensa": {
+        "xp": 9,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Correcciones de la Forja",
+      "destino": "Cavernas",
+      "descripcion": "Visita a Eliana y descubre cómo analiza un intento fallido para decidir qué corregir en el siguiente.",
+      "recompensa": {
+        "xp": 12,
+        "oquos": 5
+      }
+    },
+    {
+      "titulo": "La técnica del narrador",
+      "destino": "Bosque",
+      "descripcion": "Pregunta a Garrick qué práctica permite que una historia sea más clara, interesante y fácil de seguir.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Pausa para aprender",
+      "destino": "Santuario",
+      "descripcion": "Habla con Aurélia sobre cómo recuperar calma cuando la frustración empieza a impedir que sigas aprendiendo.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Conocimiento aplicado",
+      "destino": "Observatorio",
+      "descripcion": "Pregunta a Zephyr por una idea que comprendió teóricamente y que después necesitó aprender a aplicar mediante práctica.",
+      "recompensa": {
+        "xp": 11,
+        "oquos": 5
+      }
+    },
+    {
+      "titulo": "Técnicas antiguas",
+      "destino": "Biblioteca",
+      "descripcion": "Consulta a Rowena sobre antiguos manuales, registros o instrucciones que permiten reconstruir habilidades perdidas.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Aprender en el camino",
+      "destino": "Puerto",
+      "descripcion": "Pregunta a Laudelino qué habilidad tuvo que aprender durante sus viajes porque ningún libro podía prepararlo completamente.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    }
+  ],
+
+  "consejos": [
+    "No intentes mejorar cinco cosas a la vez. Elige una, corrígela y vuelve a observar.",
+    "Practicar significa prestar atención a lo que ocurre entre un intento y el siguiente.",
+    "Ser principiante no es una categoría inferior. Es una etapa inevitable de cualquier habilidad.",
+    "Una corrección útil debería mostrarte qué cambiar, no convencerte de que eres incapaz.",
+    "Compararte constantemente con alguien mucho más experimentado puede ocultar tu propio progreso.",
+    "Cuida las herramientas y el espacio de trabajo. Una buena técnica comienza antes del primer movimiento.",
+    "Si una tarea puede hacerse correctamente de una forma más clara y sencilla, eso también es mejora.",
+    "Cuando algo ya funciona, pregunta si puedes hacerlo con mayor consistencia.",
+    "Dominar una habilidad no significa dejar de cometer errores. Significa saber detectarlos y corregirlos mejor.",
+    "La verdadera maestría empieza cuando puedes seguir aprendiendo sin necesitar que otra persona te indique cada mejora."
+  ],
+
+  "rumores": [
+    "Eliana sostiene que mis frascos tienen demasiadas etiquetas. Yo sostengo que sus cajones tienen demasiado pocas. Nuestra disputa cumple varios años.",
+    "Zephyr me prestó una vez un instrumento del Observatorio para medir una preparación. Era extraordinariamente preciso y completamente innecesario. Lo utilicé durante tres semanas.",
+    "Borin asegura distinguir un producto excelente con solo mirarlo. Le pedí que explicara sus criterios. Ahora mira durante bastante más tiempo.",
+    "Rowena conserva manuales antiguos de técnicas que ningún artesano actual sabe reproducir completamente.",
+    "Bartolomeo y yo discrepamos sobre si una receta pertenece a la ciencia o al arte. Sospecho que ambos estamos evitando admitir que pertenece a las dos.",
+    "Roderick repite ciertos movimientos desde hace décadas y todavía revisa pequeños detalles. Esa es una de las razones por las que sigue siendo Roderick.",
+    "Laudelino afirma que jamás toca una pieza exactamente igual dos veces. Yo todavía no decido si eso demuestra creatividad o una alarmante ausencia de registros.",
+    "Margot encontró herramientas antiguas cuya función conocemos, pero cuya técnica de fabricación todavía no hemos conseguido reproducir.",
+    "Eldrin conserva piezas construidas con una precisión que ningún taller moderno ha explicado completamente.",
+    "Hay un pequeño frasco en mi estante que nunca abro. Fue la primera preparación que conseguí completar correctamente. Es bastante mediocre. Por eso mismo continúa allí."
+  ],
+  
+  "historia_personal": [
+    {
+      "id": "historia_01",
+      "titulo": "La niña del taller",
+      "texto": "Crecí entre pergaminos, sellos, recipientes y materiales utilizados por los antiguos artesanos de la Academia. Me fascinaban menos los resultados terminados que el proceso necesario para conseguirlos."
+    },
+    {
+      "id": "historia_02",
+      "titulo": "La primera preparación",
+      "texto": "Mi primer trabajo fue sencillo y salió mediocre. Intenté ocultarlo hasta que mi maestra lo colocó sobre la mesa y me preguntó qué había aprendido. Esperaba una reprimenda. Recibí una segunda oportunidad."
+    },
+    {
+      "id": "historia_03",
+      "titulo": "Aprender el oficio",
+      "texto": "Estudié fórmulas, preparación de materiales, restauración, encantamiento de recipientes y elaboración de suministros arcanos. Descubrí rápidamente que memorizar instrucciones era mucho más fácil que ejecutarlas bien."
+    },
+    {
+      "id": "historia_04",
+      "titulo": "Lysa McLyra",
+      "texto": "Con los años desarrollé técnicas propias y comencé a enseñar a otros aprendices. Me convertí en Lysa McLyra, Artesana de la Academia. Mi trabajo consistía en transformar conocimiento en objetos y preparaciones útiles para Mírrafen."
+    },
+    {
+      "id": "historia_05",
+      "titulo": "Los talleres de la Academia",
+      "texto": "La Academia llegó a albergar talleres donde estudiosos y artesanos trabajaban juntos. Zephyr podía explicar un principio y nosotros debíamos descubrir cómo aplicarlo con precisión suficiente para que funcionara fuera de un pergamino."
+    },
+    {
+      "id": "historia_06",
+      "titulo": "Cuando callaron los talleres",
+      "texto": "La guerra destruyó laboratorios, aulas y archivos de fórmulas. Perdí a mi familia y a muchos maestros y aprendices. Durante años, numerosas técnicas quedaron reducidas a fragmentos de instrucciones y recuerdos incompletos."
+    },
+    {
+      "id": "historia_07",
+      "titulo": "Las fórmulas incompletas",
+      "texto": "Regresé a la Academia con los pocos recipientes, herramientas y páginas que habíamos conseguido proteger. Algunas fórmulas estaban incompletas. Otras eran correctas, pero nadie recordaba ya la técnica necesaria para ejecutarlas."
+    },
+    {
+      "id": "historia_08",
+      "titulo": "El primer taller",
+      "texto": "Comencé con una mesa, unas pocas herramientas y trabajos muy simples. Repetí antiguas técnicas, anoté resultados y corregí errores. Poco a poco, aquello que parecía perdido empezó a convertirse nuevamente en oficio."
+    },
+    {
+      "id": "historia_09",
+      "titulo": "Aprendices otra vez",
+      "texto": "El verdadero regreso de la Academia no ocurrió cuando recuperamos una fórmula. Ocurrió cuando apareció el primer nuevo aprendiz. Comprendí entonces que una técnica sobrevive cuando alguien puede aprenderla, mejorarla y transmitirla."
+    },
+    {
+      "id": "historia_10",
+      "titulo": "Más allá de la maestra",
+      "texto": "Cuando llegaste necesitabas instrucciones para casi cada paso. Ahora revisas tu propio trabajo, detectas qué mejorar y hasta encuentras soluciones diferentes a las mías. Eso es precisamente lo que esperaba. Una Academia donde todos repitieran eternamente a sus maestros sería un museo bastante mal organizado."
+    }
+  ]
+}

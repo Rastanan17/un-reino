@@ -1,0 +1,305 @@
+{
+  "npc": "maestra",
+  "nombre": "Valerius di'Rroka",
+
+  "saludos": [
+    "Acércate despacio, viajero. Algunos habitantes del Refugio necesitan conocerte antes de decidir que eres interesante.",
+    "Bienvenido al Refugio. Aquí nadie necesita hablar para decirnos cómo se siente.",
+    "Has vuelto. Varias criaturas ya reconocieron tus pasos antes de que llegaras a la puerta.",
+    "Saludos, compañero. Observa primero y acerca la mano después. Es una regla bastante útil con animales... y, curiosamente, con personas.",
+    "Pasa. Hay sitio para ti, pero recuerda que este lugar pertenece tanto a sus criaturas como a nosotros.",
+    "Bienvenido. Si quieres entender a un animal, empieza preguntándote qué está intentando comunicarte.",
+    "Ah, viajero. Ese pequeño de allí lleva un rato mirándote. Todavía no decido cuál de los dos está estudiando al otro.",
+    "Acércate con calma. La confianza rara vez aparece porque alguien la exige.",
+    "Saludos. Aquí aprenderás que cuidar no significa controlar.",
+    "Bienvenido al Refugio de Mírrafen. Todo vínculo comienza cuando dejamos de pensar solamente en lo que nosotros queremos."
+  ],
+
+  "dialogos": [
+    "Un animal no necesita comportarse como tú esperas para merecer respeto.",
+    "La confianza se construye con experiencias repetidas donde el otro descubre que está seguro contigo.",
+    "Observar el cuerpo, la distancia y el comportamiento suele decir más que forzar una interacción.",
+    "Cuidar no significa decidir todo por otro ser vivo. También significa respetar cuándo necesita espacio.",
+    "Una mascota puede buscar compañía un día y tranquilidad al siguiente. El vínculo consiste en aprender a reconocer ambas.",
+    "No midas el cariño únicamente por cuánto se acerca un animal. Cada criatura expresa confianza de manera diferente.",
+    "Ser responsable de una mascota también significa pedir ayuda a un adulto cuando algo supera lo que puedes resolver.",
+    "Los animales aprenden sobre nosotros observando lo que hacemos repetidamente. Nosotros deberíamos concederles la misma atención.",
+    "Proteger a una criatura no significa convertirla en indefensa. Significa crear condiciones donde pueda estar segura y comportarse de acuerdo con su naturaleza.",
+    "El mejor cuidador no es aquel al que todos los animales obedecen. Es aquel en cuya presencia pueden sentirse seguros."
+  ],
+
+  "desafios_reales": [
+    {
+      "tipo": "vida_real",
+      "titulo": "Observador del Refugio",
+      "descripcion": "Valerius te pide mirar antes de intervenir.",
+      "accion": "Observar durante unos minutos a una mascota conocida y notar tres comportamientos sin molestarla",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Agua disponible",
+      "descripcion": "Las necesidades básicas suelen ser menos emocionantes que una aventura, pero bastante más importantes.",
+      "accion": "Comprobar con un adulto si una mascota tiene agua limpia disponible y ayudar si corresponde",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Su lugar seguro",
+      "descripcion": "Todo animal necesita espacios donde pueda descansar sin ser molestado.",
+      "accion": "Identificar cuál es uno de los lugares donde una mascota conocida suele descansar y respetarlo",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Señales de confianza",
+      "descripcion": "Valerius quiere que aprendas a observar cómo una mascota conocida muestra comodidad.",
+      "accion": "Identificar con ayuda de un adulto una señal habitual de que tu mascota está cómoda o relajada",
+      "recompensa": {
+        "xp": 4,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Momento compartido",
+      "descripcion": "El vínculo también se fortalece simplemente compartiendo tiempo de manera tranquila.",
+      "accion": "Pasar unos minutos acompañando a una mascota conocida sin obligarla a interactuar",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Cuidado del entorno",
+      "descripcion": "Un buen cuidador presta atención al espacio donde vive el animal.",
+      "accion": "Ayudar a mantener ordenado y seguro un espacio habitual de una mascota bajo supervisión apropiada",
+      "recompensa": {
+        "xp": 4,
+        "oquos": 1
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Su forma de hablar",
+      "descripcion": "Los animales comunican mucho mediante sonidos, movimientos y postura.",
+      "accion": "Observar una forma habitual en que una mascota conocida pide algo o comunica interés",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Juego respetuoso",
+      "descripcion": "Jugar también implica observar cuándo el otro quiere continuar y cuándo necesita parar.",
+      "accion": "Compartir un juego apropiado con una mascota conocida siguiendo las indicaciones habituales de cuidado de tu familia",
+      "recompensa": {
+        "xp": 7,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Lo que necesita de mí",
+      "descripcion": "Valerius recuerda que amar a una mascota también significa hacerse responsable de pequeñas tareas.",
+      "accion": "Realizar una tarea habitual y segura relacionada con el cuidado de tu mascota que te hayan asignado",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Historia de compañía",
+      "descripcion": "Todo vínculo acumula pequeños momentos que terminan significando mucho.",
+      "accion": "Recordar o escribir un momento especial vivido con una mascota",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 4
+      }
+    }
+  ],
+
+  "misiones_reino": [
+    {
+      "titulo": "Compañeros de la Aldea",
+      "destino": "Aldea",
+      "descripcion": "Pregunta a Eleanor cómo convivían las personas y animales de compañía durante los años de mayor prosperidad de la Aldea.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Animales de la Guardia",
+      "destino": "Castillo",
+      "descripcion": "Habla con Roderick sobre los animales que acompañaban a patrullas, mensajeros y guardianes de Mírrafen.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Provisiones del Refugio",
+      "destino": "Mercado",
+      "descripcion": "Consulta a Borin sobre cómo organiza los recursos destinados a mantener abastecido el Refugio sin desperdiciar suministros.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Criaturas de los campos",
+      "destino": "Granja",
+      "descripcion": "Pregunta a Silas cómo observa a los animales que viven alrededor de los cultivos sin alterar innecesariamente su comportamiento.",
+      "recompensa": {
+        "xp": 9,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Protecciones de Eliana",
+      "destino": "Cavernas",
+      "descripcion": "Visita a Eliana y descubre cómo fabricaba protecciones destinadas a los animales que trabajaban junto a los habitantes de Mírrafen.",
+      "recompensa": {
+        "xp": 12,
+        "oquos": 5
+      }
+    },
+    {
+      "titulo": "Bestias de las leyendas",
+      "destino": "Bosque",
+      "descripcion": "Pide a Garrick un relato donde una criatura sea compañera del protagonista y no simplemente un obstáculo en su camino.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Refugio y descanso",
+      "destino": "Santuario",
+      "descripcion": "Habla con Aurélia sobre la importancia de ofrecer tranquilidad a criaturas desplazadas o asustadas sin forzar su acercamiento.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Comprender el comportamiento",
+      "destino": "Observatorio",
+      "descripcion": "Pregunta a Zephyr cómo la observación repetida permite diferenciar una impresión aislada de un patrón de comportamiento.",
+      "recompensa": {
+        "xp": 11,
+        "oquos": 5
+      }
+    },
+    {
+      "titulo": "Compañeros de viaje",
+      "destino": "Puerto",
+      "descripcion": "Pregunta a Laudelino por los animales que acompañaban a viajeros y marineros durante sus largas rutas.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Memoria de las especies",
+      "destino": "Museo",
+      "descripcion": "Consulta a Eldrin sobre antiguos objetos relacionados con la convivencia entre habitantes de Mírrafen y sus animales.",
+      "recompensa": {
+        "xp": 9,
+        "oquos": 4
+      }
+    }
+  ],
+
+  "consejos": [
+    "Nunca obligues a un animal a recibir cariño para demostrar que te quiere.",
+    "La confianza necesita tiempo y experiencias seguras, no órdenes.",
+    "Aprende las señales habituales de la especie y también las características particulares de tu mascota.",
+    "Si una mascota cambia mucho su comportamiento o parece necesitar atención especial, comunícaselo a un adulto responsable.",
+    "No des alimentos, medicamentos ni productos nuevos a una mascota sin que un adulto responsable confirme que son apropiados.",
+    "Un animal que se aleja no te está traicionando. Puede estar diciendo simplemente que necesita espacio.",
+    "El juego debería ser seguro y agradable para ambas partes.",
+    "Ser buen cuidador incluye reconocer qué tareas no te corresponde realizar solo.",
+    "El vínculo se construye tanto en los momentos divertidos como en las pequeñas responsabilidades cotidianas.",
+    "El cariño más respetuoso pregunta primero qué necesita el otro ser, no qué queremos recibir de él."
+  ],
+
+  "rumores": [
+    "Una pequeña ardilla que vive cerca del Refugio parece haber decidido que el bolsillo de Roderick es un depósito oficial de provisiones. Roderick rechaza toda responsabilidad.",
+    "Silas asegura que varias aves regresaron a los antiguos campos mucho antes de que los cultivos estuvieran completamente recuperados.",
+    "Eliana conserva medidas de antiguas protecciones destinadas a criaturas de carga. Dice que piensa mejorarlas cuando el Refugio vuelva a necesitarlas.",
+    "Garrick conoce una leyenda sobre un lobo que guio a un viajero perdido sin permitirle acercarse jamás.",
+    "Laudelino afirma que una gaviota del Puerto reconoce tres de sus canciones. Valerius considera que quizá simplemente reconoce dónde guarda comida.",
+    "Eldrin conserva antiguos collares, placas y herramientas que muestran cuánto tiempo llevan las criaturas formando parte de la historia de Mírrafen.",
+    "Aurélia permitió durante años que pequeños animales desplazados descansaran en los jardines exteriores del Santuario.",
+    "Zephyr está estudiando rutas migratorias de varias especies que regresaron después de la guerra.",
+    "Borin asegura que jamás ha sido engañado por una criatura. Valerius recuerda cierta cabra y prefiere discrepar.",
+    "Hay un animal pequeño que duerme cerca de la puerta del Refugio cada noche. Nadie recuerda exactamente cuándo llegó. Valerius tampoco parece tener intención de echarlo."
+  ],
+
+  "historia_personal": [
+    {
+      "id": "historia_01",
+      "titulo": "El niño de las fronteras",
+      "texto": "Crecí en las regiones indómitas de Mírrafen, donde escuchar aves, rastros y movimientos entre la vegetación era parte de la vida cotidiana. Desde pequeño me resultaba más fácil acercarme a los animales cuando dejaba de intentar decidir qué debían hacer."
+    },
+    {
+      "id": "historia_02",
+      "titulo": "Aprender a observar",
+      "texto": "Mis primeros maestros me enseñaron que ningún animal es un acertijo construido para nosotros. Cada especie tiene necesidades propias y cada individuo termina mostrando también su carácter."
+    },
+    {
+      "id": "historia_03",
+      "titulo": "El primer compañero",
+      "texto": "Una criatura herida llegó una vez cerca de nuestro hogar. Los adultos se ocuparon de su cuidado y yo pasé días observándola desde la distancia. Cuando finalmente decidió acercarse, comprendí que la confianza recibida vale mucho más que la obediencia forzada."
+    },
+    {
+      "id": "historia_04",
+      "titulo": "Maestro de las Mascotas",
+      "texto": "Con los años aprendí a cuidar, entrenar y proteger criaturas muy distintas. Me llamaron Valerius di'Rroka, Maestro de las Mascotas. Siempre encontré curioso el título: sigo aprendiendo algo nuevo de ellas prácticamente cada día."
+    },
+    {
+      "id": "historia_05",
+      "titulo": "El primer Refugio",
+      "texto": "Fundamos el primer gran Refugio de Mírrafen para animales de compañía, criaturas de trabajo y fauna que necesitaba protección. También construimos espacios de entrenamiento y descanso adaptados a necesidades diferentes."
+    },
+    {
+      "id": "historia_06",
+      "titulo": "Cuando desaparecieron los hábitats",
+      "texto": "La guerra destruyó bosques, caminos y refugios. Muchas criaturas quedaron desplazadas y perdí a mi familia y a varios cuidadores con quienes había trabajado durante años."
+    },
+    {
+      "id": "historia_07",
+      "titulo": "Los que no podían preguntar",
+      "texto": "Mientras las personas intentábamos comprender qué había sucedido, los animales simplemente buscaban alimento, refugio y lugares seguros. Muchos dependían de que alguien notara aquello que no podían explicarnos con palabras."
+    },
+    {
+      "id": "historia_08",
+      "titulo": "La primera puerta abierta",
+      "texto": "Encontramos un pequeño espacio entre las ruinas y comenzamos a recibir criaturas desplazadas. No podía devolverles aquello que habían perdido, pero sí podíamos ofrecerles seguridad mientras el reino comenzaba a reconstruirse."
+    },
+    {
+      "id": "historia_09",
+      "titulo": "Volver a confiar",
+      "texto": "Con el tiempo regresaron aves, pequeños mamíferos y animales de compañía. El Refugio volvió a llenarse lentamente. Aprendí que reconstruir un vínculo se parece bastante a reconstruir un reino: no puede exigirse, debe ganarse paso a paso."
+    },
+    {
+      "id": "historia_10",
+      "titulo": "El siguiente guardián",
+      "texto": "Cuando llegaste pensé que tendría otro joven aprendiz al que enseñar cómo cuidar criaturas. Ahora observo algo mejor: empiezas a preguntar qué necesitan antes de pensar qué quieres recibir de ellas. Esa pregunta es el comienzo de todo verdadero vínculo."
+    }
+  ]
+}

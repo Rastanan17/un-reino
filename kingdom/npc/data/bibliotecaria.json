@@ -1,0 +1,305 @@
+{
+  "npc": "bibliotecaria",
+  "nombre": "Lady Rowena",
+
+  "saludos": [
+    "Bienvenido a la Biblioteca. Procura no confundir silencio con falta de actividad; aquí llevan siglos discutiendo personas que ya no están.",
+    "Pasa, aventurero. Si vienes buscando una historia, quizá Garrick pueda ayudarte. Si quieres saber cómo sabemos que ocurrió, has llegado al lugar correcto.",
+    "Saludos. Acabo de encontrar dos documentos que describen el mismo acontecimiento de formas completamente distintas. Una tarde excelente.",
+    "Bienvenido entre los Tomos. Cada estante guarda algo que alguien consideró demasiado importante como para dejarlo desaparecer.",
+    "Acércate. Los libros antiguos no responden preguntas por sí solos, pero suelen ayudarnos a formularlas mejor.",
+    "Has vuelto. Bien. La memoria de Mírrafen necesita lectores casi tanto como necesita libros.",
+    "Saludos, caminante. Aquí no buscamos únicamente fechas y nombres. Buscamos comprender qué ocurrió, por qué ocurrió y qué cambió después.",
+    "Pasa con cuidado. Algunos de estos manuscritos sobrevivieron a una guerra entera. Sería bastante humillante perder uno por una taza mal apoyada.",
+    "Bienvenido. El pasado no puede hablar directamente, así que debemos aprender a escuchar aquello que dejó detrás.",
+    "Acércate a la mesa. Tenemos documentos, dudas y varias versiones incompatibles de los hechos. En otras palabras, tenemos historia."
+  ],
+
+  "dialogos": [
+    "Recordar no es lo mismo que comprender. La historia comienza cuando preguntamos por qué ocurrieron las cosas.",
+    "Un documento antiguo no se vuelve verdadero únicamente por ser antiguo.",
+    "Toda fuente fue creada por alguien, en algún momento y con algún propósito. Nunca olvides preguntar quién, cuándo y para qué.",
+    "Dos personas pueden describir el mismo acontecimiento de manera diferente sin que una necesariamente esté mintiendo.",
+    "Las fechas ayudan a ordenar el pasado, pero las causas y consecuencias nos ayudan a comprenderlo.",
+    "Cuando una versión te resulte demasiado perfecta, busca aquello que dejó fuera.",
+    "Una fotografía, una carta, una herramienta o un registro pueden conservar información que nadie pensó importante en su momento.",
+    "La memoria cambia con el tiempo. Por eso conservamos documentos y comparamos testimonios.",
+    "Proteger el pasado no significa venerarlo. También debemos reconocer sus errores.",
+    "Una sociedad que pierde su memoria puede repetir caminos sin recordar adónde conducían."
+  ],
+
+  "desafios_reales": [
+    {
+      "tipo": "vida_real",
+      "titulo": "Antes y ahora",
+      "descripcion": "Rowena te invita a observar cómo el tiempo transforma incluso las cosas cotidianas.",
+      "accion": "Elegir algo de tu casa, escuela o barrio y descubrir una diferencia entre cómo era antes y cómo es ahora",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Un recuerdo familiar",
+      "descripcion": "Muchas historias comienzan antes de llegar a los archivos.",
+      "accion": "Preguntar a una persona cercana por un recuerdo de cuando era más joven y escuchar qué ocurrió",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "La pequeña cronología",
+      "descripcion": "Ordenar acontecimientos permite comenzar a comprender cómo se relacionan.",
+      "accion": "Ordenar cinco acontecimientos de una historia, un día o un proceso desde el primero hasta el último",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Objeto con pasado",
+      "descripcion": "Rowena sostiene que incluso los objetos comunes pueden convertirse en pequeñas fuentes históricas.",
+      "accion": "Elegir un objeto antiguo de tu casa y averiguar quién lo usó o desde cuándo está allí",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "La fotografía habla",
+      "descripcion": "Una imagen contiene información, aunque debemos tener cuidado con aquello que creemos interpretar.",
+      "accion": "Observar una fotografía antigua apropiada y distinguir tres cosas visibles de una cosa que solo puedes suponer",
+      "recompensa": {
+        "xp": 4,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Una fecha importante",
+      "descripcion": "Las fechas son puntos de referencia dentro de una historia mucho mayor.",
+      "accion": "Investigar qué ocurrió en una fecha histórica que te produzca curiosidad",
+      "recompensa": {
+        "xp": 3,
+        "oquos": 1
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Causa y consecuencia",
+      "descripcion": "Rowena quiere comprobar que puedes mirar más allá de lo que ocurrió.",
+      "accion": "Elegir un acontecimiento sencillo y explicar una causa y una consecuencia",
+      "recompensa": {
+        "xp": 7,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Dos recuerdos",
+      "descripcion": "Las personas no siempre conservan exactamente la misma versión de un momento compartido.",
+      "accion": "Comparar dos relatos apropiados sobre un mismo acontecimiento y encontrar una coincidencia y una diferencia",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "La fuente",
+      "descripcion": "Rowena pregunta siempre de dónde procede una afirmación antes de colocarla en sus archivos.",
+      "accion": "Tomar un dato histórico sencillo y averiguar de qué fuente o institución procede",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Guardar memoria",
+      "descripcion": "No toda historia necesita ser enorme para merecer conservarse.",
+      "accion": "Escribir unas líneas sobre un acontecimiento reciente que quieras recordar en el futuro",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 4
+      }
+    }
+  ],
+
+  "misiones_reino": [
+    {
+      "titulo": "Actas de la Aldea",
+      "destino": "Aldea",
+      "descripcion": "Pregunta a Eleanor por una decisión importante tomada durante los años de reconstrucción y registra qué problema intentaban resolver.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Memorias de la Guardia",
+      "destino": "Castillo",
+      "descripcion": "Habla con Roderick sobre un acontecimiento de sus primeros años como centinela y compara su recuerdo con los registros conservados.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Las antiguas rutas comerciales",
+      "destino": "Mercado",
+      "descripcion": "Pide a Borin información sobre cómo funcionaban las rutas comerciales antes de la guerra y qué cambió después.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Registros de las cosechas",
+      "destino": "Granja",
+      "descripcion": "Consulta a Silas sobre antiguos ciclos de cultivo y descubre cómo la guerra alteró la producción de la Granja.",
+      "recompensa": {
+        "xp": 9,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Memoria de la Forja",
+      "destino": "Cavernas",
+      "descripcion": "Pregunta a Eliana por una pieza fabricada antes de la guerra y registra para qué servía y quién la utilizaba.",
+      "recompensa": {
+        "xp": 12,
+        "oquos": 5
+      }
+    },
+    {
+      "titulo": "Relato y registro",
+      "destino": "Bosque",
+      "descripcion": "Escucha una leyenda de Garrick y compara qué partes pertenecen a la tradición oral y cuáles pueden apoyarse en registros conservados.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Los libros del Santuario",
+      "destino": "Santuario",
+      "descripcion": "Pregunta a Aurélia qué textos logró rescatar durante la caída de Mírrafen y por qué decidió proteger precisamente esos.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Cuadernos del Observatorio",
+      "destino": "Observatorio",
+      "descripcion": "Visita a Zephyr y consulta antiguos registros astronómicos para observar cómo cambió el conocimiento de Mírrafen con el tiempo.",
+      "recompensa": {
+        "xp": 11,
+        "oquos": 5
+      }
+    },
+    {
+      "titulo": "Historias del Puerto",
+      "destino": "Puerto",
+      "descripcion": "Pregunta a Laudelino por una historia traída por viajeros y busca qué parte podría conservarse como testimonio de otras regiones de Distal.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "El objeto y el documento",
+      "destino": "Museo",
+      "descripcion": "Trabaja con Eldrin para relacionar una reliquia del Museo con algún registro escrito conservado en la Biblioteca.",
+      "recompensa": {
+        "xp": 14,
+        "oquos": 6
+      }
+    }
+  ],
+
+  "consejos": [
+    "Antes de preguntar si una historia es verdadera, pregunta primero de dónde procede.",
+    "Una fuente antigua puede estar equivocada. La edad no concede inmunidad contra los errores humanos.",
+    "Ordenar fechas ayuda a reconstruir qué ocurrió; comprender causas ayuda a explicar por qué.",
+    "No juzgues automáticamente a las personas del pasado usando únicamente las condiciones del presente. Primero comprende su contexto.",
+    "Comprender el contexto no significa justificar todo aquello que ocurrió.",
+    "Cuando dos fuentes discrepen, examina qué información, posición y propósito tenía cada una.",
+    "Una ausencia en los archivos también puede ser importante. Pregunta quién tuvo posibilidad de dejar registros y quién no.",
+    "Los objetos, fotografías, cartas, registros oficiales y testimonios pueden responder preguntas diferentes.",
+    "No necesitamos elegir entre recordar los logros de una sociedad y reconocer sus errores. La historia exige ambas cosas.",
+    "Conservar memoria sirve de poco si nadie aprende después a interpretarla."
+  ],
+
+  "rumores": [
+    "Encontré un registro del Castillo donde el joven Roderick aparece mencionado mucho antes de convertirse en Guardia Real. Sospecho que preferiría que ciertas anotaciones siguieran perdidas.",
+    "Borin afirma que los primeros Oquos circularon exactamente como él recuerda. Mis documentos sugieren una historia un poco más complicada. Será una conversación encantadora.",
+    "Garrick conserva una leyenda que menciona un asentamiento anterior a la actual Aldea. Todavía no encontramos pruebas suficientes para confirmarlo.",
+    "Zephyr descubrió fechas astronómicas en varios manuscritos que podrían ayudarnos a determinar cuándo fueron escritos.",
+    "Eldrin posee una llave ceremonial cuyo símbolo aparece en tres documentos distintos de la Biblioteca.",
+    "Margot encontró fragmentos escritos bajo el hielo. Si podemos conservarlos, quizá pertenezcan a una cultura anterior al Reino.",
+    "Uno de los libros salvados por Aurélia contiene nombres que también aparecen en nuestros registros de la antigua orden del Santuario.",
+    "Eliana asegura que ciertas herramientas permiten identificar la época de una construcción por su técnica. Eldrin está insoportablemente emocionado.",
+    "Laudelino conoce una canción tradicional sobre la fundación del Puerto. Naturalmente, Garrick sostiene que su versión es más antigua.",
+    "Hay un estante sellado desde la guerra. No contiene magia peligrosa ni una profecía secreta. Contiene documentos sin clasificar, que para una bibliotecaria es bastante peor."
+  ],
+
+  "historia_personal": [
+    {
+      "id": "historia_01",
+      "titulo": "La niña entre los estantes",
+      "texto": "Crecí rodeada de estanterías de roble, pergaminos y libros que habían pasado por muchas más manos que las mías. Mientras otros veían páginas viejas, yo veía conversaciones con personas que habían vivido siglos antes."
+    },
+    {
+      "id": "historia_02",
+      "titulo": "Custodia de los textos",
+      "texto": "Comencé como custodio de manuscritos. Clasificaba documentos, reparaba encuadernaciones y aprendía a reconocer tintas, sellos y estilos de escritura. Pronto comprendí que conservar un texto sin conocer su origen podía ser tan peligroso como perderlo."
+    },
+    {
+      "id": "historia_03",
+      "titulo": "La música de los Tomos",
+      "texto": "Mi familia practicaba una antigua forma de magia melódica. Algunas notas podían revelar marcas escondidas, proteger pergaminos o ayudar a restaurar fragmentos dañados. Nunca reemplazaban el estudio; simplemente nos permitían escuchar mejor lo que los textos conservaban."
+    },
+    {
+      "id": "historia_04",
+      "titulo": "Lady Rowena de los Tomos",
+      "texto": "Con los años quedé al cuidado de la Gran Biblioteca de Mírrafen. Clasificamos crónicas, tratados, correspondencia, mapas y antiguos grimorios. Me otorgaron el título de Lady Rowena de los Tomos, aunque el polvo de los archivos continuó tratándome exactamente igual."
+    },
+    {
+      "id": "historia_05",
+      "titulo": "La memoria de un reino",
+      "texto": "La Biblioteca no guardaba únicamente conocimiento mágico. Aquí se conservaban decisiones de la Corona, registros de aldeanos, mapas comerciales, descubrimientos científicos y testimonios de generaciones enteras. Era la memoria escrita de Mírrafen."
+    },
+    {
+      "id": "historia_06",
+      "titulo": "Cuando ardieron los libros",
+      "texto": "Durante la guerra, la Biblioteca fue atacada y muchos intentaron saquear o destruir sus colecciones. Perdimos salas completas, manuscritos irreemplazables y a numerosas personas que habían dedicado su vida a protegerlos."
+    },
+    {
+      "id": "historia_07",
+      "titulo": "Los últimos Tomos",
+      "texto": "Perdí a mi familia y a gran parte de mi linaje. Utilicé acero y magia para rescatar cuantos documentos pude, pero tuve que abandonar muchos otros. Todavía recuerdo exactamente qué estantes quedaron detrás."
+    },
+    {
+      "id": "historia_08",
+      "titulo": "La primera clasificación",
+      "texto": "Cuando regresé después de la caída encontré hojas dispersas, libros dañados y cajas sin identificar. Elegí una página, descubrí de qué documento provenía y la coloqué nuevamente en su sitio. Fue una tarea diminuta. También fue el comienzo de la nueva Biblioteca."
+    },
+    {
+      "id": "historia_09",
+      "titulo": "Reconstruir la memoria",
+      "texto": "Comencé a reunir copias, testimonios, objetos relacionados con antiguos documentos y recuerdos de quienes habían sobrevivido. Comprendí que reconstruir nuestra historia no significaba fingir que nada se había perdido. También debíamos registrar las ausencias."
+    },
+    {
+      "id": "historia_10",
+      "titulo": "El próximo custodio",
+      "texto": "Entonces llegaste tú. Al principio solo buscabas historias entre nuestros libros. Ahora preguntas quién escribió cada página, por qué lo hizo y qué evidencia dejó. Quizá el futuro de los Tomos no dependa de que memorices el pasado, sino de que aprendas a protegerlo sin dejar de cuestionarlo."
+    }
+  ]
+}

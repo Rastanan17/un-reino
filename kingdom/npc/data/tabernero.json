@@ -1,0 +1,305 @@
+{
+  "npc": "tabernero",
+  "nombre": "Oso Barnaby",
+
+  "saludos": [
+    "¡Entra, viajero! Si has llegado hasta aquí, al menos mereces un asiento cómodo y algo para beber.",
+    "Bienvenido a la Taberna. Aquí nadie necesita una gran hazaña para ocupar una silla.",
+    "¡Mira quién vuelve! Ya empezaba a sospechar que habías encontrado otro lugar con mejores bancos. Imposible, naturalmente.",
+    "Pasa, caminante. Las historias mejoran mucho cuando se cuentan alrededor de una mesa.",
+    "Bienvenido. En esta casa procuramos recordar los nombres de quienes regresan. Los pedidos... bueno, hacemos lo que podemos.",
+    "Acércate. Hay espacio en la mesa, incluso si todavía no conoces a nadie.",
+    "¡Viajero! Justo estaba pensando que faltaba una voz en esta conversación.",
+    "La puerta está abierta. Esa es una de las reglas más importantes de esta taberna.",
+    "Pasa, amigo. Aquí la gente viene a descansar, conversar y recordar que no tiene que hacer todo sola.",
+    "Bienvenido a la Taberna de Mírrafen. Si entras como forastero y sales con alguien que te salude mañana, la casa ha cumplido su trabajo."
+  ],
+
+  "dialogos": [
+    "La camaradería no consiste en estar de acuerdo en todo. Consiste en saber seguir compartiendo la mesa cuando aparecen diferencias.",
+    "Un buen anfitrión observa quién está hablando y también quién todavía no encontró espacio para hacerlo.",
+    "No necesitas resolver los problemas de tus amigos para acompañarlos.",
+    "Una conversación mejora cuando dejamos de esperar nuestro turno para hablar y empezamos a escuchar de verdad.",
+    "Hay personas que entran a una taberna buscando ruido y otras buscando compañía. No siempre es lo mismo.",
+    "Compartir algo sencillo puede convertir a un grupo de desconocidos en compañeros.",
+    "La confianza suele construirse con pequeñas cosas repetidas: cumplir, escuchar, aparecer y recordar.",
+    "No confundas amistad con estar disponible para todo. Una buena camaradería también respeta límites.",
+    "Un grupo fuerte no necesita que todos sean iguales. Necesita que todos tengan lugar.",
+    "Hay días en los que liderar significa hablar. Otros en los que significa hacer sitio para que otro lo haga."
+  ],
+
+  "desafios_reales": [
+    {
+      "tipo": "vida_real",
+      "titulo": "Un saludo verdadero",
+      "descripcion": "Barnaby sostiene que muchas buenas relaciones comienzan prestando atención a la persona que tenemos delante.",
+      "accion": "Saludar a alguien de forma amable y prestando atención a su respuesta",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Haz sitio",
+      "descripcion": "Una mesa compartida funciona mejor cuando nadie siente que sobra.",
+      "accion": "Invitar a alguien a participar en una actividad apropiada si ves que está quedando afuera",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Escuchar sin interrumpir",
+      "descripcion": "Barnaby quiere comprobar si puedes escuchar una historia sin convertirla inmediatamente en la tuya.",
+      "accion": "Escuchar a una persona hasta que termine antes de responder",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Compartir algo sencillo",
+      "descripcion": "No hacen falta grandes regalos para crear un momento compartido.",
+      "accion": "Compartir de forma apropiada algo sencillo como una actividad, merienda, juego o material",
+      "recompensa": {
+        "xp": 5,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Pregunta por alguien",
+      "descripcion": "Recordar a otra persona también es una forma de hacerla sentir parte.",
+      "accion": "Preguntar sinceramente a alguien cómo estuvo su día o cómo le fue con algo importante",
+      "recompensa": {
+        "xp": 4,
+        "oquos": 2
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Ayuda entre compañeros",
+      "descripcion": "Una comunidad pequeña se fortalece cuando sus miembros colaboran sin convertir cada gesto en una deuda.",
+      "accion": "Ayudar a alguien con una tarea sencilla y apropiada",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Reconocer algo bueno",
+      "descripcion": "Barnaby afirma que la gente escucha críticas suficientes sin necesidad de que abramos una sucursal.",
+      "accion": "Decirle a alguien algo positivo y sincero sobre una acción que realizó",
+      "recompensa": {
+        "xp": 4,
+        "oquos": 1
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Resolver juntos",
+      "descripcion": "No todos los problemas necesitan un héroe solitario.",
+      "accion": "Resolver una tarea sencilla junto con otra persona, repartiendo qué hará cada uno",
+      "recompensa": {
+        "xp": 7,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Recordar un detalle",
+      "descripcion": "Las personas suelen notar cuando alguien recuerda aquello que contaron.",
+      "accion": "Recordar y preguntar por algo que una persona cercana te haya mencionado anteriormente",
+      "recompensa": {
+        "xp": 6,
+        "oquos": 3
+      }
+    },
+    {
+      "tipo": "vida_real",
+      "titulo": "Momento compartido",
+      "descripcion": "Barnaby te invita a crear un pequeño espacio de convivencia sin necesidad de una ocasión especial.",
+      "accion": "Compartir unos minutos de conversación, juego o actividad con otra persona sin pantallas si resulta posible",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 4
+      }
+    }
+  ],
+
+  "misiones_reino": [
+    {
+      "titulo": "Mesa para la Aldea",
+      "destino": "Aldea",
+      "descripcion": "Visita a Eleanor y descubre cómo organiza espacios donde diferentes habitantes puedan participar y sentirse escuchados.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Descanso de la Guardia",
+      "destino": "Castillo",
+      "descripcion": "Pregunta a Roderick qué importancia tenía compartir un momento con sus compañeros después de una larga guardia.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Historias del Mercado",
+      "destino": "Mercado",
+      "descripcion": "Habla con Borin sobre cómo la confianza entre comerciantes permitía construir relaciones que duraban más que una sola venta.",
+      "recompensa": {
+        "xp": 8,
+        "oquos": 3
+      }
+    },
+    {
+      "titulo": "Compañeros de cosecha",
+      "destino": "Granja",
+      "descripcion": "Pregunta a Silas cómo colaboraban los trabajadores de la Granja durante las grandes temporadas de cosecha.",
+      "recompensa": {
+        "xp": 9,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Entre martillos",
+      "destino": "Cavernas",
+      "descripcion": "Visita a Eliana y descubre cómo los artesanos aprendían a confiar unos en otros dentro de los antiguos talleres.",
+      "recompensa": {
+        "xp": 12,
+        "oquos": 5
+      }
+    },
+    {
+      "titulo": "Historias alrededor del fuego",
+      "destino": "Bosque",
+      "descripcion": "Pide a Garrick un relato sobre un grupo que consiguió avanzar gracias a la cooperación entre sus miembros.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Un lugar para descansar",
+      "destino": "Santuario",
+      "descripcion": "Habla con Aurélia sobre cómo acompañar a alguien sin intentar resolver inmediatamente todo lo que le ocurre.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Mesa de investigadores",
+      "destino": "Observatorio",
+      "descripcion": "Pregunta a Zephyr cómo el trabajo compartido ayuda a detectar errores y construir mejores explicaciones.",
+      "recompensa": {
+        "xp": 11,
+        "oquos": 5
+      }
+    },
+    {
+      "titulo": "La mesa de los viajeros",
+      "destino": "Puerto",
+      "descripcion": "Visita a Laudelino y descubre cómo las personas que llegan de lugares distintos terminan compartiendo historias en el mismo muelle.",
+      "recompensa": {
+        "xp": 10,
+        "oquos": 4
+      }
+    },
+    {
+      "titulo": "Recuerdos de la antigua Taberna",
+      "destino": "Biblioteca",
+      "descripcion": "Consulta a Rowena sobre los registros de la vieja taberna y las reuniones que allí conectaban a habitantes de diferentes zonas.",
+      "recompensa": {
+        "xp": 9,
+        "oquos": 4
+      }
+    }
+  ],
+
+  "consejos": [
+    "Una amistad no se mide por cuántas horas pasan juntos, sino también por la confianza que pueden construir.",
+    "Escuchar no significa esperar en silencio hasta que llegue tu turno de hablar.",
+    "No todo amigo necesita un consejo. A veces solamente necesita que alguien permanezca a su lado.",
+    "Un grupo sano deja espacio para decir que no sin convertirlo en una traición.",
+    "Hacer sentir incluido a alguien no exige convertirlo inmediatamente en el centro de atención.",
+    "Cuando alguien ayuda, agradecer con claridad vale más que dar por sentado su esfuerzo.",
+    "Una diferencia de opinión no convierte automáticamente a la otra persona en rival.",
+    "Las bromas dejan de ser buenas bromas cuando solo una parte se divierte.",
+    "Un buen anfitrión cuida tanto a quienes hablan mucho como a quienes necesitan más tiempo para participar.",
+    "La camaradería verdadera no consigue que una persona dependa del grupo. Hace que sepa que puede contar con él cuando lo necesite."
+  ],
+
+  "rumores": [
+    "Roderick asegura que nunca cantó sobre una mesa durante una celebración de la Guardia. Casualmente, existen cuatro testigos.",
+    "Borin todavía conserva una cuenta antigua de la Taberna. Dice que no piensa cobrarla. Eso es prácticamente una declaración de afecto viniendo de él.",
+    "Laudelino afirma que una de sus primeras actuaciones en el Puerto terminó aquí dentro porque comenzó a llover. Yo digo que fue porque la comida era mejor.",
+    "Garrick asegura haber escuchado diez versiones distintas de cómo nació mi apodo. Nueve son falsas. La décima no pienso confirmarla.",
+    "Aurélia solía visitar la antigua Taberna para hablar con viajeros que necesitaban compañía antes de regresar al camino.",
+    "Silas recuerda una celebración de cosecha en la que hubo tanta gente que terminamos usando barriles vacíos como asientos.",
+    "Eliana fabricó el viejo letrero de hierro de la entrada. Ella insiste en que no tiene valor sentimental. La gente de las Cavernas dice cosas raras.",
+    "Zephyr dejó una vez unos cálculos sobre una mesa y tres comerciantes intentaron utilizarlos para dividir una cuenta. Ninguno consiguió el mismo resultado.",
+    "Rowena encontró registros de reuniones celebradas en la antigua Taberna donde artesanos, agricultores y viajeros resolvían problemas antes de llevarlos ante la Corona.",
+    "Hay una mesa junto a la pared que sobrevivió a la antigua Taberna. Está llena de nombres grabados. Algunos pertenecen a personas que todavía regresan."
+  ],
+
+  "historia_personal": [
+    {
+      "id": "historia_01",
+      "titulo": "El muchacho de los barriles",
+      "texto": "Crecí entre olor a cebada tostada, mesas de roble y viajeros que llegaban contando historias imposibles. Era grande incluso de niño, así que comenzaron a llamarme Oso mucho antes de que tuviera alguna opinión sobre el asunto."
+    },
+    {
+      "id": "historia_02",
+      "titulo": "La taberna familiar",
+      "texto": "Mi familia administraba una pequeña taberna. Al principio yo solo llevaba provisiones, limpiaba mesas y recibía viajeros. Allí aprendí que servir no consistía únicamente en colocar algo frente a alguien, sino en hacerle sentir que tenía un lugar."
+    },
+    {
+      "id": "historia_03",
+      "titulo": "La casa de todos",
+      "texto": "Con los años ampliamos el local hasta convertirlo en uno de los puntos de encuentro más conocidos de Mírrafen. Artesanos, guardias, agricultores, mercaderes y viajeros terminaban compartiendo las mismas mesas."
+    },
+    {
+      "id": "historia_04",
+      "titulo": "Tzung Oso Barnaby",
+      "texto": "La gente comenzó a llamarme Tzung \"Oso\" Barnaby, tabernero de Mírrafen. Algunos decían que era por mi tamaño. Otros porque procuraba proteger a cualquiera que entrara bajo nuestro techo. Personalmente creo que fue por mi extraordinaria habilidad cargando barriles."
+    },
+    {
+      "id": "historia_05",
+      "titulo": "El corazón social",
+      "texto": "La Taberna se convirtió en algo más que un negocio. Aquí nacían amistades, se reconciliaban compañeros, se organizaban expediciones y se escuchaban historias de cada rincón de Distal. Era uno de esos lugares donde el reino podía encontrarse consigo mismo."
+    },
+    {
+      "id": "historia_06",
+      "titulo": "La última noche",
+      "texto": "Cuando la guerra alcanzó nuestra zona, la antigua Taberna desapareció junto con gran parte de aquello que mi familia había construido. Perdí a los míos y también las recetas, recuerdos y voces que durante años habían llenado esta casa."
+    },
+    {
+      "id": "historia_07",
+      "titulo": "Una mesa vacía",
+      "texto": "Durante mucho tiempo no quise abrir otra taberna. Podía encontrar madera, vajilla y provisiones, pero no sabía cómo reconstruir las personas que faltaban alrededor de las mesas."
+    },
+    {
+      "id": "historia_08",
+      "titulo": "Los primeros viajeros",
+      "texto": "Un día varios supervivientes necesitaban un sitio donde descansar. Preparé comida sencilla, encendí el fuego y colocamos una mesa. Al poco tiempo alguien contó una historia. Otro se rió. Comprendí que no estaba reconstruyendo la antigua Taberna. Estábamos comenzando otra."
+    },
+    {
+      "id": "historia_09",
+      "titulo": "La casa vuelve a llenarse",
+      "texto": "Con el regreso de los caminos comenzaron a aparecer comerciantes, viajeros y antiguos amigos. Cada nueva silla ocupada devolvía algo a Mírrafen que ningún muro podía reconstruir por sí solo: la sensación de pertenecer."
+    },
+    {
+      "id": "historia_10",
+      "titulo": "Tu lugar en la mesa",
+      "texto": "Cuando llegaste eras otro viajero al que ofrecer un asiento. Ahora observo cómo saludas a quienes entran, escuchas sus historias y haces sitio para otros. Quizá el verdadero legado de esta Taberna no sea que todos regresen a verme, sino que sepan construir una mesa parecida allí donde estén."
+    }
+  ]
+}

@@ -47,87 +47,26 @@ const NPC_LIMITE_DERECHA = 75;
 // POSICIONES DE LOS NPC
 // =======================================
 const NPC_POSICIONES = {
-    guardian: {
-        lugar: "Castillo",
-        x: 50,
-        y: 85
-    },
-    reina: {
-        lugar: "Aldea",
-        x: 50,
-        y: 80
-    },
-    mercader: {
-        lugar: "Mercado",
-        x: 50,
-        y: 60
-    },
-    susurrador: {
-        lugar: "Granja",
-        x: 50,
-        y: 80
-    },
-    forjadora: {
-        lugar: "Cavernas",
-        x: 50,
-        y: 80
-    },
-    narrador: {
-        lugar: "Bosque",
-        x: 50,
-        y: 80
-    },
-    astral: {
-        lugar: "Observatorio",
-        x: 50,
-        y: 80
-    },
-    sacerdotisa: {
-        lugar: "Santuario",
-        x: 50,
-        y: 80
-    },
-    bibliotecaria: {
-        lugar: "Biblioteca",
-        x: 50,
-        y: 80
-    }/*,
-    bardo: {
-        lugar: "Puerto",
-        x: 50,
-        y: 80
-    }*//*,
-    explorador: {
-        lugar: "Nieve",
-        x: 50,
-        y: 80
-    }*//*,
-    tabernero: {
-        lugar: "Bar",
-        x: 50,
-        y: 80
-    }*//*,
-    artista: {
-        lugar: "Academia",
-        x: 50,
-        y: 80
-    }*//*,
-    sabio: {
-        lugar: "Museo",
-        x: 50,
-        y: 80
-    }*//*,
-    cocinero: {
-        lugar: "Mascotas",
-        x: 50,
-        y: 80
-    }*//*,
-    comandante: {
-        lugar: "Hielo",
-        x: 50,
-        y: 80
-    }*/ 
+    guardian: { lugar: "Castillo", x: 50, y: 80 },
+    reina: { lugar: "Aldea", x: 50, y: 80 },
+    mercader: { lugar: "Mercado", x: 50, y: 60 },
+    susurrador: { lugar: "Granja", x: 50, y: 80 },
+    forjadora: { lugar: "Cavernas", x: 50, y: 80 },
+    narrador: { lugar: "Bosque", x: 50, y: 80 },
+    sacerdotisa: { lugar: "Santuario", x: 50, y: 80 },
+    astral: { lugar: "Observatorio", x: 50, y: 80 },
+    bibliotecaria: { lugar: "Biblioteca", x: 50, y: 80 },
+    bardo: { lugar: "Puerto", x: 50, y: 80 },
+    arqueologa: { lugar: "Nieve", x: 50, y: 80 },
+    tabernero: { lugar: "Bar", x: 50, y: 80 },
+    artesana: { lugar: "Academia", x: 50, y: 80 },
+    curador: { lugar: "Museo", x: 50, y: 80 },
+    chef: { lugar: "Hielo", x: 50, y: 80 },
+    maestra: { lugar: "Mascotas", x: 50, y: 80 }
 };
+// =======================================
+// ANIMACIONES DISPONIBLES
+// =======================================
 const NPC_ANIMACIONES = {
     walk: [0, 1, 2, 3, 4, 5, 6],
     accion: [7, 8, 9, 10],
@@ -145,8 +84,7 @@ async function cargarNPCs(){
     cargandoNPCs = fetch("kingdom/npc/habitantes.json").then(respuesta => {
         if(!respuesta.ok){
             throw new Error("No se pudo cargar habitantes.json");
-        }
-        return respuesta.json();
+        } return respuesta.json();
     }).then(datos => {
         habitantesNPC = datos;
         console.log("🧙 NPCs DEL REINO CARGADOS:", habitantesNPC);
@@ -154,16 +92,14 @@ async function cargarNPCs(){
     }).catch(error => {
         console.error("❌ Error cargando NPCs:", error);
         return [];
-    });
-    return cargandoNPCs;
+    });	return cargandoNPCs;
 }
+
 // =======================================
 // OBTENER NPC POR ID
 // =======================================
 function obtenerNPC(id){
-    return habitantesNPC.find(
-        npc => npc.id === id
-    );
+    return habitantesNPC.find(npc => npc.id === id);
 }
 // =======================================
 // MOSTRAR NPCs EN UNA LOCALIZACIÓN
@@ -174,10 +110,11 @@ async function mostrarNPCsEnLugar(lugar){
     }
     const npcs = habitantesNPC.filter(npc => npc.lugar === lugar);
     console.log(`🧙 NPCs en ${lugar}:`, npcs);
-    npcs.forEach(npc => {
-        crearNPC(npc);
-    });
+    npcs.forEach(npc => { crearNPC(npc); });
 }
+// =======================================
+// OBTENER CONTENEDOR DEL LUGAR
+// =======================================
 function obtenerContenedorNPCLugar(lugar){
     const contenedores = {
         "Castillo": ".castillo",
@@ -188,21 +125,20 @@ function obtenerContenedorNPCLugar(lugar){
         "Bosque": ".bosque",
         "Observatorio": ".observatorio",
         "Santuario": ".santuario",
-        "Biblioteca": ".biblioteca"/*,*/
-        /*"Puerto": ".puerto",*/
-        /*"Nieve": ".nieve",*/
-        /*"Bar": ".bar",*/
-        /*"Academia": ".academia",*/
-        /*"Museo": ".museo",*/
-        /*"Mascotas": ".mascotas",*/
-        /*"Hielo": ".hielo"*/
+        "Biblioteca": ".biblioteca",
+        "Puerto": ".puerto",
+        "Nieve": ".nieve",
+        "Bar": ".bar",
+        "Academia": ".academia",
+        "Museo": ".museo",
+        "Hielo": ".hielo",
+        "Mascotas": ".mascotas"
     };
     const selector = contenedores[lugar];
     if(!selector){
         console.warn(`⚠️ No hay contenedor definido para ${lugar}`);
         return null;
-    }
-    return document.querySelector(selector);
+    } return document.querySelector(selector);
 }
 // =======================================
 // CREAR NPC
@@ -214,7 +150,7 @@ function crearNPC(npc){
         return;
     }
     // ===================================
-    // OBTENER CONTENEDOR SEGÚN LOCALIZACIÓN
+    // OBTENER CONTENEDOR
     // ===================================
     const contenedor = obtenerContenedorNPCLugar(npc.lugar);
     if(!contenedor){
@@ -267,17 +203,13 @@ function crearNPC(npc){
         }
         // ==============================
         // MIRAR AL JUGADOR
-        // FRAMES 0 Y 1
         // ==============================
-        mostrarFrameNPC(
-            npcElement,
-            NPC_DIALOGO_FRAMES[0]
-        );
+        mostrarFrameNPC(npcElement, NPC_DIALOGO_FRAMES[0]);
         setTimeout(() => {
             mostrarFrameNPC(npcElement, NPC_DIALOGO_FRAMES[1]);
         }, 300);
         // ==============================
-        // MOSTRAR DIÁLOGO
+        // MOSTRAR INTERACCIÓN
         // ==============================
         interactuarNPC(npc.id);
         // ==============================
@@ -288,7 +220,7 @@ function crearNPC(npc){
         }, 2500);
     };
     // ===================================
-    // AGREGAR NPC AL LUGAR CORRESPONDIENTE
+    // AGREGAR NPC AL LUGAR
     // ===================================
     contenedor.appendChild(npcElement);
     // ===================================
@@ -301,161 +233,42 @@ function crearNPC(npc){
 // INTERACTUAR CON NPC
 // =======================================
 async function interactuarNPC(id){
-
     const npc = obtenerNPC(id);
-
     if(!npc){
+        console.warn(`⚠️ NPC no encontrado: ${id}`);
         return;
     }
-
     console.log("🧙 Interactuando con:", npc.nombre);
-
     // ===================================
-    // 🎯 COMPROBAR DESAFÍO NPC ACTIVO
+    // CARGAR DATOS DEL NPC
     // ===================================
-
-    const desafioActivoGuardado =
-        localStorage.getItem("desafioNPCActivo");
-
-    if(desafioActivoGuardado){
-
-        try{
-
-            const desafioActivo =
-                JSON.parse(desafioActivoGuardado);
-
-            console.log(
-                "🎯 Desafío NPC activo encontrado:",
-                desafioActivo
-            );
-
-            // ===================================
-            // 🎯 OBTENER DESTINATARIO
-            // ===================================
-            // Soportamos ambas variantes:
-            //
-            // destinatario_id  ← JSON actual
-            // destinatarioID   ← sistema anterior
-            // ===================================
-
-            const destinatarioID =
-                desafioActivo.destinatario_id ||
-                desafioActivo.destinatarioID;
-
-            const destinatario =
-                desafioActivo.destinatario;
-
-            // ===================================
-            // 🎯 COMPROBAR ID
-            // ===================================
-
-            const coincideID =
-                destinatarioID &&
-                String(destinatarioID).toLowerCase() ===
-                String(npc.id).toLowerCase();
-
-            // ===================================
-            // 🎯 COMPROBAR NOMBRE
-            // ===================================
-
-            const coincideNombre =
-                destinatario &&
-                String(destinatario).toLowerCase() ===
-                String(npc.nombre).toLowerCase();
-
-            console.log(
-                "🎯 Comprobación destinatario:",
-                {
-                    desafioID: destinatarioID,
-                    desafioNombre: destinatario,
-                    npcID: npc.id,
-                    npcNombre: npc.nombre,
-                    coincideID,
-                    coincideNombre
-                }
-            );
-
-            // ===================================
-            // 🎯 ESTE NPC ES EL DESTINATARIO
-            // ===================================
-
-            if(coincideID || coincideNombre){
-
-                console.log(
-                    "🎯 DESAFÍO DESTINADO A ESTE NPC:",
-                    npc.nombre
-                );
-
-                mostrarEntregaDesafioNPC(
-                    npc,
-                    desafioActivo
-                );
-
-                return;
-            }
-
-        }catch(error){
-
-            console.error(
-                "❌ Error leyendo desafioNPCActivo:",
-                error
-            );
-        }
-    }
-
-    // ===================================
-    // 📜 CARGAR DATOS DEL NPC
-    // ===================================
-
     const datos = await cargarDatosNPC(id);
-
     // ===================================
     // SI NO HAY DATOS
     // ===================================
-
     if(!datos){
-
-        mostrarMensaje(
-            npc.nombre,
-            npc.descripcion
-        );
-
+        mostrarMensaje(npc.nombre, npc.descripcion);
         return;
     }
-
     // ===================================
     // SELECCIONAR CONTENIDO
     // ===================================
-
-    const contenido =
-        seleccionarDialogoNPC(datos);
-
-    // ===================================
-    // 🎯 DETECTAR DESAFÍO
-    // ===================================
-
-    if(
-        contenido &&
-        typeof contenido === "object" &&
-        contenido.tipo === "desafio"
-    ){
-
-        mostrarDesafioNPC(
-            npc,
-            contenido.datos
-        );
-
+    const contenido = seleccionarDialogoNPC(datos);
+    if(!contenido){
+        mostrarMensaje(npc.nombre, npc.descripcion);
         return;
     }
-
     // ===================================
-    // 💬 DIÁLOGO NORMAL
+    // DESAFÍO REAL / MISIÓN DEL REINO
     // ===================================
-
-    mostrarMensaje(
-        npc.nombre,
-        contenido
-    );
+    if(typeof contenido === "object" && contenido.tipo === "desafio"){
+        mostrarDesafioNPC(npc, contenido.datos);
+        return;
+    }
+    // ===================================
+    // DIÁLOGO NORMAL
+    // ===================================
+    mostrarMensaje(npc.nombre, contenido);
 }
 // =======================================
 // SELECCIONAR DIÁLOGO NPC
@@ -466,210 +279,73 @@ function seleccionarDialogoNPC(datos){
     // ===================================
     // AGREGAR SECCIÓN CON PESO
     // ===================================
-    function agregarSeccion(lista, peso){
+    function agregarSeccion(lista, peso, tipo = "texto"){
         if(!Array.isArray(lista) || lista.length === 0){
             return;
-        }
-        for(let i = 0; i < peso; i++){
-            secciones.push(lista);
+        }for(let i = 0; i < peso; i++){
+            secciones.push({
+                lista, tipo
+            });
         }
     }
     // ===================================
-    // ⛏️ DESAFÍOS DE LAS CAVERNAS
-    // ===================================
-    if (
-        Array.isArray(datos.desafios_cavernas) &&
-        datos.desafios_cavernas.length > 0
-    ) {
-        agregarSeccion(datos.desafios_cavernas, 4);
-        console.log(
-            "⛏️ Desafíos de cavernas disponibles:",
-            datos.desafios_cavernas.length
-        );
-    }
-    // ===================================
-    // 💬 CONTENIDO GENERAL
+    // CONTENIDO NARRATIVO
     // ===================================
     agregarSeccion(datos.saludos, 4);
-    agregarSeccion(datos.rumores, 4);
-    agregarSeccion(datos.historia_personal, 4);
+    agregarSeccion(datos.dialogos, 4);
+    agregarSeccion(datos.consejos, 3);
+    agregarSeccion(datos.rumores, 2);
+    agregarSeccion(datos.historia_personal, 1);
     // ===================================
-    // 🛡️ DIÁLOGOS ESPECÍFICOS
+    // CONTENIDO JUGABLE
     // ===================================
-    agregarSeccion(datos.dialogos_guardia, 3);
-    agregarSeccion(datos.consejos_del_centinela, 3);
-    agregarSeccion(datos.dialogos_reina, 3);
-    agregarSeccion(datos.consejos_de_la_realeza, 3);
+    agregarSeccion(datos.desafios_reales, 2, "desafio");
+    agregarSeccion(datos.misiones_reino, 1, "desafio");
     // ===================================
-    // 🎯 DESAFÍOS
+    // SIN CONTENIDO
     // ===================================
-    agregarSeccion(datos.desafios_reales, 2);
-    agregarSeccion(datos.desafios_combate, 2);
-    agregarSeccion(datos.desafios_modales, 2);
+    if(secciones.length === 0){ return null; }
     // ===================================
-    // 🗺️ MISIONES DEL REINO
+    // ELEGIR SECCIÓN
     // ===================================
-    agregarSeccion(datos.misiones_reino, 1);
-    // ===================================
-    // ⭐ EVENTOS ESPECIALES
-    // ===================================
-    agregarSeccion(datos.eventos_especiales, 1);
-    // ===================================
-    // 📈 DIÁLOGOS SEGÚN NIVEL
-    // ===================================
-    let perfilActivo = null;
-    const perfilGuardado = localStorage.getItem("perfilActivo");
-    if(perfilGuardado){
-        try{
-            perfilActivo = JSON.parse(perfilGuardado);
-        }catch(error){
-            perfilActivo = {
-                nombre: perfilGuardado
-            };
-        }
-    }
-    // ===================================
-    // OBTENER NIVEL DEL JUGADOR
-    // ===================================
-    if(perfilActivo){
-        const nivel = Number(perfilActivo.nivel) || 1;
-        const dialogosNivel = datos.dialogos_por_nivel?.[nivel];
-        if(
-            Array.isArray(dialogosNivel) &&
-            dialogosNivel.length > 0
-        ){
-            agregarSeccion(dialogosNivel, 2);
-        }
-    }
-    // ===================================
-    // SI NO HAY CONTENIDO
-    // ===================================
-    if(secciones.length === 0){
+    const seccion = secciones[ Math.floor(Math.random() * secciones.length) ];
+    if(!seccion || !Array.isArray(seccion.lista) || seccion.lista.length === 0){
         return null;
     }
     // ===================================
-    // 🎲 ELEGIR SECCIÓN
+    // ELEGIR ELEMENTO
     // ===================================
-    const seccion = secciones[
-        Math.floor(Math.random() * secciones.length)
-    ];
-    if(!Array.isArray(seccion) || seccion.length === 0){
-        return null;
+    const elegido = seccion.lista[ Math.floor(Math.random() * seccion.lista.length) ];
+    if(!elegido){ return null; }
+    // ===================================
+    // DESAFÍO REAL / MISIÓN DEL REINO
+    // ===================================
+    if(seccion.tipo === "desafio"){
+        console.log( "🎯 Contenido jugable NPC detectado:", elegido);
+        return { tipo: "desafio", datos: elegido };
     }
     // ===================================
-    // 🎲 ELEGIR ELEMENTO
-    // ===================================
-    const elegido = seccion[
-        Math.floor(Math.random() * seccion.length)
-    ];
-    // ===================================
-    // 🎯 DETECTAR DESAFÍO NPC
-    // ===================================
-    if(
-        typeof elegido === "object" &&
-        elegido !== null &&
-        elegido.id !== undefined &&
-        elegido.mision
-    ){
-        console.log("🎯 DESAFÍO NPC DETECTADO:", elegido);
-        return {
-            tipo: "desafio",
-            datos: elegido
-        };
-    }
-    // ===================================
-    // 💬 TEXTO NORMAL
+    // TEXTO SIMPLE
     // ===================================
     if(typeof elegido === "string"){
         return elegido;
     }
-    return (
-        elegido?.texto ||
-        elegido?.mensaje ||
-        elegido?.descripcion ||
-        elegido?.titulo ||
-        null
-    );
-    if(!elegido){
-        return null;
+    // ===================================
+    // HISTORIA PERSONAL
+    // ===================================
+    if(typeof elegido === "object"){
+        return (elegido.texto || elegido.mensaje || elegido.descripcion || elegido.titulo || null);
     }
-    // ===================================
-    // 🎯 DETECTAR DESAFÍO / MISIÓN / EVENTO
-    // ===================================
-    if(
-        typeof elegido === "object" && elegido !== null
-    ){
-        // -------------------------------
-        // DESAFÍO DE VIDA REAL
-        // -------------------------------
-        if(
-            elegido.tipo === "vida_real" &&
-            elegido.titulo &&
-            elegido.accion &&
-            elegido.recompensa
-        ){
-            console.log("🎯 DESAFÍO DE VIDA REAL DETECTADO:", elegido);
-            return { tipo: "desafio", datos: elegido };
-        }
-        // -------------------------------
-        // MISIÓN DEL REINO
-        // -------------------------------
-        if(
-            elegido.titulo &&
-            elegido.destino &&
-            elegido.descripcion &&
-            elegido.recompensa
-        ){
-            console.log("🗺️ MISIÓN DEL REINO DETECTADA:", elegido);
-            return { tipo: "desafio", datos: elegido };
-        }
-        // -------------------------------
-        // EVENTO ESPECIAL
-        // -------------------------------
-        if(
-            elegido.id &&
-            elegido.titulo &&
-            elegido.descripcion &&
-            elegido.accion &&
-            elegido.recompensa
-        ){
-            console.log("⭐ EVENTO ESPECIAL DETECTADO:", elegido);
-            return { tipo: "desafio", datos: elegido };
-        }
-        // -------------------------------
-        // MISIÓN RECIBIDA
-        // -------------------------------
-        if(
-            elegido.mision_id &&
-            elegido.objeto_requerido &&
-            elegido.dialogo_entrega
-        ){
-            console.log("📦 MISIÓN RECIBIDA DETECTADA:", elegido);
-            return { tipo: "desafio", datos: elegido };
-        }
-    }
-    // ===================================
-    // 💬 TEXTO NORMAL
-    // ===================================
-    if(typeof elegido === "string"){
-        return elegido;
-    }
-    return (
-        elegido.texto ||
-        elegido.mensaje ||
-        elegido.descripcion ||
-        elegido.titulo ||
-        null
-    );
+    return null;
 }
-    // =======================================
-    // 📜 RUTAS ESPECIALES DE DATOS DE NPC
-    // =======================================
-    const RUTAS_DATOS_NPC = { forjadora: "locations/caves/data/eliana.json" };
-    // =======================================
-    // CARGAR DATOS ESPECÍFICOS DEL NPC
-    // =======================================
-    async function cargarDatosNPC(id){
+// =======================================
+// RUTAS ESPECIALES DE DATOS DE NPC
+// =======================================
+const RUTAS_DATOS_NPC = { forjadora: "locations/caves/data/eliana.json"};
+// =======================================
+// CARGAR DATOS ESPECÍFICOS DEL NPC
+// =======================================
+async function cargarDatosNPC(id){
     // -----------------------------------
     // SI YA SE ESTÁ CARGANDO
     // -----------------------------------
@@ -689,55 +365,15 @@ function seleccionarDialogoNPC(datos){
             throw new Error(`No se pudo cargar ${ruta}`);
         }
         return respuesta.json();
-    }).then(datos => {
-        datosNPC[id] = datos;
-        console.log(`📜 Datos de NPC cargados: ${id}`, datos);
-        return datos;
-    }).catch(error => {
-        console.error(`❌ Error cargando datos de ${id}:`, error);
-        return null;
-    });
+        }).then(datos => {
+            datosNPC[id] = datos;
+            console.log(`📜 Datos de NPC cargados: ${id}`, datos);
+            return datos;
+        }).catch(error => {
+            console.error(`❌ Error cargando datos de ${id}:`, error);
+            return null;
+        });
     return cargandoDatosNPC[id];
-}
-function filtrarDesafiosCaverna(desafios) {
-
-    if(!Array.isArray(desafios)){
-        return [];
-    }
-
-    const nivelMineral = Number(
-        localStorage.getItem("nivelMineral")
-    ) || 1;
-
-    const nivelFuego = Number(
-        localStorage.getItem("nivelFuego")
-    ) || 0;
-
-    return desafios.filter(desafio => {
-
-        const tipo = String(
-            desafio.tipo_caverna || ""
-        ).toLowerCase();
-
-        // 🪨 MINERALES
-        if(tipo === "minerales"){
-            return true;
-        }
-
-        // 🔥 FUEGO
-        if(tipo === "fuego"){
-            return nivelMineral >= 30;
-        }
-
-        // ❄️ HIELO
-        if(tipo === "hielo"){
-            return nivelFuego >= 30;
-        }
-
-        // Si aparece un tipo desconocido,
-        // no lo ofrecemos.
-        return false;
-    });
 }
 // =======================================
 // ANIMACIÓN Y MOVIMIENTO DE NPC
@@ -785,97 +421,183 @@ function iniciarMovimientoNPC(elemento){
         // ==============================
         let frames;
         if(direccion === 1){
-            // Caminando hacia la derecha
             frames = NPC_WALK_FRAMES_DERECHA;
         }else{
-            // Caminando hacia la izquierda
             frames = NPC_WALK_FRAMES_IZQUIERDA;
         }
         const frame = frames[frameActual];
         mostrarFrameNPC(elemento, frame);
         frameActual = (frameActual + 1) % frames.length;
-        setTimeout(animar, NPC_INTERVALO_FRAME);
+
+        setTimeout(
+            animar,
+            NPC_INTERVALO_FRAME
+        );
     }
+
     // ===================================
     // DETENER NPC
     // ===================================
-    elemento._npcDetener = function(){
-        detenido = true;
-    };
+
+    elemento._npcDetener =
+        function(){
+
+            detenido = true;
+        };
+
     // ===================================
     // CONTINUAR NPC
     // ===================================
-    elemento._npcContinuar = function(){
-        if(!detenido){
-            return;
-        }
-        detenido = false;
-        animar();
-    };
+
+    elemento._npcContinuar =
+        function(){
+
+            if(!detenido){
+                return;
+            }
+
+            detenido = false;
+
+            animar();
+        };
+
     // ===================================
     // INICIAR
     // ===================================
+
     animar();
 }
+
 // =======================================
 // EJECUTAR ANIMACIÓN DE ACCIÓN
 // =======================================
+
 function ejecutarAnimacionNPC(elemento){
+
     if(!elemento){
         return;
     }
+
     const tipos = [
         "accion",
         "unico",
         "idle",
         "victoria"
     ];
+
     // Elegir acción aleatoria
-    const tipo = tipos[ Math.floor(Math.random() * tipos.length) ];
-    const frames = NPC_ANIMACIONES[tipo];
-    if(!frames || frames.length === 0){
+
+    const tipo =
+        tipos[
+            Math.floor(
+                Math.random() *
+                tipos.length
+            )
+        ];
+
+    const frames =
+        NPC_ANIMACIONES[tipo];
+
+    if(
+        !frames ||
+        frames.length === 0
+    ){
         return;
     }
-    console.log(`🎭 Animación NPC: ${tipo}`, frames);
+
+    console.log(
+        `🎭 Animación NPC: ${tipo}`,
+        frames
+    );
+
     let indice = 0;
+
     function reproducirFrame(){
+
         if(indice >= frames.length){
+
             // ==========================
             // TERMINÓ LA ANIMACIÓN
             // ==========================
-            console.log(`🎭 Animación terminada: ${tipo}`);
-            if(elemento._npcContinuar){
+
+            console.log(
+                `🎭 Animación terminada: ${tipo}`
+            );
+
+            if(
+                elemento._npcContinuar
+            ){
                 elemento._npcContinuar();
             }
+
             return;
         }
-        mostrarFrameNPC(elemento, frames[indice]);
+
+        mostrarFrameNPC(
+            elemento,
+            frames[indice]
+        );
+
         indice++;
-        setTimeout(reproducirFrame, NPC_INTERVALO_FRAME);
+
+        setTimeout(
+            reproducirFrame,
+            NPC_INTERVALO_FRAME
+        );
     }
+
     reproducirFrame();
 }
+
 // =======================================
 // MOSTRAR FRAME DEL SPRITESHEET
 // =======================================
-function mostrarFrameNPC(elemento, frame){
-    const sprite = elemento.querySelector(".npc-sprite");
+
+function mostrarFrameNPC(
+    elemento,
+    frame
+){
+
+    const sprite =
+        elemento.querySelector(
+            ".npc-sprite"
+        );
+
     if(!sprite){
         return;
     }
+
     // ===================================
     // CALCULAR FILA Y COLUMNA
     // ===================================
-    const columna = frame % NPC_COLUMNAS;
-    const fila = Math.floor(frame / NPC_COLUMNAS);
+
+    const columna =
+        frame %
+        NPC_COLUMNAS;
+
+    const fila =
+        Math.floor(
+            frame /
+            NPC_COLUMNAS
+        );
+
     // ===================================
     // POSICIÓN DEL SPRITESHEET
     // ===================================
-    sprite.style.backgroundPosition = `${columna * 16.6667}% ${fila * 50}%`;
+
+    sprite.style.backgroundPosition =
+        `${columna * 16.6667}% ${fila * 50}%`;
 }
+
 // =======================================
 // LIMPIAR NPCs
 // =======================================
+
 function limpiarNPCs(){
-    document.querySelectorAll(".npc").forEach(npc => npc.remove());
+
+    document
+        .querySelectorAll(".npc")
+        .forEach(npc => {
+            npc.remove();
+        });
 }

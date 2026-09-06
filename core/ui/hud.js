@@ -21,38 +21,18 @@ function mostrarHUDJugador(){
             `
                 <div id="playerHUD">
                     <div class="hudAvatar">
-                        <img
-                            id="hudPlayerAvatar"
-                            src=""
-                            alt="Avatar"
-                        >
+                        <img id="hudPlayerAvatar" src="" alt="Avatar">
                     </div>
                     <div class="hudLevel">
-                        ⚔️
-                        <span id="hudPlayerLevel">
-                            1
-                        </span>
+                        ⚔️ <span id="hudPlayerLevel"> 1 </span>
                     </div>
                     <div class="hudCoins">
-                        💰
-                        <span id="hudPlayerCoins">
-                            0
-                        </span>
+                        💰 <span id="hudPlayerCoins"> 0 </span>
                     </div>
-                    <button
-                        id="hudTutorial"
-                        class="hudTutorial"
-                        onclick="abrirTutorial()"
-                        aria-label="Tutorial"
-                    >
+                    <button id="hudTutorial" class="hudTutorial" onclick="abrirTutorial()" aria-label="Tutorial">
                         ❓
                     </button>
-                    <button
-                        id="hudSettings"
-                        class="hudSettings"
-                        onclick="toggleConfiguracion()"
-                        aria-label="Configuración"
-                    >
+                    <button id="hudSettings" class="hudSettings" onclick="toggleConfiguracion()" aria-label="Configuración">
                         ⚙️
                     </button>
                 </div>
