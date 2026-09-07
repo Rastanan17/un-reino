@@ -16,31 +16,19 @@ const NPC_SPRITE_ANCHO = 667;
 const NPC_SPRITE_ALTO = 374;
 const NPC_COLUMNAS = 7;
 const NPC_FILAS = 3;
-// Cada celda del spritesheet
 const NPC_FRAME_ANCHO = NPC_SPRITE_ANCHO / NPC_COLUMNAS;
 const NPC_FRAME_ALTO = NPC_SPRITE_ALTO / NPC_FILAS;
 // =======================================
 // ANIMACIÓN Y MOVIMIENTO DE NPC
 // =======================================
-// Fila 1 del spritesheet:
-// 0 = adelante
-// 1 = adelante
-// 2 = derecha
-// 3 = derecha
-// 4 = izquierda
-// 5 = izquierda
-// 6 = atrás
 const NPC_WALK_FRAMES_DERECHA = [2, 3];
 const NPC_WALK_FRAMES_IZQUIERDA = [4, 5];
-// Cuando el jugador hace click:
-// mirar de frente
 const NPC_DIALOGO_FRAMES = [0, 1];
 // =======================================
 // CONFIGURACIÓN DEL MOVIMIENTO
 // =======================================
 const NPC_VELOCIDAD = 0.5;
 const NPC_INTERVALO_FRAME = 180;
-// Límites de patrulla
 const NPC_LIMITE_IZQUIERDA = 25;
 const NPC_LIMITE_DERECHA = 75;
 // =======================================
@@ -82,19 +70,20 @@ async function cargarNPCs(){
         return cargandoNPCs;
     }
     cargandoNPCs = fetch("kingdom/npc/habitantes.json").then(respuesta => {
-        if(!respuesta.ok){
-            throw new Error("No se pudo cargar habitantes.json");
-        } return respuesta.json();
-    }).then(datos => {
-        habitantesNPC = datos;
-        console.log("🧙 NPCs DEL REINO CARGADOS:", habitantesNPC);
-        return habitantesNPC;
-    }).catch(error => {
-        console.error("❌ Error cargando NPCs:", error);
-        return [];
-    });	return cargandoNPCs;
+            if(!respuesta.ok){
+                throw new Error("No se pudo cargar habitantes.json");
+            }
+            return respuesta.json();
+        }).then(datos => {
+            habitantesNPC = datos;
+            console.log("🧙 NPCs DEL REINO CARGADOS:", habitantesNPC);
+            return habitantesNPC;
+        }).catch(error => {
+            console.error("❌ Error cargando NPCs:", error);
+            return [];
+        });
+    return cargandoNPCs;
 }
-
 // =======================================
 // OBTENER NPC POR ID
 // =======================================
@@ -149,153 +138,207 @@ function crearNPC(npc){
         console.warn(`⚠️ No hay posición definida para ${npc.id}`);
         return;
     }
-    // ===================================
-    // OBTENER CONTENEDOR
-    // ===================================
     const contenedor = obtenerContenedorNPCLugar(npc.lugar);
     if(!contenedor){
         console.warn(`⚠️ No se encontró el contenedor para ${npc.nombre}`);
         return;
     }
-    // ===================================
-    // CONTENEDOR DEL NPC
-    // ===================================
     const npcElement = document.createElement("div");
     npcElement.className = "npc";
     npcElement.dataset.npcId = npc.id;
     npcElement.style.left = `${posicion.x}%`;
     npcElement.style.top = `${posicion.y}%`;
     npcElement.title = npc.nombre;
-    // ===================================
-    // SPRITE
-    // ===================================
     const sprite = document.createElement("div");
     sprite.className = "npc-sprite";
     sprite.style.backgroundImage = `url("${npc.sprite}")`;
-    // ===================================
-    // NOMBRE
-    // ===================================
     const nombre = document.createElement("div");
     nombre.className = "npc-nombre";
     nombre.textContent = npc.nombre;
-    // ===================================
-    // DESCRIPCIÓN
-    // ===================================
     const descripcion = document.createElement("div");
     descripcion.className = "npc-descripcion";
     descripcion.textContent = npc.descripcion;
-    // ===================================
-    // ARMAR NPC
-    // ===================================
     npcElement.appendChild(sprite);
     npcElement.appendChild(nombre);
     npcElement.appendChild(descripcion);
-    // ===================================
-    // INTERACCIÓN
-    // ===================================
     npcElement.onclick = function(event){
         event.stopPropagation();
-        // ==============================
-        // DETENER NPC
-        // ==============================
         if(npcElement._npcDetener){
             npcElement._npcDetener();
         }
-        // ==============================
-        // MIRAR AL JUGADOR
-        // ==============================
         mostrarFrameNPC(npcElement, NPC_DIALOGO_FRAMES[0]);
         setTimeout(() => {
-            mostrarFrameNPC(npcElement, NPC_DIALOGO_FRAMES[1]);
+            mostrarFrameNPC(
+                npcElement,
+                NPC_DIALOGO_FRAMES[1]
+            );
         }, 300);
-        // ==============================
-        // MOSTRAR INTERACCIÓN
-        // ==============================
+
         interactuarNPC(npc.id);
-        // ==============================
-        // EJECUTAR ACCIÓN ALEATORIA
-        // ==============================
+
         setTimeout(() => {
             ejecutarAnimacionNPC(npcElement);
         }, 2500);
     };
-    // ===================================
-    // AGREGAR NPC AL LUGAR
-    // ===================================
+
     contenedor.appendChild(npcElement);
-    // ===================================
-    // INICIAR MOVIMIENTO
-    // ===================================
+
     iniciarMovimientoNPC(npcElement);
-    console.log("🧙 NPC creado:", npc.nombre, "→", npc.lugar);
+
+    console.log(
+        "🧙 NPC creado:",
+        npc.nombre,
+        "→",
+        npc.lugar
+    );
 }
 // =======================================
 // INTERACTUAR CON NPC
 // =======================================
 async function interactuarNPC(id){
     const npc = obtenerNPC(id);
+
     if(!npc){
-        console.warn(`⚠️ NPC no encontrado: ${id}`);
+        console.warn(
+            `⚠️ NPC no encontrado: ${id}`
+        );
         return;
     }
-    console.log("🧙 Interactuando con:", npc.nombre);
+
+    console.log(
+        "🧙 Interactuando con:",
+        npc.nombre
+    );
+
     // ===================================
-    // CARGAR DATOS DEL NPC
+    // INTERACCIONES ESPECIALES OPCIONALES
     // ===================================
-    const datos = await cargarDatosNPC(id);
+    // Sistemas externos pueden interceptar
+    // la interacción sin ensuciar npc.js.
+    if(
+        typeof procesarInteraccionEspecialNPC ===
+        "function"
+    ){
+        const manejada =
+            await procesarInteraccionEspecialNPC(
+                npc
+            );
+
+        if(manejada){
+            return;
+        }
+    }
+
     // ===================================
-    // SI NO HAY DATOS
+    // CARGAR DATOS NORMALES DEL NPC
     // ===================================
+    const datos =
+        await cargarDatosNPC(id);
+
     if(!datos){
-        mostrarMensaje(npc.nombre, npc.descripcion);
+        mostrarMensaje(
+            npc.nombre,
+            npc.descripcion
+        );
         return;
     }
+
     // ===================================
     // SELECCIONAR CONTENIDO
     // ===================================
-    const contenido = seleccionarDialogoNPC(datos);
+    const contenido =
+        seleccionarDialogoNPC(datos);
+
     if(!contenido){
-        mostrarMensaje(npc.nombre, npc.descripcion);
+        mostrarMensaje(
+            npc.nombre,
+            npc.descripcion
+        );
         return;
     }
+
     // ===================================
     // DESAFÍO REAL / MISIÓN DEL REINO
     // ===================================
-    if(typeof contenido === "object" && contenido.tipo === "desafio"){
-        mostrarDesafioNPC(npc, contenido.datos);
+    if(
+        typeof contenido === "object" &&
+        contenido.tipo === "desafio"
+    ){
+        mostrarDesafioNPC(
+            npc,
+            contenido.datos
+        );
         return;
     }
+
     // ===================================
     // DIÁLOGO NORMAL
     // ===================================
-    mostrarMensaje(npc.nombre, contenido);
+    mostrarMensaje(
+        npc.nombre,
+        contenido
+    );
 }
+
 // =======================================
 // SELECCIONAR DIÁLOGO NPC
 // SISTEMA DE PROBABILIDADES
 // =======================================
 function seleccionarDialogoNPC(datos){
     const secciones = [];
-    // ===================================
-    // AGREGAR SECCIÓN CON PESO
-    // ===================================
-    function agregarSeccion(lista, peso, tipo = "texto"){
-        if(!Array.isArray(lista) || lista.length === 0){
+
+    function agregarSeccion(
+        lista,
+        peso,
+        tipo = "texto"
+    ){
+        if(
+            !Array.isArray(lista) ||
+            lista.length === 0
+        ){
             return;
-        }for(let i = 0; i < peso; i++){
+        }
+
+        for(
+            let i = 0;
+            i < peso;
+            i++
+        ){
             secciones.push({
-                lista, tipo
+                lista,
+                tipo
             });
         }
     }
+
     // ===================================
     // CONTENIDO NARRATIVO
     // ===================================
-    agregarSeccion(datos.saludos, 4);
-    agregarSeccion(datos.dialogos, 4);
-    agregarSeccion(datos.consejos, 3);
-    agregarSeccion(datos.rumores, 2);
-    agregarSeccion(datos.historia_personal, 1);
+    agregarSeccion(
+        datos.saludos,
+        4
+    );
+
+    agregarSeccion(
+        datos.dialogos,
+        4
+    );
+
+    agregarSeccion(
+        datos.consejos,
+        3
+    );
+
+    agregarSeccion(
+        datos.rumores,
+        2
+    );
+
+    agregarSeccion(
+        datos.historia_personal,
+        1
+    );
+
     // ===================================
     // CONTENIDO JUGABLE
     // ===================================
@@ -304,75 +347,137 @@ function seleccionarDialogoNPC(datos){
     // ===================================
     // SIN CONTENIDO
     // ===================================
-    if(secciones.length === 0){ return null; }
+    if(secciones.length === 0){
+        return null;
+    }
+
     // ===================================
     // ELEGIR SECCIÓN
     // ===================================
-    const seccion = secciones[ Math.floor(Math.random() * secciones.length) ];
-    if(!seccion || !Array.isArray(seccion.lista) || seccion.lista.length === 0){
+    const seccion =
+        secciones[
+            Math.floor(
+                Math.random() *
+                secciones.length
+            )
+        ];
+
+    if(
+        !seccion ||
+        !Array.isArray(seccion.lista) ||
+        seccion.lista.length === 0
+    ){
         return null;
     }
+
     // ===================================
     // ELEGIR ELEMENTO
     // ===================================
-    const elegido = seccion.lista[ Math.floor(Math.random() * seccion.lista.length) ];
-    if(!elegido){ return null; }
+    const elegido =
+        seccion.lista[
+            Math.floor(
+                Math.random() *
+                seccion.lista.length
+            )
+        ];
+
+    if(!elegido){
+        return null;
+    }
+
     // ===================================
     // DESAFÍO REAL / MISIÓN DEL REINO
     // ===================================
     if(seccion.tipo === "desafio"){
-        console.log( "🎯 Contenido jugable NPC detectado:", elegido);
-        return { tipo: "desafio", datos: elegido };
+        console.log(
+            "🎯 Contenido jugable NPC detectado:",
+            elegido
+        );
+
+        return {
+            tipo: "desafio",
+            datos: elegido
+        };
     }
+
     // ===================================
     // TEXTO SIMPLE
     // ===================================
     if(typeof elegido === "string"){
         return elegido;
     }
+
     // ===================================
     // HISTORIA PERSONAL
     // ===================================
     if(typeof elegido === "object"){
-        return (elegido.texto || elegido.mensaje || elegido.descripcion || elegido.titulo || null);
+        return (
+            elegido.texto ||
+            elegido.mensaje ||
+            elegido.descripcion ||
+            elegido.titulo ||
+            null
+        );
     }
+
     return null;
 }
+
 // =======================================
 // RUTAS ESPECIALES DE DATOS DE NPC
 // =======================================
-const RUTAS_DATOS_NPC = { forjadora: "locations/caves/data/eliana.json"};
+const RUTAS_DATOS_NPC = {
+    forjadora:
+        "locations/caves/data/eliana.json"
+};
+
 // =======================================
 // CARGAR DATOS ESPECÍFICOS DEL NPC
 // =======================================
 async function cargarDatosNPC(id){
-    // -----------------------------------
-    // SI YA SE ESTÁ CARGANDO
-    // -----------------------------------
     if(cargandoDatosNPC[id]){
         return cargandoDatosNPC[id];
     }
-    // -----------------------------------
-    // DETERMINAR RUTA
-    // -----------------------------------
-    const ruta = RUTAS_DATOS_NPC[id] || `kingdom/npc/data/${id}.json`;
-    console.log(`📜 Cargando datos de ${id}:`, ruta);
-    // -----------------------------------
-    // CARGAR JSON
-    // -----------------------------------
-    cargandoDatosNPC[id] = fetch(ruta).then(respuesta => {
-        if(!respuesta.ok){
-            throw new Error(`No se pudo cargar ${ruta}`);
-        }
-        return respuesta.json();
-        }).then(datos => {
+
+    const ruta =
+        RUTAS_DATOS_NPC[id] ||
+        `kingdom/npc/data/${id}.json`;
+
+    console.log(
+        `📜 Cargando datos de ${id}:`,
+        ruta
+    );
+
+    cargandoDatosNPC[id] =
+        fetch(ruta)
+        .then(respuesta => {
+            if(!respuesta.ok){
+                throw new Error(
+                    `No se pudo cargar ${ruta}`
+                );
+            }
+
+            return respuesta.json();
+        })
+        .then(datos => {
             datosNPC[id] = datos;
-            console.log(`📜 Datos de NPC cargados: ${id}`, datos);
+
+            console.log(
+                `📜 Datos de NPC cargados: ${id}`,
+                datos
+            );
+
             return datos;
-        }).catch(error => {
-            console.error(`❌ Error cargando datos de ${id}:`, error);
+        })
+        .catch(error => {
+            console.error(
+                `❌ Error cargando datos de ${id}:`,
+                error
+            );
+
             return null;
         });
+
     return cargandoDatosNPC[id];
 }
 // =======================================
@@ -382,52 +487,82 @@ function iniciarMovimientoNPC(elemento){
     if(!elemento){
         return;
     }
-    let posicionX = parseFloat(elemento.style.left);
-    // 1 = derecha
-    // -1 = izquierda
+
+    let posicionX =
+        parseFloat(
+            elemento.style.left
+        );
+
     let direccion = 1;
     let frameActual = 0;
     let detenido = false;
-    // ===================================
-    // ANIMACIÓN
-    // ===================================
+
     function animar(){
         if(detenido){
             return;
         }
-        // ==============================
-        // MOVIMIENTO
-        // ==============================
-        posicionX += NPC_VELOCIDAD * direccion;
-        elemento.style.left = `${posicionX}%`;
-        // ==============================
+
+        posicionX +=
+            NPC_VELOCIDAD *
+            direccion;
+
+        elemento.style.left =
+            `${posicionX}%`;
+
+        // ===================================
         // LÍMITE DERECHO
-        // ==============================
-        if(posicionX >= NPC_LIMITE_DERECHA){
-            posicionX = NPC_LIMITE_DERECHA;
+        // ===================================
+        if(
+            posicionX >=
+            NPC_LIMITE_DERECHA
+        ){
+            posicionX =
+                NPC_LIMITE_DERECHA;
+
             direccion = -1;
             frameActual = 0;
         }
-        // ==============================
+
+        // ===================================
         // LÍMITE IZQUIERDO
-        // ==============================
-        if(posicionX <= NPC_LIMITE_IZQUIERDA){
-            posicionX = NPC_LIMITE_IZQUIERDA;
+        // ===================================
+        if(
+            posicionX <=
+            NPC_LIMITE_IZQUIERDA
+        ){
+            posicionX =
+                NPC_LIMITE_IZQUIERDA;
+
             direccion = 1;
             frameActual = 0;
         }
-        // ==============================
+
+        // ===================================
         // FRAMES DE CAMINATA
-        // ==============================
+        // ===================================
         let frames;
+
         if(direccion === 1){
-            frames = NPC_WALK_FRAMES_DERECHA;
+            frames =
+                NPC_WALK_FRAMES_DERECHA;
         }else{
-            frames = NPC_WALK_FRAMES_IZQUIERDA;
+            frames =
+                NPC_WALK_FRAMES_IZQUIERDA;
         }
-        const frame = frames[frameActual];
-        mostrarFrameNPC(elemento, frame);
-        frameActual = (frameActual + 1) % frames.length;
+
+        const frame =
+            frames[frameActual];
+
+        mostrarFrameNPC(
+            elemento,
+            frame
+        );
+
+        frameActual =
+            (
+                frameActual + 1
+            ) %
+            frames.length;
 
         setTimeout(
             animar,
@@ -438,32 +573,23 @@ function iniciarMovimientoNPC(elemento){
     // ===================================
     // DETENER NPC
     // ===================================
-
     elemento._npcDetener =
         function(){
-
             detenido = true;
         };
 
     // ===================================
     // CONTINUAR NPC
     // ===================================
-
     elemento._npcContinuar =
         function(){
-
             if(!detenido){
                 return;
             }
 
             detenido = false;
-
             animar();
         };
-
-    // ===================================
-    // INICIAR
-    // ===================================
 
     animar();
 }
@@ -471,9 +597,7 @@ function iniciarMovimientoNPC(elemento){
 // =======================================
 // EJECUTAR ANIMACIÓN DE ACCIÓN
 // =======================================
-
 function ejecutarAnimacionNPC(elemento){
-
     if(!elemento){
         return;
     }
@@ -484,8 +608,6 @@ function ejecutarAnimacionNPC(elemento){
         "idle",
         "victoria"
     ];
-
-    // Elegir acción aleatoria
 
     const tipo =
         tipos[
@@ -513,20 +635,12 @@ function ejecutarAnimacionNPC(elemento){
     let indice = 0;
 
     function reproducirFrame(){
-
         if(indice >= frames.length){
-
-            // ==========================
-            // TERMINÓ LA ANIMACIÓN
-            // ==========================
-
             console.log(
                 `🎭 Animación terminada: ${tipo}`
             );
 
-            if(
-                elemento._npcContinuar
-            ){
+            if(elemento._npcContinuar){
                 elemento._npcContinuar();
             }
 
@@ -552,52 +666,20 @@ function ejecutarAnimacionNPC(elemento){
 // =======================================
 // MOSTRAR FRAME DEL SPRITESHEET
 // =======================================
-
-function mostrarFrameNPC(
-    elemento,
-    frame
-){
-
-    const sprite =
-        elemento.querySelector(
-            ".npc-sprite"
-        );
-
+function mostrarFrameNPC(elemento, frame){
+    const sprite = elemento.querySelector(".npc-sprite");
     if(!sprite){
         return;
     }
-
-    // ===================================
-    // CALCULAR FILA Y COLUMNA
-    // ===================================
-
-    const columna =
-        frame %
-        NPC_COLUMNAS;
-
-    const fila =
-        Math.floor(
-            frame /
-            NPC_COLUMNAS
-        );
-
-    // ===================================
-    // POSICIÓN DEL SPRITESHEET
-    // ===================================
-
-    sprite.style.backgroundPosition =
-        `${columna * 16.6667}% ${fila * 50}%`;
+    const columna = frame % NPC_COLUMNAS;
+    const fila = Math.floor(frame / NPC_COLUMNAS);
+    sprite.style.backgroundPosition = `${columna * 16.6667}% ${fila * 50}%`;
 }
-
 // =======================================
 // LIMPIAR NPCs
 // =======================================
-
 function limpiarNPCs(){
-
-    document
-        .querySelectorAll(".npc")
-        .forEach(npc => {
-            npc.remove();
-        });
+    document.querySelectorAll(".npc").forEach(npc => {
+        npc.remove();
+    });
 }

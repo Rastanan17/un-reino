@@ -115,9 +115,7 @@ function aceptarDesafioNPC(idDesafio){
     console.log("🎯 Aceptando desafío NPC:", idDesafio);
     // El desafío actualmente mostrado
     const datosGuardados = window.desafioNPCMostrado;
-    if( !datosGuardados ||
-        Number(datosGuardados.id) !== Number(idDesafio)
-    ){
+    if( !datosGuardados || Number(datosGuardados.id) !== Number(idDesafio)){
         console.error("❌ No se encontraron los datos del desafío:", idDesafio);
         return;
     }
@@ -134,130 +132,6 @@ function aceptarDesafioNPC(idDesafio){
         <strong>${desafioActivo.mision}</strong><br><br>
         Debes entregar el encargo a <strong>${desafioActivo.destinatario}</strong>.`
     );
-}
-// =======================================
-// 📦 MOSTRAR ENTREGA DE DESAFÍO NPC
-// =======================================
-function mostrarEntregaDesafioNPC(npc, desafio){
-    if(!desafio){
-        return;
-    }
-    console.log("📦 Mostrando entrega del desafío:", desafio);
-    const titulo = "📦 ENTREGA PARA " + npc.nombre;
-    let contenido = `
-        <div class="desafio-npc">
-            <div class="desafio-titulo">
-                ${desafio.mision || "Encargo"}
-            </div>
-            <div class="desafio-datos">
-                ${desafio.objeto_a_entregar ? `
-                    <div class="desafio-linea">
-                        📦 <strong>Encargo:</strong> ${desafio.objeto_a_entregar}
-                    </div> ` : "" }
-            </div>
-            <div class="desafio-descripcion">
-                ${desafio.dialogo_destinatario || "He recibido el encargo."}
-            </div>
-            <div class="desafio-recompensa">
-                <div class="desafio-recompensa-titulo">
-                    🏆 RECOMPENSA
-                </div>
-                ${desafio.recompensa_intermedia ? `
-                    <div>
-                        🎁 ${desafio.recompensa_intermedia}
-                    </div> ` : "" }
-                ${desafio.picos_otorgados ? `
-                    <div>
-                        ⛏️ +${desafio.picos_otorgados} ${desafio.tipo_pico || "picos"}
-                    </div> ` : "" }
-            </div>
-            <div class="desafio-botones">
-                <button class="boton-desafio aceptar" onclick="entregarDesafioNPC()">
-                    📦 Entregar encargo
-                </button>
-                <button class="boton-desafio cancelar" onclick="cerrarDesafioNPC()">
-                    Ahora no
-                </button>
-            </div>
-        </div>
-    `;
-    document.getElementById("modalTitulo").textContent = titulo;
-    document.getElementById("modalTexto").innerHTML = contenido;
-    document.getElementById("modal").classList.remove("oculto");
-}
-// =======================================
-// 🎁 ENTREGAR DESAFÍO NPC
-// =======================================
-function entregarDesafioNPC(){
-    const datosGuardados =
-        localStorage.getItem("desafioNPCActivo");
-    if(!datosGuardados){
-        console.error("❌ No hay desafío NPC activo.");
-        return;
-    }
-    let desafio;
-    try{
-        desafio = JSON.parse(datosGuardados);
-    }catch(error){
-        console.error("❌ Error leyendo desafío activo:", error);
-        return;
-    }
-    console.log("🎁 ENTREGANDO DESAFÍO NPC:", desafio);
-    // ===================================
-    // 🎁 RECOMPENSA INTERMEDIA
-    // ===================================
-    const recompensa = desafio.recompensa_intermedia;
-    // ===================================
-    // ⛏️ PICOS
-    // ===================================
-    const picos = Number(desafio.picos_otorgados) || 0;
-    const tipoPico = desafio.tipo_pico || "Picos";
-    // ===================================
-    // ⛏️ ENTREGAR PICOS AL INVENTARIO
-    // ===================================
-    if(picos > 0){
-        if(typeof agregarPicosMineral === "function"){
-            agregarPicosMineral(picos);
-            console.log(`⛏️ Recompensa entregada: +${picos} ${tipoPico}`);
-        }else{
-            console.error("❌ agregarPicosMineral() no está disponible.");
-        }
-    }
-    // ===================================
-    // CERRAR MODAL ACTUAL
-    // ===================================
-    document.getElementById("modal").classList.add("oculto");
-    // ===================================
-    // 🏆 CONSTRUIR MENSAJE
-    // ===================================
-    let mensaje = `
-        ${desafio.dialogo_destinatario || "¡Gracias por traer el encargo!"}
-        <br><br><strong>🏆 RECOMPENSAS</strong>
-    `;
-    if(recompensa){
-        mensaje += `<br>🎁 ${recompensa}`;
-    }
-    if(picos > 0){
-        mensaje += `<br>⛏️ +${picos} ${tipoPico}`;
-    }
-    // ===================================
-    // 🏁 MARCAR COMPLETADO
-    // ===================================
-    desafio.estado = "completada";
-    desafio.fechaCompletado = new Date().toISOString();
-    // ===================================
-    // GUARDAR ÚLTIMO RESULTADO
-    // ===================================
-    localStorage.setItem("ultimoDesafioNPCCompletado", JSON.stringify(desafio));
-    // ===================================
-    // ELIMINAR DESAFÍO ACTIVO
-    // ===================================
-    localStorage.removeItem("desafioNPCActivo");
-    console.log("🏁 DESAFÍO NPC COMPLETADO:", desafio);
-    // ===================================
-    // MOSTRAR RECOMPENSA
-    // ===================================
-    mostrarMensaje("🏆 DESAFÍO COMPLETADO", mensaje);
 }
 // =======================================
 // ❌ CERRAR DESAFÍO NPC

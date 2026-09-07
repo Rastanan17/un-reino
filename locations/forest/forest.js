@@ -58,8 +58,8 @@ const zonasBosque = [
         nombre: "Cuentos",
         x: 1200,
         y: 480,
-        width: 180,
-        height: 150
+        width: 250,
+        height: 100
     },
 
     // ===================================

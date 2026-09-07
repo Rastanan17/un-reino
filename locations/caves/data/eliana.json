@@ -14,7 +14,7 @@
     "Bienvenido. Aquí abajo descubrimos de qué estamos hechos cuando algo no sale como esperábamos.",
     "Toma aliento y observa tu trabajo. Antes del siguiente golpe siempre existe un instante para decidir dónde debe caer."
   ],
-  "dialogos_forjadora": [
+  "dialogos": [
     "El primer intento no tiene que ser perfecto. Tiene que darte algo sobre lo que puedas seguir trabajando.",
     "Golpear más fuerte no corrige una pieza. Primero debes descubrir dónde está el error.",
     "Un artesano experimentado se equivoca también. La diferencia es que sabe observar qué ocurrió y utilizarlo en el siguiente intento.",
@@ -26,7 +26,7 @@
     "No ocultes tus errores. Déjalos sobre la mesa, estúdialos y conviértelos en parte de tu experiencia.",
     "La maestría no llega cuando dejas de equivocarte. Llega cuando sabes qué hacer después de equivocarte."
   ],
-  "consejos_de_la_creacion": [
+  "consejos": [
     "El primer intento no necesita ser perfecto; necesita existir para que puedas mejorarlo.",
     "Antes de repetir exactamente lo mismo, descubre por qué no funcionó.",
     "La precisión suele resolver problemas que la fuerza solamente empeora.",
@@ -51,694 +51,995 @@
     "Dicen que bajo el antiguo taller existe una cámara donde mi clan guardaba sus mejores diseños. Si sobrevivió al derrumbe, todavía podría estar allí."
   ],
   "desafios_cavernas": [
-  {
-    "id": 1,
-    "mision": "Pernos para los portones del Castillo",
-    "tipo_caverna": "Minerales",
-    "herramienta_requerida": "Pico de minería",
-    "proveedor": "Eliana",
-    "destinatario": "Sir Roderick",
-    "destinatario_id": "guardian",
-    "objeto_a_entregar": "Caja de pernos de hierro reforzado",
-    "dialogo_eliana": "Roderick está recuperando uno de los antiguos portones del Castillo. Llévale estos pernos y dile que esta vez pienso ver esa puerta nuevamente en pie.",
-    "dialogo_destinatario": "Exactamente lo que necesitábamos. Cada pieza recuperada devuelve un poco de firmeza al Castillo. Buen trabajo.",
-    "recompensa_intermedia": "50 Monedas de oro",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de minería"
-  },
-  {
-    "id": 2,
-    "mision": "Refuerzos para la torre de guardia",
-    "tipo_caverna": "Fuego",
-    "herramienta_requerida": "Pico de fuego",
-    "proveedor": "Eliana",
-    "destinatario": "Sir Roderick",
-    "destinatario_id": "guardian",
-    "objeto_a_entregar": "Uniones reforzadas para la torre norte",
-    "dialogo_eliana": "La torre norte todavía conserva daños de la guerra. Preparé estas piezas para que Roderick pueda devolverle estabilidad.",
-    "dialogo_destinatario": "Eliana sigue fabricando piezas como si el Castillo jamás hubiera caído. Me alegra comprobar que no soy el único testarudo de Mírrafen.",
-    "recompensa_intermedia": "60 Monedas de oro",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de fuego"
-  },
-  {
-    "id": 3,
-    "mision": "Soportes para la guardia del invierno",
-    "tipo_caverna": "Hielo",
-    "herramienta_requerida": "Pico de hielo",
-    "proveedor": "Eliana",
-    "destinatario": "Sir Roderick",
-    "destinatario_id": "guardian",
-    "objeto_a_entregar": "Soportes aislantes para faroles de guardia",
-    "dialogo_eliana": "Los puestos del norte soportan demasiado frío. Estos soportes ayudarán a mantener funcionando sus faroles durante las noches de invierno.",
-    "dialogo_destinatario": "Una guardia preparada no depende del buen tiempo. Con esto podremos mantener los puestos activos durante el invierno.",
-    "recompensa_intermedia": "65 Monedas de oro",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de hielo"
-  },
-
-  {
-    "id": 4,
-    "mision": "Flejes para las barricas de la Taberna",
-    "tipo_caverna": "Minerales",
-    "herramienta_requerida": "Pico de minería",
-    "proveedor": "Eliana",
-    "destinatario": "Oso Barnaby",
-    "destinatario_id": "tabernero",
-    "objeto_a_entregar": "Flejes de hierro para barricas",
-    "dialogo_eliana": "Barnaby necesita recuperar varios recipientes de su antigua despensa. Estos flejes deberían mantenerlos unidos muchos años más.",
-    "dialogo_destinatario": "¡Eso necesitaba! Una taberna sin provisiones es solamente una habitación con demasiadas sillas.",
-    "recompensa_intermedia": "1 Plato reconfortante",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de minería"
-  },
-  {
-    "id": 5,
-    "mision": "Parrilla para la cocina comunitaria",
-    "tipo_caverna": "Fuego",
-    "herramienta_requerida": "Pico de fuego",
-    "proveedor": "Eliana",
-    "destinatario": "Oso Barnaby",
-    "destinatario_id": "tabernero",
-    "objeto_a_entregar": "Parrilla reforzada para la cocina",
-    "dialogo_eliana": "Barnaby quiere volver a cocinar para los viajeros que llegan cansados a la Taberna. Esta parrilla debería aguantar muchas noches de trabajo.",
-    "dialogo_destinatario": "¡Ahora sí! Habrá comida caliente esperando a quien cruce esa puerta. Eso también es reconstruir Mírrafen.",
-    "recompensa_intermedia": "1 Ración de viajero",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de fuego"
-  },
-  {
-    "id": 6,
-    "mision": "Enfriadores para bebidas de frutos",
-    "tipo_caverna": "Hielo",
-    "herramienta_requerida": "Pico de hielo",
-    "proveedor": "Eliana",
-    "destinatario": "Oso Barnaby",
-    "destinatario_id": "tabernero",
-    "objeto_a_entregar": "Anillos de enfriamiento para jarras",
-    "dialogo_eliana": "Barnaby insiste en que las bebidas de frutos del verano deben servirse casi tan frías como la Cueva de Hielo. Llévale estos anillos.",
-    "dialogo_destinatario": "¡Perfecto! Los viajeros van a agradecer esto cuando vuelva el calor. Toma una para el camino.",
-    "recompensa_intermedia": "1 Bebida de frutos helados",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de hielo"
-  },
-
-  {
-    "id": 7,
-    "mision": "Utensilios para el Palacio Culinario",
-    "tipo_caverna": "Minerales",
-    "herramienta_requerida": "Pico de minería",
-    "proveedor": "Eliana",
-    "destinatario": "Bart Balthazar",
-    "destinatario_id": "cocinero",
-    "objeto_a_entregar": "Juego de utensilios reforzados",
-    "dialogo_eliana": "Bartolomeo está recuperando las cocinas del Palacio Culinario. Preparé herramientas resistentes para sus nuevos platos.",
-    "dialogo_destinatario": "¡Magnífico equilibrio! Una buena creación comienza mucho antes de que llegue al plato.",
-    "recompensa_intermedia": "1 Ración especial",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de minería"
-  },
-  {
-    "id": 8,
-    "mision": "Caldero para las comidas de Mírrafen",
-    "tipo_caverna": "Fuego",
-    "herramienta_requerida": "Pico de fuego",
-    "proveedor": "Eliana",
-    "destinatario": "Bart Balthazar",
-    "destinatario_id": "cocinero",
-    "objeto_a_entregar": "Refuerzo para caldero de gran tamaño",
-    "dialogo_eliana": "Bartolomeo quiere preparar comida para varias familias a la vez. Esta estructura devolverá al gran caldero su estabilidad.",
-    "dialogo_destinatario": "¡Excelente! Una cocina puede alimentar algo más que estómagos. También puede devolverle ánimo a una comunidad.",
-    "recompensa_intermedia": "1 Tazón de estofado especial",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de fuego"
-  },
-  {
-    "id": 9,
-    "mision": "Caja fría para postres de cristal",
-    "tipo_caverna": "Hielo",
-    "herramienta_requerida": "Pico de hielo",
-    "proveedor": "Eliana",
-    "destinatario": "Bart Balthazar",
-    "destinatario_id": "cocinero",
-    "objeto_a_entregar": "Caja aislante de conservación",
-    "dialogo_eliana": "El Gran Chef necesita transportar sus preparaciones heladas sin que pierdan su forma. Esta caja debería resolverlo.",
-    "dialogo_destinatario": "¡Una maravilla! Hasta mis creaciones más delicadas llegarán intactas a la mesa.",
-    "recompensa_intermedia": "1 Postre cristalizado",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de hielo"
-  },
-
-  {
-    "id": 10,
-    "mision": "Placas protectoras para el Refugio",
-    "tipo_caverna": "Minerales",
-    "herramienta_requerida": "Pico de minería",
-    "proveedor": "Eliana",
-    "destinatario": "Valerius Di'rroka",
-    "destinatario_id": "comandante",
-    "objeto_a_entregar": "Placas ligeras de protección",
-    "dialogo_eliana": "Valerius necesita proteger algunos sectores del Refugio donde descansan las criaturas pequeñas. Llévale estas placas.",
-    "dialogo_destinatario": "Perfecto. La protección sirve de poco si incomoda a quien intentamos cuidar. Estas piezas son justo lo necesario.",
-    "recompensa_intermedia": "1 Amuleto del cuidador",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de minería"
-  },
-  {
-    "id": 11,
-    "mision": "Faroles seguros para las crías",
-    "tipo_caverna": "Fuego",
-    "herramienta_requerida": "Pico de fuego",
-    "proveedor": "Eliana",
-    "destinatario": "Valerius Di'rroka",
-    "destinatario_id": "comandante",
-    "objeto_a_entregar": "Faroles protegidos para el Refugio",
-    "dialogo_eliana": "Valerius quiere mantener iluminada la zona de las crías sin dejar fuentes de calor expuestas. Preparé estos faroles cerrados.",
-    "dialogo_destinatario": "Así podremos vigilar a las criaturas durante las noches frías sin alterar su descanso.",
-    "recompensa_intermedia": "1 Bálsamo animal",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de fuego"
-  },
-  {
-    "id": 12,
-    "mision": "Malla térmica para pequeños animales",
-    "tipo_caverna": "Hielo",
-    "herramienta_requerida": "Pico de hielo",
-    "proveedor": "Eliana",
-    "destinatario": "Valerius Di'rroka",
-    "destinatario_id": "comandante",
-    "objeto_a_entregar": "Malla aislante de refugio",
-    "dialogo_eliana": "La próxima helada será fuerte. Valerius necesita reforzar uno de los refugios de animales pequeños.",
-    "dialogo_destinatario": "Ahora tendrán un sitio protegido hasta que pase el frío. Cuidar también significa anticiparse.",
-    "recompensa_intermedia": "1 Talismán del vínculo",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de hielo"
-  },
-
-  {
-    "id": 13,
-    "mision": "Clavos para reparar una embarcación",
-    "tipo_caverna": "Minerales",
-    "herramienta_requerida": "Pico de minería",
-    "proveedor": "Eliana",
-    "destinatario": "Laudelino Kuino",
-    "destinatario_id": "bardo",
-    "objeto_a_entregar": "Bolsa de clavos de cobre marino",
-    "dialogo_eliana": "Laudelino está recuperando una pequeña embarcación del Puerto. Estos clavos deberían resistir bien la humedad.",
-    "dialogo_destinatario": "¡Magnífico! Cada tabla que vuelve a su sitio es una invitación para la próxima aventura.",
-    "recompensa_intermedia": "40 Monedas de oro",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de minería"
-  },
-  {
-    "id": 14,
-    "mision": "Refuerzos para los amarraderos",
-    "tipo_caverna": "Fuego",
-    "herramienta_requerida": "Pico de fuego",
-    "proveedor": "Eliana",
-    "destinatario": "Laudelino Kuino",
-    "destinatario_id": "bardo",
-    "objeto_a_entregar": "Placas reforzadas para el muelle",
-    "dialogo_eliana": "El movimiento de los barcos sigue castigando los antiguos amarraderos. Llévale estas placas a Laudelino.",
-    "dialogo_destinatario": "Con esto el Puerto podrá recibir nuevamente viajeros sin que cada llegada parezca una prueba de resistencia.",
-    "recompensa_intermedia": "45 Monedas de oro",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de fuego"
-  },
-  {
-    "id": 15,
-    "mision": "Herrajes para un navío del norte",
-    "tipo_caverna": "Hielo",
-    "herramienta_requerida": "Pico de hielo",
-    "proveedor": "Eliana",
-    "destinatario": "Laudelino Kuino",
-    "destinatario_id": "bardo",
-    "objeto_a_entregar": "Herrajes resistentes al frío",
-    "dialogo_eliana": "Laudelino prepara un barco para rutas frías. Estos herrajes no deberían volverse frágiles con las bajas temperaturas.",
-    "dialogo_destinatario": "Entonces tendremos otra ruta abierta hacia el horizonte. Ya puedo escuchar una nueva canción de viaje.",
-    "recompensa_intermedia": "50 Monedas de oro",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de hielo"
-  },
-
-  {
-    "id": 16,
-    "mision": "Soportes para el campamento arqueológico",
-    "tipo_caverna": "Minerales",
-    "herramienta_requerida": "Pico de minería",
-    "proveedor": "Eliana",
-    "destinatario": "Margot Kaellen",
-    "destinatario_id": "explorador",
-    "objeto_a_entregar": "Soportes metálicos para equipo de campo",
-    "dialogo_eliana": "Margot está reorganizando su campamento de investigación. Estas piezas servirán para recuperar algunas estructuras.",
-    "dialogo_destinatario": "Excelente. Un campamento ordenado significa más tiempo investigando y menos tiempo buscando dónde dejamos las cosas.",
-    "recompensa_intermedia": "1 Reliquia menor",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de minería"
-  },
-  {
-    "id": 17,
-    "mision": "Protecciones térmicas para las sondas",
-    "tipo_caverna": "Fuego",
-    "herramienta_requerida": "Pico de fuego",
-    "proveedor": "Eliana",
-    "destinatario": "Margot Kaellen",
-    "destinatario_id": "explorador",
-    "objeto_a_entregar": "Fundas térmicas para instrumentos",
-    "dialogo_eliana": "Margot pierde demasiado tiempo cuando sus instrumentos dejan de funcionar por el frío. Estas protecciones deberían ayudar.",
-    "dialogo_destinatario": "Perfecto. Ahora podremos dedicar el tiempo a investigar en lugar de reparar equipo.",
-    "recompensa_intermedia": "50 Monedas de oro",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de fuego"
-  },
-  {
-    "id": 18,
-    "mision": "Contenedores para muestras antiguas",
-    "tipo_caverna": "Hielo",
-    "herramienta_requerida": "Pico de hielo",
-    "proveedor": "Eliana",
-    "destinatario": "Margot Kaellen",
-    "destinatario_id": "explorador",
-    "objeto_a_entregar": "Contenedores de conservación para muestras",
-    "dialogo_eliana": "Margot encontró nuevas muestras en el hielo. Necesita transportarlas sin alterar aquello que intenta estudiar.",
-    "dialogo_destinatario": "Excelente trabajo. Encontrar algo es apenas la mitad del descubrimiento. La otra mitad es conservarlo correctamente.",
-    "recompensa_intermedia": "1 Fragmento arqueológico",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de hielo"
-  },
-
-  {
-    "id": 19,
-    "mision": "Herrajes para recuperar los arados",
-    "tipo_caverna": "Minerales",
-    "herramienta_requerida": "Pico de minería",
-    "proveedor": "Eliana",
-    "destinatario": "Kurt Silas",
-    "destinatario_id": "susurrador",
-    "objeto_a_entregar": "Herrajes reforzados para herramientas agrícolas",
-    "dialogo_eliana": "Silas todavía utiliza parte de las herramientas que fabricaba mi familia. Estas piezas ayudarán a devolver otra de ellas al trabajo.",
-    "dialogo_destinatario": "Reconozco el sonido de esta pieza. Tu familia sabía construir cosas destinadas a durar, Eliana.",
-    "recompensa_intermedia": "5 Manzanas frescas",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de minería"
-  },
-  {
-    "id": 20,
-    "mision": "Piezas para el sistema de riego",
-    "tipo_caverna": "Fuego",
-    "herramienta_requerida": "Pico de fuego",
-    "proveedor": "Eliana",
-    "destinatario": "Kurt Silas",
-    "destinatario_id": "susurrador",
-    "objeto_a_entregar": "Conectores reforzados para las canalizaciones",
-    "dialogo_eliana": "Silas necesita recuperar parte del antiguo sistema de riego. Preparé estas piezas para las secciones que todavía pueden salvarse.",
-    "dialogo_destinatario": "Cada gota que llegue nuevamente a los cultivos será una pequeña victoria.",
-    "recompensa_intermedia": "1 Saco de semillas",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de fuego"
-  },
-  {
-    "id": 21,
-    "mision": "Estructuras para cultivos de invierno",
-    "tipo_caverna": "Hielo",
-    "herramienta_requerida": "Pico de hielo",
-    "proveedor": "Eliana",
-    "destinatario": "Kurt Silas",
-    "destinatario_id": "susurrador",
-    "objeto_a_entregar": "Marcos elevados para cultivos",
-    "dialogo_eliana": "El frío está alcanzando los campos más temprano este año. Silas necesita estas estructuras para proteger parte de la próxima cosecha.",
-    "dialogo_destinatario": "La tierra siempre cambia. Nuestra responsabilidad es observarla y adaptarnos sin exigirle lo imposible.",
-    "recompensa_intermedia": "1 Saco de semillas de invierno",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de hielo"
-  },
-
-  {
-    "id": 22,
-    "mision": "Soportes para los tomos históricos",
-    "tipo_caverna": "Minerales",
-    "herramienta_requerida": "Pico de minería",
-    "proveedor": "Eliana",
-    "destinatario": "Lady Rowena",
-    "destinatario_id": "bibliotecaria",
-    "objeto_a_entregar": "Soportes de bronce para grandes tomos",
-    "dialogo_eliana": "Rowena está recuperando algunos de los libros que sobrevivieron a la guerra. Estas piezas permitirán volver a exhibirlos.",
-    "dialogo_destinatario": "Una página conservada puede responder preguntas muchos años después de que quienes la escribieron hayan desaparecido.",
-    "recompensa_intermedia": "1 Pergamino de experiencia",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de minería"
-  },
-  {
-    "id": 23,
-    "mision": "Prensa para restauración de documentos",
-    "tipo_caverna": "Fuego",
-    "herramienta_requerida": "Pico de fuego",
-    "proveedor": "Eliana",
-    "destinatario": "Lady Rowena",
-    "destinatario_id": "bibliotecaria",
-    "objeto_a_entregar": "Eje reforzado para prensa de restauración",
-    "dialogo_eliana": "La Biblioteca vuelve a trabajar sobre algunos documentos dañados. Rowena necesita esta pieza para recuperar una antigua prensa.",
-    "dialogo_destinatario": "Excelente. Restaurar un documento no devuelve el pasado, pero evita que desaparezca por segunda vez.",
-    "recompensa_intermedia": "1 Libro antiguo",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de fuego"
-  },
-  {
-    "id": 24,
-    "mision": "Estuche para el archivo del norte",
-    "tipo_caverna": "Hielo",
-    "herramienta_requerida": "Pico de hielo",
-    "proveedor": "Eliana",
-    "destinatario": "Lady Rowena",
-    "destinatario_id": "bibliotecaria",
-    "objeto_a_entregar": "Estuche sellado para manuscritos",
-    "dialogo_eliana": "Rowena quiere trasladar documentos encontrados cerca de las regiones heladas. Este estuche debería protegerlos durante el viaje.",
-    "dialogo_destinatario": "Perfecto. Podremos estudiar esas páginas sin arriesgar aquello que intentamos preservar.",
-    "recompensa_intermedia": "1 Pergamino histórico",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de hielo"
-  },
-
-  {
-    "id": 25,
-    "mision": "Bases para las vitrinas del Museo",
-    "tipo_caverna": "Minerales",
-    "herramienta_requerida": "Pico de minería",
-    "proveedor": "Eliana",
-    "destinatario": "Mr. Eldrin",
-    "destinatario_id": "sabio",
-    "objeto_a_entregar": "Bases reforzadas para vitrinas",
-    "dialogo_eliana": "Eldrin sigue recuperando piezas del antiguo Museo. Estas bases permitirán exhibir algunas de ellas con seguridad.",
-    "dialogo_destinatario": "Excelente. Los objetos también cuentan historias, siempre que consigamos conservarlos lo suficiente para escucharlas.",
-    "recompensa_intermedia": "60 Monedas de oro",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de minería"
-  },
-  {
-    "id": 26,
-    "mision": "Soportes para reliquias recuperadas",
-    "tipo_caverna": "Fuego",
-    "herramienta_requerida": "Pico de fuego",
-    "proveedor": "Eliana",
-    "destinatario": "Mr. Eldrin",
-    "destinatario_id": "sabio",
-    "objeto_a_entregar": "Estructuras reforzadas para piezas antiguas",
-    "dialogo_eliana": "Eldrin necesita nuevos soportes para varios objetos rescatados de las ruinas. No pienso permitir que sobrevivan a una guerra para terminar cayéndose de una repisa.",
-    "dialogo_destinatario": "Una opinión sorprendentemente razonable de nuestra querida Forjadora.",
-    "recompensa_intermedia": "1 Gema antigua",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de fuego"
-  },
-  {
-    "id": 27,
-    "mision": "Peanas para fósiles congelados",
-    "tipo_caverna": "Hielo",
-    "herramienta_requerida": "Pico de hielo",
-    "proveedor": "Eliana",
-    "destinatario": "Mr. Eldrin",
-    "destinatario_id": "sabio",
-    "objeto_a_entregar": "Peanas de conservación para fósiles",
-    "dialogo_eliana": "Margot encontró varias piezas que terminarán en el Museo. Eldrin necesita soportes adecuados antes de recibirlas.",
-    "dialogo_destinatario": "Magnífico. Una expedición descubre el patrimonio. Nuestro deber es conseguir que pueda ser contemplado por quienes vengan después.",
-    "recompensa_intermedia": "1 Moneda de colección",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de hielo"
-  },
-
-  {
-    "id": 28,
-    "mision": "Anillos para los recipientes de la Academia",
-    "tipo_caverna": "Minerales",
-    "herramienta_requerida": "Pico de minería",
-    "proveedor": "Eliana",
-    "destinatario": "Lysa McLyra",
-    "destinatario_id": "artista",
-    "objeto_a_entregar": "Anillos de plata para recipientes arcanos",
-    "dialogo_eliana": "Lysa necesita estabilizar varios recipientes de trabajo. Le prometí piezas precisas, así que intenta no perderlas por el camino.",
-    "dialogo_destinatario": "La medida es impecable. Una buena técnica comienza con herramientas que permiten repetir el resultado.",
-    "recompensa_intermedia": "1 Elixir menor",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de minería"
-  },
-  {
-    "id": 29,
-    "mision": "Soporte para el taller de la Academia",
-    "tipo_caverna": "Fuego",
-    "herramienta_requerida": "Pico de fuego",
-    "proveedor": "Eliana",
-    "destinatario": "Lysa McLyra",
-    "destinatario_id": "artista",
-    "objeto_a_entregar": "Base reforzada para equipo arcano",
-    "dialogo_eliana": "Lysa está reconstruyendo una de sus estaciones de trabajo. Preparé esta base para que pueda volver a practicar sus técnicas.",
-    "dialogo_destinatario": "Excelente. La precisión no surge de un solo intento. Necesito un lugar donde poder repetir, comparar y mejorar.",
-    "recompensa_intermedia": "1 Esencia elemental",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de fuego"
-  },
-  {
-    "id": 30,
-    "mision": "Cámara fría para materiales delicados",
-    "tipo_caverna": "Hielo",
-    "herramienta_requerida": "Pico de hielo",
-    "proveedor": "Eliana",
-    "destinatario": "Lysa McLyra",
-    "destinatario_id": "artista",
-    "objeto_a_entregar": "Contenedor aislado para materiales arcanos",
-    "dialogo_eliana": "Algunos materiales de Lysa necesitan conservarse fríos mientras trabaja. Este recipiente debería mantenerlos estables.",
-    "dialogo_destinatario": "Perfecto. Ahora podré concentrarme en la técnica en lugar de luchar contra los materiales.",
-    "recompensa_intermedia": "1 Esencia de hielo",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de hielo"
-  },
-
-  {
-    "id": 31,
-    "mision": "Engranajes para el telescopio",
-    "tipo_caverna": "Minerales",
-    "herramienta_requerida": "Pico de minería",
-    "proveedor": "Eliana",
-    "destinatario": "Lord Zephyr",
-    "destinatario_id": "astral",
-    "objeto_a_entregar": "Engranajes de precisión",
-    "dialogo_eliana": "Zephyr intenta devolver el movimiento al gran telescopio. Estos engranajes deberían reemplazar algunas piezas perdidas.",
-    "dialogo_destinatario": "¡Magnífico! Otro instrumento vuelve a funcionar. Cada mecanismo recuperado nos devuelve una ventana al Universo.",
-    "recompensa_intermedia": "3 Fragmentos estelares",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de minería"
-  },
-  {
-    "id": 32,
-    "mision": "Mecanismo para el reloj cósmico",
-    "tipo_caverna": "Fuego",
-    "herramienta_requerida": "Pico de fuego",
-    "proveedor": "Eliana",
-    "destinatario": "Lord Zephyr",
-    "destinatario_id": "astral",
-    "objeto_a_entregar": "Mecanismo reforzado para el reloj astral",
-    "dialogo_eliana": "Zephyr está reconstruyendo una parte de su antiguo reloj cósmico. Esta pieza exigió más correcciones de las que pienso admitir.",
-    "dialogo_destinatario": "Entonces funcionará perfectamente. Las mejores respuestas suelen necesitar varios intentos antes de aparecer.",
-    "recompensa_intermedia": "2 Piedras estelares",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de fuego"
-  },
-  {
-    "id": 33,
-    "mision": "Protección contra escarcha para las lentes",
-    "tipo_caverna": "Hielo",
-    "herramienta_requerida": "Pico de hielo",
-    "proveedor": "Eliana",
-    "destinatario": "Lord Zephyr",
-    "destinatario_id": "astral",
-    "objeto_a_entregar": "Cubierta aislante para lentes",
-    "dialogo_eliana": "Las noches frías vuelven inútiles algunos instrumentos del Observatorio. Llévale esta protección a Zephyr.",
-    "dialogo_destinatario": "Excelente. Ahora el clima tendrá una excusa menos para interponerse entre nosotros y las estrellas.",
-    "recompensa_intermedia": "1 Fragmento solar",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de hielo"
-  },
-
-  {
-    "id": 34,
-    "mision": "Candelabro para el Santuario",
-    "tipo_caverna": "Minerales",
-    "herramienta_requerida": "Pico de minería",
-    "proveedor": "Eliana",
-    "destinatario": "Aurelia Stay",
-    "destinatario_id": "sacerdotisa",
-    "objeto_a_entregar": "Candelabro ceremonial de hierro",
-    "dialogo_eliana": "Aurélia pidió una pieza sencilla para recuperar uno de los antiguos rincones del Santuario.",
-    "dialogo_destinatario": "La luz no necesita ser grande para recordarnos que todavía existe un camino de regreso.",
-    "recompensa_intermedia": "1 Bendición de serenidad",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de minería"
-  },
-  {
-    "id": 35,
-    "mision": "Incensario para la sala principal",
-    "tipo_caverna": "Fuego",
-    "herramienta_requerida": "Pico de fuego",
-    "proveedor": "Eliana",
-    "destinatario": "Aurelia Stay",
-    "destinatario_id": "sacerdotisa",
-    "objeto_a_entregar": "Incensario ceremonial reforzado",
-    "dialogo_eliana": "Aurélia está restaurando la sala central. Este incensario ocupará nuevamente el lugar donde estuvo antes de la guerra.",
-    "dialogo_destinatario": "Gracias. Reconstruir un refugio también significa devolverle aquellos pequeños símbolos que ayudaban a las personas a sentirse seguras.",
-    "recompensa_intermedia": "1 Bálsamo del Santuario",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de fuego"
-  },
-  {
-    "id": 36,
-    "mision": "Cáliz para el manantial de invierno",
-    "tipo_caverna": "Hielo",
-    "herramienta_requerida": "Pico de hielo",
-    "proveedor": "Eliana",
-    "destinatario": "Aurelia Stay",
-    "destinatario_id": "sacerdotisa",
-    "objeto_a_entregar": "Cáliz ceremonial de plata",
-    "dialogo_eliana": "Aurélia utilizará este cáliz durante la ceremonia del invierno. Procura que llegue intacto.",
-    "dialogo_destinatario": "Cada estación nos recuerda algo distinto. El invierno nos enseña que descansar también forma parte de continuar.",
-    "recompensa_intermedia": "1 Amuleto de calma",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de hielo"
-  },
-
-  {
-    "id": 37,
-    "mision": "Cerradura para el archivo de la Corona",
-    "tipo_caverna": "Minerales",
-    "herramienta_requerida": "Pico de minería",
-    "proveedor": "Eliana",
-    "destinatario": "Reina Eleanor",
-    "destinatario_id": "reina",
-    "objeto_a_entregar": "Cerradura reforzada para el archivo real",
-    "dialogo_eliana": "Eleanor está recuperando documentos de la antigua administración del reino. Preparé esta cerradura para protegerlos.",
-    "dialogo_destinatario": "Gracias. Reconstruir Mírrafen también exige recordar las decisiones que lo llevaron hasta aquí.",
-    "recompensa_intermedia": "100 Monedas de oro",
-    "picos_otorgados": 12,
-    "tipo_pico": "Pico de minería"
-  },
-  {
-    "id": 38,
-    "mision": "Soportes para los estandartes de Mírrafen",
-    "tipo_caverna": "Fuego",
-    "herramienta_requerida": "Pico de fuego",
-    "proveedor": "Eliana",
-    "destinatario": "Reina Eleanor",
-    "destinatario_id": "reina",
-    "objeto_a_entregar": "Astas reforzadas para estandartes",
-    "dialogo_eliana": "Eleanor quiere volver a colocar los estandartes en la plaza. No hacen falta para gobernar, pero a veces un símbolo ayuda a recordar que seguimos siendo una comunidad.",
-    "dialogo_destinatario": "Exactamente. Un estandarte no crea un reino. Las personas que deciden permanecer juntas sí.",
-    "recompensa_intermedia": "110 Monedas de oro",
-    "picos_otorgados": 12,
-    "tipo_pico": "Pico de fuego"
-  },
-  {
-    "id": 39,
-    "mision": "Broches para las capas de invierno",
-    "tipo_caverna": "Hielo",
-    "herramienta_requerida": "Pico de hielo",
-    "proveedor": "Eliana",
-    "destinatario": "Reina Eleanor",
-    "destinatario_id": "reina",
-    "objeto_a_entregar": "Fíbulas de plata reforzada",
-    "dialogo_eliana": "La Reina solicitó broches resistentes para las capas utilizadas durante el invierno. Llévalos a la Aldea.",
-    "dialogo_destinatario": "Servirán para quienes deben permanecer fuera durante el frío. Cuidar una comunidad comienza por recordar las necesidades de quienes la sostienen.",
-    "recompensa_intermedia": "115 Monedas de oro",
-    "picos_otorgados": 12,
-    "tipo_pico": "Pico de hielo"
-  },
-
-  {
-    "id": 40,
-    "mision": "Balanza para el Mercado",
-    "tipo_caverna": "Minerales",
-    "herramienta_requerida": "Pico de minería",
-    "proveedor": "Eliana",
-    "destinatario": "Jhaim Borin",
-    "destinatario_id": "mercader",
-    "objeto_a_entregar": "Balanza de bronce de precisión",
-    "dialogo_eliana": "Borin quiere devolver al Mercado una de sus viejas balanzas. Dice que un intercambio justo comienza con una medida que ambos puedan confiar.",
-    "dialogo_destinatario": "¡Exactamente! Una mala balanza puede darte una moneda hoy y hacerte perder diez clientes mañana.",
-    "recompensa_intermedia": "75 Monedas de oro",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de minería"
-  },
-  {
-    "id": 41,
-    "mision": "Estructuras para los puestos del Mercado",
-    "tipo_caverna": "Fuego",
-    "herramienta_requerida": "Pico de fuego",
-    "proveedor": "Eliana",
-    "destinatario": "Jhaim Borin",
-    "destinatario_id": "mercader",
-    "objeto_a_entregar": "Soportes reforzados para puestos comerciales",
-    "dialogo_eliana": "Borin está ampliando nuevamente el Mercado. Estas piezas sostendrán algunos de los nuevos puestos.",
-    "dialogo_destinatario": "Un puesto nuevo significa alguien produciendo, alguien vendiendo y alguien encontrando lo que necesita. Así vuelve a circular un reino.",
-    "recompensa_intermedia": "80 Monedas de oro",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de fuego"
-  },
-  {
-    "id": 42,
-    "mision": "Cierres para las cámaras de conservación",
-    "tipo_caverna": "Hielo",
-    "herramienta_requerida": "Pico de hielo",
-    "proveedor": "Eliana",
-    "destinatario": "Jhaim Borin",
-    "destinatario_id": "mercader",
-    "objeto_a_entregar": "Cierres aislantes para depósitos",
-    "dialogo_eliana": "Borin recuperó uno de los antiguos depósitos del Mercado. Estos cierres ayudarán a conservar las mercancías sensibles al calor.",
-    "dialogo_destinatario": "¡Excelente! Reducir pérdidas también es crear valor. El primer Oquo que recuperé de las cenizas estaría orgulloso, si las monedas pudieran hacer esas cosas.",
-    "recompensa_intermedia": "85 Monedas de oro",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de hielo"
-  },
-
-  {
-    "id": 43,
-    "mision": "Soportes para el rincón de los cuentos",
-    "tipo_caverna": "Minerales",
-    "herramienta_requerida": "Pico de minería",
-    "proveedor": "Eliana",
-    "destinatario": "Soul Garrick",
-    "destinatario_id": "narrador",
-    "objeto_a_entregar": "Soportes metálicos para bancos y estantes",
-    "dialogo_eliana": "Garrick está reconstruyendo uno de sus antiguos rincones de cuentos. Estas piezas servirán para los bancos y pequeños estantes.",
-    "dialogo_destinatario": "Perfecto. Una historia encuentra mejor a su público cuando ese público tiene dónde sentarse.",
-    "recompensa_intermedia": "1 Talismán del bosque",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de minería"
-  },
-  {
-    "id": 44,
-    "mision": "Campana para reunir a los narradores",
-    "tipo_caverna": "Fuego",
-    "herramienta_requerida": "Pico de fuego",
-    "proveedor": "Eliana",
-    "destinatario": "Soul Garrick",
-    "destinatario_id": "narrador",
-    "objeto_a_entregar": "Campana de bronce para el Bosque",
-    "dialogo_eliana": "Garrick quiere volver a reunir gente alrededor de las historias. Esta campana debería escucharse desde buena parte del sendero.",
-    "dialogo_destinatario": "Magnífico. Antes de la guerra una campana semejante anunciaba que comenzaba un nuevo relato. Tal vez vuelva a hacerlo.",
-    "recompensa_intermedia": "1 Cristal del bosque",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de fuego"
-  },
-  {
-    "id": 45,
-    "mision": "Cofre para los relatos del invierno",
-    "tipo_caverna": "Hielo",
-    "herramienta_requerida": "Pico de hielo",
-    "proveedor": "Eliana",
-    "destinatario": "Soul Garrick",
-    "destinatario_id": "narrador",
-    "objeto_a_entregar": "Cofre sellado para pergaminos y recuerdos",
-    "dialogo_eliana": "Garrick quiere guardar algunos relatos recogidos durante sus viajes por regiones frías. Preparé un cofre que podrá acompañarlo durante muchos inviernos.",
-    "dialogo_destinatario": "Excelente. Las historias también necesitan refugio hasta encontrar a la persona adecuada para escucharlas.",
-    "recompensa_intermedia": "1 Relato antiguo",
-    "picos_otorgados": 10,
-    "tipo_pico": "Pico de hielo"
-  }
-]
+    {
+      "id": 1,
+      "mision": "Pernos para los portones del Castillo",
+      "tipo_caverna": "Mineral",
+      "herramienta_requerida": "Pico de minería",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Sir Roderick",
+      "destinatario_id": "guardian",
+      "objeto_a_entregar": "Caja de pernos de hierro reforzado",
+      "dialogo_eliana": "Roderick está recuperando uno de los antiguos portones del Castillo. Llévale estos pernos y dile que esta vez pienso ver esa puerta nuevamente en pie.",
+      "dialogo_destinatario": "Exactamente lo que necesitábamos. Cada pieza recuperada devuelve un poco de firmeza al Castillo. Buen trabajo.",
+      "dialogo_regreso": "Así que Roderick ya tiene los pernos. Bien hecho. Una entrega cumplida vale más que una caja olvidada en mi taller.",
+      "recompensa_destinatario": {
+        "xp": 8,
+        "oquos": 3
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de minería"
+      }
+    },
+    {
+      "id": 2,
+      "mision": "Refuerzos para la torre de guardia",
+      "tipo_caverna": "Mineral",
+      "herramienta_requerida": "Pico de fuego",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Sir Roderick",
+      "destinatario_id": "guardian",
+      "objeto_a_entregar": "Uniones reforzadas para la torre norte",
+      "dialogo_eliana": "La torre norte todavía conserva daños de la guerra. Preparé estas piezas para que Roderick pueda devolverle estabilidad.",
+      "dialogo_destinatario": "Eliana sigue fabricando piezas como si el Castillo jamás hubiera caído. Me alegra comprobar que no soy el único testarudo de Mírrafen.",
+      "dialogo_regreso": "Roderick aceptó los refuerzos. Entonces la torre tiene una oportunidad más. Y tú también te ganaste estos picos.",
+      "recompensa_destinatario": {
+        "xp": 10,
+        "oquos": 4
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de fuego"
+      }
+    },
+    {
+      "id": 3,
+      "mision": "Soportes para la guardia del invierno",
+      "tipo_caverna": "Mineral",
+      "herramienta_requerida": "Pico de hielo",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Sir Roderick",
+      "destinatario_id": "guardian",
+      "objeto_a_entregar": "Soportes aislantes para faroles de guardia",
+      "dialogo_eliana": "Los puestos del norte soportan demasiado frío. Estos soportes ayudarán a mantener funcionando sus faroles durante las noches de invierno.",
+      "dialogo_destinatario": "Una guardia preparada no depende del buen tiempo. Con esto podremos mantener los puestos activos durante el invierno.",
+      "dialogo_regreso": "Los puestos del norte estarán mejor preparados. Roderick hizo su parte y tú la tuya. Aquí tienes tu recompensa.",
+      "recompensa_destinatario": {
+        "xp": 12,
+        "oquos": 5
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de hielo"
+      }
+    },
+    {
+      "id": 4,
+      "mision": "Flejes para las barricas de la Taberna",
+      "tipo_caverna": "Mineral",
+      "herramienta_requerida": "Pico de minería",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Oso Barnaby",
+      "destinatario_id": "tabernero",
+      "objeto_a_entregar": "Flejes de hierro para barricas",
+      "dialogo_eliana": "Barnaby necesita recuperar varios recipientes de su antigua despensa. Estos flejes deberían mantenerlos unidos muchos años más.",
+      "dialogo_destinatario": "¡Eso necesitaba! Una taberna sin provisiones es solamente una habitación con demasiadas sillas.",
+      "dialogo_regreso": "Barnaby ya tiene sus flejes. Eso significa que pronto volverá a llenar esa taberna de viajeros. Toma tus picos.",
+      "recompensa_destinatario": {
+        "xp": 8,
+        "oquos": 3
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de minería"
+      }
+    },
+    {
+      "id": 5,
+      "mision": "Parrilla para la cocina comunitaria",
+      "tipo_caverna": "Mineral",
+      "herramienta_requerida": "Pico de fuego",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Oso Barnaby",
+      "destinatario_id": "tabernero",
+      "objeto_a_entregar": "Parrilla reforzada para la cocina",
+      "dialogo_eliana": "Barnaby quiere volver a cocinar para los viajeros que llegan cansados a la Taberna. Esta parrilla debería aguantar muchas noches de trabajo.",
+      "dialogo_destinatario": "¡Ahora sí! Habrá comida caliente esperando a quien cruce esa puerta. Eso también es reconstruir Mírrafen.",
+      "dialogo_regreso": "Barnaby volvió a tener una cocina digna de su taberna. Nada mal para una simple entrega. Aquí tienes tus picos.",
+      "recompensa_destinatario": {
+        "xp": 10,
+        "oquos": 4
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de fuego"
+      }
+    },
+    {
+      "id": 6,
+      "mision": "Enfriadores para bebidas de frutos",
+      "tipo_caverna": "Mineral",
+      "herramienta_requerida": "Pico de hielo",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Oso Barnaby",
+      "destinatario_id": "tabernero",
+      "objeto_a_entregar": "Anillos de enfriamiento para jarras",
+      "dialogo_eliana": "Barnaby insiste en que las bebidas de frutos del verano deben servirse casi tan frías como la Cueva de Hielo. Llévale estos anillos.",
+      "dialogo_destinatario": "¡Perfecto! Los viajeros van a agradecer esto cuando vuelva el calor.",
+      "dialogo_regreso": "Barnaby recibió los anillos. Seguramente ya está imaginando qué servir con ellos. Trabajo terminado.",
+      "recompensa_destinatario": {
+        "xp": 12,
+        "oquos": 5
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de hielo"
+      }
+    },
+    {
+      "id": 7,
+      "mision": "Utensilios para el Palacio Culinario",
+      "tipo_caverna": "Mineral",
+      "herramienta_requerida": "Pico de minería",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Bart Balthazar",
+      "destinatario_id": "chef",
+      "objeto_a_entregar": "Juego de utensilios reforzados",
+      "dialogo_eliana": "Bart está recuperando las cocinas del Palacio Culinario. Preparé herramientas resistentes para sus nuevas creaciones.",
+      "dialogo_destinatario": "¡Magnífico equilibrio! Una buena creación comienza mucho antes de que llegue al plato.",
+      "dialogo_regreso": "Bart aprobó los utensilios. Considerando lo exigente que puede ponerse con sus herramientas, eso cuenta como una victoria.",
+      "recompensa_destinatario": {
+        "xp": 8,
+        "oquos": 3
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de minería"
+      }
+    },
+    {
+      "id": 8,
+      "mision": "Caldero para las comidas de Mírrafen",
+      "tipo_caverna": "Mineral",
+      "herramienta_requerida": "Pico de fuego",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Bart Balthazar",
+      "destinatario_id": "chef",
+      "objeto_a_entregar": "Refuerzo para caldero de gran tamaño",
+      "dialogo_eliana": "Bart quiere preparar comida para varias familias a la vez. Esta estructura devolverá al gran caldero su estabilidad.",
+      "dialogo_destinatario": "¡Excelente! Una cocina puede alimentar algo más que estómagos. También puede devolverle ánimo a una comunidad.",
+      "dialogo_regreso": "El gran caldero volverá a trabajar. Bart cocinará y nosotros seguiremos reconstruyendo. Buen reparto de tareas.",
+      "recompensa_destinatario": {
+        "xp": 10,
+        "oquos": 4
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de fuego"
+      }
+    },
+    {
+      "id": 9,
+      "mision": "Caja fría para postres de cristal",
+      "tipo_caverna": "Mineral",
+      "herramienta_requerida": "Pico de hielo",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Bart Balthazar",
+      "destinatario_id": "chef",
+      "objeto_a_entregar": "Caja aislante de conservación",
+      "dialogo_eliana": "El Gran Chef necesita transportar sus preparaciones heladas sin que pierdan su forma. Esta caja debería resolverlo.",
+      "dialogo_destinatario": "¡Una maravilla! Hasta mis creaciones más delicadas llegarán intactas a la mesa.",
+      "dialogo_regreso": "La caja llegó y Bart está satisfecho. Eso significa que el encargo está terminado. Aquí tienes tus picos.",
+      "recompensa_destinatario": {
+        "xp": 12,
+        "oquos": 5
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de hielo"
+      }
+    },
+    {
+      "id": 10,
+      "mision": "Placas protectoras para el Refugio",
+      "tipo_caverna": "Mineral",
+      "herramienta_requerida": "Pico de minería",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Valerius di'Rroka",
+      "destinatario_id": "maestra",
+      "objeto_a_entregar": "Placas ligeras de protección",
+      "dialogo_eliana": "Valerius necesita proteger algunos sectores del Refugio donde descansan las criaturas pequeñas. Llévale estas placas.",
+      "dialogo_destinatario": "Perfecto. La protección sirve de poco si incomoda a quien intentamos cuidar. Estas piezas son justo lo necesario.",
+      "dialogo_regreso": "Valerius recibió las placas. Si las criaturas pueden descansar mejor gracias a ellas, el trabajo valió la pena.",
+      "recompensa_destinatario": {
+        "xp": 8,
+        "oquos": 3
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de minería"
+      }
+    },
+    {
+      "id": 11,
+      "mision": "Faroles seguros para las crías",
+      "tipo_caverna": "Mineral",
+      "herramienta_requerida": "Pico de fuego",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Valerius di'Rroka",
+      "destinatario_id": "maestra",
+      "objeto_a_entregar": "Faroles protegidos para el Refugio",
+      "dialogo_eliana": "Valerius quiere mantener iluminada la zona de las crías sin dejar fuentes de calor expuestas. Preparé estos faroles cerrados.",
+      "dialogo_destinatario": "Así podremos vigilar a las criaturas durante las noches frías sin alterar su descanso.",
+      "dialogo_regreso": "Los faroles ya están en el Refugio. Bien. Un problema menos para Valerius y un encargo menos para mi mesa.",
+      "recompensa_destinatario": {
+        "xp": 10,
+        "oquos": 4
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de fuego"
+      }
+    },
+    {
+      "id": 12,
+      "mision": "Malla térmica para pequeños animales",
+      "tipo_caverna": "Mineral",
+      "herramienta_requerida": "Pico de hielo",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Valerius di'Rroka",
+      "destinatario_id": "maestra",
+      "objeto_a_entregar": "Malla aislante de refugio",
+      "dialogo_eliana": "La próxima helada será fuerte. Valerius necesita reforzar uno de los refugios de animales pequeños.",
+      "dialogo_destinatario": "Ahora tendrán un sitio protegido hasta que pase el frío. Cuidar también significa anticiparse.",
+      "dialogo_regreso": "La malla ya está colocada. Valerius podrá ocuparse del resto. Tú cumpliste, así que estos picos son tuyos.",
+      "recompensa_destinatario": {
+        "xp": 12,
+        "oquos": 5
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de hielo"
+      }
+    },
+    {
+      "id": 13,
+      "mision": "Clavos para reparar una embarcación",
+      "tipo_caverna": "Mineral",
+      "herramienta_requerida": "Pico de minería",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Laudelino Kuino",
+      "destinatario_id": "bardo",
+      "objeto_a_entregar": "Bolsa de clavos de cobre marino",
+      "dialogo_eliana": "Laudelino está recuperando una pequeña embarcación del Puerto. Estos clavos deberían resistir bien la humedad.",
+      "dialogo_destinatario": "¡Magnífico! Cada tabla que vuelve a su sitio es una invitación para la próxima aventura.",
+      "dialogo_regreso": "Laudelino recibió los clavos. Apostaría a que ya está imaginando dónde navegar antes de terminar la reparación.",
+      "recompensa_destinatario": {
+        "xp": 8,
+        "oquos": 3
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de minería"
+      }
+    },
+    {
+      "id": 14,
+      "mision": "Refuerzos para los amarraderos",
+      "tipo_caverna": "Mineral",
+      "herramienta_requerida": "Pico de fuego",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Laudelino Kuino",
+      "destinatario_id": "bardo",
+      "objeto_a_entregar": "Placas reforzadas para el muelle",
+      "dialogo_eliana": "El movimiento de los barcos sigue castigando los antiguos amarraderos. Llévale estas placas a Laudelino.",
+      "dialogo_destinatario": "Con esto el Puerto podrá recibir nuevamente viajeros sin que cada llegada parezca una prueba de resistencia.",
+      "dialogo_regreso": "Las placas llegaron al Puerto. Otra parte de Mírrafen preparada para recibir viajeros. Buen trabajo.",
+      "recompensa_destinatario": {
+        "xp": 10,
+        "oquos": 4
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de fuego"
+      }
+    },
+    {
+      "id": 15,
+      "mision": "Herrajes para un navío del norte",
+      "tipo_caverna": "Mineral",
+      "herramienta_requerida": "Pico de hielo",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Laudelino Kuino",
+      "destinatario_id": "bardo",
+      "objeto_a_entregar": "Herrajes resistentes al frío",
+      "dialogo_eliana": "Laudelino prepara un barco para rutas frías. Estos herrajes no deberían volverse frágiles con las bajas temperaturas.",
+      "dialogo_destinatario": "Entonces tendremos otra ruta abierta hacia el horizonte. Ya puedo escuchar una nueva canción de viaje.",
+      "dialogo_regreso": "Laudelino tiene sus herrajes. Si ese barco termina llegando al norte, podremos decir que esta entrega fue el primer paso.",
+      "recompensa_destinatario": {
+        "xp": 12,
+        "oquos": 5
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de hielo"
+      }
+    },
+    {
+      "id": 16,
+      "mision": "Soportes para el campamento arqueológico",
+      "tipo_caverna": "Mineral",
+      "herramienta_requerida": "Pico de minería",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Margot Kaellen",
+      "destinatario_id": "arqueologa",
+      "objeto_a_entregar": "Soportes metálicos para equipo de campo",
+      "dialogo_eliana": "Margot está reorganizando su campamento de investigación. Estas piezas servirán para recuperar algunas estructuras.",
+      "dialogo_destinatario": "Excelente. Un campamento ordenado significa más tiempo investigando y menos tiempo buscando dónde dejamos las cosas.",
+      "dialogo_regreso": "Margot recibió los soportes. Ahora podrá dedicar más tiempo a descubrir cosas y menos a sostenerlas con improvisaciones.",
+      "recompensa_destinatario": {
+        "xp": 8,
+        "oquos": 3
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de minería"
+      }
+    },
+    {
+      "id": 17,
+      "mision": "Protecciones térmicas para las sondas",
+      "tipo_caverna": "Mineral",
+      "herramienta_requerida": "Pico de fuego",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Margot Kaellen",
+      "destinatario_id": "arqueologa",
+      "objeto_a_entregar": "Fundas térmicas para instrumentos",
+      "dialogo_eliana": "Margot pierde demasiado tiempo cuando sus instrumentos dejan de funcionar por el frío. Estas protecciones deberían ayudar.",
+      "dialogo_destinatario": "Perfecto. Ahora podremos dedicar el tiempo a investigar en lugar de reparar equipo.",
+      "dialogo_regreso": "Las protecciones llegaron. Margot ya no tendrá al frío como excusa para dejar de investigar. Encargo terminado.",
+      "recompensa_destinatario": {
+        "xp": 10,
+        "oquos": 4
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de fuego"
+      }
+    },
+    {
+      "id": 18,
+      "mision": "Contenedores para muestras antiguas",
+      "tipo_caverna": "Mineral",
+      "herramienta_requerida": "Pico de hielo",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Margot Kaellen",
+      "destinatario_id": "arqueologa",
+      "objeto_a_entregar": "Contenedores de conservación para muestras",
+      "dialogo_eliana": "Margot encontró nuevas muestras en el hielo. Necesita transportarlas sin alterar aquello que intenta estudiar.",
+      "dialogo_destinatario": "Excelente trabajo. Encontrar algo es apenas la mitad del descubrimiento. La otra mitad es conservarlo correctamente.",
+      "dialogo_regreso": "Margot tiene los contenedores. Ahora lo que descubra tendrá más posibilidades de llegar intacto hasta nosotros.",
+      "recompensa_destinatario": {
+        "xp": 12,
+        "oquos": 5
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de hielo"
+      }
+    },
+    {
+      "id": 19,
+      "mision": "Herrajes para recuperar los arados",
+      "tipo_caverna": "Mineral",
+      "herramienta_requerida": "Pico de minería",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Kurt Silas",
+      "destinatario_id": "susurrador",
+      "objeto_a_entregar": "Herrajes reforzados para herramientas agrícolas",
+      "dialogo_eliana": "Silas todavía utiliza parte de las herramientas que fabricaba mi familia. Estas piezas ayudarán a devolver otra de ellas al trabajo.",
+      "dialogo_destinatario": "Reconozco el sonido de esta pieza. Tu familia sabía construir cosas destinadas a durar, Eliana.",
+      "dialogo_regreso": "Silas reconoció el trabajo de mi familia. Supongo que algunas cosas sobreviven de maneras extrañas. Gracias por llevarlas.",
+      "recompensa_destinatario": {
+        "xp": 8,
+        "oquos": 3
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de minería"
+      }
+    },
+    {
+      "id": 20,
+      "mision": "Piezas para el sistema de riego",
+      "tipo_caverna": "Mineral",
+      "herramienta_requerida": "Pico de fuego",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Kurt Silas",
+      "destinatario_id": "susurrador",
+      "objeto_a_entregar": "Conectores reforzados para las canalizaciones",
+      "dialogo_eliana": "Silas necesita recuperar parte del antiguo sistema de riego. Preparé estas piezas para las secciones que todavía pueden salvarse.",
+      "dialogo_destinatario": "Cada gota que llegue nuevamente a los cultivos será una pequeña victoria.",
+      "dialogo_regreso": "Los conectores llegaron a la Granja. Si vuelve a correr agua por esas canalizaciones, habrá valido cada golpe de martillo.",
+      "recompensa_destinatario": {
+        "xp": 10,
+        "oquos": 4
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de fuego"
+      }
+    },
+    {
+      "id": 21,
+      "mision": "Estructuras para cultivos de invierno",
+      "tipo_caverna": "Mineral",
+      "herramienta_requerida": "Pico de hielo",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Kurt Silas",
+      "destinatario_id": "susurrador",
+      "objeto_a_entregar": "Marcos elevados para cultivos",
+      "dialogo_eliana": "El frío está alcanzando los campos más temprano este año. Silas necesita estas estructuras para proteger parte de la próxima cosecha.",
+      "dialogo_destinatario": "La tierra siempre cambia. Nuestra responsabilidad es observarla y adaptarnos sin exigirle lo imposible.",
+      "dialogo_regreso": "Silas ya tiene las estructuras. Prepararse antes del invierno suele ser bastante más inteligente que discutir con él cuando llega.",
+      "recompensa_destinatario": {
+        "xp": 12,
+        "oquos": 5
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de hielo"
+      }
+    },
+    {
+      "id": 22,
+      "mision": "Soportes para los tomos históricos",
+      "tipo_caverna": "Mineral",
+      "herramienta_requerida": "Pico de minería",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Lady Rowena",
+      "destinatario_id": "bibliotecaria",
+      "objeto_a_entregar": "Soportes de bronce para grandes tomos",
+      "dialogo_eliana": "Rowena está recuperando algunos de los libros que sobrevivieron a la guerra. Estas piezas permitirán volver a exhibirlos.",
+      "dialogo_destinatario": "Una página conservada puede responder preguntas muchos años después de que quienes la escribieron hayan desaparecido.",
+      "dialogo_regreso": "Rowena recibió los soportes. Los libros sobrevivieron bastante como para merecer algo mejor que terminar apilados en el suelo.",
+      "recompensa_destinatario": {
+        "xp": 8,
+        "oquos": 3
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de minería"
+      }
+    },
+    {
+      "id": 23,
+      "mision": "Prensa para restauración de documentos",
+      "tipo_caverna": "Mineral",
+      "herramienta_requerida": "Pico de fuego",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Lady Rowena",
+      "destinatario_id": "bibliotecaria",
+      "objeto_a_entregar": "Eje reforzado para prensa de restauración",
+      "dialogo_eliana": "La Biblioteca vuelve a trabajar sobre algunos documentos dañados. Rowena necesita esta pieza para recuperar una antigua prensa.",
+      "dialogo_destinatario": "Excelente. Restaurar un documento no devuelve el pasado, pero evita que desaparezca por segunda vez.",
+      "dialogo_regreso": "La prensa volverá a funcionar. Tal vez no podamos recuperar todo lo perdido, pero al menos podemos cuidar lo que quedó.",
+      "recompensa_destinatario": {
+        "xp": 10,
+        "oquos": 4
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de fuego"
+      }
+    },
+    {
+      "id": 24,
+      "mision": "Estuche para el archivo del norte",
+      "tipo_caverna": "Mineral",
+      "herramienta_requerida": "Pico de hielo",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Lady Rowena",
+      "destinatario_id": "bibliotecaria",
+      "objeto_a_entregar": "Estuche sellado para manuscritos",
+      "dialogo_eliana": "Rowena quiere trasladar documentos encontrados cerca de las regiones heladas. Este estuche debería protegerlos durante el viaje.",
+      "dialogo_destinatario": "Perfecto. Podremos estudiar esas páginas sin arriesgar aquello que intentamos preservar.",
+      "dialogo_regreso": "El estuche ya está con Rowena. Los manuscritos tendrán un viaje bastante menos emocionante, que en su caso es una excelente noticia.",
+      "recompensa_destinatario": {
+        "xp": 12,
+        "oquos": 5
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de hielo"
+      }
+    },
+    {
+      "id": 25,
+      "mision": "Bases para las vitrinas del Museo",
+      "tipo_caverna": "Mineral",
+      "herramienta_requerida": "Pico de minería",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Mr. Eldrin",
+      "destinatario_id": "curador",
+      "objeto_a_entregar": "Bases reforzadas para vitrinas",
+      "dialogo_eliana": "Eldrin sigue recuperando piezas del antiguo Museo. Estas bases permitirán exhibir algunas de ellas con seguridad.",
+      "dialogo_destinatario": "Excelente. Los objetos también cuentan historias, siempre que consigamos conservarlos lo suficiente para escucharlas.",
+      "dialogo_regreso": "Eldrin recibió las bases. Las reliquias tendrán por fin algo más digno que una mesa improvisada donde esperar.",
+      "recompensa_destinatario": {
+        "xp": 8,
+        "oquos": 3
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de minería"
+      }
+    },
+    {
+      "id": 26,
+      "mision": "Soportes para reliquias recuperadas",
+      "tipo_caverna": "Mineral",
+      "herramienta_requerida": "Pico de fuego",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Mr. Eldrin",
+      "destinatario_id": "curador",
+      "objeto_a_entregar": "Estructuras reforzadas para piezas antiguas",
+      "dialogo_eliana": "Eldrin necesita nuevos soportes para varios objetos rescatados de las ruinas. No pienso permitir que sobrevivan a una guerra para terminar cayéndose de una repisa.",
+      "dialogo_destinatario": "Una opinión sorprendentemente razonable de nuestra querida Forjadora.",
+      "dialogo_regreso": "Eldrin recibió los soportes y, sorprendentemente, no discutió demasiado conmigo. Consideraré eso parte de la recompensa.",
+      "recompensa_destinatario": {
+        "xp": 10,
+        "oquos": 4
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de fuego"
+      }
+    },
+    {
+      "id": 27,
+      "mision": "Peanas para fósiles congelados",
+      "tipo_caverna": "Mineral",
+      "herramienta_requerida": "Pico de hielo",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Mr. Eldrin",
+      "destinatario_id": "curador",
+      "objeto_a_entregar": "Peanas de conservación para fósiles",
+      "dialogo_eliana": "Margot encontró varias piezas que terminarán en el Museo. Eldrin necesita soportes adecuados antes de recibirlas.",
+      "dialogo_destinatario": "Magnífico. Una expedición descubre el patrimonio. Nuestro deber es conseguir que pueda ser contemplado por quienes vengan después.",
+      "dialogo_regreso": "Las peanas están en el Museo. Margot encuentra, Eldrin conserva y nosotros evitamos que las cosas terminen nuevamente en el suelo.",
+      "recompensa_destinatario": {
+        "xp": 12,
+        "oquos": 5
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de hielo"
+      }
+    },
+    {
+      "id": 28,
+      "mision": "Anillos para los recipientes de la Academia",
+      "tipo_caverna": "Mineral",
+      "herramienta_requerida": "Pico de minería",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Lysa McLyra",
+      "destinatario_id": "artesana",
+      "objeto_a_entregar": "Anillos de plata para recipientes arcanos",
+      "dialogo_eliana": "Lysa necesita estabilizar varios recipientes de trabajo. Le prometí piezas precisas, así que intenta no perderlas por el camino.",
+      "dialogo_destinatario": "La medida es impecable. Una buena técnica comienza con herramientas que permiten repetir el resultado.",
+      "dialogo_regreso": "Lysa aprobó las medidas. Eso significa que no tendré que rehacerlas y tú no tendrás que repetir el viaje. Todos ganamos.",
+      "recompensa_destinatario": {
+        "xp": 8,
+        "oquos": 3
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de minería"
+      }
+    },
+    {
+      "id": 29,
+      "mision": "Soporte para el taller de la Academia",
+      "tipo_caverna": "Mineral",
+      "herramienta_requerida": "Pico de fuego",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Lysa McLyra",
+      "destinatario_id": "artesana",
+      "objeto_a_entregar": "Base reforzada para equipo arcano",
+      "dialogo_eliana": "Lysa está reconstruyendo una de sus estaciones de trabajo. Preparé esta base para que pueda volver a practicar sus técnicas.",
+      "dialogo_destinatario": "Excelente. La precisión no surge de un solo intento. Necesito un lugar donde poder repetir, comparar y mejorar.",
+      "dialogo_regreso": "La estación de Lysa vuelve a tener una base firme. Ahora podrá concentrarse en mejorar en vez de evitar que todo se tambalee.",
+      "recompensa_destinatario": {
+        "xp": 10,
+        "oquos": 4
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de fuego"
+      }
+    },
+    {
+      "id": 30,
+      "mision": "Cámara fría para materiales delicados",
+      "tipo_caverna": "Mineral",
+      "herramienta_requerida": "Pico de hielo",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Lysa McLyra",
+      "destinatario_id": "artesana",
+      "objeto_a_entregar": "Contenedor aislado para materiales arcanos",
+      "dialogo_eliana": "Algunos materiales de Lysa necesitan conservarse fríos mientras trabaja. Este recipiente debería mantenerlos estables.",
+      "dialogo_destinatario": "Perfecto. Ahora podré concentrarme en la técnica en lugar de luchar contra los materiales.",
+      "dialogo_regreso": "Lysa tiene el contenedor. Una variable menos en su taller significa una cosa más que podrá perfeccionar como corresponde.",
+      "recompensa_destinatario": {
+        "xp": 12,
+        "oquos": 5
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de hielo"
+      }
+    },
+    {
+      "id": 31,
+      "mision": "Engranajes para el telescopio",
+      "tipo_caverna": "Mineral",
+      "herramienta_requerida": "Pico de minería",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Lord Zephyr",
+      "destinatario_id": "astral",
+      "objeto_a_entregar": "Engranajes de precisión",
+      "dialogo_eliana": "Zephyr intenta devolver el movimiento al gran telescopio. Estos engranajes deberían reemplazar algunas piezas perdidas.",
+      "dialogo_destinatario": "¡Magnífico! Otro instrumento vuelve a funcionar. Cada mecanismo recuperado nos devuelve una ventana al Universo.",
+      "dialogo_regreso": "Zephyr recibió los engranajes. Si vuelve a mirar las estrellas con ese telescopio, una parte de su antiguo Observatorio habrá regresado.",
+      "recompensa_destinatario": {
+        "xp": 8,
+        "oquos": 3
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de minería"
+      }
+    },
+    {
+      "id": 32,
+      "mision": "Mecanismo para el reloj cósmico",
+      "tipo_caverna": "Mineral",
+      "herramienta_requerida": "Pico de fuego",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Lord Zephyr",
+      "destinatario_id": "astral",
+      "objeto_a_entregar": "Mecanismo reforzado para el reloj astral",
+      "dialogo_eliana": "Zephyr está reconstruyendo una parte de su antiguo reloj cósmico. Esta pieza exigió más correcciones de las que pienso admitir.",
+      "dialogo_destinatario": "Entonces funcionará perfectamente. Las mejores respuestas suelen necesitar varios intentos antes de aparecer.",
+      "dialogo_regreso": "Zephyr recibió el mecanismo. Y no, no pienso contar cuántas veces tuve que ajustarlo antes de que funcionara.",
+      "recompensa_destinatario": {
+        "xp": 10,
+        "oquos": 4
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de fuego"
+      }
+    },
+    {
+      "id": 33,
+      "mision": "Protección contra escarcha para las lentes",
+      "tipo_caverna": "Minerales",
+      "herramienta_requerida": "Pico de hielo",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Lord Zephyr",
+      "destinatario_id": "astral",
+      "objeto_a_entregar": "Cubierta aislante para lentes",
+      "dialogo_eliana": "Las noches frías vuelven inútiles algunos instrumentos del Observatorio. Llévale esta protección a Zephyr.",
+      "dialogo_destinatario": "Excelente. Ahora el clima tendrá una excusa menos para interponerse entre nosotros y las estrellas.",
+      "dialogo_regreso": "La cubierta llegó al Observatorio. Zephyr podrá seguir haciendo preguntas al cielo incluso cuando llegue el frío.",
+      "recompensa_destinatario": {
+        "xp": 12,
+        "oquos": 5
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de hielo"
+      }
+    },
+    {
+      "id": 34,
+      "mision": "Candelabro para el Santuario",
+      "tipo_caverna": "Minerales",
+      "herramienta_requerida": "Pico de minería",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Aurelia Stay",
+      "destinatario_id": "sacerdotisa",
+      "objeto_a_entregar": "Candelabro ceremonial de hierro",
+      "dialogo_eliana": "Aurelia pidió una pieza sencilla para recuperar uno de los antiguos rincones del Santuario.",
+      "dialogo_destinatario": "La luz no necesita ser grande para recordarnos que todavía existe un camino de regreso.",
+      "dialogo_regreso": "Aurelia recibió el candelabro. Algo sencillo puede devolverle identidad a un lugar. Supongo que ella tenía razón.",
+      "recompensa_destinatario": {
+        "xp": 8,
+        "oquos": 3
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de minería"
+      }
+    },
+    {
+      "id": 35,
+      "mision": "Incensario para la sala principal",
+      "tipo_caverna": "Minerales",
+      "herramienta_requerida": "Pico de fuego",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Aurelia Stay",
+      "destinatario_id": "sacerdotisa",
+      "objeto_a_entregar": "Incensario ceremonial reforzado",
+      "dialogo_eliana": "Aurelia está restaurando la sala central. Este incensario ocupará nuevamente el lugar donde estuvo antes de la guerra.",
+      "dialogo_destinatario": "Gracias. Reconstruir un refugio también significa devolverle aquellos pequeños símbolos que ayudaban a las personas a sentirse seguras.",
+      "dialogo_regreso": "El incensario volvió al Santuario. No reconstruimos el pasado, pero sí podemos decidir qué partes merecen acompañarnos.",
+      "recompensa_destinatario": {
+        "xp": 10,
+        "oquos": 4
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de fuego"
+      }
+    },
+    {
+      "id": 36,
+      "mision": "Cáliz para el manantial de invierno",
+      "tipo_caverna": "Minerales",
+      "herramienta_requerida": "Pico de hielo",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Aurelia Stay",
+      "destinatario_id": "sacerdotisa",
+      "objeto_a_entregar": "Cáliz ceremonial de plata",
+      "dialogo_eliana": "Aurelia utilizará este cáliz durante la ceremonia del invierno. Procura que llegue intacto.",
+      "dialogo_destinatario": "Cada estación nos recuerda algo distinto. El invierno nos enseña que descansar también forma parte de continuar.",
+      "dialogo_regreso": "El cáliz llegó intacto, que era exactamente lo que esperaba. Buen trabajo. Aquí están tus picos.",
+      "recompensa_destinatario": {
+        "xp": 12,
+        "oquos": 5
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de hielo"
+      }
+    },
+    {
+      "id": 37,
+      "mision": "Cerradura para el archivo de la Corona",
+      "tipo_caverna": "Minerales",
+      "herramienta_requerida": "Pico de minería",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Reina Eleanor",
+      "destinatario_id": "reina",
+      "objeto_a_entregar": "Cerradura reforzada para el archivo real",
+      "dialogo_eliana": "Eleanor está recuperando documentos de la antigua administración del reino. Preparé esta cerradura para protegerlos.",
+      "dialogo_destinatario": "Gracias. Reconstruir Mírrafen también exige recordar las decisiones que lo llevaron hasta aquí.",
+      "dialogo_regreso": "La Reina recibió la cerradura. Si esos documentos vuelven a servir al reino, entonces el trabajo habrá valido mucho más que el metal.",
+      "recompensa_destinatario": {
+        "xp": 8,
+        "oquos": 3
+      },
+      "recompensa_eliana": {
+        "picos": 12,
+        "tipo_pico": "Pico de minería"
+      }
+    },
+    {
+      "id": 38,
+      "mision": "Soportes para los estandartes de Mírrafen",
+      "tipo_caverna": "Minerales",
+      "herramienta_requerida": "Pico de fuego",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Reina Eleanor",
+      "destinatario_id": "reina",
+      "objeto_a_entregar": "Astas reforzadas para estandartes",
+      "dialogo_eliana": "Eleanor quiere volver a colocar los estandartes en la plaza. No hacen falta para gobernar, pero a veces un símbolo ayuda a recordar que seguimos siendo una comunidad.",
+      "dialogo_destinatario": "Exactamente. Un estandarte no crea un reino. Las personas que deciden permanecer juntas sí.",
+      "dialogo_regreso": "Los estandartes volverán a la plaza. Tal vez no sostengan el reino, pero pueden recordarle a su gente que todavía existe.",
+      "recompensa_destinatario": {
+        "xp": 10,
+        "oquos": 4
+      },
+      "recompensa_eliana": {
+        "picos": 12,
+        "tipo_pico": "Pico de fuego"
+      }
+    },
+    {
+      "id": 39,
+      "mision": "Broches para las capas de invierno",
+      "tipo_caverna": "Minerales",
+      "herramienta_requerida": "Pico de hielo",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Reina Eleanor",
+      "destinatario_id": "reina",
+      "objeto_a_entregar": "Fíbulas de plata reforzada",
+      "dialogo_eliana": "La Reina solicitó broches resistentes para las capas utilizadas durante el invierno. Llévalos a la Aldea.",
+      "dialogo_destinatario": "Servirán para quienes deben permanecer fuera durante el frío. Cuidar una comunidad comienza por recordar las necesidades de quienes la sostienen.",
+      "dialogo_regreso": "Eleanor ya tiene los broches. Si ayudan a quienes trabajan durante el invierno, entonces el encargo está más que cumplido.",
+      "recompensa_destinatario": {
+        "xp": 12,
+        "oquos": 5
+      },
+      "recompensa_eliana": {
+        "picos": 12,
+        "tipo_pico": "Pico de hielo"
+      }
+    },
+    {
+      "id": 40,
+      "mision": "Balanza para el Mercado",
+      "tipo_caverna": "Minerales",
+      "herramienta_requerida": "Pico de minería",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Jhaim Borin",
+      "destinatario_id": "mercader",
+      "objeto_a_entregar": "Balanza de bronce de precisión",
+      "dialogo_eliana": "Borin quiere devolver al Mercado una de sus viejas balanzas. Dice que un intercambio justo comienza con una medida en la que ambos puedan confiar.",
+      "dialogo_destinatario": "¡Exactamente! Una mala balanza puede darte una moneda hoy y hacerte perder diez clientes mañana.",
+      "dialogo_regreso": "Borin recibió la balanza. Si logra pasar cinco minutos sin convertirla en una lección sobre comercio, será un milagro.",
+      "recompensa_destinatario": {
+        "xp": 8,
+        "oquos": 3
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de minería"
+      }
+    },
+    {
+      "id": 41,
+      "mision": "Estructuras para los puestos del Mercado",
+      "tipo_caverna": "Minerales",
+      "herramienta_requerida": "Pico de fuego",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Jhaim Borin",
+      "destinatario_id": "mercader",
+      "objeto_a_entregar": "Soportes reforzados para puestos comerciales",
+      "dialogo_eliana": "Borin está ampliando nuevamente el Mercado. Estas piezas sostendrán algunos de los nuevos puestos.",
+      "dialogo_destinatario": "Un puesto nuevo significa alguien produciendo, alguien vendiendo y alguien encontrando lo que necesita. Así vuelve a circular un reino.",
+      "dialogo_regreso": "Las estructuras llegaron al Mercado. Borin ya estará pensando qué negocio instalar en ellas antes de que terminen de colocarlas.",
+      "recompensa_destinatario": {
+        "xp": 10,
+        "oquos": 4
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de fuego"
+      }
+    },
+    {
+      "id": 42,
+      "mision": "Cierres para las cámaras de conservación",
+      "tipo_caverna": "Minerales",
+      "herramienta_requerida": "Pico de hielo",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Jhaim Borin",
+      "destinatario_id": "mercader",
+      "objeto_a_entregar": "Cierres aislantes para depósitos",
+      "dialogo_eliana": "Borin recuperó uno de los antiguos depósitos del Mercado. Estos cierres ayudarán a conservar las mercancías sensibles al calor.",
+      "dialogo_destinatario": "¡Excelente! Reducir pérdidas también es crear valor. El primer Oquo que recuperé de las cenizas estaría orgulloso, si las monedas pudieran hacer esas cosas.",
+      "dialogo_regreso": "Los cierres llegaron. Borin conservará mejor sus mercancías y probablemente también encuentre una forma de explicarme cuánto dinero ahorrará.",
+      "recompensa_destinatario": {
+        "xp": 12,
+        "oquos": 5
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de hielo"
+      }
+    },
+    {
+      "id": 43,
+      "mision": "Soportes para el rincón de los cuentos",
+      "tipo_caverna": "Minerales",
+      "herramienta_requerida": "Pico de minería",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Soul Garrick",
+      "destinatario_id": "narrador",
+      "objeto_a_entregar": "Soportes metálicos para bancos y estantes",
+      "dialogo_eliana": "Garrick está reconstruyendo uno de sus antiguos rincones de cuentos. Estas piezas servirán para los bancos y pequeños estantes.",
+      "dialogo_destinatario": "Perfecto. Una historia encuentra mejor a su público cuando ese público tiene dónde sentarse.",
+      "dialogo_regreso": "Garrick recibió los soportes. Ahora sus historias tendrán público, estantes y, con suerte, menos gente sentada sobre cajas.",
+      "recompensa_destinatario": {
+        "xp": 8,
+        "oquos": 3
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de minería"
+      }
+    },
+    {
+      "id": 44,
+      "mision": "Campana para reunir a los narradores",
+      "tipo_caverna": "Minerales",
+      "herramienta_requerida": "Pico de fuego",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Soul Garrick",
+      "destinatario_id": "narrador",
+      "objeto_a_entregar": "Campana de bronce para el Bosque",
+      "dialogo_eliana": "Garrick quiere volver a reunir gente alrededor de las historias. Esta campana debería escucharse desde buena parte del sendero.",
+      "dialogo_destinatario": "Magnífico. Antes de la guerra una campana semejante anunciaba que comenzaba un nuevo relato. Tal vez vuelva a hacerlo.",
+      "dialogo_regreso": "La campana volvió al Bosque. Cuando la escuches sonar, sabrás que Garrick encontró otra excusa para reunir a alguien alrededor de una historia.",
+      "recompensa_destinatario": {
+        "xp": 10,
+        "oquos": 4
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de fuego"
+      }
+    },
+    {
+      "id": 45,
+      "mision": "Cofre para los relatos del invierno",
+      "tipo_caverna": "Minerales",
+      "herramienta_requerida": "Pico de hielo",
+      "proveedor": "Eliana",
+      "proveedor_id": "forjadora",
+      "destinatario": "Soul Garrick",
+      "destinatario_id": "narrador",
+      "objeto_a_entregar": "Cofre sellado para pergaminos y recuerdos",
+      "dialogo_eliana": "Garrick quiere guardar algunos relatos recogidos durante sus viajes por regiones frías. Preparé un cofre que podrá acompañarlo durante muchos inviernos.",
+      "dialogo_destinatario": "Excelente. Las historias también necesitan refugio hasta encontrar a la persona adecuada para escucharlas.",
+      "dialogo_regreso": "El cofre está con Garrick. Las historias del invierno tienen dónde esperar hasta que llegue alguien dispuesto a escucharlas.",
+      "recompensa_destinatario": {
+        "xp": 12,
+        "oquos": 5
+      },
+      "recompensa_eliana": {
+        "picos": 10,
+        "tipo_pico": "Pico de hielo"
+      }
+    }
+  ]
 }
