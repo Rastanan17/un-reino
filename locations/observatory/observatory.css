@@ -84,9 +84,3 @@
     width:18%;
     height:15%;
 }
-/* =======================================
-   RESPONSIVE
-======================================= */
-@media(max-width:700px){
-    .zona-observatorio{ font-size:clamp(14px, 3.5vw, 22px); -webkit-text-stroke:1px #5b3518; text-shadow:1px 1px 0 #3b2110; }
-}

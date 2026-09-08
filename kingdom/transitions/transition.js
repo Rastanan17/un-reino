@@ -40,7 +40,13 @@ const videosTransicion = {
     "map-frost": "assets/videos/map-frost.mp4",
     "frost-map": "assets/videos/frost-map.mp4",
     "portal-map": "assets/videos/portal-map.mp4",
-    "map-portal": "assets/videos/portal-map.mp4"
+    "map-portal": "assets/videos/portal-map.mp4",
+    "caves-mineral": "assets/videos/caves-mineral.mp4",
+    "mineral-caves": "assets/videos/mineral-caves.mp4",
+    "caves-fire": "assets/videos/caves-fire.mp4",
+    "fire-mineral": "assets/videos/fire-caves.mp4",
+    "caves-ice": "assets/videos/caves-ice.mp4",
+    "ice-caves": "assets/videos/ice-caves.mp4"
 };
 // =======================================
 // OBTENER VIDEO DE TRANSICIÓN

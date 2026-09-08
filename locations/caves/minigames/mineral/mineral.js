@@ -16,6 +16,10 @@ let nivelMineral = 1;
 let xpMineral = 0;
 let recursosMineral = 0;
 let picosMineral = 0;
+let picosFuego = 0;
+let picosHielo = 0;
+let picoSeleccionadoMineral = "mineral";
+let progresoMineralCargado = false;
 let rocasMineral = [];
 let juegoMineralActivo = false;
 // =======================================
@@ -51,19 +55,39 @@ function cargarProgresoMineral(){
             nivelMineral = Math.max(1, Number(progreso.nivel) || 1);
             xpMineral = Math.max(0, Number(progreso.xp) || 0);
             recursosMineral = Math.max(0, Number(progreso.recursos) || 0);
-            if(progreso.picos !== undefined){
+            // ===================================
+            // COMPATIBILIDAD CON EL GUARDADO
+            // QUE SOLO TENÍA "picos"
+            // ===================================
+            if(progreso.picosMineral !== undefined){
+                picosMineral = Math.max(0, Number(progreso.picosMineral) || 0);
+            }else if(progreso.picos !== undefined){
                 picosMineral = Math.max(0, Number(progreso.picos) || 0);
             }else{
                 const picosViejos = Number(localStorage.getItem("picosMineral"));
                 picosMineral = Number.isFinite(picosViejos) ? Math.max(0, picosViejos) : 0;
             }
-            console.log("💾 Progreso Mineral cargado:", { nivelMineral, xpMineral, recursosMineral, picosMineral });
+            picosFuego = Math.max(0, Number(progreso.picosFuego !== undefined ? progreso.picosFuego : localStorage.getItem("picosFuego")) || 0);
+            picosHielo = Math.max(0, Number(progreso.picosHielo !== undefined ? progreso.picosHielo : localStorage.getItem("picosHielo")) || 0);
+            picoSeleccionadoMineral = progreso.picoSeleccionadoMineral || localStorage.getItem("picoSeleccionadoMineral") || "mineral";
+            if(!["mineral", "fuego", "hielo"].includes(picoSeleccionadoMineral)){
+                picoSeleccionadoMineral = "mineral";
+            }
+            console.log("💾 Progreso Mineral cargado:", {
+                nivelMineral,
+                xpMineral,
+                recursosMineral,
+                picosMineral,
+                picosFuego,
+                picosHielo,
+                picoSeleccionadoMineral
+            });
+            progresoMineralCargado = true;
+            guardarProgresoMineral();
             return;
         }catch(error){
             console.error("❌ Error leyendo progreso Mineral:", error);
         }
-        guardarProgresoMineral();
-        JSON.parse(localStorage.getItem("progresoMineral"))
     }
     // ===================================
     // COMPATIBILIDAD CON GUARDADO ANTIGUO
@@ -75,6 +99,13 @@ function cargarProgresoMineral(){
     }else{
         picosMineral = datosMineral.picos && Number.isFinite(datosMineral.picos.cantidadInicial) ? datosMineral.picos.cantidadInicial : 0;
     }
+    picosFuego = Math.max(0, Number(localStorage.getItem("picosFuego")) || 0);
+    picosHielo = Math.max(0, Number(localStorage.getItem("picosHielo")) || 0);
+    picoSeleccionadoMineral =
+        localStorage.getItem("picoSeleccionadoMineral") || "mineral";
+    if(!["mineral", "fuego", "hielo"].includes(picoSeleccionadoMineral)){
+        picoSeleccionadoMineral = "mineral";
+    }
     // ===================================
     // INTENTAR RECUPERAR DATOS ANTIGUOS
     // ===================================
@@ -84,8 +115,17 @@ function cargarProgresoMineral(){
     nivelMineral = Number.isFinite(nivelAntiguo) && nivelAntiguo > 0 ? nivelAntiguo : 1;
     xpMineral = Number.isFinite(xpAntigua) && xpAntigua >= 0 ? xpAntigua : 0;
     recursosMineral = Number.isFinite(recursosAntiguos) && recursosAntiguos >= 0 ? recursosAntiguos : 0;
+    progresoMineralCargado = true;
     guardarProgresoMineral();
-    console.log("💾 Progreso Mineral inicializado:", { nivelMineral, xpMineral, recursosMineral, picosMineral });
+    console.log("💾 Progreso Mineral inicializado:", {
+        nivelMineral,
+        xpMineral,
+        recursosMineral,
+        picosMineral,
+        picosFuego,
+        picosHielo,
+        picoSeleccionadoMineral
+    });
 }
 // =======================================
 // 💾 GUARDAR PROGRESO DE MINERALES
@@ -95,15 +135,22 @@ function guardarProgresoMineral(){
         nivel: Math.max(1, Number(nivelMineral) || 1),
         xp: Math.max(0, Number(xpMineral) || 0),
         recursos: Math.max(0, Number(recursosMineral) || 0),
-        picos: Math.max(0, Number(picosMineral) || 0)
+        picosMineral: Math.max(0, Number(picosMineral) || 0),
+        picosFuego: Math.max(0, Number(picosFuego) || 0),
+        picosHielo: Math.max(0, Number(picosHielo) || 0),
+        picoSeleccionadoMineral: picoSeleccionadoMineral
     };
     localStorage.setItem(CLAVE_PROGRESO_MINERAL, JSON.stringify(progreso));
-    // Mantener las claves individuales
-    // porque otras partes del juego las usan
+    // ===================================
+    // COMPATIBILIDAD
+    // ===================================
     localStorage.setItem("nivelMineral", String(progreso.nivel));
     localStorage.setItem("xpMineral", String(progreso.xp));
     localStorage.setItem("recursosMineral", String(progreso.recursos));
-    localStorage.setItem("picosMineral", String(progreso.picos));
+    localStorage.setItem("picosMineral", String(progreso.picosMineral));
+    localStorage.setItem("picosFuego", String(progreso.picosFuego));
+    localStorage.setItem("picosHielo", String(progreso.picosHielo));
+    localStorage.setItem("picoSeleccionadoMineral", progreso.picoSeleccionadoMineral);
     console.log("💾 Progreso Mineral guardado:", progreso);
 }
 // =======================================
@@ -116,27 +163,98 @@ function guardarPicosMineral(){
 // ➕ AGREGAR PICOS
 // =======================================
 function agregarPicosMineral(cantidad){
+    if(!progresoMineralCargado){
+        cargarProgresoMineral();
+    }
     cantidad = parseInt(cantidad, 10);
-    if(!Number.isFinite(cantidad) || cantidad <= 0) return;
+    if(!Number.isFinite(cantidad) || cantidad <= 0){
+        return false;
+    }
     picosMineral += cantidad;
-    guardarPicosMineral();
+    guardarProgresoMineral();
     actualizarHUDMineral();
     console.log(`⛏️ +${cantidad} picos de minería. Total: ${picosMineral}`);
+    return true;
+}
+function agregarPicosFuego(cantidad){
+    if(!progresoMineralCargado){
+        cargarProgresoMineral();
+    }
+    cantidad = parseInt(cantidad, 10);
+    if(!Number.isFinite(cantidad) || cantidad <= 0){
+        return false;
+    }
+    picosFuego += cantidad;
+    guardarProgresoMineral();
+    actualizarHUDMineral();
+    console.log(`🔥 +${cantidad} picos de fuego. Total: ${picosFuego}`);
+    return true;
+}
+function agregarPicosHielo(cantidad){
+    if(!progresoMineralCargado){
+        cargarProgresoMineral();
+    }
+    cantidad = parseInt(cantidad, 10);
+    if(!Number.isFinite(cantidad) || cantidad <= 0){
+        return false;
+    }
+    picosHielo += cantidad;
+    guardarProgresoMineral();
+    actualizarHUDMineral();
+    console.log(`❄️ +${cantidad} picos de hielo. Total: ${picosHielo}`);
+    return true;
+}
+function seleccionarPicoMineral(tipo){
+    if(!["mineral", "fuego", "hielo"].includes(tipo)){
+        return;
+    }
+    picoSeleccionadoMineral = tipo;
+    guardarProgresoMineral();
+    actualizarHUDMineral();
+    console.log(`⛏️ Pico seleccionado: ${tipo}`);
+}
+function obtenerCantidadPicoSeleccionado(){
+    switch(picoSeleccionadoMineral){
+        case "fuego":
+            return picosFuego;
+        case "hielo":
+            return picosHielo;
+        default:
+            return picosMineral;
+    }
+}
+function obtenerPotenciaPicoSeleccionado(){
+    switch(picoSeleccionadoMineral){
+        case "fuego":
+            return 2;
+        case "hielo":
+            return 3;
+        default:
+            return 1;
+    }
 }
 // =======================================
 // ➖ CONSUMIR PICO
 // =======================================
 function consumirPicoMineral(){
-    if(picosMineral <= 0){
+    const cantidadActual = obtenerCantidadPicoSeleccionado();
+    if(cantidadActual <= 0){
         return false;
     }
-    const consumo = datosMineral.picos &&
-        Number.isFinite(datosMineral.picos.consumoPorGolpe)
-            ? datosMineral.picos.consumoPorGolpe : 1;
-    picosMineral = Math.max(0, picosMineral - consumo);
-    guardarPicosMineral();
+    switch(picoSeleccionadoMineral){
+        case "fuego":
+            picosFuego = Math.max(0, picosFuego - 1);
+            break;
+        case "hielo":
+            picosHielo = Math.max(0, picosHielo - 1);
+            break;
+        default:
+            picosMineral = Math.max(0, picosMineral - 1);
+            break;
+    }
+    guardarProgresoMineral();
     actualizarHUDMineral();
-    console.log(`⛏️ Pico utilizado. Picos restantes: ${picosMineral}`);
+    console.log(`⛏️ Pico ${picoSeleccionadoMineral} utilizado.`);
     return true;
 }
 // =======================================
@@ -158,9 +276,19 @@ function mostrarPantallaMineral(){
                 <div class="mineral-xp">
                     XP: <strong id="mineralXP"> ${xpMineral} </strong>
                 </div>
-                <div class="mineral-picos">
-                    <img id="mineralPicoIcon" src="${RUTA_IMAGENES_MINERAL}${obtenerImagenPico()}.png" alt="Picos de minería">
-                    <strong id="mineralPicos">${picosMineral}</strong>
+                <div class="mineral-picos-selector">
+                    <button id="picoMineralBtn" class="mineral-pico-btn" onclick="seleccionarPicoMineral('mineral')">
+                        ⛏️ <strong id="mineralPicos">${picosMineral}</strong>
+                        <small>×1</small>
+                    </button>
+                    <button id="picoFuegoBtn" class="mineral-pico-btn" onclick="seleccionarPicoMineral('fuego')">
+                        🔥 <strong id="mineralPicosFuego">${picosFuego}</strong>
+                        <small>×2</small>
+                    </button>
+                    <button id="picoHieloBtn" class="mineral-pico-btn" onclick="seleccionarPicoMineral('hielo')">
+                        ❄️ <strong id="mineralPicosHielo">${picosHielo}</strong>
+                        <small>×3</small>
+                    </button>
                 </div>
                 <div class="mineral-recursos">
                     💎 <strong id="mineralRecursos"> ${recursosMineral} </strong>
@@ -181,6 +309,7 @@ function mostrarPantallaMineral(){
     canvasMineral.addEventListener("click", manejarClickMineral);
     generarRocasMineral();
     juegoMineralActivo = true;
+    actualizarHUDMineral();
     dibujarMineral();
 }
 // =======================================
@@ -366,9 +495,23 @@ function procesarPicosMision(mision){
     const cantidad = parseInt(mision.picos_otorgados, 10);
     if(!Number.isFinite(cantidad) || cantidad <= 0){
         return;
-    }if(mision.tipo_pico === "Pico de minería"){
-        agregarPicosMineral(cantidad);
-        console.log(`⛏️ Misión → +${cantidad} picos de minería`);
+    }
+    switch(mision.tipo_pico){
+        case "Pico de minería":
+        case "Pico de minerales":
+            agregarPicosMineral(cantidad);
+            console.log(`⛏️ Misión → +${cantidad} picos de minería`);
+            break;
+        case "Pico de fuego":
+            agregarPicosFuego(cantidad);
+            console.log(`🔥 Misión → +${cantidad} picos de fuego`);
+            break;
+        case "Pico de hielo":
+            agregarPicosHielo(cantidad);
+            console.log(`❄️ Misión → +${cantidad} picos de hielo`);
+            break;
+        default:
+            console.warn("⚠️ Tipo de pico desconocido:", mision.tipo_pico);
     }
 }
 // =======================================
@@ -379,8 +522,8 @@ function manejarClickMineral(event){
     // ===================================
     // 🚫 SIN PICOS
     // ===================================
-    if(picosMineral <= 0){
-        console.log( "🔨 No quedan picos de minería");
+    if(obtenerCantidadPicoSeleccionado() <= 0){
+        console.log(`🔨 No quedan picos de ${picoSeleccionadoMineral}`);
         reproducirSFX("error.wav");
         actualizarHUDMineral();
         return;
@@ -411,8 +554,9 @@ function golpearRoca(roca){
     if(!consumirPicoMineral()){
         return;
     }
-    roca.golpes++;
-    console.log( `⛏️ Golpe ${roca.golpes}`);
+    const potencia = obtenerPotenciaPicoSeleccionado();
+    roca.golpes += potencia;
+    console.log(`⛏️ Golpe ${roca.golpes} | Potencia x${potencia}`);
     reproducirSFX("touch.mp3");
     // ===================================
     // 🪨 PRIMER GOLPE
@@ -513,7 +657,11 @@ function actualizarHUDMineral(){
     const xp = document.getElementById("mineralXP");
     const recursos = document.getElementById("mineralRecursos");
     const picos = document.getElementById("mineralPicos");
-    const picoIcon = document.getElementById("mineralPicoIcon");
+    const picosFuegoHUD = document.getElementById("mineralPicosFuego");
+    const picosHieloHUD = document.getElementById("mineralPicosHielo");
+    const botonMineral = document.getElementById("picoMineralBtn");
+    const botonFuego = document.getElementById("picoFuegoBtn");
+    const botonHielo = document.getElementById("picoHieloBtn");
     if(nivel){
         nivel.textContent = nivelMineral;
     }if(xp){
@@ -522,8 +670,16 @@ function actualizarHUDMineral(){
         recursos.textContent = recursosMineral;
     }if(picos){
         picos.textContent = picosMineral;
-    }if(picoIcon){
-        picoIcon.src = `${RUTA_IMAGENES_MINERAL}${obtenerImagenPico()}.png`;
+    }if(picosFuegoHUD){
+        picosFuegoHUD.textContent = picosFuego;
+    }if(picosHieloHUD){
+        picosHieloHUD.textContent = picosHielo;
+    }if(botonMineral){
+        botonMineral.classList.toggle("seleccionado", picoSeleccionadoMineral === "mineral");
+    }if(botonFuego){
+        botonFuego.classList.toggle("seleccionado", picoSeleccionadoMineral === "fuego");
+    }if(botonHielo){
+        botonHielo.classList.toggle("seleccionado", picoSeleccionadoMineral === "hielo");
     }
 }
 // =======================================

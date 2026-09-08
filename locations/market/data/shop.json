@@ -11,7 +11,7 @@
     "id": 2,
     "nombre": "Elegir un capitulo de YouTube.",
     "icono": "📺",
-    "precio": 400,
+    "precio": 800,
     "estado": "disponible",
     "item":"tele"
   },
@@ -19,7 +19,7 @@
     "id": 3,
     "nombre": "Noche de Pelicula.",
     "icono": "🍿",
-    "precio": 120,
+    "precio": 1000,
     "estado": "disponible",
     "item":"pochoclo"
   },

@@ -30,8 +30,6 @@ async function entrarAlReino(){
     iniciarVigilanteMisiones();
     await iniciarSistemaMisiones();
     await cargarMapa();
-    await cargarRecompensas();
-    await cargarSistemaPergaminos();
     mostrarMapaReino();
 }
 // ---------------------------------------

@@ -1,7 +1,5 @@
 Un Reino<
 	assets<
-		fonts<
-            (vacío)
 		images<
 			backgrounds<
 				castle<
@@ -59,17 +57,6 @@ Un Reino<
 					village_day.jpg
 					village_night.jpg
 					village_sunset.jpg
-			icons<
-				bar.jpg
-				castle.jpg
-				caves.jpg
-				farm.jpg
-				forest.jpg
-				kingdom.jpg
-				library.jpg
-				market.jpg
-				observatory.jpg
-				village.jpg
 			items<
 				antorcha1.png
 				antorcha2.png
@@ -105,18 +92,15 @@ Un Reino<
 				skull.png
 				tutorial.png
 			ui<
+				castle-ruins.jpg
 				favicom.ico
 				next_soon.png
 		sounds<
-			_portal.mp3
-			20 sfx.mp3
-			ambient_ (2) .mp3
-			ambient_.mp3
 			ambient_castle.mp3
-			ambient_city.mp3
 			ambient_forest.mp3
 			ambient_logo.mp3
 			ambient_map.mp3
+			ambient_missions.mp3
 			ambient_observatory.mp3
 			ambient_portal.mp3
 			ambient_sanctuary1.mp3
@@ -175,10 +159,15 @@ Un Reino<
 			arca_pixeles_studio.mp4
 			bar-map.mp4
 			castle-map.mp4
+			caves-fire.mp4
+			caves-ice.mp4
 			caves-map.mp4
+			caves-mineral.mp4
 			caves.mp4
 			farm-map.mp4
+			fire-caves.mp4
 			forest-map.mp4
+			ice-caves.mp4
 			library-map.mp4
 			map-bar.mp4
 			map-castle.mp4
@@ -191,6 +180,7 @@ Un Reino<
 			map-sanctuary.mp4
 			map-village.mp4
 			market-map.mp4
+			mineral-caves.mp4
 			observatory-map.mp4
 			portal-map.mp4
 			sanctuary.mp4
@@ -208,6 +198,8 @@ Un Reino<
 		logo<
 			logo.css
 			logo.js
+		parents<
+			parents.js - (vacío)
 		ui<
 			hud.css
 			hud.js
@@ -231,9 +223,6 @@ Un Reino<
 				map_day.jpg
 				map_night.jpg
 				map_sunset.jpg
-				map.jpg
-				map.png
-				map_2.jpeg
 				market.jpg
 				museum.jpg
 				observatory.jpg
@@ -259,6 +248,7 @@ Un Reino<
 				curador.json
 				forjadora.json
 				guardian.json
+				habitantes.json
 				maestra.json
 				mercader.json
 				narrador.json
@@ -283,9 +273,8 @@ Un Reino<
 				silas.png
 				valerius.png
 				zephyr.png
-			habitantes.json
 			npc.css
-			npc.js - (vacío)
+			npc.js
 		portal<
 			avatars<
 				alien.jpg
@@ -300,7 +289,6 @@ Un Reino<
 		profiles<
 			profiles.css
 			profiles.js
-			profiles.json - (vacío)
 		transitions<
 			transition.css
 			transition.js
@@ -310,21 +298,6 @@ Un Reino<
 		castle<
 			data<
 				castle.json
-				README.md - (vacío)
-			images<
-				armery.png
-				castle_1.png
-				castle_all.png
-				exit.png
-				guards_1.png
-				guards_2.png
-				guards.png
-				light_1.png
-				light_2.png
-				light_3.png
-				light_4.png
-				missions.png
-				throne.png
 			castle.css
 			castle.js
 			throne.css
@@ -368,7 +341,6 @@ Un Reino<
 						mineral5.png
 						mineral6.png
 						mineral7.png
-						pico_ice.png
 						pico_mineral.png
 						pico_new.png
 						pico_roto.png
@@ -395,8 +367,6 @@ Un Reino<
 			caves.css
 			caves.js
 		farm<
-			data<
-				farm.json – (vacio)
 			images<
 				armeria.png
 				caballo1.png
@@ -444,40 +414,16 @@ Un Reino<
 				dialogs_borin.json
 				shop.json
 			images<
-				borin<
-					angry.png
-					challenge.png
-					correct.png
-					goodbye.png
-					incorrect.png
-					offer.png
-					purchase.png
-					quest.png
-					question.png
-					search.png
-					sleeping.png
-					talk.png
-					think.png
-					thinking.png
 				arbol.png
-				arroz.png
-				balanza.png
 				barril.png
 				bici.png
 				burguer.png
 				carta.png
 				castillo.png
-				chancho.png
 				chocolate.png
 				coca.png
-				cofre1.png
-				cofre2.png
 				cometa.png
 				compu.png
-				flor1.png
-				flor2.png
-				flor3.png
-				flor4.png
 				galleta.png
 				helado.png
 				joystick.png
@@ -490,29 +436,18 @@ Un Reino<
 				manos.png
 				mapaBosque.png
 				mapaLeon.png
-				market_1.png
 				mcBurguer.png
-				monedas.png
-				mostrador.png
 				musica.png
 				natacion.png
-				pan.png
                 pelota.png
                 pintura.png
                 pizza.png
-				pluma.png
 				pochoclo.png
-				pollo.png
-				queso.png
 				sombrilla.png
-				sopa.png
-				tela.png
 				tele.png
 				varita.png
 				vaso.png
 				waffle.png
-			sounds<
-				(vacio)
 			market.css
 			market.js
 		museum<
@@ -550,47 +485,10 @@ Un Reino<
 			(vacio)
 		village<
 			data<
-				village.json - (vacío)
 				villagers.json
-			images<
-				casa1.png
-				casa2.png
-				castillo.png
-				dog1.png
-				dog2.png
-				dog3.png
-				dog4.png
-				dog5.png
-				exit.png
-				mapa.png
-				mercado.png
-				misiones.png
-				people0.png
-				people1.png
-				people2.png
-				people3.png
-				people4.png
-				people5.png
-				people6.png
-				people7.png
-				people8.png
-				people9.png
-				persona1.png
-				persona2.png
-				persona3.png
-				persona4.png
-				persona5.png
-				vasija1.png
-				vasija2.png
-				village_all.png
-				village_total.png
-			sounds<
-				(vacío)
 			village.css
 			village.js
 		intro.jpeg
-	parents<
-		parents.js - (vacío)
 	systems<
 		calendar<
 			calendar.js
@@ -601,34 +499,18 @@ Un Reino<
 			configuracion.js
 			settings.js
 			version.js
-		desafios<
-			desafios.css
-			desafios.js
-			desafios.json
 		logros<
 			logros.json
 		missions<
 			data<
-				missionsAcademy.json - (vacío)
 				missionsCastle.json
 				missionsFarm.json
-				missionsForest.json - (vacío)
-				missionsFrost.json - (vacío)
+				missionsForest.json
 				missionsLibrary.json
 				missionsObservatory.json
-				missionssanctuary.json
-				missionsSnow.json - (vacío)
 				missionsVillage.json
-			images<
-				(vacío)
-			missions_old.js
 			missions.css
 			missions.js
-			missions.json
-		rewards<
-			rewards.js
-			rewards.json
-			store.css - (vacío)
 		storage<
 			storage.js
 		tutorial<

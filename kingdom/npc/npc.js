@@ -69,7 +69,7 @@ async function cargarNPCs(){
     if(cargandoNPCs){
         return cargandoNPCs;
     }
-    cargandoNPCs = fetch("kingdom/npc/habitantes.json").then(respuesta => {
+    cargandoNPCs = fetch("kingdom/npc/data/habitantes.json").then(respuesta => {
             if(!respuesta.ok){
                 throw new Error("No se pudo cargar habitantes.json");
             }
